@@ -7,7 +7,7 @@ import 'package:roomart/domain/auth/register_request_model.dart';
 import 'package:roomart/domain/models/user/user_roomart_data_model.dart';
 import 'package:roomart/utils/constants.dart';
 
-import '../../injection.dart';
+import '../../../injection.dart';
 
 class RegisterPage extends StatefulWidget {
   @override
