@@ -17,12 +17,12 @@ class AppWidget extends StatelessWidget {
             labelStyle: TextStyle(color: Colors.black),
             floatingLabelBehavior: FloatingLabelBehavior.always,
             contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 3),
-            focusedBorder: OutlineInputBorder(
+            focusedBorder: UnderlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
-                borderSide: BorderSide(width: 1, color: Colors.grey)),
-            enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(width: 2, color: Colors.black)),
+            enabledBorder: UnderlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
-                borderSide: BorderSide(width: 1, color: Colors.grey))),
+                borderSide: BorderSide(width: 2, color: Colors.black))),
         scaffoldBackgroundColor: Colors.white,
         primarySwatch: Colors.orange,
       ),
