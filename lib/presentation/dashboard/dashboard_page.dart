@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:roomart/presentation/auth/register_page.dart';
 import 'package:roomart/presentation/category/category_page.dart';
 import 'package:roomart/presentation/home/home_page.dart';
 
@@ -21,7 +22,7 @@ class _DashboardPageState extends State<DashboardPage> {
   List<Widget> _children = <Widget>[
     HomePage(),
     CategoryPage(),
-    Container(color: Colors.yellow),
+    RegisterPage(),
   ];
 
   @override

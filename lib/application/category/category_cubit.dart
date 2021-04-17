@@ -1,8 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:roomart/domain/category/category_model.dart';
 import 'package:roomart/domain/category/category_repository.dart';
+import 'package:roomart/domain/category/category_model.dart';
+import 'package:roomart/domain/auth/auth_repository.dart';
 
 part 'category_state.dart';
 part 'category_cubit.freezed.dart';

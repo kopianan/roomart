@@ -11,8 +11,20 @@ class AppWidget extends StatelessWidget {
       getPages: pages,
       initialRoute: DashboardPage.TAG,
       theme: ThemeData(
+        inputDecorationTheme: InputDecorationTheme(
+            fillColor: Colors.white,
+            filled: true,
+            labelStyle: TextStyle(color: Colors.black),
+            floatingLabelBehavior: FloatingLabelBehavior.always,
+            contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 3),
+            focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+                borderSide: BorderSide(width: 1, color: Colors.grey)),
+            enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+                borderSide: BorderSide(width: 1, color: Colors.grey))),
         scaffoldBackgroundColor: Colors.white,
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
       ),
     );
   }

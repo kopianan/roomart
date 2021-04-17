@@ -16,7 +16,7 @@ class Constants {
 
   String imageBaseUrl = "http://cloud.erp.web.id:8080";
 
-  // String get getUltimoBaseUrl => this._ultimoBaseUrl;
+  String get getUltimoBaseUrl => this._ultimoBaseUrl;
   String get getUltimoBaseUrlNew => this._ultimoBaseUrlNew;
   //url api untuk get coupon code
   String _ultimoBaseUrl =
