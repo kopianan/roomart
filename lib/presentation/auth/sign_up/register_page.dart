@@ -7,7 +7,7 @@ import 'package:roomart/domain/auth/register_request_model.dart';
 import 'package:roomart/domain/models/user/user_roomart_data_model.dart';
 import 'package:roomart/utils/constants.dart';
 
-import '../../injection.dart';
+import '../../../injection.dart';
 
 class RegisterPage extends StatefulWidget {
   @override
@@ -66,12 +66,15 @@ class _RegisterPageState extends State<RegisterPage> {
                   SliverList(
                       delegate: SliverChildListDelegate([
                     CustomTextField(
+                      icon: Icons.person,
                       label: "Name",
                       fullName: _fullName,
                       hint: "Fullname",
                     ),
                     SizedBox(height: height),
                     CustomTextField(
+                      icon: Icons.date_range_outlined,
+
                       label: "Date of birth",
                       fullName: _dateOfBirth,
                       readOnly: true,
@@ -84,12 +87,13 @@ class _RegisterPageState extends State<RegisterPage> {
                           lastDate: DateTime.now(),
                         );
                         String formatted =
-                            DateFormat('dd-MMMM-yyyy').format(date);
+                            DateFormat("dd MMMMM yyyy").format(date);
                         _dateOfBirth.text = formatted;
                       },
                     ),
                     SizedBox(height: height),
                     CustomTextField(
+                      icon: Icons.email,
                       label: "Email",
                       fullName: _email,
                       hint: "Email",
@@ -97,6 +101,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                     SizedBox(height: height),
                     CustomTextField(
+                      icon: Icons.phone_android_rounded,
                       label: "Phone",
                       fullName: _phone,
                       hint: "Phone Number",
@@ -104,6 +109,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                     SizedBox(height: height),
                     CustomPasswordTextField(
+                      icon: Icons.lock,
                       label: "Password",
                       fullName: _password,
                       hint: "Password",
@@ -111,6 +117,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                     SizedBox(height: height),
                     CustomPasswordTextField(
+                       icon: Icons.lock,
                       label: "Re-type password",
                       fullName: _confirmPassword,
                       hint: "Confirmation password",
@@ -146,6 +153,7 @@ class CustomTextField extends StatelessWidget {
       @required this.hint,
       @required this.fullName,
       @required this.label,
+      @required this.icon,
       this.readOnly = false,
       this.textInputType,
       this.onTap});
@@ -153,7 +161,7 @@ class CustomTextField extends StatelessWidget {
   final TextEditingController fullName;
   final String hint;
   final String label;
-
+final IconData icon ; 
   final bool readOnly;
   final Function onTap;
   final TextInputType textInputType;
@@ -165,6 +173,7 @@ class CustomTextField extends StatelessWidget {
       keyboardType: textInputType,
       controller: fullName,
       decoration: InputDecoration(
+        prefixIcon: Icon(icon),
           labelText: label,
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(6)),
           hintText: hint),
@@ -178,12 +187,14 @@ class CustomPasswordTextField extends StatefulWidget {
     @required this.hint,
     @required this.fullName,
     @required this.label,
+    @required this.icon,
     this.textInputType,
   });
 
   final TextEditingController fullName;
   final String hint;
   final String label;
+  final IconData icon ; 
   final TextInputType textInputType;
 
   @override
@@ -200,6 +211,7 @@ class _CustomPasswordTextFieldState extends State<CustomPasswordTextField> {
       keyboardType: widget.textInputType,
       controller: widget.fullName,
       decoration: InputDecoration(
+      prefixIcon: Icon(widget.icon),
           suffixIcon: IconButton(
             icon: Icon((obsecure) ? Icons.visibility_off : Icons.visibility),
             onPressed: () {

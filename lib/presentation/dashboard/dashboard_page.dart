@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:roomart/presentation/auth/auth_page.dart';
-import 'package:roomart/presentation/auth/register_page.dart';
+import 'package:roomart/presentation/auth/sign_up/register_page.dart';
 import 'package:roomart/presentation/category/category_page.dart';
 import 'package:roomart/presentation/home/home_page.dart';
 
