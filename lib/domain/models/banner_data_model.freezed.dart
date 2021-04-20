@@ -18,8 +18,8 @@ class _$BannerDataModelTearOff {
 
 // ignore: unused_element
   _BannerDataModel call(
-      {@JsonKey(name: "BannerName") String bannerName,
-      @JsonKey(name: "ImageList") List<String> imageLIst}) {
+      {@JsonKey(name: 'BannerName') String bannerName,
+      @JsonKey(name: 'ImageList') List<String> imageLIst}) {
     return _BannerDataModel(
       bannerName: bannerName,
       imageLIst: imageLIst,
@@ -38,9 +38,9 @@ const $BannerDataModel = _$BannerDataModelTearOff();
 
 /// @nodoc
 mixin _$BannerDataModel {
-  @JsonKey(name: "BannerName")
+  @JsonKey(name: 'BannerName')
   String get bannerName;
-  @JsonKey(name: "ImageList")
+  @JsonKey(name: 'ImageList')
   List<String> get imageLIst;
 
   Map<String, dynamic> toJson();
@@ -54,8 +54,8 @@ abstract class $BannerDataModelCopyWith<$Res> {
           BannerDataModel value, $Res Function(BannerDataModel) then) =
       _$BannerDataModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: "BannerName") String bannerName,
-      @JsonKey(name: "ImageList") List<String> imageLIst});
+      {@JsonKey(name: 'BannerName') String bannerName,
+      @JsonKey(name: 'ImageList') List<String> imageLIst});
 }
 
 /// @nodoc
@@ -89,8 +89,8 @@ abstract class _$BannerDataModelCopyWith<$Res>
       __$BannerDataModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: "BannerName") String bannerName,
-      @JsonKey(name: "ImageList") List<String> imageLIst});
+      {@JsonKey(name: 'BannerName') String bannerName,
+      @JsonKey(name: 'ImageList') List<String> imageLIst});
 }
 
 /// @nodoc
@@ -123,17 +123,17 @@ class __$BannerDataModelCopyWithImpl<$Res>
 /// @nodoc
 class _$_BannerDataModel implements _BannerDataModel {
   _$_BannerDataModel(
-      {@JsonKey(name: "BannerName") this.bannerName,
-      @JsonKey(name: "ImageList") this.imageLIst});
+      {@JsonKey(name: 'BannerName') this.bannerName,
+      @JsonKey(name: 'ImageList') this.imageLIst});
 
   factory _$_BannerDataModel.fromJson(Map<String, dynamic> json) =>
       _$_$_BannerDataModelFromJson(json);
 
   @override
-  @JsonKey(name: "BannerName")
+  @JsonKey(name: 'BannerName')
   final String bannerName;
   @override
-  @JsonKey(name: "ImageList")
+  @JsonKey(name: 'ImageList')
   final List<String> imageLIst;
 
   @override
@@ -172,17 +172,17 @@ class _$_BannerDataModel implements _BannerDataModel {
 
 abstract class _BannerDataModel implements BannerDataModel {
   factory _BannerDataModel(
-      {@JsonKey(name: "BannerName") String bannerName,
-      @JsonKey(name: "ImageList") List<String> imageLIst}) = _$_BannerDataModel;
+      {@JsonKey(name: 'BannerName') String bannerName,
+      @JsonKey(name: 'ImageList') List<String> imageLIst}) = _$_BannerDataModel;
 
   factory _BannerDataModel.fromJson(Map<String, dynamic> json) =
       _$_BannerDataModel.fromJson;
 
   @override
-  @JsonKey(name: "BannerName")
+  @JsonKey(name: 'BannerName')
   String get bannerName;
   @override
-  @JsonKey(name: "ImageList")
+  @JsonKey(name: 'ImageList')
   List<String> get imageLIst;
   @override
   @JsonKey(ignore: true)

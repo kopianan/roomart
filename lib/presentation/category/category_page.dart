@@ -5,8 +5,11 @@ import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:roomart/application/category/category_controller.dart';
 import 'package:roomart/application/category/category_cubit.dart';
+import 'package:roomart/presentation/category/sub_cotegory_page.dart';
 
+import '../../domain/category/category_model.dart';
 import '../../injection.dart';
+import 'widgets/category_list_item.dart';
 
 class CategoryPage extends StatefulWidget {
   @override
@@ -67,48 +70,28 @@ class _CategoryPageState extends State<CategoryPage> {
                     listener: (context, state) {
                   state.maybeMap(
                     orElse: () {},
+                    error: (e) {
+                      print(e);
+                    },
                     onGetAllCategory: (e) {
                       categoryController.setCategoryList(e.data);
                     },
                   );
                 }, builder: (context, state) {
                   return SliverList(
-                      delegate: SliverChildListDelegate(categoryController
-                          .getCategoryList
-                          .map(
-                            (ctgry) => Container(
-                              margin: EdgeInsets.symmetric(
-                                  vertical: 6, horizontal: 10),
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(6),
-                                  boxShadow: [
-                                    BoxShadow(
-                                        offset: Offset(2, 2),
-                                        spreadRadius: 1,
-                                        blurRadius: 1,
-                                        color: Colors.grey[300])
-                                  ]),
-                              child: ListTile(
-                                onTap: () {},
-                                title: Text(
-                                  ctgry.description,
-                                  style: TextStyle(fontWeight: FontWeight.w500),
+                      delegate: SliverChildListDelegate(
+                          categoryController.getCategoryList
+                              .map(
+                                (ctgry) => CategoryListItem(
+                                  categoryModel: ctgry,
+                                  onTap: () {
+                                    // print(ctgry.toJson());
+                                    Get.toNamed(SubCategoryPage.TAG,
+                                        arguments: ctgry);
+                                  },
                                 ),
-                                trailing: Container(
-                                  padding: EdgeInsets.all(3),
-                                  decoration: BoxDecoration(
-                                      color: Colors.grey[500],
-                                      borderRadius: BorderRadius.circular(3)),
-                                  child: Icon(
-                                    Icons.arrow_forward_ios,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          )
-                          .toList()));
+                              )
+                              .toList()));
                 }))
           ],
         ));

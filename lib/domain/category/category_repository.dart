@@ -1,12 +1,10 @@
 import 'dart:convert';
-
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter/animation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:roomart/domain/category/category_model.dart';
-import 'package:roomart/domain/models/banner_data_model.dart';
 import 'package:roomart/utils/constants.dart';
+import 'package:roomart/infrastructure/core/pref.dart';
 
 abstract class ICategoryFacade {
   Future<Either<String, List<CategoryModel>>> getAllCategory();
@@ -26,7 +24,8 @@ class CategoryRepository extends ICategoryFacade {
     try {
       _response = await dio.get(
           "${Constants().baseUrlProduction}api,KategoriData.vm?loccode=DM149993946251846586342");
-      List responseJson = await json.decode(_response.data);
+      List responseJson = json.decode(_response.data);
+      Pref().saveCategoryToLocal(responseJson);
       final data =
           responseJson.map((md) => new CategoryModel.fromJson(md)).toList();
 

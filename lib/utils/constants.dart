@@ -8,6 +8,8 @@ class Constants {
   static const title_appbar = "ROOMART";
   String resellerParentID = null; //Disesuaikan dengan kode reseller
 
+  String storageBox = 'roomart_storage_key';
+
   //new base url
   String baseUrlProduction =
       "http://cloud.erp.web.id:8080/padasuka/weblayer/template/";

@@ -5,11 +5,15 @@ import 'package:roomart/application/auth/auth_cubit.dart';
 import 'package:roomart/domain/auth/register_data._model.dart';
 import 'package:roomart/domain/auth/register_request_model.dart';
 import 'package:roomart/domain/models/user/user_roomart_data_model.dart';
+import 'package:roomart/presentation/config_widgets/widget_collection.dart';
+import 'package:roomart/presentation/widgets/button_collection.dart';
 import 'package:roomart/utils/constants.dart';
+import 'package:roomart/utils/my_color.dart';
 
 import '../../../injection.dart';
 
 class RegisterPage extends StatefulWidget {
+  static final String TAG = '/register_page';
   @override
   _RegisterPageState createState() => _RegisterPageState();
 }
@@ -26,8 +30,8 @@ class _RegisterPageState extends State<RegisterPage> {
   final authCubit = getIt<AuthCubit>();
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: BlocProvider(
+    return Scaffold(
+      body: BlocProvider(
         create: (context) => authCubit,
         child: BlocConsumer<AuthCubit, AuthState>(
           listener: (context, state) {
@@ -48,6 +52,7 @@ class _RegisterPageState extends State<RegisterPage> {
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: CustomScrollView(
                 slivers: [
+                  SliverAppBar(),
                   SliverToBoxAdapter(
                     child: Text("Register",
                         style: TextStyle(
@@ -55,13 +60,11 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                   SliverToBoxAdapter(child: SizedBox(height: 20)),
                   SliverToBoxAdapter(
-                    child: Container(
-                      height: 180,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Image.asset(Constants.icon_launcher),
-                    ),
-                  ),
+                      child: Column(
+                    children: [
+                      getLogoOnAuthPage,
+                    ],
+                  )),
                   SliverToBoxAdapter(child: SizedBox(height: 20)),
                   SliverList(
                       delegate: SliverChildListDelegate([
@@ -74,7 +77,6 @@ class _RegisterPageState extends State<RegisterPage> {
                     SizedBox(height: height),
                     CustomTextField(
                       icon: Icons.date_range_outlined,
-
                       label: "Date of birth",
                       fullName: _dateOfBirth,
                       readOnly: true,
@@ -117,24 +119,26 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                     SizedBox(height: height),
                     CustomPasswordTextField(
-                       icon: Icons.lock,
+                      icon: Icons.lock,
                       label: "Re-type password",
                       fullName: _confirmPassword,
                       hint: "Confirmation password",
                       textInputType: TextInputType.visiblePassword,
                     ),
                     SizedBox(height: height),
-                    ElevatedButton(
-                        onPressed: () {
-                          RegisterDataModel registerModel = RegisterDataModel(
-                              dateTime: date,
-                              email: _email.text,
-                              name: _fullName.text,
-                              password: _password.text,
-                              phone: _phone.text);
-                          authCubit.registerToRoomart(registerModel);
-                        },
-                        child: Text("Register User")),
+                    DefaultButton1(
+                      onPressed: () {
+                        RegisterDataModel registerModel = RegisterDataModel(
+                            dateTime: date,
+                            email: _email.text,
+                            name: _fullName.text,
+                            password: _password.text,
+                            phone: _phone.text);
+                        authCubit.registerToRoomart(registerModel);
+                      },
+                      text: "Register user",
+                      color: button1,
+                    ),
                     SizedBox(height: 30),
                   ]))
                 ],
@@ -161,7 +165,7 @@ class CustomTextField extends StatelessWidget {
   final TextEditingController fullName;
   final String hint;
   final String label;
-final IconData icon ; 
+  final IconData icon;
   final bool readOnly;
   final Function onTap;
   final TextInputType textInputType;
@@ -173,7 +177,7 @@ final IconData icon ;
       keyboardType: textInputType,
       controller: fullName,
       decoration: InputDecoration(
-        prefixIcon: Icon(icon),
+          prefixIcon: Icon(icon),
           labelText: label,
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(6)),
           hintText: hint),
@@ -194,7 +198,7 @@ class CustomPasswordTextField extends StatefulWidget {
   final TextEditingController fullName;
   final String hint;
   final String label;
-  final IconData icon ; 
+  final IconData icon;
   final TextInputType textInputType;
 
   @override
@@ -211,7 +215,7 @@ class _CustomPasswordTextFieldState extends State<CustomPasswordTextField> {
       keyboardType: widget.textInputType,
       controller: widget.fullName,
       decoration: InputDecoration(
-      prefixIcon: Icon(widget.icon),
+          prefixIcon: Icon(widget.icon),
           suffixIcon: IconButton(
             icon: Icon((obsecure) ? Icons.visibility_off : Icons.visibility),
             onPressed: () {

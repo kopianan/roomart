@@ -9,6 +9,7 @@ import 'package:roomart/application/home/home_cubit.dart';
 import 'package:roomart/application/item/item_controller.dart';
 import 'package:roomart/application/item/item_cubit.dart';
 import 'package:roomart/domain/item/data_item_model.dart';
+import 'package:roomart/presentation/widgets/item_list_widget.dart';
 import 'package:roomart/utils/constants.dart';
 
 import '../../injection.dart';
@@ -146,7 +147,7 @@ class _HomePageState extends State<HomePage> {
                           crossAxisSpacing: 10,
                           shrinkWrap: true,
                           children: item.getListData
-                              .map((val) => buildItemData(context, val))
+                              .map((val) => ItemListWidget(item: val))
                               .toList(),
                         ),
                       ));
@@ -155,76 +156,6 @@ class _HomePageState extends State<HomePage> {
         ))
       ]),
     ));
-  }
-
-  Container buildItemData(BuildContext context, DataItemModel item) {
-    return Container(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Expanded(
-            flex: 2,
-            child: Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  image: DecorationImage(
-                    image:
-                        NetworkImage("${Constants().imageBaseUrl}${item.pic}"),
-                    fit: BoxFit.cover,
-                    onError: (exception, stackTrace) =>
-                        AssetImage('assets/broken_image.png'),
-                  )),
-            ),
-          ),
-          Expanded(
-            flex: 1,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                Container(
-                  height: 50,
-                  child: Text(
-                    item.itemName,
-                    maxLines: 3,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(fontSize: 14.0, color: Colors.black),
-                  ),
-                ),
-                SizedBox(
-                  height: 2.0,
-                ),
-                (item.qty == "null" || item.qty == "")
-                    ? Text(
-                        "Quantity :0",
-                        style: TextStyle(fontSize: 13),
-                      )
-                    : Text(
-                        "Quantity : ${double.parse(item.qty).toStringAsFixed(0)}",
-                        style: TextStyle(fontSize: 13)),
-                SizedBox(
-                  height: 2.0,
-                ),
-                // (userData == null)
-                //     ? _itemPrice()
-                //     : (userData.typeIds == null)
-                //         ? _itemPrice()
-                //         : (userData.typeIds ==
-                //                     Constants().customerTypeReseller ||
-                //                 userData.typeIds ==
-                //                     Constants().customerTypeReseller2)
-                //             ? Text(
-                //                 "Reseller : " +
-                //                     "Rp. ${Fun().formatStringCurrency(item.newPrice)}",
-                //                 style: TextStyle(color: Colors.green))
-                //             : _itemPrice(),
-              ],
-            ),
-          )
-        ],
-      ),
-    );
   }
 
   Text buildSubtitle(String title) {

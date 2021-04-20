@@ -12,6 +12,8 @@ import 'package:roomart/utils/constants.dart';
 abstract class IITemFacae {
   Future<Either<String, List<DataItemModel>>> getItemLazyLoading(
       int offset, int limit);
+  Future<Either<String, List<DataItemModel>>> getItemListByCategoryId(
+      int offset, int limit, String categoryId);
 }
 
 @LazySingleton(as: IITemFacae)
@@ -29,6 +31,33 @@ class ItemRepoistory extends IITemFacae {
     try {
       response = await dio.get(
           '${Constants().baseUrlProductionBackup}api,SPGApps.vm?cmd=2&loccode=GODM&limit=$limit&offset=$offset&sortby=updateDate&sortdirection=desc');
+
+      List jsonData = json.decode(response.data.toString());
+      print(jsonData.first);
+      List<DataItemModel> data =
+          jsonData.map((m) => DataItemModel.fromJson(m)).toList();
+      data.forEach((element) {
+        double data = double.tryParse(element.qty);
+        if (data != null) {
+          if (data > 0) {
+            _tempData.add(element);
+          }
+        }
+      });
+      return right(_tempData);
+    } catch (e) {
+      return left(e.toString());
+    }
+  }
+
+  @override
+  Future<Either<String, List<DataItemModel>>> getItemListByCategoryId(
+      int offset, int limit, String categoryId) async {
+    List<DataItemModel> _tempData = <DataItemModel>[];
+    Response response;
+    try {
+      response = await dio.get(
+          "${Constants().baseUrlProductionBackup}api,SPGApps.vm?cmd=2&loccode=GODM&kategoriid=$id&limit=$limit&offset=$offset");
 
       List jsonData = json.decode(response.data.toString());
       print(jsonData.first);

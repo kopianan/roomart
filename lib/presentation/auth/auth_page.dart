@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:roomart/presentation/config_widgets/widget_collection.dart';
+import 'package:roomart/presentation/widgets/button_collection.dart';
+import 'package:roomart/utils/my_color.dart';
+
+import 'sign_up/register_page.dart';
+import 'sign_up/register_page.dart';
 
 class AuthPage extends StatefulWidget {
   static final String TAG = '/auth_page';
@@ -7,60 +14,131 @@ class AuthPage extends StatefulWidget {
 }
 
 class _AuthPageState extends State<AuthPage> {
+  TextEditingController email = TextEditingController();
+  TextEditingController password = TextEditingController();
+  final formKey = GlobalKey<FormState>();
+  bool isObsecure = true;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 20),
-      child: CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(
-              child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+    final node = FocusScope.of(context);
+
+    return SingleChildScrollView(
+      child: ConstrainedBox(
+        constraints: BoxConstraints(
+          maxHeight: Get.size.height -
+              kToolbarHeight -
+              kBottomNavigationBarHeight -
+              kToolbarHeight,
+        ),
+        child: Container(
+          margin: EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                "Welcome",
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              Column(
+                children: [
+                  Container(
+                    alignment: Alignment.topLeft,
+                    margin: EdgeInsets.only(top: 15),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Welcome",
+                          style: TextStyle(
+                              fontSize: 30, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          "Silahkan register atau login untuk bisa bertransaksi.",
+                          style: TextStyle(fontWeight: FontWeight.w300),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(padding: EdgeInsets.only(top: 25)),
+                  Column(
+                    children: [getLogoOnAuthPage],
+                  ),
+                  Form(
+                    key: formKey,
+                    autovalidateMode: AutovalidateMode.onUserInteraction,
+                    child: Column(
+                      children: [
+                        SizedBox(height: 20),
+                        TextFormField(
+                          keyboardType: TextInputType.emailAddress,
+                          controller: email,
+                          textInputAction: TextInputAction.next,
+                          onEditingComplete: () => node.nextFocus(),
+                          decoration: InputDecoration(
+                              prefixIcon: Icon(Icons.email),
+                              labelText: "Email",
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(6)),
+                              hintText: "Your email"),
+                        ),
+                        SizedBox(height: 20),
+                        TextFormField(
+                          obscureText: isObsecure,
+                          keyboardType: TextInputType.emailAddress,
+                          controller: password,
+                          textInputAction: TextInputAction.done,
+                          onEditingComplete: () => node.requestFocus(),
+                          decoration: InputDecoration(
+                              prefixIcon: Icon(Icons.email),
+                              suffixIcon: IconButton(
+                                icon: Icon(isObsecure
+                                    ? Icons.visibility
+                                    : Icons.visibility_off_rounded),
+                                onPressed: () => setState(() {
+                                  isObsecure = !isObsecure;
+                                }),
+                              ),
+                              labelText: "Password",
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(6)),
+                              hintText: "Your Password"),
+                        ),
+                        SizedBox(height: 20),
+                        Container(
+                          width: double.infinity,
+                          height: 45,
+                          child: DefaultButton1(
+                            onPressed: () {},
+                            text: "Sign in",
+                            color: button1,
+                          ),
+                        ),
+                        SizedBox(height: 20),
+                        Container(
+                          alignment: Alignment.center,
+                          child: InkWell(
+                            onTap: () {},
+                            child: Text(
+                              "Forgot Password",
+                              style: TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
-              Text(
-                "Silahkan register atau login untuk bisa bertransaksi.",
-                style: TextStyle(fontWeight: FontWeight.w300),
-              ),
+              Container(
+                  width: double.infinity,
+                  height: 45,
+                  child: DefaultButton1(
+                    color: button2,
+                    text: "Register",
+                    onPressed: () {
+                      Get.toNamed(RegisterPage.TAG);
+                    },
+                  )),
             ],
-          )),
-          SliverPadding(padding: EdgeInsets.only(top: 25)),
-          SliverToBoxAdapter(
-            child: Container(
-                height: 200,
-                width: 200,
-                child: Image.asset('assets/roomart_logo2.png')),
           ),
-          SliverToBoxAdapter(
-              child: Column(
-            children: [
-              SizedBox(height: 20),
-              Container(
-                  width: double.infinity,
-                  height: 50,
-                  child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Sign In",
-                        style: TextStyle(color: Colors.white, fontSize: 17),
-                      ))),
-              SizedBox(height: 20),
-              Container(
-                  width: double.infinity,
-                  height: 50,
-                  child: MaterialButton(
-                      color: Color(0xFF673EEC),
-                      onPressed: () {},
-                      child: Text(
-                        "Register ",
-                        style: TextStyle(color: Colors.white, fontSize: 17),
-                      )))
-            ],
-          ))
-        ],
+        ),
       ),
     );
   }

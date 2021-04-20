@@ -12,7 +12,11 @@ class AppWidget extends StatelessWidget {
       getPages: pages,
       initialRoute: DashboardPage.TAG,
       theme: ThemeData(
-          appBarTheme: AppBarTheme(color: Colors.white),
+          appBarTheme: AppBarTheme(
+              centerTitle: true,
+              elevation: 3,
+              color: Colors.white,
+              iconTheme: IconThemeData(color: Colors.black)),
           inputDecorationTheme: InputDecorationTheme(
               fillColor: Colors.white,
               filled: true,
