@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
+import 'package:roomart/presentation/category/category_end_page.dart';
 import 'package:roomart/presentation/category/widgets/category_list_item.dart';
 
 import '../../application/category/category_controller.dart';
@@ -31,15 +32,19 @@ class _SubCategoryPageState extends State<SubCategoryPage> {
         appBar: AppBar(),
         body: GetBuilder<CategoryController>(
           builder: (ctgryList) {
+            final data =
+                ctgryList.calculateCategoryList(categoryModel.kategoriId);
             return ListView.builder(
-                itemCount: ctgryList
-                    .calculateCategoryList(categoryModel.kategoriId)
-                    .length,
+                itemCount: data.length,
                 itemBuilder: (context, index) {
                   return CategoryListItem(
-                    categoryModel: ctgryList
-                        .calculateCategoryList(categoryModel.kategoriId)[index],
-                    onTap: () {},
+                    categoryModel: data[index],
+                    onTap: () {
+                      if (data[index].countTotal == "0") {
+                        Get.toNamed(CategoryEndPage.TAG,
+                            arguments: data[index].kategoriId);
+                      }
+                    },
                   );
                 });
           },

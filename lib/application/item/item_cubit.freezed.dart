@@ -36,6 +36,13 @@ class _$ItemStateTearOff {
       data,
     );
   }
+
+// ignore: unused_element
+  _OnGetItemByCategoryId onGetItemByCategoryId(List<DataItemModel> data) {
+    return _OnGetItemByCategoryId(
+      data,
+    );
+  }
 }
 
 /// @nodoc
@@ -50,6 +57,7 @@ mixin _$ItemState {
     @required TResult loading(),
     @required TResult error(String e),
     @required TResult onGetItemLazy(List<DataItemModel> data),
+    @required TResult onGetItemByCategoryId(List<DataItemModel> data),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
@@ -57,6 +65,7 @@ mixin _$ItemState {
     TResult loading(),
     TResult error(String e),
     TResult onGetItemLazy(List<DataItemModel> data),
+    TResult onGetItemByCategoryId(List<DataItemModel> data),
     @required TResult orElse(),
   });
   @optionalTypeArgs
@@ -65,6 +74,7 @@ mixin _$ItemState {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult onGetItemLazy(_OnGetItemLazy value),
+    @required TResult onGetItemByCategoryId(_OnGetItemByCategoryId value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
@@ -72,6 +82,7 @@ mixin _$ItemState {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult onGetItemLazy(_OnGetItemLazy value),
+    TResult onGetItemByCategoryId(_OnGetItemByCategoryId value),
     @required TResult orElse(),
   });
 }
@@ -131,11 +142,13 @@ class _$_Initial implements _Initial {
     @required TResult loading(),
     @required TResult error(String e),
     @required TResult onGetItemLazy(List<DataItemModel> data),
+    @required TResult onGetItemByCategoryId(List<DataItemModel> data),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetItemLazy != null);
+    assert(onGetItemByCategoryId != null);
     return initial();
   }
 
@@ -146,6 +159,7 @@ class _$_Initial implements _Initial {
     TResult loading(),
     TResult error(String e),
     TResult onGetItemLazy(List<DataItemModel> data),
+    TResult onGetItemByCategoryId(List<DataItemModel> data),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -162,11 +176,13 @@ class _$_Initial implements _Initial {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult onGetItemLazy(_OnGetItemLazy value),
+    @required TResult onGetItemByCategoryId(_OnGetItemByCategoryId value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetItemLazy != null);
+    assert(onGetItemByCategoryId != null);
     return initial(this);
   }
 
@@ -177,6 +193,7 @@ class _$_Initial implements _Initial {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult onGetItemLazy(_OnGetItemLazy value),
+    TResult onGetItemByCategoryId(_OnGetItemByCategoryId value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -231,11 +248,13 @@ class _$_Loading implements _Loading {
     @required TResult loading(),
     @required TResult error(String e),
     @required TResult onGetItemLazy(List<DataItemModel> data),
+    @required TResult onGetItemByCategoryId(List<DataItemModel> data),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetItemLazy != null);
+    assert(onGetItemByCategoryId != null);
     return loading();
   }
 
@@ -246,6 +265,7 @@ class _$_Loading implements _Loading {
     TResult loading(),
     TResult error(String e),
     TResult onGetItemLazy(List<DataItemModel> data),
+    TResult onGetItemByCategoryId(List<DataItemModel> data),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -262,11 +282,13 @@ class _$_Loading implements _Loading {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult onGetItemLazy(_OnGetItemLazy value),
+    @required TResult onGetItemByCategoryId(_OnGetItemByCategoryId value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetItemLazy != null);
+    assert(onGetItemByCategoryId != null);
     return loading(this);
   }
 
@@ -277,6 +299,7 @@ class _$_Loading implements _Loading {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult onGetItemLazy(_OnGetItemLazy value),
+    TResult onGetItemByCategoryId(_OnGetItemByCategoryId value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -353,11 +376,13 @@ class _$_Error implements _Error {
     @required TResult loading(),
     @required TResult error(String e),
     @required TResult onGetItemLazy(List<DataItemModel> data),
+    @required TResult onGetItemByCategoryId(List<DataItemModel> data),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetItemLazy != null);
+    assert(onGetItemByCategoryId != null);
     return error(e);
   }
 
@@ -368,6 +393,7 @@ class _$_Error implements _Error {
     TResult loading(),
     TResult error(String e),
     TResult onGetItemLazy(List<DataItemModel> data),
+    TResult onGetItemByCategoryId(List<DataItemModel> data),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -384,11 +410,13 @@ class _$_Error implements _Error {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult onGetItemLazy(_OnGetItemLazy value),
+    @required TResult onGetItemByCategoryId(_OnGetItemByCategoryId value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetItemLazy != null);
+    assert(onGetItemByCategoryId != null);
     return error(this);
   }
 
@@ -399,6 +427,7 @@ class _$_Error implements _Error {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult onGetItemLazy(_OnGetItemLazy value),
+    TResult onGetItemByCategoryId(_OnGetItemByCategoryId value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -481,11 +510,13 @@ class _$_OnGetItemLazy implements _OnGetItemLazy {
     @required TResult loading(),
     @required TResult error(String e),
     @required TResult onGetItemLazy(List<DataItemModel> data),
+    @required TResult onGetItemByCategoryId(List<DataItemModel> data),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetItemLazy != null);
+    assert(onGetItemByCategoryId != null);
     return onGetItemLazy(data);
   }
 
@@ -496,6 +527,7 @@ class _$_OnGetItemLazy implements _OnGetItemLazy {
     TResult loading(),
     TResult error(String e),
     TResult onGetItemLazy(List<DataItemModel> data),
+    TResult onGetItemByCategoryId(List<DataItemModel> data),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -512,11 +544,13 @@ class _$_OnGetItemLazy implements _OnGetItemLazy {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult onGetItemLazy(_OnGetItemLazy value),
+    @required TResult onGetItemByCategoryId(_OnGetItemByCategoryId value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetItemLazy != null);
+    assert(onGetItemByCategoryId != null);
     return onGetItemLazy(this);
   }
 
@@ -527,6 +561,7 @@ class _$_OnGetItemLazy implements _OnGetItemLazy {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult onGetItemLazy(_OnGetItemLazy value),
+    TResult onGetItemByCategoryId(_OnGetItemByCategoryId value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -543,4 +578,141 @@ abstract class _OnGetItemLazy implements ItemState {
   List<DataItemModel> get data;
   @JsonKey(ignore: true)
   _$OnGetItemLazyCopyWith<_OnGetItemLazy> get copyWith;
+}
+
+/// @nodoc
+abstract class _$OnGetItemByCategoryIdCopyWith<$Res> {
+  factory _$OnGetItemByCategoryIdCopyWith(_OnGetItemByCategoryId value,
+          $Res Function(_OnGetItemByCategoryId) then) =
+      __$OnGetItemByCategoryIdCopyWithImpl<$Res>;
+  $Res call({List<DataItemModel> data});
+}
+
+/// @nodoc
+class __$OnGetItemByCategoryIdCopyWithImpl<$Res>
+    extends _$ItemStateCopyWithImpl<$Res>
+    implements _$OnGetItemByCategoryIdCopyWith<$Res> {
+  __$OnGetItemByCategoryIdCopyWithImpl(_OnGetItemByCategoryId _value,
+      $Res Function(_OnGetItemByCategoryId) _then)
+      : super(_value, (v) => _then(v as _OnGetItemByCategoryId));
+
+  @override
+  _OnGetItemByCategoryId get _value => super._value as _OnGetItemByCategoryId;
+
+  @override
+  $Res call({
+    Object data = freezed,
+  }) {
+    return _then(_OnGetItemByCategoryId(
+      data == freezed ? _value.data : data as List<DataItemModel>,
+    ));
+  }
+}
+
+/// @nodoc
+class _$_OnGetItemByCategoryId implements _OnGetItemByCategoryId {
+  const _$_OnGetItemByCategoryId(this.data) : assert(data != null);
+
+  @override
+  final List<DataItemModel> data;
+
+  @override
+  String toString() {
+    return 'ItemState.onGetItemByCategoryId(data: $data)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _OnGetItemByCategoryId &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(data);
+
+  @JsonKey(ignore: true)
+  @override
+  _$OnGetItemByCategoryIdCopyWith<_OnGetItemByCategoryId> get copyWith =>
+      __$OnGetItemByCategoryIdCopyWithImpl<_OnGetItemByCategoryId>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loading(),
+    @required TResult error(String e),
+    @required TResult onGetItemLazy(List<DataItemModel> data),
+    @required TResult onGetItemByCategoryId(List<DataItemModel> data),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(onGetItemLazy != null);
+    assert(onGetItemByCategoryId != null);
+    return onGetItemByCategoryId(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loading(),
+    TResult error(String e),
+    TResult onGetItemLazy(List<DataItemModel> data),
+    TResult onGetItemByCategoryId(List<DataItemModel> data),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (onGetItemByCategoryId != null) {
+      return onGetItemByCategoryId(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loading(_Loading value),
+    @required TResult error(_Error value),
+    @required TResult onGetItemLazy(_OnGetItemLazy value),
+    @required TResult onGetItemByCategoryId(_OnGetItemByCategoryId value),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(onGetItemLazy != null);
+    assert(onGetItemByCategoryId != null);
+    return onGetItemByCategoryId(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loading(_Loading value),
+    TResult error(_Error value),
+    TResult onGetItemLazy(_OnGetItemLazy value),
+    TResult onGetItemByCategoryId(_OnGetItemByCategoryId value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (onGetItemByCategoryId != null) {
+      return onGetItemByCategoryId(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnGetItemByCategoryId implements ItemState {
+  const factory _OnGetItemByCategoryId(List<DataItemModel> data) =
+      _$_OnGetItemByCategoryId;
+
+  List<DataItemModel> get data;
+  @JsonKey(ignore: true)
+  _$OnGetItemByCategoryIdCopyWith<_OnGetItemByCategoryId> get copyWith;
 }

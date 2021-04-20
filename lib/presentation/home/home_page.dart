@@ -126,8 +126,8 @@ class _HomePageState extends State<HomePage> {
           create: (context) => itemBloc..getItemListLazy(limit, offset),
           child: BlocConsumer<ItemCubit, ItemState>(
             listener: (context, state) {
-              state.map(
-                  initial: (e) {},
+              state.maybeMap(
+                  orElse: () {},
                   loading: (e) {},
                   error: (e) {},
                   onGetItemLazy: (e) {
@@ -140,11 +140,13 @@ class _HomePageState extends State<HomePage> {
             builder: (context, state) {
               return GetX<ItemController>(
                   builder: (item) => Container(
+                        margin: EdgeInsets.symmetric(horizontal: 10),
                         child: GridView.count(
                           physics: NeverScrollableScrollPhysics(),
                           crossAxisCount: 2,
                           childAspectRatio: 1 / 1.5,
                           crossAxisSpacing: 10,
+                          mainAxisSpacing: 15,
                           shrinkWrap: true,
                           children: item.getListData
                               .map((val) => ItemListWidget(item: val))

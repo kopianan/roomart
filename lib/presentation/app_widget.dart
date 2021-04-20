@@ -12,6 +12,8 @@ class AppWidget extends StatelessWidget {
       getPages: pages,
       initialRoute: DashboardPage.TAG,
       theme: ThemeData(
+          bottomNavigationBarTheme: BottomNavigationBarThemeData(
+              backgroundColor: Colors.white, elevation: 4),
           appBarTheme: AppBarTheme(
               centerTitle: true,
               elevation: 3,
