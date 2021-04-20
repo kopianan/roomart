@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:roomart/presentation/auth/auth_page.dart';
 import 'package:roomart/presentation/auth/register_page.dart';
 import 'package:roomart/presentation/category/category_page.dart';
 import 'package:roomart/presentation/home/home_page.dart';
@@ -22,12 +23,13 @@ class _DashboardPageState extends State<DashboardPage> {
   List<Widget> _children = <Widget>[
     HomePage(),
     CategoryPage(),
-    RegisterPage(),
+    AuthPage(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       drawer: Drawer(),
       body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(

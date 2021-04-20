@@ -75,7 +75,39 @@ class _CategoryPageState extends State<CategoryPage> {
                   return SliverList(
                       delegate: SliverChildListDelegate(categoryController
                           .getCategoryList
-                          .map((ctgry) => ListTile(title: Text(ctgry.description)))
+                          .map(
+                            (ctgry) => Container(
+                              margin: EdgeInsets.symmetric(
+                                  vertical: 6, horizontal: 10),
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(6),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        offset: Offset(2, 2),
+                                        spreadRadius: 1,
+                                        blurRadius: 1,
+                                        color: Colors.grey[300])
+                                  ]),
+                              child: ListTile(
+                                onTap: () {},
+                                title: Text(
+                                  ctgry.description,
+                                  style: TextStyle(fontWeight: FontWeight.w500),
+                                ),
+                                trailing: Container(
+                                  padding: EdgeInsets.all(3),
+                                  decoration: BoxDecoration(
+                                      color: Colors.grey[500],
+                                      borderRadius: BorderRadius.circular(3)),
+                                  child: Icon(
+                                    Icons.arrow_forward_ios,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          )
                           .toList()));
                 }))
           ],
