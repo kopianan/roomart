@@ -3,6 +3,7 @@ import 'package:roomart/presentation/auth/auth_page.dart';
 import 'package:roomart/presentation/auth/sign_up/register_page.dart';
 import 'package:roomart/presentation/category/category_page.dart';
 import 'package:roomart/presentation/home/home_page.dart';
+import 'package:roomart/presentation/me/me_page.dart';
 
 class DashboardPage extends StatefulWidget {
   static final String TAG = '/dashboard_page';
@@ -23,7 +24,8 @@ class _DashboardPageState extends State<DashboardPage> {
   List<Widget> _children = <Widget>[
     HomePage(),
     CategoryPage(),
-    AuthPage(),
+    // AuthPage(),
+    MePage()
   ];
 
   @override
