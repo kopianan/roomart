@@ -9,7 +9,7 @@ part of 'transaction_req_res.dart';
 
 T _$identity<T>(T value) => value;
 TransactionReqRes _$TransactionReqResFromJson(Map<String, dynamic> json) {
-  return _TransactionHistoryRequest.fromJson(json);
+  return TransactionHistoryRequest.fromJson(json);
 }
 
 /// @nodoc
@@ -17,13 +17,13 @@ class _$TransactionReqResTearOff {
   const _$TransactionReqResTearOff();
 
 // ignore: unused_element
-  _TransactionHistoryRequest transactionHistoryRequest(
+  TransactionHistoryRequest transactionHistoryRequest(
       {@JsonKey(name: "Token") String token,
       @JsonKey(name: "CustomerID") String customerId,
-      @JsonKey(name: "Limit") String limit,
-      @JsonKey(name: "Offset") String offset,
+      @JsonKey(name: "Limit") int limit,
+      @JsonKey(name: "Offset") int offset,
       @JsonKey(name: "Status") String status}) {
-    return _TransactionHistoryRequest(
+    return TransactionHistoryRequest(
       token: token,
       customerId: customerId,
       limit: limit,
@@ -49,9 +49,9 @@ mixin _$TransactionReqRes {
   @JsonKey(name: "CustomerID")
   String get customerId;
   @JsonKey(name: "Limit")
-  String get limit;
+  int get limit;
   @JsonKey(name: "Offset")
-  String get offset;
+  int get offset;
   @JsonKey(name: "Status")
   String get status;
 
@@ -61,8 +61,8 @@ mixin _$TransactionReqRes {
         TResult transactionHistoryRequest(
             @JsonKey(name: "Token") String token,
             @JsonKey(name: "CustomerID") String customerId,
-            @JsonKey(name: "Limit") String limit,
-            @JsonKey(name: "Offset") String offset,
+            @JsonKey(name: "Limit") int limit,
+            @JsonKey(name: "Offset") int offset,
             @JsonKey(name: "Status") String status),
   });
   @optionalTypeArgs
@@ -70,19 +70,19 @@ mixin _$TransactionReqRes {
     TResult transactionHistoryRequest(
         @JsonKey(name: "Token") String token,
         @JsonKey(name: "CustomerID") String customerId,
-        @JsonKey(name: "Limit") String limit,
-        @JsonKey(name: "Offset") String offset,
+        @JsonKey(name: "Limit") int limit,
+        @JsonKey(name: "Offset") int offset,
         @JsonKey(name: "Status") String status),
     @required TResult orElse(),
   });
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required
-        TResult transactionHistoryRequest(_TransactionHistoryRequest value),
+        TResult transactionHistoryRequest(TransactionHistoryRequest value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult transactionHistoryRequest(_TransactionHistoryRequest value),
+    TResult transactionHistoryRequest(TransactionHistoryRequest value),
     @required TResult orElse(),
   });
   Map<String, dynamic> toJson();
@@ -98,8 +98,8 @@ abstract class $TransactionReqResCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: "Token") String token,
       @JsonKey(name: "CustomerID") String customerId,
-      @JsonKey(name: "Limit") String limit,
-      @JsonKey(name: "Offset") String offset,
+      @JsonKey(name: "Limit") int limit,
+      @JsonKey(name: "Offset") int offset,
       @JsonKey(name: "Status") String status});
 }
 
@@ -124,39 +124,39 @@ class _$TransactionReqResCopyWithImpl<$Res>
       token: token == freezed ? _value.token : token as String,
       customerId:
           customerId == freezed ? _value.customerId : customerId as String,
-      limit: limit == freezed ? _value.limit : limit as String,
-      offset: offset == freezed ? _value.offset : offset as String,
+      limit: limit == freezed ? _value.limit : limit as int,
+      offset: offset == freezed ? _value.offset : offset as int,
       status: status == freezed ? _value.status : status as String,
     ));
   }
 }
 
 /// @nodoc
-abstract class _$TransactionHistoryRequestCopyWith<$Res>
+abstract class $TransactionHistoryRequestCopyWith<$Res>
     implements $TransactionReqResCopyWith<$Res> {
-  factory _$TransactionHistoryRequestCopyWith(_TransactionHistoryRequest value,
-          $Res Function(_TransactionHistoryRequest) then) =
-      __$TransactionHistoryRequestCopyWithImpl<$Res>;
+  factory $TransactionHistoryRequestCopyWith(TransactionHistoryRequest value,
+          $Res Function(TransactionHistoryRequest) then) =
+      _$TransactionHistoryRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: "Token") String token,
       @JsonKey(name: "CustomerID") String customerId,
-      @JsonKey(name: "Limit") String limit,
-      @JsonKey(name: "Offset") String offset,
+      @JsonKey(name: "Limit") int limit,
+      @JsonKey(name: "Offset") int offset,
       @JsonKey(name: "Status") String status});
 }
 
 /// @nodoc
-class __$TransactionHistoryRequestCopyWithImpl<$Res>
+class _$TransactionHistoryRequestCopyWithImpl<$Res>
     extends _$TransactionReqResCopyWithImpl<$Res>
-    implements _$TransactionHistoryRequestCopyWith<$Res> {
-  __$TransactionHistoryRequestCopyWithImpl(_TransactionHistoryRequest _value,
-      $Res Function(_TransactionHistoryRequest) _then)
-      : super(_value, (v) => _then(v as _TransactionHistoryRequest));
+    implements $TransactionHistoryRequestCopyWith<$Res> {
+  _$TransactionHistoryRequestCopyWithImpl(TransactionHistoryRequest _value,
+      $Res Function(TransactionHistoryRequest) _then)
+      : super(_value, (v) => _then(v as TransactionHistoryRequest));
 
   @override
-  _TransactionHistoryRequest get _value =>
-      super._value as _TransactionHistoryRequest;
+  TransactionHistoryRequest get _value =>
+      super._value as TransactionHistoryRequest;
 
   @override
   $Res call({
@@ -166,12 +166,12 @@ class __$TransactionHistoryRequestCopyWithImpl<$Res>
     Object offset = freezed,
     Object status = freezed,
   }) {
-    return _then(_TransactionHistoryRequest(
+    return _then(TransactionHistoryRequest(
       token: token == freezed ? _value.token : token as String,
       customerId:
           customerId == freezed ? _value.customerId : customerId as String,
-      limit: limit == freezed ? _value.limit : limit as String,
-      offset: offset == freezed ? _value.offset : offset as String,
+      limit: limit == freezed ? _value.limit : limit as int,
+      offset: offset == freezed ? _value.offset : offset as int,
       status: status == freezed ? _value.status : status as String,
     ));
   }
@@ -180,16 +180,16 @@ class __$TransactionHistoryRequestCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$_TransactionHistoryRequest implements _TransactionHistoryRequest {
-  _$_TransactionHistoryRequest(
+class _$TransactionHistoryRequest implements TransactionHistoryRequest {
+  _$TransactionHistoryRequest(
       {@JsonKey(name: "Token") this.token,
       @JsonKey(name: "CustomerID") this.customerId,
       @JsonKey(name: "Limit") this.limit,
       @JsonKey(name: "Offset") this.offset,
       @JsonKey(name: "Status") this.status});
 
-  factory _$_TransactionHistoryRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_TransactionHistoryRequestFromJson(json);
+  factory _$TransactionHistoryRequest.fromJson(Map<String, dynamic> json) =>
+      _$_$TransactionHistoryRequestFromJson(json);
 
   @override
   @JsonKey(name: "Token")
@@ -199,10 +199,10 @@ class _$_TransactionHistoryRequest implements _TransactionHistoryRequest {
   final String customerId;
   @override
   @JsonKey(name: "Limit")
-  final String limit;
+  final int limit;
   @override
   @JsonKey(name: "Offset")
-  final String offset;
+  final int offset;
   @override
   @JsonKey(name: "Status")
   final String status;
@@ -215,7 +215,7 @@ class _$_TransactionHistoryRequest implements _TransactionHistoryRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _TransactionHistoryRequest &&
+        (other is TransactionHistoryRequest &&
             (identical(other.token, token) ||
                 const DeepCollectionEquality().equals(other.token, token)) &&
             (identical(other.customerId, customerId) ||
@@ -240,10 +240,9 @@ class _$_TransactionHistoryRequest implements _TransactionHistoryRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$TransactionHistoryRequestCopyWith<_TransactionHistoryRequest>
-      get copyWith =>
-          __$TransactionHistoryRequestCopyWithImpl<_TransactionHistoryRequest>(
-              this, _$identity);
+  $TransactionHistoryRequestCopyWith<TransactionHistoryRequest> get copyWith =>
+      _$TransactionHistoryRequestCopyWithImpl<TransactionHistoryRequest>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -252,8 +251,8 @@ class _$_TransactionHistoryRequest implements _TransactionHistoryRequest {
         TResult transactionHistoryRequest(
             @JsonKey(name: "Token") String token,
             @JsonKey(name: "CustomerID") String customerId,
-            @JsonKey(name: "Limit") String limit,
-            @JsonKey(name: "Offset") String offset,
+            @JsonKey(name: "Limit") int limit,
+            @JsonKey(name: "Offset") int offset,
             @JsonKey(name: "Status") String status),
   }) {
     assert(transactionHistoryRequest != null);
@@ -266,8 +265,8 @@ class _$_TransactionHistoryRequest implements _TransactionHistoryRequest {
     TResult transactionHistoryRequest(
         @JsonKey(name: "Token") String token,
         @JsonKey(name: "CustomerID") String customerId,
-        @JsonKey(name: "Limit") String limit,
-        @JsonKey(name: "Offset") String offset,
+        @JsonKey(name: "Limit") int limit,
+        @JsonKey(name: "Offset") int offset,
         @JsonKey(name: "Status") String status),
     @required TResult orElse(),
   }) {
@@ -283,7 +282,7 @@ class _$_TransactionHistoryRequest implements _TransactionHistoryRequest {
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required
-        TResult transactionHistoryRequest(_TransactionHistoryRequest value),
+        TResult transactionHistoryRequest(TransactionHistoryRequest value),
   }) {
     assert(transactionHistoryRequest != null);
     return transactionHistoryRequest(this);
@@ -292,7 +291,7 @@ class _$_TransactionHistoryRequest implements _TransactionHistoryRequest {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult transactionHistoryRequest(_TransactionHistoryRequest value),
+    TResult transactionHistoryRequest(TransactionHistoryRequest value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -304,20 +303,20 @@ class _$_TransactionHistoryRequest implements _TransactionHistoryRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TransactionHistoryRequestToJson(this);
+    return _$_$TransactionHistoryRequestToJson(this);
   }
 }
 
-abstract class _TransactionHistoryRequest implements TransactionReqRes {
-  factory _TransactionHistoryRequest(
+abstract class TransactionHistoryRequest implements TransactionReqRes {
+  factory TransactionHistoryRequest(
       {@JsonKey(name: "Token") String token,
       @JsonKey(name: "CustomerID") String customerId,
-      @JsonKey(name: "Limit") String limit,
-      @JsonKey(name: "Offset") String offset,
-      @JsonKey(name: "Status") String status}) = _$_TransactionHistoryRequest;
+      @JsonKey(name: "Limit") int limit,
+      @JsonKey(name: "Offset") int offset,
+      @JsonKey(name: "Status") String status}) = _$TransactionHistoryRequest;
 
-  factory _TransactionHistoryRequest.fromJson(Map<String, dynamic> json) =
-      _$_TransactionHistoryRequest.fromJson;
+  factory TransactionHistoryRequest.fromJson(Map<String, dynamic> json) =
+      _$TransactionHistoryRequest.fromJson;
 
   @override
   @JsonKey(name: "Token")
@@ -327,14 +326,14 @@ abstract class _TransactionHistoryRequest implements TransactionReqRes {
   String get customerId;
   @override
   @JsonKey(name: "Limit")
-  String get limit;
+  int get limit;
   @override
   @JsonKey(name: "Offset")
-  String get offset;
+  int get offset;
   @override
   @JsonKey(name: "Status")
   String get status;
   @override
   @JsonKey(ignore: true)
-  _$TransactionHistoryRequestCopyWith<_TransactionHistoryRequest> get copyWith;
+  $TransactionHistoryRequestCopyWith<TransactionHistoryRequest> get copyWith;
 }

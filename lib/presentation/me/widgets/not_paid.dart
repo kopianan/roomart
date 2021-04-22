@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:roomart/application/transaction/transaction_controller.dart';
 import 'package:roomart/application/transaction/transaction_cubit.dart';
+import 'package:roomart/domain/transaction/models/transaction_req_res.dart';
+import 'package:roomart/utils/constants.dart';
 
 import '../../../injection.dart';
 
@@ -14,36 +16,40 @@ class NotPaid extends StatefulWidget {
 class _NotPaidState extends State<NotPaid> {
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-        create: (context) => getIt<TransactionCubit>()
-          ..getHistoryTranasction("DM152585832596584529828"),
-        child: BlocConsumer<TransactionCubit, TransactionState>(
-            listener: (context, state) {
-          state.maybeMap(
-            orElse: () {},
-            onGetHistoryTransaction: (value) {
-              // transController.setAllTransactionHistoryData(value.data);
-            },
-          );
-        }, builder: (context, state) {
-          return state.maybeMap(
-              orElse: () => Container(),
-              loading: (e) => Container(
-                    child: Center(
-                      child: CircularProgressIndicator(),
-                    ),
-                  ),
-              onGetHistoryTransaction: (value) {
-                return GetBuilder<TransactionController>(
-                  builder: (trans) {
-                    final _filtered = trans.getFilteredTransaction("1");
-                    print(_filtered.length);
+    return GetBuilder<TransactionController>(
+        builder: (trans) => BlocProvider(
+            create: (context) => getIt<TransactionCubit>()
+              ..getHistoryTransactionByStatus(TransactionHistoryRequest(
+                limit: 10,
+                offset: 0,
+                token: Constants().tokenUltimo,
+                status: "1",
+                customerId: "DM152585832596584529828",
+              )),
+            child: BlocConsumer<TransactionCubit, TransactionState>(
+                listener: (context, state) {
+              state.maybeMap(
+                orElse: () {},
+                error: (e) {},
+                onGetHistoryTransaction: (value) {
+                  trans.setAllTransactionHistoryData(value.data);
+                },
+              );
+            }, builder: (context, state) {
+              return state.maybeMap(
+                  orElse: () => Container(),
+                  loading: (e) => Container(
+                        child: Center(
+                          child: CircularProgressIndicator(),
+                        ),
+                      ),
+                  onGetHistoryTransaction: (value) {
                     return ListView.builder(
-                        itemCount: _filtered.length,
-                        itemBuilder: (context, index) {});
-                  },
-                );
-              });
-        }));
+                        itemCount: trans.getAllTransactionData.length,
+                        itemBuilder: (context, index) {
+                          return Text(trans.getAllTransactionData[index].iD);
+                        });
+                  });
+            })));
   }
 }

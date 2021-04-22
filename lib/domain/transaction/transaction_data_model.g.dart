@@ -14,20 +14,20 @@ _$_TransactionDataModel _$_$_TransactionDataModelFromJson(
     iD: json['ID'] as String,
     number: json['Number'] as String,
     customerID: json['CustomerID'] as String,
-    total: json['Total'] as int,
+    total: (json['Total'] as num)?.toDouble(),
     date: json['Date'] as String,
-    cashback: json['Cashback'] as int,
+    cashback: (json['Cashback'] as num)?.toDouble(),
     status: json['Status'] as int,
     transType: json['Trans_type'] as String,
     location: json['Location'] as String,
     createBy: json['Create_by'] as String,
     remark: json['Remark'] as String,
     pmttype: json['Pmttype'] as String,
-    totalDiscount: json['Total_discount'] as int,
+    totalDiscount: (json['Total_discount'] as num)?.toDouble(),
     pmtterm: json['Pmtterm'] as String,
     statusEnum: json['StatusEnum'] as int,
     statusName: json['StatusName'] as String,
-    items: (json['items'] as List)
+    items: (json['Items'] as List)
         ?.map((e) => e == null
             ? null
             : TransactionItemDataModel.fromJson(e as Map<String, dynamic>))
@@ -36,7 +36,7 @@ _$_TransactionDataModel _$_$_TransactionDataModelFromJson(
     transferBankAccountName: json['TransferBankAccountName'] as String,
     transferBankAccount: json['TransferBankAccount'] as String,
     transferBankImage: json['TransferBankImage'] as String,
-    bankID: json['BankID'] as String,
+    bankID: json['BankID'] as int,
     bankAccountName: json['BankAccountName'] as String,
     bankNo: json['BankNo'] as String,
     paymentChannel: json['PaymentChannel'] as String,
@@ -67,7 +67,7 @@ Map<String, dynamic> _$_$_TransactionDataModelToJson(
       'Pmtterm': instance.pmtterm,
       'StatusEnum': instance.statusEnum,
       'StatusName': instance.statusName,
-      'items': instance.items,
+      'Items': instance.items,
       'TransferDate': instance.transferDate,
       'TransferBankAccountName': instance.transferBankAccountName,
       'TransferBankAccount': instance.transferBankAccount,

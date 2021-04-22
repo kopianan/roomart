@@ -23,25 +23,25 @@ class _$TransactionDataModelTearOff {
       @JsonKey(name: "ID") String iD,
       @JsonKey(name: "Number") String number,
       @JsonKey(name: "CustomerID") String customerID,
-      @JsonKey(name: "Total") int total,
+      @JsonKey(name: "Total") double total,
       @JsonKey(name: "Date") String date,
-      @JsonKey(name: "Cashback") int cashback,
+      @JsonKey(name: "Cashback") double cashback,
       @JsonKey(name: "Status") int status,
       @JsonKey(name: "Trans_type") String transType,
       @JsonKey(name: "Location") String location,
       @JsonKey(name: "Create_by") String createBy,
       @JsonKey(name: "Remark") String remark,
       @JsonKey(name: "Pmttype") String pmttype,
-      @JsonKey(name: "Total_discount") int totalDiscount,
+      @JsonKey(name: "Total_discount") double totalDiscount,
       @JsonKey(name: "Pmtterm") String pmtterm,
       @JsonKey(name: "StatusEnum") int statusEnum,
       @JsonKey(name: "StatusName") String statusName,
-      List<TransactionItemDataModel> items,
+      @JsonKey(name: "Items") List<TransactionItemDataModel> items,
       @JsonKey(name: "TransferDate") String transferDate,
       @JsonKey(name: "TransferBankAccountName") String transferBankAccountName,
       @JsonKey(name: "TransferBankAccount") String transferBankAccount,
       @JsonKey(name: "TransferBankImage") String transferBankImage,
-      @JsonKey(name: "BankID") String bankID,
+      @JsonKey(name: "BankID") int bankID,
       @JsonKey(name: "BankAccountName") String bankAccountName,
       @JsonKey(name: "BankNo") String bankNo,
       @JsonKey(name: "PaymentChannel") String paymentChannel,
@@ -105,11 +105,11 @@ mixin _$TransactionDataModel {
   @JsonKey(name: "CustomerID")
   String get customerID;
   @JsonKey(name: "Total")
-  int get total;
+  double get total;
   @JsonKey(name: "Date")
   String get date;
   @JsonKey(name: "Cashback")
-  int get cashback;
+  double get cashback;
   @JsonKey(name: "Status")
   int get status;
   @JsonKey(name: "Trans_type")
@@ -123,13 +123,14 @@ mixin _$TransactionDataModel {
   @JsonKey(name: "Pmttype")
   String get pmttype;
   @JsonKey(name: "Total_discount")
-  int get totalDiscount;
+  double get totalDiscount;
   @JsonKey(name: "Pmtterm")
   String get pmtterm;
   @JsonKey(name: "StatusEnum")
   int get statusEnum;
   @JsonKey(name: "StatusName")
   String get statusName;
+  @JsonKey(name: "Items")
   List<TransactionItemDataModel> get items;
   @JsonKey(name: "TransferDate")
   String get transferDate;
@@ -140,7 +141,7 @@ mixin _$TransactionDataModel {
   @JsonKey(name: "TransferBankImage")
   String get transferBankImage;
   @JsonKey(name: "BankID")
-  String get bankID;
+  int get bankID;
   @JsonKey(name: "BankAccountName")
   String get bankAccountName;
   @JsonKey(name: "BankNo")
@@ -170,25 +171,25 @@ abstract class $TransactionDataModelCopyWith<$Res> {
       @JsonKey(name: "ID") String iD,
       @JsonKey(name: "Number") String number,
       @JsonKey(name: "CustomerID") String customerID,
-      @JsonKey(name: "Total") int total,
+      @JsonKey(name: "Total") double total,
       @JsonKey(name: "Date") String date,
-      @JsonKey(name: "Cashback") int cashback,
+      @JsonKey(name: "Cashback") double cashback,
       @JsonKey(name: "Status") int status,
       @JsonKey(name: "Trans_type") String transType,
       @JsonKey(name: "Location") String location,
       @JsonKey(name: "Create_by") String createBy,
       @JsonKey(name: "Remark") String remark,
       @JsonKey(name: "Pmttype") String pmttype,
-      @JsonKey(name: "Total_discount") int totalDiscount,
+      @JsonKey(name: "Total_discount") double totalDiscount,
       @JsonKey(name: "Pmtterm") String pmtterm,
       @JsonKey(name: "StatusEnum") int statusEnum,
       @JsonKey(name: "StatusName") String statusName,
-      List<TransactionItemDataModel> items,
+      @JsonKey(name: "Items") List<TransactionItemDataModel> items,
       @JsonKey(name: "TransferDate") String transferDate,
       @JsonKey(name: "TransferBankAccountName") String transferBankAccountName,
       @JsonKey(name: "TransferBankAccount") String transferBankAccount,
       @JsonKey(name: "TransferBankImage") String transferBankImage,
-      @JsonKey(name: "BankID") String bankID,
+      @JsonKey(name: "BankID") int bankID,
       @JsonKey(name: "BankAccountName") String bankAccountName,
       @JsonKey(name: "BankNo") String bankNo,
       @JsonKey(name: "PaymentChannel") String paymentChannel,
@@ -250,9 +251,9 @@ class _$TransactionDataModelCopyWithImpl<$Res>
       number: number == freezed ? _value.number : number as String,
       customerID:
           customerID == freezed ? _value.customerID : customerID as String,
-      total: total == freezed ? _value.total : total as int,
+      total: total == freezed ? _value.total : total as double,
       date: date == freezed ? _value.date : date as String,
-      cashback: cashback == freezed ? _value.cashback : cashback as int,
+      cashback: cashback == freezed ? _value.cashback : cashback as double,
       status: status == freezed ? _value.status : status as int,
       transType: transType == freezed ? _value.transType : transType as String,
       location: location == freezed ? _value.location : location as String,
@@ -261,7 +262,7 @@ class _$TransactionDataModelCopyWithImpl<$Res>
       pmttype: pmttype == freezed ? _value.pmttype : pmttype as String,
       totalDiscount: totalDiscount == freezed
           ? _value.totalDiscount
-          : totalDiscount as int,
+          : totalDiscount as double,
       pmtterm: pmtterm == freezed ? _value.pmtterm : pmtterm as String,
       statusEnum: statusEnum == freezed ? _value.statusEnum : statusEnum as int,
       statusName:
@@ -281,7 +282,7 @@ class _$TransactionDataModelCopyWithImpl<$Res>
       transferBankImage: transferBankImage == freezed
           ? _value.transferBankImage
           : transferBankImage as String,
-      bankID: bankID == freezed ? _value.bankID : bankID as String,
+      bankID: bankID == freezed ? _value.bankID : bankID as int,
       bankAccountName: bankAccountName == freezed
           ? _value.bankAccountName
           : bankAccountName as String,
@@ -315,25 +316,25 @@ abstract class _$TransactionDataModelCopyWith<$Res>
       @JsonKey(name: "ID") String iD,
       @JsonKey(name: "Number") String number,
       @JsonKey(name: "CustomerID") String customerID,
-      @JsonKey(name: "Total") int total,
+      @JsonKey(name: "Total") double total,
       @JsonKey(name: "Date") String date,
-      @JsonKey(name: "Cashback") int cashback,
+      @JsonKey(name: "Cashback") double cashback,
       @JsonKey(name: "Status") int status,
       @JsonKey(name: "Trans_type") String transType,
       @JsonKey(name: "Location") String location,
       @JsonKey(name: "Create_by") String createBy,
       @JsonKey(name: "Remark") String remark,
       @JsonKey(name: "Pmttype") String pmttype,
-      @JsonKey(name: "Total_discount") int totalDiscount,
+      @JsonKey(name: "Total_discount") double totalDiscount,
       @JsonKey(name: "Pmtterm") String pmtterm,
       @JsonKey(name: "StatusEnum") int statusEnum,
       @JsonKey(name: "StatusName") String statusName,
-      List<TransactionItemDataModel> items,
+      @JsonKey(name: "Items") List<TransactionItemDataModel> items,
       @JsonKey(name: "TransferDate") String transferDate,
       @JsonKey(name: "TransferBankAccountName") String transferBankAccountName,
       @JsonKey(name: "TransferBankAccount") String transferBankAccount,
       @JsonKey(name: "TransferBankImage") String transferBankImage,
-      @JsonKey(name: "BankID") String bankID,
+      @JsonKey(name: "BankID") int bankID,
       @JsonKey(name: "BankAccountName") String bankAccountName,
       @JsonKey(name: "BankNo") String bankNo,
       @JsonKey(name: "PaymentChannel") String paymentChannel,
@@ -397,9 +398,9 @@ class __$TransactionDataModelCopyWithImpl<$Res>
       number: number == freezed ? _value.number : number as String,
       customerID:
           customerID == freezed ? _value.customerID : customerID as String,
-      total: total == freezed ? _value.total : total as int,
+      total: total == freezed ? _value.total : total as double,
       date: date == freezed ? _value.date : date as String,
-      cashback: cashback == freezed ? _value.cashback : cashback as int,
+      cashback: cashback == freezed ? _value.cashback : cashback as double,
       status: status == freezed ? _value.status : status as int,
       transType: transType == freezed ? _value.transType : transType as String,
       location: location == freezed ? _value.location : location as String,
@@ -408,7 +409,7 @@ class __$TransactionDataModelCopyWithImpl<$Res>
       pmttype: pmttype == freezed ? _value.pmttype : pmttype as String,
       totalDiscount: totalDiscount == freezed
           ? _value.totalDiscount
-          : totalDiscount as int,
+          : totalDiscount as double,
       pmtterm: pmtterm == freezed ? _value.pmtterm : pmtterm as String,
       statusEnum: statusEnum == freezed ? _value.statusEnum : statusEnum as int,
       statusName:
@@ -428,7 +429,7 @@ class __$TransactionDataModelCopyWithImpl<$Res>
       transferBankImage: transferBankImage == freezed
           ? _value.transferBankImage
           : transferBankImage as String,
-      bankID: bankID == freezed ? _value.bankID : bankID as String,
+      bankID: bankID == freezed ? _value.bankID : bankID as int,
       bankAccountName: bankAccountName == freezed
           ? _value.bankAccountName
           : bankAccountName as String,
@@ -472,7 +473,7 @@ class _$_TransactionDataModel implements _TransactionDataModel {
       @JsonKey(name: "Pmtterm") this.pmtterm,
       @JsonKey(name: "StatusEnum") this.statusEnum,
       @JsonKey(name: "StatusName") this.statusName,
-      this.items,
+      @JsonKey(name: "Items") this.items,
       @JsonKey(name: "TransferDate") this.transferDate,
       @JsonKey(name: "TransferBankAccountName") this.transferBankAccountName,
       @JsonKey(name: "TransferBankAccount") this.transferBankAccount,
@@ -505,13 +506,13 @@ class _$_TransactionDataModel implements _TransactionDataModel {
   final String customerID;
   @override
   @JsonKey(name: "Total")
-  final int total;
+  final double total;
   @override
   @JsonKey(name: "Date")
   final String date;
   @override
   @JsonKey(name: "Cashback")
-  final int cashback;
+  final double cashback;
   @override
   @JsonKey(name: "Status")
   final int status;
@@ -532,7 +533,7 @@ class _$_TransactionDataModel implements _TransactionDataModel {
   final String pmttype;
   @override
   @JsonKey(name: "Total_discount")
-  final int totalDiscount;
+  final double totalDiscount;
   @override
   @JsonKey(name: "Pmtterm")
   final String pmtterm;
@@ -543,6 +544,7 @@ class _$_TransactionDataModel implements _TransactionDataModel {
   @JsonKey(name: "StatusName")
   final String statusName;
   @override
+  @JsonKey(name: "Items")
   final List<TransactionItemDataModel> items;
   @override
   @JsonKey(name: "TransferDate")
@@ -558,7 +560,7 @@ class _$_TransactionDataModel implements _TransactionDataModel {
   final String transferBankImage;
   @override
   @JsonKey(name: "BankID")
-  final String bankID;
+  final int bankID;
   @override
   @JsonKey(name: "BankAccountName")
   final String bankAccountName;
@@ -720,11 +722,11 @@ abstract class _TransactionDataModel implements TransactionDataModel {
       @JsonKey(name: "CustomerID")
           String customerID,
       @JsonKey(name: "Total")
-          int total,
+          double total,
       @JsonKey(name: "Date")
           String date,
       @JsonKey(name: "Cashback")
-          int cashback,
+          double cashback,
       @JsonKey(name: "Status")
           int status,
       @JsonKey(name: "Trans_type")
@@ -738,14 +740,15 @@ abstract class _TransactionDataModel implements TransactionDataModel {
       @JsonKey(name: "Pmttype")
           String pmttype,
       @JsonKey(name: "Total_discount")
-          int totalDiscount,
+          double totalDiscount,
       @JsonKey(name: "Pmtterm")
           String pmtterm,
       @JsonKey(name: "StatusEnum")
           int statusEnum,
       @JsonKey(name: "StatusName")
           String statusName,
-      List<TransactionItemDataModel> items,
+      @JsonKey(name: "Items")
+          List<TransactionItemDataModel> items,
       @JsonKey(name: "TransferDate")
           String transferDate,
       @JsonKey(name: "TransferBankAccountName")
@@ -755,7 +758,7 @@ abstract class _TransactionDataModel implements TransactionDataModel {
       @JsonKey(name: "TransferBankImage")
           String transferBankImage,
       @JsonKey(name: "BankID")
-          String bankID,
+          int bankID,
       @JsonKey(name: "BankAccountName")
           String bankAccountName,
       @JsonKey(name: "BankNo")
@@ -789,13 +792,13 @@ abstract class _TransactionDataModel implements TransactionDataModel {
   String get customerID;
   @override
   @JsonKey(name: "Total")
-  int get total;
+  double get total;
   @override
   @JsonKey(name: "Date")
   String get date;
   @override
   @JsonKey(name: "Cashback")
-  int get cashback;
+  double get cashback;
   @override
   @JsonKey(name: "Status")
   int get status;
@@ -816,7 +819,7 @@ abstract class _TransactionDataModel implements TransactionDataModel {
   String get pmttype;
   @override
   @JsonKey(name: "Total_discount")
-  int get totalDiscount;
+  double get totalDiscount;
   @override
   @JsonKey(name: "Pmtterm")
   String get pmtterm;
@@ -827,6 +830,7 @@ abstract class _TransactionDataModel implements TransactionDataModel {
   @JsonKey(name: "StatusName")
   String get statusName;
   @override
+  @JsonKey(name: "Items")
   List<TransactionItemDataModel> get items;
   @override
   @JsonKey(name: "TransferDate")
@@ -842,7 +846,7 @@ abstract class _TransactionDataModel implements TransactionDataModel {
   String get transferBankImage;
   @override
   @JsonKey(name: "BankID")
-  String get bankID;
+  int get bankID;
   @override
   @JsonKey(name: "BankAccountName")
   String get bankAccountName;

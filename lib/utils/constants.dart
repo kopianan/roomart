@@ -19,11 +19,8 @@ class Constants {
   String imageBaseUrl = "http://cloud.erp.web.id:8080";
 
   String get getUltimoBaseUrl => this._ultimoBaseUrl;
-  String get getUltimoBaseUrlNew => this._ultimoBaseUrlNew;
   //url api untuk get coupon code
-  String _ultimoBaseUrl =
-      "http://roomart.erp.web.id/umbraco/api/Products/GetDiscountByCode";
-  String _ultimoBaseUrlNew = "http://roomart.erp.web.id/umbraco/api";
+  String _ultimoBaseUrl = "http://roomart.erp.web.id/umbraco/api";
   String midtransBaseAPPProduction = "https://app.midtrans.com";
   String midtransBaseAPIProduction = "https://api.midtrans.com";
   String accessKeyUltimo = "277596e6-0ecf-4139-9861-e278680ff536";

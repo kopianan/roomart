@@ -11,13 +11,13 @@ abstract class TransactionItemDataModel with _$TransactionItemDataModel {
     @JsonKey(name: "ItemID") String itemID,
     @JsonKey(name: "ItemName") String itemName,
     @JsonKey(name: "Qty") int qty,
-    @JsonKey(name: "ResellerPrice") int resellerPrice,
-    @JsonKey(name: "Price") int price,
-    @JsonKey(name: "Cashback") int cashback,
+    @JsonKey(name: "ResellerPrice") double resellerPrice,
+    @JsonKey(name: "Price") double price,
+    @JsonKey(name: "Cashback") double cashback,
     @JsonKey(name: "ItemImage") String itemImage,
     @JsonKey(name: "Unit") String unit,
     @JsonKey(name: "Tax") String tax,
-    @JsonKey(name: "Discount") int discount,
+    @JsonKey(name: "Discount") double discount,
     @JsonKey(name: "Date") String date,
   }) = _TransactionItemDataModel;
 

@@ -6,19 +6,19 @@ part of 'transaction_req_res.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TransactionHistoryRequest _$_$_TransactionHistoryRequestFromJson(
+_$TransactionHistoryRequest _$_$TransactionHistoryRequestFromJson(
     Map<String, dynamic> json) {
-  return _$_TransactionHistoryRequest(
+  return _$TransactionHistoryRequest(
     token: json['Token'] as String,
     customerId: json['CustomerID'] as String,
-    limit: json['Limit'] as String,
-    offset: json['Offset'] as String,
+    limit: json['Limit'] as int,
+    offset: json['Offset'] as int,
     status: json['Status'] as String,
   );
 }
 
-Map<String, dynamic> _$_$_TransactionHistoryRequestToJson(
-        _$_TransactionHistoryRequest instance) =>
+Map<String, dynamic> _$_$TransactionHistoryRequestToJson(
+        _$TransactionHistoryRequest instance) =>
     <String, dynamic>{
       'Token': instance.token,
       'CustomerID': instance.customerId,

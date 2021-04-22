@@ -14,13 +14,13 @@ _$_TransactionItemDataModel _$_$_TransactionItemDataModelFromJson(
     itemID: json['ItemID'] as String,
     itemName: json['ItemName'] as String,
     qty: json['Qty'] as int,
-    resellerPrice: json['ResellerPrice'] as int,
-    price: json['Price'] as int,
-    cashback: json['Cashback'] as int,
+    resellerPrice: (json['ResellerPrice'] as num)?.toDouble(),
+    price: (json['Price'] as num)?.toDouble(),
+    cashback: (json['Cashback'] as num)?.toDouble(),
     itemImage: json['ItemImage'] as String,
     unit: json['Unit'] as String,
     tax: json['Tax'] as String,
-    discount: json['Discount'] as int,
+    discount: (json['Discount'] as num)?.toDouble(),
     date: json['Date'] as String,
   );
 }

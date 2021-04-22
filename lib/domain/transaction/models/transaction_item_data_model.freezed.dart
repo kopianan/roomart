@@ -24,13 +24,13 @@ class _$TransactionItemDataModelTearOff {
       @JsonKey(name: "ItemID") String itemID,
       @JsonKey(name: "ItemName") String itemName,
       @JsonKey(name: "Qty") int qty,
-      @JsonKey(name: "ResellerPrice") int resellerPrice,
-      @JsonKey(name: "Price") int price,
-      @JsonKey(name: "Cashback") int cashback,
+      @JsonKey(name: "ResellerPrice") double resellerPrice,
+      @JsonKey(name: "Price") double price,
+      @JsonKey(name: "Cashback") double cashback,
       @JsonKey(name: "ItemImage") String itemImage,
       @JsonKey(name: "Unit") String unit,
       @JsonKey(name: "Tax") String tax,
-      @JsonKey(name: "Discount") int discount,
+      @JsonKey(name: "Discount") double discount,
       @JsonKey(name: "Date") String date}) {
     return _TransactionItemDataModel(
       iD: iD,
@@ -72,11 +72,11 @@ mixin _$TransactionItemDataModel {
   @JsonKey(name: "Qty")
   int get qty;
   @JsonKey(name: "ResellerPrice")
-  int get resellerPrice;
+  double get resellerPrice;
   @JsonKey(name: "Price")
-  int get price;
+  double get price;
   @JsonKey(name: "Cashback")
-  int get cashback;
+  double get cashback;
   @JsonKey(name: "ItemImage")
   String get itemImage;
   @JsonKey(name: "Unit")
@@ -84,7 +84,7 @@ mixin _$TransactionItemDataModel {
   @JsonKey(name: "Tax")
   String get tax;
   @JsonKey(name: "Discount")
-  int get discount;
+  double get discount;
   @JsonKey(name: "Date")
   String get date;
 
@@ -104,13 +104,13 @@ abstract class $TransactionItemDataModelCopyWith<$Res> {
       @JsonKey(name: "ItemID") String itemID,
       @JsonKey(name: "ItemName") String itemName,
       @JsonKey(name: "Qty") int qty,
-      @JsonKey(name: "ResellerPrice") int resellerPrice,
-      @JsonKey(name: "Price") int price,
-      @JsonKey(name: "Cashback") int cashback,
+      @JsonKey(name: "ResellerPrice") double resellerPrice,
+      @JsonKey(name: "Price") double price,
+      @JsonKey(name: "Cashback") double cashback,
       @JsonKey(name: "ItemImage") String itemImage,
       @JsonKey(name: "Unit") String unit,
       @JsonKey(name: "Tax") String tax,
-      @JsonKey(name: "Discount") int discount,
+      @JsonKey(name: "Discount") double discount,
       @JsonKey(name: "Date") String date});
 }
 
@@ -149,13 +149,13 @@ class _$TransactionItemDataModelCopyWithImpl<$Res>
       qty: qty == freezed ? _value.qty : qty as int,
       resellerPrice: resellerPrice == freezed
           ? _value.resellerPrice
-          : resellerPrice as int,
-      price: price == freezed ? _value.price : price as int,
-      cashback: cashback == freezed ? _value.cashback : cashback as int,
+          : resellerPrice as double,
+      price: price == freezed ? _value.price : price as double,
+      cashback: cashback == freezed ? _value.cashback : cashback as double,
       itemImage: itemImage == freezed ? _value.itemImage : itemImage as String,
       unit: unit == freezed ? _value.unit : unit as String,
       tax: tax == freezed ? _value.tax : tax as String,
-      discount: discount == freezed ? _value.discount : discount as int,
+      discount: discount == freezed ? _value.discount : discount as double,
       date: date == freezed ? _value.date : date as String,
     ));
   }
@@ -174,13 +174,13 @@ abstract class _$TransactionItemDataModelCopyWith<$Res>
       @JsonKey(name: "ItemID") String itemID,
       @JsonKey(name: "ItemName") String itemName,
       @JsonKey(name: "Qty") int qty,
-      @JsonKey(name: "ResellerPrice") int resellerPrice,
-      @JsonKey(name: "Price") int price,
-      @JsonKey(name: "Cashback") int cashback,
+      @JsonKey(name: "ResellerPrice") double resellerPrice,
+      @JsonKey(name: "Price") double price,
+      @JsonKey(name: "Cashback") double cashback,
       @JsonKey(name: "ItemImage") String itemImage,
       @JsonKey(name: "Unit") String unit,
       @JsonKey(name: "Tax") String tax,
-      @JsonKey(name: "Discount") int discount,
+      @JsonKey(name: "Discount") double discount,
       @JsonKey(name: "Date") String date});
 }
 
@@ -222,13 +222,13 @@ class __$TransactionItemDataModelCopyWithImpl<$Res>
       qty: qty == freezed ? _value.qty : qty as int,
       resellerPrice: resellerPrice == freezed
           ? _value.resellerPrice
-          : resellerPrice as int,
-      price: price == freezed ? _value.price : price as int,
-      cashback: cashback == freezed ? _value.cashback : cashback as int,
+          : resellerPrice as double,
+      price: price == freezed ? _value.price : price as double,
+      cashback: cashback == freezed ? _value.cashback : cashback as double,
       itemImage: itemImage == freezed ? _value.itemImage : itemImage as String,
       unit: unit == freezed ? _value.unit : unit as String,
       tax: tax == freezed ? _value.tax : tax as String,
-      discount: discount == freezed ? _value.discount : discount as int,
+      discount: discount == freezed ? _value.discount : discount as double,
       date: date == freezed ? _value.date : date as String,
     ));
   }
@@ -273,13 +273,13 @@ class _$_TransactionItemDataModel implements _TransactionItemDataModel {
   final int qty;
   @override
   @JsonKey(name: "ResellerPrice")
-  final int resellerPrice;
+  final double resellerPrice;
   @override
   @JsonKey(name: "Price")
-  final int price;
+  final double price;
   @override
   @JsonKey(name: "Cashback")
-  final int cashback;
+  final double cashback;
   @override
   @JsonKey(name: "ItemImage")
   final String itemImage;
@@ -291,7 +291,7 @@ class _$_TransactionItemDataModel implements _TransactionItemDataModel {
   final String tax;
   @override
   @JsonKey(name: "Discount")
-  final int discount;
+  final double discount;
   @override
   @JsonKey(name: "Date")
   final String date;
@@ -375,13 +375,13 @@ abstract class _TransactionItemDataModel implements TransactionItemDataModel {
       @JsonKey(name: "ItemID") String itemID,
       @JsonKey(name: "ItemName") String itemName,
       @JsonKey(name: "Qty") int qty,
-      @JsonKey(name: "ResellerPrice") int resellerPrice,
-      @JsonKey(name: "Price") int price,
-      @JsonKey(name: "Cashback") int cashback,
+      @JsonKey(name: "ResellerPrice") double resellerPrice,
+      @JsonKey(name: "Price") double price,
+      @JsonKey(name: "Cashback") double cashback,
       @JsonKey(name: "ItemImage") String itemImage,
       @JsonKey(name: "Unit") String unit,
       @JsonKey(name: "Tax") String tax,
-      @JsonKey(name: "Discount") int discount,
+      @JsonKey(name: "Discount") double discount,
       @JsonKey(name: "Date") String date}) = _$_TransactionItemDataModel;
 
   factory _TransactionItemDataModel.fromJson(Map<String, dynamic> json) =
@@ -404,13 +404,13 @@ abstract class _TransactionItemDataModel implements TransactionItemDataModel {
   int get qty;
   @override
   @JsonKey(name: "ResellerPrice")
-  int get resellerPrice;
+  double get resellerPrice;
   @override
   @JsonKey(name: "Price")
-  int get price;
+  double get price;
   @override
   @JsonKey(name: "Cashback")
-  int get cashback;
+  double get cashback;
   @override
   @JsonKey(name: "ItemImage")
   String get itemImage;
@@ -422,7 +422,7 @@ abstract class _TransactionItemDataModel implements TransactionItemDataModel {
   String get tax;
   @override
   @JsonKey(name: "Discount")
-  int get discount;
+  double get discount;
   @override
   @JsonKey(name: "Date")
   String get date;

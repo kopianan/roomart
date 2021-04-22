@@ -8,10 +8,10 @@ abstract class TransactionReqRes with _$TransactionReqRes {
   factory TransactionReqRes.transactionHistoryRequest({
     @JsonKey(name: "Token") String token,
     @JsonKey(name: "CustomerID") String customerId,
-    @JsonKey(name: "Limit") String limit,
-    @JsonKey(name: "Offset") String offset,
+    @JsonKey(name: "Limit") int limit,
+    @JsonKey(name: "Offset") int offset,
     @JsonKey(name: "Status") String status,
-  }) = _TransactionHistoryRequest;
+  }) = TransactionHistoryRequest;
 
   factory TransactionReqRes.fromJson(Map<String, dynamic> json) =>
       _$TransactionReqResFromJson(json);

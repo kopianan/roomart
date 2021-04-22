@@ -21,7 +21,7 @@ class HomeRepository extends IHomeFacade {
     var data = {"Token": Constants().tokenUltimo, "CustomerID": customerId};
     try {
       var response = await dio.post(
-          "${Constants().getUltimoBaseUrlNew}/Announcement/GetAllBannerByCustomerID",
+          "${Constants().getUltimoBaseUrl}/Announcement/GetAllBannerByCustomerID",
           data: data,
           options: options);
 
