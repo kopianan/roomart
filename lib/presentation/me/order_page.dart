@@ -6,6 +6,7 @@ import 'package:roomart/application/transaction/transaction_cubit.dart';
 import 'package:roomart/utils/my_color.dart';
 
 import '../../injection.dart';
+import 'widgets/cancelled_transaction_history_page.dart';
 import 'widgets/new_transaction_history_page.dart';
 
 class OrderPage extends StatefulWidget {
@@ -64,9 +65,10 @@ class _OrderPageState extends State<OrderPage> {
             Container(
               color: Colors.deepOrange,
             ),
-            Container(
-              color: Colors.cyan,
-            ),
+            CancelledTransactionHistoryPage(
+              status: "-1",
+              customerId: "DM152585832596584529828",
+            )
           ],
         ),
       ),

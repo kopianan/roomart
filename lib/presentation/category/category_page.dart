@@ -100,7 +100,7 @@ class _CategoryPageState extends State<CategoryPage> {
                     child: TextFormField(
                       controller: controller,
                       focusNode: focusNode,
-                      onEditingComplete: ()=> focusNode.unfocus(),
+                      onEditingComplete: () => focusNode.unfocus(),
                       decoration: InputDecoration(
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(3)),

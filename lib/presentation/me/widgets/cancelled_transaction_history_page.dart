@@ -11,29 +11,30 @@ import 'package:roomart/utils/constants.dart';
 
 import '../../../injection.dart';
 
-class NewTransactionHistoryPage extends StatefulWidget {
-  NewTransactionHistoryPage({this.status = "", this.customerId});
+class CancelledTransactionHistoryPage extends StatefulWidget {
+  CancelledTransactionHistoryPage({this.status = "", this.customerId});
   final String status;
   final String customerId;
   @override
-  _NewTransactionHistoryPageState createState() =>
-      _NewTransactionHistoryPageState();
+  _CancelledTransactionHistoryPageState createState() =>
+      _CancelledTransactionHistoryPageState();
 }
 
-class _NewTransactionHistoryPageState extends State<NewTransactionHistoryPage> {
+class _CancelledTransactionHistoryPageState
+    extends State<CancelledTransactionHistoryPage> {
   RefreshController _refreshController =
       RefreshController(initialRefresh: false);
-  String STATUS;
+  static final String STATUS = "-1";
   static final int LIMIT = 10;
   bool isFirstTime = true;
   final transCubit = getIt<TransactionCubit>();
   final transController = Get.put(TransactionController());
 
   void _onRefresh() {
-    transController.newOffset.value = 0;
+    transController.cancelOffset.value = 0;
     transCubit.getHistoryTransactionByStatus(TransactionHistoryRequest(
       limit: 10,
-      offset: transController.newOffset.value * LIMIT,
+      offset: transController.cancelOffset.value * LIMIT,
       token: Constants().tokenUltimo,
       status: STATUS,
       customerId: widget.customerId,
@@ -43,7 +44,7 @@ class _NewTransactionHistoryPageState extends State<NewTransactionHistoryPage> {
   void _onLoading() {
     transCubit.getHistoryTransactionByStatus(TransactionHistoryRequest(
       limit: 10,
-      offset: transController.newOffset.value * LIMIT,
+      offset: transController.cancelOffset.value * LIMIT,
       token: Constants().tokenUltimo,
       status: STATUS,
       customerId: widget.customerId,
@@ -53,20 +54,19 @@ class _NewTransactionHistoryPageState extends State<NewTransactionHistoryPage> {
   void initialRequest() {
     var _request = TransactionHistoryRequest(
       limit: 10,
-      offset: transController.newOffset.value * LIMIT,
+      offset: transController.cancelOffset.value * LIMIT,
       token: Constants().tokenUltimo,
       status: STATUS,
       customerId: widget.customerId,
     );
 
-    if (transController.getNewTransactionList.isEmpty) {
+    if (transController.getCancelledTransaction.isEmpty) {
       transCubit.getHistoryTransactionByStatus(_request);
     }
   }
 
   @override
   void initState() {
-    STATUS = widget.status;
     initialRequest();
     super.initState();
   }
@@ -84,11 +84,11 @@ class _NewTransactionHistoryPageState extends State<NewTransactionHistoryPage> {
                 onGetHistoryTransaction: (value) {
                   isFirstTime = false;
                   if (_refreshController.isRefresh) {
-                    trans.setNewTransactionList(value.data);
+                    trans.setCancelledTransaction(value.data);
 
                     _refreshController.refreshCompleted();
                   } else {
-                    trans.addNewTransactionList(value.data);
+                    trans.addCancelledTransaction(value.data);
                     _refreshController.loadComplete();
                   }
                 },
@@ -126,10 +126,10 @@ class _NewTransactionHistoryPageState extends State<NewTransactionHistoryPage> {
                         child: CircularProgressIndicator(),
                       )
                     : ListView.builder(
-                        itemCount: trans.getNewTransactionList.length,
+                        itemCount: trans.getCancelledTransaction.length,
                         itemBuilder: (context, index) {
                           return TransactionItemWidget(
-                              data: trans.getNewTransactionList[index]);
+                              data: trans.getCancelledTransaction[index]);
                         }),
               );
             })));

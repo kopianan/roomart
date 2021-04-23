@@ -5,6 +5,7 @@ import 'package:roomart/presentation/category/sub_cotegory_page.dart';
 import 'package:roomart/presentation/dashboard/dashboard_page.dart';
 import 'package:roomart/presentation/item_detail/item_detail_page.dart';
 import 'package:roomart/presentation/me/order_page.dart';
+import 'package:roomart/presentation/me/widgets/detail_transaction_history_page.dart';
 import 'package:roomart/presentation/splash_screen/splash_screen_page.dart';
 
 import '../presentation/auth/sign_up/register_page.dart';
@@ -18,4 +19,7 @@ List<GetPage> pages = [
   GetPage(name: CategoryEndPage.TAG, page: () => CategoryEndPage()),
   GetPage(name: ItemDetailPage.TAG, page: () => ItemDetailPage()),
   GetPage(name: OrderPage.TAG, page: () => OrderPage()),
+  GetPage(
+      name: DetailTransactionHistoryPage.TAG,
+      page: () => DetailTransactionHistoryPage()),
 ];
