@@ -5,7 +5,7 @@ class TransactionController extends GetxController {
   List<TransactionDataModel> allTransaction = <TransactionDataModel>[];
 
   void setAllTransactionHistoryData(List<TransactionDataModel> list) {
-    this.allTransaction.assignAll(list);
+    this.allTransaction.addAll(list);
   }
 
   List<TransactionDataModel> get getAllTransactionData => this.allTransaction;

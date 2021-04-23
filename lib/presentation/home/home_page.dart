@@ -81,12 +81,32 @@ class _HomePageState extends State<HomePage> {
                     return e.data.fold(
                       (l) => Container(),
                       (r) => CarouselSlider(
-                        options: CarouselOptions(aspectRatio: 2),
+                        options: CarouselOptions(
+                          aspectRatio: 2 / 0.8,
+                          pageSnapping: false,
+                          autoPlay: true,
+                        ),
                         items: r.first.imageLIst
-                            .map((data) => Container(
-                                decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                        image: NetworkImage(data)))))
+                            .map((data) => Padding(
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 10),
+                                  child: Container(
+                                      margin: EdgeInsets.only(right: 15),
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          boxShadow: [
+                                            BoxShadow(
+                                                blurRadius: 2,
+                                                spreadRadius: 2,
+                                                color: Colors.grey[200],
+                                                offset: Offset(2, 2))
+                                          ],
+                                          image: DecorationImage(
+                                              image: NetworkImage(data),
+                                              fit: BoxFit.cover))),
+                                ))
                             .toList(),
                       ),
                     );
@@ -96,29 +116,71 @@ class _HomePageState extends State<HomePage> {
         ),
         SliverToBoxAdapter(
           child: Container(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                buildSubtitle("Kategory Belanja"),
-                InkWell(
-                  onTap: () {},
-                  child: Container(
-                    child: Text(
-                      "Lihat Semua",
-                      style: TextStyle(color: Colors.blue),
-                    ),
-                  ),
-                )
+            margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    buildSubtitle("Kategory Belanja"),
+                    InkWell(
+                      onTap: () {},
+                      child: Container(
+                        child: Text(
+                          "Lihat Semua",
+                          style: TextStyle(color: Colors.blue),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                SizedBox(height: 20),
+                GridView.builder(
+                    physics: NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    itemCount: 6,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 3,
+                        crossAxisSpacing: 8,
+                        mainAxisExtent: 55),
+                    itemBuilder: (context, index) {
+                      return Container(
+                        margin: EdgeInsets.only(bottom: 8),
+                        padding: EdgeInsets.symmetric(horizontal: 8),
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: Color(0xFFFDF3E8),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey[300],
+                                  blurRadius: 1,
+                                  spreadRadius: 1,
+                                  offset: Offset(1, 1))
+                            ]),
+                        child: Text("Nama Kategory agak panjang",
+                            maxLines: 1,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 13,
+                              color: Colors.black87,
+                              fontWeight: FontWeight.bold,
+                            )),
+                      );
+                    })
               ],
             ),
           ),
         ),
         SliverToBoxAdapter(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              buildSubtitle("Promosi"),
-            ],
+          child: Container(
+            margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                buildSubtitle("Promosi"),
+              ],
+            ),
           ),
         ),
         SliverToBoxAdapter(

@@ -6,7 +6,7 @@ import 'package:roomart/application/transaction/transaction_cubit.dart';
 import 'package:roomart/utils/my_color.dart';
 
 import '../../injection.dart';
-import 'widgets/not_paid.dart';
+import 'widgets/transaction_history_page.dart';
 
 class OrderPage extends StatefulWidget {
   static final String TAG = '/order_page';
@@ -51,7 +51,7 @@ class _OrderPageState extends State<OrderPage> {
         ),
         body: TabBarView(
           children: [
-            NotPaid(),
+            TransactionHistoryPage(),
             Container(
               color: Colors.teal,
             ),
