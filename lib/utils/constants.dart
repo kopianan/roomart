@@ -2,8 +2,7 @@ import 'dart:convert';
 
 class Constants {
   static const icon_launcher = "assets/roomart_logo2.png";
-  static const promosi_1 = "assets/image1.jpg";
-  static const promosi_2 = "assets/image2.jpg";
+  static const resellerImage = "assets/reseller_image.png";
   static const banner = "assets/banner_roomart.jpg";
   static const title_appbar = "ROOMART";
   String resellerParentID = null; //Disesuaikan dengan kode reseller

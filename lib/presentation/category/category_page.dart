@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -6,7 +7,9 @@ import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:roomart/application/category/category_controller.dart';
 import 'package:roomart/application/category/category_cubit.dart';
 import 'package:roomart/presentation/category/sub_cotegory_page.dart';
-
+import 'package:build_daemon/constants.dart';
+import 'package:roomart/utils/constants.dart';
+import 'package:search_widget/search_widget.dart';
 import '../../domain/category/category_model.dart';
 import '../../injection.dart';
 import 'widgets/category_list_item.dart';
@@ -74,6 +77,80 @@ class _CategoryPageState extends State<CategoryPage> {
         onLoading: _onLoading,
         child: CustomScrollView(
           slivers: [
+            SliverToBoxAdapter(
+              child: SearchWidget<CategoryModel>(
+                hideSearchBoxWhenItemSelected: false,
+                dataList: categoryController.getCategoryList,
+                popupListItemBuilder: (item) {
+                  return Container(
+                      padding:
+                          EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+                      child: Text(
+                        item.description,
+                        style: TextStyle(fontSize: 16),
+                      ));
+                },
+                onItemSelected: (e) {
+                  Get.toNamed(SubCategoryPage.TAG, arguments: e);
+                },
+                textFieldBuilder:
+                    (TextEditingController controller, FocusNode focusNode) {
+                  return Container(
+                    margin: EdgeInsets.all(10),
+                    child: TextFormField(
+                      controller: controller,
+                      focusNode: focusNode,
+                      onEditingComplete: ()=> focusNode.unfocus(),
+                      decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(3)),
+                          suffixIcon: Icon(Icons.search),
+                          hintText: "Search Category"),
+                    ),
+                  );
+                },
+                selectedItemBuilder: (CategoryModel selectedItem,
+                    VoidCallback deleteSelectedItem) {
+                  return Text("SDF");
+                },
+                queryBuilder: (String query, List<CategoryModel> list) {
+                  return list
+                      .where((CategoryModel item) => item.description
+                          .toLowerCase()
+                          .contains(query.toLowerCase()))
+                      .toList();
+                },
+              ),
+            ),
+            SliverToBoxAdapter(
+              child: CarouselSlider(
+                options: CarouselOptions(
+                  aspectRatio: 2 / 0.8,
+                  pageSnapping: false,
+                  autoPlay: true,
+                ),
+                items: [Constants.banner]
+                    .map((data) => Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 10),
+                          child: Container(
+                              margin: EdgeInsets.only(right: 15),
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(10),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        blurRadius: 2,
+                                        spreadRadius: 2,
+                                        color: Colors.grey[200],
+                                        offset: Offset(2, 2))
+                                  ],
+                                  image: DecorationImage(
+                                      image: AssetImage(data),
+                                      fit: BoxFit.cover))),
+                        ))
+                    .toList(),
+              ),
+            ),
             BlocProvider(
                 create: (context) => categoryBloc,
                 child: BlocConsumer<CategoryCubit, CategoryState>(

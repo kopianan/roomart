@@ -37,11 +37,10 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          SingleChildScrollView(
-            child: Column(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Container(
@@ -109,78 +108,79 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
                               fontSize: 20, fontWeight: FontWeight.bold),
                         ),
                       ),
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Container(
-                          padding: EdgeInsets.symmetric(vertical: 10),
-                          child: Row(
-                              children: listData
-                                  .map(
-                                    (list) => Container(
-                                      margin: EdgeInsets.only(right: 15),
-                                      padding: EdgeInsets.symmetric(
-                                          horizontal: 20, vertical: 10),
-                                      decoration: BoxDecoration(
-                                          color: Color(0xFFC7C7C4),
-                                          borderRadius:
-                                              BorderRadius.circular(6),
-                                          boxShadow: [
-                                            BoxShadow(
-                                                color: Colors.grey[200],
-                                                blurRadius: 1,
-                                                offset: Offset(2, 2),
-                                                spreadRadius: 1)
-                                          ]),
-                                      child: Flex(
-                                        direction: Axis.vertical,
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: [
-                                          Text(
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: listData
+                                .map(
+                                  (list) => Container(
+                                    padding: EdgeInsets.all(8),
+                                    child: Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Expanded(
+                                          flex: 2,
+                                          child: Text(
                                             list.label,
                                             style: TextStyle(
                                                 fontSize: 16,
                                                 fontWeight: FontWeight.bold),
                                           ),
-                                          SizedBox(height: 3),
-                                          Text(list.value)
-                                        ],
-                                      ),
+                                        ),
+                                        Expanded(
+                                            flex: 5,
+                                            child: Text(
+                                              list.value,
+                                              style: TextStyle(
+                                                fontSize: 16,
+                                              ),
+                                            ))
+                                      ],
                                     ),
-                                  )
-                                  .toList()),
-                        ),
-                      )
+                                  ),
+                                )
+                                .toList()),
+                      ),
                     ],
                   ),
                 )
               ],
             ),
-          ),
-          Container(
-            padding: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
-            child: Row(
-              children: [
-                Expanded(
-                  flex: 1,
-                  child: DefaultButton2(
-                    color: button2,
-                    text: "Buy Now",
-                    onPressed: () {},
-                  ),
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: DefaultButton2(
+                        color: button2,
+                        text: "Buy Now",
+                        onPressed: () {},
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Expanded(
+                      flex: 2,
+                      child: DefaultButton1(
+                        color: button1,
+                        text: "Add To Cart",
+                        onPressed: () {},
+                      ),
+                    ),
+                  ],
                 ),
-                SizedBox(width: 10),
-                Expanded(
-                  flex: 2,
-                  child: DefaultButton1(
-                    color: button1,
-                    text: "Add To Cart",
-                    onPressed: () {},
-                  ),
-                ),
-              ],
+              ),
             ),
-          )
-        ],
+          ],
+        ),
       ),
     );
   }

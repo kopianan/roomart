@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-    if (categoryController.getCategoryList.isEmpty) {
+    if (categoryController.getCategoryList.isBlank) {
       categoryCubit.getAllCategory();
     }
     super.initState();
@@ -186,21 +186,19 @@ class _HomePageState extends State<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 buildSubtitle("Promosi"),
+                SizedBox(height: 10),
                 Row(
                   children: <Widget>[
                     Expanded(
-                      child: Container(
-                          height: MediaQuery.of(context).size.height / 8,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Image.asset(
-                            Constants.promosi_1,
-                          )),
-                    ),
-                    Expanded(
-                      child: Container(
-                          height: MediaQuery.of(context).size.height / 8,
-                          margin: EdgeInsets.only(right: 10),
-                          child: Image.asset(Constants.promosi_2)),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                        child: Container(
+                            height: MediaQuery.of(context).size.height / 8,
+                            child: Image.asset(
+                              Constants.resellerImage,
+                              fit: BoxFit.fill,
+                            )),
+                      ),
                     ),
                   ],
                 ),
@@ -208,6 +206,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ),
+        SliverToBoxAdapter(child: SizedBox(height: 20)),
         SliverToBoxAdapter(
             child: BlocProvider(
           create: (context) => itemBloc..getItemListLazy(limit, offset),
@@ -225,21 +224,31 @@ class _HomePageState extends State<HomePage> {
               _refreshController.loadComplete();
             },
             builder: (context, state) {
-              return GetX<ItemController>(
-                  builder: (item) => Container(
-                        margin: EdgeInsets.symmetric(horizontal: 10),
-                        child: GridView.count(
-                          physics: NeverScrollableScrollPhysics(),
-                          crossAxisCount: 2,
-                          childAspectRatio: 1 / 1.5,
-                          crossAxisSpacing: 10,
-                          mainAxisSpacing: 15,
-                          shrinkWrap: true,
-                          children: item.getListData
-                              .map((val) => ItemListWidget(item: val))
-                              .toList(),
-                        ),
-                      ));
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: buildSubtitle("Rekomendasi"),
+                  ),
+                  SizedBox(height: 10),
+                  GetX<ItemController>(
+                      builder: (item) => Container(
+                            margin: EdgeInsets.symmetric(horizontal: 10),
+                            child: GridView.count(
+                              physics: NeverScrollableScrollPhysics(),
+                              crossAxisCount: 2,
+                              childAspectRatio: 1 / 1.5,
+                              crossAxisSpacing: 10,
+                              mainAxisSpacing: 15,
+                              shrinkWrap: true,
+                              children: item.getListData
+                                  .map((val) => ItemListWidget(item: val))
+                                  .toList(),
+                            ),
+                          )),
+                ],
+              );
             },
           ),
         ))
@@ -287,7 +296,7 @@ class _HomePageState extends State<HomePage> {
   Text buildSubtitle(String title) {
     return Text(
       title,
-      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
     );
   }
 }
