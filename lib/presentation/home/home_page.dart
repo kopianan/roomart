@@ -5,11 +5,17 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
+import 'package:roomart/application/category/category_controller.dart';
+import 'package:roomart/application/category/category_cubit.dart';
 import 'package:roomart/application/home/home_cubit.dart';
 import 'package:roomart/application/item/item_controller.dart';
 import 'package:roomart/application/item/item_cubit.dart';
+import 'package:roomart/domain/category/category_model.dart';
 import 'package:roomart/domain/item/data_item_model.dart';
+import 'package:roomart/presentation/category/category_end_page.dart';
+import 'package:roomart/presentation/category/sub_cotegory_page.dart';
 import 'package:roomart/presentation/widgets/item_list_widget.dart';
+import 'package:roomart/utils/category_data.dart';
 import 'package:roomart/utils/constants.dart';
 
 import '../../injection.dart';
@@ -35,6 +41,17 @@ class _HomePageState extends State<HomePage> {
   int limit = 10;
   int offset = 1;
   final itemConroller = Get.put(ItemController());
+  final categoryController = Get.put(CategoryController());
+  final categoryCubit = getIt<CategoryCubit>();
+
+  @override
+  void initState() {
+    if (categoryController.getCategoryList.isEmpty) {
+      categoryCubit.getAllCategory();
+    }
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -122,7 +139,7 @@ class _HomePageState extends State<HomePage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    buildSubtitle("Kategory Belanja"),
+                    buildSubtitle("Kategori Belanja"),
                     InkWell(
                       onTap: () {},
                       child: Container(
@@ -135,39 +152,29 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
                 SizedBox(height: 20),
-                GridView.builder(
-                    physics: NeverScrollableScrollPhysics(),
-                    shrinkWrap: true,
-                    itemCount: 6,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3,
-                        crossAxisSpacing: 8,
-                        mainAxisExtent: 55),
-                    itemBuilder: (context, index) {
-                      return Container(
-                        margin: EdgeInsets.only(bottom: 8),
-                        padding: EdgeInsets.symmetric(horizontal: 8),
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: Color(0xFFFDF3E8),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.grey[300],
-                                  blurRadius: 1,
-                                  spreadRadius: 1,
-                                  offset: Offset(1, 1))
-                            ]),
-                        child: Text("Nama Kategory agak panjang",
-                            maxLines: 1,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 13,
-                              color: Colors.black87,
-                              fontWeight: FontWeight.bold,
-                            )),
+                BlocProvider(
+                    create: (context) => categoryCubit,
+                    child: BlocConsumer<CategoryCubit, CategoryState>(
+                        listener: (context, state) {
+                      state.maybeMap(
+                        orElse: () {},
+                        onGetAllCategory: (value) {
+                          categoryController.setCategoryList(value.data);
+                        },
                       );
-                    })
+                    }, builder: (context, state) {
+                      return state.maybeMap(
+                          orElse: () => buildinitialCategory(),
+                          onGetAllCategory: (value) {
+                            return buildinitialCategory();
+                          },
+                          loading: (e) => Container(
+                                height: 200,
+                                child: Center(
+                                  child: CircularProgressIndicator(),
+                                ),
+                              ));
+                    }))
               ],
             ),
           ),
@@ -179,6 +186,24 @@ class _HomePageState extends State<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 buildSubtitle("Promosi"),
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Container(
+                          height: MediaQuery.of(context).size.height / 8,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Image.asset(
+                            Constants.promosi_1,
+                          )),
+                    ),
+                    Expanded(
+                      child: Container(
+                          height: MediaQuery.of(context).size.height / 8,
+                          margin: EdgeInsets.only(right: 10),
+                          child: Image.asset(Constants.promosi_2)),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
@@ -220,6 +245,43 @@ class _HomePageState extends State<HomePage> {
         ))
       ]),
     ));
+  }
+
+  GridView buildinitialCategory() {
+    return GridView(
+        physics: NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3, crossAxisSpacing: 8, mainAxisExtent: 55),
+        children: initalCategory
+            .map((ctgry) => InkWell(
+                onTap: () {
+                  Get.toNamed(SubCategoryPage.TAG, arguments: ctgry);
+                },
+                child: Container(
+                  margin: EdgeInsets.only(bottom: 8),
+                  padding: EdgeInsets.symmetric(horizontal: 8),
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: Color(0xFFFDF3E8),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey[300],
+                            blurRadius: 1,
+                            spreadRadius: 1,
+                            offset: Offset(1, 1))
+                      ]),
+                  child: Text(ctgry.description,
+                      maxLines: 1,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.black87,
+                        fontWeight: FontWeight.bold,
+                      )),
+                )))
+            .toList());
   }
 
   Text buildSubtitle(String title) {

@@ -18,13 +18,11 @@ class CategoryPage extends StatefulWidget {
 
 class _CategoryPageState extends State<CategoryPage> {
   final categoryController = Get.put(CategoryController());
+  bool isFirstTime = true;
   RefreshController _refreshController =
       RefreshController(initialRefresh: false);
-  void _onRefresh() async {
-    // monitor network fetch
-    await Future.delayed(Duration(milliseconds: 1000));
-    // if failed,use refreshFailed()
-    _refreshController.refreshCompleted();
+  void _onRefresh() {
+    categoryBloc.getAllCategory();
   }
 
   void _onLoading() async {
@@ -34,10 +32,22 @@ class _CategoryPageState extends State<CategoryPage> {
   }
 
   @override
+  void initState() {
+    if (isFirstTime && categoryController.getCategoryList.isEmpty) {
+      isFirstTime = true;
+      categoryBloc.getAllCategory();
+    } else {
+      isFirstTime = false;
+    }
+    super.initState();
+  }
+
+  final categoryBloc = getIt<CategoryCubit>();
+  @override
   Widget build(BuildContext context) {
     return SmartRefresher(
         enablePullDown: true,
-        enablePullUp: true,
+        enablePullUp: false,
         header: WaterDropHeader(),
         footer: CustomFooter(
           builder: (BuildContext context, LoadStatus mode) {
@@ -65,7 +75,7 @@ class _CategoryPageState extends State<CategoryPage> {
         child: CustomScrollView(
           slivers: [
             BlocProvider(
-                create: (context) => getIt<CategoryCubit>()..getAllCategory(),
+                create: (context) => categoryBloc,
                 child: BlocConsumer<CategoryCubit, CategoryState>(
                     listener: (context, state) {
                   state.maybeMap(
@@ -74,24 +84,38 @@ class _CategoryPageState extends State<CategoryPage> {
                       print(e);
                     },
                     onGetAllCategory: (e) {
+                      setState(() {
+                        isFirstTime = false;
+                      });
+
+                      _refreshController.refreshCompleted();
                       categoryController.setCategoryList(e.data);
                     },
                   );
                 }, builder: (context, state) {
-                  return SliverList(
-                      delegate: SliverChildListDelegate(
-                          categoryController.getCategoryList
-                              .map(
-                                (ctgry) => CategoryListItem(
-                                  categoryModel: ctgry,
-                                  onTap: () {
-                                    // print(ctgry.toJson());
-                                    Get.toNamed(SubCategoryPage.TAG,
-                                        arguments: ctgry);
-                                  },
-                                ),
-                              )
-                              .toList()));
+                  return (isFirstTime)
+                      ? SliverToBoxAdapter(
+                          child: Container(
+                            height: 40,
+                            child: Center(
+                              child: CircularProgressIndicator(),
+                            ),
+                          ),
+                        )
+                      : SliverList(
+                          delegate: SliverChildListDelegate(
+                              categoryController.getCategoryList
+                                  .map(
+                                    (ctgry) => CategoryListItem(
+                                      categoryModel: ctgry,
+                                      onTap: () {
+                                        // print(ctgry.toJson());
+                                        Get.toNamed(SubCategoryPage.TAG,
+                                            arguments: ctgry);
+                                      },
+                                    ),
+                                  )
+                                  .toList()));
                 }))
           ],
         ));

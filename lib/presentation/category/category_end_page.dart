@@ -42,7 +42,8 @@ class _CategoryEndPageState extends State<CategoryEndPage> {
                 },
                 onGetItemByCategoryId: (e) {
                   return Container(
-                      margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                      margin:
+                          EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                       child: GridView.builder(
                           itemCount: e.data.length,
                           gridDelegate:

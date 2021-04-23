@@ -6,7 +6,7 @@ import 'package:roomart/application/transaction/transaction_cubit.dart';
 import 'package:roomart/utils/my_color.dart';
 
 import '../../injection.dart';
-import 'widgets/transaction_history_page.dart';
+import 'widgets/new_transaction_history_page.dart';
 
 class OrderPage extends StatefulWidget {
   static final String TAG = '/order_page';
@@ -51,9 +51,12 @@ class _OrderPageState extends State<OrderPage> {
         ),
         body: TabBarView(
           children: [
-            TransactionHistoryPage(),
             Container(
               color: Colors.teal,
+            ),
+            NewTransactionHistoryPage(
+              status: "2",
+              customerId: "DM152585832596584529828",
             ),
             Container(
               color: Colors.yellow,
