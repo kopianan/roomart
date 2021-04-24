@@ -25,12 +25,20 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
   void setDetailList() {
     List _desc = data.displayDesc.split("<br/>");
     listData = [
-      PDetail("Merk", _desc[0]),
-      PDetail("Ukuran", _desc[1]),
-      PDetail("Bahan", _desc[2]),
-      PDetail("Berat", _desc[3]),
-      PDetail("Lainnya", _desc[4].replaceAll("<br>", ",")),
+      PDetail("Merk", checkIfNull(_desc, 0)),
+      PDetail("Ukuran", checkIfNull(_desc, 1)),
+      PDetail("Bahan", checkIfNull(_desc, 2)),
+      PDetail("Berat", checkIfNull(_desc, 3)),
+      PDetail("Lainnya", checkIfNull(_desc, 4).replaceAll("<br>", ",")),
     ];
+  }
+
+  checkIfNull(List list, int status) {
+    try {
+      return list[status];
+    } catch (e) {
+      return "";
+    }
   }
 
   @override

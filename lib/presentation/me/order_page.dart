@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:roomart/application/transaction/transaction_controller.dart';
 import 'package:roomart/application/transaction/transaction_cubit.dart';
+import 'package:roomart/presentation/me/widgets/finished_transaction_history_page.dart';
+import 'package:roomart/presentation/me/widgets/not_paid_transaction_history_page.dart';
 import 'package:roomart/utils/my_color.dart';
 
 import '../../injection.dart';
@@ -52,8 +54,9 @@ class _OrderPageState extends State<OrderPage> {
         ),
         body: TabBarView(
           children: [
-            Container(
-              color: Colors.teal,
+            NotPaidTransactionHistory(
+              status: "0",
+              customerId: "DM152585832596584529828",
             ),
             NewTransactionHistoryPage(
               status: "2",
@@ -62,8 +65,9 @@ class _OrderPageState extends State<OrderPage> {
             Container(
               color: Colors.yellow,
             ),
-            Container(
-              color: Colors.deepOrange,
+            FinishedTransactionHistoryPage(
+              customerId: "DM156471404530005987009",
+              status: "2",
             ),
             CancelledTransactionHistoryPage(
               status: "-1",

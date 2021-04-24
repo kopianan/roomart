@@ -12,12 +12,13 @@ class Constants {
   //new base url
   String baseUrlProduction =
       "http://cloud.erp.web.id:8080/padasuka/weblayer/template/";
+
   String baseUrlProductionBackup =
       "http://cloud.erp.web.id:8080/roomart/weblayer/template/";
-
   String imageBaseUrl = "http://cloud.erp.web.id:8080";
 
   String get getUltimoBaseUrl => this._ultimoBaseUrl;
+  String get getBaseUrlProduction => this.baseUrlProduction;
   //url api untuk get coupon code
   String _ultimoBaseUrl = "http://roomart.erp.web.id/umbraco/api";
   String midtransBaseAPPProduction = "https://app.midtrans.com";

@@ -9,7 +9,7 @@ import 'package:roomart/utils/constants.dart';
 
 abstract class IITemFacae {
   Future<Either<String, List<DataItemModel>>> getItemLazyLoading(
-      int offset, int limit);
+      {int offset, int limit});
   Future<Either<String, List<DataItemModel>>> getItemListByCategoryId(
       {int offset = 0, int limit = 1000, @required String categoryId});
 }
@@ -23,7 +23,7 @@ class ItemRepoistory extends IITemFacae {
 
   @override
   Future<Either<String, List<DataItemModel>>> getItemLazyLoading(
-      int offset, int limit) async {
+      {int offset, int limit}) async {
     List<DataItemModel> _tempData = <DataItemModel>[];
     Response response;
     try {
@@ -31,9 +31,10 @@ class ItemRepoistory extends IITemFacae {
           '${Constants().baseUrlProductionBackup}api,SPGApps.vm?cmd=2&loccode=GODM&limit=$limit&offset=$offset&sortby=updateDate&sortdirection=desc');
 
       List jsonData = json.decode(response.data.toString());
-      print(jsonData.first);
+      print(response.requestOptions.path);
       List<DataItemModel> data =
           jsonData.map((m) => DataItemModel.fromJson(m)).toList();
+
       data.forEach((element) {
         double data = double.tryParse(element.qty);
         if (data != null) {
@@ -42,6 +43,7 @@ class ItemRepoistory extends IITemFacae {
           }
         }
       });
+      
       return right(_tempData);
     } catch (e) {
       return left(e.toString());

@@ -16,7 +16,8 @@ class ItemCubit extends Cubit<ItemState> {
   void getItemListLazy(int limit, int offset) async {
     emit(ItemState.loading());
     try {
-      final _result = await iiTemFacae.getItemLazyLoading(offset, limit);
+      final _result =
+          await iiTemFacae.getItemLazyLoading(limit: limit, offset: offset);
       _result.fold(
         (l) => emit(ItemState.error(l.toString())),
         (r) => emit(ItemState.onGetItemLazy(r)),

@@ -33,13 +33,14 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _onLoading() {
+    print(offset);
     itemBloc..getItemListLazy(limit, offset);
   }
 
   final itemBloc = getIt<ItemCubit>();
 
-  int limit = 10;
-  int offset = 1;
+  int limit = 6;
+  int offset = 0;
   final itemConroller = Get.put(ItemController());
   final categoryController = Get.put(CategoryController());
   final categoryCubit = getIt<CategoryCubit>();
@@ -87,49 +88,48 @@ class _HomePageState extends State<HomePage> {
           child: BlocProvider(
               create: (context) => getIt<HomeCubit>()..getHomeBanner(),
               child: BlocConsumer<HomeCubit, HomeState>(
-                  listener: (context, state) {
-                print(state);
-              }, builder: (context, state) {
-                return state.maybeMap(
-                  orElse: () => Container(),
-                  loading: (e) => Container(),
-                  error: (e) => Container(),
-                  onGetBanner: (e) {
-                    return e.data.fold(
-                      (l) => Container(),
-                      (r) => CarouselSlider(
-                        options: CarouselOptions(
-                          aspectRatio: 2 / 0.8,
-                          pageSnapping: false,
-                          autoPlay: true,
-                        ),
-                        items: r.first.imageLIst
-                            .map((data) => Padding(
-                                  padding:
-                                      const EdgeInsets.symmetric(vertical: 10),
-                                  child: Container(
-                                      margin: EdgeInsets.only(right: 15),
-                                      decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                          boxShadow: [
-                                            BoxShadow(
-                                                blurRadius: 2,
-                                                spreadRadius: 2,
-                                                color: Colors.grey[200],
-                                                offset: Offset(2, 2))
-                                          ],
-                                          image: DecorationImage(
-                                              image: NetworkImage(data),
-                                              fit: BoxFit.cover))),
-                                ))
-                            .toList(),
-                      ),
+                  listener: (context, state) {},
+                  builder: (context, state) {
+                    return state.maybeMap(
+                      orElse: () => Container(),
+                      loading: (e) => Container(),
+                      error: (e) => Container(),
+                      onGetBanner: (e) {
+                        return e.data.fold(
+                          (l) => Container(),
+                          (r) => CarouselSlider(
+                            options: CarouselOptions(
+                              aspectRatio: 2 / 0.8,
+                              pageSnapping: false,
+                              autoPlay: true,
+                            ),
+                            items: r.first.imageLIst
+                                .map((data) => Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          vertical: 10),
+                                      child: Container(
+                                          margin: EdgeInsets.only(right: 15),
+                                          decoration: BoxDecoration(
+                                              color: Colors.white,
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              boxShadow: [
+                                                BoxShadow(
+                                                    blurRadius: 2,
+                                                    spreadRadius: 2,
+                                                    color: Colors.grey[200],
+                                                    offset: Offset(2, 2))
+                                              ],
+                                              image: DecorationImage(
+                                                  image: NetworkImage(data),
+                                                  fit: BoxFit.cover))),
+                                    ))
+                                .toList(),
+                          ),
+                        );
+                      },
                     );
-                  },
-                );
-              })),
+                  })),
         ),
         SliverToBoxAdapter(
           child: Container(
@@ -218,7 +218,9 @@ class _HomePageState extends State<HomePage> {
                   error: (e) {},
                   onGetItemLazy: (e) {
                     itemConroller.setListData(e.data);
-                    offset++;
+                    setState(() {
+                      offset++;
+                    });
                   });
 
               _refreshController.loadComplete();
@@ -232,7 +234,7 @@ class _HomePageState extends State<HomePage> {
                     child: buildSubtitle("Rekomendasi"),
                   ),
                   SizedBox(height: 10),
-                  GetX<ItemController>(
+                  GetBuilder<ItemController>(
                       builder: (item) => Container(
                             margin: EdgeInsets.symmetric(horizontal: 10),
                             child: GridView.count(

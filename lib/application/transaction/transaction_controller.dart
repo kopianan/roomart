@@ -1,12 +1,17 @@
 import 'package:get/get.dart';
 import 'package:roomart/domain/transaction/transaction_data_model.dart';
+import 'package:roomart/domain/transaction/transaction_data_model_v2.dart';
 
 class TransactionController extends GetxController {
   RxInt newOffset = 0.obs;
   RxInt cancelOffset = 0.obs;
+  RxInt notPaidOffset = 0.obs;
+  RxInt finishedOffset = 0.obs;
   List<TransactionDataModel> allTransaction = <TransactionDataModel>[];
   List<TransactionDataModel> newTransaction = <TransactionDataModel>[];
   List<TransactionDataModel> cancelledTransaction = <TransactionDataModel>[];
+  List<TransactionDataModel> notPaidTransaction = <TransactionDataModel>[];
+  List<TransactionDataModelV2> finishedTransaction = <TransactionDataModelV2>[];
 
   void setAllTransactionHistoryData(List<TransactionDataModel> list) {
     this.allTransaction.addAll(list);
@@ -48,4 +53,31 @@ class TransactionController extends GetxController {
 
   List<TransactionDataModel> get getCancelledTransaction =>
       this.cancelledTransaction;
+
+//NotPaid transaction history
+  void addNotPaidTransaction(List<TransactionDataModel> data) {
+    notPaidOffset.value += 1;
+    this.notPaidTransaction.addAll(data);
+  }
+
+  void setNotPaidTransaction(List<TransactionDataModel> list) {
+    notPaidOffset.value += 1;
+    this.notPaidTransaction.assignAll(list);
+  }
+
+  List<TransactionDataModel> get getNotPaidTransaction =>
+      this.notPaidTransaction;
+//Finished transaction history
+  void addFinishedTransaction(List<TransactionDataModelV2> data) {
+    finishedOffset.value += 1;
+    this.finishedTransaction.addAll(data);
+  }
+
+  void setFinishedTransaction(List<TransactionDataModelV2> list) {
+    finishedOffset.value += 1;
+    this.finishedTransaction.assignAll(list);
+  }
+
+  List<TransactionDataModelV2> get getFinishedTransaction =>
+      this.finishedTransaction;
 }

@@ -7,20 +7,22 @@ import 'package:roomart/application/transaction/transaction_controller.dart';
 import 'package:roomart/application/transaction/transaction_cubit.dart';
 import 'package:roomart/domain/transaction/models/transaction_req_res.dart';
 import 'package:roomart/presentation/me/components/transaction_item_widget.dart';
+import 'package:roomart/presentation/me/components/transaction_item_widgetV2.dart';
 import 'package:roomart/utils/constants.dart';
 
 import '../../../injection.dart';
 
-class NewTransactionHistoryPage extends StatefulWidget {
-  NewTransactionHistoryPage({this.status = "", this.customerId});
+class FinishedTransactionHistoryPage extends StatefulWidget {
+  FinishedTransactionHistoryPage({this.status = "", this.customerId});
   final String status;
   final String customerId;
   @override
-  _NewTransactionHistoryPageState createState() =>
-      _NewTransactionHistoryPageState();
+  _FinishedTransactionHistoryPageState createState() =>
+      _FinishedTransactionHistoryPageState();
 }
 
-class _NewTransactionHistoryPageState extends State<NewTransactionHistoryPage> {
+class _FinishedTransactionHistoryPageState
+    extends State<FinishedTransactionHistoryPage> {
   RefreshController _refreshController =
       RefreshController(initialRefresh: false);
   String STATUS;
@@ -29,10 +31,10 @@ class _NewTransactionHistoryPageState extends State<NewTransactionHistoryPage> {
   final transController = Get.put(TransactionController());
 
   void _onRefresh() {
-    transController.newOffset.value = 0;
-    transCubit.getHistoryTransactionByStatus(TransactionHistoryRequest(
+    transController.finishedOffset.value = 0;
+    transCubit.getHistoryTransactionByStatusV2(TransactionHistoryRequest(
       limit: 10,
-      offset: transController.newOffset.value * LIMIT,
+      offset: transController.finishedOffset.value * LIMIT,
       token: Constants().tokenUltimo,
       status: STATUS,
       customerId: widget.customerId,
@@ -40,9 +42,9 @@ class _NewTransactionHistoryPageState extends State<NewTransactionHistoryPage> {
   }
 
   void _onLoading() {
-    transCubit.getHistoryTransactionByStatus(TransactionHistoryRequest(
+    transCubit.getHistoryTransactionByStatusV2(TransactionHistoryRequest(
       limit: 10,
-      offset: transController.newOffset.value * LIMIT,
+      offset: transController.finishedOffset.value * LIMIT,
       token: Constants().tokenUltimo,
       status: STATUS,
       customerId: widget.customerId,
@@ -52,14 +54,14 @@ class _NewTransactionHistoryPageState extends State<NewTransactionHistoryPage> {
   void initialRequest() {
     var _request = TransactionHistoryRequest(
       limit: 10,
-      offset: transController.newOffset.value * LIMIT,
+      offset: transController.finishedOffset.value * LIMIT,
       token: Constants().tokenUltimo,
       status: STATUS,
       customerId: widget.customerId,
     );
 
-    if (transController.getNewTransactionList.isEmpty) {
-      transCubit.getHistoryTransactionByStatus(_request);
+    if (transController.getFinishedTransaction.isEmpty) {
+      transCubit.getHistoryTransactionByStatusV2(_request);
     }
   }
 
@@ -81,12 +83,13 @@ class _NewTransactionHistoryPageState extends State<NewTransactionHistoryPage> {
               state.maybeMap(
                 orElse: () {},
                 error: (e) {},
-                onGetHistoryTransaction: (value) {
+                onGetHistoryTransactionV2: (value) {
+                  print(value.data.first);
                   if (_refreshController.isRefresh) {
-                    trans.setNewTransactionList(value.data);
+                    trans.setFinishedTransaction(value.data);
                     _refreshController.refreshCompleted();
                   } else {
-                    trans.addNewTransactionList(value.data);
+                    trans.addFinishedTransaction(value.data);
                     _refreshController.loadComplete();
                   }
                 },
@@ -120,10 +123,10 @@ class _NewTransactionHistoryPageState extends State<NewTransactionHistoryPage> {
                 onRefresh: _onRefresh,
                 onLoading: _onLoading,
                 child: ListView.builder(
-                    itemCount: trans.getNewTransactionList.length,
+                    itemCount: trans.getFinishedTransaction.length,
                     itemBuilder: (context, index) {
-                      return TransactionItemWidget(
-                          data: trans.getNewTransactionList[index]);
+                      return TransactionItemWidgetV2(
+                          data: trans.getFinishedTransaction[index]);
                     }),
               );
             })));

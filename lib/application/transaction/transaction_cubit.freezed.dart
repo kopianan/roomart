@@ -37,6 +37,14 @@ class _$TransactionStateTearOff {
       data,
     );
   }
+
+// ignore: unused_element
+  _OnGetHistoryTransactionV2 onGetHistoryTransactionV2(
+      List<TransactionDataModelV2> data) {
+    return _OnGetHistoryTransactionV2(
+      data,
+    );
+  }
 }
 
 /// @nodoc
@@ -51,6 +59,8 @@ mixin _$TransactionState {
     @required TResult loading(),
     @required TResult error(String error),
     @required TResult onGetHistoryTransaction(List<TransactionDataModel> data),
+    @required
+        TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
@@ -58,6 +68,7 @@ mixin _$TransactionState {
     TResult loading(),
     TResult error(String error),
     TResult onGetHistoryTransaction(List<TransactionDataModel> data),
+    TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     @required TResult orElse(),
   });
   @optionalTypeArgs
@@ -66,6 +77,8 @@ mixin _$TransactionState {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
+    @required
+        TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
@@ -73,6 +86,7 @@ mixin _$TransactionState {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
+    TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     @required TResult orElse(),
   });
 }
@@ -134,11 +148,14 @@ class _$_Initial implements _Initial {
     @required TResult loading(),
     @required TResult error(String error),
     @required TResult onGetHistoryTransaction(List<TransactionDataModel> data),
+    @required
+        TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetHistoryTransaction != null);
+    assert(onGetHistoryTransactionV2 != null);
     return initial();
   }
 
@@ -149,6 +166,7 @@ class _$_Initial implements _Initial {
     TResult loading(),
     TResult error(String error),
     TResult onGetHistoryTransaction(List<TransactionDataModel> data),
+    TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -165,11 +183,14 @@ class _$_Initial implements _Initial {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
+    @required
+        TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetHistoryTransaction != null);
+    assert(onGetHistoryTransactionV2 != null);
     return initial(this);
   }
 
@@ -180,6 +201,7 @@ class _$_Initial implements _Initial {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
+    TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -234,11 +256,14 @@ class _$_Loading implements _Loading {
     @required TResult loading(),
     @required TResult error(String error),
     @required TResult onGetHistoryTransaction(List<TransactionDataModel> data),
+    @required
+        TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetHistoryTransaction != null);
+    assert(onGetHistoryTransactionV2 != null);
     return loading();
   }
 
@@ -249,6 +274,7 @@ class _$_Loading implements _Loading {
     TResult loading(),
     TResult error(String error),
     TResult onGetHistoryTransaction(List<TransactionDataModel> data),
+    TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -265,11 +291,14 @@ class _$_Loading implements _Loading {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
+    @required
+        TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetHistoryTransaction != null);
+    assert(onGetHistoryTransactionV2 != null);
     return loading(this);
   }
 
@@ -280,6 +309,7 @@ class _$_Loading implements _Loading {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
+    TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -356,11 +386,14 @@ class _$_Error implements _Error {
     @required TResult loading(),
     @required TResult error(String error),
     @required TResult onGetHistoryTransaction(List<TransactionDataModel> data),
+    @required
+        TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetHistoryTransaction != null);
+    assert(onGetHistoryTransactionV2 != null);
     return error(this.error);
   }
 
@@ -371,6 +404,7 @@ class _$_Error implements _Error {
     TResult loading(),
     TResult error(String error),
     TResult onGetHistoryTransaction(List<TransactionDataModel> data),
+    TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -387,11 +421,14 @@ class _$_Error implements _Error {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
+    @required
+        TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetHistoryTransaction != null);
+    assert(onGetHistoryTransactionV2 != null);
     return error(this);
   }
 
@@ -402,6 +439,7 @@ class _$_Error implements _Error {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
+    TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -487,11 +525,14 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
     @required TResult loading(),
     @required TResult error(String error),
     @required TResult onGetHistoryTransaction(List<TransactionDataModel> data),
+    @required
+        TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetHistoryTransaction != null);
+    assert(onGetHistoryTransactionV2 != null);
     return onGetHistoryTransaction(data);
   }
 
@@ -502,6 +543,7 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
     TResult loading(),
     TResult error(String error),
     TResult onGetHistoryTransaction(List<TransactionDataModel> data),
+    TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -518,11 +560,14 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
+    @required
+        TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetHistoryTransaction != null);
+    assert(onGetHistoryTransactionV2 != null);
     return onGetHistoryTransaction(this);
   }
 
@@ -533,6 +578,7 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
+    TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -550,4 +596,145 @@ abstract class _OnGetHistoryTransaction implements TransactionState {
   List<TransactionDataModel> get data;
   @JsonKey(ignore: true)
   _$OnGetHistoryTransactionCopyWith<_OnGetHistoryTransaction> get copyWith;
+}
+
+/// @nodoc
+abstract class _$OnGetHistoryTransactionV2CopyWith<$Res> {
+  factory _$OnGetHistoryTransactionV2CopyWith(_OnGetHistoryTransactionV2 value,
+          $Res Function(_OnGetHistoryTransactionV2) then) =
+      __$OnGetHistoryTransactionV2CopyWithImpl<$Res>;
+  $Res call({List<TransactionDataModelV2> data});
+}
+
+/// @nodoc
+class __$OnGetHistoryTransactionV2CopyWithImpl<$Res>
+    extends _$TransactionStateCopyWithImpl<$Res>
+    implements _$OnGetHistoryTransactionV2CopyWith<$Res> {
+  __$OnGetHistoryTransactionV2CopyWithImpl(_OnGetHistoryTransactionV2 _value,
+      $Res Function(_OnGetHistoryTransactionV2) _then)
+      : super(_value, (v) => _then(v as _OnGetHistoryTransactionV2));
+
+  @override
+  _OnGetHistoryTransactionV2 get _value =>
+      super._value as _OnGetHistoryTransactionV2;
+
+  @override
+  $Res call({
+    Object data = freezed,
+  }) {
+    return _then(_OnGetHistoryTransactionV2(
+      data == freezed ? _value.data : data as List<TransactionDataModelV2>,
+    ));
+  }
+}
+
+/// @nodoc
+class _$_OnGetHistoryTransactionV2 implements _OnGetHistoryTransactionV2 {
+  const _$_OnGetHistoryTransactionV2(this.data) : assert(data != null);
+
+  @override
+  final List<TransactionDataModelV2> data;
+
+  @override
+  String toString() {
+    return 'TransactionState.onGetHistoryTransactionV2(data: $data)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _OnGetHistoryTransactionV2 &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(data);
+
+  @JsonKey(ignore: true)
+  @override
+  _$OnGetHistoryTransactionV2CopyWith<_OnGetHistoryTransactionV2>
+      get copyWith =>
+          __$OnGetHistoryTransactionV2CopyWithImpl<_OnGetHistoryTransactionV2>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loading(),
+    @required TResult error(String error),
+    @required TResult onGetHistoryTransaction(List<TransactionDataModel> data),
+    @required
+        TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(onGetHistoryTransaction != null);
+    assert(onGetHistoryTransactionV2 != null);
+    return onGetHistoryTransactionV2(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loading(),
+    TResult error(String error),
+    TResult onGetHistoryTransaction(List<TransactionDataModel> data),
+    TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (onGetHistoryTransactionV2 != null) {
+      return onGetHistoryTransactionV2(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loading(_Loading value),
+    @required TResult error(_Error value),
+    @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
+    @required
+        TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(onGetHistoryTransaction != null);
+    assert(onGetHistoryTransactionV2 != null);
+    return onGetHistoryTransactionV2(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loading(_Loading value),
+    TResult error(_Error value),
+    TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
+    TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (onGetHistoryTransactionV2 != null) {
+      return onGetHistoryTransactionV2(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnGetHistoryTransactionV2 implements TransactionState {
+  const factory _OnGetHistoryTransactionV2(List<TransactionDataModelV2> data) =
+      _$_OnGetHistoryTransactionV2;
+
+  List<TransactionDataModelV2> get data;
+  @JsonKey(ignore: true)
+  _$OnGetHistoryTransactionV2CopyWith<_OnGetHistoryTransactionV2> get copyWith;
 }

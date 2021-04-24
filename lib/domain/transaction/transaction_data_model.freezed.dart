@@ -18,36 +18,36 @@ class _$TransactionDataModelTearOff {
 
 // ignore: unused_element
   _TransactionDataModel call(
-      {@JsonKey(name: "QuantityTotal") int quantityTotal,
-      @JsonKey(name: "CustomerName") String customerName,
-      @JsonKey(name: "ID") String iD,
-      @JsonKey(name: "Number") String number,
-      @JsonKey(name: "CustomerID") String customerID,
-      @JsonKey(name: "Total") double total,
-      @JsonKey(name: "Date") String date,
-      @JsonKey(name: "Cashback") double cashback,
-      @JsonKey(name: "Status") int status,
-      @JsonKey(name: "Trans_type") String transType,
-      @JsonKey(name: "Location") String location,
-      @JsonKey(name: "Create_by") String createBy,
-      @JsonKey(name: "Remark") String remark,
-      @JsonKey(name: "Pmttype") String pmttype,
-      @JsonKey(name: "Total_discount") double totalDiscount,
-      @JsonKey(name: "Pmtterm") String pmtterm,
-      @JsonKey(name: "StatusEnum") int statusEnum,
-      @JsonKey(name: "StatusName") String statusName,
-      @JsonKey(name: "Items") List<TransactionItemDataModel> items,
-      @JsonKey(name: "TransferDate") String transferDate,
-      @JsonKey(name: "TransferBankAccountName") String transferBankAccountName,
-      @JsonKey(name: "TransferBankAccount") String transferBankAccount,
-      @JsonKey(name: "TransferBankImage") String transferBankImage,
-      @JsonKey(name: "BankID") int bankID,
-      @JsonKey(name: "BankAccountName") String bankAccountName,
-      @JsonKey(name: "BankNo") String bankNo,
-      @JsonKey(name: "PaymentChannel") String paymentChannel,
-      @JsonKey(name: "VirtualAccountName") String virtualAccountName,
-      @JsonKey(name: "VirtualAccountNo") String virtualAccountNo,
-      @JsonKey(name: "TransactionStatus") String transactionStatus}) {
+      {@JsonKey(name: 'QuantityTotal') int quantityTotal,
+      @JsonKey(name: 'CustomerName') String customerName,
+      @JsonKey(name: 'ID') String iD,
+      @JsonKey(name: 'Number') String number,
+      @JsonKey(name: 'CustomerID') String customerID,
+      @JsonKey(name: 'Total') double total,
+      @JsonKey(name: 'Date') String date,
+      @JsonKey(name: 'Cashback') double cashback,
+      @JsonKey(name: 'Status') int status,
+      @JsonKey(name: 'Trans_type') String transType,
+      @JsonKey(name: 'Location') String location,
+      @JsonKey(name: 'Create_by') String createBy,
+      @JsonKey(name: 'Remark') String remark,
+      @JsonKey(name: 'Pmttype') String pmttype,
+      @JsonKey(name: 'Total_discount') double totalDiscount,
+      @JsonKey(name: 'Pmtterm') String pmtterm,
+      @JsonKey(name: 'StatusEnum') int statusEnum,
+      @JsonKey(name: 'StatusName') String statusName,
+      @JsonKey(name: 'Items') List<TransactionItemDataModel> items,
+      @JsonKey(name: 'TransferDate') String transferDate,
+      @JsonKey(name: 'TransferBankAccountName') String transferBankAccountName,
+      @JsonKey(name: 'TransferBankAccount') String transferBankAccount,
+      @JsonKey(name: 'TransferBankImage') String transferBankImage,
+      @JsonKey(name: 'BankID') int bankID,
+      @JsonKey(name: 'BankAccountName') String bankAccountName,
+      @JsonKey(name: 'BankNo') String bankNo,
+      @JsonKey(name: 'PaymentChannel') String paymentChannel,
+      @JsonKey(name: 'VirtualAccountName') String virtualAccountName,
+      @JsonKey(name: 'VirtualAccountNo') String virtualAccountNo,
+      @JsonKey(name: 'TransactionStatus') String transactionStatus}) {
     return _TransactionDataModel(
       quantityTotal: quantityTotal,
       customerName: customerName,
@@ -94,65 +94,65 @@ const $TransactionDataModel = _$TransactionDataModelTearOff();
 
 /// @nodoc
 mixin _$TransactionDataModel {
-  @JsonKey(name: "QuantityTotal")
+  @JsonKey(name: 'QuantityTotal')
   int get quantityTotal;
-  @JsonKey(name: "CustomerName")
+  @JsonKey(name: 'CustomerName')
   String get customerName;
-  @JsonKey(name: "ID")
+  @JsonKey(name: 'ID')
   String get iD;
-  @JsonKey(name: "Number")
+  @JsonKey(name: 'Number')
   String get number;
-  @JsonKey(name: "CustomerID")
+  @JsonKey(name: 'CustomerID')
   String get customerID;
-  @JsonKey(name: "Total")
+  @JsonKey(name: 'Total')
   double get total;
-  @JsonKey(name: "Date")
+  @JsonKey(name: 'Date')
   String get date;
-  @JsonKey(name: "Cashback")
+  @JsonKey(name: 'Cashback')
   double get cashback;
-  @JsonKey(name: "Status")
+  @JsonKey(name: 'Status')
   int get status;
-  @JsonKey(name: "Trans_type")
+  @JsonKey(name: 'Trans_type')
   String get transType;
-  @JsonKey(name: "Location")
+  @JsonKey(name: 'Location')
   String get location;
-  @JsonKey(name: "Create_by")
+  @JsonKey(name: 'Create_by')
   String get createBy;
-  @JsonKey(name: "Remark")
+  @JsonKey(name: 'Remark')
   String get remark;
-  @JsonKey(name: "Pmttype")
+  @JsonKey(name: 'Pmttype')
   String get pmttype;
-  @JsonKey(name: "Total_discount")
+  @JsonKey(name: 'Total_discount')
   double get totalDiscount;
-  @JsonKey(name: "Pmtterm")
+  @JsonKey(name: 'Pmtterm')
   String get pmtterm;
-  @JsonKey(name: "StatusEnum")
+  @JsonKey(name: 'StatusEnum')
   int get statusEnum;
-  @JsonKey(name: "StatusName")
+  @JsonKey(name: 'StatusName')
   String get statusName;
-  @JsonKey(name: "Items")
+  @JsonKey(name: 'Items')
   List<TransactionItemDataModel> get items;
-  @JsonKey(name: "TransferDate")
+  @JsonKey(name: 'TransferDate')
   String get transferDate;
-  @JsonKey(name: "TransferBankAccountName")
+  @JsonKey(name: 'TransferBankAccountName')
   String get transferBankAccountName;
-  @JsonKey(name: "TransferBankAccount")
+  @JsonKey(name: 'TransferBankAccount')
   String get transferBankAccount;
-  @JsonKey(name: "TransferBankImage")
+  @JsonKey(name: 'TransferBankImage')
   String get transferBankImage;
-  @JsonKey(name: "BankID")
+  @JsonKey(name: 'BankID')
   int get bankID;
-  @JsonKey(name: "BankAccountName")
+  @JsonKey(name: 'BankAccountName')
   String get bankAccountName;
-  @JsonKey(name: "BankNo")
+  @JsonKey(name: 'BankNo')
   String get bankNo;
-  @JsonKey(name: "PaymentChannel")
+  @JsonKey(name: 'PaymentChannel')
   String get paymentChannel;
-  @JsonKey(name: "VirtualAccountName")
+  @JsonKey(name: 'VirtualAccountName')
   String get virtualAccountName;
-  @JsonKey(name: "VirtualAccountNo")
+  @JsonKey(name: 'VirtualAccountNo')
   String get virtualAccountNo;
-  @JsonKey(name: "TransactionStatus")
+  @JsonKey(name: 'TransactionStatus')
   String get transactionStatus;
 
   Map<String, dynamic> toJson();
@@ -166,36 +166,36 @@ abstract class $TransactionDataModelCopyWith<$Res> {
           $Res Function(TransactionDataModel) then) =
       _$TransactionDataModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: "QuantityTotal") int quantityTotal,
-      @JsonKey(name: "CustomerName") String customerName,
-      @JsonKey(name: "ID") String iD,
-      @JsonKey(name: "Number") String number,
-      @JsonKey(name: "CustomerID") String customerID,
-      @JsonKey(name: "Total") double total,
-      @JsonKey(name: "Date") String date,
-      @JsonKey(name: "Cashback") double cashback,
-      @JsonKey(name: "Status") int status,
-      @JsonKey(name: "Trans_type") String transType,
-      @JsonKey(name: "Location") String location,
-      @JsonKey(name: "Create_by") String createBy,
-      @JsonKey(name: "Remark") String remark,
-      @JsonKey(name: "Pmttype") String pmttype,
-      @JsonKey(name: "Total_discount") double totalDiscount,
-      @JsonKey(name: "Pmtterm") String pmtterm,
-      @JsonKey(name: "StatusEnum") int statusEnum,
-      @JsonKey(name: "StatusName") String statusName,
-      @JsonKey(name: "Items") List<TransactionItemDataModel> items,
-      @JsonKey(name: "TransferDate") String transferDate,
-      @JsonKey(name: "TransferBankAccountName") String transferBankAccountName,
-      @JsonKey(name: "TransferBankAccount") String transferBankAccount,
-      @JsonKey(name: "TransferBankImage") String transferBankImage,
-      @JsonKey(name: "BankID") int bankID,
-      @JsonKey(name: "BankAccountName") String bankAccountName,
-      @JsonKey(name: "BankNo") String bankNo,
-      @JsonKey(name: "PaymentChannel") String paymentChannel,
-      @JsonKey(name: "VirtualAccountName") String virtualAccountName,
-      @JsonKey(name: "VirtualAccountNo") String virtualAccountNo,
-      @JsonKey(name: "TransactionStatus") String transactionStatus});
+      {@JsonKey(name: 'QuantityTotal') int quantityTotal,
+      @JsonKey(name: 'CustomerName') String customerName,
+      @JsonKey(name: 'ID') String iD,
+      @JsonKey(name: 'Number') String number,
+      @JsonKey(name: 'CustomerID') String customerID,
+      @JsonKey(name: 'Total') double total,
+      @JsonKey(name: 'Date') String date,
+      @JsonKey(name: 'Cashback') double cashback,
+      @JsonKey(name: 'Status') int status,
+      @JsonKey(name: 'Trans_type') String transType,
+      @JsonKey(name: 'Location') String location,
+      @JsonKey(name: 'Create_by') String createBy,
+      @JsonKey(name: 'Remark') String remark,
+      @JsonKey(name: 'Pmttype') String pmttype,
+      @JsonKey(name: 'Total_discount') double totalDiscount,
+      @JsonKey(name: 'Pmtterm') String pmtterm,
+      @JsonKey(name: 'StatusEnum') int statusEnum,
+      @JsonKey(name: 'StatusName') String statusName,
+      @JsonKey(name: 'Items') List<TransactionItemDataModel> items,
+      @JsonKey(name: 'TransferDate') String transferDate,
+      @JsonKey(name: 'TransferBankAccountName') String transferBankAccountName,
+      @JsonKey(name: 'TransferBankAccount') String transferBankAccount,
+      @JsonKey(name: 'TransferBankImage') String transferBankImage,
+      @JsonKey(name: 'BankID') int bankID,
+      @JsonKey(name: 'BankAccountName') String bankAccountName,
+      @JsonKey(name: 'BankNo') String bankNo,
+      @JsonKey(name: 'PaymentChannel') String paymentChannel,
+      @JsonKey(name: 'VirtualAccountName') String virtualAccountName,
+      @JsonKey(name: 'VirtualAccountNo') String virtualAccountNo,
+      @JsonKey(name: 'TransactionStatus') String transactionStatus});
 }
 
 /// @nodoc
@@ -311,36 +311,36 @@ abstract class _$TransactionDataModelCopyWith<$Res>
       __$TransactionDataModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: "QuantityTotal") int quantityTotal,
-      @JsonKey(name: "CustomerName") String customerName,
-      @JsonKey(name: "ID") String iD,
-      @JsonKey(name: "Number") String number,
-      @JsonKey(name: "CustomerID") String customerID,
-      @JsonKey(name: "Total") double total,
-      @JsonKey(name: "Date") String date,
-      @JsonKey(name: "Cashback") double cashback,
-      @JsonKey(name: "Status") int status,
-      @JsonKey(name: "Trans_type") String transType,
-      @JsonKey(name: "Location") String location,
-      @JsonKey(name: "Create_by") String createBy,
-      @JsonKey(name: "Remark") String remark,
-      @JsonKey(name: "Pmttype") String pmttype,
-      @JsonKey(name: "Total_discount") double totalDiscount,
-      @JsonKey(name: "Pmtterm") String pmtterm,
-      @JsonKey(name: "StatusEnum") int statusEnum,
-      @JsonKey(name: "StatusName") String statusName,
-      @JsonKey(name: "Items") List<TransactionItemDataModel> items,
-      @JsonKey(name: "TransferDate") String transferDate,
-      @JsonKey(name: "TransferBankAccountName") String transferBankAccountName,
-      @JsonKey(name: "TransferBankAccount") String transferBankAccount,
-      @JsonKey(name: "TransferBankImage") String transferBankImage,
-      @JsonKey(name: "BankID") int bankID,
-      @JsonKey(name: "BankAccountName") String bankAccountName,
-      @JsonKey(name: "BankNo") String bankNo,
-      @JsonKey(name: "PaymentChannel") String paymentChannel,
-      @JsonKey(name: "VirtualAccountName") String virtualAccountName,
-      @JsonKey(name: "VirtualAccountNo") String virtualAccountNo,
-      @JsonKey(name: "TransactionStatus") String transactionStatus});
+      {@JsonKey(name: 'QuantityTotal') int quantityTotal,
+      @JsonKey(name: 'CustomerName') String customerName,
+      @JsonKey(name: 'ID') String iD,
+      @JsonKey(name: 'Number') String number,
+      @JsonKey(name: 'CustomerID') String customerID,
+      @JsonKey(name: 'Total') double total,
+      @JsonKey(name: 'Date') String date,
+      @JsonKey(name: 'Cashback') double cashback,
+      @JsonKey(name: 'Status') int status,
+      @JsonKey(name: 'Trans_type') String transType,
+      @JsonKey(name: 'Location') String location,
+      @JsonKey(name: 'Create_by') String createBy,
+      @JsonKey(name: 'Remark') String remark,
+      @JsonKey(name: 'Pmttype') String pmttype,
+      @JsonKey(name: 'Total_discount') double totalDiscount,
+      @JsonKey(name: 'Pmtterm') String pmtterm,
+      @JsonKey(name: 'StatusEnum') int statusEnum,
+      @JsonKey(name: 'StatusName') String statusName,
+      @JsonKey(name: 'Items') List<TransactionItemDataModel> items,
+      @JsonKey(name: 'TransferDate') String transferDate,
+      @JsonKey(name: 'TransferBankAccountName') String transferBankAccountName,
+      @JsonKey(name: 'TransferBankAccount') String transferBankAccount,
+      @JsonKey(name: 'TransferBankImage') String transferBankImage,
+      @JsonKey(name: 'BankID') int bankID,
+      @JsonKey(name: 'BankAccountName') String bankAccountName,
+      @JsonKey(name: 'BankNo') String bankNo,
+      @JsonKey(name: 'PaymentChannel') String paymentChannel,
+      @JsonKey(name: 'VirtualAccountName') String virtualAccountName,
+      @JsonKey(name: 'VirtualAccountNo') String virtualAccountNo,
+      @JsonKey(name: 'TransactionStatus') String transactionStatus});
 }
 
 /// @nodoc
@@ -455,129 +455,129 @@ class __$TransactionDataModelCopyWithImpl<$Res>
 /// @nodoc
 class _$_TransactionDataModel implements _TransactionDataModel {
   _$_TransactionDataModel(
-      {@JsonKey(name: "QuantityTotal") this.quantityTotal,
-      @JsonKey(name: "CustomerName") this.customerName,
-      @JsonKey(name: "ID") this.iD,
-      @JsonKey(name: "Number") this.number,
-      @JsonKey(name: "CustomerID") this.customerID,
-      @JsonKey(name: "Total") this.total,
-      @JsonKey(name: "Date") this.date,
-      @JsonKey(name: "Cashback") this.cashback,
-      @JsonKey(name: "Status") this.status,
-      @JsonKey(name: "Trans_type") this.transType,
-      @JsonKey(name: "Location") this.location,
-      @JsonKey(name: "Create_by") this.createBy,
-      @JsonKey(name: "Remark") this.remark,
-      @JsonKey(name: "Pmttype") this.pmttype,
-      @JsonKey(name: "Total_discount") this.totalDiscount,
-      @JsonKey(name: "Pmtterm") this.pmtterm,
-      @JsonKey(name: "StatusEnum") this.statusEnum,
-      @JsonKey(name: "StatusName") this.statusName,
-      @JsonKey(name: "Items") this.items,
-      @JsonKey(name: "TransferDate") this.transferDate,
-      @JsonKey(name: "TransferBankAccountName") this.transferBankAccountName,
-      @JsonKey(name: "TransferBankAccount") this.transferBankAccount,
-      @JsonKey(name: "TransferBankImage") this.transferBankImage,
-      @JsonKey(name: "BankID") this.bankID,
-      @JsonKey(name: "BankAccountName") this.bankAccountName,
-      @JsonKey(name: "BankNo") this.bankNo,
-      @JsonKey(name: "PaymentChannel") this.paymentChannel,
-      @JsonKey(name: "VirtualAccountName") this.virtualAccountName,
-      @JsonKey(name: "VirtualAccountNo") this.virtualAccountNo,
-      @JsonKey(name: "TransactionStatus") this.transactionStatus});
+      {@JsonKey(name: 'QuantityTotal') this.quantityTotal,
+      @JsonKey(name: 'CustomerName') this.customerName,
+      @JsonKey(name: 'ID') this.iD,
+      @JsonKey(name: 'Number') this.number,
+      @JsonKey(name: 'CustomerID') this.customerID,
+      @JsonKey(name: 'Total') this.total,
+      @JsonKey(name: 'Date') this.date,
+      @JsonKey(name: 'Cashback') this.cashback,
+      @JsonKey(name: 'Status') this.status,
+      @JsonKey(name: 'Trans_type') this.transType,
+      @JsonKey(name: 'Location') this.location,
+      @JsonKey(name: 'Create_by') this.createBy,
+      @JsonKey(name: 'Remark') this.remark,
+      @JsonKey(name: 'Pmttype') this.pmttype,
+      @JsonKey(name: 'Total_discount') this.totalDiscount,
+      @JsonKey(name: 'Pmtterm') this.pmtterm,
+      @JsonKey(name: 'StatusEnum') this.statusEnum,
+      @JsonKey(name: 'StatusName') this.statusName,
+      @JsonKey(name: 'Items') this.items,
+      @JsonKey(name: 'TransferDate') this.transferDate,
+      @JsonKey(name: 'TransferBankAccountName') this.transferBankAccountName,
+      @JsonKey(name: 'TransferBankAccount') this.transferBankAccount,
+      @JsonKey(name: 'TransferBankImage') this.transferBankImage,
+      @JsonKey(name: 'BankID') this.bankID,
+      @JsonKey(name: 'BankAccountName') this.bankAccountName,
+      @JsonKey(name: 'BankNo') this.bankNo,
+      @JsonKey(name: 'PaymentChannel') this.paymentChannel,
+      @JsonKey(name: 'VirtualAccountName') this.virtualAccountName,
+      @JsonKey(name: 'VirtualAccountNo') this.virtualAccountNo,
+      @JsonKey(name: 'TransactionStatus') this.transactionStatus});
 
   factory _$_TransactionDataModel.fromJson(Map<String, dynamic> json) =>
       _$_$_TransactionDataModelFromJson(json);
 
   @override
-  @JsonKey(name: "QuantityTotal")
+  @JsonKey(name: 'QuantityTotal')
   final int quantityTotal;
   @override
-  @JsonKey(name: "CustomerName")
+  @JsonKey(name: 'CustomerName')
   final String customerName;
   @override
-  @JsonKey(name: "ID")
+  @JsonKey(name: 'ID')
   final String iD;
   @override
-  @JsonKey(name: "Number")
+  @JsonKey(name: 'Number')
   final String number;
   @override
-  @JsonKey(name: "CustomerID")
+  @JsonKey(name: 'CustomerID')
   final String customerID;
   @override
-  @JsonKey(name: "Total")
+  @JsonKey(name: 'Total')
   final double total;
   @override
-  @JsonKey(name: "Date")
+  @JsonKey(name: 'Date')
   final String date;
   @override
-  @JsonKey(name: "Cashback")
+  @JsonKey(name: 'Cashback')
   final double cashback;
   @override
-  @JsonKey(name: "Status")
+  @JsonKey(name: 'Status')
   final int status;
   @override
-  @JsonKey(name: "Trans_type")
+  @JsonKey(name: 'Trans_type')
   final String transType;
   @override
-  @JsonKey(name: "Location")
+  @JsonKey(name: 'Location')
   final String location;
   @override
-  @JsonKey(name: "Create_by")
+  @JsonKey(name: 'Create_by')
   final String createBy;
   @override
-  @JsonKey(name: "Remark")
+  @JsonKey(name: 'Remark')
   final String remark;
   @override
-  @JsonKey(name: "Pmttype")
+  @JsonKey(name: 'Pmttype')
   final String pmttype;
   @override
-  @JsonKey(name: "Total_discount")
+  @JsonKey(name: 'Total_discount')
   final double totalDiscount;
   @override
-  @JsonKey(name: "Pmtterm")
+  @JsonKey(name: 'Pmtterm')
   final String pmtterm;
   @override
-  @JsonKey(name: "StatusEnum")
+  @JsonKey(name: 'StatusEnum')
   final int statusEnum;
   @override
-  @JsonKey(name: "StatusName")
+  @JsonKey(name: 'StatusName')
   final String statusName;
   @override
-  @JsonKey(name: "Items")
+  @JsonKey(name: 'Items')
   final List<TransactionItemDataModel> items;
   @override
-  @JsonKey(name: "TransferDate")
+  @JsonKey(name: 'TransferDate')
   final String transferDate;
   @override
-  @JsonKey(name: "TransferBankAccountName")
+  @JsonKey(name: 'TransferBankAccountName')
   final String transferBankAccountName;
   @override
-  @JsonKey(name: "TransferBankAccount")
+  @JsonKey(name: 'TransferBankAccount')
   final String transferBankAccount;
   @override
-  @JsonKey(name: "TransferBankImage")
+  @JsonKey(name: 'TransferBankImage')
   final String transferBankImage;
   @override
-  @JsonKey(name: "BankID")
+  @JsonKey(name: 'BankID')
   final int bankID;
   @override
-  @JsonKey(name: "BankAccountName")
+  @JsonKey(name: 'BankAccountName')
   final String bankAccountName;
   @override
-  @JsonKey(name: "BankNo")
+  @JsonKey(name: 'BankNo')
   final String bankNo;
   @override
-  @JsonKey(name: "PaymentChannel")
+  @JsonKey(name: 'PaymentChannel')
   final String paymentChannel;
   @override
-  @JsonKey(name: "VirtualAccountName")
+  @JsonKey(name: 'VirtualAccountName')
   final String virtualAccountName;
   @override
-  @JsonKey(name: "VirtualAccountNo")
+  @JsonKey(name: 'VirtualAccountNo')
   final String virtualAccountNo;
   @override
-  @JsonKey(name: "TransactionStatus")
+  @JsonKey(name: 'TransactionStatus')
   final String transactionStatus;
 
   @override
@@ -711,159 +711,159 @@ class _$_TransactionDataModel implements _TransactionDataModel {
 
 abstract class _TransactionDataModel implements TransactionDataModel {
   factory _TransactionDataModel(
-      {@JsonKey(name: "QuantityTotal")
+      {@JsonKey(name: 'QuantityTotal')
           int quantityTotal,
-      @JsonKey(name: "CustomerName")
+      @JsonKey(name: 'CustomerName')
           String customerName,
-      @JsonKey(name: "ID")
+      @JsonKey(name: 'ID')
           String iD,
-      @JsonKey(name: "Number")
+      @JsonKey(name: 'Number')
           String number,
-      @JsonKey(name: "CustomerID")
+      @JsonKey(name: 'CustomerID')
           String customerID,
-      @JsonKey(name: "Total")
+      @JsonKey(name: 'Total')
           double total,
-      @JsonKey(name: "Date")
+      @JsonKey(name: 'Date')
           String date,
-      @JsonKey(name: "Cashback")
+      @JsonKey(name: 'Cashback')
           double cashback,
-      @JsonKey(name: "Status")
+      @JsonKey(name: 'Status')
           int status,
-      @JsonKey(name: "Trans_type")
+      @JsonKey(name: 'Trans_type')
           String transType,
-      @JsonKey(name: "Location")
+      @JsonKey(name: 'Location')
           String location,
-      @JsonKey(name: "Create_by")
+      @JsonKey(name: 'Create_by')
           String createBy,
-      @JsonKey(name: "Remark")
+      @JsonKey(name: 'Remark')
           String remark,
-      @JsonKey(name: "Pmttype")
+      @JsonKey(name: 'Pmttype')
           String pmttype,
-      @JsonKey(name: "Total_discount")
+      @JsonKey(name: 'Total_discount')
           double totalDiscount,
-      @JsonKey(name: "Pmtterm")
+      @JsonKey(name: 'Pmtterm')
           String pmtterm,
-      @JsonKey(name: "StatusEnum")
+      @JsonKey(name: 'StatusEnum')
           int statusEnum,
-      @JsonKey(name: "StatusName")
+      @JsonKey(name: 'StatusName')
           String statusName,
-      @JsonKey(name: "Items")
+      @JsonKey(name: 'Items')
           List<TransactionItemDataModel> items,
-      @JsonKey(name: "TransferDate")
+      @JsonKey(name: 'TransferDate')
           String transferDate,
-      @JsonKey(name: "TransferBankAccountName")
+      @JsonKey(name: 'TransferBankAccountName')
           String transferBankAccountName,
-      @JsonKey(name: "TransferBankAccount")
+      @JsonKey(name: 'TransferBankAccount')
           String transferBankAccount,
-      @JsonKey(name: "TransferBankImage")
+      @JsonKey(name: 'TransferBankImage')
           String transferBankImage,
-      @JsonKey(name: "BankID")
+      @JsonKey(name: 'BankID')
           int bankID,
-      @JsonKey(name: "BankAccountName")
+      @JsonKey(name: 'BankAccountName')
           String bankAccountName,
-      @JsonKey(name: "BankNo")
+      @JsonKey(name: 'BankNo')
           String bankNo,
-      @JsonKey(name: "PaymentChannel")
+      @JsonKey(name: 'PaymentChannel')
           String paymentChannel,
-      @JsonKey(name: "VirtualAccountName")
+      @JsonKey(name: 'VirtualAccountName')
           String virtualAccountName,
-      @JsonKey(name: "VirtualAccountNo")
+      @JsonKey(name: 'VirtualAccountNo')
           String virtualAccountNo,
-      @JsonKey(name: "TransactionStatus")
+      @JsonKey(name: 'TransactionStatus')
           String transactionStatus}) = _$_TransactionDataModel;
 
   factory _TransactionDataModel.fromJson(Map<String, dynamic> json) =
       _$_TransactionDataModel.fromJson;
 
   @override
-  @JsonKey(name: "QuantityTotal")
+  @JsonKey(name: 'QuantityTotal')
   int get quantityTotal;
   @override
-  @JsonKey(name: "CustomerName")
+  @JsonKey(name: 'CustomerName')
   String get customerName;
   @override
-  @JsonKey(name: "ID")
+  @JsonKey(name: 'ID')
   String get iD;
   @override
-  @JsonKey(name: "Number")
+  @JsonKey(name: 'Number')
   String get number;
   @override
-  @JsonKey(name: "CustomerID")
+  @JsonKey(name: 'CustomerID')
   String get customerID;
   @override
-  @JsonKey(name: "Total")
+  @JsonKey(name: 'Total')
   double get total;
   @override
-  @JsonKey(name: "Date")
+  @JsonKey(name: 'Date')
   String get date;
   @override
-  @JsonKey(name: "Cashback")
+  @JsonKey(name: 'Cashback')
   double get cashback;
   @override
-  @JsonKey(name: "Status")
+  @JsonKey(name: 'Status')
   int get status;
   @override
-  @JsonKey(name: "Trans_type")
+  @JsonKey(name: 'Trans_type')
   String get transType;
   @override
-  @JsonKey(name: "Location")
+  @JsonKey(name: 'Location')
   String get location;
   @override
-  @JsonKey(name: "Create_by")
+  @JsonKey(name: 'Create_by')
   String get createBy;
   @override
-  @JsonKey(name: "Remark")
+  @JsonKey(name: 'Remark')
   String get remark;
   @override
-  @JsonKey(name: "Pmttype")
+  @JsonKey(name: 'Pmttype')
   String get pmttype;
   @override
-  @JsonKey(name: "Total_discount")
+  @JsonKey(name: 'Total_discount')
   double get totalDiscount;
   @override
-  @JsonKey(name: "Pmtterm")
+  @JsonKey(name: 'Pmtterm')
   String get pmtterm;
   @override
-  @JsonKey(name: "StatusEnum")
+  @JsonKey(name: 'StatusEnum')
   int get statusEnum;
   @override
-  @JsonKey(name: "StatusName")
+  @JsonKey(name: 'StatusName')
   String get statusName;
   @override
-  @JsonKey(name: "Items")
+  @JsonKey(name: 'Items')
   List<TransactionItemDataModel> get items;
   @override
-  @JsonKey(name: "TransferDate")
+  @JsonKey(name: 'TransferDate')
   String get transferDate;
   @override
-  @JsonKey(name: "TransferBankAccountName")
+  @JsonKey(name: 'TransferBankAccountName')
   String get transferBankAccountName;
   @override
-  @JsonKey(name: "TransferBankAccount")
+  @JsonKey(name: 'TransferBankAccount')
   String get transferBankAccount;
   @override
-  @JsonKey(name: "TransferBankImage")
+  @JsonKey(name: 'TransferBankImage')
   String get transferBankImage;
   @override
-  @JsonKey(name: "BankID")
+  @JsonKey(name: 'BankID')
   int get bankID;
   @override
-  @JsonKey(name: "BankAccountName")
+  @JsonKey(name: 'BankAccountName')
   String get bankAccountName;
   @override
-  @JsonKey(name: "BankNo")
+  @JsonKey(name: 'BankNo')
   String get bankNo;
   @override
-  @JsonKey(name: "PaymentChannel")
+  @JsonKey(name: 'PaymentChannel')
   String get paymentChannel;
   @override
-  @JsonKey(name: "VirtualAccountName")
+  @JsonKey(name: 'VirtualAccountName')
   String get virtualAccountName;
   @override
-  @JsonKey(name: "VirtualAccountNo")
+  @JsonKey(name: 'VirtualAccountNo')
   String get virtualAccountNo;
   @override
-  @JsonKey(name: "TransactionStatus")
+  @JsonKey(name: 'TransactionStatus')
   String get transactionStatus;
   @override
   @JsonKey(ignore: true)
