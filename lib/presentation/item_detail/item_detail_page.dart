@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:get/get.dart';
+import 'package:roomart/application/core/cart_controller.dart';
 import 'package:roomart/domain/item/data_item_model.dart';
+import 'package:roomart/presentation/cart/cart_page.dart';
 import 'package:roomart/presentation/widgets/button_collection.dart';
 import 'package:roomart/utils/constants.dart';
 import 'package:roomart/utils/formater.dart';
@@ -14,6 +17,8 @@ class ItemDetailPage extends StatefulWidget {
 
 class _ItemDetailPageState extends State<ItemDetailPage> {
   DataItemModel data;
+
+  final CartController controller = Get.put(CartController());
   @override
   void initState() {
     data = Get.arguments as DataItemModel;
@@ -158,33 +163,33 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
                 )
               ],
             ),
-            Positioned(
-              bottom: 0,
-              left: 0,
-              right: 0,
-              child: Container(
-                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
-                child: Row(
-                  children: [
-                    Expanded(
-                      flex: 1,
-                      child: DefaultButton2(
-                        color: button2,
-                        text: "Buy Now",
-                        onPressed: () {},
-                      ),
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
+              child: Row(
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: DefaultButton2(
+                      color: button2,
+                      text: "Buy Now",
+                      onPressed: () {
+                        Get.toNamed(CartPage.TAG);
+                      },
                     ),
-                    SizedBox(width: 10),
-                    Expanded(
-                      flex: 2,
-                      child: DefaultButton1(
-                        color: button1,
-                        text: "Add To Cart",
-                        onPressed: () {},
-                      ),
+                  ),
+                  SizedBox(width: 10),
+                  Expanded(
+                    flex: 2,
+                    child: DefaultButton1(
+                      color: button1,
+                      text: "Add To Cart",
+                      onPressed: () {
+                        controller.addDataToList(data);
+                        Fluttertoast.showToast(msg: "Item sudah ditambahkan");
+                      },
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ],

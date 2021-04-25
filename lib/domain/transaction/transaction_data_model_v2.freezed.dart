@@ -19,101 +19,101 @@ class _$TransactionDataModelV2TearOff {
 
 // ignore: unused_element
   _TransactionDataModelV2 call(
-      {@JsonKey(defaultValue: "", name: "sales_transaction_id")
+      {@JsonKey(defaultValue: '', name: 'sales_transaction_id')
           String salesTransactionId,
-      @JsonKey(defaultValue: "", name: "location_id")
+      @JsonKey(defaultValue: '', name: 'location_id')
           String locationId,
-      @JsonKey(defaultValue: "", name: "status")
+      @JsonKey(defaultValue: '', name: 'status')
           String status,
-      @JsonKey(defaultValue: "", name: "invoice_no")
+      @JsonKey(defaultValue: '', name: 'invoice_no')
           String invoiceNo,
-      @JsonKey(defaultValue: "", name: "transaction_date")
+      @JsonKey(defaultValue: '', name: 'transaction_date')
           String transactionDate,
-      @JsonKey(defaultValue: "", name: "due_date")
+      @JsonKey(defaultValue: '', name: 'due_date')
           String dueDate,
-      @JsonKey(defaultValue: "", name: "customer_id")
+      @JsonKey(defaultValue: '', name: 'customer_id')
           String customerId,
-      @JsonKey(defaultValue: "", name: "customer_name")
+      @JsonKey(defaultValue: '', name: 'customer_name')
           String customerName,
-      @JsonKey(defaultValue: "", name: "total_qty")
+      @JsonKey(defaultValue: '', name: 'total_qty')
           String totalQty,
-      @JsonKey(defaultValue: "", name: "total_amount")
+      @JsonKey(defaultValue: '', name: 'total_amount')
           String totalAmount,
-      @JsonKey(defaultValue: "", name: "total_discount_pct")
+      @JsonKey(defaultValue: '', name: 'total_discount_pct')
           String totalDiscountPct,
-      @JsonKey(defaultValue: "", name: "total_discount")
+      @JsonKey(defaultValue: '', name: 'total_discount')
           String totalDiscount,
-      @JsonKey(defaultValue: "", name: "total_tax")
+      @JsonKey(defaultValue: '', name: 'total_tax')
           String totalTax,
-      @JsonKey(defaultValue: "", name: "courier_id")
+      @JsonKey(defaultValue: '', name: 'courier_id')
           String courierId,
-      @JsonKey(defaultValue: "", name: "shipping_price")
+      @JsonKey(defaultValue: '', name: 'shipping_price')
           String shippingPrice,
-      @JsonKey(defaultValue: "", name: "total_expense")
+      @JsonKey(defaultValue: '', name: 'total_expense')
           String totalExpense,
-      @JsonKey(defaultValue: "", name: "total_cost")
+      @JsonKey(defaultValue: '', name: 'total_cost')
           String totalCost,
-      @JsonKey(defaultValue: "", name: "sales_id")
+      @JsonKey(defaultValue: '', name: 'sales_id')
           String salesId,
-      @JsonKey(defaultValue: "", name: "cashier_name")
+      @JsonKey(defaultValue: '', name: 'cashier_name')
           String cashierName,
-      @JsonKey(defaultValue: "", name: "remark")
+      @JsonKey(defaultValue: '', name: 'remark')
           String remark,
-      @JsonKey(defaultValue: "", name: "payment_type_id")
+      @JsonKey(defaultValue: '', name: 'payment_type_id')
           String paymentTypeId,
-      @JsonKey(defaultValue: "", name: "payment_term_id")
+      @JsonKey(defaultValue: '', name: 'payment_term_id')
           String paymentTermId,
-      @JsonKey(defaultValue: "", name: "print_times")
+      @JsonKey(defaultValue: '', name: 'print_times')
           String printTimes,
-      @JsonKey(defaultValue: "", name: "paid_amount")
+      @JsonKey(defaultValue: '', name: 'paid_amount')
           String paidAmount,
-      @JsonKey(defaultValue: "", name: "payment_amount")
+      @JsonKey(defaultValue: '', name: 'payment_amount')
           String paymentAmount,
-      @JsonKey(defaultValue: "", name: "change_amount")
+      @JsonKey(defaultValue: '', name: 'change_amount')
           String changeAmount,
-      @JsonKey(defaultValue: "", name: "currency_id")
+      @JsonKey(defaultValue: '', name: 'currency_id')
           String currencyId,
-      @JsonKey(defaultValue: "", name: "currency_rate")
+      @JsonKey(defaultValue: '', name: 'currency_rate')
           String currencyRate,
-      @JsonKey(defaultValue: "", name: "ship_to")
+      @JsonKey(defaultValue: '', name: 'ship_to')
           String shipTo,
-      @JsonKey(defaultValue: "", name: "fob_id")
+      @JsonKey(defaultValue: '', name: 'fob_id')
           String fobId,
-      @JsonKey(defaultValue: "", name: "is_taxable")
+      @JsonKey(defaultValue: '', name: 'is_taxable')
           String isTaxable,
-      @JsonKey(defaultValue: "", name: "is_inclusive_tax")
+      @JsonKey(defaultValue: '', name: 'is_inclusive_tax')
           String isInclusiveTax,
-      @JsonKey(defaultValue: "", name: "payment_date")
+      @JsonKey(defaultValue: '', name: 'payment_date')
           String paymentDate,
-      @JsonKey(defaultValue: "", name: "payment_status")
+      @JsonKey(defaultValue: '', name: 'payment_status')
           String paymentStatus,
-      @JsonKey(defaultValue: "", name: "freight_account_id")
+      @JsonKey(defaultValue: '', name: 'freight_account_id')
           String freightAccountId,
-      @JsonKey(defaultValue: "", name: "fiscal_rate")
+      @JsonKey(defaultValue: '', name: 'fiscal_rate')
           String fiscalRate,
-      @JsonKey(defaultValue: "", name: "source_trans_id")
+      @JsonKey(defaultValue: '', name: 'source_trans_id')
           String sourceTransId,
-      @JsonKey(defaultValue: "", name: "invoice_disc_acc_id")
+      @JsonKey(defaultValue: '', name: 'invoice_disc_acc_id')
           String invoiceDiscAccId,
-      @JsonKey(defaultValue: "", name: "is_inclusive_freight")
+      @JsonKey(defaultValue: '', name: 'is_inclusive_freight')
           String isInclusiveFreight,
-      @JsonKey(defaultValue: "", name: "cancel_by")
+      @JsonKey(defaultValue: '', name: 'cancel_by')
           String cancelBy,
-      @JsonKey(defaultValue: "", name: "cancel_date")
+      @JsonKey(defaultValue: '', name: 'cancel_date')
           String cancelDate,
-      @JsonKey(defaultValue: "", name: "is_pos_trans")
+      @JsonKey(defaultValue: '', name: 'is_pos_trans')
           String isPosTrans,
-      @JsonKey(defaultValue: "", name: "delivery_date")
+      @JsonKey(defaultValue: '', name: 'delivery_date')
           String deliveryDate,
-      @JsonKey(defaultValue: "", name: "total_discount_id")
+      @JsonKey(defaultValue: '', name: 'total_discount_id')
           String totalDiscountId,
-      @JsonKey(defaultValue: "", name: "rounding_amount")
+      @JsonKey(defaultValue: '', name: 'rounding_amount')
           String roundingAmount,
-      @JsonKey(defaultValue: "", name: "freight_no")
+      @JsonKey(defaultValue: '', name: 'freight_no')
           String freightNo,
-      @JsonKey(defaultValue: "", name: "ongkir")
+      @JsonKey(defaultValue: '', name: 'ongkir')
           String ongkir,
-      @JsonKey(defaultValue: "", name: "promocode")
+      @JsonKey(defaultValue: '', name: 'promocode')
           String promocode}) {
     return _TransactionDataModelV2(
       salesTransactionId: salesTransactionId,
@@ -179,101 +179,101 @@ const $TransactionDataModelV2 = _$TransactionDataModelV2TearOff();
 
 /// @nodoc
 mixin _$TransactionDataModelV2 {
-  @JsonKey(defaultValue: "", name: "sales_transaction_id")
+  @JsonKey(defaultValue: '', name: 'sales_transaction_id')
   String get salesTransactionId;
-  @JsonKey(defaultValue: "", name: "location_id")
+  @JsonKey(defaultValue: '', name: 'location_id')
   String get locationId;
-  @JsonKey(defaultValue: "", name: "status")
+  @JsonKey(defaultValue: '', name: 'status')
   String get status;
-  @JsonKey(defaultValue: "", name: "invoice_no")
+  @JsonKey(defaultValue: '', name: 'invoice_no')
   String get invoiceNo;
-  @JsonKey(defaultValue: "", name: "transaction_date")
+  @JsonKey(defaultValue: '', name: 'transaction_date')
   String get transactionDate;
-  @JsonKey(defaultValue: "", name: "due_date")
+  @JsonKey(defaultValue: '', name: 'due_date')
   String get dueDate;
-  @JsonKey(defaultValue: "", name: "customer_id")
+  @JsonKey(defaultValue: '', name: 'customer_id')
   String get customerId;
-  @JsonKey(defaultValue: "", name: "customer_name")
+  @JsonKey(defaultValue: '', name: 'customer_name')
   String get customerName;
-  @JsonKey(defaultValue: "", name: "total_qty")
+  @JsonKey(defaultValue: '', name: 'total_qty')
   String get totalQty;
-  @JsonKey(defaultValue: "", name: "total_amount")
+  @JsonKey(defaultValue: '', name: 'total_amount')
   String get totalAmount;
-  @JsonKey(defaultValue: "", name: "total_discount_pct")
+  @JsonKey(defaultValue: '', name: 'total_discount_pct')
   String get totalDiscountPct;
-  @JsonKey(defaultValue: "", name: "total_discount")
+  @JsonKey(defaultValue: '', name: 'total_discount')
   String get totalDiscount;
-  @JsonKey(defaultValue: "", name: "total_tax")
+  @JsonKey(defaultValue: '', name: 'total_tax')
   String get totalTax;
-  @JsonKey(defaultValue: "", name: "courier_id")
+  @JsonKey(defaultValue: '', name: 'courier_id')
   String get courierId;
-  @JsonKey(defaultValue: "", name: "shipping_price")
+  @JsonKey(defaultValue: '', name: 'shipping_price')
   String get shippingPrice;
-  @JsonKey(defaultValue: "", name: "total_expense")
+  @JsonKey(defaultValue: '', name: 'total_expense')
   String get totalExpense;
-  @JsonKey(defaultValue: "", name: "total_cost")
+  @JsonKey(defaultValue: '', name: 'total_cost')
   String get totalCost;
-  @JsonKey(defaultValue: "", name: "sales_id")
+  @JsonKey(defaultValue: '', name: 'sales_id')
   String get salesId;
-  @JsonKey(defaultValue: "", name: "cashier_name")
+  @JsonKey(defaultValue: '', name: 'cashier_name')
   String get cashierName;
-  @JsonKey(defaultValue: "", name: "remark")
+  @JsonKey(defaultValue: '', name: 'remark')
   String get remark;
-  @JsonKey(defaultValue: "", name: "payment_type_id")
+  @JsonKey(defaultValue: '', name: 'payment_type_id')
   String get paymentTypeId;
-  @JsonKey(defaultValue: "", name: "payment_term_id")
+  @JsonKey(defaultValue: '', name: 'payment_term_id')
   String get paymentTermId;
-  @JsonKey(defaultValue: "", name: "print_times")
+  @JsonKey(defaultValue: '', name: 'print_times')
   String get printTimes;
-  @JsonKey(defaultValue: "", name: "paid_amount")
+  @JsonKey(defaultValue: '', name: 'paid_amount')
   String get paidAmount;
-  @JsonKey(defaultValue: "", name: "payment_amount")
+  @JsonKey(defaultValue: '', name: 'payment_amount')
   String get paymentAmount;
-  @JsonKey(defaultValue: "", name: "change_amount")
+  @JsonKey(defaultValue: '', name: 'change_amount')
   String get changeAmount;
-  @JsonKey(defaultValue: "", name: "currency_id")
+  @JsonKey(defaultValue: '', name: 'currency_id')
   String get currencyId;
-  @JsonKey(defaultValue: "", name: "currency_rate")
+  @JsonKey(defaultValue: '', name: 'currency_rate')
   String get currencyRate;
-  @JsonKey(defaultValue: "", name: "ship_to")
+  @JsonKey(defaultValue: '', name: 'ship_to')
   String get shipTo;
-  @JsonKey(defaultValue: "", name: "fob_id")
+  @JsonKey(defaultValue: '', name: 'fob_id')
   String get fobId;
-  @JsonKey(defaultValue: "", name: "is_taxable")
+  @JsonKey(defaultValue: '', name: 'is_taxable')
   String get isTaxable;
-  @JsonKey(defaultValue: "", name: "is_inclusive_tax")
+  @JsonKey(defaultValue: '', name: 'is_inclusive_tax')
   String get isInclusiveTax;
-  @JsonKey(defaultValue: "", name: "payment_date")
+  @JsonKey(defaultValue: '', name: 'payment_date')
   String get paymentDate;
-  @JsonKey(defaultValue: "", name: "payment_status")
+  @JsonKey(defaultValue: '', name: 'payment_status')
   String get paymentStatus;
-  @JsonKey(defaultValue: "", name: "freight_account_id")
+  @JsonKey(defaultValue: '', name: 'freight_account_id')
   String get freightAccountId;
-  @JsonKey(defaultValue: "", name: "fiscal_rate")
+  @JsonKey(defaultValue: '', name: 'fiscal_rate')
   String get fiscalRate;
-  @JsonKey(defaultValue: "", name: "source_trans_id")
+  @JsonKey(defaultValue: '', name: 'source_trans_id')
   String get sourceTransId;
-  @JsonKey(defaultValue: "", name: "invoice_disc_acc_id")
+  @JsonKey(defaultValue: '', name: 'invoice_disc_acc_id')
   String get invoiceDiscAccId;
-  @JsonKey(defaultValue: "", name: "is_inclusive_freight")
+  @JsonKey(defaultValue: '', name: 'is_inclusive_freight')
   String get isInclusiveFreight;
-  @JsonKey(defaultValue: "", name: "cancel_by")
+  @JsonKey(defaultValue: '', name: 'cancel_by')
   String get cancelBy;
-  @JsonKey(defaultValue: "", name: "cancel_date")
+  @JsonKey(defaultValue: '', name: 'cancel_date')
   String get cancelDate;
-  @JsonKey(defaultValue: "", name: "is_pos_trans")
+  @JsonKey(defaultValue: '', name: 'is_pos_trans')
   String get isPosTrans;
-  @JsonKey(defaultValue: "", name: "delivery_date")
+  @JsonKey(defaultValue: '', name: 'delivery_date')
   String get deliveryDate;
-  @JsonKey(defaultValue: "", name: "total_discount_id")
+  @JsonKey(defaultValue: '', name: 'total_discount_id')
   String get totalDiscountId;
-  @JsonKey(defaultValue: "", name: "rounding_amount")
+  @JsonKey(defaultValue: '', name: 'rounding_amount')
   String get roundingAmount;
-  @JsonKey(defaultValue: "", name: "freight_no")
+  @JsonKey(defaultValue: '', name: 'freight_no')
   String get freightNo;
-  @JsonKey(defaultValue: "", name: "ongkir")
+  @JsonKey(defaultValue: '', name: 'ongkir')
   String get ongkir;
-  @JsonKey(defaultValue: "", name: "promocode")
+  @JsonKey(defaultValue: '', name: 'promocode')
   String get promocode;
 
   Map<String, dynamic> toJson();
@@ -287,101 +287,101 @@ abstract class $TransactionDataModelV2CopyWith<$Res> {
           $Res Function(TransactionDataModelV2) then) =
       _$TransactionDataModelV2CopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: "", name: "sales_transaction_id")
+      {@JsonKey(defaultValue: '', name: 'sales_transaction_id')
           String salesTransactionId,
-      @JsonKey(defaultValue: "", name: "location_id")
+      @JsonKey(defaultValue: '', name: 'location_id')
           String locationId,
-      @JsonKey(defaultValue: "", name: "status")
+      @JsonKey(defaultValue: '', name: 'status')
           String status,
-      @JsonKey(defaultValue: "", name: "invoice_no")
+      @JsonKey(defaultValue: '', name: 'invoice_no')
           String invoiceNo,
-      @JsonKey(defaultValue: "", name: "transaction_date")
+      @JsonKey(defaultValue: '', name: 'transaction_date')
           String transactionDate,
-      @JsonKey(defaultValue: "", name: "due_date")
+      @JsonKey(defaultValue: '', name: 'due_date')
           String dueDate,
-      @JsonKey(defaultValue: "", name: "customer_id")
+      @JsonKey(defaultValue: '', name: 'customer_id')
           String customerId,
-      @JsonKey(defaultValue: "", name: "customer_name")
+      @JsonKey(defaultValue: '', name: 'customer_name')
           String customerName,
-      @JsonKey(defaultValue: "", name: "total_qty")
+      @JsonKey(defaultValue: '', name: 'total_qty')
           String totalQty,
-      @JsonKey(defaultValue: "", name: "total_amount")
+      @JsonKey(defaultValue: '', name: 'total_amount')
           String totalAmount,
-      @JsonKey(defaultValue: "", name: "total_discount_pct")
+      @JsonKey(defaultValue: '', name: 'total_discount_pct')
           String totalDiscountPct,
-      @JsonKey(defaultValue: "", name: "total_discount")
+      @JsonKey(defaultValue: '', name: 'total_discount')
           String totalDiscount,
-      @JsonKey(defaultValue: "", name: "total_tax")
+      @JsonKey(defaultValue: '', name: 'total_tax')
           String totalTax,
-      @JsonKey(defaultValue: "", name: "courier_id")
+      @JsonKey(defaultValue: '', name: 'courier_id')
           String courierId,
-      @JsonKey(defaultValue: "", name: "shipping_price")
+      @JsonKey(defaultValue: '', name: 'shipping_price')
           String shippingPrice,
-      @JsonKey(defaultValue: "", name: "total_expense")
+      @JsonKey(defaultValue: '', name: 'total_expense')
           String totalExpense,
-      @JsonKey(defaultValue: "", name: "total_cost")
+      @JsonKey(defaultValue: '', name: 'total_cost')
           String totalCost,
-      @JsonKey(defaultValue: "", name: "sales_id")
+      @JsonKey(defaultValue: '', name: 'sales_id')
           String salesId,
-      @JsonKey(defaultValue: "", name: "cashier_name")
+      @JsonKey(defaultValue: '', name: 'cashier_name')
           String cashierName,
-      @JsonKey(defaultValue: "", name: "remark")
+      @JsonKey(defaultValue: '', name: 'remark')
           String remark,
-      @JsonKey(defaultValue: "", name: "payment_type_id")
+      @JsonKey(defaultValue: '', name: 'payment_type_id')
           String paymentTypeId,
-      @JsonKey(defaultValue: "", name: "payment_term_id")
+      @JsonKey(defaultValue: '', name: 'payment_term_id')
           String paymentTermId,
-      @JsonKey(defaultValue: "", name: "print_times")
+      @JsonKey(defaultValue: '', name: 'print_times')
           String printTimes,
-      @JsonKey(defaultValue: "", name: "paid_amount")
+      @JsonKey(defaultValue: '', name: 'paid_amount')
           String paidAmount,
-      @JsonKey(defaultValue: "", name: "payment_amount")
+      @JsonKey(defaultValue: '', name: 'payment_amount')
           String paymentAmount,
-      @JsonKey(defaultValue: "", name: "change_amount")
+      @JsonKey(defaultValue: '', name: 'change_amount')
           String changeAmount,
-      @JsonKey(defaultValue: "", name: "currency_id")
+      @JsonKey(defaultValue: '', name: 'currency_id')
           String currencyId,
-      @JsonKey(defaultValue: "", name: "currency_rate")
+      @JsonKey(defaultValue: '', name: 'currency_rate')
           String currencyRate,
-      @JsonKey(defaultValue: "", name: "ship_to")
+      @JsonKey(defaultValue: '', name: 'ship_to')
           String shipTo,
-      @JsonKey(defaultValue: "", name: "fob_id")
+      @JsonKey(defaultValue: '', name: 'fob_id')
           String fobId,
-      @JsonKey(defaultValue: "", name: "is_taxable")
+      @JsonKey(defaultValue: '', name: 'is_taxable')
           String isTaxable,
-      @JsonKey(defaultValue: "", name: "is_inclusive_tax")
+      @JsonKey(defaultValue: '', name: 'is_inclusive_tax')
           String isInclusiveTax,
-      @JsonKey(defaultValue: "", name: "payment_date")
+      @JsonKey(defaultValue: '', name: 'payment_date')
           String paymentDate,
-      @JsonKey(defaultValue: "", name: "payment_status")
+      @JsonKey(defaultValue: '', name: 'payment_status')
           String paymentStatus,
-      @JsonKey(defaultValue: "", name: "freight_account_id")
+      @JsonKey(defaultValue: '', name: 'freight_account_id')
           String freightAccountId,
-      @JsonKey(defaultValue: "", name: "fiscal_rate")
+      @JsonKey(defaultValue: '', name: 'fiscal_rate')
           String fiscalRate,
-      @JsonKey(defaultValue: "", name: "source_trans_id")
+      @JsonKey(defaultValue: '', name: 'source_trans_id')
           String sourceTransId,
-      @JsonKey(defaultValue: "", name: "invoice_disc_acc_id")
+      @JsonKey(defaultValue: '', name: 'invoice_disc_acc_id')
           String invoiceDiscAccId,
-      @JsonKey(defaultValue: "", name: "is_inclusive_freight")
+      @JsonKey(defaultValue: '', name: 'is_inclusive_freight')
           String isInclusiveFreight,
-      @JsonKey(defaultValue: "", name: "cancel_by")
+      @JsonKey(defaultValue: '', name: 'cancel_by')
           String cancelBy,
-      @JsonKey(defaultValue: "", name: "cancel_date")
+      @JsonKey(defaultValue: '', name: 'cancel_date')
           String cancelDate,
-      @JsonKey(defaultValue: "", name: "is_pos_trans")
+      @JsonKey(defaultValue: '', name: 'is_pos_trans')
           String isPosTrans,
-      @JsonKey(defaultValue: "", name: "delivery_date")
+      @JsonKey(defaultValue: '', name: 'delivery_date')
           String deliveryDate,
-      @JsonKey(defaultValue: "", name: "total_discount_id")
+      @JsonKey(defaultValue: '', name: 'total_discount_id')
           String totalDiscountId,
-      @JsonKey(defaultValue: "", name: "rounding_amount")
+      @JsonKey(defaultValue: '', name: 'rounding_amount')
           String roundingAmount,
-      @JsonKey(defaultValue: "", name: "freight_no")
+      @JsonKey(defaultValue: '', name: 'freight_no')
           String freightNo,
-      @JsonKey(defaultValue: "", name: "ongkir")
+      @JsonKey(defaultValue: '', name: 'ongkir')
           String ongkir,
-      @JsonKey(defaultValue: "", name: "promocode")
+      @JsonKey(defaultValue: '', name: 'promocode')
           String promocode});
 }
 
@@ -559,101 +559,101 @@ abstract class _$TransactionDataModelV2CopyWith<$Res>
       __$TransactionDataModelV2CopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: "", name: "sales_transaction_id")
+      {@JsonKey(defaultValue: '', name: 'sales_transaction_id')
           String salesTransactionId,
-      @JsonKey(defaultValue: "", name: "location_id")
+      @JsonKey(defaultValue: '', name: 'location_id')
           String locationId,
-      @JsonKey(defaultValue: "", name: "status")
+      @JsonKey(defaultValue: '', name: 'status')
           String status,
-      @JsonKey(defaultValue: "", name: "invoice_no")
+      @JsonKey(defaultValue: '', name: 'invoice_no')
           String invoiceNo,
-      @JsonKey(defaultValue: "", name: "transaction_date")
+      @JsonKey(defaultValue: '', name: 'transaction_date')
           String transactionDate,
-      @JsonKey(defaultValue: "", name: "due_date")
+      @JsonKey(defaultValue: '', name: 'due_date')
           String dueDate,
-      @JsonKey(defaultValue: "", name: "customer_id")
+      @JsonKey(defaultValue: '', name: 'customer_id')
           String customerId,
-      @JsonKey(defaultValue: "", name: "customer_name")
+      @JsonKey(defaultValue: '', name: 'customer_name')
           String customerName,
-      @JsonKey(defaultValue: "", name: "total_qty")
+      @JsonKey(defaultValue: '', name: 'total_qty')
           String totalQty,
-      @JsonKey(defaultValue: "", name: "total_amount")
+      @JsonKey(defaultValue: '', name: 'total_amount')
           String totalAmount,
-      @JsonKey(defaultValue: "", name: "total_discount_pct")
+      @JsonKey(defaultValue: '', name: 'total_discount_pct')
           String totalDiscountPct,
-      @JsonKey(defaultValue: "", name: "total_discount")
+      @JsonKey(defaultValue: '', name: 'total_discount')
           String totalDiscount,
-      @JsonKey(defaultValue: "", name: "total_tax")
+      @JsonKey(defaultValue: '', name: 'total_tax')
           String totalTax,
-      @JsonKey(defaultValue: "", name: "courier_id")
+      @JsonKey(defaultValue: '', name: 'courier_id')
           String courierId,
-      @JsonKey(defaultValue: "", name: "shipping_price")
+      @JsonKey(defaultValue: '', name: 'shipping_price')
           String shippingPrice,
-      @JsonKey(defaultValue: "", name: "total_expense")
+      @JsonKey(defaultValue: '', name: 'total_expense')
           String totalExpense,
-      @JsonKey(defaultValue: "", name: "total_cost")
+      @JsonKey(defaultValue: '', name: 'total_cost')
           String totalCost,
-      @JsonKey(defaultValue: "", name: "sales_id")
+      @JsonKey(defaultValue: '', name: 'sales_id')
           String salesId,
-      @JsonKey(defaultValue: "", name: "cashier_name")
+      @JsonKey(defaultValue: '', name: 'cashier_name')
           String cashierName,
-      @JsonKey(defaultValue: "", name: "remark")
+      @JsonKey(defaultValue: '', name: 'remark')
           String remark,
-      @JsonKey(defaultValue: "", name: "payment_type_id")
+      @JsonKey(defaultValue: '', name: 'payment_type_id')
           String paymentTypeId,
-      @JsonKey(defaultValue: "", name: "payment_term_id")
+      @JsonKey(defaultValue: '', name: 'payment_term_id')
           String paymentTermId,
-      @JsonKey(defaultValue: "", name: "print_times")
+      @JsonKey(defaultValue: '', name: 'print_times')
           String printTimes,
-      @JsonKey(defaultValue: "", name: "paid_amount")
+      @JsonKey(defaultValue: '', name: 'paid_amount')
           String paidAmount,
-      @JsonKey(defaultValue: "", name: "payment_amount")
+      @JsonKey(defaultValue: '', name: 'payment_amount')
           String paymentAmount,
-      @JsonKey(defaultValue: "", name: "change_amount")
+      @JsonKey(defaultValue: '', name: 'change_amount')
           String changeAmount,
-      @JsonKey(defaultValue: "", name: "currency_id")
+      @JsonKey(defaultValue: '', name: 'currency_id')
           String currencyId,
-      @JsonKey(defaultValue: "", name: "currency_rate")
+      @JsonKey(defaultValue: '', name: 'currency_rate')
           String currencyRate,
-      @JsonKey(defaultValue: "", name: "ship_to")
+      @JsonKey(defaultValue: '', name: 'ship_to')
           String shipTo,
-      @JsonKey(defaultValue: "", name: "fob_id")
+      @JsonKey(defaultValue: '', name: 'fob_id')
           String fobId,
-      @JsonKey(defaultValue: "", name: "is_taxable")
+      @JsonKey(defaultValue: '', name: 'is_taxable')
           String isTaxable,
-      @JsonKey(defaultValue: "", name: "is_inclusive_tax")
+      @JsonKey(defaultValue: '', name: 'is_inclusive_tax')
           String isInclusiveTax,
-      @JsonKey(defaultValue: "", name: "payment_date")
+      @JsonKey(defaultValue: '', name: 'payment_date')
           String paymentDate,
-      @JsonKey(defaultValue: "", name: "payment_status")
+      @JsonKey(defaultValue: '', name: 'payment_status')
           String paymentStatus,
-      @JsonKey(defaultValue: "", name: "freight_account_id")
+      @JsonKey(defaultValue: '', name: 'freight_account_id')
           String freightAccountId,
-      @JsonKey(defaultValue: "", name: "fiscal_rate")
+      @JsonKey(defaultValue: '', name: 'fiscal_rate')
           String fiscalRate,
-      @JsonKey(defaultValue: "", name: "source_trans_id")
+      @JsonKey(defaultValue: '', name: 'source_trans_id')
           String sourceTransId,
-      @JsonKey(defaultValue: "", name: "invoice_disc_acc_id")
+      @JsonKey(defaultValue: '', name: 'invoice_disc_acc_id')
           String invoiceDiscAccId,
-      @JsonKey(defaultValue: "", name: "is_inclusive_freight")
+      @JsonKey(defaultValue: '', name: 'is_inclusive_freight')
           String isInclusiveFreight,
-      @JsonKey(defaultValue: "", name: "cancel_by")
+      @JsonKey(defaultValue: '', name: 'cancel_by')
           String cancelBy,
-      @JsonKey(defaultValue: "", name: "cancel_date")
+      @JsonKey(defaultValue: '', name: 'cancel_date')
           String cancelDate,
-      @JsonKey(defaultValue: "", name: "is_pos_trans")
+      @JsonKey(defaultValue: '', name: 'is_pos_trans')
           String isPosTrans,
-      @JsonKey(defaultValue: "", name: "delivery_date")
+      @JsonKey(defaultValue: '', name: 'delivery_date')
           String deliveryDate,
-      @JsonKey(defaultValue: "", name: "total_discount_id")
+      @JsonKey(defaultValue: '', name: 'total_discount_id')
           String totalDiscountId,
-      @JsonKey(defaultValue: "", name: "rounding_amount")
+      @JsonKey(defaultValue: '', name: 'rounding_amount')
           String roundingAmount,
-      @JsonKey(defaultValue: "", name: "freight_no")
+      @JsonKey(defaultValue: '', name: 'freight_no')
           String freightNo,
-      @JsonKey(defaultValue: "", name: "ongkir")
+      @JsonKey(defaultValue: '', name: 'ongkir')
           String ongkir,
-      @JsonKey(defaultValue: "", name: "promocode")
+      @JsonKey(defaultValue: '', name: 'promocode')
           String promocode});
 }
 
@@ -830,249 +830,249 @@ class __$TransactionDataModelV2CopyWithImpl<$Res>
 /// @nodoc
 class _$_TransactionDataModelV2 implements _TransactionDataModelV2 {
   _$_TransactionDataModelV2(
-      {@JsonKey(defaultValue: "", name: "sales_transaction_id")
+      {@JsonKey(defaultValue: '', name: 'sales_transaction_id')
           this.salesTransactionId,
-      @JsonKey(defaultValue: "", name: "location_id")
+      @JsonKey(defaultValue: '', name: 'location_id')
           this.locationId,
-      @JsonKey(defaultValue: "", name: "status")
+      @JsonKey(defaultValue: '', name: 'status')
           this.status,
-      @JsonKey(defaultValue: "", name: "invoice_no")
+      @JsonKey(defaultValue: '', name: 'invoice_no')
           this.invoiceNo,
-      @JsonKey(defaultValue: "", name: "transaction_date")
+      @JsonKey(defaultValue: '', name: 'transaction_date')
           this.transactionDate,
-      @JsonKey(defaultValue: "", name: "due_date")
+      @JsonKey(defaultValue: '', name: 'due_date')
           this.dueDate,
-      @JsonKey(defaultValue: "", name: "customer_id")
+      @JsonKey(defaultValue: '', name: 'customer_id')
           this.customerId,
-      @JsonKey(defaultValue: "", name: "customer_name")
+      @JsonKey(defaultValue: '', name: 'customer_name')
           this.customerName,
-      @JsonKey(defaultValue: "", name: "total_qty")
+      @JsonKey(defaultValue: '', name: 'total_qty')
           this.totalQty,
-      @JsonKey(defaultValue: "", name: "total_amount")
+      @JsonKey(defaultValue: '', name: 'total_amount')
           this.totalAmount,
-      @JsonKey(defaultValue: "", name: "total_discount_pct")
+      @JsonKey(defaultValue: '', name: 'total_discount_pct')
           this.totalDiscountPct,
-      @JsonKey(defaultValue: "", name: "total_discount")
+      @JsonKey(defaultValue: '', name: 'total_discount')
           this.totalDiscount,
-      @JsonKey(defaultValue: "", name: "total_tax")
+      @JsonKey(defaultValue: '', name: 'total_tax')
           this.totalTax,
-      @JsonKey(defaultValue: "", name: "courier_id")
+      @JsonKey(defaultValue: '', name: 'courier_id')
           this.courierId,
-      @JsonKey(defaultValue: "", name: "shipping_price")
+      @JsonKey(defaultValue: '', name: 'shipping_price')
           this.shippingPrice,
-      @JsonKey(defaultValue: "", name: "total_expense")
+      @JsonKey(defaultValue: '', name: 'total_expense')
           this.totalExpense,
-      @JsonKey(defaultValue: "", name: "total_cost")
+      @JsonKey(defaultValue: '', name: 'total_cost')
           this.totalCost,
-      @JsonKey(defaultValue: "", name: "sales_id")
+      @JsonKey(defaultValue: '', name: 'sales_id')
           this.salesId,
-      @JsonKey(defaultValue: "", name: "cashier_name")
+      @JsonKey(defaultValue: '', name: 'cashier_name')
           this.cashierName,
-      @JsonKey(defaultValue: "", name: "remark")
+      @JsonKey(defaultValue: '', name: 'remark')
           this.remark,
-      @JsonKey(defaultValue: "", name: "payment_type_id")
+      @JsonKey(defaultValue: '', name: 'payment_type_id')
           this.paymentTypeId,
-      @JsonKey(defaultValue: "", name: "payment_term_id")
+      @JsonKey(defaultValue: '', name: 'payment_term_id')
           this.paymentTermId,
-      @JsonKey(defaultValue: "", name: "print_times")
+      @JsonKey(defaultValue: '', name: 'print_times')
           this.printTimes,
-      @JsonKey(defaultValue: "", name: "paid_amount")
+      @JsonKey(defaultValue: '', name: 'paid_amount')
           this.paidAmount,
-      @JsonKey(defaultValue: "", name: "payment_amount")
+      @JsonKey(defaultValue: '', name: 'payment_amount')
           this.paymentAmount,
-      @JsonKey(defaultValue: "", name: "change_amount")
+      @JsonKey(defaultValue: '', name: 'change_amount')
           this.changeAmount,
-      @JsonKey(defaultValue: "", name: "currency_id")
+      @JsonKey(defaultValue: '', name: 'currency_id')
           this.currencyId,
-      @JsonKey(defaultValue: "", name: "currency_rate")
+      @JsonKey(defaultValue: '', name: 'currency_rate')
           this.currencyRate,
-      @JsonKey(defaultValue: "", name: "ship_to")
+      @JsonKey(defaultValue: '', name: 'ship_to')
           this.shipTo,
-      @JsonKey(defaultValue: "", name: "fob_id")
+      @JsonKey(defaultValue: '', name: 'fob_id')
           this.fobId,
-      @JsonKey(defaultValue: "", name: "is_taxable")
+      @JsonKey(defaultValue: '', name: 'is_taxable')
           this.isTaxable,
-      @JsonKey(defaultValue: "", name: "is_inclusive_tax")
+      @JsonKey(defaultValue: '', name: 'is_inclusive_tax')
           this.isInclusiveTax,
-      @JsonKey(defaultValue: "", name: "payment_date")
+      @JsonKey(defaultValue: '', name: 'payment_date')
           this.paymentDate,
-      @JsonKey(defaultValue: "", name: "payment_status")
+      @JsonKey(defaultValue: '', name: 'payment_status')
           this.paymentStatus,
-      @JsonKey(defaultValue: "", name: "freight_account_id")
+      @JsonKey(defaultValue: '', name: 'freight_account_id')
           this.freightAccountId,
-      @JsonKey(defaultValue: "", name: "fiscal_rate")
+      @JsonKey(defaultValue: '', name: 'fiscal_rate')
           this.fiscalRate,
-      @JsonKey(defaultValue: "", name: "source_trans_id")
+      @JsonKey(defaultValue: '', name: 'source_trans_id')
           this.sourceTransId,
-      @JsonKey(defaultValue: "", name: "invoice_disc_acc_id")
+      @JsonKey(defaultValue: '', name: 'invoice_disc_acc_id')
           this.invoiceDiscAccId,
-      @JsonKey(defaultValue: "", name: "is_inclusive_freight")
+      @JsonKey(defaultValue: '', name: 'is_inclusive_freight')
           this.isInclusiveFreight,
-      @JsonKey(defaultValue: "", name: "cancel_by")
+      @JsonKey(defaultValue: '', name: 'cancel_by')
           this.cancelBy,
-      @JsonKey(defaultValue: "", name: "cancel_date")
+      @JsonKey(defaultValue: '', name: 'cancel_date')
           this.cancelDate,
-      @JsonKey(defaultValue: "", name: "is_pos_trans")
+      @JsonKey(defaultValue: '', name: 'is_pos_trans')
           this.isPosTrans,
-      @JsonKey(defaultValue: "", name: "delivery_date")
+      @JsonKey(defaultValue: '', name: 'delivery_date')
           this.deliveryDate,
-      @JsonKey(defaultValue: "", name: "total_discount_id")
+      @JsonKey(defaultValue: '', name: 'total_discount_id')
           this.totalDiscountId,
-      @JsonKey(defaultValue: "", name: "rounding_amount")
+      @JsonKey(defaultValue: '', name: 'rounding_amount')
           this.roundingAmount,
-      @JsonKey(defaultValue: "", name: "freight_no")
+      @JsonKey(defaultValue: '', name: 'freight_no')
           this.freightNo,
-      @JsonKey(defaultValue: "", name: "ongkir")
+      @JsonKey(defaultValue: '', name: 'ongkir')
           this.ongkir,
-      @JsonKey(defaultValue: "", name: "promocode")
+      @JsonKey(defaultValue: '', name: 'promocode')
           this.promocode});
 
   factory _$_TransactionDataModelV2.fromJson(Map<String, dynamic> json) =>
       _$_$_TransactionDataModelV2FromJson(json);
 
   @override
-  @JsonKey(defaultValue: "", name: "sales_transaction_id")
+  @JsonKey(defaultValue: '', name: 'sales_transaction_id')
   final String salesTransactionId;
   @override
-  @JsonKey(defaultValue: "", name: "location_id")
+  @JsonKey(defaultValue: '', name: 'location_id')
   final String locationId;
   @override
-  @JsonKey(defaultValue: "", name: "status")
+  @JsonKey(defaultValue: '', name: 'status')
   final String status;
   @override
-  @JsonKey(defaultValue: "", name: "invoice_no")
+  @JsonKey(defaultValue: '', name: 'invoice_no')
   final String invoiceNo;
   @override
-  @JsonKey(defaultValue: "", name: "transaction_date")
+  @JsonKey(defaultValue: '', name: 'transaction_date')
   final String transactionDate;
   @override
-  @JsonKey(defaultValue: "", name: "due_date")
+  @JsonKey(defaultValue: '', name: 'due_date')
   final String dueDate;
   @override
-  @JsonKey(defaultValue: "", name: "customer_id")
+  @JsonKey(defaultValue: '', name: 'customer_id')
   final String customerId;
   @override
-  @JsonKey(defaultValue: "", name: "customer_name")
+  @JsonKey(defaultValue: '', name: 'customer_name')
   final String customerName;
   @override
-  @JsonKey(defaultValue: "", name: "total_qty")
+  @JsonKey(defaultValue: '', name: 'total_qty')
   final String totalQty;
   @override
-  @JsonKey(defaultValue: "", name: "total_amount")
+  @JsonKey(defaultValue: '', name: 'total_amount')
   final String totalAmount;
   @override
-  @JsonKey(defaultValue: "", name: "total_discount_pct")
+  @JsonKey(defaultValue: '', name: 'total_discount_pct')
   final String totalDiscountPct;
   @override
-  @JsonKey(defaultValue: "", name: "total_discount")
+  @JsonKey(defaultValue: '', name: 'total_discount')
   final String totalDiscount;
   @override
-  @JsonKey(defaultValue: "", name: "total_tax")
+  @JsonKey(defaultValue: '', name: 'total_tax')
   final String totalTax;
   @override
-  @JsonKey(defaultValue: "", name: "courier_id")
+  @JsonKey(defaultValue: '', name: 'courier_id')
   final String courierId;
   @override
-  @JsonKey(defaultValue: "", name: "shipping_price")
+  @JsonKey(defaultValue: '', name: 'shipping_price')
   final String shippingPrice;
   @override
-  @JsonKey(defaultValue: "", name: "total_expense")
+  @JsonKey(defaultValue: '', name: 'total_expense')
   final String totalExpense;
   @override
-  @JsonKey(defaultValue: "", name: "total_cost")
+  @JsonKey(defaultValue: '', name: 'total_cost')
   final String totalCost;
   @override
-  @JsonKey(defaultValue: "", name: "sales_id")
+  @JsonKey(defaultValue: '', name: 'sales_id')
   final String salesId;
   @override
-  @JsonKey(defaultValue: "", name: "cashier_name")
+  @JsonKey(defaultValue: '', name: 'cashier_name')
   final String cashierName;
   @override
-  @JsonKey(defaultValue: "", name: "remark")
+  @JsonKey(defaultValue: '', name: 'remark')
   final String remark;
   @override
-  @JsonKey(defaultValue: "", name: "payment_type_id")
+  @JsonKey(defaultValue: '', name: 'payment_type_id')
   final String paymentTypeId;
   @override
-  @JsonKey(defaultValue: "", name: "payment_term_id")
+  @JsonKey(defaultValue: '', name: 'payment_term_id')
   final String paymentTermId;
   @override
-  @JsonKey(defaultValue: "", name: "print_times")
+  @JsonKey(defaultValue: '', name: 'print_times')
   final String printTimes;
   @override
-  @JsonKey(defaultValue: "", name: "paid_amount")
+  @JsonKey(defaultValue: '', name: 'paid_amount')
   final String paidAmount;
   @override
-  @JsonKey(defaultValue: "", name: "payment_amount")
+  @JsonKey(defaultValue: '', name: 'payment_amount')
   final String paymentAmount;
   @override
-  @JsonKey(defaultValue: "", name: "change_amount")
+  @JsonKey(defaultValue: '', name: 'change_amount')
   final String changeAmount;
   @override
-  @JsonKey(defaultValue: "", name: "currency_id")
+  @JsonKey(defaultValue: '', name: 'currency_id')
   final String currencyId;
   @override
-  @JsonKey(defaultValue: "", name: "currency_rate")
+  @JsonKey(defaultValue: '', name: 'currency_rate')
   final String currencyRate;
   @override
-  @JsonKey(defaultValue: "", name: "ship_to")
+  @JsonKey(defaultValue: '', name: 'ship_to')
   final String shipTo;
   @override
-  @JsonKey(defaultValue: "", name: "fob_id")
+  @JsonKey(defaultValue: '', name: 'fob_id')
   final String fobId;
   @override
-  @JsonKey(defaultValue: "", name: "is_taxable")
+  @JsonKey(defaultValue: '', name: 'is_taxable')
   final String isTaxable;
   @override
-  @JsonKey(defaultValue: "", name: "is_inclusive_tax")
+  @JsonKey(defaultValue: '', name: 'is_inclusive_tax')
   final String isInclusiveTax;
   @override
-  @JsonKey(defaultValue: "", name: "payment_date")
+  @JsonKey(defaultValue: '', name: 'payment_date')
   final String paymentDate;
   @override
-  @JsonKey(defaultValue: "", name: "payment_status")
+  @JsonKey(defaultValue: '', name: 'payment_status')
   final String paymentStatus;
   @override
-  @JsonKey(defaultValue: "", name: "freight_account_id")
+  @JsonKey(defaultValue: '', name: 'freight_account_id')
   final String freightAccountId;
   @override
-  @JsonKey(defaultValue: "", name: "fiscal_rate")
+  @JsonKey(defaultValue: '', name: 'fiscal_rate')
   final String fiscalRate;
   @override
-  @JsonKey(defaultValue: "", name: "source_trans_id")
+  @JsonKey(defaultValue: '', name: 'source_trans_id')
   final String sourceTransId;
   @override
-  @JsonKey(defaultValue: "", name: "invoice_disc_acc_id")
+  @JsonKey(defaultValue: '', name: 'invoice_disc_acc_id')
   final String invoiceDiscAccId;
   @override
-  @JsonKey(defaultValue: "", name: "is_inclusive_freight")
+  @JsonKey(defaultValue: '', name: 'is_inclusive_freight')
   final String isInclusiveFreight;
   @override
-  @JsonKey(defaultValue: "", name: "cancel_by")
+  @JsonKey(defaultValue: '', name: 'cancel_by')
   final String cancelBy;
   @override
-  @JsonKey(defaultValue: "", name: "cancel_date")
+  @JsonKey(defaultValue: '', name: 'cancel_date')
   final String cancelDate;
   @override
-  @JsonKey(defaultValue: "", name: "is_pos_trans")
+  @JsonKey(defaultValue: '', name: 'is_pos_trans')
   final String isPosTrans;
   @override
-  @JsonKey(defaultValue: "", name: "delivery_date")
+  @JsonKey(defaultValue: '', name: 'delivery_date')
   final String deliveryDate;
   @override
-  @JsonKey(defaultValue: "", name: "total_discount_id")
+  @JsonKey(defaultValue: '', name: 'total_discount_id')
   final String totalDiscountId;
   @override
-  @JsonKey(defaultValue: "", name: "rounding_amount")
+  @JsonKey(defaultValue: '', name: 'rounding_amount')
   final String roundingAmount;
   @override
-  @JsonKey(defaultValue: "", name: "freight_no")
+  @JsonKey(defaultValue: '', name: 'freight_no')
   final String freightNo;
   @override
-  @JsonKey(defaultValue: "", name: "ongkir")
+  @JsonKey(defaultValue: '', name: 'ongkir')
   final String ongkir;
   @override
-  @JsonKey(defaultValue: "", name: "promocode")
+  @JsonKey(defaultValue: '', name: 'promocode')
   final String promocode;
 
   @override
@@ -1243,249 +1243,249 @@ class _$_TransactionDataModelV2 implements _TransactionDataModelV2 {
 
 abstract class _TransactionDataModelV2 implements TransactionDataModelV2 {
   factory _TransactionDataModelV2(
-      {@JsonKey(defaultValue: "", name: "sales_transaction_id")
+      {@JsonKey(defaultValue: '', name: 'sales_transaction_id')
           String salesTransactionId,
-      @JsonKey(defaultValue: "", name: "location_id")
+      @JsonKey(defaultValue: '', name: 'location_id')
           String locationId,
-      @JsonKey(defaultValue: "", name: "status")
+      @JsonKey(defaultValue: '', name: 'status')
           String status,
-      @JsonKey(defaultValue: "", name: "invoice_no")
+      @JsonKey(defaultValue: '', name: 'invoice_no')
           String invoiceNo,
-      @JsonKey(defaultValue: "", name: "transaction_date")
+      @JsonKey(defaultValue: '', name: 'transaction_date')
           String transactionDate,
-      @JsonKey(defaultValue: "", name: "due_date")
+      @JsonKey(defaultValue: '', name: 'due_date')
           String dueDate,
-      @JsonKey(defaultValue: "", name: "customer_id")
+      @JsonKey(defaultValue: '', name: 'customer_id')
           String customerId,
-      @JsonKey(defaultValue: "", name: "customer_name")
+      @JsonKey(defaultValue: '', name: 'customer_name')
           String customerName,
-      @JsonKey(defaultValue: "", name: "total_qty")
+      @JsonKey(defaultValue: '', name: 'total_qty')
           String totalQty,
-      @JsonKey(defaultValue: "", name: "total_amount")
+      @JsonKey(defaultValue: '', name: 'total_amount')
           String totalAmount,
-      @JsonKey(defaultValue: "", name: "total_discount_pct")
+      @JsonKey(defaultValue: '', name: 'total_discount_pct')
           String totalDiscountPct,
-      @JsonKey(defaultValue: "", name: "total_discount")
+      @JsonKey(defaultValue: '', name: 'total_discount')
           String totalDiscount,
-      @JsonKey(defaultValue: "", name: "total_tax")
+      @JsonKey(defaultValue: '', name: 'total_tax')
           String totalTax,
-      @JsonKey(defaultValue: "", name: "courier_id")
+      @JsonKey(defaultValue: '', name: 'courier_id')
           String courierId,
-      @JsonKey(defaultValue: "", name: "shipping_price")
+      @JsonKey(defaultValue: '', name: 'shipping_price')
           String shippingPrice,
-      @JsonKey(defaultValue: "", name: "total_expense")
+      @JsonKey(defaultValue: '', name: 'total_expense')
           String totalExpense,
-      @JsonKey(defaultValue: "", name: "total_cost")
+      @JsonKey(defaultValue: '', name: 'total_cost')
           String totalCost,
-      @JsonKey(defaultValue: "", name: "sales_id")
+      @JsonKey(defaultValue: '', name: 'sales_id')
           String salesId,
-      @JsonKey(defaultValue: "", name: "cashier_name")
+      @JsonKey(defaultValue: '', name: 'cashier_name')
           String cashierName,
-      @JsonKey(defaultValue: "", name: "remark")
+      @JsonKey(defaultValue: '', name: 'remark')
           String remark,
-      @JsonKey(defaultValue: "", name: "payment_type_id")
+      @JsonKey(defaultValue: '', name: 'payment_type_id')
           String paymentTypeId,
-      @JsonKey(defaultValue: "", name: "payment_term_id")
+      @JsonKey(defaultValue: '', name: 'payment_term_id')
           String paymentTermId,
-      @JsonKey(defaultValue: "", name: "print_times")
+      @JsonKey(defaultValue: '', name: 'print_times')
           String printTimes,
-      @JsonKey(defaultValue: "", name: "paid_amount")
+      @JsonKey(defaultValue: '', name: 'paid_amount')
           String paidAmount,
-      @JsonKey(defaultValue: "", name: "payment_amount")
+      @JsonKey(defaultValue: '', name: 'payment_amount')
           String paymentAmount,
-      @JsonKey(defaultValue: "", name: "change_amount")
+      @JsonKey(defaultValue: '', name: 'change_amount')
           String changeAmount,
-      @JsonKey(defaultValue: "", name: "currency_id")
+      @JsonKey(defaultValue: '', name: 'currency_id')
           String currencyId,
-      @JsonKey(defaultValue: "", name: "currency_rate")
+      @JsonKey(defaultValue: '', name: 'currency_rate')
           String currencyRate,
-      @JsonKey(defaultValue: "", name: "ship_to")
+      @JsonKey(defaultValue: '', name: 'ship_to')
           String shipTo,
-      @JsonKey(defaultValue: "", name: "fob_id")
+      @JsonKey(defaultValue: '', name: 'fob_id')
           String fobId,
-      @JsonKey(defaultValue: "", name: "is_taxable")
+      @JsonKey(defaultValue: '', name: 'is_taxable')
           String isTaxable,
-      @JsonKey(defaultValue: "", name: "is_inclusive_tax")
+      @JsonKey(defaultValue: '', name: 'is_inclusive_tax')
           String isInclusiveTax,
-      @JsonKey(defaultValue: "", name: "payment_date")
+      @JsonKey(defaultValue: '', name: 'payment_date')
           String paymentDate,
-      @JsonKey(defaultValue: "", name: "payment_status")
+      @JsonKey(defaultValue: '', name: 'payment_status')
           String paymentStatus,
-      @JsonKey(defaultValue: "", name: "freight_account_id")
+      @JsonKey(defaultValue: '', name: 'freight_account_id')
           String freightAccountId,
-      @JsonKey(defaultValue: "", name: "fiscal_rate")
+      @JsonKey(defaultValue: '', name: 'fiscal_rate')
           String fiscalRate,
-      @JsonKey(defaultValue: "", name: "source_trans_id")
+      @JsonKey(defaultValue: '', name: 'source_trans_id')
           String sourceTransId,
-      @JsonKey(defaultValue: "", name: "invoice_disc_acc_id")
+      @JsonKey(defaultValue: '', name: 'invoice_disc_acc_id')
           String invoiceDiscAccId,
-      @JsonKey(defaultValue: "", name: "is_inclusive_freight")
+      @JsonKey(defaultValue: '', name: 'is_inclusive_freight')
           String isInclusiveFreight,
-      @JsonKey(defaultValue: "", name: "cancel_by")
+      @JsonKey(defaultValue: '', name: 'cancel_by')
           String cancelBy,
-      @JsonKey(defaultValue: "", name: "cancel_date")
+      @JsonKey(defaultValue: '', name: 'cancel_date')
           String cancelDate,
-      @JsonKey(defaultValue: "", name: "is_pos_trans")
+      @JsonKey(defaultValue: '', name: 'is_pos_trans')
           String isPosTrans,
-      @JsonKey(defaultValue: "", name: "delivery_date")
+      @JsonKey(defaultValue: '', name: 'delivery_date')
           String deliveryDate,
-      @JsonKey(defaultValue: "", name: "total_discount_id")
+      @JsonKey(defaultValue: '', name: 'total_discount_id')
           String totalDiscountId,
-      @JsonKey(defaultValue: "", name: "rounding_amount")
+      @JsonKey(defaultValue: '', name: 'rounding_amount')
           String roundingAmount,
-      @JsonKey(defaultValue: "", name: "freight_no")
+      @JsonKey(defaultValue: '', name: 'freight_no')
           String freightNo,
-      @JsonKey(defaultValue: "", name: "ongkir")
+      @JsonKey(defaultValue: '', name: 'ongkir')
           String ongkir,
-      @JsonKey(defaultValue: "", name: "promocode")
+      @JsonKey(defaultValue: '', name: 'promocode')
           String promocode}) = _$_TransactionDataModelV2;
 
   factory _TransactionDataModelV2.fromJson(Map<String, dynamic> json) =
       _$_TransactionDataModelV2.fromJson;
 
   @override
-  @JsonKey(defaultValue: "", name: "sales_transaction_id")
+  @JsonKey(defaultValue: '', name: 'sales_transaction_id')
   String get salesTransactionId;
   @override
-  @JsonKey(defaultValue: "", name: "location_id")
+  @JsonKey(defaultValue: '', name: 'location_id')
   String get locationId;
   @override
-  @JsonKey(defaultValue: "", name: "status")
+  @JsonKey(defaultValue: '', name: 'status')
   String get status;
   @override
-  @JsonKey(defaultValue: "", name: "invoice_no")
+  @JsonKey(defaultValue: '', name: 'invoice_no')
   String get invoiceNo;
   @override
-  @JsonKey(defaultValue: "", name: "transaction_date")
+  @JsonKey(defaultValue: '', name: 'transaction_date')
   String get transactionDate;
   @override
-  @JsonKey(defaultValue: "", name: "due_date")
+  @JsonKey(defaultValue: '', name: 'due_date')
   String get dueDate;
   @override
-  @JsonKey(defaultValue: "", name: "customer_id")
+  @JsonKey(defaultValue: '', name: 'customer_id')
   String get customerId;
   @override
-  @JsonKey(defaultValue: "", name: "customer_name")
+  @JsonKey(defaultValue: '', name: 'customer_name')
   String get customerName;
   @override
-  @JsonKey(defaultValue: "", name: "total_qty")
+  @JsonKey(defaultValue: '', name: 'total_qty')
   String get totalQty;
   @override
-  @JsonKey(defaultValue: "", name: "total_amount")
+  @JsonKey(defaultValue: '', name: 'total_amount')
   String get totalAmount;
   @override
-  @JsonKey(defaultValue: "", name: "total_discount_pct")
+  @JsonKey(defaultValue: '', name: 'total_discount_pct')
   String get totalDiscountPct;
   @override
-  @JsonKey(defaultValue: "", name: "total_discount")
+  @JsonKey(defaultValue: '', name: 'total_discount')
   String get totalDiscount;
   @override
-  @JsonKey(defaultValue: "", name: "total_tax")
+  @JsonKey(defaultValue: '', name: 'total_tax')
   String get totalTax;
   @override
-  @JsonKey(defaultValue: "", name: "courier_id")
+  @JsonKey(defaultValue: '', name: 'courier_id')
   String get courierId;
   @override
-  @JsonKey(defaultValue: "", name: "shipping_price")
+  @JsonKey(defaultValue: '', name: 'shipping_price')
   String get shippingPrice;
   @override
-  @JsonKey(defaultValue: "", name: "total_expense")
+  @JsonKey(defaultValue: '', name: 'total_expense')
   String get totalExpense;
   @override
-  @JsonKey(defaultValue: "", name: "total_cost")
+  @JsonKey(defaultValue: '', name: 'total_cost')
   String get totalCost;
   @override
-  @JsonKey(defaultValue: "", name: "sales_id")
+  @JsonKey(defaultValue: '', name: 'sales_id')
   String get salesId;
   @override
-  @JsonKey(defaultValue: "", name: "cashier_name")
+  @JsonKey(defaultValue: '', name: 'cashier_name')
   String get cashierName;
   @override
-  @JsonKey(defaultValue: "", name: "remark")
+  @JsonKey(defaultValue: '', name: 'remark')
   String get remark;
   @override
-  @JsonKey(defaultValue: "", name: "payment_type_id")
+  @JsonKey(defaultValue: '', name: 'payment_type_id')
   String get paymentTypeId;
   @override
-  @JsonKey(defaultValue: "", name: "payment_term_id")
+  @JsonKey(defaultValue: '', name: 'payment_term_id')
   String get paymentTermId;
   @override
-  @JsonKey(defaultValue: "", name: "print_times")
+  @JsonKey(defaultValue: '', name: 'print_times')
   String get printTimes;
   @override
-  @JsonKey(defaultValue: "", name: "paid_amount")
+  @JsonKey(defaultValue: '', name: 'paid_amount')
   String get paidAmount;
   @override
-  @JsonKey(defaultValue: "", name: "payment_amount")
+  @JsonKey(defaultValue: '', name: 'payment_amount')
   String get paymentAmount;
   @override
-  @JsonKey(defaultValue: "", name: "change_amount")
+  @JsonKey(defaultValue: '', name: 'change_amount')
   String get changeAmount;
   @override
-  @JsonKey(defaultValue: "", name: "currency_id")
+  @JsonKey(defaultValue: '', name: 'currency_id')
   String get currencyId;
   @override
-  @JsonKey(defaultValue: "", name: "currency_rate")
+  @JsonKey(defaultValue: '', name: 'currency_rate')
   String get currencyRate;
   @override
-  @JsonKey(defaultValue: "", name: "ship_to")
+  @JsonKey(defaultValue: '', name: 'ship_to')
   String get shipTo;
   @override
-  @JsonKey(defaultValue: "", name: "fob_id")
+  @JsonKey(defaultValue: '', name: 'fob_id')
   String get fobId;
   @override
-  @JsonKey(defaultValue: "", name: "is_taxable")
+  @JsonKey(defaultValue: '', name: 'is_taxable')
   String get isTaxable;
   @override
-  @JsonKey(defaultValue: "", name: "is_inclusive_tax")
+  @JsonKey(defaultValue: '', name: 'is_inclusive_tax')
   String get isInclusiveTax;
   @override
-  @JsonKey(defaultValue: "", name: "payment_date")
+  @JsonKey(defaultValue: '', name: 'payment_date')
   String get paymentDate;
   @override
-  @JsonKey(defaultValue: "", name: "payment_status")
+  @JsonKey(defaultValue: '', name: 'payment_status')
   String get paymentStatus;
   @override
-  @JsonKey(defaultValue: "", name: "freight_account_id")
+  @JsonKey(defaultValue: '', name: 'freight_account_id')
   String get freightAccountId;
   @override
-  @JsonKey(defaultValue: "", name: "fiscal_rate")
+  @JsonKey(defaultValue: '', name: 'fiscal_rate')
   String get fiscalRate;
   @override
-  @JsonKey(defaultValue: "", name: "source_trans_id")
+  @JsonKey(defaultValue: '', name: 'source_trans_id')
   String get sourceTransId;
   @override
-  @JsonKey(defaultValue: "", name: "invoice_disc_acc_id")
+  @JsonKey(defaultValue: '', name: 'invoice_disc_acc_id')
   String get invoiceDiscAccId;
   @override
-  @JsonKey(defaultValue: "", name: "is_inclusive_freight")
+  @JsonKey(defaultValue: '', name: 'is_inclusive_freight')
   String get isInclusiveFreight;
   @override
-  @JsonKey(defaultValue: "", name: "cancel_by")
+  @JsonKey(defaultValue: '', name: 'cancel_by')
   String get cancelBy;
   @override
-  @JsonKey(defaultValue: "", name: "cancel_date")
+  @JsonKey(defaultValue: '', name: 'cancel_date')
   String get cancelDate;
   @override
-  @JsonKey(defaultValue: "", name: "is_pos_trans")
+  @JsonKey(defaultValue: '', name: 'is_pos_trans')
   String get isPosTrans;
   @override
-  @JsonKey(defaultValue: "", name: "delivery_date")
+  @JsonKey(defaultValue: '', name: 'delivery_date')
   String get deliveryDate;
   @override
-  @JsonKey(defaultValue: "", name: "total_discount_id")
+  @JsonKey(defaultValue: '', name: 'total_discount_id')
   String get totalDiscountId;
   @override
-  @JsonKey(defaultValue: "", name: "rounding_amount")
+  @JsonKey(defaultValue: '', name: 'rounding_amount')
   String get roundingAmount;
   @override
-  @JsonKey(defaultValue: "", name: "freight_no")
+  @JsonKey(defaultValue: '', name: 'freight_no')
   String get freightNo;
   @override
-  @JsonKey(defaultValue: "", name: "ongkir")
+  @JsonKey(defaultValue: '', name: 'ongkir')
   String get ongkir;
   @override
-  @JsonKey(defaultValue: "", name: "promocode")
+  @JsonKey(defaultValue: '', name: 'promocode')
   String get promocode;
   @override
   @JsonKey(ignore: true)
