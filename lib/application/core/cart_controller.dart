@@ -5,6 +5,7 @@ import 'package:roomart/domain/item/trans_item/bought_item_data_model.dart';
 class CartController extends GetxController {
   List<BoughtItemDataModel> itemList = <BoughtItemDataModel>[].obs;
   List<DataItemModel> fullItemModel = <DataItemModel>[].obs;
+  var subTotal = 0.0.obs;
 
   void addDataToList(DataItemModel data, {String qty = "1"}) {
     final _converted = BoughtItemDataModel(
@@ -34,6 +35,15 @@ class CartController extends GetxController {
 
     itemList.replaceRange(_index, _index + 1, _new);
     fullItemModel.replaceRange(_index, _index + 1, _full);
+  }
+
+  String getCartSubTotal() {
+    var _subtotal = 0.0;
+    itemList.forEach((element) {
+      _subtotal += int.parse(element.qty) * double.parse(element.price);
+    });
+    subTotal.value = _subtotal;
+    return subTotal.value.toString();
   }
 
   List<BoughtItemDataModel> get getItemList => this.itemList;

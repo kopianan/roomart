@@ -43,9 +43,11 @@ class CartPage extends StatelessWidget {
                             fontSize: 18, fontWeight: FontWeight.bold)),
                   ),
                   Container(
-                    child: Text('Rp. 234',
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold)),
+                    child: GetX<CartController>(
+                      builder: (_) => Text(_.getCartSubTotal(),
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold)),
+                    ),
                   ),
                 ],
               ),
