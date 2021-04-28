@@ -2,6 +2,7 @@ import 'package:color_to_material/color_to_material.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:roomart/presentation/dashboard/dashboard_page.dart';
+import 'package:roomart/presentation/splash_screen/splash_screen_page.dart';
 import 'package:roomart/routes/router.dart';
 
 class AppWidget extends StatelessWidget {
@@ -10,7 +11,7 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       getPages: pages,
-      initialRoute: DashboardPage.TAG,
+      initialRoute: SplashScreenPage.TAG,
       theme: ThemeData(
           bottomNavigationBarTheme: BottomNavigationBarThemeData(
               backgroundColor: Colors.white, elevation: 4),

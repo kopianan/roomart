@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
+import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/application/auth/auth_cubit.dart';
+import 'package:roomart/infrastructure/core/pref.dart';
 import 'package:roomart/presentation/config_widgets/widget_collection.dart';
 import 'package:roomart/presentation/widgets/button_collection.dart';
 import 'package:roomart/utils/my_color.dart';
@@ -20,7 +23,10 @@ class _AuthPageState extends State<AuthPage> {
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
   final formKey = GlobalKey<FormState>();
+  final authController = Get.put(AuthController());
   bool isObsecure = true;
+
+  final authCubit = getIt<AuthCubit>();
   @override
   Widget build(BuildContext context) {
     final node = FocusScope.of(context);
@@ -33,16 +39,20 @@ class _AuthPageState extends State<AuthPage> {
               kToolbarHeight,
         ),
         child: BlocProvider(
-          create: (context) => getIt<AuthCubit>(),
+          create: (context) => authCubit,
           child: BlocConsumer<AuthCubit, AuthState>(listener: (context, state) {
             state.maybeMap(
                 orElse: () {},
                 loading: (e) {},
                 error: (e) {
-                  print(e);
+                  Fluttertoast.showToast(
+                    msg: e.error.toString(),
+                    gravity: ToastGravity.BOTTOM,
+                  );
                 },
                 onLoginUser: (e) {
-                  print(e);
+                  Pref().saveUserDataToLocal(e.user.toJson());
+                  authController.setDataModel(e.user);
                 });
           }, builder: (context, state) {
             return Container(
@@ -115,18 +125,20 @@ class _AuthPageState extends State<AuthPage> {
                                   hintText: "Your Password"),
                             ),
                             SizedBox(height: 20),
-                            Container(
-                              width: double.infinity,
-                              height: 45,
-                              child: DefaultButton1(
-                                onPressed: () {
-                                  context
-                                      .read<AuthCubit>()
-                                      .loginUser(email.text, password.text);
-                                },
-                                text: "Sign in",
-                                color: button1,
+                            state.maybeMap(
+                              orElse: () => Container(
+                                width: double.infinity,
+                                height: 45,
+                                child: DefaultButton1(
+                                  onPressed: () {
+                                    authCubit.loginUser(
+                                        email.text, password.text);
+                                  },
+                                  text: "Sign in",
+                                  color: button1,
+                                ),
                               ),
+                              loading: (e) => LoadingButton1(),
                             ),
                             SizedBox(height: 20),
                             Container(

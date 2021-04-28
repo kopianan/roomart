@@ -16,6 +16,19 @@ class AuthCubit extends Cubit<AuthState> {
   AuthCubit(this.iAuthFacade) : super(AuthState.initial());
   final IAuthFacade iAuthFacade;
 
+  void checkAuthentication() async {
+    emit(AuthState.loading());
+    try {
+      final _result = await iAuthFacade.checkAuthentication();
+      _result.fold(
+        (l) => emit(AuthState.error(l)),
+        (r) => emit(AuthState.onAuthenticated(r)),
+      );
+    } catch (e) {
+      emit(AuthState.error(e.toString()));
+    }
+  }
+
   void registerToRoomart(RegisterDataModel req) async {
     emit(AuthState.loading());
     try {

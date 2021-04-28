@@ -26,6 +26,20 @@ class DefaultButton1 extends StatelessWidget {
   }
 }
 
+class LoadingButton1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialButton(
+        height: 45,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+        color: Colors.grey[400],
+        onPressed: () {},
+        child: Center(
+          child: CircularProgressIndicator(),
+        ));
+  }
+}
+
 class DefaultButton2 extends StatelessWidget {
   const DefaultButton2({
     Key key,

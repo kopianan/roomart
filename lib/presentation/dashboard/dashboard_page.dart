@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/application/core/cart_controller.dart';
+import 'package:roomart/infrastructure/core/pref.dart';
 import 'package:roomart/presentation/auth/auth_page.dart';
 import 'package:roomart/presentation/auth/sign_up/register_page.dart';
 import 'package:roomart/presentation/category/category_page.dart';
@@ -29,6 +31,11 @@ class _DashboardPageState extends State<DashboardPage> {
     AuthPage(),
     // MePage()
   ];
+  final authController = Get.put(AuthController());
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {

@@ -8,6 +8,7 @@ import 'package:roomart/domain/auth/register_request_model.dart';
 import 'package:roomart/domain/auth/register_response_model.dart';
 import 'package:roomart/domain/models/user/user_roomart_data_model.dart';
 import 'package:roomart/domain/user/user_data_model.dart';
+import 'package:roomart/infrastructure/core/pref.dart';
 import 'package:roomart/utils/constants.dart';
 
 abstract class IAuthFacade {
@@ -17,6 +18,7 @@ abstract class IAuthFacade {
       RegisterRequestModel request);
   Future<Either<String, UserDataModel>> loginUser(
       String email, String password);
+  Future<Either<String, UserDataModel>> checkAuthentication();
 }
 
 @LazySingleton(as: IAuthFacade)
@@ -83,8 +85,19 @@ class AuthRepository extends IAuthFacade {
     } on DioError catch (e) {
       return left(json.decode(e.response.data)['message'].toString());
     } catch (e) {
-      print(e);
       return left(e.toString());
+    }
+  }
+
+  @override
+  Future<Either<String, UserDataModel>> checkAuthentication() async {
+    var pref = Pref();
+    UserDataModel user;
+    try {
+      user = pref.getUserDataModelFromLocal();
+      return right(user);
+    } catch (e) {
+      return left("Not Authenticated");
     }
   }
 }

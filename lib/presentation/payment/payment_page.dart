@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:roomart/application/auth/auth_controller.dart';
+import 'package:roomart/domain/user/user_data_model.dart';
 import 'package:roomart/presentation/address/add_address_page.dart';
 
 import '../../application/core/cart_controller.dart';
@@ -12,6 +14,14 @@ class PaymentPage extends StatefulWidget {
 
 class _PaymentPageState extends State<PaymentPage> {
   final cartController = Get.put(CartController());
+  final authController = Get.put(AuthController());
+  UserDataModel user;
+  @override
+  void initState() {
+    user = authController.getUserDataModel;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +51,7 @@ class _PaymentPageState extends State<PaymentPage> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Nama orang - (08137715139)"),
+                            Text("${user.fullName} - ( ${user.phone} )"),
                             Text(
                               "Alamat lengkap disini agak panjang aja",
                               overflow: TextOverflow.ellipsis,
