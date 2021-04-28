@@ -43,6 +43,13 @@ class _$AuthStateTearOff {
       response,
     );
   }
+
+// ignore: unused_element
+  _OnLoginUser onLoginUser(UserDataModel user) {
+    return _OnLoginUser(
+      user,
+    );
+  }
 }
 
 /// @nodoc
@@ -58,6 +65,7 @@ mixin _$AuthState {
     @required TResult error(String error),
     @required TResult onRegisterToRoomart(UserRoomartDataModel user),
     @required TResult onRegiserUser(RegisterResponseModel response),
+    @required TResult onLoginUser(UserDataModel user),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
@@ -66,6 +74,7 @@ mixin _$AuthState {
     TResult error(String error),
     TResult onRegisterToRoomart(UserRoomartDataModel user),
     TResult onRegiserUser(RegisterResponseModel response),
+    TResult onLoginUser(UserDataModel user),
     @required TResult orElse(),
   });
   @optionalTypeArgs
@@ -75,6 +84,7 @@ mixin _$AuthState {
     @required TResult error(_Error value),
     @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     @required TResult onRegiserUser(_OnRegiserUser value),
+    @required TResult onLoginUser(_OnLoginUser value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
@@ -83,6 +93,7 @@ mixin _$AuthState {
     TResult error(_Error value),
     TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     TResult onRegiserUser(_OnRegiserUser value),
+    TResult onLoginUser(_OnLoginUser value),
     @required TResult orElse(),
   });
 }
@@ -143,12 +154,14 @@ class _$_Initial implements _Initial {
     @required TResult error(String error),
     @required TResult onRegisterToRoomart(UserRoomartDataModel user),
     @required TResult onRegiserUser(RegisterResponseModel response),
+    @required TResult onLoginUser(UserDataModel user),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
+    assert(onLoginUser != null);
     return initial();
   }
 
@@ -160,6 +173,7 @@ class _$_Initial implements _Initial {
     TResult error(String error),
     TResult onRegisterToRoomart(UserRoomartDataModel user),
     TResult onRegiserUser(RegisterResponseModel response),
+    TResult onLoginUser(UserDataModel user),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -177,12 +191,14 @@ class _$_Initial implements _Initial {
     @required TResult error(_Error value),
     @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     @required TResult onRegiserUser(_OnRegiserUser value),
+    @required TResult onLoginUser(_OnLoginUser value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
+    assert(onLoginUser != null);
     return initial(this);
   }
 
@@ -194,6 +210,7 @@ class _$_Initial implements _Initial {
     TResult error(_Error value),
     TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     TResult onRegiserUser(_OnRegiserUser value),
+    TResult onLoginUser(_OnLoginUser value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -249,12 +266,14 @@ class _$_Loading implements _Loading {
     @required TResult error(String error),
     @required TResult onRegisterToRoomart(UserRoomartDataModel user),
     @required TResult onRegiserUser(RegisterResponseModel response),
+    @required TResult onLoginUser(UserDataModel user),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
+    assert(onLoginUser != null);
     return loading();
   }
 
@@ -266,6 +285,7 @@ class _$_Loading implements _Loading {
     TResult error(String error),
     TResult onRegisterToRoomart(UserRoomartDataModel user),
     TResult onRegiserUser(RegisterResponseModel response),
+    TResult onLoginUser(UserDataModel user),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -283,12 +303,14 @@ class _$_Loading implements _Loading {
     @required TResult error(_Error value),
     @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     @required TResult onRegiserUser(_OnRegiserUser value),
+    @required TResult onLoginUser(_OnLoginUser value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
+    assert(onLoginUser != null);
     return loading(this);
   }
 
@@ -300,6 +322,7 @@ class _$_Loading implements _Loading {
     TResult error(_Error value),
     TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     TResult onRegiserUser(_OnRegiserUser value),
+    TResult onLoginUser(_OnLoginUser value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -377,12 +400,14 @@ class _$_Error implements _Error {
     @required TResult error(String error),
     @required TResult onRegisterToRoomart(UserRoomartDataModel user),
     @required TResult onRegiserUser(RegisterResponseModel response),
+    @required TResult onLoginUser(UserDataModel user),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
+    assert(onLoginUser != null);
     return error(this.error);
   }
 
@@ -394,6 +419,7 @@ class _$_Error implements _Error {
     TResult error(String error),
     TResult onRegisterToRoomart(UserRoomartDataModel user),
     TResult onRegiserUser(RegisterResponseModel response),
+    TResult onLoginUser(UserDataModel user),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -411,12 +437,14 @@ class _$_Error implements _Error {
     @required TResult error(_Error value),
     @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     @required TResult onRegiserUser(_OnRegiserUser value),
+    @required TResult onLoginUser(_OnLoginUser value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
+    assert(onLoginUser != null);
     return error(this);
   }
 
@@ -428,6 +456,7 @@ class _$_Error implements _Error {
     TResult error(_Error value),
     TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     TResult onRegiserUser(_OnRegiserUser value),
+    TResult onLoginUser(_OnLoginUser value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -513,12 +542,14 @@ class _$_OnRegisterToRoomart implements _OnRegisterToRoomart {
     @required TResult error(String error),
     @required TResult onRegisterToRoomart(UserRoomartDataModel user),
     @required TResult onRegiserUser(RegisterResponseModel response),
+    @required TResult onLoginUser(UserDataModel user),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
+    assert(onLoginUser != null);
     return onRegisterToRoomart(user);
   }
 
@@ -530,6 +561,7 @@ class _$_OnRegisterToRoomart implements _OnRegisterToRoomart {
     TResult error(String error),
     TResult onRegisterToRoomart(UserRoomartDataModel user),
     TResult onRegiserUser(RegisterResponseModel response),
+    TResult onLoginUser(UserDataModel user),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -547,12 +579,14 @@ class _$_OnRegisterToRoomart implements _OnRegisterToRoomart {
     @required TResult error(_Error value),
     @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     @required TResult onRegiserUser(_OnRegiserUser value),
+    @required TResult onLoginUser(_OnLoginUser value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
+    assert(onLoginUser != null);
     return onRegisterToRoomart(this);
   }
 
@@ -564,6 +598,7 @@ class _$_OnRegisterToRoomart implements _OnRegisterToRoomart {
     TResult error(_Error value),
     TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     TResult onRegiserUser(_OnRegiserUser value),
+    TResult onLoginUser(_OnLoginUser value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -649,12 +684,14 @@ class _$_OnRegiserUser implements _OnRegiserUser {
     @required TResult error(String error),
     @required TResult onRegisterToRoomart(UserRoomartDataModel user),
     @required TResult onRegiserUser(RegisterResponseModel response),
+    @required TResult onLoginUser(UserDataModel user),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
+    assert(onLoginUser != null);
     return onRegiserUser(response);
   }
 
@@ -666,6 +703,7 @@ class _$_OnRegiserUser implements _OnRegiserUser {
     TResult error(String error),
     TResult onRegisterToRoomart(UserRoomartDataModel user),
     TResult onRegiserUser(RegisterResponseModel response),
+    TResult onLoginUser(UserDataModel user),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -683,12 +721,14 @@ class _$_OnRegiserUser implements _OnRegiserUser {
     @required TResult error(_Error value),
     @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     @required TResult onRegiserUser(_OnRegiserUser value),
+    @required TResult onLoginUser(_OnLoginUser value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
+    assert(onLoginUser != null);
     return onRegiserUser(this);
   }
 
@@ -700,6 +740,7 @@ class _$_OnRegiserUser implements _OnRegiserUser {
     TResult error(_Error value),
     TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     TResult onRegiserUser(_OnRegiserUser value),
+    TResult onLoginUser(_OnLoginUser value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -717,4 +758,156 @@ abstract class _OnRegiserUser implements AuthState {
   RegisterResponseModel get response;
   @JsonKey(ignore: true)
   _$OnRegiserUserCopyWith<_OnRegiserUser> get copyWith;
+}
+
+/// @nodoc
+abstract class _$OnLoginUserCopyWith<$Res> {
+  factory _$OnLoginUserCopyWith(
+          _OnLoginUser value, $Res Function(_OnLoginUser) then) =
+      __$OnLoginUserCopyWithImpl<$Res>;
+  $Res call({UserDataModel user});
+
+  $UserDataModelCopyWith<$Res> get user;
+}
+
+/// @nodoc
+class __$OnLoginUserCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
+    implements _$OnLoginUserCopyWith<$Res> {
+  __$OnLoginUserCopyWithImpl(
+      _OnLoginUser _value, $Res Function(_OnLoginUser) _then)
+      : super(_value, (v) => _then(v as _OnLoginUser));
+
+  @override
+  _OnLoginUser get _value => super._value as _OnLoginUser;
+
+  @override
+  $Res call({
+    Object user = freezed,
+  }) {
+    return _then(_OnLoginUser(
+      user == freezed ? _value.user : user as UserDataModel,
+    ));
+  }
+
+  @override
+  $UserDataModelCopyWith<$Res> get user {
+    if (_value.user == null) {
+      return null;
+    }
+    return $UserDataModelCopyWith<$Res>(_value.user, (value) {
+      return _then(_value.copyWith(user: value));
+    });
+  }
+}
+
+/// @nodoc
+class _$_OnLoginUser implements _OnLoginUser {
+  const _$_OnLoginUser(this.user) : assert(user != null);
+
+  @override
+  final UserDataModel user;
+
+  @override
+  String toString() {
+    return 'AuthState.onLoginUser(user: $user)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _OnLoginUser &&
+            (identical(other.user, user) ||
+                const DeepCollectionEquality().equals(other.user, user)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(user);
+
+  @JsonKey(ignore: true)
+  @override
+  _$OnLoginUserCopyWith<_OnLoginUser> get copyWith =>
+      __$OnLoginUserCopyWithImpl<_OnLoginUser>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loading(),
+    @required TResult error(String error),
+    @required TResult onRegisterToRoomart(UserRoomartDataModel user),
+    @required TResult onRegiserUser(RegisterResponseModel response),
+    @required TResult onLoginUser(UserDataModel user),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(onRegisterToRoomart != null);
+    assert(onRegiserUser != null);
+    assert(onLoginUser != null);
+    return onLoginUser(user);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loading(),
+    TResult error(String error),
+    TResult onRegisterToRoomart(UserRoomartDataModel user),
+    TResult onRegiserUser(RegisterResponseModel response),
+    TResult onLoginUser(UserDataModel user),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (onLoginUser != null) {
+      return onLoginUser(user);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loading(_Loading value),
+    @required TResult error(_Error value),
+    @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
+    @required TResult onRegiserUser(_OnRegiserUser value),
+    @required TResult onLoginUser(_OnLoginUser value),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(onRegisterToRoomart != null);
+    assert(onRegiserUser != null);
+    assert(onLoginUser != null);
+    return onLoginUser(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loading(_Loading value),
+    TResult error(_Error value),
+    TResult onRegisterToRoomart(_OnRegisterToRoomart value),
+    TResult onRegiserUser(_OnRegiserUser value),
+    TResult onLoginUser(_OnLoginUser value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (onLoginUser != null) {
+      return onLoginUser(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnLoginUser implements AuthState {
+  const factory _OnLoginUser(UserDataModel user) = _$_OnLoginUser;
+
+  UserDataModel get user;
+  @JsonKey(ignore: true)
+  _$OnLoginUserCopyWith<_OnLoginUser> get copyWith;
 }

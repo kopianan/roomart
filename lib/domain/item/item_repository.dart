@@ -3,7 +3,9 @@ import 'dart:convert';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:get/instance_manager.dart';
 import 'package:injectable/injectable.dart';
+import 'package:roomart/application/item/item_controller.dart';
 import 'package:roomart/domain/item/data_item_model.dart';
 import 'package:roomart/utils/constants.dart';
 
@@ -17,6 +19,7 @@ abstract class IITemFacae {
 @LazySingleton(as: IITemFacae)
 class ItemRepoistory extends IITemFacae {
   Dio dio = Dio();
+  final itemController = Get.put(ItemController());
 
   Options options =
       Options(headers: {"AccessKey": Constants().accessKeyUltimo});
@@ -26,25 +29,31 @@ class ItemRepoistory extends IITemFacae {
       {int offset, int limit}) async {
     List<DataItemModel> _tempData = <DataItemModel>[];
     Response response;
+
+    int counterOffset = offset;
+
     try {
-      response = await dio.get(
-          '${Constants().baseUrlProductionBackup}api,SPGApps.vm?cmd=2&loccode=GODM&limit=$limit&offset=$offset&sortby=updateDate&sortdirection=desc');
+      do {
+        response = await dio.get(
+            '${Constants().baseUrlProductionBackup}api,SPGApps.vm?cmd=2&loccode=GODM&limit=1&offset=$offset&sortby=updateDate&sortdirection=desc');
+        List jsonData = json.decode(response.data.toString());
 
-      List jsonData = json.decode(response.data.toString());
-      print(response.requestOptions.path);
-      List<DataItemModel> data =
-          jsonData.map((m) => DataItemModel.fromJson(m)).toList();
+        List<DataItemModel> data =
+            jsonData.map((m) => DataItemModel.fromJson(m)).toList();
 
-      data.forEach((element) {
-        double data = double.tryParse(element.qty);
-        if (data != null) {
-          if (data > 0) {
-            _tempData.add(element);
+        data.forEach((element) {
+          double data = double.tryParse(element.qty);
+          if (data != null) {
+            if (data > 0) {
+              _tempData.add(element);
+            }
           }
-        }
-      });
-      
-      return right(_tempData);
+        });
+
+        counterOffset++;
+      } while (_tempData.length < limit);
+      itemController.setOffset(counterOffset);
+      return right(_tempData.cast());
     } catch (e) {
       return left(e.toString());
     }

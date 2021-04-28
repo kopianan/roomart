@@ -33,14 +33,12 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _onLoading() {
-    print(offset);
-    itemBloc..getItemListLazy(limit, offset);
+    itemBloc..getItemListLazy(limit, itemConroller.getOffset);
   }
 
   final itemBloc = getIt<ItemCubit>();
 
   int limit = 6;
-  int offset = 0;
   final itemConroller = Get.put(ItemController());
   final categoryController = Get.put(CategoryController());
   final categoryCubit = getIt<CategoryCubit>();
@@ -209,7 +207,8 @@ class _HomePageState extends State<HomePage> {
         SliverToBoxAdapter(child: SizedBox(height: 20)),
         SliverToBoxAdapter(
             child: BlocProvider(
-          create: (context) => itemBloc..getItemListLazy(limit, offset),
+          create: (context) =>
+              itemBloc..getItemListLazy(limit, itemConroller.getOffset),
           child: BlocConsumer<ItemCubit, ItemState>(
             listener: (context, state) {
               state.maybeMap(
@@ -218,9 +217,6 @@ class _HomePageState extends State<HomePage> {
                   error: (e) {},
                   onGetItemLazy: (e) {
                     itemConroller.setListData(e.data);
-                    setState(() {
-                      offset++;
-                    });
                   });
 
               _refreshController.loadComplete();

@@ -26,8 +26,8 @@ class _DashboardPageState extends State<DashboardPage> {
   List<Widget> _children = <Widget>[
     HomePage(),
     CategoryPage(),
-    // AuthPage(),
-    MePage()
+    AuthPage(),
+    // MePage()
   ];
 
   @override

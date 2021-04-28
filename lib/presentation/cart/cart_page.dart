@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:roomart/application/core/cart_controller.dart';
+import 'package:roomart/presentation/payment/payment_page.dart';
 
 import 'widget/cart_list_item.dart';
 
@@ -75,7 +76,9 @@ class CartPage extends StatelessWidget {
                     width: MediaQuery.of(context).size.width / 2,
                     child: new FlatButton(
                       textColor: Colors.pink,
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.toNamed(PaymentPage.TAG);
+                      },
                       child: Text(
                         "Lanjutkan Pembayaran",
                         textAlign: TextAlign.center,

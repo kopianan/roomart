@@ -7,6 +7,7 @@ import 'package:roomart/domain/auth/register_data._model.dart';
 import 'package:roomart/domain/auth/register_request_model.dart';
 import 'package:roomart/domain/auth/register_response_model.dart';
 import 'package:roomart/domain/models/user/user_roomart_data_model.dart';
+import 'package:roomart/domain/user/user_data_model.dart';
 import 'package:roomart/utils/constants.dart';
 
 abstract class IAuthFacade {
@@ -14,6 +15,8 @@ abstract class IAuthFacade {
       RegisterDataModel request);
   Future<Either<String, RegisterResponseModel>> registerUserToReseller(
       RegisterRequestModel request);
+  Future<Either<String, UserDataModel>> loginUser(
+      String email, String password);
 }
 
 @LazySingleton(as: IAuthFacade)
@@ -59,6 +62,28 @@ class AuthRepository extends IAuthFacade {
     } on DioError catch (e) {
       return left(e.response.data['message'].toString());
     } catch (e) {
+      return left(e.toString());
+    }
+  }
+
+  @override
+  Future<Either<String, UserDataModel>> loginUser(
+      String email, String password) async {
+    Response response;
+
+    try {
+      response = await dio.get(
+          "${Constants().baseUrlProductionBackup}api,User.vm?method=login&email=$email&password=$password");
+
+      var data = UserDataModel.fromJson(json.decode(response.data));
+      if (data.error != 1) {
+        return right(data);
+      }
+      return left(data.messageError.toString());
+    } on DioError catch (e) {
+      return left(json.decode(e.response.data)['message'].toString());
+    } catch (e) {
+      print(e);
       return left(e.toString());
     }
   }

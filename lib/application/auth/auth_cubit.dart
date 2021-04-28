@@ -6,6 +6,7 @@ import 'package:roomart/domain/auth/register_data._model.dart';
 import 'package:roomart/domain/auth/register_request_model.dart';
 import 'package:roomart/domain/auth/register_response_model.dart';
 import 'package:roomart/domain/models/user/user_roomart_data_model.dart';
+import 'package:roomart/domain/user/user_data_model.dart';
 
 part 'auth_state.dart';
 part 'auth_cubit.freezed.dart';
@@ -35,6 +36,19 @@ class AuthCubit extends Cubit<AuthState> {
       _result.fold(
         (l) => emit(AuthState.error(l)),
         (r) => emit(AuthState.onRegiserUser(r)),
+      );
+    } catch (e) {
+      emit(AuthState.error(e.toString()));
+    }
+  }
+
+  void loginUser(String email, String password) async {
+    emit(AuthState.loading());
+    try {
+      final _result = await iAuthFacade.loginUser(email, password);
+      _result.fold(
+        (l) => emit(AuthState.error(l)),
+        (r) => emit(AuthState.onLoginUser(r)),
       );
     } catch (e) {
       emit(AuthState.error(e.toString()));

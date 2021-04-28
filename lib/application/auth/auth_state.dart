@@ -9,4 +9,5 @@ abstract class AuthState with _$AuthState {
       _OnRegisterToRoomart;
   const factory AuthState.onRegiserUser(RegisterResponseModel response) =
       _OnRegiserUser;
+  const factory AuthState.onLoginUser(UserDataModel user) = _OnLoginUser;
 }
