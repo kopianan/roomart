@@ -5,7 +5,9 @@ import 'package:roomart/application/transaction/transaction_controller.dart';
 import 'package:roomart/domain/user/user_data_model.dart';
 import 'package:roomart/presentation/address/add_address_page.dart';
 import 'package:roomart/presentation/delivery/delivery_page.dart';
+import 'package:roomart/presentation/discount/discount_page.dart';
 import 'package:roomart/presentation/payment/widgets/item_list_detail.dart';
+import 'package:roomart/presentation/payment_method/payment_method_page.dart';
 import 'package:roomart/utils/formater.dart';
 
 import '../../application/core/cart_controller.dart';
@@ -162,26 +164,80 @@ class _PaymentPageState extends State<PaymentPage> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8)),
                 elevation: 5,
-                margin: EdgeInsets.all(15),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Metode Pembayaran",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                            Text("Pilih pengiriman"),
-                          ],
+                margin: EdgeInsets.symmetric(horizontal: 15),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          Get.toNamed(PaymentMethodPage.TAG);
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Metode Pembayaran",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                  Text("Pilih pengiriman"),
+                                ],
+                              ),
+                              Icon(Icons.keyboard_arrow_right_outlined),
+                            ],
+                          ),
                         ),
-                        Icon(Icons.keyboard_arrow_right_outlined),
-                      ],
-                    ),
-                  ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            )),
+            SliverToBoxAdapter(
+                child: InkWell(
+              onTap: () {},
+              child: Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8)),
+                elevation: 5,
+                margin: EdgeInsets.symmetric(horizontal: 15),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          Get.toNamed(DiscountPage.TAG);
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Promo dan discount",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                  Text("Discount"),
+                                ],
+                              ),
+                              Icon(Icons.keyboard_arrow_right_outlined),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ))

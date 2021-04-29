@@ -6,6 +6,7 @@ import 'package:injectable/injectable.dart';
 import 'package:roomart/domain/auth/register_data._model.dart';
 import 'package:roomart/domain/auth/register_request_model.dart';
 import 'package:roomart/domain/auth/register_response_model.dart';
+import 'package:roomart/domain/models/discount/discount_data_model.dart';
 import 'package:roomart/domain/models/user/user_roomart_data_model.dart';
 import 'package:roomart/domain/user/user_data_model.dart';
 import 'package:roomart/infrastructure/core/pref.dart';
@@ -19,6 +20,8 @@ abstract class IAuthFacade {
   Future<Either<String, UserDataModel>> loginUser(
       String email, String password);
   Future<Either<String, UserDataModel>> checkAuthentication();
+  Future<Either<String, String>> getUserBalance(String userId);
+  Future<Either<String, List<DiscountDataModel>>> getAvailableDiscount();
 }
 
 @LazySingleton(as: IAuthFacade)
@@ -98,6 +101,41 @@ class AuthRepository extends IAuthFacade {
       return right(user);
     } catch (e) {
       return left("Not Authenticated");
+    }
+  }
+
+  @override
+  Future<Either<String, String>> getUserBalance(String userId) async {
+    Response response;
+
+    try {
+      response = await dio.get(
+          "${Constants().baseUrlProduction}api,AR.vm?cmd=2&custid=$userId");
+      var _balance = json.decode(response.data).first['ar_balance'];
+
+      return right(_balance);
+    } on DioError catch (e) {
+      return left(json.decode(e.response.data)['message'].toString());
+    } catch (e) {
+      return left(e.toString());
+    }
+  }
+
+  @override
+  Future<Either<String, List<DiscountDataModel>>> getAvailableDiscount() async {
+    Response response;
+
+    try {
+      response =
+          await dio.get("${Constants().baseUrlProduction}api,SPGDiscount.vm");
+      List discountList = json.decode(response.data);
+      
+      var _list = discountList.map((e) => DiscountDataModel.fromJson(e)).toList();
+      return right(_list);
+    } on DioError catch (e) {
+      return left(json.decode(e.response.data)['message'].toString());
+    } catch (e) {
+      return left(e.toString());
     }
   }
 }

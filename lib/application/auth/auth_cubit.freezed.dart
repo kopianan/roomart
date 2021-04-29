@@ -52,6 +52,20 @@ class _$AuthStateTearOff {
   }
 
 // ignore: unused_element
+  _OnGetArBalance onGetArBalance(String balancd) {
+    return _OnGetArBalance(
+      balancd,
+    );
+  }
+
+// ignore: unused_element
+  _OnGetAvailableDiscount onGetAvailableDiscount(List<DiscountDataModel> list) {
+    return _OnGetAvailableDiscount(
+      list,
+    );
+  }
+
+// ignore: unused_element
   _OnAuthenticated onAuthenticated(UserDataModel user) {
     return _OnAuthenticated(
       user,
@@ -73,6 +87,8 @@ mixin _$AuthState {
     @required TResult onRegisterToRoomart(UserRoomartDataModel user),
     @required TResult onRegiserUser(RegisterResponseModel response),
     @required TResult onLoginUser(UserDataModel user),
+    @required TResult onGetArBalance(String balancd),
+    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     @required TResult onAuthenticated(UserDataModel user),
   });
   @optionalTypeArgs
@@ -83,6 +99,8 @@ mixin _$AuthState {
     TResult onRegisterToRoomart(UserRoomartDataModel user),
     TResult onRegiserUser(RegisterResponseModel response),
     TResult onLoginUser(UserDataModel user),
+    TResult onGetArBalance(String balancd),
+    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     TResult onAuthenticated(UserDataModel user),
     @required TResult orElse(),
   });
@@ -94,6 +112,8 @@ mixin _$AuthState {
     @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     @required TResult onRegiserUser(_OnRegiserUser value),
     @required TResult onLoginUser(_OnLoginUser value),
+    @required TResult onGetArBalance(_OnGetArBalance value),
+    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     @required TResult onAuthenticated(_OnAuthenticated value),
   });
   @optionalTypeArgs
@@ -104,6 +124,8 @@ mixin _$AuthState {
     TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     TResult onRegiserUser(_OnRegiserUser value),
     TResult onLoginUser(_OnLoginUser value),
+    TResult onGetArBalance(_OnGetArBalance value),
+    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     TResult onAuthenticated(_OnAuthenticated value),
     @required TResult orElse(),
   });
@@ -166,6 +188,8 @@ class _$_Initial implements _Initial {
     @required TResult onRegisterToRoomart(UserRoomartDataModel user),
     @required TResult onRegiserUser(RegisterResponseModel response),
     @required TResult onLoginUser(UserDataModel user),
+    @required TResult onGetArBalance(String balancd),
+    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     @required TResult onAuthenticated(UserDataModel user),
   }) {
     assert(initial != null);
@@ -174,6 +198,8 @@ class _$_Initial implements _Initial {
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
     assert(onLoginUser != null);
+    assert(onGetArBalance != null);
+    assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
     return initial();
   }
@@ -187,6 +213,8 @@ class _$_Initial implements _Initial {
     TResult onRegisterToRoomart(UserRoomartDataModel user),
     TResult onRegiserUser(RegisterResponseModel response),
     TResult onLoginUser(UserDataModel user),
+    TResult onGetArBalance(String balancd),
+    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     TResult onAuthenticated(UserDataModel user),
     @required TResult orElse(),
   }) {
@@ -206,6 +234,8 @@ class _$_Initial implements _Initial {
     @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     @required TResult onRegiserUser(_OnRegiserUser value),
     @required TResult onLoginUser(_OnLoginUser value),
+    @required TResult onGetArBalance(_OnGetArBalance value),
+    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     @required TResult onAuthenticated(_OnAuthenticated value),
   }) {
     assert(initial != null);
@@ -214,6 +244,8 @@ class _$_Initial implements _Initial {
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
     assert(onLoginUser != null);
+    assert(onGetArBalance != null);
+    assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
     return initial(this);
   }
@@ -227,6 +259,8 @@ class _$_Initial implements _Initial {
     TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     TResult onRegiserUser(_OnRegiserUser value),
     TResult onLoginUser(_OnLoginUser value),
+    TResult onGetArBalance(_OnGetArBalance value),
+    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     TResult onAuthenticated(_OnAuthenticated value),
     @required TResult orElse(),
   }) {
@@ -284,6 +318,8 @@ class _$_Loading implements _Loading {
     @required TResult onRegisterToRoomart(UserRoomartDataModel user),
     @required TResult onRegiserUser(RegisterResponseModel response),
     @required TResult onLoginUser(UserDataModel user),
+    @required TResult onGetArBalance(String balancd),
+    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     @required TResult onAuthenticated(UserDataModel user),
   }) {
     assert(initial != null);
@@ -292,6 +328,8 @@ class _$_Loading implements _Loading {
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
     assert(onLoginUser != null);
+    assert(onGetArBalance != null);
+    assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
     return loading();
   }
@@ -305,6 +343,8 @@ class _$_Loading implements _Loading {
     TResult onRegisterToRoomart(UserRoomartDataModel user),
     TResult onRegiserUser(RegisterResponseModel response),
     TResult onLoginUser(UserDataModel user),
+    TResult onGetArBalance(String balancd),
+    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     TResult onAuthenticated(UserDataModel user),
     @required TResult orElse(),
   }) {
@@ -324,6 +364,8 @@ class _$_Loading implements _Loading {
     @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     @required TResult onRegiserUser(_OnRegiserUser value),
     @required TResult onLoginUser(_OnLoginUser value),
+    @required TResult onGetArBalance(_OnGetArBalance value),
+    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     @required TResult onAuthenticated(_OnAuthenticated value),
   }) {
     assert(initial != null);
@@ -332,6 +374,8 @@ class _$_Loading implements _Loading {
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
     assert(onLoginUser != null);
+    assert(onGetArBalance != null);
+    assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
     return loading(this);
   }
@@ -345,6 +389,8 @@ class _$_Loading implements _Loading {
     TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     TResult onRegiserUser(_OnRegiserUser value),
     TResult onLoginUser(_OnLoginUser value),
+    TResult onGetArBalance(_OnGetArBalance value),
+    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     TResult onAuthenticated(_OnAuthenticated value),
     @required TResult orElse(),
   }) {
@@ -424,6 +470,8 @@ class _$_Error implements _Error {
     @required TResult onRegisterToRoomart(UserRoomartDataModel user),
     @required TResult onRegiserUser(RegisterResponseModel response),
     @required TResult onLoginUser(UserDataModel user),
+    @required TResult onGetArBalance(String balancd),
+    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     @required TResult onAuthenticated(UserDataModel user),
   }) {
     assert(initial != null);
@@ -432,6 +480,8 @@ class _$_Error implements _Error {
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
     assert(onLoginUser != null);
+    assert(onGetArBalance != null);
+    assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
     return error(this.error);
   }
@@ -445,6 +495,8 @@ class _$_Error implements _Error {
     TResult onRegisterToRoomart(UserRoomartDataModel user),
     TResult onRegiserUser(RegisterResponseModel response),
     TResult onLoginUser(UserDataModel user),
+    TResult onGetArBalance(String balancd),
+    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     TResult onAuthenticated(UserDataModel user),
     @required TResult orElse(),
   }) {
@@ -464,6 +516,8 @@ class _$_Error implements _Error {
     @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     @required TResult onRegiserUser(_OnRegiserUser value),
     @required TResult onLoginUser(_OnLoginUser value),
+    @required TResult onGetArBalance(_OnGetArBalance value),
+    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     @required TResult onAuthenticated(_OnAuthenticated value),
   }) {
     assert(initial != null);
@@ -472,6 +526,8 @@ class _$_Error implements _Error {
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
     assert(onLoginUser != null);
+    assert(onGetArBalance != null);
+    assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
     return error(this);
   }
@@ -485,6 +541,8 @@ class _$_Error implements _Error {
     TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     TResult onRegiserUser(_OnRegiserUser value),
     TResult onLoginUser(_OnLoginUser value),
+    TResult onGetArBalance(_OnGetArBalance value),
+    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     TResult onAuthenticated(_OnAuthenticated value),
     @required TResult orElse(),
   }) {
@@ -572,6 +630,8 @@ class _$_OnRegisterToRoomart implements _OnRegisterToRoomart {
     @required TResult onRegisterToRoomart(UserRoomartDataModel user),
     @required TResult onRegiserUser(RegisterResponseModel response),
     @required TResult onLoginUser(UserDataModel user),
+    @required TResult onGetArBalance(String balancd),
+    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     @required TResult onAuthenticated(UserDataModel user),
   }) {
     assert(initial != null);
@@ -580,6 +640,8 @@ class _$_OnRegisterToRoomart implements _OnRegisterToRoomart {
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
     assert(onLoginUser != null);
+    assert(onGetArBalance != null);
+    assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
     return onRegisterToRoomart(user);
   }
@@ -593,6 +655,8 @@ class _$_OnRegisterToRoomart implements _OnRegisterToRoomart {
     TResult onRegisterToRoomart(UserRoomartDataModel user),
     TResult onRegiserUser(RegisterResponseModel response),
     TResult onLoginUser(UserDataModel user),
+    TResult onGetArBalance(String balancd),
+    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     TResult onAuthenticated(UserDataModel user),
     @required TResult orElse(),
   }) {
@@ -612,6 +676,8 @@ class _$_OnRegisterToRoomart implements _OnRegisterToRoomart {
     @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     @required TResult onRegiserUser(_OnRegiserUser value),
     @required TResult onLoginUser(_OnLoginUser value),
+    @required TResult onGetArBalance(_OnGetArBalance value),
+    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     @required TResult onAuthenticated(_OnAuthenticated value),
   }) {
     assert(initial != null);
@@ -620,6 +686,8 @@ class _$_OnRegisterToRoomart implements _OnRegisterToRoomart {
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
     assert(onLoginUser != null);
+    assert(onGetArBalance != null);
+    assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
     return onRegisterToRoomart(this);
   }
@@ -633,6 +701,8 @@ class _$_OnRegisterToRoomart implements _OnRegisterToRoomart {
     TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     TResult onRegiserUser(_OnRegiserUser value),
     TResult onLoginUser(_OnLoginUser value),
+    TResult onGetArBalance(_OnGetArBalance value),
+    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     TResult onAuthenticated(_OnAuthenticated value),
     @required TResult orElse(),
   }) {
@@ -720,6 +790,8 @@ class _$_OnRegiserUser implements _OnRegiserUser {
     @required TResult onRegisterToRoomart(UserRoomartDataModel user),
     @required TResult onRegiserUser(RegisterResponseModel response),
     @required TResult onLoginUser(UserDataModel user),
+    @required TResult onGetArBalance(String balancd),
+    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     @required TResult onAuthenticated(UserDataModel user),
   }) {
     assert(initial != null);
@@ -728,6 +800,8 @@ class _$_OnRegiserUser implements _OnRegiserUser {
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
     assert(onLoginUser != null);
+    assert(onGetArBalance != null);
+    assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
     return onRegiserUser(response);
   }
@@ -741,6 +815,8 @@ class _$_OnRegiserUser implements _OnRegiserUser {
     TResult onRegisterToRoomart(UserRoomartDataModel user),
     TResult onRegiserUser(RegisterResponseModel response),
     TResult onLoginUser(UserDataModel user),
+    TResult onGetArBalance(String balancd),
+    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     TResult onAuthenticated(UserDataModel user),
     @required TResult orElse(),
   }) {
@@ -760,6 +836,8 @@ class _$_OnRegiserUser implements _OnRegiserUser {
     @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     @required TResult onRegiserUser(_OnRegiserUser value),
     @required TResult onLoginUser(_OnLoginUser value),
+    @required TResult onGetArBalance(_OnGetArBalance value),
+    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     @required TResult onAuthenticated(_OnAuthenticated value),
   }) {
     assert(initial != null);
@@ -768,6 +846,8 @@ class _$_OnRegiserUser implements _OnRegiserUser {
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
     assert(onLoginUser != null);
+    assert(onGetArBalance != null);
+    assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
     return onRegiserUser(this);
   }
@@ -781,6 +861,8 @@ class _$_OnRegiserUser implements _OnRegiserUser {
     TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     TResult onRegiserUser(_OnRegiserUser value),
     TResult onLoginUser(_OnLoginUser value),
+    TResult onGetArBalance(_OnGetArBalance value),
+    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     TResult onAuthenticated(_OnAuthenticated value),
     @required TResult orElse(),
   }) {
@@ -879,6 +961,8 @@ class _$_OnLoginUser implements _OnLoginUser {
     @required TResult onRegisterToRoomart(UserRoomartDataModel user),
     @required TResult onRegiserUser(RegisterResponseModel response),
     @required TResult onLoginUser(UserDataModel user),
+    @required TResult onGetArBalance(String balancd),
+    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     @required TResult onAuthenticated(UserDataModel user),
   }) {
     assert(initial != null);
@@ -887,6 +971,8 @@ class _$_OnLoginUser implements _OnLoginUser {
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
     assert(onLoginUser != null);
+    assert(onGetArBalance != null);
+    assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
     return onLoginUser(user);
   }
@@ -900,6 +986,8 @@ class _$_OnLoginUser implements _OnLoginUser {
     TResult onRegisterToRoomart(UserRoomartDataModel user),
     TResult onRegiserUser(RegisterResponseModel response),
     TResult onLoginUser(UserDataModel user),
+    TResult onGetArBalance(String balancd),
+    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     TResult onAuthenticated(UserDataModel user),
     @required TResult orElse(),
   }) {
@@ -919,6 +1007,8 @@ class _$_OnLoginUser implements _OnLoginUser {
     @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     @required TResult onRegiserUser(_OnRegiserUser value),
     @required TResult onLoginUser(_OnLoginUser value),
+    @required TResult onGetArBalance(_OnGetArBalance value),
+    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     @required TResult onAuthenticated(_OnAuthenticated value),
   }) {
     assert(initial != null);
@@ -927,6 +1017,8 @@ class _$_OnLoginUser implements _OnLoginUser {
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
     assert(onLoginUser != null);
+    assert(onGetArBalance != null);
+    assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
     return onLoginUser(this);
   }
@@ -940,6 +1032,8 @@ class _$_OnLoginUser implements _OnLoginUser {
     TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     TResult onRegiserUser(_OnRegiserUser value),
     TResult onLoginUser(_OnLoginUser value),
+    TResult onGetArBalance(_OnGetArBalance value),
+    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     TResult onAuthenticated(_OnAuthenticated value),
     @required TResult orElse(),
   }) {
@@ -957,6 +1051,325 @@ abstract class _OnLoginUser implements AuthState {
   UserDataModel get user;
   @JsonKey(ignore: true)
   _$OnLoginUserCopyWith<_OnLoginUser> get copyWith;
+}
+
+/// @nodoc
+abstract class _$OnGetArBalanceCopyWith<$Res> {
+  factory _$OnGetArBalanceCopyWith(
+          _OnGetArBalance value, $Res Function(_OnGetArBalance) then) =
+      __$OnGetArBalanceCopyWithImpl<$Res>;
+  $Res call({String balancd});
+}
+
+/// @nodoc
+class __$OnGetArBalanceCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
+    implements _$OnGetArBalanceCopyWith<$Res> {
+  __$OnGetArBalanceCopyWithImpl(
+      _OnGetArBalance _value, $Res Function(_OnGetArBalance) _then)
+      : super(_value, (v) => _then(v as _OnGetArBalance));
+
+  @override
+  _OnGetArBalance get _value => super._value as _OnGetArBalance;
+
+  @override
+  $Res call({
+    Object balancd = freezed,
+  }) {
+    return _then(_OnGetArBalance(
+      balancd == freezed ? _value.balancd : balancd as String,
+    ));
+  }
+}
+
+/// @nodoc
+class _$_OnGetArBalance implements _OnGetArBalance {
+  const _$_OnGetArBalance(this.balancd) : assert(balancd != null);
+
+  @override
+  final String balancd;
+
+  @override
+  String toString() {
+    return 'AuthState.onGetArBalance(balancd: $balancd)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _OnGetArBalance &&
+            (identical(other.balancd, balancd) ||
+                const DeepCollectionEquality().equals(other.balancd, balancd)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(balancd);
+
+  @JsonKey(ignore: true)
+  @override
+  _$OnGetArBalanceCopyWith<_OnGetArBalance> get copyWith =>
+      __$OnGetArBalanceCopyWithImpl<_OnGetArBalance>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loading(),
+    @required TResult error(String error),
+    @required TResult onRegisterToRoomart(UserRoomartDataModel user),
+    @required TResult onRegiserUser(RegisterResponseModel response),
+    @required TResult onLoginUser(UserDataModel user),
+    @required TResult onGetArBalance(String balancd),
+    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
+    @required TResult onAuthenticated(UserDataModel user),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(onRegisterToRoomart != null);
+    assert(onRegiserUser != null);
+    assert(onLoginUser != null);
+    assert(onGetArBalance != null);
+    assert(onGetAvailableDiscount != null);
+    assert(onAuthenticated != null);
+    return onGetArBalance(balancd);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loading(),
+    TResult error(String error),
+    TResult onRegisterToRoomart(UserRoomartDataModel user),
+    TResult onRegiserUser(RegisterResponseModel response),
+    TResult onLoginUser(UserDataModel user),
+    TResult onGetArBalance(String balancd),
+    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
+    TResult onAuthenticated(UserDataModel user),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (onGetArBalance != null) {
+      return onGetArBalance(balancd);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loading(_Loading value),
+    @required TResult error(_Error value),
+    @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
+    @required TResult onRegiserUser(_OnRegiserUser value),
+    @required TResult onLoginUser(_OnLoginUser value),
+    @required TResult onGetArBalance(_OnGetArBalance value),
+    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
+    @required TResult onAuthenticated(_OnAuthenticated value),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(onRegisterToRoomart != null);
+    assert(onRegiserUser != null);
+    assert(onLoginUser != null);
+    assert(onGetArBalance != null);
+    assert(onGetAvailableDiscount != null);
+    assert(onAuthenticated != null);
+    return onGetArBalance(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loading(_Loading value),
+    TResult error(_Error value),
+    TResult onRegisterToRoomart(_OnRegisterToRoomart value),
+    TResult onRegiserUser(_OnRegiserUser value),
+    TResult onLoginUser(_OnLoginUser value),
+    TResult onGetArBalance(_OnGetArBalance value),
+    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
+    TResult onAuthenticated(_OnAuthenticated value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (onGetArBalance != null) {
+      return onGetArBalance(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnGetArBalance implements AuthState {
+  const factory _OnGetArBalance(String balancd) = _$_OnGetArBalance;
+
+  String get balancd;
+  @JsonKey(ignore: true)
+  _$OnGetArBalanceCopyWith<_OnGetArBalance> get copyWith;
+}
+
+/// @nodoc
+abstract class _$OnGetAvailableDiscountCopyWith<$Res> {
+  factory _$OnGetAvailableDiscountCopyWith(_OnGetAvailableDiscount value,
+          $Res Function(_OnGetAvailableDiscount) then) =
+      __$OnGetAvailableDiscountCopyWithImpl<$Res>;
+  $Res call({List<DiscountDataModel> list});
+}
+
+/// @nodoc
+class __$OnGetAvailableDiscountCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res>
+    implements _$OnGetAvailableDiscountCopyWith<$Res> {
+  __$OnGetAvailableDiscountCopyWithImpl(_OnGetAvailableDiscount _value,
+      $Res Function(_OnGetAvailableDiscount) _then)
+      : super(_value, (v) => _then(v as _OnGetAvailableDiscount));
+
+  @override
+  _OnGetAvailableDiscount get _value => super._value as _OnGetAvailableDiscount;
+
+  @override
+  $Res call({
+    Object list = freezed,
+  }) {
+    return _then(_OnGetAvailableDiscount(
+      list == freezed ? _value.list : list as List<DiscountDataModel>,
+    ));
+  }
+}
+
+/// @nodoc
+class _$_OnGetAvailableDiscount implements _OnGetAvailableDiscount {
+  const _$_OnGetAvailableDiscount(this.list) : assert(list != null);
+
+  @override
+  final List<DiscountDataModel> list;
+
+  @override
+  String toString() {
+    return 'AuthState.onGetAvailableDiscount(list: $list)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _OnGetAvailableDiscount &&
+            (identical(other.list, list) ||
+                const DeepCollectionEquality().equals(other.list, list)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(list);
+
+  @JsonKey(ignore: true)
+  @override
+  _$OnGetAvailableDiscountCopyWith<_OnGetAvailableDiscount> get copyWith =>
+      __$OnGetAvailableDiscountCopyWithImpl<_OnGetAvailableDiscount>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loading(),
+    @required TResult error(String error),
+    @required TResult onRegisterToRoomart(UserRoomartDataModel user),
+    @required TResult onRegiserUser(RegisterResponseModel response),
+    @required TResult onLoginUser(UserDataModel user),
+    @required TResult onGetArBalance(String balancd),
+    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
+    @required TResult onAuthenticated(UserDataModel user),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(onRegisterToRoomart != null);
+    assert(onRegiserUser != null);
+    assert(onLoginUser != null);
+    assert(onGetArBalance != null);
+    assert(onGetAvailableDiscount != null);
+    assert(onAuthenticated != null);
+    return onGetAvailableDiscount(list);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loading(),
+    TResult error(String error),
+    TResult onRegisterToRoomart(UserRoomartDataModel user),
+    TResult onRegiserUser(RegisterResponseModel response),
+    TResult onLoginUser(UserDataModel user),
+    TResult onGetArBalance(String balancd),
+    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
+    TResult onAuthenticated(UserDataModel user),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (onGetAvailableDiscount != null) {
+      return onGetAvailableDiscount(list);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loading(_Loading value),
+    @required TResult error(_Error value),
+    @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
+    @required TResult onRegiserUser(_OnRegiserUser value),
+    @required TResult onLoginUser(_OnLoginUser value),
+    @required TResult onGetArBalance(_OnGetArBalance value),
+    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
+    @required TResult onAuthenticated(_OnAuthenticated value),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(onRegisterToRoomart != null);
+    assert(onRegiserUser != null);
+    assert(onLoginUser != null);
+    assert(onGetArBalance != null);
+    assert(onGetAvailableDiscount != null);
+    assert(onAuthenticated != null);
+    return onGetAvailableDiscount(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loading(_Loading value),
+    TResult error(_Error value),
+    TResult onRegisterToRoomart(_OnRegisterToRoomart value),
+    TResult onRegiserUser(_OnRegiserUser value),
+    TResult onLoginUser(_OnLoginUser value),
+    TResult onGetArBalance(_OnGetArBalance value),
+    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
+    TResult onAuthenticated(_OnAuthenticated value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (onGetAvailableDiscount != null) {
+      return onGetAvailableDiscount(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnGetAvailableDiscount implements AuthState {
+  const factory _OnGetAvailableDiscount(List<DiscountDataModel> list) =
+      _$_OnGetAvailableDiscount;
+
+  List<DiscountDataModel> get list;
+  @JsonKey(ignore: true)
+  _$OnGetAvailableDiscountCopyWith<_OnGetAvailableDiscount> get copyWith;
 }
 
 /// @nodoc
@@ -1037,6 +1450,8 @@ class _$_OnAuthenticated implements _OnAuthenticated {
     @required TResult onRegisterToRoomart(UserRoomartDataModel user),
     @required TResult onRegiserUser(RegisterResponseModel response),
     @required TResult onLoginUser(UserDataModel user),
+    @required TResult onGetArBalance(String balancd),
+    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     @required TResult onAuthenticated(UserDataModel user),
   }) {
     assert(initial != null);
@@ -1045,6 +1460,8 @@ class _$_OnAuthenticated implements _OnAuthenticated {
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
     assert(onLoginUser != null);
+    assert(onGetArBalance != null);
+    assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
     return onAuthenticated(user);
   }
@@ -1058,6 +1475,8 @@ class _$_OnAuthenticated implements _OnAuthenticated {
     TResult onRegisterToRoomart(UserRoomartDataModel user),
     TResult onRegiserUser(RegisterResponseModel response),
     TResult onLoginUser(UserDataModel user),
+    TResult onGetArBalance(String balancd),
+    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     TResult onAuthenticated(UserDataModel user),
     @required TResult orElse(),
   }) {
@@ -1077,6 +1496,8 @@ class _$_OnAuthenticated implements _OnAuthenticated {
     @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     @required TResult onRegiserUser(_OnRegiserUser value),
     @required TResult onLoginUser(_OnLoginUser value),
+    @required TResult onGetArBalance(_OnGetArBalance value),
+    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     @required TResult onAuthenticated(_OnAuthenticated value),
   }) {
     assert(initial != null);
@@ -1085,6 +1506,8 @@ class _$_OnAuthenticated implements _OnAuthenticated {
     assert(onRegisterToRoomart != null);
     assert(onRegiserUser != null);
     assert(onLoginUser != null);
+    assert(onGetArBalance != null);
+    assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
     return onAuthenticated(this);
   }
@@ -1098,6 +1521,8 @@ class _$_OnAuthenticated implements _OnAuthenticated {
     TResult onRegisterToRoomart(_OnRegisterToRoomart value),
     TResult onRegiserUser(_OnRegiserUser value),
     TResult onLoginUser(_OnLoginUser value),
+    TResult onGetArBalance(_OnGetArBalance value),
+    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     TResult onAuthenticated(_OnAuthenticated value),
     @required TResult orElse(),
   }) {

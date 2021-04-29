@@ -10,6 +10,9 @@ abstract class AuthState with _$AuthState {
   const factory AuthState.onRegiserUser(RegisterResponseModel response) =
       _OnRegiserUser;
   const factory AuthState.onLoginUser(UserDataModel user) = _OnLoginUser;
+  const factory AuthState.onGetArBalance(String balancd) = _OnGetArBalance;
+  const factory AuthState.onGetAvailableDiscount(List<DiscountDataModel> list) =
+      _OnGetAvailableDiscount;
   const factory AuthState.onAuthenticated(UserDataModel user) =
       _OnAuthenticated;
 }

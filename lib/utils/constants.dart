@@ -63,6 +63,6 @@ class Constants {
   String credentialBaseAuthMidtrans = "Mid-server-lnQZNDM1m-f4lBFXHY_AQrSx:";
 
   String radioButtonMidtrans =
-      "- Kartu Kredit \n\n- Bank Virtual Account ( BNI VA Account, BCA VA Account, Mandiri Bill Payment )\n\n- GoPay\n\n- Akulaku";
+      "Kartu Kredit, Virtual Account(BNI,BCA,Mandiri,BillPayment), GoPay, Akulaku";
   String radioButtonMidtransDev = "- Kartu Kredit \n\n- Akulaku";
 }

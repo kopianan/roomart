@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/animation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:roomart/domain/models/banner_data_model.dart';
+import 'package:roomart/domain/models/banner/banner_data_model.dart';
 import 'package:roomart/utils/constants.dart';
 
 abstract class IHomeFacade {

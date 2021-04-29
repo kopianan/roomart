@@ -5,6 +5,7 @@ import 'package:roomart/domain/auth/auth_repository.dart';
 import 'package:roomart/domain/auth/register_data._model.dart';
 import 'package:roomart/domain/auth/register_request_model.dart';
 import 'package:roomart/domain/auth/register_response_model.dart';
+import 'package:roomart/domain/models/discount/discount_data_model.dart';
 import 'package:roomart/domain/models/user/user_roomart_data_model.dart';
 import 'package:roomart/domain/user/user_data_model.dart';
 
@@ -62,6 +63,32 @@ class AuthCubit extends Cubit<AuthState> {
       _result.fold(
         (l) => emit(AuthState.error(l)),
         (r) => emit(AuthState.onLoginUser(r)),
+      );
+    } catch (e) {
+      emit(AuthState.error(e.toString()));
+    }
+  }
+
+  void getArBalance(String userId) async {
+    emit(AuthState.loading());
+    try {
+      final _result = await iAuthFacade.getUserBalance(userId);
+      _result.fold(
+        (l) => emit(AuthState.error(l)),
+        (r) => emit(AuthState.onGetArBalance(r)),
+      );
+    } catch (e) {
+      emit(AuthState.error(e.toString()));
+    }
+  }
+
+  void getAvailableDiscount() async {
+    emit(AuthState.loading());
+    try {
+      final _result = await iAuthFacade.getAvailableDiscount();
+      _result.fold(
+        (l) => emit(AuthState.error(l)),
+        (r) => emit(AuthState.onGetAvailableDiscount(r)),
       );
     } catch (e) {
       emit(AuthState.error(e.toString()));
