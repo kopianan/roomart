@@ -27,9 +27,11 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
                   orElse: () {},
                   error: (e) {
                     print("SPLASH SCREEN" + e.error);
+                    Get.offNamed(DashboardPage.TAG);
                   },
                   onAuthenticated: (e) {
-                    Get.offAllNamed(DashboardPage.TAG);
+                    authController.setDataModel(e.user); 
+                    Get.offNamed(DashboardPage.TAG);
                   });
             },
             builder: (context, state) {

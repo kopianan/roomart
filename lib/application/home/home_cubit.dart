@@ -13,12 +13,10 @@ class HomeCubit extends Cubit<HomeState> {
   HomeCubit({this.iHomeFacade}) : super(HomeState.initial());
 
   final IHomeFacade iHomeFacade;
-
   void getHomeBanner({String customerId: ""}) async {
     emit(HomeState.loading());
     try {
       final _result = await iHomeFacade.getBanner(customerId);
-
       emit(HomeState.onGetBanner(_result));
     } catch (e) {
       emit(HomeState.error(e.toString()));

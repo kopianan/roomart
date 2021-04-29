@@ -1,12 +1,20 @@
 import 'package:color_to_material/color_to_material.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/presentation/dashboard/dashboard_page.dart';
 import 'package:roomart/presentation/splash_screen/splash_screen_page.dart';
 import 'package:roomart/routes/router.dart';
 
-class AppWidget extends StatelessWidget {
+class AppWidget extends StatefulWidget {
   // This widget is the root of your application.
+  @override
+  _AppWidgetState createState() => _AppWidgetState();
+}
+
+class _AppWidgetState extends State<AppWidget> {
+  final authController = Get.put(AuthController());
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
