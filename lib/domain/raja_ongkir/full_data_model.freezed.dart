@@ -18,12 +18,12 @@ class _$FullDataModelTearOff {
 
 // ignore: unused_element
   _FullDataModel call(
-      {@JsonKey(name: "city_id") String cityId,
-      @JsonKey(name: "province_id") String provinceId,
-      @JsonKey(name: "province") String province,
-      @JsonKey(name: "type") String type,
-      @JsonKey(name: "city_name") String cityName,
-      @JsonKey(name: "postal_code") String postalCode}) {
+      {@JsonKey(name: 'city_id') String cityId,
+      @JsonKey(name: 'province_id') String provinceId,
+      @JsonKey(name: 'province') String province,
+      @JsonKey(name: 'type') String type,
+      @JsonKey(name: 'city_name') String cityName,
+      @JsonKey(name: 'postal_code') String postalCode}) {
     return _FullDataModel(
       cityId: cityId,
       provinceId: provinceId,
@@ -46,17 +46,17 @@ const $FullDataModel = _$FullDataModelTearOff();
 
 /// @nodoc
 mixin _$FullDataModel {
-  @JsonKey(name: "city_id")
+  @JsonKey(name: 'city_id')
   String get cityId;
-  @JsonKey(name: "province_id")
+  @JsonKey(name: 'province_id')
   String get provinceId;
-  @JsonKey(name: "province")
+  @JsonKey(name: 'province')
   String get province;
-  @JsonKey(name: "type")
+  @JsonKey(name: 'type')
   String get type;
-  @JsonKey(name: "city_name")
+  @JsonKey(name: 'city_name')
   String get cityName;
-  @JsonKey(name: "postal_code")
+  @JsonKey(name: 'postal_code')
   String get postalCode;
 
   Map<String, dynamic> toJson();
@@ -70,12 +70,12 @@ abstract class $FullDataModelCopyWith<$Res> {
           FullDataModel value, $Res Function(FullDataModel) then) =
       _$FullDataModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: "city_id") String cityId,
-      @JsonKey(name: "province_id") String provinceId,
-      @JsonKey(name: "province") String province,
-      @JsonKey(name: "type") String type,
-      @JsonKey(name: "city_name") String cityName,
-      @JsonKey(name: "postal_code") String postalCode});
+      {@JsonKey(name: 'city_id') String cityId,
+      @JsonKey(name: 'province_id') String provinceId,
+      @JsonKey(name: 'province') String province,
+      @JsonKey(name: 'type') String type,
+      @JsonKey(name: 'city_name') String cityName,
+      @JsonKey(name: 'postal_code') String postalCode});
 }
 
 /// @nodoc
@@ -117,12 +117,12 @@ abstract class _$FullDataModelCopyWith<$Res>
       __$FullDataModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: "city_id") String cityId,
-      @JsonKey(name: "province_id") String provinceId,
-      @JsonKey(name: "province") String province,
-      @JsonKey(name: "type") String type,
-      @JsonKey(name: "city_name") String cityName,
-      @JsonKey(name: "postal_code") String postalCode});
+      {@JsonKey(name: 'city_id') String cityId,
+      @JsonKey(name: 'province_id') String provinceId,
+      @JsonKey(name: 'province') String province,
+      @JsonKey(name: 'type') String type,
+      @JsonKey(name: 'city_name') String cityName,
+      @JsonKey(name: 'postal_code') String postalCode});
 }
 
 /// @nodoc
@@ -163,33 +163,33 @@ class __$FullDataModelCopyWithImpl<$Res>
 /// @nodoc
 class _$_FullDataModel implements _FullDataModel {
   _$_FullDataModel(
-      {@JsonKey(name: "city_id") this.cityId,
-      @JsonKey(name: "province_id") this.provinceId,
-      @JsonKey(name: "province") this.province,
-      @JsonKey(name: "type") this.type,
-      @JsonKey(name: "city_name") this.cityName,
-      @JsonKey(name: "postal_code") this.postalCode});
+      {@JsonKey(name: 'city_id') this.cityId,
+      @JsonKey(name: 'province_id') this.provinceId,
+      @JsonKey(name: 'province') this.province,
+      @JsonKey(name: 'type') this.type,
+      @JsonKey(name: 'city_name') this.cityName,
+      @JsonKey(name: 'postal_code') this.postalCode});
 
   factory _$_FullDataModel.fromJson(Map<String, dynamic> json) =>
       _$_$_FullDataModelFromJson(json);
 
   @override
-  @JsonKey(name: "city_id")
+  @JsonKey(name: 'city_id')
   final String cityId;
   @override
-  @JsonKey(name: "province_id")
+  @JsonKey(name: 'province_id')
   final String provinceId;
   @override
-  @JsonKey(name: "province")
+  @JsonKey(name: 'province')
   final String province;
   @override
-  @JsonKey(name: "type")
+  @JsonKey(name: 'type')
   final String type;
   @override
-  @JsonKey(name: "city_name")
+  @JsonKey(name: 'city_name')
   final String cityName;
   @override
-  @JsonKey(name: "postal_code")
+  @JsonKey(name: 'postal_code')
   final String postalCode;
 
   @override
@@ -242,33 +242,33 @@ class _$_FullDataModel implements _FullDataModel {
 
 abstract class _FullDataModel implements FullDataModel {
   factory _FullDataModel(
-      {@JsonKey(name: "city_id") String cityId,
-      @JsonKey(name: "province_id") String provinceId,
-      @JsonKey(name: "province") String province,
-      @JsonKey(name: "type") String type,
-      @JsonKey(name: "city_name") String cityName,
-      @JsonKey(name: "postal_code") String postalCode}) = _$_FullDataModel;
+      {@JsonKey(name: 'city_id') String cityId,
+      @JsonKey(name: 'province_id') String provinceId,
+      @JsonKey(name: 'province') String province,
+      @JsonKey(name: 'type') String type,
+      @JsonKey(name: 'city_name') String cityName,
+      @JsonKey(name: 'postal_code') String postalCode}) = _$_FullDataModel;
 
   factory _FullDataModel.fromJson(Map<String, dynamic> json) =
       _$_FullDataModel.fromJson;
 
   @override
-  @JsonKey(name: "city_id")
+  @JsonKey(name: 'city_id')
   String get cityId;
   @override
-  @JsonKey(name: "province_id")
+  @JsonKey(name: 'province_id')
   String get provinceId;
   @override
-  @JsonKey(name: "province")
+  @JsonKey(name: 'province')
   String get province;
   @override
-  @JsonKey(name: "type")
+  @JsonKey(name: 'type')
   String get type;
   @override
-  @JsonKey(name: "city_name")
+  @JsonKey(name: 'city_name')
   String get cityName;
   @override
-  @JsonKey(name: "postal_code")
+  @JsonKey(name: 'postal_code')
   String get postalCode;
   @override
   @JsonKey(ignore: true)

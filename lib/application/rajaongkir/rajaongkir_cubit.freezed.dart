@@ -36,6 +36,20 @@ class _$RajaongkirStateTearOff {
       result,
     );
   }
+
+// ignore: unused_element
+  _GetCityData getCityData(List<FullDataModel> result) {
+    return _GetCityData(
+      result,
+    );
+  }
+
+// ignore: unused_element
+  _GetCostsList getCostsList(List<List<CostDataModel>> costDataModel) {
+    return _GetCostsList(
+      costDataModel,
+    );
+  }
 }
 
 /// @nodoc
@@ -50,6 +64,8 @@ mixin _$RajaongkirState {
     @required TResult loading(),
     @required TResult error(String e),
     @required TResult getProvinceData(List<ProvinceDataModel> result),
+    @required TResult getCityData(List<FullDataModel> result),
+    @required TResult getCostsList(List<List<CostDataModel>> costDataModel),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
@@ -57,6 +73,8 @@ mixin _$RajaongkirState {
     TResult loading(),
     TResult error(String e),
     TResult getProvinceData(List<ProvinceDataModel> result),
+    TResult getCityData(List<FullDataModel> result),
+    TResult getCostsList(List<List<CostDataModel>> costDataModel),
     @required TResult orElse(),
   });
   @optionalTypeArgs
@@ -65,6 +83,8 @@ mixin _$RajaongkirState {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult getProvinceData(_GetProvinceData value),
+    @required TResult getCityData(_GetCityData value),
+    @required TResult getCostsList(_GetCostsList value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
@@ -72,6 +92,8 @@ mixin _$RajaongkirState {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult getProvinceData(_GetProvinceData value),
+    TResult getCityData(_GetCityData value),
+    TResult getCostsList(_GetCostsList value),
     @required TResult orElse(),
   });
 }
@@ -133,11 +155,15 @@ class _$_Initial implements _Initial {
     @required TResult loading(),
     @required TResult error(String e),
     @required TResult getProvinceData(List<ProvinceDataModel> result),
+    @required TResult getCityData(List<FullDataModel> result),
+    @required TResult getCostsList(List<List<CostDataModel>> costDataModel),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(getProvinceData != null);
+    assert(getCityData != null);
+    assert(getCostsList != null);
     return initial();
   }
 
@@ -148,6 +174,8 @@ class _$_Initial implements _Initial {
     TResult loading(),
     TResult error(String e),
     TResult getProvinceData(List<ProvinceDataModel> result),
+    TResult getCityData(List<FullDataModel> result),
+    TResult getCostsList(List<List<CostDataModel>> costDataModel),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -164,11 +192,15 @@ class _$_Initial implements _Initial {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult getProvinceData(_GetProvinceData value),
+    @required TResult getCityData(_GetCityData value),
+    @required TResult getCostsList(_GetCostsList value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(getProvinceData != null);
+    assert(getCityData != null);
+    assert(getCostsList != null);
     return initial(this);
   }
 
@@ -179,6 +211,8 @@ class _$_Initial implements _Initial {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult getProvinceData(_GetProvinceData value),
+    TResult getCityData(_GetCityData value),
+    TResult getCostsList(_GetCostsList value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -233,11 +267,15 @@ class _$_Loading implements _Loading {
     @required TResult loading(),
     @required TResult error(String e),
     @required TResult getProvinceData(List<ProvinceDataModel> result),
+    @required TResult getCityData(List<FullDataModel> result),
+    @required TResult getCostsList(List<List<CostDataModel>> costDataModel),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(getProvinceData != null);
+    assert(getCityData != null);
+    assert(getCostsList != null);
     return loading();
   }
 
@@ -248,6 +286,8 @@ class _$_Loading implements _Loading {
     TResult loading(),
     TResult error(String e),
     TResult getProvinceData(List<ProvinceDataModel> result),
+    TResult getCityData(List<FullDataModel> result),
+    TResult getCostsList(List<List<CostDataModel>> costDataModel),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -264,11 +304,15 @@ class _$_Loading implements _Loading {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult getProvinceData(_GetProvinceData value),
+    @required TResult getCityData(_GetCityData value),
+    @required TResult getCostsList(_GetCostsList value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(getProvinceData != null);
+    assert(getCityData != null);
+    assert(getCostsList != null);
     return loading(this);
   }
 
@@ -279,6 +323,8 @@ class _$_Loading implements _Loading {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult getProvinceData(_GetProvinceData value),
+    TResult getCityData(_GetCityData value),
+    TResult getCostsList(_GetCostsList value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -355,11 +401,15 @@ class _$_Error implements _Error {
     @required TResult loading(),
     @required TResult error(String e),
     @required TResult getProvinceData(List<ProvinceDataModel> result),
+    @required TResult getCityData(List<FullDataModel> result),
+    @required TResult getCostsList(List<List<CostDataModel>> costDataModel),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(getProvinceData != null);
+    assert(getCityData != null);
+    assert(getCostsList != null);
     return error(e);
   }
 
@@ -370,6 +420,8 @@ class _$_Error implements _Error {
     TResult loading(),
     TResult error(String e),
     TResult getProvinceData(List<ProvinceDataModel> result),
+    TResult getCityData(List<FullDataModel> result),
+    TResult getCostsList(List<List<CostDataModel>> costDataModel),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -386,11 +438,15 @@ class _$_Error implements _Error {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult getProvinceData(_GetProvinceData value),
+    @required TResult getCityData(_GetCityData value),
+    @required TResult getCostsList(_GetCostsList value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(getProvinceData != null);
+    assert(getCityData != null);
+    assert(getCostsList != null);
     return error(this);
   }
 
@@ -401,6 +457,8 @@ class _$_Error implements _Error {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult getProvinceData(_GetProvinceData value),
+    TResult getCityData(_GetCityData value),
+    TResult getCostsList(_GetCostsList value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -484,11 +542,15 @@ class _$_GetProvinceData implements _GetProvinceData {
     @required TResult loading(),
     @required TResult error(String e),
     @required TResult getProvinceData(List<ProvinceDataModel> result),
+    @required TResult getCityData(List<FullDataModel> result),
+    @required TResult getCostsList(List<List<CostDataModel>> costDataModel),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(getProvinceData != null);
+    assert(getCityData != null);
+    assert(getCostsList != null);
     return getProvinceData(result);
   }
 
@@ -499,6 +561,8 @@ class _$_GetProvinceData implements _GetProvinceData {
     TResult loading(),
     TResult error(String e),
     TResult getProvinceData(List<ProvinceDataModel> result),
+    TResult getCityData(List<FullDataModel> result),
+    TResult getCostsList(List<List<CostDataModel>> costDataModel),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -515,11 +579,15 @@ class _$_GetProvinceData implements _GetProvinceData {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult getProvinceData(_GetProvinceData value),
+    @required TResult getCityData(_GetCityData value),
+    @required TResult getCostsList(_GetCostsList value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(getProvinceData != null);
+    assert(getCityData != null);
+    assert(getCostsList != null);
     return getProvinceData(this);
   }
 
@@ -530,6 +598,8 @@ class _$_GetProvinceData implements _GetProvinceData {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult getProvinceData(_GetProvinceData value),
+    TResult getCityData(_GetCityData value),
+    TResult getCostsList(_GetCostsList value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -547,4 +617,290 @@ abstract class _GetProvinceData implements RajaongkirState {
   List<ProvinceDataModel> get result;
   @JsonKey(ignore: true)
   _$GetProvinceDataCopyWith<_GetProvinceData> get copyWith;
+}
+
+/// @nodoc
+abstract class _$GetCityDataCopyWith<$Res> {
+  factory _$GetCityDataCopyWith(
+          _GetCityData value, $Res Function(_GetCityData) then) =
+      __$GetCityDataCopyWithImpl<$Res>;
+  $Res call({List<FullDataModel> result});
+}
+
+/// @nodoc
+class __$GetCityDataCopyWithImpl<$Res>
+    extends _$RajaongkirStateCopyWithImpl<$Res>
+    implements _$GetCityDataCopyWith<$Res> {
+  __$GetCityDataCopyWithImpl(
+      _GetCityData _value, $Res Function(_GetCityData) _then)
+      : super(_value, (v) => _then(v as _GetCityData));
+
+  @override
+  _GetCityData get _value => super._value as _GetCityData;
+
+  @override
+  $Res call({
+    Object result = freezed,
+  }) {
+    return _then(_GetCityData(
+      result == freezed ? _value.result : result as List<FullDataModel>,
+    ));
+  }
+}
+
+/// @nodoc
+class _$_GetCityData implements _GetCityData {
+  const _$_GetCityData(this.result) : assert(result != null);
+
+  @override
+  final List<FullDataModel> result;
+
+  @override
+  String toString() {
+    return 'RajaongkirState.getCityData(result: $result)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _GetCityData &&
+            (identical(other.result, result) ||
+                const DeepCollectionEquality().equals(other.result, result)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(result);
+
+  @JsonKey(ignore: true)
+  @override
+  _$GetCityDataCopyWith<_GetCityData> get copyWith =>
+      __$GetCityDataCopyWithImpl<_GetCityData>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loading(),
+    @required TResult error(String e),
+    @required TResult getProvinceData(List<ProvinceDataModel> result),
+    @required TResult getCityData(List<FullDataModel> result),
+    @required TResult getCostsList(List<List<CostDataModel>> costDataModel),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(getProvinceData != null);
+    assert(getCityData != null);
+    assert(getCostsList != null);
+    return getCityData(result);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loading(),
+    TResult error(String e),
+    TResult getProvinceData(List<ProvinceDataModel> result),
+    TResult getCityData(List<FullDataModel> result),
+    TResult getCostsList(List<List<CostDataModel>> costDataModel),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (getCityData != null) {
+      return getCityData(result);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loading(_Loading value),
+    @required TResult error(_Error value),
+    @required TResult getProvinceData(_GetProvinceData value),
+    @required TResult getCityData(_GetCityData value),
+    @required TResult getCostsList(_GetCostsList value),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(getProvinceData != null);
+    assert(getCityData != null);
+    assert(getCostsList != null);
+    return getCityData(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loading(_Loading value),
+    TResult error(_Error value),
+    TResult getProvinceData(_GetProvinceData value),
+    TResult getCityData(_GetCityData value),
+    TResult getCostsList(_GetCostsList value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (getCityData != null) {
+      return getCityData(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetCityData implements RajaongkirState {
+  const factory _GetCityData(List<FullDataModel> result) = _$_GetCityData;
+
+  List<FullDataModel> get result;
+  @JsonKey(ignore: true)
+  _$GetCityDataCopyWith<_GetCityData> get copyWith;
+}
+
+/// @nodoc
+abstract class _$GetCostsListCopyWith<$Res> {
+  factory _$GetCostsListCopyWith(
+          _GetCostsList value, $Res Function(_GetCostsList) then) =
+      __$GetCostsListCopyWithImpl<$Res>;
+  $Res call({List<List<CostDataModel>> costDataModel});
+}
+
+/// @nodoc
+class __$GetCostsListCopyWithImpl<$Res>
+    extends _$RajaongkirStateCopyWithImpl<$Res>
+    implements _$GetCostsListCopyWith<$Res> {
+  __$GetCostsListCopyWithImpl(
+      _GetCostsList _value, $Res Function(_GetCostsList) _then)
+      : super(_value, (v) => _then(v as _GetCostsList));
+
+  @override
+  _GetCostsList get _value => super._value as _GetCostsList;
+
+  @override
+  $Res call({
+    Object costDataModel = freezed,
+  }) {
+    return _then(_GetCostsList(
+      costDataModel == freezed
+          ? _value.costDataModel
+          : costDataModel as List<List<CostDataModel>>,
+    ));
+  }
+}
+
+/// @nodoc
+class _$_GetCostsList implements _GetCostsList {
+  const _$_GetCostsList(this.costDataModel) : assert(costDataModel != null);
+
+  @override
+  final List<List<CostDataModel>> costDataModel;
+
+  @override
+  String toString() {
+    return 'RajaongkirState.getCostsList(costDataModel: $costDataModel)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _GetCostsList &&
+            (identical(other.costDataModel, costDataModel) ||
+                const DeepCollectionEquality()
+                    .equals(other.costDataModel, costDataModel)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(costDataModel);
+
+  @JsonKey(ignore: true)
+  @override
+  _$GetCostsListCopyWith<_GetCostsList> get copyWith =>
+      __$GetCostsListCopyWithImpl<_GetCostsList>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loading(),
+    @required TResult error(String e),
+    @required TResult getProvinceData(List<ProvinceDataModel> result),
+    @required TResult getCityData(List<FullDataModel> result),
+    @required TResult getCostsList(List<List<CostDataModel>> costDataModel),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(getProvinceData != null);
+    assert(getCityData != null);
+    assert(getCostsList != null);
+    return getCostsList(costDataModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loading(),
+    TResult error(String e),
+    TResult getProvinceData(List<ProvinceDataModel> result),
+    TResult getCityData(List<FullDataModel> result),
+    TResult getCostsList(List<List<CostDataModel>> costDataModel),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (getCostsList != null) {
+      return getCostsList(costDataModel);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loading(_Loading value),
+    @required TResult error(_Error value),
+    @required TResult getProvinceData(_GetProvinceData value),
+    @required TResult getCityData(_GetCityData value),
+    @required TResult getCostsList(_GetCostsList value),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(getProvinceData != null);
+    assert(getCityData != null);
+    assert(getCostsList != null);
+    return getCostsList(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loading(_Loading value),
+    TResult error(_Error value),
+    TResult getProvinceData(_GetProvinceData value),
+    TResult getCityData(_GetCityData value),
+    TResult getCostsList(_GetCostsList value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (getCostsList != null) {
+      return getCostsList(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetCostsList implements RajaongkirState {
+  const factory _GetCostsList(List<List<CostDataModel>> costDataModel) =
+      _$_GetCostsList;
+
+  List<List<CostDataModel>> get costDataModel;
+  @JsonKey(ignore: true)
+  _$GetCostsListCopyWith<_GetCostsList> get copyWith;
 }

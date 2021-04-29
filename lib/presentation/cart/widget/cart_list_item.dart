@@ -4,8 +4,6 @@ import 'package:flutter_touch_spin/flutter_touch_spin.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:roomart/application/core/cart_controller.dart';
-import 'package:roomart/domain/item/data_item_model.dart';
-import 'package:roomart/domain/item/trans_item/bought_item_data_model.dart';
 import 'package:roomart/utils/constants.dart';
 import 'package:roomart/utils/formater.dart';
 
@@ -36,7 +34,9 @@ class _CartListItemState extends State<CartListItem> {
             caption: 'Delete',
             color: Colors.red,
             icon: Icons.delete,
-            onTap: () => {},
+            onTap: () {
+              cart.removeDataFromList(widget.index);
+            },
           ),
         ],
         child: Row(
@@ -49,7 +49,7 @@ class _CartListItemState extends State<CartListItem> {
                 child: FadeInImage(
                   fit: BoxFit.cover,
                   image: NetworkImage(Constants().imageBaseUrl +
-                      cart.getFullItemList[widget.index].pic),
+                      cart.getCartItemData[widget.index].item.pic),
                   placeholder: AssetImage('assets/broken_image.png'),
                 ),
               ),
@@ -63,7 +63,7 @@ class _CartListItemState extends State<CartListItem> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      cart.getFullItemList[widget.index].itemName,
+                      cart.getCartItemData[widget.index].item.itemName,
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
                       style:
@@ -71,9 +71,10 @@ class _CartListItemState extends State<CartListItem> {
                     ),
                     SizedBox(height: 4),
                     Text(
-                      Formatter().formatStringCurrency((double.parse(
-                                  cart.getItemList[widget.index].price) *
-                              double.parse(cart.getItemList[widget.index].qty))
+                      Formatter().formatStringCurrency((double.parse(cart
+                                  .getCartItemData[widget.index].bought.price) *
+                              double.parse(cart
+                                  .getCartItemData[widget.index].bought.qty))
                           .toString()),
                       style: TextStyle(
                           fontSize: 15,
@@ -94,10 +95,11 @@ class _CartListItemState extends State<CartListItem> {
                     addIcon: Icon(Icons.add_circle_outline),
                     subtractIcon: Icon(Icons.remove_circle_outline_outlined),
                     onChanged: (val) {
-                      cart.addQuantity(cart.getItemList[widget.index],
+                      cart.addQuantity(cart.getCartItemData[widget.index],
                           val.toStringAsFixed(0));
                     },
-                    value: int.parse(cart.getItemList[widget.index].qty),
+                    value: int.parse(
+                        cart.getCartItemData[widget.index].bought.qty),
                     displayFormat: NumberFormat(),
                     textStyle:
                         TextStyle(fontSize: 17, fontWeight: FontWeight.bold),

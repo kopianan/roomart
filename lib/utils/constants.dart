@@ -59,7 +59,7 @@ class Constants {
     "akulaku"
   ];
   var enabledPaymentDev = ["credit_card", "akulaku"];
-
+  List<String> courierList = ["jne", "tiki", "pos"];
   String credentialBaseAuthMidtrans = "Mid-server-lnQZNDM1m-f4lBFXHY_AQrSx:";
 
   String radioButtonMidtrans =

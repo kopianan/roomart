@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import 'package:roomart/domain/raja_ongkir/delivery_cost/cost_data_model.dart';
+import 'package:roomart/domain/raja_ongkir/delivery_cost/costs.dart';
 import 'package:roomart/domain/transaction/transaction_data_model.dart';
 import 'package:roomart/domain/transaction/transaction_data_model_v2.dart';
 
@@ -12,6 +14,23 @@ class TransactionController extends GetxController {
   List<TransactionDataModel> cancelledTransaction = <TransactionDataModel>[];
   List<TransactionDataModel> notPaidTransaction = <TransactionDataModel>[];
   List<TransactionDataModelV2> finishedTransaction = <TransactionDataModelV2>[];
+  List<List<CostDataModel>> costList = <List<CostDataModel>>[];
+  Rx<Costs> selectedDelivery = Costs().obs;
+  //COSTLIST
+
+  void setCostList(List<List<CostDataModel>> data) {
+    this.costList = data;
+  }
+
+  void setDeliveryCost(Costs costs) {
+    this.selectedDelivery.value = costs;
+  }
+
+  Costs get getSelectedCost => this.selectedDelivery.value;
+
+  List<List<CostDataModel>> get getCostList => this.costList;
+
+//Transaction  history
 
   void setAllTransactionHistoryData(List<TransactionDataModel> list) {
     this.allTransaction.addAll(list);

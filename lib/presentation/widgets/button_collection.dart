@@ -2,12 +2,10 @@ import 'package:flutter/material.dart';
 
 class DefaultButton1 extends StatelessWidget {
   const DefaultButton1({
-    Key key,
     @required this.color,
     @required this.text,
     @required this.onPressed,
-  }) : super(key: key);
-
+  });
   final Color color;
   final String text;
   final Function onPressed;
@@ -16,7 +14,7 @@ class DefaultButton1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialButton(
         height: 45,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
         color: color,
         onPressed: onPressed,
         child: Text(
@@ -58,7 +56,7 @@ class DefaultButton2 extends StatelessWidget {
         height: 45,
         shape: RoundedRectangleBorder(
           side: BorderSide(color: color, width: 2),
-          borderRadius: BorderRadius.circular(15),
+          borderRadius: BorderRadius.circular(6),
         ),
         color: Colors.white,
         onPressed: onPressed,

@@ -17,12 +17,16 @@ class ItemDetailPage extends StatefulWidget {
 
 class _ItemDetailPageState extends State<ItemDetailPage> {
   DataItemModel data;
+  FToast fToast;
 
   final CartController controller = Get.put(CartController());
   @override
   void initState() {
     data = Get.arguments as DataItemModel;
     setDetailList();
+    fToast = FToast();
+
+    fToast.init(context);
     super.initState();
   }
 
@@ -184,8 +188,15 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
                       color: button1,
                       text: "Add To Cart",
                       onPressed: () {
-                        controller.addDataToList(data);
-                        Fluttertoast.showToast(msg: "Item sudah ditambahkan");
+                        controller.addForTheFirstTime(data);
+                        Fluttertoast.showToast(
+                            msg: "This is Center Short Toast",
+                            toastLength: Toast.LENGTH_SHORT,
+                            gravity: ToastGravity.CENTER,
+                            timeInSecForIosWeb: 1,
+                            backgroundColor: Colors.red,
+                            textColor: Colors.white,
+                            fontSize: 16.0);
                       },
                     ),
                   ),

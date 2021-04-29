@@ -26,7 +26,7 @@ class _AppWidgetState extends State<AppWidget> {
           appBarTheme: AppBarTheme(
               centerTitle: true,
               elevation: 3,
-              color: Colors.white,
+              color: Color(0xFFF55E13),
               iconTheme: IconThemeData(color: Colors.black)),
           inputDecorationTheme: InputDecorationTheme(
               fillColor: Colors.white,

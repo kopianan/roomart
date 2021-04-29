@@ -1,12 +1,19 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
+import 'package:roomart/domain/raja_ongkir/cost_request_model.dart';
+import 'package:roomart/domain/raja_ongkir/full_data_model.dart';
 import 'package:roomart/domain/raja_ongkir/province_data_model.dart';
-import 'package:roomart/domain/transaction/transaction_repository.dart';
 import 'package:roomart/utils/constants.dart';
+
+import 'delivery_cost/cost_data_model.dart';
 
 abstract class ITrajaOngkirFacade {
   Future<Either<String, List<ProvinceDataModel>>> getProvinceList();
+  Future<Either<String, List<FullDataModel>>> getCityDataList(
+      String provinceId);
+  Future<Either<String, List<List<CostDataModel>>>> getCost(
+      CostRequestModel costRequestModel, List<String> courierCode);
 }
 
 @LazySingleton(as: ITrajaOngkirFacade)
@@ -34,29 +41,60 @@ class RajaongkirRepository extends ITrajaOngkirFacade {
     } catch (e) {
       return left(e.toString());
     }
+  }
 
-    // getProvinceData(bool newPage) async {
-    //   var _baseUrl = "https://api.rajaongkir.com/starter/province";
+  @override
+  Future<Either<String, List<FullDataModel>>> getCityDataList(
+      String provinceId) async {
+    Response response;
+    var _baseUrl = "https://api.rajaongkir.com/starter/city";
 
-    //   var res = await http.get(_baseUrl, headers: {"key": "e1eedfd1a43f04a99122dbcc2f4a0291"});
-    //   var resBody = json.decode(res.body);
+    try {
+      response = await dio.get(_baseUrl + "?province=${provinceId}",
+          options:
+              Options(headers: {"key": "e1eedfd1a43f04a99122dbcc2f4a0291"}));
+      List resBody = response.data['rajaongkir']['results'];
 
-    //   var test = ProvinceModel.fromJson(resBody);
-    //   data.setListOfProvince(test.rajaongkir.results);
-    //   setState(() {
-    //     listOfProvince = test.rajaongkir.results;
-    //     provinceName = widget.userData.province;
-    //     if (provinceName == "" || provinceName == " ") {
-    //       provinceName = listOfProvince.first.province;
-    //       getCityDataBlank(listOfProvince.first.provinceId);
-    //     } else {
-    //       listOfProvince.map((it) {
-    //         if (it.province == provinceName) {
-    //           if (newPage) getCityData(it.provinceId, newPage);
-    //         }
-    //       }).toList();
-    //     }
-    //   });
-    // }
+      final _result = resBody.map((md) => FullDataModel.fromJson(md)).toList();
+
+      return right(_result);
+    } catch (e) {
+      return left(e.toString());
+    }
+  }
+
+  @override
+  Future<Either<String, List<List<CostDataModel>>>> getCost(
+      CostRequestModel costRequestModel, List<String> courierCode) async {
+    List<List<CostDataModel>> listCosts = <List<CostDataModel>>[];
+
+    var _baseUrl = "https://api.rajaongkir.com/starter/cost";
+    var _req = costRequestModel;
+    List<String> listOfCourier = courierCode;
+
+    var _dioList = listOfCourier.map(
+      (e) {
+        return dio.post(_baseUrl,
+            data: _req.copyWith(courier: e).toJson(),
+            options:
+                Options(headers: {"key": "e1eedfd1a43f04a99122dbcc2f4a0291"}));
+      },
+    ).toList();
+    try {
+      List<Response> listResponse = await Future.wait(_dioList);
+
+      listResponse.forEach(
+        (element) {
+          List _listResponse = element.data['rajaongkir']['results'];
+          var _listConverted =
+              _listResponse.map((e) => CostDataModel.fromJson(e)).toList();
+          listCosts.add(_listConverted);
+        },
+      );
+
+      return right(listCosts);
+    } catch (e) {
+      return left(e.toString());
+    }
   }
 }

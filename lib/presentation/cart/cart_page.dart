@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:roomart/application/core/cart_controller.dart';
 import 'package:roomart/presentation/payment/payment_page.dart';
+import 'package:roomart/presentation/widgets/button_collection.dart';
+import 'package:roomart/utils/formater.dart';
 
 import 'widget/cart_list_item.dart';
 
@@ -20,77 +22,77 @@ class CartPage extends StatelessWidget {
           },
         ),
       ),
-      body: GetBuilder<CartController>(
-        builder: (cart) => Column(
-          children: <Widget>[
-            Expanded(
-              child: ListView.builder(
-                  shrinkWrap: true,
-                  itemCount: cart.getItemList.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return CartListItem(
-                      index: index,
-                    );
-                  }),
-            ),
-            Container(
-              margin: EdgeInsets.fromLTRB(20, 20, 20, 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Container(
-                    child: Text("Total Belanja",
+      body: GetX<CartController>(
+        builder: (cart) => (cart.getCartItemData.length == 0)
+            ? Container(
+                child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.shopping_basket_outlined,
+                        size: 70,
+                        color: Colors.grey,
+                      ),
+                      Text(
+                        "No Item",
                         style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold)),
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey),
+                      )
+                    ],
                   ),
-                  Container(
-                    child: GetX<CartController>(
-                      builder: (_) => Text(_.getCartSubTotal(),
-                          style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.bold)),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                ),
+              )
+            : Column(
                 children: <Widget>[
-                  Container(
-                    color: Colors.grey,
-                    width: MediaQuery.of(context).size.width / 2,
-                    child: new FlatButton(
-                      textColor: Colors.yellow,
-                      onPressed: () {},
-                      child: Text(
-                        "Saya Masih Ingin Belanja",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ),
+                  Expanded(
+                    child: ListView.builder(
+                        shrinkWrap: true,
+                        itemCount: cart.getCartItemData.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          return CartListItem(
+                            index: index,
+                          );
+                        }),
                   ),
                   Container(
-                    color: Colors.yellow,
-                    width: MediaQuery.of(context).size.width / 2,
-                    child: new FlatButton(
-                      textColor: Colors.pink,
-                      onPressed: () {
-                        Get.toNamed(PaymentPage.TAG);
-                      },
-                      child: Text(
-                        "Lanjutkan Pembayaran",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
+                    margin: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Container(
+                          child: Text("Total Belanja",
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold)),
+                        ),
+                        Container(
+                          child: GetX<CartController>(
+                            builder: (_) => Text(
+                                Formatter()
+                                    .formatStringCurrency(_.getCartSubTotal()),
+                                style: TextStyle(
+                                    fontSize: 20, fontWeight: FontWeight.bold)),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
+                  Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Container(
+                          margin: EdgeInsets.all(10),
+                          width: double.infinity,
+                          child: new DefaultButton1(
+                            color: Colors.orange,
+                            text: "Lanjutkan Pembayaran",
+                            onPressed: () {
+                              Get.toNamed(PaymentPage.TAG);
+                            },
+                          ))),
                 ],
               ),
-            ),
-          ],
-        ),
       ),
     );
   }
