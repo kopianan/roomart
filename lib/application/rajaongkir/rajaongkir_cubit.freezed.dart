@@ -45,7 +45,7 @@ class _$RajaongkirStateTearOff {
   }
 
 // ignore: unused_element
-  _GetCostsList getCostsList(List<List<CostDataModel>> costDataModel) {
+  _GetCostsList getCostsList(List<CostDataModel> costDataModel) {
     return _GetCostsList(
       costDataModel,
     );
@@ -65,7 +65,7 @@ mixin _$RajaongkirState {
     @required TResult error(String e),
     @required TResult getProvinceData(List<ProvinceDataModel> result),
     @required TResult getCityData(List<FullDataModel> result),
-    @required TResult getCostsList(List<List<CostDataModel>> costDataModel),
+    @required TResult getCostsList(List<CostDataModel> costDataModel),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
@@ -74,7 +74,7 @@ mixin _$RajaongkirState {
     TResult error(String e),
     TResult getProvinceData(List<ProvinceDataModel> result),
     TResult getCityData(List<FullDataModel> result),
-    TResult getCostsList(List<List<CostDataModel>> costDataModel),
+    TResult getCostsList(List<CostDataModel> costDataModel),
     @required TResult orElse(),
   });
   @optionalTypeArgs
@@ -156,7 +156,7 @@ class _$_Initial implements _Initial {
     @required TResult error(String e),
     @required TResult getProvinceData(List<ProvinceDataModel> result),
     @required TResult getCityData(List<FullDataModel> result),
-    @required TResult getCostsList(List<List<CostDataModel>> costDataModel),
+    @required TResult getCostsList(List<CostDataModel> costDataModel),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -175,7 +175,7 @@ class _$_Initial implements _Initial {
     TResult error(String e),
     TResult getProvinceData(List<ProvinceDataModel> result),
     TResult getCityData(List<FullDataModel> result),
-    TResult getCostsList(List<List<CostDataModel>> costDataModel),
+    TResult getCostsList(List<CostDataModel> costDataModel),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -268,7 +268,7 @@ class _$_Loading implements _Loading {
     @required TResult error(String e),
     @required TResult getProvinceData(List<ProvinceDataModel> result),
     @required TResult getCityData(List<FullDataModel> result),
-    @required TResult getCostsList(List<List<CostDataModel>> costDataModel),
+    @required TResult getCostsList(List<CostDataModel> costDataModel),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -287,7 +287,7 @@ class _$_Loading implements _Loading {
     TResult error(String e),
     TResult getProvinceData(List<ProvinceDataModel> result),
     TResult getCityData(List<FullDataModel> result),
-    TResult getCostsList(List<List<CostDataModel>> costDataModel),
+    TResult getCostsList(List<CostDataModel> costDataModel),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -402,7 +402,7 @@ class _$_Error implements _Error {
     @required TResult error(String e),
     @required TResult getProvinceData(List<ProvinceDataModel> result),
     @required TResult getCityData(List<FullDataModel> result),
-    @required TResult getCostsList(List<List<CostDataModel>> costDataModel),
+    @required TResult getCostsList(List<CostDataModel> costDataModel),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -421,7 +421,7 @@ class _$_Error implements _Error {
     TResult error(String e),
     TResult getProvinceData(List<ProvinceDataModel> result),
     TResult getCityData(List<FullDataModel> result),
-    TResult getCostsList(List<List<CostDataModel>> costDataModel),
+    TResult getCostsList(List<CostDataModel> costDataModel),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -543,7 +543,7 @@ class _$_GetProvinceData implements _GetProvinceData {
     @required TResult error(String e),
     @required TResult getProvinceData(List<ProvinceDataModel> result),
     @required TResult getCityData(List<FullDataModel> result),
-    @required TResult getCostsList(List<List<CostDataModel>> costDataModel),
+    @required TResult getCostsList(List<CostDataModel> costDataModel),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -562,7 +562,7 @@ class _$_GetProvinceData implements _GetProvinceData {
     TResult error(String e),
     TResult getProvinceData(List<ProvinceDataModel> result),
     TResult getCityData(List<FullDataModel> result),
-    TResult getCostsList(List<List<CostDataModel>> costDataModel),
+    TResult getCostsList(List<CostDataModel> costDataModel),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -685,7 +685,7 @@ class _$_GetCityData implements _GetCityData {
     @required TResult error(String e),
     @required TResult getProvinceData(List<ProvinceDataModel> result),
     @required TResult getCityData(List<FullDataModel> result),
-    @required TResult getCostsList(List<List<CostDataModel>> costDataModel),
+    @required TResult getCostsList(List<CostDataModel> costDataModel),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -704,7 +704,7 @@ class _$_GetCityData implements _GetCityData {
     TResult error(String e),
     TResult getProvinceData(List<ProvinceDataModel> result),
     TResult getCityData(List<FullDataModel> result),
-    TResult getCostsList(List<List<CostDataModel>> costDataModel),
+    TResult getCostsList(List<CostDataModel> costDataModel),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -765,7 +765,7 @@ abstract class _$GetCostsListCopyWith<$Res> {
   factory _$GetCostsListCopyWith(
           _GetCostsList value, $Res Function(_GetCostsList) then) =
       __$GetCostsListCopyWithImpl<$Res>;
-  $Res call({List<List<CostDataModel>> costDataModel});
+  $Res call({List<CostDataModel> costDataModel});
 }
 
 /// @nodoc
@@ -786,7 +786,7 @@ class __$GetCostsListCopyWithImpl<$Res>
     return _then(_GetCostsList(
       costDataModel == freezed
           ? _value.costDataModel
-          : costDataModel as List<List<CostDataModel>>,
+          : costDataModel as List<CostDataModel>,
     ));
   }
 }
@@ -796,7 +796,7 @@ class _$_GetCostsList implements _GetCostsList {
   const _$_GetCostsList(this.costDataModel) : assert(costDataModel != null);
 
   @override
-  final List<List<CostDataModel>> costDataModel;
+  final List<CostDataModel> costDataModel;
 
   @override
   String toString() {
@@ -829,7 +829,7 @@ class _$_GetCostsList implements _GetCostsList {
     @required TResult error(String e),
     @required TResult getProvinceData(List<ProvinceDataModel> result),
     @required TResult getCityData(List<FullDataModel> result),
-    @required TResult getCostsList(List<List<CostDataModel>> costDataModel),
+    @required TResult getCostsList(List<CostDataModel> costDataModel),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -848,7 +848,7 @@ class _$_GetCostsList implements _GetCostsList {
     TResult error(String e),
     TResult getProvinceData(List<ProvinceDataModel> result),
     TResult getCityData(List<FullDataModel> result),
-    TResult getCostsList(List<List<CostDataModel>> costDataModel),
+    TResult getCostsList(List<CostDataModel> costDataModel),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -897,10 +897,10 @@ class _$_GetCostsList implements _GetCostsList {
 }
 
 abstract class _GetCostsList implements RajaongkirState {
-  const factory _GetCostsList(List<List<CostDataModel>> costDataModel) =
+  const factory _GetCostsList(List<CostDataModel> costDataModel) =
       _$_GetCostsList;
 
-  List<List<CostDataModel>> get costDataModel;
+  List<CostDataModel> get costDataModel;
   @JsonKey(ignore: true)
   _$GetCostsListCopyWith<_GetCostsList> get copyWith;
 }

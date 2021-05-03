@@ -1,7 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:roomart/domain/item/data_item_model.dart';
-
-import 'trans_item/bought_item_data_model.dart';
+import 'package:roomart/domain/transaction/trans_item/bought_item_data_model.dart';
 
 part 'cart_data_collection_model.freezed.dart';
 part 'cart_data_collection_model.g.dart';

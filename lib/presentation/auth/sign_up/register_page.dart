@@ -3,11 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:roomart/application/auth/auth_cubit.dart';
 import 'package:roomart/domain/auth/register_data._model.dart';
-import 'package:roomart/domain/auth/register_request_model.dart';
-import 'package:roomart/domain/models/user/user_roomart_data_model.dart';
 import 'package:roomart/presentation/config_widgets/widget_collection.dart';
 import 'package:roomart/presentation/widgets/button_collection.dart';
-import 'package:roomart/utils/constants.dart';
 import 'package:roomart/utils/my_color.dart';
 
 import '../../../injection.dart';
@@ -35,8 +32,8 @@ class _RegisterPageState extends State<RegisterPage> {
         create: (context) => authCubit,
         child: BlocConsumer<AuthCubit, AuthState>(
           listener: (context, state) {
-            state.map(
-              initial: (e) {},
+            state.maybeMap(
+              orElse: () {},
               loading: (e) {},
               error: (e) {
                 print(e);

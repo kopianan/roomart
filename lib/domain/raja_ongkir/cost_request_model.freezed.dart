@@ -18,12 +18,21 @@ class _$CostRequestModelTearOff {
 
 // ignore: unused_element
   _CostRequestModel call(
-      {String origin, String destination, double weight, String courier}) {
+      {String origin,
+      String destination,
+      String originType,
+      String destinationType,
+      double weight,
+      String courier,
+      List<OngkirCodeDataModel> courirList}) {
     return _CostRequestModel(
       origin: origin,
       destination: destination,
+      originType: originType,
+      destinationType: destinationType,
       weight: weight,
       courier: courier,
+      courirList: courirList,
     );
   }
 
@@ -41,8 +50,11 @@ const $CostRequestModel = _$CostRequestModelTearOff();
 mixin _$CostRequestModel {
   String get origin;
   String get destination;
+  String get originType;
+  String get destinationType;
   double get weight;
   String get courier;
+  List<OngkirCodeDataModel> get courirList;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -54,7 +66,14 @@ abstract class $CostRequestModelCopyWith<$Res> {
   factory $CostRequestModelCopyWith(
           CostRequestModel value, $Res Function(CostRequestModel) then) =
       _$CostRequestModelCopyWithImpl<$Res>;
-  $Res call({String origin, String destination, double weight, String courier});
+  $Res call(
+      {String origin,
+      String destination,
+      String originType,
+      String destinationType,
+      double weight,
+      String courier,
+      List<OngkirCodeDataModel> courirList});
 }
 
 /// @nodoc
@@ -70,15 +89,26 @@ class _$CostRequestModelCopyWithImpl<$Res>
   $Res call({
     Object origin = freezed,
     Object destination = freezed,
+    Object originType = freezed,
+    Object destinationType = freezed,
     Object weight = freezed,
     Object courier = freezed,
+    Object courirList = freezed,
   }) {
     return _then(_value.copyWith(
       origin: origin == freezed ? _value.origin : origin as String,
       destination:
           destination == freezed ? _value.destination : destination as String,
+      originType:
+          originType == freezed ? _value.originType : originType as String,
+      destinationType: destinationType == freezed
+          ? _value.destinationType
+          : destinationType as String,
       weight: weight == freezed ? _value.weight : weight as double,
       courier: courier == freezed ? _value.courier : courier as String,
+      courirList: courirList == freezed
+          ? _value.courirList
+          : courirList as List<OngkirCodeDataModel>,
     ));
   }
 }
@@ -90,7 +120,14 @@ abstract class _$CostRequestModelCopyWith<$Res>
           _CostRequestModel value, $Res Function(_CostRequestModel) then) =
       __$CostRequestModelCopyWithImpl<$Res>;
   @override
-  $Res call({String origin, String destination, double weight, String courier});
+  $Res call(
+      {String origin,
+      String destination,
+      String originType,
+      String destinationType,
+      double weight,
+      String courier,
+      List<OngkirCodeDataModel> courirList});
 }
 
 /// @nodoc
@@ -108,15 +145,26 @@ class __$CostRequestModelCopyWithImpl<$Res>
   $Res call({
     Object origin = freezed,
     Object destination = freezed,
+    Object originType = freezed,
+    Object destinationType = freezed,
     Object weight = freezed,
     Object courier = freezed,
+    Object courirList = freezed,
   }) {
     return _then(_CostRequestModel(
       origin: origin == freezed ? _value.origin : origin as String,
       destination:
           destination == freezed ? _value.destination : destination as String,
+      originType:
+          originType == freezed ? _value.originType : originType as String,
+      destinationType: destinationType == freezed
+          ? _value.destinationType
+          : destinationType as String,
       weight: weight == freezed ? _value.weight : weight as double,
       courier: courier == freezed ? _value.courier : courier as String,
+      courirList: courirList == freezed
+          ? _value.courirList
+          : courirList as List<OngkirCodeDataModel>,
     ));
   }
 }
@@ -126,7 +174,13 @@ class __$CostRequestModelCopyWithImpl<$Res>
 /// @nodoc
 class _$_CostRequestModel implements _CostRequestModel {
   _$_CostRequestModel(
-      {this.origin, this.destination, this.weight, this.courier});
+      {this.origin,
+      this.destination,
+      this.originType,
+      this.destinationType,
+      this.weight,
+      this.courier,
+      this.courirList});
 
   factory _$_CostRequestModel.fromJson(Map<String, dynamic> json) =>
       _$_$_CostRequestModelFromJson(json);
@@ -136,13 +190,19 @@ class _$_CostRequestModel implements _CostRequestModel {
   @override
   final String destination;
   @override
+  final String originType;
+  @override
+  final String destinationType;
+  @override
   final double weight;
   @override
   final String courier;
+  @override
+  final List<OngkirCodeDataModel> courirList;
 
   @override
   String toString() {
-    return 'CostRequestModel(origin: $origin, destination: $destination, weight: $weight, courier: $courier)';
+    return 'CostRequestModel(origin: $origin, destination: $destination, originType: $originType, destinationType: $destinationType, weight: $weight, courier: $courier, courirList: $courirList)';
   }
 
   @override
@@ -154,10 +214,20 @@ class _$_CostRequestModel implements _CostRequestModel {
             (identical(other.destination, destination) ||
                 const DeepCollectionEquality()
                     .equals(other.destination, destination)) &&
+            (identical(other.originType, originType) ||
+                const DeepCollectionEquality()
+                    .equals(other.originType, originType)) &&
+            (identical(other.destinationType, destinationType) ||
+                const DeepCollectionEquality()
+                    .equals(other.destinationType, destinationType)) &&
             (identical(other.weight, weight) ||
                 const DeepCollectionEquality().equals(other.weight, weight)) &&
             (identical(other.courier, courier) ||
-                const DeepCollectionEquality().equals(other.courier, courier)));
+                const DeepCollectionEquality()
+                    .equals(other.courier, courier)) &&
+            (identical(other.courirList, courirList) ||
+                const DeepCollectionEquality()
+                    .equals(other.courirList, courirList)));
   }
 
   @override
@@ -165,8 +235,11 @@ class _$_CostRequestModel implements _CostRequestModel {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(origin) ^
       const DeepCollectionEquality().hash(destination) ^
+      const DeepCollectionEquality().hash(originType) ^
+      const DeepCollectionEquality().hash(destinationType) ^
       const DeepCollectionEquality().hash(weight) ^
-      const DeepCollectionEquality().hash(courier);
+      const DeepCollectionEquality().hash(courier) ^
+      const DeepCollectionEquality().hash(courirList);
 
   @JsonKey(ignore: true)
   @override
@@ -183,8 +256,11 @@ abstract class _CostRequestModel implements CostRequestModel {
   factory _CostRequestModel(
       {String origin,
       String destination,
+      String originType,
+      String destinationType,
       double weight,
-      String courier}) = _$_CostRequestModel;
+      String courier,
+      List<OngkirCodeDataModel> courirList}) = _$_CostRequestModel;
 
   factory _CostRequestModel.fromJson(Map<String, dynamic> json) =
       _$_CostRequestModel.fromJson;
@@ -194,9 +270,15 @@ abstract class _CostRequestModel implements CostRequestModel {
   @override
   String get destination;
   @override
+  String get originType;
+  @override
+  String get destinationType;
+  @override
   double get weight;
   @override
   String get courier;
+  @override
+  List<OngkirCodeDataModel> get courirList;
   @override
   @JsonKey(ignore: true)
   _$CostRequestModelCopyWith<_CostRequestModel> get copyWith;

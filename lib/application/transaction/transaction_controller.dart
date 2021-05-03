@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:roomart/domain/models/discount/discount_data_model.dart';
 import 'package:roomart/domain/raja_ongkir/delivery_cost/cost_data_model.dart';
 import 'package:roomart/domain/raja_ongkir/delivery_cost/costs.dart';
 import 'package:roomart/domain/transaction/transaction_data_model.dart';
@@ -14,21 +15,93 @@ class TransactionController extends GetxController {
   List<TransactionDataModel> cancelledTransaction = <TransactionDataModel>[];
   List<TransactionDataModel> notPaidTransaction = <TransactionDataModel>[];
   List<TransactionDataModelV2> finishedTransaction = <TransactionDataModelV2>[];
-  List<List<CostDataModel>> costList = <List<CostDataModel>>[];
+  List<CostDataModel> costList = <CostDataModel>[];
   Rx<Costs> selectedDelivery = Costs().obs;
+
+  Rx<DiscountDataModel> selectedDiscount = DiscountDataModel().obs;
+
+//Payment
+
+  double calculateGrandTotal(double subtotal) {
+    //subtotal - discount + ongkos kirim
+
+    var _discount = double.parse(calculateDiscount(subtotal));
+    var _ongkos = calculateDeliveryCost();
+    return subtotal - _discount + _ongkos;
+  }
+
+//Discount
+  List<DiscountDataModel> listDiscount = <DiscountDataModel>[];
+
+  List<DiscountDataModel> getDiscountList(String userTypeId) {
+    return this.listDiscount;
+  }
+  // List<DiscountDataModel> getDiscountList(String userTypeId) {
+  //   DateTime dateTime = DateTime.now();
+  //   List<DiscountDataModel> list = [];
+  //   listDiscount.forEach((element) {
+  //     if (element.customerTypeId == userTypeId) {
+  //       final startTime = DateTime.parse(element.eventEndDate);
+  //       final endTime = DateTime.parse(element.eventBeginDate);
+  //       if (dateTime.isAfter(startTime) && dateTime.isBefore(endTime)) {
+  //         list.add(element);
+  //       }
+  //     } else {}
+  //   });
+  //   return list;
+  // }
+
+  void setSelectedDiscount(DiscountDataModel discount) {
+    this.selectedDiscount.value = discount;
+    update();
+  }
+
+  DiscountDataModel get getSelectedDiscount => this.selectedDiscount.value;
+
+  void setDiscount(List<DiscountDataModel> list) {
+    this.listDiscount = list;
+  }
+
+  String calculateDiscount(double subTotal) {
+    if (getSelectedDiscount.eventDiscount == null) {
+      return 0.toString();
+    } else {
+      var _stringPercent = getSelectedDiscount.eventDiscount.split("%").first;
+      var _doublePercent = double.tryParse(_stringPercent);
+      if (_doublePercent == null) {
+        return 0.toString();
+      } else {
+        return (subTotal * _doublePercent / 100).toString();
+      }
+    }
+  }
+
   //COSTLIST
 
-  void setCostList(List<List<CostDataModel>> data) {
+  void setCostList(List<CostDataModel> data) {
     this.costList = data;
   }
 
   void setDeliveryCost(Costs costs) {
     this.selectedDelivery.value = costs;
+    update();
   }
 
   Costs get getSelectedCost => this.selectedDelivery.value;
 
-  List<List<CostDataModel>> get getCostList => this.costList;
+  double calculateDeliveryCost() {
+    if (selectedDelivery.value == null) {
+      return 0;
+    } else {
+      try {
+        return double.parse(getSelectedCost.cost.first.value.toString());
+      } catch (e) {
+        return 0;
+      }
+    }
+  }
+
+  List<CostDataModel> get getCostList => this.costList;
 
 //Transaction  history
 

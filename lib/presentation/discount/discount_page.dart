@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/application/auth/auth_cubit.dart';
+import 'package:roomart/application/transaction/transaction_controller.dart';
 import 'package:roomart/domain/models/discount/discount_data_model.dart';
 import 'package:roomart/domain/user/user_data_model.dart';
 import 'package:roomart/presentation/widgets/button_collection.dart';
@@ -17,6 +18,7 @@ class DiscountPage extends StatefulWidget {
 
 class _DiscountPageState extends State<DiscountPage> {
   final authController = Get.put(AuthController());
+  final transController = Get.put(TransactionController());
   UserDataModel user;
   @override
   void initState() {
@@ -27,7 +29,9 @@ class _DiscountPageState extends State<DiscountPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          title: Text("Discount"),
+        ),
         body: SingleChildScrollView(
           child: Container(
             margin: EdgeInsets.all(15),
@@ -44,6 +48,10 @@ class _DiscountPageState extends State<DiscountPage> {
                   onPressed: () {},
                 ),
               ),
+              Divider(
+                height: 30,
+                thickness: 2,
+              ),
               BlocProvider(
                 create: (context) => getIt<AuthCubit>()..getAvailableDiscount(),
                 child: BlocConsumer<AuthCubit, AuthState>(
@@ -54,11 +62,24 @@ class _DiscountPageState extends State<DiscountPage> {
                           print(e);
                         },
                         onGetAvailableDiscount: (e) {
-                          authController.setDiscount(e.list);
+                          transController.setDiscount(e.list);
                         });
                   },
                   builder: (context, state) {
-                    return DiscountList();
+                    if (transController.getDiscountList(user.userId).length ==
+                        0) {
+                      return Center(
+                          child: Text(
+                        "No Discount Available",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 30,
+                            color: Colors.grey),
+                      ));
+                    } else
+                      return DiscountList(
+                        typeId: user.typeIds,
+                      );
                   },
                 ),
               )
@@ -69,20 +90,37 @@ class _DiscountPageState extends State<DiscountPage> {
 }
 
 class DiscountList extends StatelessWidget {
-  const DiscountList({
-    Key key,
-  }) : super(key: key);
-
+  const DiscountList({Key key, @required this.typeId}) : super(key: key);
+  final String typeId;
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<AuthController>(
-      builder: (auth) => ListView(
+    return GetBuilder<TransactionController>(
+      builder: (trans) => ListView(
         shrinkWrap: true,
         physics: NeverScrollableScrollPhysics(),
-        children: auth
-            .getDiscountList(auth.getUserDataModel.typeIds)
-            .map((e) => ListTile(
-                  title: Text(e.eventDiscount),
+        children: trans
+            .getDiscountList(typeId)
+            .map((e) => Card(
+                  elevation: 4,
+                  child: ListTile(
+                    subtitle: Text(
+                      e.eventDiscount,
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    trailing: TextButton(
+                        onPressed: () {
+                          trans.setSelectedDiscount(e);
+                          Get.back();
+                        },
+                        child: Text(
+                          "Gunakan promo",
+                          style: TextStyle(color: Colors.green),
+                        )),
+                    title: Text(
+                      e.customerName,
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
                 ))
             .toList(),
       ),

@@ -5,6 +5,14 @@ import '../../domain/category/category_model.dart';
 class Pref {
   final box = GetStorage();
 
+  Future<void> logOut() async {
+    try {
+      await box.erase();
+    } catch (e) {
+      throw (e);
+    }
+  }
+
   Future<void> saveUserDataToLocal(dynamic userData) async {
     try {
       await box.write('user_data', userData);

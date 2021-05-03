@@ -33,6 +33,7 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
   @override
   void initState() {
     userDataModel = userController.getUserDataModel;
+    selectedPayment = paymentController.getSelectedPaymentMethod;
     super.initState();
   }
 
@@ -138,11 +139,13 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
           message: "Saldo tidak cukup",
         ));
       } else {
+        paymentController.setSelectedPaymentMethod(val);
         setState(() {
           selectedPayment = val;
         });
       }
     } else {
+      paymentController.setSelectedPaymentMethod(val);
       setState(() {
         selectedPayment = val;
       });

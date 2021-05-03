@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:roomart/domain/item/cart_data_collection_model.dart';
 import 'package:roomart/domain/item/data_item_model.dart';
-import 'package:roomart/domain/item/trans_item/bought_item_data_model.dart';
+import 'package:roomart/domain/transaction/trans_item/bought_item_data_model.dart';
 
 class CartController extends GetxController {
   List<CartDataCollectionModel> cartCollection =
@@ -71,6 +71,17 @@ class CartController extends GetxController {
     });
     subTotal.value = _subtotal;
     return subTotal.value.toString();
+  }
+
+  double getCartSubTotalDouble() {
+    var _subtotal = 0.0;
+
+    cartCollection.forEach((element) {
+      _subtotal +=
+          int.parse(element.bought.qty) * double.parse(element.bought.price);
+    });
+    subTotal.value = _subtotal;
+    return subTotal.value;
   }
 
   List<CartDataCollectionModel> get getCartItemData => this.cartCollection;

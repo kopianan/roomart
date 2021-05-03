@@ -12,8 +12,8 @@ abstract class ITrajaOngkirFacade {
   Future<Either<String, List<ProvinceDataModel>>> getProvinceList();
   Future<Either<String, List<FullDataModel>>> getCityDataList(
       String provinceId);
-  Future<Either<String, List<List<CostDataModel>>>> getCost(
-      CostRequestModel costRequestModel, List<String> courierCode);
+  Future<Either<String, List<CostDataModel>>> getCost(
+      CostRequestModel costRequestModel);
 }
 
 @LazySingleton(as: ITrajaOngkirFacade)
@@ -64,37 +64,66 @@ class RajaongkirRepository extends ITrajaOngkirFacade {
   }
 
   @override
-  Future<Either<String, List<List<CostDataModel>>>> getCost(
-      CostRequestModel costRequestModel, List<String> courierCode) async {
-    List<List<CostDataModel>> listCosts = <List<CostDataModel>>[];
-
-    var _baseUrl = "https://api.rajaongkir.com/starter/cost";
-    var _req = costRequestModel;
-    List<String> listOfCourier = courierCode;
-
-    var _dioList = listOfCourier.map(
-      (e) {
-        return dio.post(_baseUrl,
-            data: _req.copyWith(courier: e).toJson(),
-            options:
-                Options(headers: {"key": "e1eedfd1a43f04a99122dbcc2f4a0291"}));
-      },
-    ).toList();
+  Future<Either<String, List<CostDataModel>>> getCost(
+      CostRequestModel costRequestModel) async {
+    var _baseUrl = "https://pro.rajaongkir.com/api/cost";
+    Response response;
+    String courier = "";
+    costRequestModel.courirList.forEach((element) {
+      if(element.label != "default")
+      courier += element.label + ":";
+    });
+    var _newRequest = costRequestModel.copyWith(courier: courier.substring(0, courier.length-1));
+    print(_newRequest);
     try {
-      List<Response> listResponse = await Future.wait(_dioList);
+      response = await dio.post(_baseUrl,
+          data: _newRequest.toJson(),
+          options:
+              Options(headers: {"key": "e1eedfd1a43f04a99122dbcc2f4a0291"}));
 
-      listResponse.forEach(
-        (element) {
-          List _listResponse = element.data['rajaongkir']['results'];
-          var _listConverted =
-              _listResponse.map((e) => CostDataModel.fromJson(e)).toList();
-          listCosts.add(_listConverted);
-        },
-      );
+      List _list = response.data['rajaongkir']['results'];
 
-      return right(listCosts);
+      var _listConverted = _list.map((e) => CostDataModel.fromJson(e)).toList();
+      print(_listConverted);
+      return right(_listConverted);
     } catch (e) {
+      print(e);
       return left(e.toString());
     }
   }
+
+  // @override
+  // Future<Either<String, List<List<CostDataModel>>>> getCost(
+  //     CostRequestModel costRequestModel, List<String> courierCode) async {
+  //   List<List<CostDataModel>> listCosts = <List<CostDataModel>>[];
+
+  //   var _baseUrl = "https://pro.rajaongkir.com/api/cost";
+  //   var _req = costRequestModel;
+  //   List<String> listOfCourier = courierCode;
+
+  //   var _dioList = listOfCourier.map(
+  //     (e) {
+  //       return dio.post(_baseUrl,
+  //           data: _req.copyWith(courier: e).toJson(),
+  //           options:
+  //               Options(headers: {"key": "e1eedfd1a43f04a99122dbcc2f4a0291"}));
+  //     },
+  //   ).toList();
+  //   try {
+  //     List<Response> listResponse = await Future.wait(_dioList);
+
+  //     listResponse.forEach(
+  //       (element) {
+  //         List _listResponse = element.data['rajaongkir']['results'];
+  //         var _listConverted =
+  //             _listResponse.map((e) => CostDataModel.fromJson(e)).toList();
+  //         listCosts.add(_listConverted);
+  //       },
+  //     );
+
+  //     return right(listCosts);
+  //   } catch (e) {
+  //     return left(e.toString());
+  //   }
+  // }
 }

@@ -41,10 +41,10 @@ class RajaongkirCubit extends Cubit<RajaongkirState> {
     }
   }
 
-  void getCost(CostRequestModel request, List<String> courier) async {
+  void getCost(CostRequestModel request) async {
     emit(RajaongkirState.loading());
     try {
-      final _result = await iTrajaOngkirFacade.getCost(request, courier);
+      final _result = await iTrajaOngkirFacade.getCost(request);
       _result.fold(
         (l) => emit(RajaongkirState.error(l.toString())),
         (r) => emit(RajaongkirState.getCostsList(r)),

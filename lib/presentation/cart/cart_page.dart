@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/application/core/cart_controller.dart';
+import 'package:roomart/presentation/dashboard/dashboard_page.dart';
 import 'package:roomart/presentation/payment/payment_page.dart';
 import 'package:roomart/presentation/widgets/button_collection.dart';
 import 'package:roomart/utils/formater.dart';
@@ -9,6 +11,7 @@ import 'widget/cart_list_item.dart';
 
 class CartPage extends StatelessWidget {
   static final String TAG = '/cart_page';
+  final authController = Get.put(AuthController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,7 +68,7 @@ class CartPage extends StatelessWidget {
                         Container(
                           child: Text("Total Belanja",
                               style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.bold)),
+                                  fontSize: 18, fontWeight: FontWeight.w300)),
                         ),
                         Container(
                           child: GetX<CartController>(
@@ -73,7 +76,7 @@ class CartPage extends StatelessWidget {
                                 Formatter()
                                     .formatStringCurrency(_.getCartSubTotal()),
                                 style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold)),
+                                    fontSize: 18, fontWeight: FontWeight.bold)),
                           ),
                         ),
                       ],
@@ -88,7 +91,16 @@ class CartPage extends StatelessWidget {
                             color: Colors.orange,
                             text: "Lanjutkan Pembayaran",
                             onPressed: () {
-                              Get.toNamed(PaymentPage.TAG);
+                              if (authController.getUserDataModel == null ||
+                                  authController.getUserDataModel.userId ==
+                                      null) {
+                                Get.offNamedUntil(
+                                  DashboardPage.TAG,
+                                  ModalRoute.withName(DashboardPage.TAG),
+                                );
+                              } else {
+                                Get.toNamed(PaymentPage.TAG);
+                              }
                             },
                           ))),
                 ],

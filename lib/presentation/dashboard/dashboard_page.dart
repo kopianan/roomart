@@ -16,36 +16,63 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
-  int _currentIndex = 0;
+  final CartController cartController = Get.put(CartController());
+  int bottomSelectedIndex = 0;
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
-  void _onTabTapped(int index) {
+  final authController = Get.put(AuthController());
+  PageController pageController = PageController(
+    initialPage: 0,
+    keepPage: true,
+  );
+
+  void pageChanged(int index) {
     setState(() {
-      _currentIndex = index;
+      bottomSelectedIndex = index;
     });
   }
 
-  final CartController cartController = Get.put(CartController());
-  List<Widget> _children = <Widget>[
-    HomePage(),
-    CategoryPage(),
-    AuthPage(),
-    // MePage()
-  ];
-  final authController = Get.put(AuthController());
-  @override
-  void initState() {
-    super.initState();
+  void bottomTapped(int index) {
+    setState(() {
+      bottomSelectedIndex = index;
+
+      // pageController.animateToPage(index,
+      //     duration: Duration(milliseconds: 500), curve: Curves.ease);
+      pageController.jumpToPage(index);
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
+
       appBar: AppBar(),
       drawer: Drawer(),
-      body: _children[_currentIndex],
+      body: PageView(
+        physics: NeverScrollableScrollPhysics(),
+        controller: pageController,
+        onPageChanged: (index) {
+          pageChanged(index);
+        },
+        children: <Widget>[
+          HomePage(),
+          CategoryPage(),
+
+          GetX<AuthController>(builder: (auth) {
+            if (auth.getUserDataModel.userId == null) {
+              return AuthPage();
+            } else {
+              return MePage();
+            }
+          }),
+          // MePage()
+        ],
+      ),
+      //  _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        onTap: _onTabTapped,
-        currentIndex: _currentIndex,
+        onTap: bottomTapped,
+        currentIndex: bottomSelectedIndex,
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(label: "Home", icon: Icon(Icons.home)),

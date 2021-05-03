@@ -8,10 +8,20 @@ import 'package:roomart/utils/constants.dart';
 class PaymentController extends GetxController {
   List<PaymentMethodDataModel> paymentMethodList =
       <PaymentMethodDataModel>[].obs;
+  Rx<PaymentMethodDataModel> selectedPaymentMethod =
+      PaymentMethodDataModel().obs;
+
   final constants = Constants();
   void setPaymentMethodList(List<PaymentMethodDataModel> method) {
     this.paymentMethodList = method;
   }
+
+  void setSelectedPaymentMethod(PaymentMethodDataModel data) {
+    this.selectedPaymentMethod.value = data;
+  }
+
+  PaymentMethodDataModel get getSelectedPaymentMethod =>
+      this.selectedPaymentMethod.value;
 
   List<PaymentMethodDataModel> getFilteredPaymentMethodByUserType(
       String currentUserTypeId) {

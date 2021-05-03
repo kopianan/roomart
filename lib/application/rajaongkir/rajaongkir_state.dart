@@ -10,5 +10,5 @@ abstract class RajaongkirState with _$RajaongkirState {
   const factory RajaongkirState.getCityData(List<FullDataModel> result) =
       _GetCityData;
   const factory RajaongkirState.getCostsList(
-      List<List<CostDataModel>> costDataModel) = _GetCostsList;
+      List<CostDataModel> costDataModel) = _GetCostsList;
 }

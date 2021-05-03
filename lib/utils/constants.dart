@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:roomart/application/rajaongkir/ongkir_code_data_model.dart';
+
 class Constants {
   static const icon_launcher = "assets/roomart_logo2.png";
   static const resellerImage = "assets/reseller_image.png";
@@ -35,17 +37,33 @@ class Constants {
   String transactionTypeCredit = "138120846724201371547";
   String transactionTypeTransfer = "DM141509272240368323714";
 
-  String itemIdDefault = "DM157164867164000968368";
-  String itemIdJNE = "DM153371469972881510952";
-  String itemIdWahana = "DM153387475973542371076";
-  String itemIdJNT = "DM153371502365082947469";
-  String itemIdNinja = "DM153371448406579748777";
-
-  String itemCodeDefault = "99010001";
-  String itemCodeNinja = "991403";
-  String itemCodeJnt = "991405";
-  String itemCodeWahana = "991407";
-  String itemCodeJne = "991404";
+  List<OngkirCodeDataModel> courierList = [
+    OngkirCodeDataModel(
+        code: "99010001",
+        id: "DM157164867164000968368",
+        label: "default",
+        name: "Default"),
+    OngkirCodeDataModel(
+        code: "991403",
+        id: "DM153371469972881510952",
+        label: "ninja",
+        name: "Ninja"),
+    OngkirCodeDataModel(
+        code: "991405",
+        id: "DM153371502365082947469",
+        label: "jnt",
+        name: "J&T"),
+    OngkirCodeDataModel(
+        code: "991407",
+        id: "DM153387475973542371076",
+        label: "wahana",
+        name: "Wahana"),
+    OngkirCodeDataModel(
+        code: "991404",
+        id: "DM153371448406579748777",
+        label: "jne",
+        name: "JNE"),
+  ];
 
   String contactUs =
       "Menerima pembelian secara GROSIR, ECERAN dan DROPSHIP. Kami menjual berbagai kebutuhan unntuk memperindah rumah. Terlengkap dan Terperca di Indonesia, kami menyediakan beragam produk berkualiatas dengan harga terjangkau. \n\nBuka pada hari senin-jumat jam 08:00 - 17:00\ndan pada hari sabtu jam 08.00 - 15.00\n\nPesanan diproses sesuai urutan order.\n\n----\nWhatsapp 0813-1037-1607";
@@ -59,7 +77,6 @@ class Constants {
     "akulaku"
   ];
   var enabledPaymentDev = ["credit_card", "akulaku"];
-  List<String> courierList = ["jne", "tiki", "pos"];
   String credentialBaseAuthMidtrans = "Mid-server-lnQZNDM1m-f4lBFXHY_AQrSx:";
 
   String radioButtonMidtrans =

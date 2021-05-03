@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
+import 'package:get/get.dart';
+import 'package:roomart/application/auth/auth_controller.dart';
+import 'package:roomart/infrastructure/core/pref.dart';
+import 'package:roomart/presentation/dashboard/dashboard_page.dart';
 import 'package:roomart/presentation/me/order_page.dart';
+import 'package:roomart/presentation/splash_screen/splash_screen_page.dart';
+import 'package:roomart/utils/formater.dart';
 
 class MePage extends StatefulWidget {
   @override
@@ -8,6 +13,7 @@ class MePage extends StatefulWidget {
 }
 
 class _MePageState extends State<MePage> {
+  final authController = Get.put(AuthController());
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -16,86 +22,47 @@ class _MePageState extends State<MePage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+            width: double.infinity,
             padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
             decoration: BoxDecoration(
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.grey[200],
-                      offset: Offset(1, 1),
-                      blurRadius: 2,
-                      spreadRadius: 2)
-                ],
-                borderRadius: BorderRadius.circular(10)),
-            child: Row(children: [
-              CircleAvatar(
-                backgroundColor: Colors.green,
-                radius: 35,
-              ),
-              SizedBox(width: 10),
-              Expanded(
-                child: Text(
-                  "Name Here",
-                  maxLines: 2,
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
+              color: Colors.purple[900],
+            ),
+            child: Column(
+              children: [
+                CircleAvatar(
+                  backgroundColor: Colors.green,
+                  radius: 50,
                 ),
-              ),
-              InkWell(
-                child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                  decoration: BoxDecoration(
-                      color: Colors.yellow,
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.grey[300],
-                            spreadRadius: 2,
-                            blurRadius: 2,
-                            offset: Offset(2, 3))
-                      ],
-                      borderRadius: BorderRadius.circular(10)),
+                SizedBox(height: 20),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 10),
                   child: Text(
-                    "Rp.1.000.000",
+                   authController.getUserDataModel.fullName,
+                    maxLines: 2,
                     style: TextStyle(
-                      fontSize: 17,
-                      color: Colors.black,
+                      fontSize: 28,
+                      color: Colors.white,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
-              ),
-            ]),
-          ),
-          SizedBox(height: 20),
-          ListTile(
-            title: Text(
-              "On Progress Transaction",
-              style: TextStyle(fontWeight: FontWeight.bold),
+                SizedBox(height: 20),
+              ],
             ),
-            trailing: Container(
-              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-              decoration: BoxDecoration(
-                  color: Colors.teal[200],
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey[300],
-                        spreadRadius: 2,
-                        blurRadius: 2,
-                        offset: Offset(2, 3))
-                  ],
-                  borderRadius: BorderRadius.circular(10)),
-              child: Text(
-                "Rp.1.000.000",
-                style: TextStyle(
-                  fontSize: 17,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+          ),
+          Container(
+            child: Row(
+              children: [
+                Expanded(
+                    child: saldoContainer(
+                  "Total Saldo",
+                  "1000",
+                  Colors.yellow,
+                )),
+                Expanded(
+                    child: saldoContainer("Dalam Proses", "1000", Colors.purple,
+                        textColor: Colors.white)),
+              ],
             ),
           ),
           SizedBox(height: 20),
@@ -125,13 +92,80 @@ class _MePageState extends State<MePage> {
                 color: Colors.red,
                 icon: Icons.logout,
                 text: "Log Out",
-                onTap: () {},
+                onTap: () {
+                  Get.dialog(AlertDialog(
+                    title: Text("Log out"),
+                    content: Text("Log out the application"),
+                    actions: [
+                      TextButton(
+                        onPressed: () {
+                          Pref().logOut().then((value) {
+                            Get.offAllNamed(DashboardPage.TAG);
+                            authController.removeUserData();
+                            Get.showSnackbar(
+                              GetBar(
+                                  message: "Log out user",
+                                  duration: Duration(seconds: 3)),
+                            ).catchError((onError) {
+                              Get.showSnackbar(GetBar(
+                                  message: "Something wrong",
+                                  duration: Duration(seconds: 3)));
+                            });
+                          });
+                        },
+                        child: Text("Log out",
+                            style: TextStyle(
+                              color: Colors.red,
+                            )),
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          Get.back();
+                        },
+                        child: Text("Back",
+                            style: TextStyle(
+                              color: Colors.red,
+                            )),
+                      ),
+                    ],
+                  ));
+                },
               ),
             ],
           )
         ],
       ),
     ));
+  }
+
+  Container saldoContainer(String label, String value, Color bgColor,
+      {Color textColor = Colors.black}) {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 10),
+      decoration: BoxDecoration(
+        color: bgColor,
+      ),
+      child: Column(
+        children: [
+          Text(
+            label,
+            style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.w300,
+            ),
+          ),
+          SizedBox(height: 5),
+          Text(
+            Formatter().formatStringCurrency(value),
+            style: TextStyle(
+              fontSize: 17,
+              color: textColor,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
 
@@ -163,7 +197,7 @@ class MenuTiles extends StatelessWidget {
             color: color,
           ),
         ),
-        Divider()
+        Divider(color: Colors.orange,)
       ],
     );
   }
