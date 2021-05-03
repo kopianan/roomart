@@ -19,19 +19,19 @@ class _$TransactionItemDataModelTearOff {
 
 // ignore: unused_element
   _TransactionItemDataModel call(
-      {@JsonKey(name: "ID") String iD,
-      @JsonKey(name: "TransactionID") String transactionID,
-      @JsonKey(name: "ItemID") String itemID,
-      @JsonKey(name: "ItemName") String itemName,
-      @JsonKey(name: "Qty") int qty,
-      @JsonKey(name: "ResellerPrice") double resellerPrice,
-      @JsonKey(name: "Price") double price,
-      @JsonKey(name: "Cashback") double cashback,
-      @JsonKey(name: "ItemImage") String itemImage,
-      @JsonKey(name: "Unit") String unit,
-      @JsonKey(name: "Tax") String tax,
-      @JsonKey(name: "Discount") double discount,
-      @JsonKey(name: "Date") String date}) {
+      {@JsonKey(name: 'ID') String iD,
+      @JsonKey(name: 'TransactionID') String transactionID,
+      @JsonKey(name: 'ItemID') String itemID,
+      @JsonKey(name: 'ItemName') String itemName,
+      @JsonKey(name: 'Qty') int qty,
+      @JsonKey(name: 'ResellerPrice') double resellerPrice,
+      @JsonKey(name: 'Price') double price,
+      @JsonKey(name: 'Cashback') double cashback,
+      @JsonKey(name: 'ItemImage') String itemImage,
+      @JsonKey(name: 'Unit') String unit,
+      @JsonKey(name: 'Tax') String tax,
+      @JsonKey(name: 'Discount') double discount,
+      @JsonKey(name: 'Date') String date}) {
     return _TransactionItemDataModel(
       iD: iD,
       transactionID: transactionID,
@@ -61,31 +61,31 @@ const $TransactionItemDataModel = _$TransactionItemDataModelTearOff();
 
 /// @nodoc
 mixin _$TransactionItemDataModel {
-  @JsonKey(name: "ID")
+  @JsonKey(name: 'ID')
   String get iD;
-  @JsonKey(name: "TransactionID")
+  @JsonKey(name: 'TransactionID')
   String get transactionID;
-  @JsonKey(name: "ItemID")
+  @JsonKey(name: 'ItemID')
   String get itemID;
-  @JsonKey(name: "ItemName")
+  @JsonKey(name: 'ItemName')
   String get itemName;
-  @JsonKey(name: "Qty")
+  @JsonKey(name: 'Qty')
   int get qty;
-  @JsonKey(name: "ResellerPrice")
+  @JsonKey(name: 'ResellerPrice')
   double get resellerPrice;
-  @JsonKey(name: "Price")
+  @JsonKey(name: 'Price')
   double get price;
-  @JsonKey(name: "Cashback")
+  @JsonKey(name: 'Cashback')
   double get cashback;
-  @JsonKey(name: "ItemImage")
+  @JsonKey(name: 'ItemImage')
   String get itemImage;
-  @JsonKey(name: "Unit")
+  @JsonKey(name: 'Unit')
   String get unit;
-  @JsonKey(name: "Tax")
+  @JsonKey(name: 'Tax')
   String get tax;
-  @JsonKey(name: "Discount")
+  @JsonKey(name: 'Discount')
   double get discount;
-  @JsonKey(name: "Date")
+  @JsonKey(name: 'Date')
   String get date;
 
   Map<String, dynamic> toJson();
@@ -99,19 +99,19 @@ abstract class $TransactionItemDataModelCopyWith<$Res> {
           $Res Function(TransactionItemDataModel) then) =
       _$TransactionItemDataModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: "ID") String iD,
-      @JsonKey(name: "TransactionID") String transactionID,
-      @JsonKey(name: "ItemID") String itemID,
-      @JsonKey(name: "ItemName") String itemName,
-      @JsonKey(name: "Qty") int qty,
-      @JsonKey(name: "ResellerPrice") double resellerPrice,
-      @JsonKey(name: "Price") double price,
-      @JsonKey(name: "Cashback") double cashback,
-      @JsonKey(name: "ItemImage") String itemImage,
-      @JsonKey(name: "Unit") String unit,
-      @JsonKey(name: "Tax") String tax,
-      @JsonKey(name: "Discount") double discount,
-      @JsonKey(name: "Date") String date});
+      {@JsonKey(name: 'ID') String iD,
+      @JsonKey(name: 'TransactionID') String transactionID,
+      @JsonKey(name: 'ItemID') String itemID,
+      @JsonKey(name: 'ItemName') String itemName,
+      @JsonKey(name: 'Qty') int qty,
+      @JsonKey(name: 'ResellerPrice') double resellerPrice,
+      @JsonKey(name: 'Price') double price,
+      @JsonKey(name: 'Cashback') double cashback,
+      @JsonKey(name: 'ItemImage') String itemImage,
+      @JsonKey(name: 'Unit') String unit,
+      @JsonKey(name: 'Tax') String tax,
+      @JsonKey(name: 'Discount') double discount,
+      @JsonKey(name: 'Date') String date});
 }
 
 /// @nodoc
@@ -169,19 +169,19 @@ abstract class _$TransactionItemDataModelCopyWith<$Res>
       __$TransactionItemDataModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: "ID") String iD,
-      @JsonKey(name: "TransactionID") String transactionID,
-      @JsonKey(name: "ItemID") String itemID,
-      @JsonKey(name: "ItemName") String itemName,
-      @JsonKey(name: "Qty") int qty,
-      @JsonKey(name: "ResellerPrice") double resellerPrice,
-      @JsonKey(name: "Price") double price,
-      @JsonKey(name: "Cashback") double cashback,
-      @JsonKey(name: "ItemImage") String itemImage,
-      @JsonKey(name: "Unit") String unit,
-      @JsonKey(name: "Tax") String tax,
-      @JsonKey(name: "Discount") double discount,
-      @JsonKey(name: "Date") String date});
+      {@JsonKey(name: 'ID') String iD,
+      @JsonKey(name: 'TransactionID') String transactionID,
+      @JsonKey(name: 'ItemID') String itemID,
+      @JsonKey(name: 'ItemName') String itemName,
+      @JsonKey(name: 'Qty') int qty,
+      @JsonKey(name: 'ResellerPrice') double resellerPrice,
+      @JsonKey(name: 'Price') double price,
+      @JsonKey(name: 'Cashback') double cashback,
+      @JsonKey(name: 'ItemImage') String itemImage,
+      @JsonKey(name: 'Unit') String unit,
+      @JsonKey(name: 'Tax') String tax,
+      @JsonKey(name: 'Discount') double discount,
+      @JsonKey(name: 'Date') String date});
 }
 
 /// @nodoc
@@ -239,61 +239,61 @@ class __$TransactionItemDataModelCopyWithImpl<$Res>
 /// @nodoc
 class _$_TransactionItemDataModel implements _TransactionItemDataModel {
   _$_TransactionItemDataModel(
-      {@JsonKey(name: "ID") this.iD,
-      @JsonKey(name: "TransactionID") this.transactionID,
-      @JsonKey(name: "ItemID") this.itemID,
-      @JsonKey(name: "ItemName") this.itemName,
-      @JsonKey(name: "Qty") this.qty,
-      @JsonKey(name: "ResellerPrice") this.resellerPrice,
-      @JsonKey(name: "Price") this.price,
-      @JsonKey(name: "Cashback") this.cashback,
-      @JsonKey(name: "ItemImage") this.itemImage,
-      @JsonKey(name: "Unit") this.unit,
-      @JsonKey(name: "Tax") this.tax,
-      @JsonKey(name: "Discount") this.discount,
-      @JsonKey(name: "Date") this.date});
+      {@JsonKey(name: 'ID') this.iD,
+      @JsonKey(name: 'TransactionID') this.transactionID,
+      @JsonKey(name: 'ItemID') this.itemID,
+      @JsonKey(name: 'ItemName') this.itemName,
+      @JsonKey(name: 'Qty') this.qty,
+      @JsonKey(name: 'ResellerPrice') this.resellerPrice,
+      @JsonKey(name: 'Price') this.price,
+      @JsonKey(name: 'Cashback') this.cashback,
+      @JsonKey(name: 'ItemImage') this.itemImage,
+      @JsonKey(name: 'Unit') this.unit,
+      @JsonKey(name: 'Tax') this.tax,
+      @JsonKey(name: 'Discount') this.discount,
+      @JsonKey(name: 'Date') this.date});
 
   factory _$_TransactionItemDataModel.fromJson(Map<String, dynamic> json) =>
       _$_$_TransactionItemDataModelFromJson(json);
 
   @override
-  @JsonKey(name: "ID")
+  @JsonKey(name: 'ID')
   final String iD;
   @override
-  @JsonKey(name: "TransactionID")
+  @JsonKey(name: 'TransactionID')
   final String transactionID;
   @override
-  @JsonKey(name: "ItemID")
+  @JsonKey(name: 'ItemID')
   final String itemID;
   @override
-  @JsonKey(name: "ItemName")
+  @JsonKey(name: 'ItemName')
   final String itemName;
   @override
-  @JsonKey(name: "Qty")
+  @JsonKey(name: 'Qty')
   final int qty;
   @override
-  @JsonKey(name: "ResellerPrice")
+  @JsonKey(name: 'ResellerPrice')
   final double resellerPrice;
   @override
-  @JsonKey(name: "Price")
+  @JsonKey(name: 'Price')
   final double price;
   @override
-  @JsonKey(name: "Cashback")
+  @JsonKey(name: 'Cashback')
   final double cashback;
   @override
-  @JsonKey(name: "ItemImage")
+  @JsonKey(name: 'ItemImage')
   final String itemImage;
   @override
-  @JsonKey(name: "Unit")
+  @JsonKey(name: 'Unit')
   final String unit;
   @override
-  @JsonKey(name: "Tax")
+  @JsonKey(name: 'Tax')
   final String tax;
   @override
-  @JsonKey(name: "Discount")
+  @JsonKey(name: 'Discount')
   final double discount;
   @override
-  @JsonKey(name: "Date")
+  @JsonKey(name: 'Date')
   final String date;
 
   @override
@@ -370,61 +370,61 @@ class _$_TransactionItemDataModel implements _TransactionItemDataModel {
 
 abstract class _TransactionItemDataModel implements TransactionItemDataModel {
   factory _TransactionItemDataModel(
-      {@JsonKey(name: "ID") String iD,
-      @JsonKey(name: "TransactionID") String transactionID,
-      @JsonKey(name: "ItemID") String itemID,
-      @JsonKey(name: "ItemName") String itemName,
-      @JsonKey(name: "Qty") int qty,
-      @JsonKey(name: "ResellerPrice") double resellerPrice,
-      @JsonKey(name: "Price") double price,
-      @JsonKey(name: "Cashback") double cashback,
-      @JsonKey(name: "ItemImage") String itemImage,
-      @JsonKey(name: "Unit") String unit,
-      @JsonKey(name: "Tax") String tax,
-      @JsonKey(name: "Discount") double discount,
-      @JsonKey(name: "Date") String date}) = _$_TransactionItemDataModel;
+      {@JsonKey(name: 'ID') String iD,
+      @JsonKey(name: 'TransactionID') String transactionID,
+      @JsonKey(name: 'ItemID') String itemID,
+      @JsonKey(name: 'ItemName') String itemName,
+      @JsonKey(name: 'Qty') int qty,
+      @JsonKey(name: 'ResellerPrice') double resellerPrice,
+      @JsonKey(name: 'Price') double price,
+      @JsonKey(name: 'Cashback') double cashback,
+      @JsonKey(name: 'ItemImage') String itemImage,
+      @JsonKey(name: 'Unit') String unit,
+      @JsonKey(name: 'Tax') String tax,
+      @JsonKey(name: 'Discount') double discount,
+      @JsonKey(name: 'Date') String date}) = _$_TransactionItemDataModel;
 
   factory _TransactionItemDataModel.fromJson(Map<String, dynamic> json) =
       _$_TransactionItemDataModel.fromJson;
 
   @override
-  @JsonKey(name: "ID")
+  @JsonKey(name: 'ID')
   String get iD;
   @override
-  @JsonKey(name: "TransactionID")
+  @JsonKey(name: 'TransactionID')
   String get transactionID;
   @override
-  @JsonKey(name: "ItemID")
+  @JsonKey(name: 'ItemID')
   String get itemID;
   @override
-  @JsonKey(name: "ItemName")
+  @JsonKey(name: 'ItemName')
   String get itemName;
   @override
-  @JsonKey(name: "Qty")
+  @JsonKey(name: 'Qty')
   int get qty;
   @override
-  @JsonKey(name: "ResellerPrice")
+  @JsonKey(name: 'ResellerPrice')
   double get resellerPrice;
   @override
-  @JsonKey(name: "Price")
+  @JsonKey(name: 'Price')
   double get price;
   @override
-  @JsonKey(name: "Cashback")
+  @JsonKey(name: 'Cashback')
   double get cashback;
   @override
-  @JsonKey(name: "ItemImage")
+  @JsonKey(name: 'ItemImage')
   String get itemImage;
   @override
-  @JsonKey(name: "Unit")
+  @JsonKey(name: 'Unit')
   String get unit;
   @override
-  @JsonKey(name: "Tax")
+  @JsonKey(name: 'Tax')
   String get tax;
   @override
-  @JsonKey(name: "Discount")
+  @JsonKey(name: 'Discount')
   double get discount;
   @override
-  @JsonKey(name: "Date")
+  @JsonKey(name: 'Date')
   String get date;
   @override
   @JsonKey(ignore: true)

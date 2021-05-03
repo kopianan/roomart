@@ -18,9 +18,11 @@ class _$TransRequestTearOff {
 
 // ignore: unused_element
   _TransRequest call(
-      @JsonKey(name: "sales_trans") List<TransPostDataModel> salesTrans) {
+      {@required String token,
+      @JsonKey(name: "sales_trans") List<TransPostDataModel> salesTrans}) {
     return _TransRequest(
-      salesTrans,
+      token: token,
+      salesTrans: salesTrans,
     );
   }
 
@@ -36,6 +38,7 @@ const $TransRequest = _$TransRequestTearOff();
 
 /// @nodoc
 mixin _$TransRequest {
+  String get token;
   @JsonKey(name: "sales_trans")
   List<TransPostDataModel> get salesTrans;
 
@@ -50,7 +53,8 @@ abstract class $TransRequestCopyWith<$Res> {
           TransRequest value, $Res Function(TransRequest) then) =
       _$TransRequestCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: "sales_trans") List<TransPostDataModel> salesTrans});
+      {String token,
+      @JsonKey(name: "sales_trans") List<TransPostDataModel> salesTrans});
 }
 
 /// @nodoc
@@ -63,9 +67,11 @@ class _$TransRequestCopyWithImpl<$Res> implements $TransRequestCopyWith<$Res> {
 
   @override
   $Res call({
+    Object token = freezed,
     Object salesTrans = freezed,
   }) {
     return _then(_value.copyWith(
+      token: token == freezed ? _value.token : token as String,
       salesTrans: salesTrans == freezed
           ? _value.salesTrans
           : salesTrans as List<TransPostDataModel>,
@@ -81,7 +87,8 @@ abstract class _$TransRequestCopyWith<$Res>
       __$TransRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: "sales_trans") List<TransPostDataModel> salesTrans});
+      {String token,
+      @JsonKey(name: "sales_trans") List<TransPostDataModel> salesTrans});
 }
 
 /// @nodoc
@@ -96,10 +103,12 @@ class __$TransRequestCopyWithImpl<$Res> extends _$TransRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object token = freezed,
     Object salesTrans = freezed,
   }) {
     return _then(_TransRequest(
-      salesTrans == freezed
+      token: token == freezed ? _value.token : token as String,
+      salesTrans: salesTrans == freezed
           ? _value.salesTrans
           : salesTrans as List<TransPostDataModel>,
     ));
@@ -110,25 +119,30 @@ class __$TransRequestCopyWithImpl<$Res> extends _$TransRequestCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_TransRequest implements _TransRequest {
-  _$_TransRequest(@JsonKey(name: "sales_trans") this.salesTrans)
-      : assert(salesTrans != null);
+  _$_TransRequest(
+      {@required this.token, @JsonKey(name: "sales_trans") this.salesTrans})
+      : assert(token != null);
 
   factory _$_TransRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_TransRequestFromJson(json);
 
+  @override
+  final String token;
   @override
   @JsonKey(name: "sales_trans")
   final List<TransPostDataModel> salesTrans;
 
   @override
   String toString() {
-    return 'TransRequest(salesTrans: $salesTrans)';
+    return 'TransRequest(token: $token, salesTrans: $salesTrans)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _TransRequest &&
+            (identical(other.token, token) ||
+                const DeepCollectionEquality().equals(other.token, token)) &&
             (identical(other.salesTrans, salesTrans) ||
                 const DeepCollectionEquality()
                     .equals(other.salesTrans, salesTrans)));
@@ -136,7 +150,9 @@ class _$_TransRequest implements _TransRequest {
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(salesTrans);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(token) ^
+      const DeepCollectionEquality().hash(salesTrans);
 
   @JsonKey(ignore: true)
   @override
@@ -151,12 +167,15 @@ class _$_TransRequest implements _TransRequest {
 
 abstract class _TransRequest implements TransRequest {
   factory _TransRequest(
-          @JsonKey(name: "sales_trans") List<TransPostDataModel> salesTrans) =
+          {@required String token,
+          @JsonKey(name: "sales_trans") List<TransPostDataModel> salesTrans}) =
       _$_TransRequest;
 
   factory _TransRequest.fromJson(Map<String, dynamic> json) =
       _$_TransRequest.fromJson;
 
+  @override
+  String get token;
   @override
   @JsonKey(name: "sales_trans")
   List<TransPostDataModel> get salesTrans;

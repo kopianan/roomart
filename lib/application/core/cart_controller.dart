@@ -27,6 +27,10 @@ class CartController extends GetxController {
         qty: "1",
         price: data.itemPrice,
         discount: "0",
+        itemImage: data.pic,
+        itemName: data.itemName,
+        resellerPrice: double.parse(data.newPrice),
+        tax: "NoPPN",
       );
 
       var _dta = CartDataCollectionModel(item: data, bought: _converted);
@@ -42,6 +46,10 @@ class CartController extends GetxController {
       qty: qty,
       price: data.itemPrice,
       discount: "0",
+      itemImage: data.pic,
+      itemName: data.itemName,
+      resellerPrice: double.parse(data.newPrice),
+      tax: "NoPPN",
     );
 
     var _dta = CartDataCollectionModel(item: data, bought: _converted);

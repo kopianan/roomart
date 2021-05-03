@@ -8,8 +8,12 @@ import 'package:roomart/application/auth/auth_cubit.dart';
 import 'package:roomart/application/core/cart_controller.dart';
 import 'package:roomart/application/payment/payment_controller.dart';
 import 'package:roomart/application/payment/payment_cubit.dart';
+import 'package:roomart/application/transaction/transaction_cubit.dart';
 import 'package:roomart/domain/core/payment_method_enum.dart';
 import 'package:roomart/domain/payment_method/payment_method_data_model.dart';
+import 'package:roomart/domain/transaction/trans_item/trans_post_data_model.dart';
+import 'package:roomart/domain/transaction/trans_item/trans_request.dart';
+import 'package:roomart/domain/transaction/transaction_data_model.dart';
 import 'package:roomart/domain/user/user_data_model.dart';
 import 'package:roomart/utils/constants.dart';
 import 'package:roomart/utils/formater.dart';
@@ -25,15 +29,18 @@ class PaymentMethodPage extends StatefulWidget {
 class _PaymentMethodPageState extends State<PaymentMethodPage> {
   final authCubit = getIt<AuthCubit>();
   final paymentCubit = getIt<PaymentCubit>();
+  final transCubit = getIt<TransactionCubit>();
   final userController = Get.put(AuthController());
   final cartController = Get.put(CartController());
   final paymentController = Get.put(PaymentController());
 
+  TransRequest transRequest;
   UserDataModel userDataModel;
   @override
   void initState() {
     userDataModel = userController.getUserDataModel;
     selectedPayment = paymentController.getSelectedPaymentMethod;
+
     super.initState();
   }
 
@@ -54,7 +61,7 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
               ),
               BlocProvider<PaymentCubit>(
                   create: (BuildContext context) =>
-                      paymentCubit..getPaymentMethodList())
+                      paymentCubit..getPaymentMethodList()),
             ],
             child: MultiBlocListener(
                 listeners: [
@@ -110,6 +117,7 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
                                               subtitle: checkSubtitle(e),
                                               onChanged: (val) {
                                                 _onChanged(val, auth);
+                                                //
                                               }))
                                       .toList(),
                                 );

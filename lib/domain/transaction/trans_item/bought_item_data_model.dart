@@ -12,6 +12,9 @@ abstract class BoughtItemDataModel with _$BoughtItemDataModel {
     @JsonKey(name: "unit") String unit,
     @JsonKey(name: "price") String price,
     @JsonKey(name: "tax") String tax,
+    @JsonKey(name: "item_name") String itemName,
+    @JsonKey(name: "reseller_price") double resellerPrice,
+    @JsonKey(name: "itemImage") String itemImage,
     @JsonKey(name: "discount") String discount,
   }) = _BoughtItemDataModel;
 
