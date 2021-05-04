@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:roomart/domain/transaction/trans_item/trans_response.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class PaymentMidtransPage extends StatefulWidget {
@@ -9,11 +10,11 @@ class PaymentMidtransPage extends StatefulWidget {
 }
 
 class _PaymentMidtransPageState extends State<PaymentMidtransPage> {
-  String url;
+  TransResponse url;
   @override
   void initState() {
     if (GetPlatform.isAndroid) WebView.platform = SurfaceAndroidWebView();
-    url = Get.arguments as String;
+    url = Get.arguments as TransResponse;
     super.initState();
   }
 
@@ -26,9 +27,7 @@ class _PaymentMidtransPageState extends State<PaymentMidtransPage> {
   @override
   Widget build(BuildContext context) {
     return WebView(
-
-      initialUrl:
-          "https://app.sandbox.midtrans.com/payment-links/1620053179187",
+      initialUrl: url.salesTrans.first.paymentGatewayUrl,
       javascriptMode: JavascriptMode.unrestricted,
       onWebViewCreated: (controller) {
         _controller = controller;

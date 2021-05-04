@@ -9,7 +9,7 @@ abstract class TransactionState with _$TransactionState {
       List<TransactionDataModel> data) = _OnGetHistoryTransaction;
   const factory TransactionState.onGetHistoryTransactionV2(
       List<TransactionDataModelV2> data) = _OnGetHistoryTransactionV2;
-  const factory TransactionState.onAddNewTransaction(String data) =
+  const factory TransactionState.onAddNewTransaction(TransResponse data) =
       _OnAddNewTransaction;
   const factory TransactionState.onCheckMidtransStatus(
       MidtransStatusDataModel data) = _OnCheckMidtransStatus;

@@ -18,8 +18,8 @@ class _$ProvinceDataModelTearOff {
 
 // ignore: unused_element
   _ProvinceDataModel call(
-      {@JsonKey(name: 'province_id') String provinceId,
-      @JsonKey(name: 'province') String province}) {
+      {@JsonKey(name: "province_id") String provinceId,
+      @JsonKey(name: "province") String province}) {
     return _ProvinceDataModel(
       provinceId: provinceId,
       province: province,
@@ -38,9 +38,9 @@ const $ProvinceDataModel = _$ProvinceDataModelTearOff();
 
 /// @nodoc
 mixin _$ProvinceDataModel {
-  @JsonKey(name: 'province_id')
+  @JsonKey(name: "province_id")
   String get provinceId;
-  @JsonKey(name: 'province')
+  @JsonKey(name: "province")
   String get province;
 
   Map<String, dynamic> toJson();
@@ -54,8 +54,8 @@ abstract class $ProvinceDataModelCopyWith<$Res> {
           ProvinceDataModel value, $Res Function(ProvinceDataModel) then) =
       _$ProvinceDataModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'province_id') String provinceId,
-      @JsonKey(name: 'province') String province});
+      {@JsonKey(name: "province_id") String provinceId,
+      @JsonKey(name: "province") String province});
 }
 
 /// @nodoc
@@ -88,8 +88,8 @@ abstract class _$ProvinceDataModelCopyWith<$Res>
       __$ProvinceDataModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'province_id') String provinceId,
-      @JsonKey(name: 'province') String province});
+      {@JsonKey(name: "province_id") String provinceId,
+      @JsonKey(name: "province") String province});
 }
 
 /// @nodoc
@@ -121,17 +121,17 @@ class __$ProvinceDataModelCopyWithImpl<$Res>
 /// @nodoc
 class _$_ProvinceDataModel implements _ProvinceDataModel {
   _$_ProvinceDataModel(
-      {@JsonKey(name: 'province_id') this.provinceId,
-      @JsonKey(name: 'province') this.province});
+      {@JsonKey(name: "province_id") this.provinceId,
+      @JsonKey(name: "province") this.province});
 
   factory _$_ProvinceDataModel.fromJson(Map<String, dynamic> json) =>
       _$_$_ProvinceDataModelFromJson(json);
 
   @override
-  @JsonKey(name: 'province_id')
+  @JsonKey(name: "province_id")
   final String provinceId;
   @override
-  @JsonKey(name: 'province')
+  @JsonKey(name: "province")
   final String province;
 
   @override
@@ -170,17 +170,17 @@ class _$_ProvinceDataModel implements _ProvinceDataModel {
 
 abstract class _ProvinceDataModel implements ProvinceDataModel {
   factory _ProvinceDataModel(
-      {@JsonKey(name: 'province_id') String provinceId,
-      @JsonKey(name: 'province') String province}) = _$_ProvinceDataModel;
+      {@JsonKey(name: "province_id") String provinceId,
+      @JsonKey(name: "province") String province}) = _$_ProvinceDataModel;
 
   factory _ProvinceDataModel.fromJson(Map<String, dynamic> json) =
       _$_ProvinceDataModel.fromJson;
 
   @override
-  @JsonKey(name: 'province_id')
+  @JsonKey(name: "province_id")
   String get provinceId;
   @override
-  @JsonKey(name: 'province')
+  @JsonKey(name: "province")
   String get province;
   @override
   @JsonKey(ignore: true)

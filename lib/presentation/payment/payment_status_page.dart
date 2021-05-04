@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:roomart/application/transaction/transaction_cubit.dart';
+import 'package:roomart/domain/transaction/trans_item/midtrans_status_data_model.dart';
 import 'package:roomart/injection.dart';
 
 class PaymentStatusPage extends StatefulWidget {
@@ -13,11 +14,11 @@ class PaymentStatusPage extends StatefulWidget {
 class _PaymentStatusPageState extends State<PaymentStatusPage>
     with WidgetsBindingObserver {
   final transactionCubit = getIt<TransactionCubit>();
-  String orderId;
+  MidtransStatusDataModel midtransStatusDataModel;
 
   @override
   void initState() {
-    orderId = Get.arguments as String;
+    midtransStatusDataModel = Get.arguments as MidtransStatusDataModel;
     super.initState();
     WidgetsBinding.instance.addObserver(this);
   }
@@ -26,7 +27,7 @@ class _PaymentStatusPageState extends State<PaymentStatusPage>
   void didChangeAppLifecycleState(AppLifecycleState state) {
     switch (state) {
       case AppLifecycleState.resumed:
-        transactionCubit.checkMidtransTransactionStatus(orderId);
+        // transactionCubit.checkMidtransTransactionStatus(orderId);
         break;
       case AppLifecycleState.inactive:
         print("app in inactive");
@@ -50,8 +51,7 @@ class _PaymentStatusPageState extends State<PaymentStatusPage>
   Widget build(BuildContext context) {
     return Scaffold(
       body: BlocProvider(
-        create: (context) =>
-            transactionCubit..checkMidtransTransactionStatus(orderId),
+        create: (context) => transactionCubit,
         child: BlocConsumer<TransactionCubit, TransactionState>(
           listener: (context, state) {
             state.maybeMap(
@@ -65,7 +65,8 @@ class _PaymentStatusPageState extends State<PaymentStatusPage>
             );
           },
           builder: (context, state) {
-            return Container();
+            return Container(
+                child: Text(midtransStatusDataModel.toJson().toString()));
           },
         ),
       ),

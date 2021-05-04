@@ -18,8 +18,12 @@ class CategoryController extends GetxController {
 
     categoryFull
         .removeWhere((data) => data.count == "0" && data.hasChild == "false");
-    categoryFull.removeWhere(
-        (data) => data.countTotal == "0" && data.hasChild == "true");
+
+    categoryFull.removeWhere((data) =>
+        (data.countTotal == null ||
+            data.countTotal == "0" ||
+            data.countTotal == "") &&
+        data.hasChild == "true");
 
     var _filtered =
         categoryFull.where((f) => f.parentId == categoryId).toList();

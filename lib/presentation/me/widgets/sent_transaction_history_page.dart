@@ -12,16 +12,17 @@ import 'package:roomart/utils/constants.dart';
 
 import '../../../injection.dart';
 
-class NotPaidTransactionHistory extends StatefulWidget {
-  NotPaidTransactionHistory({this.status = "0", this.customerId});
+class SentTransactionHistoryPage extends StatefulWidget {
+  SentTransactionHistoryPage({this.status = "", this.customerId});
   final String status;
   final String customerId;
   @override
-  _NotPaidTransactionHistoryState createState() =>
-      _NotPaidTransactionHistoryState();
+  _SentTransactionHistoryPageState createState() =>
+      _SentTransactionHistoryPageState();
 }
 
-class _NotPaidTransactionHistoryState extends State<NotPaidTransactionHistory> {
+class _SentTransactionHistoryPageState
+    extends State<SentTransactionHistoryPage> {
   RefreshController _refreshController =
       RefreshController(initialRefresh: false);
   String STATUS;
@@ -30,10 +31,10 @@ class _NotPaidTransactionHistoryState extends State<NotPaidTransactionHistory> {
   final transController = Get.put(TransactionController());
 
   void _onRefresh() {
-    transController.notPaidOffset.value = 0;
+    transController.finishedOffset.value = 0;
     transCubit.getHistoryTransactionByStatusV2(TransactionHistoryRequest(
       limit: 10,
-      offset: transController.notPaidOffset.value * LIMIT,
+      offset: transController.finishedOffset.value * LIMIT,
       token: Constants().tokenUltimo,
       status: STATUS,
       customerId: widget.customerId,
@@ -43,7 +44,7 @@ class _NotPaidTransactionHistoryState extends State<NotPaidTransactionHistory> {
   void _onLoading() {
     transCubit.getHistoryTransactionByStatusV2(TransactionHistoryRequest(
       limit: 10,
-      offset: transController.notPaidOffset.value * LIMIT,
+      offset: transController.finishedOffset.value * LIMIT,
       token: Constants().tokenUltimo,
       status: STATUS,
       customerId: widget.customerId,
@@ -53,14 +54,14 @@ class _NotPaidTransactionHistoryState extends State<NotPaidTransactionHistory> {
   void initialRequest() {
     var _request = TransactionHistoryRequest(
       limit: 10,
-      offset: transController.notPaidOffset.value * LIMIT,
+      offset: transController.finishedOffset.value * LIMIT,
       token: Constants().tokenUltimo,
       status: STATUS,
       customerId: widget.customerId,
     );
 
-    if (transController.notPaidTransaction.isEmpty) {
-      transCubit.getHistoryTransactionByStatus(_request);
+    if (transController.getFinishedTransaction.isEmpty) {
+      transCubit.getHistoryTransactionByStatusV2(_request);
     }
   }
 
@@ -82,12 +83,13 @@ class _NotPaidTransactionHistoryState extends State<NotPaidTransactionHistory> {
               state.maybeMap(
                 orElse: () {},
                 error: (e) {},
-                onGetHistoryTransaction: (value) {
+                onGetHistoryTransactionV2: (value) {
+                  print(value.data.first);
                   if (_refreshController.isRefresh) {
-                    trans.setNotPaidTransaction(value.data);
+                    trans.setFinishedTransaction(value.data);
                     _refreshController.refreshCompleted();
                   } else {
-                    trans.setNotPaidTransaction(value.data);
+                    trans.addFinishedTransaction(value.data);
                     _refreshController.loadComplete();
                   }
                 },
@@ -121,10 +123,10 @@ class _NotPaidTransactionHistoryState extends State<NotPaidTransactionHistory> {
                 onRefresh: _onRefresh,
                 onLoading: _onLoading,
                 child: ListView.builder(
-                    itemCount: trans.notPaidTransaction.length,
+                    itemCount: trans.getFinishedTransaction.length,
                     itemBuilder: (context, index) {
-                      return TransactionItemWidget(
-                          data: trans.notPaidTransaction[index]);
+                      return TransactionItemWidgetV2(
+                          data: trans.getFinishedTransaction[index]);
                     }),
               );
             })));

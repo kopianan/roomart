@@ -56,17 +56,24 @@ class _PaymentPageState extends State<PaymentPage> {
       child: BlocConsumer<TransactionCubit, TransactionState>(
           listener: (context, state) {
         state.maybeMap(
-          orElse: () {},
-          error: (e) {
-            print(e);
-          },
-          loading: (e) {
-            print("Loading");
-          },
-          onAddNewTransaction: (e) {
-            print(e);
-          },
-        );
+            orElse: () {},
+            error: (e) {
+              print(e);
+            },
+            loading: (e) {
+              print("Loading");
+            },
+            onAddNewTransaction: (e) async {
+              await Get.toNamed(
+                PaymentMidtransPage.TAG,
+                arguments: e.data,
+              );
+              transCubit.checkMidtransTransactionStatus(
+                  e.data.salesTrans.first.transNo);
+            },
+            onCheckMidtransStatus: (e) {
+              Get.toNamed(PaymentStatusPage.TAG, arguments: e.data);
+            });
       }, builder: (context, state) {
         return Scaffold(
           body: GetBuilder<TransactionController>(
@@ -365,13 +372,7 @@ class _PaymentPageState extends State<PaymentPage> {
                                           .map((e) => e.bought)
                                           .toList())
                                 ]);
-                            // transCubit.createNewTransaction(_salesOrder);
-                            await Get.toNamed(
-                              PaymentMidtransPage.TAG,
-                              arguments:
-                                  "https://app.sandbox.midtrans.com/payment-links/1620051761185",
-                            );
-                            Get.toNamed(PaymentStatusPage.TAG, arguments: "RA-GODM0114-33103-5664");
+                            transCubit.createNewTransaction(_salesOrder);
                           },
                         ),
                       ),

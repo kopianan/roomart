@@ -40,7 +40,8 @@ class _SubCategoryPageState extends State<SubCategoryPage> {
                   return CategoryListItem(
                     categoryModel: data[index],
                     onTap: () {
-                      if (data[index].countTotal == "0") {
+                      if (data[index].countTotal == null ||
+                          data[index].countTotal == "0") {
                         Get.toNamed(CategoryEndPage.TAG,
                             arguments: data[index].kategoriId);
                       }

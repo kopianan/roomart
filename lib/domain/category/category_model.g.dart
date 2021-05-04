@@ -17,7 +17,7 @@ _$_CategoryModel _$_$_CategoryModelFromJson(Map<String, dynamic> json) {
     displayStore: json['display_store'] as String,
     hasChild: json['has_child'] as String,
     count: json['count'] as String,
-    countTotal: json['count_total'] as String,
+    countTotal: json['count_total'] as String ?? '0',
   );
 }
 

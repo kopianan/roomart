@@ -17,7 +17,9 @@ abstract class ITransactionFacade {
       getHistoryTransactionByStatus(TransactionHistoryRequest request);
   Future<Either<String, List<TransactionDataModelV2>>>
       getHistoryTransactionByStatusV2(TransactionHistoryRequest request);
-  Future<Either<String, String>> addNewTransaction(TransRequest request);
+  Future<Either<String, List<TransactionDataModelV2>>>
+      getHistoryTransactionByStatusVDO(TransactionHistoryRequest request);
+  Future<Either<String, TransResponse>> addNewTransaction(TransRequest request);
   Future<Either<String, MidtransStatusDataModel>> checkMidtransPaymentStatus(
       String request);
 }
@@ -74,7 +76,8 @@ class TransactionRepository extends ITransactionFacade {
   }
 
   @override
-  Future<Either<String, String>> addNewTransaction(TransRequest request) async {
+  Future<Either<String, TransResponse>> addNewTransaction(
+      TransRequest request) async {
     Response response;
 
     try {
@@ -85,9 +88,8 @@ class TransactionRepository extends ITransactionFacade {
             headers: {"AccessKey": Constants().accessKeyUltimo},
           ));
       final _data = TransResponse.fromJson(response.data);
-      var url = _data.salesTrans.first.paymentGatewayUrl;
 
-      return right(url);
+      return right(_data);
     } on DioError catch (e) {
       return left(e.toString());
     } catch (e) {
@@ -117,12 +119,37 @@ class TransactionRepository extends ITransactionFacade {
             headers: headers,
           ));
       final _data = MidtransStatusDataModel.fromJson(response.data);
-      print(_data.statusCode);
-      return right(_data);
+      if (_data.statusCode == "200") {
+        return right(_data);
+      }
+      return left(_data.statusMessage);
     } on DioError catch (e) {
       return left(e.toString());
     } catch (e) {
       return left(e.toString());
+    }
+  }
+
+  @override
+  Future<Either<String, List<TransactionDataModelV2>>>
+      getHistoryTransactionByStatusVDO(
+          TransactionHistoryRequest request) async {
+    Response response;
+
+    try {
+      response = await dio.get(
+        "${Constants().getBaseUrlProduction}api,SPGApps.vm?cmd=4&txtype=SI&custcode=${request.customerId}&sortdate=desc&limit=${request.limit}&offset=${request.offset}",
+      );
+      List data = json.decode(response.data);
+      List<TransactionDataModelV2> _result =
+          data.map((md) => TransactionDataModelV2.fromJson(md)).toList();
+
+      final _filtered = _result
+          .where((element) => (element.status == request.status))
+          .toList();
+      return right(_filtered);
+    } catch (e) {
+      return right(<TransactionDataModelV2>[]);
     }
   }
 }

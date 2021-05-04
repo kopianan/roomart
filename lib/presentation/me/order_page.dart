@@ -5,6 +5,7 @@ import 'package:roomart/application/transaction/transaction_controller.dart';
 import 'package:roomart/application/transaction/transaction_cubit.dart';
 import 'package:roomart/presentation/me/widgets/finished_transaction_history_page.dart';
 import 'package:roomart/presentation/me/widgets/not_paid_transaction_history_page.dart';
+import 'package:roomart/presentation/me/widgets/sent_transaction_history_page.dart';
 import 'package:roomart/utils/my_color.dart';
 
 import '../../injection.dart';
@@ -26,7 +27,7 @@ class _OrderPageState extends State<OrderPage> {
       length: 5,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: button1,
+          title: Text("Transaksi"),
           bottom: TabBar(
             indicatorColor: Colors.black,
             isScrollable: true,
@@ -62,12 +63,13 @@ class _OrderPageState extends State<OrderPage> {
               status: "2",
               customerId: "DM152585832596584529828",
             ),
-            Container(
-              color: Colors.yellow,
+            SentTransactionHistoryPage(
+              customerId: "DM156471404530005987009",
+              status: "",
             ),
             FinishedTransactionHistoryPage(
               customerId: "DM156471404530005987009",
-              status: "2",
+              status: "",
             ),
             CancelledTransactionHistoryPage(
               status: "-1",
