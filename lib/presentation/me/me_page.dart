@@ -37,7 +37,7 @@ class _MePageState extends State<MePage> {
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 10),
                   child: Text(
-                   authController.getUserDataModel.fullName,
+                    authController.getUserDataModel.fullName,
                     maxLines: 2,
                     style: TextStyle(
                       fontSize: 28,
@@ -78,15 +78,15 @@ class _MePageState extends State<MePage> {
                 color: Colors.yellow,
                 icon: Icons.list_alt_sharp,
                 text: "Daftar Transaksi",
-                onTap: () {},
+                onTap: () {
+                  Get.toNamed(OrderPage.TAG);
+                },
               ),
               MenuTiles(
                 color: Colors.green,
                 icon: Icons.card_travel_rounded,
                 text: "Belanja Saya",
-                onTap: () {
-                  Get.toNamed(OrderPage.TAG);
-                },
+                onTap: () {},
               ),
               MenuTiles(
                 color: Colors.red,
@@ -197,7 +197,9 @@ class MenuTiles extends StatelessWidget {
             color: color,
           ),
         ),
-        Divider(color: Colors.orange,)
+        Divider(
+          color: Colors.orange,
+        )
       ],
     );
   }

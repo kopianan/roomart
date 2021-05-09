@@ -28,14 +28,14 @@ class ItemRepoistory extends IITemFacae {
   Future<Either<String, List<DataItemModel>>> getItemLazyLoading(
       {int offset, int limit}) async {
     List<DataItemModel> _tempData = <DataItemModel>[];
-    Response response;
 
     int counterOffset = offset;
 
     try {
       do {
+        Response response;
         response = await dio.get(
-            '${Constants().baseUrlProductionBackup}api,SPGApps.vm?cmd=2&loccode=GODM&limit=1&offset=$offset&sortby=updateDate&sortdirection=desc');
+            '${Constants().baseUrlProductionBackup}api,SPGApps.vm?cmd=2&loccode=GODM&limit=1&offset=$counterOffset&sortby=updateDate&sortdirection=desc');
         List jsonData = json.decode(response.data.toString());
 
         List<DataItemModel> data =
@@ -49,11 +49,10 @@ class ItemRepoistory extends IITemFacae {
             }
           }
         });
-
         counterOffset++;
       } while (_tempData.length < limit);
       itemController.setOffset(counterOffset);
-      return right(_tempData.cast());
+      return right(_tempData);
     } catch (e) {
       return left(e.toString());
     }

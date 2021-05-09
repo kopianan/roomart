@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:roomart/domain/item/cart_data_collection_model.dart';
 import 'package:roomart/domain/item/data_item_model.dart';
@@ -7,7 +8,6 @@ class CartController extends GetxController {
   List<CartDataCollectionModel> cartCollection =
       <CartDataCollectionModel>[].obs;
   var subTotal = 0.0.obs;
-
   void removeDataFromList(int index) {
     cartCollection.removeAt(index);
   }
@@ -70,23 +70,30 @@ class CartController extends GetxController {
     cartCollection.replaceRange(_index, _index + 1, _new);
   }
 
-  String getCartSubTotal() {
+  // String getCartSubTotal() {
+  //   var _subtotal = 0.0;
+
+  //   cartCollection.forEach((element) {
+  //     if (authController.checkIfReseller()) {
+  //       _subtotal +=
+  //           int.parse(element.bought.qty) * double.parse(element.bought.price);
+  //     }
+  //   });
+  //   subTotal.value = _subtotal;
+  //   return subTotal.value.toString();
+  // }
+
+  double getCartSubTotalDouble({@required bool isReseller}) {
     var _subtotal = 0.0;
 
     cartCollection.forEach((element) {
-      _subtotal +=
-          int.parse(element.bought.qty) * double.parse(element.bought.price);
-    });
-    subTotal.value = _subtotal;
-    return subTotal.value.toString();
-  }
-
-  double getCartSubTotalDouble() {
-    var _subtotal = 0.0;
-
-    cartCollection.forEach((element) {
-      _subtotal +=
-          int.parse(element.bought.qty) * double.parse(element.bought.price);
+      if (isReseller) {
+        _subtotal +=
+            int.parse(element.bought.qty) * element.bought.resellerPrice;
+      } else {
+        _subtotal +=
+            int.parse(element.bought.qty) * double.parse(element.bought.price);
+      }
     });
     subTotal.value = _subtotal;
     return subTotal.value;

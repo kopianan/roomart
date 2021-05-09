@@ -6,8 +6,7 @@ import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:roomart/application/transaction/transaction_controller.dart';
 import 'package:roomart/application/transaction/transaction_cubit.dart';
 import 'package:roomart/domain/transaction/models/transaction_req_res.dart';
-import 'package:roomart/presentation/me/components/transaction_item_widget.dart';
-import 'package:roomart/presentation/me/components/transaction_item_widgetV2.dart';
+import 'package:roomart/presentation/me/components/transaction_item_widgetV3.dart';
 import 'package:roomart/utils/constants.dart';
 
 import '../../../injection.dart';
@@ -24,17 +23,17 @@ class SentTransactionHistoryPage extends StatefulWidget {
 class _SentTransactionHistoryPageState
     extends State<SentTransactionHistoryPage> {
   RefreshController _refreshController =
-      RefreshController(initialRefresh: false);
+      RefreshController(initialRefresh: true);
   String STATUS;
-  static final int LIMIT = 10;
+  static final int LIMIT = 100;
   final transCubit = getIt<TransactionCubit>();
   final transController = Get.put(TransactionController());
 
   void _onRefresh() {
-    transController.finishedOffset.value = 0;
-    transCubit.getHistoryTransactionByStatusV2(TransactionHistoryRequest(
+    transController.sentOffset.value = 0;
+    transCubit.getHistorySentTransactionByStatus(TransactionHistoryRequest(
       limit: 10,
-      offset: transController.finishedOffset.value * LIMIT,
+      offset: transController.sentOffset.value * LIMIT,
       token: Constants().tokenUltimo,
       status: STATUS,
       customerId: widget.customerId,
@@ -42,9 +41,10 @@ class _SentTransactionHistoryPageState
   }
 
   void _onLoading() {
-    transCubit.getHistoryTransactionByStatusV2(TransactionHistoryRequest(
+    _refreshController.requestLoading(); 
+    transCubit.getHistorySentTransactionByStatus(TransactionHistoryRequest(
       limit: 10,
-      offset: transController.finishedOffset.value * LIMIT,
+      offset: transController.sentOffset.value * LIMIT,
       token: Constants().tokenUltimo,
       status: STATUS,
       customerId: widget.customerId,
@@ -54,20 +54,21 @@ class _SentTransactionHistoryPageState
   void initialRequest() {
     var _request = TransactionHistoryRequest(
       limit: 10,
-      offset: transController.finishedOffset.value * LIMIT,
+      offset: transController.sentOffset.value * LIMIT,
       token: Constants().tokenUltimo,
       status: STATUS,
       customerId: widget.customerId,
     );
 
-    if (transController.getFinishedTransaction.isEmpty) {
-      transCubit.getHistoryTransactionByStatusV2(_request);
+    if (transController.getSentTransaction(STATUS).isEmpty) {
+      transCubit.getHistorySentTransactionByStatus(_request);
     }
   }
 
   @override
   void initState() {
     STATUS = widget.status;
+    print(STATUS);
     print("initstate");
     initialRequest();
     super.initState();
@@ -83,13 +84,12 @@ class _SentTransactionHistoryPageState
               state.maybeMap(
                 orElse: () {},
                 error: (e) {},
-                onGetHistoryTransactionV2: (value) {
-                  print(value.data.first);
+                onGetSentHistoryTransaction: (value) {
                   if (_refreshController.isRefresh) {
-                    trans.setFinishedTransaction(value.data);
+                    trans.setSentTransaction(value.data);
                     _refreshController.refreshCompleted();
                   } else {
-                    trans.addFinishedTransaction(value.data);
+                    trans.addSendTransaction(value.data);
                     _refreshController.loadComplete();
                   }
                 },
@@ -123,10 +123,10 @@ class _SentTransactionHistoryPageState
                 onRefresh: _onRefresh,
                 onLoading: _onLoading,
                 child: ListView.builder(
-                    itemCount: trans.getFinishedTransaction.length,
+                    itemCount: trans.getSentTransaction(STATUS).length,
                     itemBuilder: (context, index) {
-                      return TransactionItemWidgetV2(
-                          data: trans.getFinishedTransaction[index]);
+                      return TransactionItemWidgetV3(
+                          data: trans.getSentTransaction(STATUS)[index]);
                     }),
               );
             })));

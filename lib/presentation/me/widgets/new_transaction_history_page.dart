@@ -22,7 +22,7 @@ class NewTransactionHistoryPage extends StatefulWidget {
 
 class _NewTransactionHistoryPageState extends State<NewTransactionHistoryPage> {
   RefreshController _refreshController =
-      RefreshController(initialRefresh: false);
+      RefreshController(initialRefresh: true);
   String STATUS;
   static final int LIMIT = 10;
   final transCubit = getIt<TransactionCubit>();

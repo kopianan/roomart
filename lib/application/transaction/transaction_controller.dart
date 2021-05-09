@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:roomart/domain/models/discount/discount_data_model.dart';
 import 'package:roomart/domain/raja_ongkir/delivery_cost/cost_data_model.dart';
 import 'package:roomart/domain/raja_ongkir/delivery_cost/costs.dart';
+import 'package:roomart/domain/transaction/full_transaction_data_model.dart';
 import 'package:roomart/domain/transaction/transaction_data_model.dart';
 import 'package:roomart/domain/transaction/transaction_data_model_v2.dart';
 
@@ -10,11 +11,13 @@ class TransactionController extends GetxController {
   RxInt cancelOffset = 0.obs;
   RxInt notPaidOffset = 0.obs;
   RxInt finishedOffset = 0.obs;
+  RxInt sentOffset = 0.obs;
   List<TransactionDataModel> allTransaction = <TransactionDataModel>[];
   List<TransactionDataModel> newTransaction = <TransactionDataModel>[];
   List<TransactionDataModel> cancelledTransaction = <TransactionDataModel>[];
   List<TransactionDataModel> notPaidTransaction = <TransactionDataModel>[];
   List<TransactionDataModelV2> finishedTransaction = <TransactionDataModelV2>[];
+  List<FullTransactionDataModel> sentTransaction = <FullTransactionDataModel>[];
   List<CostDataModel> costList = <CostDataModel>[];
   Rx<Costs> selectedDelivery = Costs().obs;
 
@@ -132,6 +135,27 @@ class TransactionController extends GetxController {
 
   List<TransactionDataModel> get getNewTransactionList => this.newTransaction;
 
+//SENT TRANSACTION
+
+  void addSendTransaction(List<FullTransactionDataModel> data) {
+    sentOffset.value += 1;
+    this.sentTransaction.addAll(data);
+  }
+
+  void setSentTransaction(List<FullTransactionDataModel> list) {
+    sentOffset.value += 1;
+    this.sentTransaction.assignAll(list);
+  }
+
+  List<FullTransactionDataModel> getSentTransaction(String status) {
+    var list = this
+        .sentTransaction
+        .where((element) => element.transactionStatus == status)
+        .toList();
+    print(list.length);
+    return list;
+  }
+
 //Cancelled transaction history
   void addCancelledTransaction(List<TransactionDataModel> data) {
     cancelOffset.value += 1;
@@ -157,8 +181,15 @@ class TransactionController extends GetxController {
     this.notPaidTransaction.assignAll(list);
   }
 
-  List<TransactionDataModel> get getNotPaidTransaction =>
-      this.notPaidTransaction;
+  List<TransactionDataModel> get getNotPaidTransaction {
+    // var _list = notPaidTransaction
+    //     .where(
+    //         (element) => (element.statusEnum == 0 || element.statusEnum == 1))
+    //     .toList();
+    // return _list;
+    return this.notPaidTransaction;
+  }
+
 //Finished transaction history
   void addFinishedTransaction(List<TransactionDataModelV2> data) {
     finishedOffset.value += 1;

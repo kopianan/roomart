@@ -106,25 +106,13 @@ class _PaymentPageState extends State<PaymentPage> {
                           },
                           child: Row(
                             children: [
-                              Expanded(
-                                  child: Divider(
-                                thickness: 2,
-                              )),
-                              SizedBox(
-                                width: 15,
-                              ),
-                              Text(
-                                "Show more",
-                                style:
-                                    TextStyle(fontSize: 15, color: Colors.grey),
-                              ),
-                              SizedBox(
-                                width: 15,
-                              ),
-                              Expanded(
-                                  child: Divider(
-                                thickness: 2,
-                              ))
+                              Expanded(child: Divider(thickness: 2)),
+                              SizedBox(width: 15),
+                              Text("Show more",
+                                  style: TextStyle(
+                                      fontSize: 15, color: Colors.grey)),
+                              SizedBox(width: 15),
+                              Expanded(child: Divider(thickness: 2))
                             ],
                           ),
                         )
@@ -273,8 +261,9 @@ class _PaymentPageState extends State<PaymentPage> {
                                 value: "- " +
                                     Formatter().formatStringCurrency(
                                       transactionController.calculateDiscount(
-                                          cartController
-                                              .getCartSubTotalDouble()),
+                                          cartController.getCartSubTotalDouble(
+                                              isReseller: authController
+                                                  .checkIfReseller())),
                                     ),
                               ),
                               PriceDetail(
@@ -285,7 +274,9 @@ class _PaymentPageState extends State<PaymentPage> {
                               PriceDetail(
                                 label: "Grand Total",
                                 value: formatGrandTotal(
-                                    cartController.getCartSubTotalDouble()),
+                                    cartController.getCartSubTotalDouble(
+                                        isReseller:
+                                            authController.checkIfReseller())),
                               ),
                             ],
                           ),
@@ -404,7 +395,9 @@ class _PaymentPageState extends State<PaymentPage> {
   }
 
   String formatSubTotal() {
-    return Formatter().formatStringCurrency(cartController.getCartSubTotal());
+    return Formatter().formatStringCurrency(cartController
+        .getCartSubTotalDouble(isReseller: authController.checkIfReseller())
+        .toString());
   }
 
   String formatGrandTotal(double subtotal) {

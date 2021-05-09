@@ -6,7 +6,6 @@ class AuthController extends GetxController {
   Rx<UserDataModel> userDataModel = UserDataModel().obs;
   RxDouble userBalance = 0.0.obs;
 
- 
   void setBalance(String balance) {
     try {
       var _balance = double.tryParse(balance);
@@ -18,13 +17,17 @@ class AuthController extends GetxController {
 
   bool checkIfReseller() {
     var _isReseller;
-    if (getUserDataModel.typeIds == Constants().customerTypeReseller ||
-        getUserDataModel.typeIds == Constants().customerTypeReseller2) {
-      _isReseller = true;
-    } else {
-      _isReseller = false;
+    try {
+      if (getUserDataModel.typeIds == Constants().customerTypeReseller ||
+          getUserDataModel.typeIds == Constants().customerTypeReseller2) {
+        _isReseller = true;
+      } else {
+        _isReseller = false;
+      }
+      return _isReseller;
+    } catch (e) {
+      return false;
     }
-    return _isReseller;
   }
 
   void setDataModel(UserDataModel userDataModel) {

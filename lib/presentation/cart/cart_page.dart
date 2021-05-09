@@ -73,8 +73,11 @@ class CartPage extends StatelessWidget {
                         Container(
                           child: GetX<CartController>(
                             builder: (_) => Text(
-                                Formatter()
-                                    .formatStringCurrency(_.getCartSubTotal()),
+                                Formatter().formatStringCurrency(_
+                                    .getCartSubTotalDouble(
+                                        isReseller:
+                                            authController.checkIfReseller())
+                                    .toString()),
                                 style: TextStyle(
                                     fontSize: 18, fontWeight: FontWeight.bold)),
                           ),

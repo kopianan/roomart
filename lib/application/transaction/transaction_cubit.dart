@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
+import 'package:roomart/domain/transaction/full_transaction_data_model.dart';
 import 'package:roomart/domain/transaction/models/transaction_item_data_model.dart';
 import 'package:roomart/domain/transaction/models/transaction_req_res.dart';
 import 'package:roomart/domain/transaction/trans_item/midtrans_status_data_model.dart';
@@ -32,6 +33,21 @@ class TransactionCubit extends Cubit<TransactionState> {
     }
   }
 
+  void getHistoryTransactionByMultipleStatus(
+      TransactionHistoryRequest request) async {
+    emit(TransactionState.loading());
+    try {
+      final _result = await iTransactionFacade
+          .getHistoryTransactionByMultipleStatus(request);
+      _result.fold(
+        (l) => emit(TransactionState.error(l.toString())),
+        (r) => emit(TransactionState.onGetHistoryTransaction(r)),
+      );
+    } catch (e) {
+      emit(TransactionState.error(e.toString()));
+    }
+  }
+
   void getHistoryTransactionByStatusV2(
       TransactionHistoryRequest request) async {
     emit(TransactionState.loading());
@@ -41,6 +57,21 @@ class TransactionCubit extends Cubit<TransactionState> {
       _result.fold(
         (l) => emit(TransactionState.error(l.toString())),
         (r) => emit(TransactionState.onGetHistoryTransactionV2(r)),
+      );
+    } catch (e) {
+      emit(TransactionState.error(e.toString()));
+    }
+  }
+
+  void getHistorySentTransactionByStatus(
+      TransactionHistoryRequest request) async {
+    emit(TransactionState.loading());
+    try {
+      final _result =
+          await iTransactionFacade.getHistorySentTransaction(request);
+      _result.fold(
+        (l) => emit(TransactionState.error(l.toString())),
+        (r) => emit(TransactionState.onGetSentHistoryTransaction(r)),
       );
     } catch (e) {
       emit(TransactionState.error(e.toString()));

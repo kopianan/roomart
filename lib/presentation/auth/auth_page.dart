@@ -61,24 +61,24 @@ class _AuthPageState extends State<AuthPage> {
                 children: [
                   Column(
                     children: [
-                      Container(
-                        alignment: Alignment.topLeft,
-                        margin: EdgeInsets.only(top: 15),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Welcome",
-                              style: TextStyle(
-                                  fontSize: 30, fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              "Silahkan register atau login untuk bisa bertransaksi.",
-                              style: TextStyle(fontWeight: FontWeight.w300),
-                            ),
-                          ],
-                        ),
-                      ),
+                      // Container(
+                      //   alignment: Alignment.topLeft,
+                      //   margin: EdgeInsets.only(top: 15),
+                      //   child: Column(
+                      //     crossAxisAlignment: CrossAxisAlignment.start,
+                      //     children: [
+                      //       Text(
+                      //         "Welcome",
+                      //         style: TextStyle(
+                      //             fontSize: 30, fontWeight: FontWeight.bold),
+                      //       ),
+                      //       Text(
+                      //         "Silahkan register atau login untuk bisa bertransaksi.",
+                      //         style: TextStyle(fontWeight: FontWeight.w300),
+                      //       ),
+                      //     ],
+                      //   ),
+                      // ),
                       Padding(padding: EdgeInsets.only(top: 25)),
                       Column(
                         children: [getLogoOnAuthPage],

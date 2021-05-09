@@ -1,23 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:roomart/domain/transaction/full_transaction_data_model.dart';
 import 'package:roomart/domain/transaction/transaction_data_model.dart';
+import 'package:roomart/domain/transaction/transaction_data_model_v2.dart';
 import 'package:roomart/presentation/me/widgets/transaction_history_detail_page.dart';
+import 'package:roomart/presentation/me/widgets/transaction_history_detail_pageV2.dart';
 import 'package:roomart/utils/formater.dart';
 
-class TransactionItemWidget extends StatelessWidget {
-  const TransactionItemWidget({
+class TransactionItemWidgetV3 extends StatelessWidget {
+  const TransactionItemWidgetV3({
     Key key,
-    @required TransactionDataModel data,
+    @required FullTransactionDataModel data,
   })  : _data = data,
         super(key: key);
 
-  final TransactionDataModel _data;
+  final FullTransactionDataModel _data;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Get.toNamed(TransactionHistoryDetailPage.TAG, arguments:_data);
+        Get.toNamed(TransactionHistoryDetailPageV2.TAG, arguments: _data);
       },
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
@@ -42,14 +45,14 @@ class TransactionItemWidget extends StatelessWidget {
               child: Column(
                 children: [
                   Text(
-                    Formatter().dateFormatter(_data.date),
+                    Formatter().dateFormatter(_data.transactionDate),
                     style: TextStyle(fontSize: 18),
                   ),
                   SizedBox(
                     height: 4,
                   ),
                   Text(
-                    Formatter().dateFormatGetYeard(_data.date),
+                    Formatter().dateFormatGetYeard(_data.transactionDate),
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ],
@@ -61,7 +64,7 @@ class TransactionItemWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    _data.number,
+                    _data.salesOrderNo,
                     style: TextStyle(fontSize: 18),
                   ),
                   Text("Customer Name : " + _data.customerName),
@@ -79,8 +82,8 @@ class TransactionItemWidget extends StatelessWidget {
                           TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      Formatter()
-                          .formatStringCurrencyNoSymbol(_data.total.toString()),
+                      Formatter().formatStringCurrencyNoSymbol(
+                          _data.totalAmount.toString()),
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),

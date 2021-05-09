@@ -24,7 +24,7 @@ class FinishedTransactionHistoryPage extends StatefulWidget {
 class _FinishedTransactionHistoryPageState
     extends State<FinishedTransactionHistoryPage> {
   RefreshController _refreshController =
-      RefreshController(initialRefresh: false);
+      RefreshController(initialRefresh: true);
   String STATUS;
   static final int LIMIT = 10;
   final transCubit = getIt<TransactionCubit>();
@@ -84,7 +84,7 @@ class _FinishedTransactionHistoryPageState
                 orElse: () {},
                 error: (e) {},
                 onGetHistoryTransactionV2: (value) {
-                  print(value.data.first);
+                  print(value); 
                   if (_refreshController.isRefresh) {
                     trans.setFinishedTransaction(value.data);
                     _refreshController.refreshCompleted();

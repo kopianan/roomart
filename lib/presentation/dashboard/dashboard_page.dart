@@ -6,8 +6,11 @@ import 'package:roomart/infrastructure/core/pref.dart';
 import 'package:roomart/presentation/auth/auth_page.dart';
 import 'package:roomart/presentation/auth/sign_up/register_page.dart';
 import 'package:roomart/presentation/category/category_page.dart';
+import 'package:roomart/presentation/dashboard/contact_us_page.dart';
 import 'package:roomart/presentation/home/home_page.dart';
 import 'package:roomart/presentation/me/me_page.dart';
+import 'package:roomart/utils/constants.dart';
+import 'package:roomart/utils/my_color.dart';
 
 class DashboardPage extends StatefulWidget {
   static final String TAG = '/dashboard_page';
@@ -48,7 +51,32 @@ class _DashboardPageState extends State<DashboardPage> {
       key: _scaffoldKey,
 
       appBar: AppBar(),
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: ListView(
+          // Important: Remove any padding from the ListView.
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              child: Text(
+                Constants.title_appbar,
+                style: TextStyle(fontSize: 20, color: Colors.white),
+              ),
+              decoration: BoxDecoration(
+                color: button1,
+              ),
+            ),
+            ListTile(
+                title: Text(
+                  'Contact Us',
+                  style: TextStyle(fontSize: 18),
+                ),
+                onTap: () {
+                  Get.toNamed(ContactUsPage.TAG);
+                }),
+            Divider()
+          ],
+        ),
+      ),
       body: PageView(
         physics: NeverScrollableScrollPhysics(),
         controller: pageController,

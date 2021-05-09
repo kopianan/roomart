@@ -23,11 +23,14 @@ class _RegisterPageState extends State<RegisterPage> {
   TextEditingController _password = TextEditingController();
   TextEditingController _confirmPassword = TextEditingController();
   DateTime date;
-  double height = 25;
+  double height = 30;
   final authCubit = getIt<AuthCubit>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Register"),
+      ),
       body: BlocProvider(
         create: (context) => authCubit,
         child: BlocConsumer<AuthCubit, AuthState>(
@@ -45,16 +48,10 @@ class _RegisterPageState extends State<RegisterPage> {
             );
           },
           builder: (context, state) {
-            return Container(
-              padding: EdgeInsets.symmetric(horizontal: 15),
+            return Padding(
+              padding: const EdgeInsets.all(15.0),
               child: CustomScrollView(
                 slivers: [
-                  SliverAppBar(),
-                  SliverToBoxAdapter(
-                    child: Text("Register",
-                        style: TextStyle(
-                            fontSize: 30, fontWeight: FontWeight.bold)),
-                  ),
                   SliverToBoxAdapter(child: SizedBox(height: 20)),
                   SliverToBoxAdapter(
                       child: Column(

@@ -3,7 +3,10 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:flutter_touch_spin/flutter_touch_spin.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
+import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/application/core/cart_controller.dart';
+import 'package:roomart/domain/item/cart_data_collection_model.dart';
+import 'package:roomart/domain/transaction/trans_item/bought_item_data_model.dart';
 import 'package:roomart/utils/constants.dart';
 import 'package:roomart/utils/formater.dart';
 
@@ -20,7 +23,7 @@ class _CartListItemState extends State<CartListItem> {
     super.initState();
   }
 
-  // final cartController = Get.put(CartController());
+  final auth = Get.put(AuthController());
 
   @override
   Widget build(BuildContext context) {
@@ -71,11 +74,8 @@ class _CartListItemState extends State<CartListItem> {
                     ),
                     SizedBox(height: 4),
                     Text(
-                      Formatter().formatStringCurrency((double.parse(cart
-                                  .getCartItemData[widget.index].bought.price) *
-                              double.parse(cart
-                                  .getCartItemData[widget.index].bought.qty))
-                          .toString()),
+                      Formatter().formatStringCurrency(
+                          isResellerCheck(cart.getCartItemData[widget.index])),
                       style: TextStyle(
                           fontSize: 15,
                           color: Colors.deepPurple,
@@ -111,5 +111,15 @@ class _CartListItemState extends State<CartListItem> {
         ),
       ),
     );
+  }
+
+  String isResellerCheck(CartDataCollectionModel cart) {
+    double price = 0;
+    if (auth.checkIfReseller()) {
+      price = cart.bought.resellerPrice * double.parse(cart.bought.qty);
+    } else {
+      price = (double.parse(cart.bought.price) * double.parse(cart.bought.qty));
+    }
+    return price.toString();
   }
 }

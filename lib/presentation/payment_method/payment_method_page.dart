@@ -141,7 +141,9 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
   _onChanged(PaymentMethodDataModel val, AuthController auth) {
     if (val.code == describeEnum(paymentEnum.CREDIT)) {
       if (double.parse(auth.getBalance) <
-          double.parse(cartController.getCartSubTotal())) {
+          double.parse(cartController
+              .getCartSubTotalDouble(isReseller: auth.checkIfReseller())
+              .toString())) {
         Get.showSnackbar(GetBar(
           duration: Duration(seconds: 3),
           message: "Saldo tidak cukup",

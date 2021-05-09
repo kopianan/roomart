@@ -13,7 +13,7 @@ import 'package:roomart/utils/constants.dart';
 import '../../../injection.dart';
 
 class NotPaidTransactionHistory extends StatefulWidget {
-  NotPaidTransactionHistory({this.status = "0", this.customerId});
+  NotPaidTransactionHistory({this.status = "", this.customerId});
   final String status;
   final String customerId;
   @override
@@ -23,7 +23,7 @@ class NotPaidTransactionHistory extends StatefulWidget {
 
 class _NotPaidTransactionHistoryState extends State<NotPaidTransactionHistory> {
   RefreshController _refreshController =
-      RefreshController(initialRefresh: false);
+      RefreshController(initialRefresh: true);
   String STATUS;
   static final int LIMIT = 10;
   final transCubit = getIt<TransactionCubit>();
@@ -31,7 +31,7 @@ class _NotPaidTransactionHistoryState extends State<NotPaidTransactionHistory> {
 
   void _onRefresh() {
     transController.notPaidOffset.value = 0;
-    transCubit.getHistoryTransactionByStatusV2(TransactionHistoryRequest(
+    transCubit.getHistoryTransactionByMultipleStatus(TransactionHistoryRequest(
       limit: 10,
       offset: transController.notPaidOffset.value * LIMIT,
       token: Constants().tokenUltimo,
@@ -41,7 +41,7 @@ class _NotPaidTransactionHistoryState extends State<NotPaidTransactionHistory> {
   }
 
   void _onLoading() {
-    transCubit.getHistoryTransactionByStatusV2(TransactionHistoryRequest(
+    transCubit.getHistoryTransactionByMultipleStatus(TransactionHistoryRequest(
       limit: 10,
       offset: transController.notPaidOffset.value * LIMIT,
       token: Constants().tokenUltimo,
@@ -60,14 +60,14 @@ class _NotPaidTransactionHistoryState extends State<NotPaidTransactionHistory> {
     );
 
     if (transController.notPaidTransaction.isEmpty) {
-      transCubit.getHistoryTransactionByStatus(_request);
+      transCubit.getHistoryTransactionByMultipleStatus(_request);
     }
   }
 
   @override
   void initState() {
     STATUS = widget.status;
-    print("initstate");
+    print(STATUS);
     initialRequest();
     super.initState();
   }
@@ -121,10 +121,10 @@ class _NotPaidTransactionHistoryState extends State<NotPaidTransactionHistory> {
                 onRefresh: _onRefresh,
                 onLoading: _onLoading,
                 child: ListView.builder(
-                    itemCount: trans.notPaidTransaction.length,
+                    itemCount: trans.getNotPaidTransaction.length,
                     itemBuilder: (context, index) {
                       return TransactionItemWidget(
-                          data: trans.notPaidTransaction[index]);
+                          data: trans.getNotPaidTransaction[index]);
                     }),
               );
             })));
