@@ -12,15 +12,15 @@ import 'package:roomart/utils/formater.dart';
 
 import '../../../injection.dart';
 
-class TransactionHistoryDetailPageV2 extends StatefulWidget {
-  static final String TAG = '/transaction_history_detail_pageV2';
+class TransactionHistoryDetailPageFull extends StatefulWidget {
+  static final String TAG = '/transaction_history_detail_page_full';
   @override
-  _TransactionHistoryDetailPageV2State createState() =>
-      _TransactionHistoryDetailPageV2State();
+  _TransactionHistoryDetailPageFullState createState() =>
+      _TransactionHistoryDetailPageFullState();
 }
 
-class _TransactionHistoryDetailPageV2State
-    extends State<TransactionHistoryDetailPageV2> {
+class _TransactionHistoryDetailPageFullState
+    extends State<TransactionHistoryDetailPageFull> {
   FullTransactionDataModel detail;
   @override
   void initState() {
@@ -38,8 +38,8 @@ class _TransactionHistoryDetailPageV2State
         title: Text("Transaction Detail"),
       ),
       body: BlocProvider(
-        create: (context) =>
-            dTransactionCubit..getHistoryDetailTransaction(detail.salesId),
+        create: (context) => dTransactionCubit
+          ..getFinishedHistoryTransaction(detail.salesOrderId),
         child: BlocConsumer<HistoryDetailCubit, HistoryDetailState>(
             listener: (context, state) {
           state.maybeMap(

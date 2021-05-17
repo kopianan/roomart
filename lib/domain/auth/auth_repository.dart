@@ -22,6 +22,8 @@ abstract class IAuthFacade {
   Future<Either<String, UserDataModel>> checkAuthentication();
   Future<Either<String, String>> getUserBalance(String userId);
   Future<Either<String, List<DiscountDataModel>>> getAvailableDiscount();
+  Future<Either<String, UserDataModel>> changeAddress(UserDataModel userData);
+  Future<Either<String, String>> forgotPassword(String email);
 }
 
 @LazySingleton(as: IAuthFacade)
@@ -129,11 +131,52 @@ class AuthRepository extends IAuthFacade {
       response =
           await dio.get("${Constants().baseUrlProduction}api,SPGDiscount.vm");
       List discountList = json.decode(response.data);
-      
-      var _list = discountList.map((e) => DiscountDataModel.fromJson(e)).toList();
+
+      var _list =
+          discountList.map((e) => DiscountDataModel.fromJson(e)).toList();
       return right(_list);
     } on DioError catch (e) {
       return left(json.decode(e.response.data)['message'].toString());
+    } catch (e) {
+      return left(e.toString());
+    }
+  }
+
+  @override
+  Future<Either<String, UserDataModel>> changeAddress(
+      UserDataModel userData) async {
+    Response response;
+
+    try {
+      response = await dio.get(
+          "${Constants().getBaseUrlProductionBackup}api,User.vm?method=saveProfile&email=${userData.email}&province=${userData.province}&city=${userData.city}&address=${userData.address}&village=${userData.village}&terrId1=${userData.terrId1}&terrId2=${userData.terrId2}&terrId3=${userData.terrId3}&tocust=true");
+      final data = json.decode(response.data);
+
+      var _res = UserDataModel.fromJson(data);
+      return right(_res);
+    } on DioError catch (e) {
+      print(e.requestOptions);
+      return left(json.decode(e.response.data)['message'].toString());
+    } catch (e) {
+      print(e);
+      return left(e.toString());
+    }
+  }
+
+  @override
+  Future<Either<String, String>> forgotPassword(String email) async {
+    Response response;
+    try {
+      response = await dio.get(
+          "${Constants().getBaseUrlProductionBackup}api,SPGApps.vm?cmd=3&custemail=$email");
+      List data = json.decode(response.data);
+      if (data.length == 0) {
+        return left("email tidak ditemukan");
+      } else {
+        return right("email telah dikirim");
+      }
+    } on DioError catch (e) {
+      return left("Masalah");
     } catch (e) {
       return left(e.toString());
     }

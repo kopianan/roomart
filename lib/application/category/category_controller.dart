@@ -28,11 +28,13 @@ class CategoryController extends GetxController {
     var _filtered =
         categoryFull.where((f) => f.parentId == categoryId).toList();
 
-    final subCategoryList = _filtered.map((it) {
-      if (it.count != "0") {
-        return it;
-      }
-    }).toList();
+    // final subCategoryList = _filtered.map((it) {
+    //   if (it.count != "0") {
+    //     return it;
+    //   }
+    // }).toList();
+    final subCategoryList =
+        _filtered.where((element) => element.count != "0").toList();
 
     return subCategoryList;
   }

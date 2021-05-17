@@ -18,38 +18,70 @@ class _$UserDataModelTearOff {
 
 // ignore: unused_element
   _UserDataModel call(
-      {@JsonKey(name: "userId") String userId,
-      @JsonKey(name: "error") int error,
-      @JsonKey(name: "parentId") String parentId,
-      @JsonKey(name: "userName") String userName,
-      @JsonKey(name: "message") String messageError,
-      @JsonKey(name: "email") String email,
-      @JsonKey(name: "phone") String phone,
-      @JsonKey(name: "password") String password,
-      @JsonKey(name: "fullName") String fullName,
-      @JsonKey(name: "typeIds") String typeIds,
-      @JsonKey(name: "status") double status,
-      @JsonKey(name: "address") String address,
-      @JsonKey(name: "shipTo1") String shipTo1,
-      @JsonKey(name: "shipTo2") String shipTo2,
-      @JsonKey(name: "country") String country,
-      @JsonKey(name: "province") String province,
-      @JsonKey(name: "city") String city,
-      @JsonKey(name: "district") String district,
-      @JsonKey(name: "village") String village,
-      @JsonKey(name: "terrId1") String terrId1,
-      @JsonKey(name: "terrId2") String terrId2,
-      @JsonKey(name: "terrId3") String terrId3,
-      @JsonKey(name: "terrId4") String terrId4,
-      @JsonKey(name: "longitudes") double longitudes,
-      @JsonKey(name: "latitudes") double latitudes,
-      @JsonKey(name: "fbToken") String fbToken,
-      @JsonKey(name: "googleToken") String googleToken,
-      @JsonKey(name: "msgToken") String msgToken,
-      @JsonKey(name: "otherToken") String otherToken,
-      @JsonKey(name: "alreadyInSave") bool alreadyInSave,
-      @JsonKey(name: "isNew") bool isNew,
-      @JsonKey(name: "modified") bool modified}) {
+      {@JsonKey(name: "userId")
+          String userId,
+      @JsonKey(name: "error")
+          int error,
+      @JsonKey(name: "parentId")
+          String parentId,
+      @JsonKey(name: "userName")
+          String userName,
+      @JsonKey(name: "message")
+          String messageError,
+      @JsonKey(name: "email")
+          String email,
+      @JsonKey(name: "phone")
+          String phone,
+      @JsonKey(name: "password")
+          String password,
+      @JsonKey(name: "fullName")
+          String fullName,
+      @JsonKey(name: "typeIds")
+          String typeIds,
+      @JsonKey(name: "status")
+          double status,
+      @JsonKey(name: "address")
+          String address,
+      @JsonKey(name: "shipTo1")
+          String shipTo1,
+      @JsonKey(name: "shipTo2")
+          String shipTo2,
+      @JsonKey(name: "country", defaultValue: null, nullable: true)
+          String country,
+      @JsonKey(name: "province", defaultValue: null, nullable: true)
+          String province,
+      @JsonKey(name: "city", defaultValue: null, nullable: true)
+          String city,
+      @JsonKey(name: "district", defaultValue: null, nullable: true)
+          String district,
+      @JsonKey(name: "village", defaultValue: null, nullable: true)
+          String village,
+      @JsonKey(name: "terrId1", defaultValue: null, nullable: true)
+          String terrId1,
+      @JsonKey(name: "terrId2", defaultValue: null, nullable: true)
+          String terrId2,
+      @JsonKey(name: "terrId3", defaultValue: null, nullable: true)
+          String terrId3,
+      @JsonKey(name: "terrId4", defaultValue: null, nullable: true)
+          String terrId4,
+      @JsonKey(name: "longitudes")
+          double longitudes,
+      @JsonKey(name: "latitudes")
+          double latitudes,
+      @JsonKey(name: "fbToken")
+          String fbToken,
+      @JsonKey(name: "googleToken")
+          String googleToken,
+      @JsonKey(name: "msgToken")
+          String msgToken,
+      @JsonKey(name: "otherToken")
+          String otherToken,
+      @JsonKey(name: "alreadyInSave")
+          bool alreadyInSave,
+      @JsonKey(name: "isNew")
+          bool isNew,
+      @JsonKey(name: "modified")
+          bool modified}) {
     return _UserDataModel(
       userId: userId,
       error: error,
@@ -126,23 +158,23 @@ mixin _$UserDataModel {
   String get shipTo1;
   @JsonKey(name: "shipTo2")
   String get shipTo2;
-  @JsonKey(name: "country")
+  @JsonKey(name: "country", defaultValue: null, nullable: true)
   String get country;
-  @JsonKey(name: "province")
+  @JsonKey(name: "province", defaultValue: null, nullable: true)
   String get province;
-  @JsonKey(name: "city")
+  @JsonKey(name: "city", defaultValue: null, nullable: true)
   String get city;
-  @JsonKey(name: "district")
+  @JsonKey(name: "district", defaultValue: null, nullable: true)
   String get district;
-  @JsonKey(name: "village")
+  @JsonKey(name: "village", defaultValue: null, nullable: true)
   String get village;
-  @JsonKey(name: "terrId1")
+  @JsonKey(name: "terrId1", defaultValue: null, nullable: true)
   String get terrId1;
-  @JsonKey(name: "terrId2")
+  @JsonKey(name: "terrId2", defaultValue: null, nullable: true)
   String get terrId2;
-  @JsonKey(name: "terrId3")
+  @JsonKey(name: "terrId3", defaultValue: null, nullable: true)
   String get terrId3;
-  @JsonKey(name: "terrId4")
+  @JsonKey(name: "terrId4", defaultValue: null, nullable: true)
   String get terrId4;
   @JsonKey(name: "longitudes")
   double get longitudes;
@@ -174,38 +206,70 @@ abstract class $UserDataModelCopyWith<$Res> {
           UserDataModel value, $Res Function(UserDataModel) then) =
       _$UserDataModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: "userId") String userId,
-      @JsonKey(name: "error") int error,
-      @JsonKey(name: "parentId") String parentId,
-      @JsonKey(name: "userName") String userName,
-      @JsonKey(name: "message") String messageError,
-      @JsonKey(name: "email") String email,
-      @JsonKey(name: "phone") String phone,
-      @JsonKey(name: "password") String password,
-      @JsonKey(name: "fullName") String fullName,
-      @JsonKey(name: "typeIds") String typeIds,
-      @JsonKey(name: "status") double status,
-      @JsonKey(name: "address") String address,
-      @JsonKey(name: "shipTo1") String shipTo1,
-      @JsonKey(name: "shipTo2") String shipTo2,
-      @JsonKey(name: "country") String country,
-      @JsonKey(name: "province") String province,
-      @JsonKey(name: "city") String city,
-      @JsonKey(name: "district") String district,
-      @JsonKey(name: "village") String village,
-      @JsonKey(name: "terrId1") String terrId1,
-      @JsonKey(name: "terrId2") String terrId2,
-      @JsonKey(name: "terrId3") String terrId3,
-      @JsonKey(name: "terrId4") String terrId4,
-      @JsonKey(name: "longitudes") double longitudes,
-      @JsonKey(name: "latitudes") double latitudes,
-      @JsonKey(name: "fbToken") String fbToken,
-      @JsonKey(name: "googleToken") String googleToken,
-      @JsonKey(name: "msgToken") String msgToken,
-      @JsonKey(name: "otherToken") String otherToken,
-      @JsonKey(name: "alreadyInSave") bool alreadyInSave,
-      @JsonKey(name: "isNew") bool isNew,
-      @JsonKey(name: "modified") bool modified});
+      {@JsonKey(name: "userId")
+          String userId,
+      @JsonKey(name: "error")
+          int error,
+      @JsonKey(name: "parentId")
+          String parentId,
+      @JsonKey(name: "userName")
+          String userName,
+      @JsonKey(name: "message")
+          String messageError,
+      @JsonKey(name: "email")
+          String email,
+      @JsonKey(name: "phone")
+          String phone,
+      @JsonKey(name: "password")
+          String password,
+      @JsonKey(name: "fullName")
+          String fullName,
+      @JsonKey(name: "typeIds")
+          String typeIds,
+      @JsonKey(name: "status")
+          double status,
+      @JsonKey(name: "address")
+          String address,
+      @JsonKey(name: "shipTo1")
+          String shipTo1,
+      @JsonKey(name: "shipTo2")
+          String shipTo2,
+      @JsonKey(name: "country", defaultValue: null, nullable: true)
+          String country,
+      @JsonKey(name: "province", defaultValue: null, nullable: true)
+          String province,
+      @JsonKey(name: "city", defaultValue: null, nullable: true)
+          String city,
+      @JsonKey(name: "district", defaultValue: null, nullable: true)
+          String district,
+      @JsonKey(name: "village", defaultValue: null, nullable: true)
+          String village,
+      @JsonKey(name: "terrId1", defaultValue: null, nullable: true)
+          String terrId1,
+      @JsonKey(name: "terrId2", defaultValue: null, nullable: true)
+          String terrId2,
+      @JsonKey(name: "terrId3", defaultValue: null, nullable: true)
+          String terrId3,
+      @JsonKey(name: "terrId4", defaultValue: null, nullable: true)
+          String terrId4,
+      @JsonKey(name: "longitudes")
+          double longitudes,
+      @JsonKey(name: "latitudes")
+          double latitudes,
+      @JsonKey(name: "fbToken")
+          String fbToken,
+      @JsonKey(name: "googleToken")
+          String googleToken,
+      @JsonKey(name: "msgToken")
+          String msgToken,
+      @JsonKey(name: "otherToken")
+          String otherToken,
+      @JsonKey(name: "alreadyInSave")
+          bool alreadyInSave,
+      @JsonKey(name: "isNew")
+          bool isNew,
+      @JsonKey(name: "modified")
+          bool modified});
 }
 
 /// @nodoc
@@ -304,38 +368,70 @@ abstract class _$UserDataModelCopyWith<$Res>
       __$UserDataModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: "userId") String userId,
-      @JsonKey(name: "error") int error,
-      @JsonKey(name: "parentId") String parentId,
-      @JsonKey(name: "userName") String userName,
-      @JsonKey(name: "message") String messageError,
-      @JsonKey(name: "email") String email,
-      @JsonKey(name: "phone") String phone,
-      @JsonKey(name: "password") String password,
-      @JsonKey(name: "fullName") String fullName,
-      @JsonKey(name: "typeIds") String typeIds,
-      @JsonKey(name: "status") double status,
-      @JsonKey(name: "address") String address,
-      @JsonKey(name: "shipTo1") String shipTo1,
-      @JsonKey(name: "shipTo2") String shipTo2,
-      @JsonKey(name: "country") String country,
-      @JsonKey(name: "province") String province,
-      @JsonKey(name: "city") String city,
-      @JsonKey(name: "district") String district,
-      @JsonKey(name: "village") String village,
-      @JsonKey(name: "terrId1") String terrId1,
-      @JsonKey(name: "terrId2") String terrId2,
-      @JsonKey(name: "terrId3") String terrId3,
-      @JsonKey(name: "terrId4") String terrId4,
-      @JsonKey(name: "longitudes") double longitudes,
-      @JsonKey(name: "latitudes") double latitudes,
-      @JsonKey(name: "fbToken") String fbToken,
-      @JsonKey(name: "googleToken") String googleToken,
-      @JsonKey(name: "msgToken") String msgToken,
-      @JsonKey(name: "otherToken") String otherToken,
-      @JsonKey(name: "alreadyInSave") bool alreadyInSave,
-      @JsonKey(name: "isNew") bool isNew,
-      @JsonKey(name: "modified") bool modified});
+      {@JsonKey(name: "userId")
+          String userId,
+      @JsonKey(name: "error")
+          int error,
+      @JsonKey(name: "parentId")
+          String parentId,
+      @JsonKey(name: "userName")
+          String userName,
+      @JsonKey(name: "message")
+          String messageError,
+      @JsonKey(name: "email")
+          String email,
+      @JsonKey(name: "phone")
+          String phone,
+      @JsonKey(name: "password")
+          String password,
+      @JsonKey(name: "fullName")
+          String fullName,
+      @JsonKey(name: "typeIds")
+          String typeIds,
+      @JsonKey(name: "status")
+          double status,
+      @JsonKey(name: "address")
+          String address,
+      @JsonKey(name: "shipTo1")
+          String shipTo1,
+      @JsonKey(name: "shipTo2")
+          String shipTo2,
+      @JsonKey(name: "country", defaultValue: null, nullable: true)
+          String country,
+      @JsonKey(name: "province", defaultValue: null, nullable: true)
+          String province,
+      @JsonKey(name: "city", defaultValue: null, nullable: true)
+          String city,
+      @JsonKey(name: "district", defaultValue: null, nullable: true)
+          String district,
+      @JsonKey(name: "village", defaultValue: null, nullable: true)
+          String village,
+      @JsonKey(name: "terrId1", defaultValue: null, nullable: true)
+          String terrId1,
+      @JsonKey(name: "terrId2", defaultValue: null, nullable: true)
+          String terrId2,
+      @JsonKey(name: "terrId3", defaultValue: null, nullable: true)
+          String terrId3,
+      @JsonKey(name: "terrId4", defaultValue: null, nullable: true)
+          String terrId4,
+      @JsonKey(name: "longitudes")
+          double longitudes,
+      @JsonKey(name: "latitudes")
+          double latitudes,
+      @JsonKey(name: "fbToken")
+          String fbToken,
+      @JsonKey(name: "googleToken")
+          String googleToken,
+      @JsonKey(name: "msgToken")
+          String msgToken,
+      @JsonKey(name: "otherToken")
+          String otherToken,
+      @JsonKey(name: "alreadyInSave")
+          bool alreadyInSave,
+      @JsonKey(name: "isNew")
+          bool isNew,
+      @JsonKey(name: "modified")
+          bool modified});
 }
 
 /// @nodoc
@@ -433,38 +529,70 @@ class __$UserDataModelCopyWithImpl<$Res>
 /// @nodoc
 class _$_UserDataModel implements _UserDataModel {
   _$_UserDataModel(
-      {@JsonKey(name: "userId") this.userId,
-      @JsonKey(name: "error") this.error,
-      @JsonKey(name: "parentId") this.parentId,
-      @JsonKey(name: "userName") this.userName,
-      @JsonKey(name: "message") this.messageError,
-      @JsonKey(name: "email") this.email,
-      @JsonKey(name: "phone") this.phone,
-      @JsonKey(name: "password") this.password,
-      @JsonKey(name: "fullName") this.fullName,
-      @JsonKey(name: "typeIds") this.typeIds,
-      @JsonKey(name: "status") this.status,
-      @JsonKey(name: "address") this.address,
-      @JsonKey(name: "shipTo1") this.shipTo1,
-      @JsonKey(name: "shipTo2") this.shipTo2,
-      @JsonKey(name: "country") this.country,
-      @JsonKey(name: "province") this.province,
-      @JsonKey(name: "city") this.city,
-      @JsonKey(name: "district") this.district,
-      @JsonKey(name: "village") this.village,
-      @JsonKey(name: "terrId1") this.terrId1,
-      @JsonKey(name: "terrId2") this.terrId2,
-      @JsonKey(name: "terrId3") this.terrId3,
-      @JsonKey(name: "terrId4") this.terrId4,
-      @JsonKey(name: "longitudes") this.longitudes,
-      @JsonKey(name: "latitudes") this.latitudes,
-      @JsonKey(name: "fbToken") this.fbToken,
-      @JsonKey(name: "googleToken") this.googleToken,
-      @JsonKey(name: "msgToken") this.msgToken,
-      @JsonKey(name: "otherToken") this.otherToken,
-      @JsonKey(name: "alreadyInSave") this.alreadyInSave,
-      @JsonKey(name: "isNew") this.isNew,
-      @JsonKey(name: "modified") this.modified});
+      {@JsonKey(name: "userId")
+          this.userId,
+      @JsonKey(name: "error")
+          this.error,
+      @JsonKey(name: "parentId")
+          this.parentId,
+      @JsonKey(name: "userName")
+          this.userName,
+      @JsonKey(name: "message")
+          this.messageError,
+      @JsonKey(name: "email")
+          this.email,
+      @JsonKey(name: "phone")
+          this.phone,
+      @JsonKey(name: "password")
+          this.password,
+      @JsonKey(name: "fullName")
+          this.fullName,
+      @JsonKey(name: "typeIds")
+          this.typeIds,
+      @JsonKey(name: "status")
+          this.status,
+      @JsonKey(name: "address")
+          this.address,
+      @JsonKey(name: "shipTo1")
+          this.shipTo1,
+      @JsonKey(name: "shipTo2")
+          this.shipTo2,
+      @JsonKey(name: "country", defaultValue: null, nullable: true)
+          this.country,
+      @JsonKey(name: "province", defaultValue: null, nullable: true)
+          this.province,
+      @JsonKey(name: "city", defaultValue: null, nullable: true)
+          this.city,
+      @JsonKey(name: "district", defaultValue: null, nullable: true)
+          this.district,
+      @JsonKey(name: "village", defaultValue: null, nullable: true)
+          this.village,
+      @JsonKey(name: "terrId1", defaultValue: null, nullable: true)
+          this.terrId1,
+      @JsonKey(name: "terrId2", defaultValue: null, nullable: true)
+          this.terrId2,
+      @JsonKey(name: "terrId3", defaultValue: null, nullable: true)
+          this.terrId3,
+      @JsonKey(name: "terrId4", defaultValue: null, nullable: true)
+          this.terrId4,
+      @JsonKey(name: "longitudes")
+          this.longitudes,
+      @JsonKey(name: "latitudes")
+          this.latitudes,
+      @JsonKey(name: "fbToken")
+          this.fbToken,
+      @JsonKey(name: "googleToken")
+          this.googleToken,
+      @JsonKey(name: "msgToken")
+          this.msgToken,
+      @JsonKey(name: "otherToken")
+          this.otherToken,
+      @JsonKey(name: "alreadyInSave")
+          this.alreadyInSave,
+      @JsonKey(name: "isNew")
+          this.isNew,
+      @JsonKey(name: "modified")
+          this.modified});
 
   factory _$_UserDataModel.fromJson(Map<String, dynamic> json) =>
       _$_$_UserDataModelFromJson(json);
@@ -512,31 +640,31 @@ class _$_UserDataModel implements _UserDataModel {
   @JsonKey(name: "shipTo2")
   final String shipTo2;
   @override
-  @JsonKey(name: "country")
+  @JsonKey(name: "country", defaultValue: null, nullable: true)
   final String country;
   @override
-  @JsonKey(name: "province")
+  @JsonKey(name: "province", defaultValue: null, nullable: true)
   final String province;
   @override
-  @JsonKey(name: "city")
+  @JsonKey(name: "city", defaultValue: null, nullable: true)
   final String city;
   @override
-  @JsonKey(name: "district")
+  @JsonKey(name: "district", defaultValue: null, nullable: true)
   final String district;
   @override
-  @JsonKey(name: "village")
+  @JsonKey(name: "village", defaultValue: null, nullable: true)
   final String village;
   @override
-  @JsonKey(name: "terrId1")
+  @JsonKey(name: "terrId1", defaultValue: null, nullable: true)
   final String terrId1;
   @override
-  @JsonKey(name: "terrId2")
+  @JsonKey(name: "terrId2", defaultValue: null, nullable: true)
   final String terrId2;
   @override
-  @JsonKey(name: "terrId3")
+  @JsonKey(name: "terrId3", defaultValue: null, nullable: true)
   final String terrId3;
   @override
-  @JsonKey(name: "terrId4")
+  @JsonKey(name: "terrId4", defaultValue: null, nullable: true)
   final String terrId4;
   @override
   @JsonKey(name: "longitudes")
@@ -701,38 +829,70 @@ class _$_UserDataModel implements _UserDataModel {
 
 abstract class _UserDataModel implements UserDataModel {
   factory _UserDataModel(
-      {@JsonKey(name: "userId") String userId,
-      @JsonKey(name: "error") int error,
-      @JsonKey(name: "parentId") String parentId,
-      @JsonKey(name: "userName") String userName,
-      @JsonKey(name: "message") String messageError,
-      @JsonKey(name: "email") String email,
-      @JsonKey(name: "phone") String phone,
-      @JsonKey(name: "password") String password,
-      @JsonKey(name: "fullName") String fullName,
-      @JsonKey(name: "typeIds") String typeIds,
-      @JsonKey(name: "status") double status,
-      @JsonKey(name: "address") String address,
-      @JsonKey(name: "shipTo1") String shipTo1,
-      @JsonKey(name: "shipTo2") String shipTo2,
-      @JsonKey(name: "country") String country,
-      @JsonKey(name: "province") String province,
-      @JsonKey(name: "city") String city,
-      @JsonKey(name: "district") String district,
-      @JsonKey(name: "village") String village,
-      @JsonKey(name: "terrId1") String terrId1,
-      @JsonKey(name: "terrId2") String terrId2,
-      @JsonKey(name: "terrId3") String terrId3,
-      @JsonKey(name: "terrId4") String terrId4,
-      @JsonKey(name: "longitudes") double longitudes,
-      @JsonKey(name: "latitudes") double latitudes,
-      @JsonKey(name: "fbToken") String fbToken,
-      @JsonKey(name: "googleToken") String googleToken,
-      @JsonKey(name: "msgToken") String msgToken,
-      @JsonKey(name: "otherToken") String otherToken,
-      @JsonKey(name: "alreadyInSave") bool alreadyInSave,
-      @JsonKey(name: "isNew") bool isNew,
-      @JsonKey(name: "modified") bool modified}) = _$_UserDataModel;
+      {@JsonKey(name: "userId")
+          String userId,
+      @JsonKey(name: "error")
+          int error,
+      @JsonKey(name: "parentId")
+          String parentId,
+      @JsonKey(name: "userName")
+          String userName,
+      @JsonKey(name: "message")
+          String messageError,
+      @JsonKey(name: "email")
+          String email,
+      @JsonKey(name: "phone")
+          String phone,
+      @JsonKey(name: "password")
+          String password,
+      @JsonKey(name: "fullName")
+          String fullName,
+      @JsonKey(name: "typeIds")
+          String typeIds,
+      @JsonKey(name: "status")
+          double status,
+      @JsonKey(name: "address")
+          String address,
+      @JsonKey(name: "shipTo1")
+          String shipTo1,
+      @JsonKey(name: "shipTo2")
+          String shipTo2,
+      @JsonKey(name: "country", defaultValue: null, nullable: true)
+          String country,
+      @JsonKey(name: "province", defaultValue: null, nullable: true)
+          String province,
+      @JsonKey(name: "city", defaultValue: null, nullable: true)
+          String city,
+      @JsonKey(name: "district", defaultValue: null, nullable: true)
+          String district,
+      @JsonKey(name: "village", defaultValue: null, nullable: true)
+          String village,
+      @JsonKey(name: "terrId1", defaultValue: null, nullable: true)
+          String terrId1,
+      @JsonKey(name: "terrId2", defaultValue: null, nullable: true)
+          String terrId2,
+      @JsonKey(name: "terrId3", defaultValue: null, nullable: true)
+          String terrId3,
+      @JsonKey(name: "terrId4", defaultValue: null, nullable: true)
+          String terrId4,
+      @JsonKey(name: "longitudes")
+          double longitudes,
+      @JsonKey(name: "latitudes")
+          double latitudes,
+      @JsonKey(name: "fbToken")
+          String fbToken,
+      @JsonKey(name: "googleToken")
+          String googleToken,
+      @JsonKey(name: "msgToken")
+          String msgToken,
+      @JsonKey(name: "otherToken")
+          String otherToken,
+      @JsonKey(name: "alreadyInSave")
+          bool alreadyInSave,
+      @JsonKey(name: "isNew")
+          bool isNew,
+      @JsonKey(name: "modified")
+          bool modified}) = _$_UserDataModel;
 
   factory _UserDataModel.fromJson(Map<String, dynamic> json) =
       _$_UserDataModel.fromJson;
@@ -780,31 +940,31 @@ abstract class _UserDataModel implements UserDataModel {
   @JsonKey(name: "shipTo2")
   String get shipTo2;
   @override
-  @JsonKey(name: "country")
+  @JsonKey(name: "country", defaultValue: null, nullable: true)
   String get country;
   @override
-  @JsonKey(name: "province")
+  @JsonKey(name: "province", defaultValue: null, nullable: true)
   String get province;
   @override
-  @JsonKey(name: "city")
+  @JsonKey(name: "city", defaultValue: null, nullable: true)
   String get city;
   @override
-  @JsonKey(name: "district")
+  @JsonKey(name: "district", defaultValue: null, nullable: true)
   String get district;
   @override
-  @JsonKey(name: "village")
+  @JsonKey(name: "village", defaultValue: null, nullable: true)
   String get village;
   @override
-  @JsonKey(name: "terrId1")
+  @JsonKey(name: "terrId1", defaultValue: null, nullable: true)
   String get terrId1;
   @override
-  @JsonKey(name: "terrId2")
+  @JsonKey(name: "terrId2", defaultValue: null, nullable: true)
   String get terrId2;
   @override
-  @JsonKey(name: "terrId3")
+  @JsonKey(name: "terrId3", defaultValue: null, nullable: true)
   String get terrId3;
   @override
-  @JsonKey(name: "terrId4")
+  @JsonKey(name: "terrId4", defaultValue: null, nullable: true)
   String get terrId4;
   @override
   @JsonKey(name: "longitudes")

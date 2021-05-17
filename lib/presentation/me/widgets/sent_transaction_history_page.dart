@@ -6,7 +6,7 @@ import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:roomart/application/transaction/transaction_controller.dart';
 import 'package:roomart/application/transaction/transaction_cubit.dart';
 import 'package:roomart/domain/transaction/models/transaction_req_res.dart';
-import 'package:roomart/presentation/me/components/transaction_item_widgetV3.dart';
+import 'package:roomart/presentation/me/components/transaction_item_widget_full.dart';
 import 'package:roomart/utils/constants.dart';
 
 import '../../../injection.dart';
@@ -125,7 +125,7 @@ class _SentTransactionHistoryPageState
                 child: ListView.builder(
                     itemCount: trans.getSentTransaction(STATUS).length,
                     itemBuilder: (context, index) {
-                      return TransactionItemWidgetV3(
+                      return TransactionItemWidgetFull(
                           data: trans.getSentTransaction(STATUS)[index]);
                     }),
               );

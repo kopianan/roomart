@@ -71,6 +71,20 @@ class _$AuthStateTearOff {
       user,
     );
   }
+
+// ignore: unused_element
+  _OnChangeAddress onChangeAddress(UserDataModel user) {
+    return _OnChangeAddress(
+      user,
+    );
+  }
+
+// ignore: unused_element
+  _OnForgotPassword onForgotPassword(String status) {
+    return _OnForgotPassword(
+      status,
+    );
+  }
 }
 
 /// @nodoc
@@ -90,6 +104,8 @@ mixin _$AuthState {
     @required TResult onGetArBalance(String balancd),
     @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     @required TResult onAuthenticated(UserDataModel user),
+    @required TResult onChangeAddress(UserDataModel user),
+    @required TResult onForgotPassword(String status),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
@@ -102,6 +118,8 @@ mixin _$AuthState {
     TResult onGetArBalance(String balancd),
     TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     TResult onAuthenticated(UserDataModel user),
+    TResult onChangeAddress(UserDataModel user),
+    TResult onForgotPassword(String status),
     @required TResult orElse(),
   });
   @optionalTypeArgs
@@ -115,6 +133,8 @@ mixin _$AuthState {
     @required TResult onGetArBalance(_OnGetArBalance value),
     @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     @required TResult onAuthenticated(_OnAuthenticated value),
+    @required TResult onChangeAddress(_OnChangeAddress value),
+    @required TResult onForgotPassword(_OnForgotPassword value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
@@ -127,6 +147,8 @@ mixin _$AuthState {
     TResult onGetArBalance(_OnGetArBalance value),
     TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     TResult onAuthenticated(_OnAuthenticated value),
+    TResult onChangeAddress(_OnChangeAddress value),
+    TResult onForgotPassword(_OnForgotPassword value),
     @required TResult orElse(),
   });
 }
@@ -191,6 +213,8 @@ class _$_Initial implements _Initial {
     @required TResult onGetArBalance(String balancd),
     @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     @required TResult onAuthenticated(UserDataModel user),
+    @required TResult onChangeAddress(UserDataModel user),
+    @required TResult onForgotPassword(String status),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -201,6 +225,8 @@ class _$_Initial implements _Initial {
     assert(onGetArBalance != null);
     assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
+    assert(onChangeAddress != null);
+    assert(onForgotPassword != null);
     return initial();
   }
 
@@ -216,6 +242,8 @@ class _$_Initial implements _Initial {
     TResult onGetArBalance(String balancd),
     TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     TResult onAuthenticated(UserDataModel user),
+    TResult onChangeAddress(UserDataModel user),
+    TResult onForgotPassword(String status),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -237,6 +265,8 @@ class _$_Initial implements _Initial {
     @required TResult onGetArBalance(_OnGetArBalance value),
     @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     @required TResult onAuthenticated(_OnAuthenticated value),
+    @required TResult onChangeAddress(_OnChangeAddress value),
+    @required TResult onForgotPassword(_OnForgotPassword value),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -247,6 +277,8 @@ class _$_Initial implements _Initial {
     assert(onGetArBalance != null);
     assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
+    assert(onChangeAddress != null);
+    assert(onForgotPassword != null);
     return initial(this);
   }
 
@@ -262,6 +294,8 @@ class _$_Initial implements _Initial {
     TResult onGetArBalance(_OnGetArBalance value),
     TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     TResult onAuthenticated(_OnAuthenticated value),
+    TResult onChangeAddress(_OnChangeAddress value),
+    TResult onForgotPassword(_OnForgotPassword value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -321,6 +355,8 @@ class _$_Loading implements _Loading {
     @required TResult onGetArBalance(String balancd),
     @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     @required TResult onAuthenticated(UserDataModel user),
+    @required TResult onChangeAddress(UserDataModel user),
+    @required TResult onForgotPassword(String status),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -331,6 +367,8 @@ class _$_Loading implements _Loading {
     assert(onGetArBalance != null);
     assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
+    assert(onChangeAddress != null);
+    assert(onForgotPassword != null);
     return loading();
   }
 
@@ -346,6 +384,8 @@ class _$_Loading implements _Loading {
     TResult onGetArBalance(String balancd),
     TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     TResult onAuthenticated(UserDataModel user),
+    TResult onChangeAddress(UserDataModel user),
+    TResult onForgotPassword(String status),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -367,6 +407,8 @@ class _$_Loading implements _Loading {
     @required TResult onGetArBalance(_OnGetArBalance value),
     @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     @required TResult onAuthenticated(_OnAuthenticated value),
+    @required TResult onChangeAddress(_OnChangeAddress value),
+    @required TResult onForgotPassword(_OnForgotPassword value),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -377,6 +419,8 @@ class _$_Loading implements _Loading {
     assert(onGetArBalance != null);
     assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
+    assert(onChangeAddress != null);
+    assert(onForgotPassword != null);
     return loading(this);
   }
 
@@ -392,6 +436,8 @@ class _$_Loading implements _Loading {
     TResult onGetArBalance(_OnGetArBalance value),
     TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     TResult onAuthenticated(_OnAuthenticated value),
+    TResult onChangeAddress(_OnChangeAddress value),
+    TResult onForgotPassword(_OnForgotPassword value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -473,6 +519,8 @@ class _$_Error implements _Error {
     @required TResult onGetArBalance(String balancd),
     @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     @required TResult onAuthenticated(UserDataModel user),
+    @required TResult onChangeAddress(UserDataModel user),
+    @required TResult onForgotPassword(String status),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -483,6 +531,8 @@ class _$_Error implements _Error {
     assert(onGetArBalance != null);
     assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
+    assert(onChangeAddress != null);
+    assert(onForgotPassword != null);
     return error(this.error);
   }
 
@@ -498,6 +548,8 @@ class _$_Error implements _Error {
     TResult onGetArBalance(String balancd),
     TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     TResult onAuthenticated(UserDataModel user),
+    TResult onChangeAddress(UserDataModel user),
+    TResult onForgotPassword(String status),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -519,6 +571,8 @@ class _$_Error implements _Error {
     @required TResult onGetArBalance(_OnGetArBalance value),
     @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     @required TResult onAuthenticated(_OnAuthenticated value),
+    @required TResult onChangeAddress(_OnChangeAddress value),
+    @required TResult onForgotPassword(_OnForgotPassword value),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -529,6 +583,8 @@ class _$_Error implements _Error {
     assert(onGetArBalance != null);
     assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
+    assert(onChangeAddress != null);
+    assert(onForgotPassword != null);
     return error(this);
   }
 
@@ -544,6 +600,8 @@ class _$_Error implements _Error {
     TResult onGetArBalance(_OnGetArBalance value),
     TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     TResult onAuthenticated(_OnAuthenticated value),
+    TResult onChangeAddress(_OnChangeAddress value),
+    TResult onForgotPassword(_OnForgotPassword value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -633,6 +691,8 @@ class _$_OnRegisterToRoomart implements _OnRegisterToRoomart {
     @required TResult onGetArBalance(String balancd),
     @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     @required TResult onAuthenticated(UserDataModel user),
+    @required TResult onChangeAddress(UserDataModel user),
+    @required TResult onForgotPassword(String status),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -643,6 +703,8 @@ class _$_OnRegisterToRoomart implements _OnRegisterToRoomart {
     assert(onGetArBalance != null);
     assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
+    assert(onChangeAddress != null);
+    assert(onForgotPassword != null);
     return onRegisterToRoomart(user);
   }
 
@@ -658,6 +720,8 @@ class _$_OnRegisterToRoomart implements _OnRegisterToRoomart {
     TResult onGetArBalance(String balancd),
     TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     TResult onAuthenticated(UserDataModel user),
+    TResult onChangeAddress(UserDataModel user),
+    TResult onForgotPassword(String status),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -679,6 +743,8 @@ class _$_OnRegisterToRoomart implements _OnRegisterToRoomart {
     @required TResult onGetArBalance(_OnGetArBalance value),
     @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     @required TResult onAuthenticated(_OnAuthenticated value),
+    @required TResult onChangeAddress(_OnChangeAddress value),
+    @required TResult onForgotPassword(_OnForgotPassword value),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -689,6 +755,8 @@ class _$_OnRegisterToRoomart implements _OnRegisterToRoomart {
     assert(onGetArBalance != null);
     assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
+    assert(onChangeAddress != null);
+    assert(onForgotPassword != null);
     return onRegisterToRoomart(this);
   }
 
@@ -704,6 +772,8 @@ class _$_OnRegisterToRoomart implements _OnRegisterToRoomart {
     TResult onGetArBalance(_OnGetArBalance value),
     TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     TResult onAuthenticated(_OnAuthenticated value),
+    TResult onChangeAddress(_OnChangeAddress value),
+    TResult onForgotPassword(_OnForgotPassword value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -793,6 +863,8 @@ class _$_OnRegiserUser implements _OnRegiserUser {
     @required TResult onGetArBalance(String balancd),
     @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     @required TResult onAuthenticated(UserDataModel user),
+    @required TResult onChangeAddress(UserDataModel user),
+    @required TResult onForgotPassword(String status),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -803,6 +875,8 @@ class _$_OnRegiserUser implements _OnRegiserUser {
     assert(onGetArBalance != null);
     assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
+    assert(onChangeAddress != null);
+    assert(onForgotPassword != null);
     return onRegiserUser(response);
   }
 
@@ -818,6 +892,8 @@ class _$_OnRegiserUser implements _OnRegiserUser {
     TResult onGetArBalance(String balancd),
     TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     TResult onAuthenticated(UserDataModel user),
+    TResult onChangeAddress(UserDataModel user),
+    TResult onForgotPassword(String status),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -839,6 +915,8 @@ class _$_OnRegiserUser implements _OnRegiserUser {
     @required TResult onGetArBalance(_OnGetArBalance value),
     @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     @required TResult onAuthenticated(_OnAuthenticated value),
+    @required TResult onChangeAddress(_OnChangeAddress value),
+    @required TResult onForgotPassword(_OnForgotPassword value),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -849,6 +927,8 @@ class _$_OnRegiserUser implements _OnRegiserUser {
     assert(onGetArBalance != null);
     assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
+    assert(onChangeAddress != null);
+    assert(onForgotPassword != null);
     return onRegiserUser(this);
   }
 
@@ -864,6 +944,8 @@ class _$_OnRegiserUser implements _OnRegiserUser {
     TResult onGetArBalance(_OnGetArBalance value),
     TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     TResult onAuthenticated(_OnAuthenticated value),
+    TResult onChangeAddress(_OnChangeAddress value),
+    TResult onForgotPassword(_OnForgotPassword value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -964,6 +1046,8 @@ class _$_OnLoginUser implements _OnLoginUser {
     @required TResult onGetArBalance(String balancd),
     @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     @required TResult onAuthenticated(UserDataModel user),
+    @required TResult onChangeAddress(UserDataModel user),
+    @required TResult onForgotPassword(String status),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -974,6 +1058,8 @@ class _$_OnLoginUser implements _OnLoginUser {
     assert(onGetArBalance != null);
     assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
+    assert(onChangeAddress != null);
+    assert(onForgotPassword != null);
     return onLoginUser(user);
   }
 
@@ -989,6 +1075,8 @@ class _$_OnLoginUser implements _OnLoginUser {
     TResult onGetArBalance(String balancd),
     TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     TResult onAuthenticated(UserDataModel user),
+    TResult onChangeAddress(UserDataModel user),
+    TResult onForgotPassword(String status),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1010,6 +1098,8 @@ class _$_OnLoginUser implements _OnLoginUser {
     @required TResult onGetArBalance(_OnGetArBalance value),
     @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     @required TResult onAuthenticated(_OnAuthenticated value),
+    @required TResult onChangeAddress(_OnChangeAddress value),
+    @required TResult onForgotPassword(_OnForgotPassword value),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -1020,6 +1110,8 @@ class _$_OnLoginUser implements _OnLoginUser {
     assert(onGetArBalance != null);
     assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
+    assert(onChangeAddress != null);
+    assert(onForgotPassword != null);
     return onLoginUser(this);
   }
 
@@ -1035,6 +1127,8 @@ class _$_OnLoginUser implements _OnLoginUser {
     TResult onGetArBalance(_OnGetArBalance value),
     TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     TResult onAuthenticated(_OnAuthenticated value),
+    TResult onChangeAddress(_OnChangeAddress value),
+    TResult onForgotPassword(_OnForgotPassword value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1122,6 +1216,8 @@ class _$_OnGetArBalance implements _OnGetArBalance {
     @required TResult onGetArBalance(String balancd),
     @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     @required TResult onAuthenticated(UserDataModel user),
+    @required TResult onChangeAddress(UserDataModel user),
+    @required TResult onForgotPassword(String status),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -1132,6 +1228,8 @@ class _$_OnGetArBalance implements _OnGetArBalance {
     assert(onGetArBalance != null);
     assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
+    assert(onChangeAddress != null);
+    assert(onForgotPassword != null);
     return onGetArBalance(balancd);
   }
 
@@ -1147,6 +1245,8 @@ class _$_OnGetArBalance implements _OnGetArBalance {
     TResult onGetArBalance(String balancd),
     TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     TResult onAuthenticated(UserDataModel user),
+    TResult onChangeAddress(UserDataModel user),
+    TResult onForgotPassword(String status),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1168,6 +1268,8 @@ class _$_OnGetArBalance implements _OnGetArBalance {
     @required TResult onGetArBalance(_OnGetArBalance value),
     @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     @required TResult onAuthenticated(_OnAuthenticated value),
+    @required TResult onChangeAddress(_OnChangeAddress value),
+    @required TResult onForgotPassword(_OnForgotPassword value),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -1178,6 +1280,8 @@ class _$_OnGetArBalance implements _OnGetArBalance {
     assert(onGetArBalance != null);
     assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
+    assert(onChangeAddress != null);
+    assert(onForgotPassword != null);
     return onGetArBalance(this);
   }
 
@@ -1193,6 +1297,8 @@ class _$_OnGetArBalance implements _OnGetArBalance {
     TResult onGetArBalance(_OnGetArBalance value),
     TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     TResult onAuthenticated(_OnAuthenticated value),
+    TResult onChangeAddress(_OnChangeAddress value),
+    TResult onForgotPassword(_OnForgotPassword value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1282,6 +1388,8 @@ class _$_OnGetAvailableDiscount implements _OnGetAvailableDiscount {
     @required TResult onGetArBalance(String balancd),
     @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     @required TResult onAuthenticated(UserDataModel user),
+    @required TResult onChangeAddress(UserDataModel user),
+    @required TResult onForgotPassword(String status),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -1292,6 +1400,8 @@ class _$_OnGetAvailableDiscount implements _OnGetAvailableDiscount {
     assert(onGetArBalance != null);
     assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
+    assert(onChangeAddress != null);
+    assert(onForgotPassword != null);
     return onGetAvailableDiscount(list);
   }
 
@@ -1307,6 +1417,8 @@ class _$_OnGetAvailableDiscount implements _OnGetAvailableDiscount {
     TResult onGetArBalance(String balancd),
     TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     TResult onAuthenticated(UserDataModel user),
+    TResult onChangeAddress(UserDataModel user),
+    TResult onForgotPassword(String status),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1328,6 +1440,8 @@ class _$_OnGetAvailableDiscount implements _OnGetAvailableDiscount {
     @required TResult onGetArBalance(_OnGetArBalance value),
     @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     @required TResult onAuthenticated(_OnAuthenticated value),
+    @required TResult onChangeAddress(_OnChangeAddress value),
+    @required TResult onForgotPassword(_OnForgotPassword value),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -1338,6 +1452,8 @@ class _$_OnGetAvailableDiscount implements _OnGetAvailableDiscount {
     assert(onGetArBalance != null);
     assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
+    assert(onChangeAddress != null);
+    assert(onForgotPassword != null);
     return onGetAvailableDiscount(this);
   }
 
@@ -1353,6 +1469,8 @@ class _$_OnGetAvailableDiscount implements _OnGetAvailableDiscount {
     TResult onGetArBalance(_OnGetArBalance value),
     TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     TResult onAuthenticated(_OnAuthenticated value),
+    TResult onChangeAddress(_OnChangeAddress value),
+    TResult onForgotPassword(_OnForgotPassword value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1453,6 +1571,8 @@ class _$_OnAuthenticated implements _OnAuthenticated {
     @required TResult onGetArBalance(String balancd),
     @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     @required TResult onAuthenticated(UserDataModel user),
+    @required TResult onChangeAddress(UserDataModel user),
+    @required TResult onForgotPassword(String status),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -1463,6 +1583,8 @@ class _$_OnAuthenticated implements _OnAuthenticated {
     assert(onGetArBalance != null);
     assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
+    assert(onChangeAddress != null);
+    assert(onForgotPassword != null);
     return onAuthenticated(user);
   }
 
@@ -1478,6 +1600,8 @@ class _$_OnAuthenticated implements _OnAuthenticated {
     TResult onGetArBalance(String balancd),
     TResult onGetAvailableDiscount(List<DiscountDataModel> list),
     TResult onAuthenticated(UserDataModel user),
+    TResult onChangeAddress(UserDataModel user),
+    TResult onForgotPassword(String status),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1499,6 +1623,8 @@ class _$_OnAuthenticated implements _OnAuthenticated {
     @required TResult onGetArBalance(_OnGetArBalance value),
     @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     @required TResult onAuthenticated(_OnAuthenticated value),
+    @required TResult onChangeAddress(_OnChangeAddress value),
+    @required TResult onForgotPassword(_OnForgotPassword value),
   }) {
     assert(initial != null);
     assert(loading != null);
@@ -1509,6 +1635,8 @@ class _$_OnAuthenticated implements _OnAuthenticated {
     assert(onGetArBalance != null);
     assert(onGetAvailableDiscount != null);
     assert(onAuthenticated != null);
+    assert(onChangeAddress != null);
+    assert(onForgotPassword != null);
     return onAuthenticated(this);
   }
 
@@ -1524,6 +1652,8 @@ class _$_OnAuthenticated implements _OnAuthenticated {
     TResult onGetArBalance(_OnGetArBalance value),
     TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
     TResult onAuthenticated(_OnAuthenticated value),
+    TResult onChangeAddress(_OnChangeAddress value),
+    TResult onForgotPassword(_OnForgotPassword value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1540,4 +1670,357 @@ abstract class _OnAuthenticated implements AuthState {
   UserDataModel get user;
   @JsonKey(ignore: true)
   _$OnAuthenticatedCopyWith<_OnAuthenticated> get copyWith;
+}
+
+/// @nodoc
+abstract class _$OnChangeAddressCopyWith<$Res> {
+  factory _$OnChangeAddressCopyWith(
+          _OnChangeAddress value, $Res Function(_OnChangeAddress) then) =
+      __$OnChangeAddressCopyWithImpl<$Res>;
+  $Res call({UserDataModel user});
+
+  $UserDataModelCopyWith<$Res> get user;
+}
+
+/// @nodoc
+class __$OnChangeAddressCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
+    implements _$OnChangeAddressCopyWith<$Res> {
+  __$OnChangeAddressCopyWithImpl(
+      _OnChangeAddress _value, $Res Function(_OnChangeAddress) _then)
+      : super(_value, (v) => _then(v as _OnChangeAddress));
+
+  @override
+  _OnChangeAddress get _value => super._value as _OnChangeAddress;
+
+  @override
+  $Res call({
+    Object user = freezed,
+  }) {
+    return _then(_OnChangeAddress(
+      user == freezed ? _value.user : user as UserDataModel,
+    ));
+  }
+
+  @override
+  $UserDataModelCopyWith<$Res> get user {
+    if (_value.user == null) {
+      return null;
+    }
+    return $UserDataModelCopyWith<$Res>(_value.user, (value) {
+      return _then(_value.copyWith(user: value));
+    });
+  }
+}
+
+/// @nodoc
+class _$_OnChangeAddress implements _OnChangeAddress {
+  const _$_OnChangeAddress(this.user) : assert(user != null);
+
+  @override
+  final UserDataModel user;
+
+  @override
+  String toString() {
+    return 'AuthState.onChangeAddress(user: $user)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _OnChangeAddress &&
+            (identical(other.user, user) ||
+                const DeepCollectionEquality().equals(other.user, user)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(user);
+
+  @JsonKey(ignore: true)
+  @override
+  _$OnChangeAddressCopyWith<_OnChangeAddress> get copyWith =>
+      __$OnChangeAddressCopyWithImpl<_OnChangeAddress>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loading(),
+    @required TResult error(String error),
+    @required TResult onRegisterToRoomart(UserRoomartDataModel user),
+    @required TResult onRegiserUser(RegisterResponseModel response),
+    @required TResult onLoginUser(UserDataModel user),
+    @required TResult onGetArBalance(String balancd),
+    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
+    @required TResult onAuthenticated(UserDataModel user),
+    @required TResult onChangeAddress(UserDataModel user),
+    @required TResult onForgotPassword(String status),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(onRegisterToRoomart != null);
+    assert(onRegiserUser != null);
+    assert(onLoginUser != null);
+    assert(onGetArBalance != null);
+    assert(onGetAvailableDiscount != null);
+    assert(onAuthenticated != null);
+    assert(onChangeAddress != null);
+    assert(onForgotPassword != null);
+    return onChangeAddress(user);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loading(),
+    TResult error(String error),
+    TResult onRegisterToRoomart(UserRoomartDataModel user),
+    TResult onRegiserUser(RegisterResponseModel response),
+    TResult onLoginUser(UserDataModel user),
+    TResult onGetArBalance(String balancd),
+    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
+    TResult onAuthenticated(UserDataModel user),
+    TResult onChangeAddress(UserDataModel user),
+    TResult onForgotPassword(String status),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (onChangeAddress != null) {
+      return onChangeAddress(user);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loading(_Loading value),
+    @required TResult error(_Error value),
+    @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
+    @required TResult onRegiserUser(_OnRegiserUser value),
+    @required TResult onLoginUser(_OnLoginUser value),
+    @required TResult onGetArBalance(_OnGetArBalance value),
+    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
+    @required TResult onAuthenticated(_OnAuthenticated value),
+    @required TResult onChangeAddress(_OnChangeAddress value),
+    @required TResult onForgotPassword(_OnForgotPassword value),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(onRegisterToRoomart != null);
+    assert(onRegiserUser != null);
+    assert(onLoginUser != null);
+    assert(onGetArBalance != null);
+    assert(onGetAvailableDiscount != null);
+    assert(onAuthenticated != null);
+    assert(onChangeAddress != null);
+    assert(onForgotPassword != null);
+    return onChangeAddress(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loading(_Loading value),
+    TResult error(_Error value),
+    TResult onRegisterToRoomart(_OnRegisterToRoomart value),
+    TResult onRegiserUser(_OnRegiserUser value),
+    TResult onLoginUser(_OnLoginUser value),
+    TResult onGetArBalance(_OnGetArBalance value),
+    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
+    TResult onAuthenticated(_OnAuthenticated value),
+    TResult onChangeAddress(_OnChangeAddress value),
+    TResult onForgotPassword(_OnForgotPassword value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (onChangeAddress != null) {
+      return onChangeAddress(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnChangeAddress implements AuthState {
+  const factory _OnChangeAddress(UserDataModel user) = _$_OnChangeAddress;
+
+  UserDataModel get user;
+  @JsonKey(ignore: true)
+  _$OnChangeAddressCopyWith<_OnChangeAddress> get copyWith;
+}
+
+/// @nodoc
+abstract class _$OnForgotPasswordCopyWith<$Res> {
+  factory _$OnForgotPasswordCopyWith(
+          _OnForgotPassword value, $Res Function(_OnForgotPassword) then) =
+      __$OnForgotPasswordCopyWithImpl<$Res>;
+  $Res call({String status});
+}
+
+/// @nodoc
+class __$OnForgotPasswordCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res>
+    implements _$OnForgotPasswordCopyWith<$Res> {
+  __$OnForgotPasswordCopyWithImpl(
+      _OnForgotPassword _value, $Res Function(_OnForgotPassword) _then)
+      : super(_value, (v) => _then(v as _OnForgotPassword));
+
+  @override
+  _OnForgotPassword get _value => super._value as _OnForgotPassword;
+
+  @override
+  $Res call({
+    Object status = freezed,
+  }) {
+    return _then(_OnForgotPassword(
+      status == freezed ? _value.status : status as String,
+    ));
+  }
+}
+
+/// @nodoc
+class _$_OnForgotPassword implements _OnForgotPassword {
+  const _$_OnForgotPassword(this.status) : assert(status != null);
+
+  @override
+  final String status;
+
+  @override
+  String toString() {
+    return 'AuthState.onForgotPassword(status: $status)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _OnForgotPassword &&
+            (identical(other.status, status) ||
+                const DeepCollectionEquality().equals(other.status, status)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(status);
+
+  @JsonKey(ignore: true)
+  @override
+  _$OnForgotPasswordCopyWith<_OnForgotPassword> get copyWith =>
+      __$OnForgotPasswordCopyWithImpl<_OnForgotPassword>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loading(),
+    @required TResult error(String error),
+    @required TResult onRegisterToRoomart(UserRoomartDataModel user),
+    @required TResult onRegiserUser(RegisterResponseModel response),
+    @required TResult onLoginUser(UserDataModel user),
+    @required TResult onGetArBalance(String balancd),
+    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
+    @required TResult onAuthenticated(UserDataModel user),
+    @required TResult onChangeAddress(UserDataModel user),
+    @required TResult onForgotPassword(String status),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(onRegisterToRoomart != null);
+    assert(onRegiserUser != null);
+    assert(onLoginUser != null);
+    assert(onGetArBalance != null);
+    assert(onGetAvailableDiscount != null);
+    assert(onAuthenticated != null);
+    assert(onChangeAddress != null);
+    assert(onForgotPassword != null);
+    return onForgotPassword(status);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loading(),
+    TResult error(String error),
+    TResult onRegisterToRoomart(UserRoomartDataModel user),
+    TResult onRegiserUser(RegisterResponseModel response),
+    TResult onLoginUser(UserDataModel user),
+    TResult onGetArBalance(String balancd),
+    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
+    TResult onAuthenticated(UserDataModel user),
+    TResult onChangeAddress(UserDataModel user),
+    TResult onForgotPassword(String status),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (onForgotPassword != null) {
+      return onForgotPassword(status);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loading(_Loading value),
+    @required TResult error(_Error value),
+    @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
+    @required TResult onRegiserUser(_OnRegiserUser value),
+    @required TResult onLoginUser(_OnLoginUser value),
+    @required TResult onGetArBalance(_OnGetArBalance value),
+    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
+    @required TResult onAuthenticated(_OnAuthenticated value),
+    @required TResult onChangeAddress(_OnChangeAddress value),
+    @required TResult onForgotPassword(_OnForgotPassword value),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(onRegisterToRoomart != null);
+    assert(onRegiserUser != null);
+    assert(onLoginUser != null);
+    assert(onGetArBalance != null);
+    assert(onGetAvailableDiscount != null);
+    assert(onAuthenticated != null);
+    assert(onChangeAddress != null);
+    assert(onForgotPassword != null);
+    return onForgotPassword(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loading(_Loading value),
+    TResult error(_Error value),
+    TResult onRegisterToRoomart(_OnRegisterToRoomart value),
+    TResult onRegiserUser(_OnRegiserUser value),
+    TResult onLoginUser(_OnLoginUser value),
+    TResult onGetArBalance(_OnGetArBalance value),
+    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
+    TResult onAuthenticated(_OnAuthenticated value),
+    TResult onChangeAddress(_OnChangeAddress value),
+    TResult onForgotPassword(_OnForgotPassword value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (onForgotPassword != null) {
+      return onForgotPassword(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnForgotPassword implements AuthState {
+  const factory _OnForgotPassword(String status) = _$_OnForgotPassword;
+
+  String get status;
+  @JsonKey(ignore: true)
+  _$OnForgotPasswordCopyWith<_OnForgotPassword> get copyWith;
 }

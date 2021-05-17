@@ -94,4 +94,30 @@ class AuthCubit extends Cubit<AuthState> {
       emit(AuthState.error(e.toString()));
     }
   }
+
+  void changeAddress(UserDataModel user) async {
+    emit(AuthState.loading());
+    try {
+      final _result = await iAuthFacade.changeAddress(user);
+      _result.fold(
+        (l) => emit(AuthState.error(l)),
+        (r) => emit(AuthState.onChangeAddress(r)),
+      );
+    } catch (e) {
+      emit(AuthState.error(e.toString()));
+    }
+  }
+
+  void forgotPassword(String email) async {
+    emit(AuthState.loading());
+    try {
+      final _result = await iAuthFacade.forgotPassword(email);
+      _result.fold(
+        (l) => emit(AuthState.error(l)),
+        (r) => emit(AuthState.onForgotPassword(r)),
+      );
+    } catch (e) {
+      emit(AuthState.error(e.toString()));
+    }
+  }
 }

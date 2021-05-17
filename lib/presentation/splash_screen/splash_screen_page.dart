@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/application/auth/auth_cubit.dart';
+import 'package:roomart/application/home/home_controller.dart';
 import 'package:roomart/presentation/dashboard/dashboard_page.dart';
 
 import '../../injection.dart';
@@ -15,6 +16,7 @@ class SplashScreenPage extends StatefulWidget {
 }
 
 class _SplashScreenPageState extends State<SplashScreenPage> {
+  final homeController = Get.put(HomeController());
   final authController = Get.put(AuthController());
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
                     Get.offNamed(DashboardPage.TAG);
                   },
                   onAuthenticated: (e) {
-                    authController.setDataModel(e.user); 
+                    authController.setDataModel(e.user);
                     Get.offNamed(DashboardPage.TAG);
                   });
             },

@@ -12,7 +12,7 @@ _$_CategoryModel _$_$_CategoryModelFromJson(Map<String, dynamic> json) {
     parentId: json['parent_id'] as String,
     internalCode: json['internal_code'] as String,
     kategoriCode: json['kategori_code'] as String,
-    description: json['description'] as String,
+    description: json['description'] as String ?? 'description',
     picture: json['picture'] as String,
     displayStore: json['display_store'] as String,
     hasChild: json['has_child'] as String,

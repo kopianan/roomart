@@ -20,6 +20,7 @@ class Constants {
 
   String get getUltimoBaseUrl => this._ultimoBaseUrl;
   String get getBaseUrlProduction => this.baseUrlProduction;
+  String get getBaseUrlProductionBackup => this.baseUrlProductionBackup;
   //url api untuk get coupon code
   String _ultimoBaseUrl = "http://roomart.erp.web.id/umbraco/api";
   String midtransBaseAPPProduction = "https://app.midtrans.com";

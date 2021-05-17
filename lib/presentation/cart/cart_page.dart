@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/application/core/cart_controller.dart';
+import 'package:roomart/application/home/home_controller.dart';
+import 'package:roomart/domain/user/user_data_model.dart';
 import 'package:roomart/presentation/dashboard/dashboard_page.dart';
 import 'package:roomart/presentation/payment/payment_page.dart';
+import 'package:roomart/presentation/splash_screen/splash_screen_page.dart';
 import 'package:roomart/presentation/widgets/button_collection.dart';
 import 'package:roomart/utils/formater.dart';
 
@@ -12,6 +15,8 @@ import 'widget/cart_list_item.dart';
 class CartPage extends StatelessWidget {
   static final String TAG = '/cart_page';
   final authController = Get.put(AuthController());
+  final homeController = Get.put(HomeController());
+  final cartController = Get.put(CartController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,13 +99,17 @@ class CartPage extends StatelessWidget {
                             color: Colors.orange,
                             text: "Lanjutkan Pembayaran",
                             onPressed: () {
-                              if (authController.getUserDataModel == null ||
-                                  authController.getUserDataModel.userId ==
-                                      null) {
-                                Get.offNamedUntil(
-                                  DashboardPage.TAG,
-                                  ModalRoute.withName(DashboardPage.TAG),
-                                );
+                              if (authController.getUserDataModel ==
+                                  UserDataModel()) {
+                                // Get.offNamedUntil(DashboardPage.TAG,
+                                //     ModalRoute.withName(SplashScreenPage.TAG));
+                                Get.back(closeOverlays: true);
+                                Get.back(closeOverlays: true);
+
+                                Get.showSnackbar(GetBar(
+                                  message: "Silahkan login terlebih dahulu",
+                                  duration: Duration(seconds: 2),
+                                ));
                               } else {
                                 Get.toNamed(PaymentPage.TAG);
                               }

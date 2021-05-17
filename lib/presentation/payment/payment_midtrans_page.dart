@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:roomart/domain/transaction/trans_item/trans_response.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class PaymentMidtransPage extends StatefulWidget {
@@ -26,12 +27,6 @@ class _PaymentMidtransPageState extends State<PaymentMidtransPage> {
 
   @override
   Widget build(BuildContext context) {
-    return WebView(
-      initialUrl: url.salesTrans.first.paymentGatewayUrl,
-      javascriptMode: JavascriptMode.unrestricted,
-      onWebViewCreated: (controller) {
-        _controller = controller;
-      },
-    );
+    return Container();
   }
 }

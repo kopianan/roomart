@@ -9,6 +9,7 @@ import 'package:roomart/presentation/auth/sign_up/register_page.dart';
 import 'package:roomart/presentation/config_widgets/widget_collection.dart';
 import 'package:roomart/presentation/widgets/button_collection.dart';
 import 'package:roomart/utils/my_color.dart';
+import 'package:roomart/presentation/auth/forgot_password_page.dart';
 
 import '../../injection.dart';
 
@@ -147,7 +148,9 @@ class _AuthPageState extends State<AuthPage> {
                             Container(
                               alignment: Alignment.center,
                               child: InkWell(
-                                onTap: () {},
+                                onTap: () {
+                                  Get.toNamed(ForgotPasswordPage.TAG);
+                                },
                                 child: Text(
                                   "Forgot Password",
                                   style: TextStyle(

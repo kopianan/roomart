@@ -5,6 +5,7 @@ import 'package:roomart/domain/raja_ongkir/delivery_cost/costs.dart';
 import 'package:roomart/domain/transaction/full_transaction_data_model.dart';
 import 'package:roomart/domain/transaction/transaction_data_model.dart';
 import 'package:roomart/domain/transaction/transaction_data_model_v2.dart';
+import 'package:roomart/presentation/payment/widgets/delivery_detail.dart';
 
 class TransactionController extends GetxController {
   RxInt newOffset = 0.obs;
@@ -20,6 +21,7 @@ class TransactionController extends GetxController {
   List<FullTransactionDataModel> sentTransaction = <FullTransactionDataModel>[];
   List<CostDataModel> costList = <CostDataModel>[];
   Rx<Costs> selectedDelivery = Costs().obs;
+  Rx<CostDataModel> selectedFullDelivery = CostDataModel().obs;
 
   Rx<DiscountDataModel> selectedDiscount = DiscountDataModel().obs;
 
@@ -80,16 +82,17 @@ class TransactionController extends GetxController {
   }
 
   //COSTLIST
-
   void setCostList(List<CostDataModel> data) {
     this.costList = data;
   }
 
-  void setDeliveryCost(Costs costs) {
+  void setDeliveryCost(Costs costs, CostDataModel costDataModel) {
     this.selectedDelivery.value = costs;
+    this.selectedFullDelivery.value = costDataModel;
     update();
   }
 
+  CostDataModel get getSelectedFullDelivery => this.selectedFullDelivery.value;
   Costs get getSelectedCost => this.selectedDelivery.value;
 
   double calculateDeliveryCost() {

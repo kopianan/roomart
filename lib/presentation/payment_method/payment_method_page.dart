@@ -88,13 +88,25 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
                 ],
                 child: Container(
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Card(
+                        elevation: 5,
                         child: ListTile(
-                          title: Text("Point saya"),
-                          trailing: Text(Formatter()
-                              .formatStringCurrency(auth.getBalance)),
+                          title: Text(
+                            "Poin saya",
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                          trailing: Text(
+                            Formatter().formatStringCurrency(auth.getBalance),
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
                         ),
+                      ),
+                      Divider(
+                        height: 10,
                       ),
                       BlocBuilder<PaymentCubit, PaymentState>(
                         builder: (context, state) {
@@ -139,20 +151,33 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
   }
 
   _onChanged(PaymentMethodDataModel val, AuthController auth) {
-    if (val.code == describeEnum(paymentEnum.CREDIT)) {
+    if (val.code == describeEnum(paymentEnum.DEPO)) {
       if (double.parse(auth.getBalance) <
           double.parse(cartController
               .getCartSubTotalDouble(isReseller: auth.checkIfReseller())
               .toString())) {
         Get.showSnackbar(GetBar(
           duration: Duration(seconds: 3),
-          message: "Saldo tidak cukup",
+          message: "Saldo / poin tidak cukup",
         ));
       } else {
         paymentController.setSelectedPaymentMethod(val);
         setState(() {
           selectedPayment = val;
         });
+      }
+    } else if (val.code == describeEnum(paymentEnum.CREDIT)) {
+      if (auth.checkIfReseller() &&
+          auth.getUserDataModel.typeIds == Constants().customerTypeReseller2) {
+        paymentController.setSelectedPaymentMethod(val);
+        setState(() {
+          selectedPayment = val;
+        });
+      } else {
+        Get.showSnackbar(GetBar(
+          duration: Duration(seconds: 3),
+          message: "Credit hanya untuk customer yang telah ditentukan",
+        ));
       }
     } else {
       paymentController.setSelectedPaymentMethod(val);

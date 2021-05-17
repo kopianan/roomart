@@ -27,6 +27,20 @@ class ItemCubit extends Cubit<ItemState> {
     }
   }
 
+  void searchItemLazy(int limit, int offset, String keyword) async {
+    emit(ItemState.loading());
+    try {
+      final _result = await iiTemFacae.searchItem(
+          limit: limit, offset: offset, keywoard: keyword);
+      _result.fold(
+        (l) => emit(ItemState.error(l.toString())),
+        (r) => emit(ItemState.onGetSearchItem(r)),
+      );
+    } catch (e) {
+      emit(ItemState.error(e.toString()));
+    }
+  }
+
   void getItemListByCategoryId(
       {@required String categoryId, int limit = 1000, int offset = 0}) async {
     emit(ItemState.loading());

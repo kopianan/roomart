@@ -12,6 +12,10 @@ class CartController extends GetxController {
     cartCollection.removeAt(index);
   }
 
+  void addOngkirOrDiscount(CartDataCollectionModel data) {
+    cartCollection.add(data);
+  }
+
   void addForTheFirstTime(DataItemModel data) {
     try {
       //data already there
@@ -97,6 +101,19 @@ class CartController extends GetxController {
     });
     subTotal.value = _subtotal;
     return subTotal.value;
+  }
+
+  double calculateWeight() {
+    var _weighTotal = 0.0;
+
+    cartCollection.forEach((element) {
+      if (element.item.weight.isEmpty || (element.item.weight == "")) {
+        _weighTotal += 1000 * double.parse(element.bought.qty);
+      } else
+        _weighTotal += double.parse(element.item.weight) *
+            double.parse(element.bought.qty);
+    });
+    return _weighTotal;
   }
 
   List<CartDataCollectionModel> get getCartItemData => this.cartCollection;

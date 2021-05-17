@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:roomart/application/auth/auth_controller.dart';
+import 'package:roomart/application/auth/auth_cubit.dart';
 import 'package:roomart/infrastructure/core/pref.dart';
+import 'package:roomart/presentation/cart/cart_page.dart';
 import 'package:roomart/presentation/dashboard/dashboard_page.dart';
 import 'package:roomart/presentation/me/order_page.dart';
 import 'package:roomart/presentation/splash_screen/splash_screen_page.dart';
 import 'package:roomart/utils/formater.dart';
+
+import '../../injection.dart';
 
 class MePage extends StatefulWidget {
   @override
@@ -14,6 +19,7 @@ class MePage extends StatefulWidget {
 
 class _MePageState extends State<MePage> {
   final authController = Get.put(AuthController());
+  final cubit = getIt<AuthCubit>();
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -53,14 +59,47 @@ class _MePageState extends State<MePage> {
           Container(
             child: Row(
               children: [
+                BlocProvider(
+                  create: (context) => cubit
+                    ..getArBalance(authController.getUserDataModel.userId),
+                  child: BlocConsumer<AuthCubit, AuthState>(
+                    listener: (context, state) {
+                      state.maybeMap(
+                          orElse: () {},
+                          onGetArBalance: (e) {
+                            print(e);
+                          });
+                    },
+                    builder: (context, state) {
+                      return state.maybeMap(orElse: () {
+                        return Expanded(
+                            child: InkWell(
+                          onTap: () {
+                            cubit
+                              ..getArBalance(
+                                  authController.getUserDataModel.userId);
+                          },
+                          child: saldoContainer(
+                            "Total Saldo",
+                            "Refresh",
+                            Colors.yellow,
+                          ),
+                        ));
+                      }, onGetArBalance: (e) {
+                        return Expanded(
+                            child: saldoContainer(
+                          "Total Saldo",
+                          e.balancd,
+                          Colors.yellow,
+                        ));
+                      }, loading: (e) {
+                        return loadingBalance();
+                      });
+                    },
+                  ),
+                ),
                 Expanded(
-                    child: saldoContainer(
-                  "Total Saldo",
-                  "1000",
-                  Colors.yellow,
-                )),
-                Expanded(
-                    child: saldoContainer("Dalam Proses", "1000", Colors.purple,
+                    child: saldoContainer("Dalam Proses", "0", Colors.purple,
                         textColor: Colors.white)),
               ],
             ),
@@ -86,7 +125,9 @@ class _MePageState extends State<MePage> {
                 color: Colors.green,
                 icon: Icons.card_travel_rounded,
                 text: "Belanja Saya",
-                onTap: () {},
+                onTap: () {
+                  Get.toNamed(CartPage.TAG);
+                },
               ),
               MenuTiles(
                 color: Colors.red,
@@ -138,6 +179,19 @@ class _MePageState extends State<MePage> {
     ));
   }
 
+  Expanded loadingBalance() {
+    return Expanded(
+        child: Container(
+      padding: EdgeInsets.symmetric(vertical: 10),
+      decoration: BoxDecoration(
+        color: Colors.yellow,
+      ),
+      child: Center(
+        child: CircularProgressIndicator(),
+      ),
+    ));
+  }
+
   Container saldoContainer(String label, String value, Color bgColor,
       {Color textColor = Colors.black}) {
     return Container(
@@ -168,6 +222,8 @@ class _MePageState extends State<MePage> {
     );
   }
 }
+
+class SubjectState {}
 
 class MenuTiles extends StatelessWidget {
   const MenuTiles({

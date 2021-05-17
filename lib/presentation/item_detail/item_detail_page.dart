@@ -225,6 +225,8 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
                         Get.showSnackbar(GetBar(
                           duration: Duration(seconds: 2),
                           message: "Ditambahkan ke keranjang",
+                          snackPosition: SnackPosition.TOP,
+                          
                           icon: Icon(
                             Icons.check,
                             color: Colors.green,

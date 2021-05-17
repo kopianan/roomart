@@ -15,4 +15,7 @@ abstract class AuthState with _$AuthState {
       _OnGetAvailableDiscount;
   const factory AuthState.onAuthenticated(UserDataModel user) =
       _OnAuthenticated;
+  const factory AuthState.onChangeAddress(UserDataModel user) =
+      _OnChangeAddress;
+  const factory AuthState.onForgotPassword(String status) = _OnForgotPassword;
 }

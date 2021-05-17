@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/presentation/dashboard/dashboard_page.dart';
+import 'package:roomart/presentation/payment/test_page.dart';
 import 'package:roomart/presentation/splash_screen/splash_screen_page.dart';
 import 'package:roomart/routes/router.dart';
 
@@ -19,7 +20,9 @@ class _AppWidgetState extends State<AppWidget> {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       getPages: pages,
+      debugShowCheckedModeBanner: false,
       initialRoute: SplashScreenPage.TAG,
+      // home: TestPage(),
       theme: ThemeData(
           bottomNavigationBarTheme: BottomNavigationBarThemeData(
               backgroundColor: Colors.white, elevation: 4),

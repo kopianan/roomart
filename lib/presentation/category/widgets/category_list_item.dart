@@ -28,7 +28,6 @@ class CategoryListItem extends StatelessWidget {
           ]),
       child: ListTile(
         onTap: onTap,
-        subtitle: Text("Total  " + categoryModel.countTotal),
         title: Text(
           categoryModel.description,
           style: TextStyle(fontWeight: FontWeight.w500),

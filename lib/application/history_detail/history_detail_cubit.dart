@@ -4,6 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:roomart/domain/history_detail/history_detail_repository.dart';
 import 'package:roomart/domain/history_detail/transaction_detail_v1.dart';
+import 'package:roomart/domain/transaction/transaction_finished_data_model.dart';
 
 part 'history_detail_state.dart';
 part 'history_detail_cubit.freezed.dart';
@@ -20,6 +21,20 @@ class HistoryDetailCubit extends Cubit<HistoryDetailState> {
       _result.fold(
         (l) => emit(HistoryDetailState.error(l.toString())),
         (r) => emit(HistoryDetailState.onGetDetailHistory(r)),
+      );
+    } catch (e) {
+      emit(HistoryDetailState.error(e.toString()));
+    }
+  }
+
+  void getFinishedHistoryTransaction(String salesTransactionID) async {
+    emit(HistoryDetailState.loading());
+    try {
+      final _result =
+          await iHistory.getHistoryFinishedTransaction(salesTransactionID);
+      _result.fold(
+        (l) => emit(HistoryDetailState.error(l.toString())),
+        (r) => emit(HistoryDetailState.onGetFinishedDetail(r)),
       );
     } catch (e) {
       emit(HistoryDetailState.error(e.toString()));

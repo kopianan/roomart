@@ -7,7 +7,7 @@ import 'package:roomart/application/transaction/transaction_controller.dart';
 import 'package:roomart/application/transaction/transaction_cubit.dart';
 import 'package:roomart/domain/transaction/models/transaction_req_res.dart';
 import 'package:roomart/presentation/me/components/transaction_item_widget.dart';
-import 'package:roomart/presentation/me/components/transaction_item_widgetV2.dart';
+import 'package:roomart/presentation/me/components/transaction_item_widget_v2.dart';
 import 'package:roomart/utils/constants.dart';
 
 import '../../../injection.dart';

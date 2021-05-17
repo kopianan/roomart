@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
+import 'package:roomart/application/auth/auth_controller.dart';
+import 'package:roomart/application/core/cart_controller.dart';
 import 'package:roomart/application/rajaongkir/rajaongkir_cubit.dart';
 import 'package:roomart/application/transaction/transaction_controller.dart';
 import 'package:roomart/domain/raja_ongkir/cost_request_model.dart';
 import 'package:roomart/domain/raja_ongkir/delivery_cost/cost_data_model.dart';
 import 'package:roomart/domain/raja_ongkir/delivery_cost/costs.dart';
+import 'package:roomart/domain/user/user_data_model.dart';
 import 'package:roomart/utils/constants.dart';
 import 'package:roomart/utils/formater.dart';
 
@@ -20,16 +23,19 @@ class DeliveryPage extends StatefulWidget {
 class _DeliveryPageState extends State<DeliveryPage> {
   final ongkir = getIt<RajaongkirCubit>();
   final transactionController = Get.put(TransactionController());
-
+  final cartController = Get.put(CartController());
+  final authController = Get.put(AuthController());
   CostRequestModel requestModel;
+  UserDataModel user;
   Costs selectedCost;
   @override
   void initState() {
+    user = authController.getUserDataModel;
     selectedCost = transactionController.getSelectedCost;
     requestModel = CostRequestModel(
-        destination: "114",
+        destination: user.terrId3,
         origin: "501",
-        weight: 5000,
+        weight: cartController.calculateWeight(),
         destinationType: "city",
         originType: "city",
         courirList: Constants().courierList);
@@ -105,8 +111,8 @@ class _DeliveryPageState extends State<DeliveryPage> {
                                     groupValue: selectedCost,
                                     activeColor: Colors.orange,
                                     onChanged: (val) {
-                                      transactionController
-                                          .setDeliveryCost(val);
+                                      transactionController.setDeliveryCost(
+                                          val, deliveryType[index]);
                                       setState(() {
                                         selectedCost = val;
                                       });

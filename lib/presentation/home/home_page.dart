@@ -6,6 +6,8 @@ import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:roomart/application/category/category_controller.dart';
 import 'package:roomart/application/category/category_cubit.dart';
+import 'package:roomart/application/core/cart_controller.dart';
+import 'package:roomart/application/home/home_controller.dart';
 import 'package:roomart/application/home/home_cubit.dart';
 import 'package:roomart/application/item/item_controller.dart';
 import 'package:roomart/application/item/item_cubit.dart';
@@ -36,9 +38,10 @@ class _HomePageState extends State<HomePage> {
 
   int limit = 6;
   final itemConroller = Get.put(ItemController());
+  final cartController = Get.put(CartController());
   final categoryController = Get.put(CategoryController());
   final categoryCubit = getIt<CategoryCubit>();
-
+  final homeCon = Get.put(HomeController());
   @override
   void initState() {
     if (categoryController.getCategoryList.isBlank) {
@@ -135,7 +138,10 @@ class _HomePageState extends State<HomePage> {
                   children: <Widget>[
                     buildSubtitle("Kategori Belanja"),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        homeCon.pageChanged(1);
+                        homeCon.onBottomTap(1);
+                      },
                       child: Container(
                         child: Text(
                           "Lihat Semua",

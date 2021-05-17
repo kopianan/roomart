@@ -12,6 +12,8 @@ import 'package:roomart/utils/constants.dart';
 abstract class IITemFacae {
   Future<Either<String, List<DataItemModel>>> getItemLazyLoading(
       {int offset, int limit});
+  Future<Either<String, List<DataItemModel>>> searchItem(
+      {int offset, int limit, String keywoard});
   Future<Either<String, List<DataItemModel>>> getItemListByCategoryId(
       {int offset = 0, int limit = 1000, @required String categoryId});
 }
@@ -78,6 +80,35 @@ class ItemRepoistory extends IITemFacae {
           double.parse(obj.qty).toStringAsFixed(0) == "0"));
 
       return right(data);
+    } catch (e) {
+      return left(e.toString());
+    }
+  }
+
+  @override
+  Future<Either<String, List<DataItemModel>>> searchItem(
+      {int offset, int limit, String keywoard}) async {
+    List<DataItemModel> _tempData = <DataItemModel>[];
+
+    try {
+      Response response;
+      response = await dio.get(
+          '${Constants().getBaseUrlProduction}api,SPGApps.vm?cmd=2&loccode=GODM&limit=$limit&itemname=$keywoard&offset=$offset');
+      List jsonData = json.decode(response.data);
+      print(jsonData);
+
+      List<DataItemModel> data =
+          jsonData.map((m) => DataItemModel.fromJson(m)).toList();
+
+      data.forEach((element) {
+        double data = double.tryParse(element.qty);
+        if (data != null) {
+          if (data > 0) {
+            _tempData.add(element);
+          }
+        }
+      });
+      return right(_tempData);
     } catch (e) {
       return left(e.toString());
     }

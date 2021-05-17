@@ -20,15 +20,23 @@ abstract class UserDataModel with _$UserDataModel {
     @JsonKey(name: "address") String address,
     @JsonKey(name: "shipTo1") String shipTo1,
     @JsonKey(name: "shipTo2") String shipTo2,
-    @JsonKey(name: "country") String country,
-    @JsonKey(name: "province") String province,
-    @JsonKey(name: "city") String city,
-    @JsonKey(name: "district") String district,
-    @JsonKey(name: "village") String village,
-    @JsonKey(name: "terrId1") String terrId1,
-    @JsonKey(name: "terrId2") String terrId2,
-    @JsonKey(name: "terrId3") String terrId3,
-    @JsonKey(name: "terrId4") String terrId4,
+    @JsonKey(name: "country", defaultValue: null, nullable: true)
+        String country,
+    @JsonKey(name: "province", defaultValue: null, nullable: true)
+        String province,
+    @JsonKey(name: "city", defaultValue: null, nullable: true) String city,
+    @JsonKey(name: "district", defaultValue: null, nullable: true)
+        String district,
+    @JsonKey(name: "village", defaultValue: null, nullable: true)
+        String village,
+    @JsonKey(name: "terrId1", defaultValue: null, nullable: true)
+        String terrId1,
+    @JsonKey(name: "terrId2", defaultValue: null, nullable: true)
+        String terrId2,
+    @JsonKey(name: "terrId3", defaultValue: null, nullable: true)
+        String terrId3,
+    @JsonKey(name: "terrId4", defaultValue: null, nullable: true)
+        String terrId4,
     @JsonKey(name: "longitudes") double longitudes,
     @JsonKey(name: "latitudes") double latitudes,
     @JsonKey(name: "fbToken") String fbToken,

@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:roomart/domain/transaction/full_transaction_data_model.dart';
 import 'package:roomart/domain/transaction/transaction_data_model.dart';
 import 'package:roomart/domain/transaction/transaction_data_model_v2.dart';
 import 'package:roomart/presentation/me/widgets/transaction_history_detail_page.dart';
-import 'package:roomart/presentation/me/widgets/transaction_history_detail_pageV2.dart';
+import 'package:roomart/presentation/me/widgets/transaction_history_detail_page_full.dart';
 import 'package:roomart/utils/formater.dart';
 
-class TransactionItemWidgetV2 extends StatelessWidget {
-  const TransactionItemWidgetV2({
+class TransactionItemWidgetFull extends StatelessWidget {
+  const TransactionItemWidgetFull({
     Key key,
-    @required TransactionDataModelV2 data,
+    @required FullTransactionDataModel data,
   })  : _data = data,
         super(key: key);
 
-  final TransactionDataModelV2 _data;
+  final FullTransactionDataModel _data;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Get.toNamed(TransactionHistoryDetailPageV2.TAG, arguments: _data);
+        Get.toNamed(TransactionHistoryDetailPageFull.TAG, arguments: _data);
       },
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
@@ -63,7 +64,7 @@ class TransactionItemWidgetV2 extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    _data.invoiceNo,
+                    _data.salesOrderNo,
                     style: TextStyle(fontSize: 18),
                   ),
                   Text("Customer Name : " + _data.customerName),
