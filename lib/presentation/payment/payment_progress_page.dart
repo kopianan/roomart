@@ -48,16 +48,15 @@ class _PaymentProgressPageState extends State<PaymentProgressPage> {
     super.initState();
   }
 
-  void openWeb(String url, String transNo) {
-    canLaunch(url)
-        .then((value) => launch(url, enableJavaScript: true).then((value) {
-              transCubit.checkMidtransTransactionStatus(transNo);
-            }).onError((error, stackTrace) {
-              print(error);
-            }))
-        .onError((error, stackTrace) {
-      print(error);
-    });
+  void openWeb(String url, String transNo) async {
+    bool _isCanLaunch = await canLaunch(url);
+    if (_isCanLaunch) {
+      await launch(url);
+      // transCubit.checkMidtransTransactionStatus(transNo);
+    }else{
+      print("can not launch"); 
+    }
+   
   }
 
   @override
@@ -86,7 +85,7 @@ class _PaymentProgressPageState extends State<PaymentProgressPage> {
                       e.data.salesTrans.first.paymentGatewayUrl.isBlank) {
                   } else {
                     print(e.data.salesTrans.single.paymentGatewayUrl);
-                    openWeb(e.data.salesTrans.first.paymentGatewayUrl,
+                     openWeb(e.data.salesTrans.first.paymentGatewayUrl,
                         e.data.salesTrans.first.transNo);
                   }
                 },

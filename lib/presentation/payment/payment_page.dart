@@ -378,7 +378,7 @@ class _PaymentPageState extends State<PaymentPage> {
           unit: "PCS",
           itemImage: "");
       var _discountCart =
-          CartDataCollectionModel(bought: _dsicount, item: DataItemModel());
+          CartDataCollectionModel(bought: _dsicount, item: DataItemModel()); 
       paidItem.add(_discountCart);
     }
     var _selected = Constants().courierList.firstWhere((element) =>
@@ -388,10 +388,13 @@ class _PaymentPageState extends State<PaymentPage> {
         itemId: _selected.id,
         itemCode: _selected.code,
         itemName: "ONGKIR",
+        // TODO:change price
         price:
             transactionController.getSelectedCost.cost.first.value.toString(),
         resellerPrice: double.parse(
             transactionController.getSelectedCost.cost.first.value.toString()),
+        // price:"0",
+        // resellerPrice: 0,
         qty: "1",
         discount: "",
         tax: "1",

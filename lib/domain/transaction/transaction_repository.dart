@@ -95,6 +95,7 @@ class TransactionRepository extends ITransactionFacade {
 
       return right(_data);
     } on DioError catch (e) {
+      print(e);
       return left(e.toString());
     } catch (e) {
       return left(e.toString());

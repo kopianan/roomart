@@ -86,8 +86,7 @@ class _SearchProductPageState extends State<SearchProductPage> {
                     suffixIcon: IconButton(
                       icon: Icon(Icons.search),
                       onPressed: () {
-                        print(limit);
-                        print(itemConroller.getSearchOffset);
+                        itemConroller.setSearchOffset(0);
                         itemBloc.searchItemLazy(
                             limit,
                             itemConroller.getSearchOffset,
@@ -110,7 +109,7 @@ class _SearchProductPageState extends State<SearchProductPage> {
                       orElse: () {},
                       loading: (e) {},
                       error: (e) {},
-                      onGetItemLazy: (e) {
+                      onGetSearchItem: (e) {
                         var _newOffset = itemConroller.getSearchOffset + 1;
                         itemConroller.setSearchOffset(_newOffset);
                       });
@@ -122,15 +121,23 @@ class _SearchProductPageState extends State<SearchProductPage> {
                     return Container();
                   }, loading: (e) {
                     return Center(child: CircularProgressIndicator());
-                  }, onGetItemLazy: (e) {
+                  }, onGetSearchItem: (e) {
+                    if (e.data.length == 0) {
+                      return Container(
+                          child: Center(
+                        child: Text(
+                          "No Item Found",
+                          style: TextStyle(
+                              fontSize: 30, fontWeight: FontWeight.bold, color: Colors.grey),
+                        ),
+                      ));
+                    }
                     return Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10),
-                          child: buildSubtitle("Rekomendasi"),
+                        SizedBox(
+                          height: 20,
                         ),
-                        SizedBox(height: 10),
                         Container(
                           margin: EdgeInsets.symmetric(horizontal: 10),
                           child: GridView.count(
