@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -45,6 +47,7 @@ class _PaymentProgressPageState extends State<PaymentProgressPage> {
   void initState() {
     transRequest = Get.arguments as TransRequest;
     paymentMethod();
+    print( json.encode(transRequest));
     super.initState();
   }
 
@@ -53,10 +56,9 @@ class _PaymentProgressPageState extends State<PaymentProgressPage> {
     if (_isCanLaunch) {
       await launch(url);
       // transCubit.checkMidtransTransactionStatus(transNo);
-    }else{
-      print("can not launch"); 
+    } else {
+      print("can not launch");
     }
-   
   }
 
   @override
@@ -85,7 +87,7 @@ class _PaymentProgressPageState extends State<PaymentProgressPage> {
                       e.data.salesTrans.first.paymentGatewayUrl.isBlank) {
                   } else {
                     print(e.data.salesTrans.single.paymentGatewayUrl);
-                     openWeb(e.data.salesTrans.first.paymentGatewayUrl,
+                    openWeb(e.data.salesTrans.first.paymentGatewayUrl,
                         e.data.salesTrans.first.transNo);
                   }
                 },

@@ -6,6 +6,7 @@ import 'package:roomart/domain/auth/register_data._model.dart';
 import 'package:roomart/domain/auth/register_request_model.dart';
 import 'package:roomart/domain/auth/register_response_model.dart';
 import 'package:roomart/domain/models/discount/discount_data_model.dart';
+import 'package:roomart/domain/models/discount/discount_request.dart';
 import 'package:roomart/domain/models/user/user_roomart_data_model.dart';
 import 'package:roomart/domain/user/user_data_model.dart';
 
@@ -115,6 +116,19 @@ class AuthCubit extends Cubit<AuthState> {
       _result.fold(
         (l) => emit(AuthState.error(l)),
         (r) => emit(AuthState.onForgotPassword(r)),
+      );
+    } catch (e) {
+      emit(AuthState.error(e.toString()));
+    }
+  }
+
+  void checkCouponCode(DiscountRequest request) async {
+    emit(AuthState.loading());
+    try {
+      final _result = await iAuthFacade.checkCouponCode(request);
+      _result.fold(
+        (l) => emit(AuthState.error(l)),
+        (r) => emit(AuthState.onCheckCouponCode(r)),
       );
     } catch (e) {
       emit(AuthState.error(e.toString()));

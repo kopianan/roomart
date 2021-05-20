@@ -139,20 +139,21 @@ class _MePageState extends State<MePage> {
                     content: Text("Log out the application"),
                     actions: [
                       TextButton(
-                        onPressed: () {
-                          Pref().logOut().then((value) {
-                            Get.offAllNamed(DashboardPage.TAG);
+                        onPressed: () async {
+                          try {
                             authController.removeUserData();
-                            Get.showSnackbar(
+                            await Pref().logOut();
+                            Get.offAllNamed(DashboardPage.TAG);
+                            Pref().logOut().then((value) {
                               GetBar(
                                   message: "Log out user",
-                                  duration: Duration(seconds: 3)),
-                            ).catchError((onError) {
-                              Get.showSnackbar(GetBar(
-                                  message: "Something wrong",
-                                  duration: Duration(seconds: 3)));
+                                  duration: Duration(seconds: 3));
                             });
-                          });
+                          } catch (e) {
+                            Get.showSnackbar(GetBar(
+                                message: "Something wrong",
+                                duration: Duration(seconds: 3)));
+                          }
                         },
                         child: Text("Log out",
                             style: TextStyle(

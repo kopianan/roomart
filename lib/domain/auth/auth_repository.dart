@@ -7,6 +7,7 @@ import 'package:roomart/domain/auth/register_data._model.dart';
 import 'package:roomart/domain/auth/register_request_model.dart';
 import 'package:roomart/domain/auth/register_response_model.dart';
 import 'package:roomart/domain/models/discount/discount_data_model.dart';
+import 'package:roomart/domain/models/discount/discount_request.dart';
 import 'package:roomart/domain/models/user/user_roomart_data_model.dart';
 import 'package:roomart/domain/user/user_data_model.dart';
 import 'package:roomart/infrastructure/core/pref.dart';
@@ -24,6 +25,7 @@ abstract class IAuthFacade {
   Future<Either<String, List<DiscountDataModel>>> getAvailableDiscount();
   Future<Either<String, UserDataModel>> changeAddress(UserDataModel userData);
   Future<Either<String, String>> forgotPassword(String email);
+  Future<Either<String, String>> checkCouponCode(DiscountRequest request);
 }
 
 @LazySingleton(as: IAuthFacade)
@@ -177,6 +179,28 @@ class AuthRepository extends IAuthFacade {
       }
     } on DioError catch (e) {
       return left("Masalah");
+    } catch (e) {
+      return left(e.toString());
+    }
+  }
+
+  @override
+  Future<Either<String, String>> checkCouponCode(
+      DiscountRequest request) async {
+    Response response;
+    print(request.toJson()) ; 
+    try {
+      response = await dio.post(
+        "${Constants().getUltimoBaseUrl}/RoomartProducts/GetDiscountByCode",
+        data: request.toJson(),
+        options: options,
+      );
+
+      double data = response.data;
+      print(response.requestOptions);
+      return right(data.toString());
+    } on DioError catch (e) {
+      return left(e.toString());
     } catch (e) {
       return left(e.toString());
     }

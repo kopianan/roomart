@@ -45,12 +45,24 @@ class _AuthPageState extends State<AuthPage> {
                 orElse: () {},
                 loading: (e) {},
                 error: (e) {
-                  Fluttertoast.showToast(
-                    msg: e.error.toString(),
-                    gravity: ToastGravity.BOTTOM,
+                  // Fluttertoast.showToast(
+                  //   msg: e.error.toString(),
+                  //   gravity: ToastGravity.BOTTOM,
+                  // );
+                  Get.showSnackbar(
+                    GetBar(
+                      message: e.error.toString(),
+                      snackPosition: SnackPosition.BOTTOM,
+                      duration: Duration(seconds: 3),
+                    ),
                   );
+                  print(e);
                 },
                 onLoginUser: (e) {
+                  Get.showSnackbar(GetBar(
+                    message: "Login successful",
+                    duration: Duration(seconds: 3),
+                  ));
                   Pref().saveUserDataToLocal(e.user.toJson());
                   authController.setDataModel(e.user);
                 });
@@ -133,10 +145,6 @@ class _AuthPageState extends State<AuthPage> {
                                   onPressed: () {
                                     authCubit.loginUser(
                                         email.text, password.text);
-                                    Get.showSnackbar(GetBar(
-                                      message: "Login successful",
-                                      duration: Duration(seconds: 3),
-                                    ));
                                   },
                                   text: "Sign in",
                                   color: button1,

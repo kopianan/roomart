@@ -35,7 +35,8 @@ class AuthController extends GetxController {
   }
 
   void removeUserData() {
-    this.userDataModel.call(null);
+    this.userDataModel.value = UserDataModel();
+    update();
   }
 
   UserDataModel get getUserDataModel => this.userDataModel.value;

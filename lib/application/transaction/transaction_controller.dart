@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:roomart/domain/models/discount/discount_code.dart';
 import 'package:roomart/domain/models/discount/discount_data_model.dart';
 import 'package:roomart/domain/raja_ongkir/delivery_cost/cost_data_model.dart';
 import 'package:roomart/domain/raja_ongkir/delivery_cost/costs.dart';
@@ -24,16 +25,26 @@ class TransactionController extends GetxController {
   Rx<CostDataModel> selectedFullDelivery = CostDataModel().obs;
 
   Rx<DiscountDataModel> selectedDiscount = DiscountDataModel().obs;
+  Rx<DiscountCode> selectedDiscountCode = DiscountCode(totalDiscount: "0").obs;
 
-//Payment
-
+    //Payment
   double calculateGrandTotal(double subtotal) {
     //subtotal - discount + ongkos kirim
 
-    var _discount = double.parse(calculateDiscount(subtotal));
+    var _discount1 = double.parse(calculateDiscount(subtotal));
+    var _discount2 = double.parse(getSelectedDiscountCode.totalDiscount);
     var _ongkos = calculateDeliveryCost();
-    return subtotal - _discount + _ongkos;
+    return subtotal - _discount1 - _discount2 + _ongkos;
   }
+
+  //DISCONT 2
+
+  void setSelectedDiscountCode(DiscountCode code) {
+    this.selectedDiscountCode.value = code;
+    update();
+  }
+
+  DiscountCode get getSelectedDiscountCode => this.selectedDiscountCode.value;
 
 //Discount
   List<DiscountDataModel> listDiscount = <DiscountDataModel>[];
@@ -76,7 +87,7 @@ class TransactionController extends GetxController {
       if (_doublePercent == null) {
         return 0.toString();
       } else {
-        return (subTotal * _doublePercent / 100).toString();
+        return ((subTotal * _doublePercent / 100)).toString();
       }
     }
   }

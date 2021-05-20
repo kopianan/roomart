@@ -262,17 +262,28 @@ class _PaymentPageState extends State<PaymentPage> {
                                               .checkIfReseller())),
                                 ),
                           ),
+                          GetX<TransactionController>(
+                            builder: (_trans) => PriceDetail(
+                                label: "Coupon Discount",
+                                color: Colors.green,
+                                value: "- " +
+                                    Formatter().formatStringCurrency(_trans
+                                        .getSelectedDiscountCode
+                                        .totalDiscount)),
+                          ),
                           PriceDetail(
                             label: "Ongkos Kirim",
                             value: formatOngkosKirim(),
                           ),
                           Divider(),
-                          PriceDetail(
-                            label: "Grand Total",
-                            value: formatGrandTotal(
-                                cartController.getCartSubTotalDouble(
-                                    isReseller:
-                                        authController.checkIfReseller())),
+                          GetBuilder<CartController>(
+                            builder: (_cart) => PriceDetail(
+                              label: "Grand Total",
+                              value: formatGrandTotal(
+                                  _cart.getCartSubTotalDouble(
+                                      isReseller:
+                                          authController.checkIfReseller())),
+                            ),
                           ),
                         ],
                       ),
@@ -373,12 +384,33 @@ class _PaymentPageState extends State<PaymentPage> {
           itemName: "ONGKIR",
           price: "-" + data,
           qty: "1",
+          resellerPrice: double.parse("-" + data),
           discount: "0.0",
           tax: "1",
           unit: "PCS",
           itemImage: "");
       var _discountCart =
-          CartDataCollectionModel(bought: _dsicount, item: DataItemModel()); 
+          CartDataCollectionModel(bought: _dsicount, item: DataItemModel());
+      paidItem.add(_discountCart);
+    }
+
+    if (transactionController.getSelectedDiscountCode.totalDiscount != "0") {
+      var _dsicount = BoughtItemDataModel(
+          itemId: "DM157597749267900354896",
+          itemCode: "990992",
+          itemName: "ONGKIR",
+          price:
+              "-" + transactionController.getSelectedDiscountCode.totalDiscount,
+          resellerPrice: double.parse(
+            "-" + transactionController.getSelectedDiscountCode.totalDiscount,
+          ),
+          qty: "1",
+          discount: "0.0",
+          tax: "1",
+          unit: "PCS",
+          itemImage: "");
+      var _discountCart =
+          CartDataCollectionModel(bought: _dsicount, item: DataItemModel());
       paidItem.add(_discountCart);
     }
     var _selected = Constants().courierList.firstWhere((element) =>
