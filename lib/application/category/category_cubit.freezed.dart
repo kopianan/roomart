@@ -36,6 +36,20 @@ class _$CategoryStateTearOff {
       data,
     );
   }
+
+// ignore: unused_element
+  _OnGetCategoryByParentId onGetCategoryByParentId(List<CategoryModel> data) {
+    return _OnGetCategoryByParentId(
+      data,
+    );
+  }
+
+// ignore: unused_element
+  _OnCategoryEnd onCategoryEnd(CategoryModel data) {
+    return _OnCategoryEnd(
+      data,
+    );
+  }
 }
 
 /// @nodoc
@@ -50,6 +64,8 @@ mixin _$CategoryState {
     @required TResult loading(),
     @required TResult error(String e),
     @required TResult onGetAllCategory(List<CategoryModel> data),
+    @required TResult onGetCategoryByParentId(List<CategoryModel> data),
+    @required TResult onCategoryEnd(CategoryModel data),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
@@ -57,6 +73,8 @@ mixin _$CategoryState {
     TResult loading(),
     TResult error(String e),
     TResult onGetAllCategory(List<CategoryModel> data),
+    TResult onGetCategoryByParentId(List<CategoryModel> data),
+    TResult onCategoryEnd(CategoryModel data),
     @required TResult orElse(),
   });
   @optionalTypeArgs
@@ -65,6 +83,8 @@ mixin _$CategoryState {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult onGetAllCategory(_OnGetAllCategory value),
+    @required TResult onGetCategoryByParentId(_OnGetCategoryByParentId value),
+    @required TResult onCategoryEnd(_OnCategoryEnd value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
@@ -72,6 +92,8 @@ mixin _$CategoryState {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult onGetAllCategory(_OnGetAllCategory value),
+    TResult onGetCategoryByParentId(_OnGetCategoryByParentId value),
+    TResult onCategoryEnd(_OnCategoryEnd value),
     @required TResult orElse(),
   });
 }
@@ -133,11 +155,15 @@ class _$_Initial implements _Initial {
     @required TResult loading(),
     @required TResult error(String e),
     @required TResult onGetAllCategory(List<CategoryModel> data),
+    @required TResult onGetCategoryByParentId(List<CategoryModel> data),
+    @required TResult onCategoryEnd(CategoryModel data),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetAllCategory != null);
+    assert(onGetCategoryByParentId != null);
+    assert(onCategoryEnd != null);
     return initial();
   }
 
@@ -148,6 +174,8 @@ class _$_Initial implements _Initial {
     TResult loading(),
     TResult error(String e),
     TResult onGetAllCategory(List<CategoryModel> data),
+    TResult onGetCategoryByParentId(List<CategoryModel> data),
+    TResult onCategoryEnd(CategoryModel data),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -164,11 +192,15 @@ class _$_Initial implements _Initial {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult onGetAllCategory(_OnGetAllCategory value),
+    @required TResult onGetCategoryByParentId(_OnGetCategoryByParentId value),
+    @required TResult onCategoryEnd(_OnCategoryEnd value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetAllCategory != null);
+    assert(onGetCategoryByParentId != null);
+    assert(onCategoryEnd != null);
     return initial(this);
   }
 
@@ -179,6 +211,8 @@ class _$_Initial implements _Initial {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult onGetAllCategory(_OnGetAllCategory value),
+    TResult onGetCategoryByParentId(_OnGetCategoryByParentId value),
+    TResult onCategoryEnd(_OnCategoryEnd value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -233,11 +267,15 @@ class _$_Loading implements _Loading {
     @required TResult loading(),
     @required TResult error(String e),
     @required TResult onGetAllCategory(List<CategoryModel> data),
+    @required TResult onGetCategoryByParentId(List<CategoryModel> data),
+    @required TResult onCategoryEnd(CategoryModel data),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetAllCategory != null);
+    assert(onGetCategoryByParentId != null);
+    assert(onCategoryEnd != null);
     return loading();
   }
 
@@ -248,6 +286,8 @@ class _$_Loading implements _Loading {
     TResult loading(),
     TResult error(String e),
     TResult onGetAllCategory(List<CategoryModel> data),
+    TResult onGetCategoryByParentId(List<CategoryModel> data),
+    TResult onCategoryEnd(CategoryModel data),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -264,11 +304,15 @@ class _$_Loading implements _Loading {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult onGetAllCategory(_OnGetAllCategory value),
+    @required TResult onGetCategoryByParentId(_OnGetCategoryByParentId value),
+    @required TResult onCategoryEnd(_OnCategoryEnd value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetAllCategory != null);
+    assert(onGetCategoryByParentId != null);
+    assert(onCategoryEnd != null);
     return loading(this);
   }
 
@@ -279,6 +323,8 @@ class _$_Loading implements _Loading {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult onGetAllCategory(_OnGetAllCategory value),
+    TResult onGetCategoryByParentId(_OnGetCategoryByParentId value),
+    TResult onCategoryEnd(_OnCategoryEnd value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -355,11 +401,15 @@ class _$_Error implements _Error {
     @required TResult loading(),
     @required TResult error(String e),
     @required TResult onGetAllCategory(List<CategoryModel> data),
+    @required TResult onGetCategoryByParentId(List<CategoryModel> data),
+    @required TResult onCategoryEnd(CategoryModel data),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetAllCategory != null);
+    assert(onGetCategoryByParentId != null);
+    assert(onCategoryEnd != null);
     return error(e);
   }
 
@@ -370,6 +420,8 @@ class _$_Error implements _Error {
     TResult loading(),
     TResult error(String e),
     TResult onGetAllCategory(List<CategoryModel> data),
+    TResult onGetCategoryByParentId(List<CategoryModel> data),
+    TResult onCategoryEnd(CategoryModel data),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -386,11 +438,15 @@ class _$_Error implements _Error {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult onGetAllCategory(_OnGetAllCategory value),
+    @required TResult onGetCategoryByParentId(_OnGetCategoryByParentId value),
+    @required TResult onCategoryEnd(_OnCategoryEnd value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetAllCategory != null);
+    assert(onGetCategoryByParentId != null);
+    assert(onCategoryEnd != null);
     return error(this);
   }
 
@@ -401,6 +457,8 @@ class _$_Error implements _Error {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult onGetAllCategory(_OnGetAllCategory value),
+    TResult onGetCategoryByParentId(_OnGetCategoryByParentId value),
+    TResult onCategoryEnd(_OnCategoryEnd value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -484,11 +542,15 @@ class _$_OnGetAllCategory implements _OnGetAllCategory {
     @required TResult loading(),
     @required TResult error(String e),
     @required TResult onGetAllCategory(List<CategoryModel> data),
+    @required TResult onGetCategoryByParentId(List<CategoryModel> data),
+    @required TResult onCategoryEnd(CategoryModel data),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetAllCategory != null);
+    assert(onGetCategoryByParentId != null);
+    assert(onCategoryEnd != null);
     return onGetAllCategory(data);
   }
 
@@ -499,6 +561,8 @@ class _$_OnGetAllCategory implements _OnGetAllCategory {
     TResult loading(),
     TResult error(String e),
     TResult onGetAllCategory(List<CategoryModel> data),
+    TResult onGetCategoryByParentId(List<CategoryModel> data),
+    TResult onCategoryEnd(CategoryModel data),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -515,11 +579,15 @@ class _$_OnGetAllCategory implements _OnGetAllCategory {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult onGetAllCategory(_OnGetAllCategory value),
+    @required TResult onGetCategoryByParentId(_OnGetCategoryByParentId value),
+    @required TResult onCategoryEnd(_OnCategoryEnd value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetAllCategory != null);
+    assert(onGetCategoryByParentId != null);
+    assert(onCategoryEnd != null);
     return onGetAllCategory(this);
   }
 
@@ -530,6 +598,8 @@ class _$_OnGetAllCategory implements _OnGetAllCategory {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult onGetAllCategory(_OnGetAllCategory value),
+    TResult onGetCategoryByParentId(_OnGetCategoryByParentId value),
+    TResult onCategoryEnd(_OnCategoryEnd value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -547,4 +617,301 @@ abstract class _OnGetAllCategory implements CategoryState {
   List<CategoryModel> get data;
   @JsonKey(ignore: true)
   _$OnGetAllCategoryCopyWith<_OnGetAllCategory> get copyWith;
+}
+
+/// @nodoc
+abstract class _$OnGetCategoryByParentIdCopyWith<$Res> {
+  factory _$OnGetCategoryByParentIdCopyWith(_OnGetCategoryByParentId value,
+          $Res Function(_OnGetCategoryByParentId) then) =
+      __$OnGetCategoryByParentIdCopyWithImpl<$Res>;
+  $Res call({List<CategoryModel> data});
+}
+
+/// @nodoc
+class __$OnGetCategoryByParentIdCopyWithImpl<$Res>
+    extends _$CategoryStateCopyWithImpl<$Res>
+    implements _$OnGetCategoryByParentIdCopyWith<$Res> {
+  __$OnGetCategoryByParentIdCopyWithImpl(_OnGetCategoryByParentId _value,
+      $Res Function(_OnGetCategoryByParentId) _then)
+      : super(_value, (v) => _then(v as _OnGetCategoryByParentId));
+
+  @override
+  _OnGetCategoryByParentId get _value =>
+      super._value as _OnGetCategoryByParentId;
+
+  @override
+  $Res call({
+    Object data = freezed,
+  }) {
+    return _then(_OnGetCategoryByParentId(
+      data == freezed ? _value.data : data as List<CategoryModel>,
+    ));
+  }
+}
+
+/// @nodoc
+class _$_OnGetCategoryByParentId implements _OnGetCategoryByParentId {
+  const _$_OnGetCategoryByParentId(this.data) : assert(data != null);
+
+  @override
+  final List<CategoryModel> data;
+
+  @override
+  String toString() {
+    return 'CategoryState.onGetCategoryByParentId(data: $data)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _OnGetCategoryByParentId &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(data);
+
+  @JsonKey(ignore: true)
+  @override
+  _$OnGetCategoryByParentIdCopyWith<_OnGetCategoryByParentId> get copyWith =>
+      __$OnGetCategoryByParentIdCopyWithImpl<_OnGetCategoryByParentId>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loading(),
+    @required TResult error(String e),
+    @required TResult onGetAllCategory(List<CategoryModel> data),
+    @required TResult onGetCategoryByParentId(List<CategoryModel> data),
+    @required TResult onCategoryEnd(CategoryModel data),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(onGetAllCategory != null);
+    assert(onGetCategoryByParentId != null);
+    assert(onCategoryEnd != null);
+    return onGetCategoryByParentId(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loading(),
+    TResult error(String e),
+    TResult onGetAllCategory(List<CategoryModel> data),
+    TResult onGetCategoryByParentId(List<CategoryModel> data),
+    TResult onCategoryEnd(CategoryModel data),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (onGetCategoryByParentId != null) {
+      return onGetCategoryByParentId(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loading(_Loading value),
+    @required TResult error(_Error value),
+    @required TResult onGetAllCategory(_OnGetAllCategory value),
+    @required TResult onGetCategoryByParentId(_OnGetCategoryByParentId value),
+    @required TResult onCategoryEnd(_OnCategoryEnd value),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(onGetAllCategory != null);
+    assert(onGetCategoryByParentId != null);
+    assert(onCategoryEnd != null);
+    return onGetCategoryByParentId(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loading(_Loading value),
+    TResult error(_Error value),
+    TResult onGetAllCategory(_OnGetAllCategory value),
+    TResult onGetCategoryByParentId(_OnGetCategoryByParentId value),
+    TResult onCategoryEnd(_OnCategoryEnd value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (onGetCategoryByParentId != null) {
+      return onGetCategoryByParentId(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnGetCategoryByParentId implements CategoryState {
+  const factory _OnGetCategoryByParentId(List<CategoryModel> data) =
+      _$_OnGetCategoryByParentId;
+
+  List<CategoryModel> get data;
+  @JsonKey(ignore: true)
+  _$OnGetCategoryByParentIdCopyWith<_OnGetCategoryByParentId> get copyWith;
+}
+
+/// @nodoc
+abstract class _$OnCategoryEndCopyWith<$Res> {
+  factory _$OnCategoryEndCopyWith(
+          _OnCategoryEnd value, $Res Function(_OnCategoryEnd) then) =
+      __$OnCategoryEndCopyWithImpl<$Res>;
+  $Res call({CategoryModel data});
+
+  $CategoryModelCopyWith<$Res> get data;
+}
+
+/// @nodoc
+class __$OnCategoryEndCopyWithImpl<$Res>
+    extends _$CategoryStateCopyWithImpl<$Res>
+    implements _$OnCategoryEndCopyWith<$Res> {
+  __$OnCategoryEndCopyWithImpl(
+      _OnCategoryEnd _value, $Res Function(_OnCategoryEnd) _then)
+      : super(_value, (v) => _then(v as _OnCategoryEnd));
+
+  @override
+  _OnCategoryEnd get _value => super._value as _OnCategoryEnd;
+
+  @override
+  $Res call({
+    Object data = freezed,
+  }) {
+    return _then(_OnCategoryEnd(
+      data == freezed ? _value.data : data as CategoryModel,
+    ));
+  }
+
+  @override
+  $CategoryModelCopyWith<$Res> get data {
+    if (_value.data == null) {
+      return null;
+    }
+    return $CategoryModelCopyWith<$Res>(_value.data, (value) {
+      return _then(_value.copyWith(data: value));
+    });
+  }
+}
+
+/// @nodoc
+class _$_OnCategoryEnd implements _OnCategoryEnd {
+  const _$_OnCategoryEnd(this.data) : assert(data != null);
+
+  @override
+  final CategoryModel data;
+
+  @override
+  String toString() {
+    return 'CategoryState.onCategoryEnd(data: $data)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _OnCategoryEnd &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(data);
+
+  @JsonKey(ignore: true)
+  @override
+  _$OnCategoryEndCopyWith<_OnCategoryEnd> get copyWith =>
+      __$OnCategoryEndCopyWithImpl<_OnCategoryEnd>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loading(),
+    @required TResult error(String e),
+    @required TResult onGetAllCategory(List<CategoryModel> data),
+    @required TResult onGetCategoryByParentId(List<CategoryModel> data),
+    @required TResult onCategoryEnd(CategoryModel data),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(onGetAllCategory != null);
+    assert(onGetCategoryByParentId != null);
+    assert(onCategoryEnd != null);
+    return onCategoryEnd(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loading(),
+    TResult error(String e),
+    TResult onGetAllCategory(List<CategoryModel> data),
+    TResult onGetCategoryByParentId(List<CategoryModel> data),
+    TResult onCategoryEnd(CategoryModel data),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (onCategoryEnd != null) {
+      return onCategoryEnd(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loading(_Loading value),
+    @required TResult error(_Error value),
+    @required TResult onGetAllCategory(_OnGetAllCategory value),
+    @required TResult onGetCategoryByParentId(_OnGetCategoryByParentId value),
+    @required TResult onCategoryEnd(_OnCategoryEnd value),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(onGetAllCategory != null);
+    assert(onGetCategoryByParentId != null);
+    assert(onCategoryEnd != null);
+    return onCategoryEnd(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loading(_Loading value),
+    TResult error(_Error value),
+    TResult onGetAllCategory(_OnGetAllCategory value),
+    TResult onGetCategoryByParentId(_OnGetCategoryByParentId value),
+    TResult onCategoryEnd(_OnCategoryEnd value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (onCategoryEnd != null) {
+      return onCategoryEnd(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnCategoryEnd implements CategoryState {
+  const factory _OnCategoryEnd(CategoryModel data) = _$_OnCategoryEnd;
+
+  CategoryModel get data;
+  @JsonKey(ignore: true)
+  _$OnCategoryEndCopyWith<_OnCategoryEnd> get copyWith;
 }

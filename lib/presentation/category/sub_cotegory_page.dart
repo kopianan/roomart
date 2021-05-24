@@ -26,29 +26,52 @@ class _SubCategoryPageState extends State<SubCategoryPage> {
     super.initState();
   }
 
+  List<CategoryModel> listData = <CategoryModel>[];
+
+  final categoryCubit = getIt<CategoryCubit>();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(),
-        body: GetBuilder<CategoryController>(
-          builder: (ctgryList) {
-            final data =
-                ctgryList.calculateCategoryList(categoryModel.kategoriId);
-            return ListView.builder(
-                itemCount: data.length,
-                itemBuilder: (context, index) {
-                  return CategoryListItem(
-                    categoryModel: data[index],
-                    onTap: () {
-                      if (data[index].countTotal == null ||
-                          data[index].countTotal == "0") {
-                        Get.toNamed(CategoryEndPage.TAG,
-                            arguments: data[index].kategoriId);
-                      }
-                    },
-                  );
-                });
-          },
-        ));
+    return GetBuilder<CategoryController>(
+      builder: (_ctgry) => WillPopScope(
+        onWillPop: () async {
+          _ctgry.popHistory();
+          if (_ctgry.getHistoryCategory.length == 0) {
+            return true;
+          } else {
+            return false;
+          }
+        },
+        child: Scaffold(
+            appBar: AppBar(),
+            body: BlocProvider(
+              create: (context) =>
+                  categoryCubit..getCategoryByParent(categoryModel),
+              child: BlocConsumer<CategoryCubit, CategoryState>(
+                listener: (context, state) {
+                  state.maybeMap(
+                      orElse: () {},
+                      onCategoryEnd: (e) {
+                        Get.toNamed(CategoryEndPage.TAG, arguments: e.data);
+                      },
+                      onGetCategoryByParentId: (e) {
+                        listData = e.data;
+                      });
+                },
+                builder: (context, state) {
+                  return ListView.builder(
+                      itemCount: listData.length,
+                      itemBuilder: (context, index) {
+                        return CategoryListItem(
+                          categoryModel: listData[index],
+                          onTap: () {
+                            categoryCubit.getCategoryByParent(listData[index]);
+                          },
+                        );
+                      });
+                },
+              ),
+            )),
+      ),
+    );
   }
 }

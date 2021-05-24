@@ -25,4 +25,28 @@ class CategoryCubit extends Cubit<CategoryState> {
       emit(CategoryState.error(e.toString()));
     }
   }
+
+  void getCategoryByParent(CategoryModel ctgryModel) async {
+    emit(CategoryState.loading());
+    try {
+      final _result =
+          await _iCategoryFacade.getCategoryByParentId(ctgryModel.kategoriId);
+      _result.fold(
+        (l) => emit(CategoryState.error(l.toString())),
+        (r) {
+          if (r.length != 0) {
+            r.removeWhere(
+                (data) => (data.count == "0" && data.hasChild == "false"));
+            r.removeWhere(
+                (data) => (data.countTotal == "0" && data.hasChild == "true"));
+            emit(CategoryState.onGetCategoryByParentId(r));
+          } else {
+            emit(CategoryState.onCategoryEnd(ctgryModel));
+          }
+        },
+      );
+    } catch (e) {
+      emit(CategoryState.error(e.toString()));
+    }
+  }
 }

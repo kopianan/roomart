@@ -7,4 +7,8 @@ abstract class CategoryState with _$CategoryState {
   const factory CategoryState.error(String e) = _Error;
   const factory CategoryState.onGetAllCategory(List<CategoryModel> data) =
       _OnGetAllCategory;
+  const factory CategoryState.onGetCategoryByParentId(
+      List<CategoryModel> data) = _OnGetCategoryByParentId;
+  const factory CategoryState.onCategoryEnd(CategoryModel data) =
+      _OnCategoryEnd;
 }

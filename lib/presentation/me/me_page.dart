@@ -143,7 +143,7 @@ class _MePageState extends State<MePage> {
                           try {
                             authController.removeUserData();
                             await Pref().logOut();
-                            Get.offAllNamed(DashboardPage.TAG);
+                            // Get.offAllNamed(DashboardPage.TAG);
                             Pref().logOut().then((value) {
                               GetBar(
                                   message: "Log out user",

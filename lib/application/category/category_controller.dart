@@ -6,6 +6,20 @@ import 'package:roomart/infrastructure/core/pref.dart';
 class CategoryController extends GetxController {
   List<CategoryModel> categoryList = <CategoryModel>[].obs;
   List<CategoryModel> subCategoryList = <CategoryModel>[].obs;
+  List<CategoryModel> subCategoryHistory = <CategoryModel>[].obs;
+
+  void addHistory(CategoryModel ctgry) {
+    this.subCategoryHistory.add(ctgry);
+  }
+
+  List<CategoryModel> get getHistoryCategory => this.subCategoryHistory;
+
+  void popHistory() {
+    if (subCategoryHistory.length > 0) {
+      subCategoryHistory.removeLast();
+    } else
+      subCategoryHistory = <CategoryModel>[];
+  }
 
   void setCategoryList(List<CategoryModel> category) {
     this.categoryList.addAll(category);
@@ -28,11 +42,6 @@ class CategoryController extends GetxController {
     var _filtered =
         categoryFull.where((f) => f.parentId == categoryId).toList();
 
-    // final subCategoryList = _filtered.map((it) {
-    //   if (it.count != "0") {
-    //     return it;
-    //   }
-    // }).toList();
     final subCategoryList =
         _filtered.where((element) => element.count != "0").toList();
 
