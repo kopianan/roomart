@@ -13,6 +13,7 @@ class CategoryCubit extends Cubit<CategoryState> {
   CategoryCubit(this._iCategoryFacade) : super(CategoryState.initial());
   final ICategoryFacade _iCategoryFacade;
 
+
   void getAllCategory() async {
     emit(CategoryState.loading());
     try {

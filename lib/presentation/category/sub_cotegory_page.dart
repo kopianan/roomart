@@ -34,15 +34,59 @@ class _SubCategoryPageState extends State<SubCategoryPage> {
     return GetBuilder<CategoryController>(
       builder: (_ctgry) => WillPopScope(
         onWillPop: () async {
-          _ctgry.popHistory();
-          if (_ctgry.getHistoryCategory.length == 0) {
-            return true;
+          if (_ctgry.getHistoryCategory.length > 0) {
+            if (_ctgry.getHistoryCategory.length == 1) {
+              _ctgry.popHistory();
+
+              return true;
+            } else {
+              var _index = _ctgry.getHistoryCategory.length - 1;
+              var _last = _ctgry.getHistoryCategory[_index];
+              categoryCubit.getCategoryByParent(
+                  _last.copyWith(kategoriId: _last.parentId));
+              _ctgry.popHistory();
+              return false;
+            }
           } else {
-            return false;
+            return true;
           }
         },
         child: Scaffold(
-            appBar: AppBar(),
+            appBar: AppBar(
+              title: Container(
+                  height: kToolbarHeight,
+                  child: GetX<CategoryController>(
+                    builder: (_ctgry) => ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: _ctgry.getHistoryCategory.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          return Row(
+                            children: <Widget>[
+                              InkWell(
+                                  onTap: () {
+                                    // if (index ==
+                                    //     listData.historyCategoryModel.length - 1) {
+                                    // } else {
+                                    //   listData.clearHistoryCategoryModelRange(
+                                    //       index + 1,
+                                    //       listData.historyCategoryModel.length);
+                                    //   listData.clearCategoryListRange(index + 1,
+                                    //       listData.listOfLIstCategory.length);
+                                    // }
+                                  },
+                                  child: Text(
+                                    _ctgry
+                                        .getHistoryCategory[index].description.toUpperCase(),
+                                    style: TextStyle(fontSize: 17),
+                                  )),
+                              (index == _ctgry.getHistoryCategory.length-1)
+                                  ? SizedBox()
+                                  : Icon(Icons.arrow_right_alt_outlined)
+                            ],
+                          );
+                        }),
+                  )),
+            ),
             body: BlocProvider(
               create: (context) =>
                   categoryCubit..getCategoryByParent(categoryModel),
@@ -51,6 +95,7 @@ class _SubCategoryPageState extends State<SubCategoryPage> {
                   state.maybeMap(
                       orElse: () {},
                       onCategoryEnd: (e) {
+                        _ctgry.popHistory();
                         Get.toNamed(CategoryEndPage.TAG, arguments: e.data);
                       },
                       onGetCategoryByParentId: (e) {
@@ -64,6 +109,7 @@ class _SubCategoryPageState extends State<SubCategoryPage> {
                         return CategoryListItem(
                           categoryModel: listData[index],
                           onTap: () {
+                            _ctgry.addHistory(listData[index]);
                             categoryCubit.getCategoryByParent(listData[index]);
                           },
                         );

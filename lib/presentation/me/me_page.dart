@@ -7,6 +7,7 @@ import 'package:roomart/infrastructure/core/pref.dart';
 import 'package:roomart/presentation/cart/cart_page.dart';
 import 'package:roomart/presentation/dashboard/dashboard_page.dart';
 import 'package:roomart/presentation/me/order_page.dart';
+import 'package:roomart/presentation/me/profile_page.dart';
 import 'package:roomart/presentation/splash_screen/splash_screen_page.dart';
 import 'package:roomart/utils/formater.dart';
 
@@ -111,7 +112,9 @@ class _MePageState extends State<MePage> {
                 color: Colors.blue,
                 icon: Icons.person,
                 text: "Profil Saya",
-                onTap: () {},
+                onTap: () {
+                  Get.toNamed(ProfilePage.TAG);
+                },
               ),
               MenuTiles(
                 color: Colors.yellow,

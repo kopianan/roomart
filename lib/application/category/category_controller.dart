@@ -15,10 +15,7 @@ class CategoryController extends GetxController {
   List<CategoryModel> get getHistoryCategory => this.subCategoryHistory;
 
   void popHistory() {
-    if (subCategoryHistory.length > 0) {
-      subCategoryHistory.removeLast();
-    } else
-      subCategoryHistory = <CategoryModel>[];
+    subCategoryHistory.removeLast();
   }
 
   void setCategoryList(List<CategoryModel> category) {

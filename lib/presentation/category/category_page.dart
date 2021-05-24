@@ -187,6 +187,8 @@ class _CategoryPageState extends State<CategoryPage> {
                                       categoryModel: ctgry,
                                       onTap: () {
                                         // print(ctgry.toJson());
+                                        categoryController.addHistory(ctgry);
+
                                         Get.toNamed(SubCategoryPage.TAG,
                                             arguments: ctgry);
                                       },

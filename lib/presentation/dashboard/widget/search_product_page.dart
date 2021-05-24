@@ -48,7 +48,7 @@ class _SearchProductPageState extends State<SearchProductPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Cari item"),
+          title: Text("Cari Procuk"),
         ),
         body: SmartRefresher(
           enablePullDown: true,
@@ -80,9 +80,27 @@ class _SearchProductPageState extends State<SearchProductPage> {
           child: CustomScrollView(slivers: [
             SliverToBoxAdapter(
               child: Container(
+                padding: EdgeInsets.all(10),
                 width: double.infinity,
                 child: TextFormField(
+                  onChanged: (e) {
+                    setState(() {});
+                  },
+                  onFieldSubmitted: (val) {
+                    itemConroller.setSearchOffset(0);
+                    itemBloc.searchItemLazy(limit,
+                        itemConroller.getSearchOffset, searchController.text);
+                  },
                   decoration: InputDecoration(
+                    prefixIcon: (searchController.text.isEmpty)
+                        ? null
+                        : IconButton(
+                            icon: Icon(Icons.clear),
+                            onPressed: () {
+                              searchController.clear();
+                              setState(() {});
+                            }),
+                    hintText: "Cari Produk",
                     suffixIcon: IconButton(
                       icon: Icon(Icons.search),
                       onPressed: () {
@@ -128,7 +146,9 @@ class _SearchProductPageState extends State<SearchProductPage> {
                         child: Text(
                           "No Item Found",
                           style: TextStyle(
-                              fontSize: 30, fontWeight: FontWeight.bold, color: Colors.grey),
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.grey),
                         ),
                       ));
                     }

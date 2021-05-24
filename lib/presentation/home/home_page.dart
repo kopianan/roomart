@@ -265,6 +265,7 @@ class _HomePageState extends State<HomePage> {
         children: initalCategory
             .map((ctgry) => InkWell(
                 onTap: () {
+                  categoryController.addHistory(ctgry);
                   Get.toNamed(SubCategoryPage.TAG, arguments: ctgry);
                 },
                 child: Container(

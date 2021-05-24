@@ -11,6 +11,7 @@ import 'package:roomart/presentation/delivery/delivery_page.dart';
 import 'package:roomart/presentation/discount/discount_page.dart';
 import 'package:roomart/presentation/item_detail/item_detail_page.dart';
 import 'package:roomart/presentation/me/order_page.dart';
+import 'package:roomart/presentation/me/profile_page.dart';
 import 'package:roomart/presentation/me/widgets/detail_transaction_history_page.dart';
 import 'package:roomart/presentation/me/widgets/transaction_history_detail_page.dart';
 import 'package:roomart/presentation/me/widgets/transaction_history_detail_page_finished.dart';
@@ -52,6 +53,7 @@ List<GetPage> pages = [
   GetPage(name: PaymentProgressPage.TAG, page: () => PaymentProgressPage()),
   GetPage(name: PaymentMethodPage.TAG, page: () => PaymentMethodPage()),
   GetPage(name: DiscountPage.TAG, page: () => DiscountPage()),
+  GetPage(name: ProfilePage.TAG, page: () => ProfilePage()),
   GetPage(name: DeliveryPage.TAG, page: () => DeliveryPage()),
   GetPage(name: PaymentMidtransPage.TAG, page: () => PaymentMidtransPage()),
   GetPage(

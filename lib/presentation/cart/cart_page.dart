@@ -38,16 +38,17 @@ class CartPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(
-                        Icons.shopping_basket_outlined,
-                        size: 70,
-                        color: Colors.grey,
+                        Icons.shopping_cart_rounded,
+
+                        size: 80,
+                        color: Colors.grey[300],
                       ),
                       Text(
-                        "No Item",
+                        "Tidak Produk",
                         style: TextStyle(
-                            fontSize: 40,
+                            fontSize: 30,
                             fontWeight: FontWeight.bold,
-                            color: Colors.grey),
+                              color: Colors.grey[300],),
                       )
                     ],
                   ),
