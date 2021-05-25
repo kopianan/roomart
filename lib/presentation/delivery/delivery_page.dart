@@ -45,7 +45,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(title: Text("Pilih Pengiriman"),),
       body: BlocProvider(
         create: (context) => ongkir..getCost(requestModel),
         child: BlocConsumer<RajaongkirCubit, RajaongkirState>(

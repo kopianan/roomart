@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:roomart/application/category/category_controller.dart';
 import 'package:roomart/application/category/category_cubit.dart';
+import 'package:roomart/application/home/home_controller.dart';
 import 'package:roomart/presentation/category/sub_cotegory_page.dart';
 import 'package:build_daemon/constants.dart';
 import 'package:roomart/utils/constants.dart';
@@ -22,6 +23,7 @@ class CategoryPage extends StatefulWidget {
 class _CategoryPageState extends State<CategoryPage> {
   final categoryController = Get.put(CategoryController());
   bool isFirstTime = true;
+  final homeCon = Get.put(HomeController());
   RefreshController _refreshController =
       RefreshController(initialRefresh: false);
   void _onRefresh() {
@@ -34,8 +36,11 @@ class _CategoryPageState extends State<CategoryPage> {
     _refreshController.loadComplete();
   }
 
+  List<String> dataBanner;
   @override
   void initState() {
+    dataBanner = homeCon.getBannerList; 
+    print(dataBanner) ; 
     if (isFirstTime && categoryController.getCategoryList.isEmpty) {
       isFirstTime = true;
       categoryBloc.getAllCategory();
@@ -85,10 +90,8 @@ class _CategoryPageState extends State<CategoryPage> {
                   return Container(
                       padding:
                           EdgeInsets.symmetric(vertical: 10, horizontal: 8),
-                      child: Text(
-                        item.description,
-                        style: TextStyle(fontSize: 16),
-                      ));
+                      child: Text(item.description,
+                          style: TextStyle(fontSize: 16)));
                 },
                 onItemSelected: (e) {
                   Get.toNamed(SubCategoryPage.TAG, arguments: e);
@@ -123,32 +126,34 @@ class _CategoryPageState extends State<CategoryPage> {
               ),
             ),
             SliverToBoxAdapter(
-              child: CarouselSlider(
-                options: CarouselOptions(
-                  aspectRatio: 2 / 0.8,
-                  pageSnapping: false,
-                  autoPlay: true,
+              child: GetBuilder<HomeController>(
+                builder: (_home) => CarouselSlider(
+                  options: CarouselOptions(
+                    aspectRatio: 2 / 0.8,
+                    pageSnapping: false,
+                    autoPlay: true,
+                  ),
+                  items: dataBanner
+                      .map((data) => Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 10),
+                            child: Container(
+                                margin: EdgeInsets.only(right: 15),
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(10),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          blurRadius: 2,
+                                          spreadRadius: 2,
+                                          color: Colors.grey[200],
+                                          offset: Offset(2, 2))
+                                    ],
+                                    image: DecorationImage(
+                                        image: NetworkImage(data),
+                                        fit: BoxFit.cover))),
+                          ))
+                      .toList(),
                 ),
-                items: [Constants.banner]
-                    .map((data) => Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 10),
-                          child: Container(
-                              margin: EdgeInsets.only(right: 15),
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(10),
-                                  boxShadow: [
-                                    BoxShadow(
-                                        blurRadius: 2,
-                                        spreadRadius: 2,
-                                        color: Colors.grey[200],
-                                        offset: Offset(2, 2))
-                                  ],
-                                  image: DecorationImage(
-                                      image: AssetImage(data),
-                                      fit: BoxFit.cover))),
-                        ))
-                    .toList(),
               ),
             ),
             BlocProvider(

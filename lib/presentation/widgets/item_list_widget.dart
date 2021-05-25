@@ -36,7 +36,7 @@ class ItemListWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Expanded(
-                flex: 7,
+                // flex: 7,
                 child: Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
@@ -49,85 +49,86 @@ class ItemListWidget extends StatelessWidget {
                       )),
                 ),
               ),
-              Expanded(
-                flex: 4,
-                child: Container(
-                  padding: EdgeInsets.all(3),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      SizedBox(height: 8),
-                      Container(
-                        child: Text(
-                          item.itemName,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                              fontSize: 14.0,
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 2.0,
-                      ),
-                      (item.qty == "null" || item.qty == "")
-                          ? Text(
-                              "Quantity :0",
-                              style: TextStyle(fontSize: 13),
-                            )
-                          : Text(
-                              "Quantity : ${double.parse(item.qty).toStringAsFixed(0)}",
-                              style: TextStyle(fontSize: 13)),
-                      SizedBox(
-                        height: 5.0,
-                      ),
-                      (auth.checkIfReseller())
-                          ? Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  Formatter()
-                                      .formatStringCurrency(item.itemPrice),
-                                  style: TextStyle(
-                                      decoration: TextDecoration.lineThrough,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.red),
-                                ),
-                                SizedBox(height: 3),
-                                Text(
-                                    Formatter()
-                                        .formatStringCurrency(item.newPrice),
-                                    style: TextStyle(
-                                        fontSize: 18,
-                                        color: Colors.purple,
-                                        fontWeight: FontWeight.bold))
-                              ],
-                            )
-                          : Text(
-                              Formatter().formatStringCurrency(item.itemPrice),
-                              style: TextStyle(
-                                  fontSize: 18,
-                                  color: Colors.purple,
-                                  fontWeight: FontWeight.bold),
-                            ),
+              Container(
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
 
-                      // (userData == null)
-                      //     ? _itemPrice()
-                      //     : (userData.typeIds == null)
-                      //         ? _itemPrice()
-                      //         : (userData.typeIds ==
-                      //                     Constants().customerTypeReseller ||
-                      //                 userData.typeIds ==
-                      //                     Constants().customerTypeReseller2)
-                      //             ? Text(
-                      //                 "Reseller : " +
-                      //                     "Rp. ${Fun().formatStringCurrency(item.newPrice)}",
-                      //                 style: TextStyle(color: Colors.green))
-                      //             : _itemPrice(),
-                    ],
-                  ),
+                  children: <Widget>[
+                    SizedBox(height: 8),
+                    Container(
+                      child: Text(
+                        item.itemName,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                            fontSize: 14.0,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 2.0,
+                    ),
+                    (item.qty == "null" || item.qty == "")
+                        ? Text(
+                            "Quantity :0",
+                            style: TextStyle(fontSize: 13),
+                          )
+                        : Text(
+                            "Quantity : ${double.parse(item.qty).toStringAsFixed(0)}",
+                            style: TextStyle(fontSize: 13)),
+                    SizedBox(
+                      height: 5.0,
+                    ),
+                    (auth.checkIfReseller())
+                        ? Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              (double.parse(item.itemPrice) <
+                                      double.parse(item.newPrice))
+                                  ? SizedBox()
+                                  : Text(
+                                      Formatter()
+                                          .formatStringCurrency(item.itemPrice),
+                                      style: TextStyle(
+                                          decoration:
+                                              TextDecoration.lineThrough,
+                                          color: Colors.red),
+                                    ),
+                              SizedBox(height: 3),
+                              Text(
+                                  Formatter()
+                                      .formatStringCurrency(item.newPrice),
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      color: Colors.purple,
+                                      fontWeight: FontWeight.bold))
+                            ],
+                          )
+                        : Text(
+                            Formatter().formatStringCurrency(item.itemPrice),
+                            style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.purple,
+                                fontWeight: FontWeight.bold),
+                          ),
+
+                    // (userData == null)
+                    //     ? _itemPrice()
+                    //     : (userData.typeIds == null)
+                    //         ? _itemPrice()
+                    //         : (userData.typeIds ==
+                    //                     Constants().customerTypeReseller ||
+                    //                 userData.typeIds ==
+                    //                     Constants().customerTypeReseller2)
+                    //             ? Text(
+                    //                 "Reseller : " +
+                    //                     "Rp. ${Fun().formatStringCurrency(item.newPrice)}",
+                    //                 style: TextStyle(color: Colors.green))
+                    //             : _itemPrice(),
+                  ],
                 ),
               )
             ],

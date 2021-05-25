@@ -76,11 +76,20 @@ class _AddAddressPageState extends State<AddAddressPage> {
         child: BlocConsumer<AuthCubit, AuthState>(listener: (context, state) {
           state.maybeMap(
             orElse: () {},
-            error: (e) {},
+            error: (e) {
+              Get.showSnackbar(GetBar(
+                message: e.error,
+                duration: Duration(seconds: 4),
+              ));
+            },
             onChangeAddress: (e) {
               Pref().saveUserDataToLocal(e.user.toJson());
               authController.setDataModel(e.user);
               transController.setDeliveryCost(Costs(), CostDataModel());
+              Get.showSnackbar(GetBar(
+                message: "Berhasil ganti alamat",
+                duration: Duration(seconds: 4),
+              ));
             },
           );
         }, builder: (context, state) {
@@ -214,27 +223,31 @@ class _AddAddressPageState extends State<AddAddressPage> {
                     ),
                   ),
                   SizedBox(height: 20),
-                  Container(
-                    width: double.infinity,
-                    child: DefaultButton1(
-                      color: button2,
-                      text: "Simpan",
-                      onPressed: () {
-                        var newUserData = userDataModel.copyWith(
-                            fullName: nama.text,
-                            phone: noHp.text,
-                            address: alamat.text,
-                            village: fullDataModel.type,
-                            province: fullDataModel.province,
-                            city: fullDataModel.cityName,
-                            terrId1: fullDataModel.postalCode,
-                            terrId2: fullDataModel.provinceId,
-                            terrId3: fullDataModel.cityId);
-                        print(newUserData);
-                        authCubit.changeAddress(newUserData);
-                      },
-                    ),
-                  )
+                  state.maybeMap(orElse: () {
+                    return Container(
+                      width: double.infinity,
+                      child: DefaultButton1(
+                        color: button2,
+                        text: "Simpan",
+                        onPressed: () {
+                          var newUserData = userDataModel.copyWith(
+                              fullName: nama.text,
+                              phone: noHp.text,
+                              address: alamat.text,
+                              village: fullDataModel.type,
+                              province: fullDataModel.province,
+                              city: fullDataModel.cityName,
+                              terrId1: fullDataModel.postalCode,
+                              terrId2: fullDataModel.provinceId,
+                              terrId3: fullDataModel.cityId);
+                          print(newUserData);
+                          authCubit.changeAddress(newUserData);
+                        },
+                      ),
+                    );
+                  }, loading: (e) {
+                    return LoadingButton1();
+                  })
                 ],
               ),
             ),

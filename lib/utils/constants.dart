@@ -5,7 +5,6 @@ import 'package:roomart/application/rajaongkir/ongkir_code_data_model.dart';
 class Constants {
   static const icon_launcher = "assets/roomart_logo2.png";
   static const resellerImage = "assets/reseller_image.png";
-  static const banner = "assets/banner_roomart.jpg";
   static const title_appbar = "ROOMART";
   String resellerParentID = null; //Disesuaikan dengan kode reseller
 
