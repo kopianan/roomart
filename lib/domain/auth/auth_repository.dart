@@ -26,6 +26,11 @@ abstract class IAuthFacade {
   Future<Either<String, UserDataModel>> changeAddress(UserDataModel userData);
   Future<Either<String, String>> forgotPassword(String email);
   Future<Either<String, String>> checkCouponCode(DiscountRequest request);
+  Future<Either<String, UserDataModel>> changePassword(
+    String username,
+    String newPassword,
+    String oldPassword,
+  );
 }
 
 @LazySingleton(as: IAuthFacade)
@@ -188,7 +193,7 @@ class AuthRepository extends IAuthFacade {
   Future<Either<String, String>> checkCouponCode(
       DiscountRequest request) async {
     Response response;
-    print(request.toJson()) ; 
+    print(request.toJson());
     try {
       response = await dio.post(
         "${Constants().getUltimoBaseUrl}/RoomartProducts/GetDiscountByCode",
@@ -201,6 +206,30 @@ class AuthRepository extends IAuthFacade {
       return right(data.toString());
     } on DioError catch (e) {
       return left(e.toString());
+    } catch (e) {
+      return left(e.toString());
+    }
+  }
+
+  @override
+  Future<Either<String, UserDataModel>> changePassword(
+      String username, String newPassword, String oldPassword) async {
+    Response response;
+    try {
+      response = await dio.get(
+          '${Constants().baseUrlProductionBackup}/api,User.vm?method=changePassword&email=$username&oldpass=$oldPassword&newpass=$newPassword');
+
+      var responseJson = json.decode(response.data);
+      var _result = UserDataModel.fromJson(responseJson);
+      try {
+        if (_result.error == 1) {
+          return left(_result.messageError);
+        }
+      } catch (e) {
+        return left(e.toString());
+      }
+
+      return right(_result);
     } catch (e) {
       return left(e.toString());
     }
