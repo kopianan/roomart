@@ -6,6 +6,8 @@ import 'package:roomart/presentation/dashboard/dashboard_page.dart';
 import 'package:roomart/presentation/payment/test_page.dart';
 import 'package:roomart/presentation/splash_screen/splash_screen_page.dart';
 import 'package:roomart/routes/router.dart';
+import 'package:roomart/utils/constants.dart';
+import 'package:roomart/utils/my_color.dart';
 
 class AppWidget extends StatefulWidget {
   // This widget is the root of your application.
@@ -29,7 +31,6 @@ class _AppWidgetState extends State<AppWidget> {
           appBarTheme: AppBarTheme(
               centerTitle: true,
               elevation: 3,
-              color: Color(0xFFF55E13),
               iconTheme: IconThemeData(color: Colors.white)),
           inputDecorationTheme: InputDecorationTheme(
               fillColor: Colors.white,
@@ -44,7 +45,7 @@ class _AppWidgetState extends State<AppWidget> {
                   borderRadius: BorderRadius.circular(8),
                   borderSide: BorderSide(width: 1, color: Colors.grey))),
           scaffoldBackgroundColor: Colors.white,
-          primarySwatch: ColorToMaterial.fromHEX('fb743e').getMaterialColor()),
+          primarySwatch: ColorToMaterial.fromHEX(primaryColor).getMaterialColor()),
     );
   }
 }

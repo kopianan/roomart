@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:roomart/utils/constants.dart';
 
 Container get getLogoOnAuthPage => Container(
       height: 200,
@@ -14,6 +15,6 @@ Container get getLogoOnAuthPage => Container(
                 color: Colors.grey[300])
           ],
           image: DecorationImage(
-              image: AssetImage("assets/roomart_logo2.png"),
+              image: AssetImage(Constants.logo),
               fit: BoxFit.cover)),
     );

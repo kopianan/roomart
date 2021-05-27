@@ -3,8 +3,9 @@ import 'dart:convert';
 import 'package:roomart/application/rajaongkir/ongkir_code_data_model.dart';
 
 class Constants {
-  static const icon_launcher = "assets/roomart_logo2.png";
-  static const resellerImage = "assets/reseller_image.png";
+  static const icon_launcher = "assets/logo.png";
+  static const logo = "assets/logo.png";
+  static const promotion_image = "assets/promotion.png";
   static const title_appbar = "ROOMART";
   String resellerParentID = null; //Disesuaikan dengan kode reseller
 
@@ -16,6 +17,8 @@ class Constants {
   String baseUrlProductionBackup =
       "http://cloud.erp.web.id:8080/roomart/weblayer/template/";
   String imageBaseUrl = "http://cloud.erp.web.id:8080";
+  static const locCode = "GODM";
+  static const locId = "DM149993946251846586342";
 
   String get getUltimoBaseUrl => this._ultimoBaseUrl;
   String get getBaseUrlProduction => this.baseUrlProduction;

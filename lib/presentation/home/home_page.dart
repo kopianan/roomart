@@ -209,7 +209,7 @@ class _HomePageState extends State<HomePage> {
                         child: Container(
                             height: MediaQuery.of(context).size.height / 8,
                             child: Image.asset(
-                              Constants.resellerImage,
+                              Constants.promotion_image,
                               fit: BoxFit.fill,
                             )),
                       ),
