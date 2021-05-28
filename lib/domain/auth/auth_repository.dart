@@ -68,7 +68,7 @@ class AuthRepository extends IAuthFacade {
       //Register to POS first
 
       response = await dio.get(
-          "${Constants().baseUrlProductionBackup}api,User.vm?method=register&email=${request.email}&password=${request.password}&firstname=${request.name}&dobday=${request.dateTime.day}&dobmonth=${request.dateTime.month}&dobyear=${request.dateTime.year}&phone=${request.phone}&address=alamat&tocust=true&ctype=DM151627192557861134072");
+          "${Constants().auhtBaseUrl}api,User.vm?method=register&email=${request.email}&password=${request.password}&firstname=${request.name}&dobday=${request.dateTime.day}&dobmonth=${request.dateTime.month}&dobyear=${request.dateTime.year}&phone=${request.phone}&address=alamat&tocust=true&ctype=DM151627192557861134072");
 
       var model1 = UserRoomartDataModel.fromJson(json.decode(response.data));
 
@@ -87,7 +87,7 @@ class AuthRepository extends IAuthFacade {
 
     try {
       response = await dio.get(
-          "${Constants().baseUrlProductionBackup}api,User.vm?method=login&email=$email&password=$password");
+          "${Constants().auhtBaseUrl}api,User.vm?method=login&email=$email&password=$password");
 
       var data = UserDataModel.fromJson(json.decode(response.data));
       if (data.error != 1) {
