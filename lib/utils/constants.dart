@@ -11,10 +11,6 @@ class Constants {
 
   String storageBox = 'roomart_storage_key';
 
-  //Login Register
-  String auhtBaseUrl =
-      "http://cloud.erp.web.id:8080/roomart/weblayer/template/";
-
   //new base url
   String baseUrlProduction =
       "http://cloud.erp.web.id:8080/padasuka/weblayer/template/";
