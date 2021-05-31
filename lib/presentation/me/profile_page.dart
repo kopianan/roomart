@@ -16,7 +16,7 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   void initState() {
     _user = authController.getUserDataModel;
-    super.initState();
+   print(_user); super.initState();
   }
 
   @override
