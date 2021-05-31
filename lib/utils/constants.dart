@@ -18,6 +18,7 @@ class Constants {
       "http://cloud.erp.web.id:8080/roomart/weblayer/template/";
   String imageBaseUrl = "http://cloud.erp.web.id:8080";
   static const locCode = "GODM";
+  static const transactionCode = "RA";
   static const locId = "DM149993946251846586342";
 
   String get getUltimoBaseUrl => this._ultimoBaseUrl;
