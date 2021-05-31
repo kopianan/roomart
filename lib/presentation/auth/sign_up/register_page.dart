@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:roomart/application/auth/auth_cubit.dart';
 import 'package:roomart/domain/auth/register_data._model.dart';
+import 'package:roomart/domain/auth/register_request_model.dart';
+import 'package:roomart/domain/models/user/user_roomart_data_model.dart';
 import 'package:roomart/presentation/config_widgets/widget_collection.dart';
 import 'package:roomart/presentation/widgets/button_collection.dart';
+import 'package:roomart/utils/constants.dart';
 import 'package:roomart/utils/my_color.dart';
 
 import '../../../injection.dart';
@@ -25,6 +29,16 @@ class _RegisterPageState extends State<RegisterPage> {
   DateTime date;
   double height = 30;
   final authCubit = getIt<AuthCubit>();
+
+  void clearTextEditing() {
+    _fullName.clear();
+    _dateOfBirth.clear();
+    _email.clear();
+    _phone.clear();
+    _password.clear();
+    _confirmPassword.clear();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,12 +53,32 @@ class _RegisterPageState extends State<RegisterPage> {
               orElse: () {},
               loading: (e) {},
               error: (e) {
-                print(e);
+                print(e.error);
+                Get.showSnackbar(GetBar(
+                  message: e.error,
+                  duration: Duration(seconds: 4),
+                ));
               },
               onRegisterToRoomart: (e) {
-                print(e);
+                RegisterRequestModel user = RegisterRequestModel(
+                    token: Constants().tokenUltimo,
+                    password: _password.text,
+                    parentID: e.user.parentId,
+                    isReseller: "false",
+                    fullname: e.user.fullName,
+                    email: e.user.email,
+                    customerID: e.user.userId);
+
+                authCubit.registerNewUser(user);
               },
-              onRegiserUser: (e) {},
+              onRegiserUser: (e) {
+                clearTextEditing();
+                Get.back();
+                Get.showSnackbar(GetBar(
+                  duration: Duration(seconds: 4),
+                  message: "Success register user",
+                ));
+              },
             );
           },
           builder: (context, state) {
@@ -120,18 +154,25 @@ class _RegisterPageState extends State<RegisterPage> {
                       textInputType: TextInputType.visiblePassword,
                     ),
                     SizedBox(height: height),
-                    DefaultButton1(
-                      onPressed: () {
-                        RegisterDataModel registerModel = RegisterDataModel(
-                            dateTime: date,
-                            email: _email.text,
-                            name: _fullName.text,
-                            password: _password.text,
-                            phone: _phone.text);
-                        authCubit.registerToRoomart(registerModel);
+                    state.maybeMap(
+                      orElse: () {
+                        return DefaultButton1(
+                          onPressed: () {
+                            RegisterDataModel registerModel = RegisterDataModel(
+                                dateTime: date,
+                                email: _email.text,
+                                name: _fullName.text,
+                                password: _password.text,
+                                phone: _phone.text);
+                            authCubit.registerToRoomart(registerModel);
+                          },
+                          text: "Register user",
+                          color: button1,
+                        );
                       },
-                      text: "Register user",
-                      color: button1,
+                      loading: (e) {
+                        return LoadingButton1();
+                      },
                     ),
                     SizedBox(height: 30),
                   ]))

@@ -18,25 +18,25 @@ class _$CategoryModelTearOff {
 
 // ignore: unused_element
   _CategoryModel call(
-      {@JsonKey(name: 'kategori_id')
+      {@JsonKey(name: "kategori_id")
           String kategoriId,
-      @JsonKey(name: 'parent_id')
+      @JsonKey(name: "parent_id")
           String parentId,
-      @JsonKey(name: 'internal_code')
+      @JsonKey(name: "internal_code")
           String internalCode,
-      @JsonKey(name: 'kategori_code')
+      @JsonKey(name: "kategori_code")
           String kategoriCode,
-      @JsonKey(name: 'description', defaultValue: 'description', nullable: true)
+      @JsonKey(name: "description", defaultValue: "description", nullable: true)
           String description,
-      @JsonKey(name: 'picture')
+      @JsonKey(name: "picture")
           String picture,
-      @JsonKey(name: 'display_store')
+      @JsonKey(name: "display_store")
           String displayStore,
-      @JsonKey(name: 'has_child')
+      @JsonKey(name: "has_child")
           String hasChild,
-      @JsonKey(name: 'count')
+      @JsonKey(name: "count")
           String count,
-      @JsonKey(name: 'count_total', defaultValue: '0', nullable: true, includeIfNull: true)
+      @JsonKey(name: "count_total", defaultValue: "0", nullable: true, includeIfNull: true)
           String countTotal}) {
     return _CategoryModel(
       kategoriId: kategoriId,
@@ -64,27 +64,27 @@ const $CategoryModel = _$CategoryModelTearOff();
 
 /// @nodoc
 mixin _$CategoryModel {
-  @JsonKey(name: 'kategori_id')
+  @JsonKey(name: "kategori_id")
   String get kategoriId;
-  @JsonKey(name: 'parent_id')
+  @JsonKey(name: "parent_id")
   String get parentId;
-  @JsonKey(name: 'internal_code')
+  @JsonKey(name: "internal_code")
   String get internalCode;
-  @JsonKey(name: 'kategori_code')
+  @JsonKey(name: "kategori_code")
   String get kategoriCode;
-  @JsonKey(name: 'description', defaultValue: 'description', nullable: true)
+  @JsonKey(name: "description", defaultValue: "description", nullable: true)
   String get description;
-  @JsonKey(name: 'picture')
+  @JsonKey(name: "picture")
   String get picture;
-  @JsonKey(name: 'display_store')
+  @JsonKey(name: "display_store")
   String get displayStore;
-  @JsonKey(name: 'has_child')
+  @JsonKey(name: "has_child")
   String get hasChild;
-  @JsonKey(name: 'count')
+  @JsonKey(name: "count")
   String get count;
   @JsonKey(
-      name: 'count_total',
-      defaultValue: '0',
+      name: "count_total",
+      defaultValue: "0",
       nullable: true,
       includeIfNull: true)
   String get countTotal;
@@ -100,25 +100,25 @@ abstract class $CategoryModelCopyWith<$Res> {
           CategoryModel value, $Res Function(CategoryModel) then) =
       _$CategoryModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'kategori_id')
+      {@JsonKey(name: "kategori_id")
           String kategoriId,
-      @JsonKey(name: 'parent_id')
+      @JsonKey(name: "parent_id")
           String parentId,
-      @JsonKey(name: 'internal_code')
+      @JsonKey(name: "internal_code")
           String internalCode,
-      @JsonKey(name: 'kategori_code')
+      @JsonKey(name: "kategori_code")
           String kategoriCode,
-      @JsonKey(name: 'description', defaultValue: 'description', nullable: true)
+      @JsonKey(name: "description", defaultValue: "description", nullable: true)
           String description,
-      @JsonKey(name: 'picture')
+      @JsonKey(name: "picture")
           String picture,
-      @JsonKey(name: 'display_store')
+      @JsonKey(name: "display_store")
           String displayStore,
-      @JsonKey(name: 'has_child')
+      @JsonKey(name: "has_child")
           String hasChild,
-      @JsonKey(name: 'count')
+      @JsonKey(name: "count")
           String count,
-      @JsonKey(name: 'count_total', defaultValue: '0', nullable: true, includeIfNull: true)
+      @JsonKey(name: "count_total", defaultValue: "0", nullable: true, includeIfNull: true)
           String countTotal});
 }
 
@@ -176,25 +176,25 @@ abstract class _$CategoryModelCopyWith<$Res>
       __$CategoryModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'kategori_id')
+      {@JsonKey(name: "kategori_id")
           String kategoriId,
-      @JsonKey(name: 'parent_id')
+      @JsonKey(name: "parent_id")
           String parentId,
-      @JsonKey(name: 'internal_code')
+      @JsonKey(name: "internal_code")
           String internalCode,
-      @JsonKey(name: 'kategori_code')
+      @JsonKey(name: "kategori_code")
           String kategoriCode,
-      @JsonKey(name: 'description', defaultValue: 'description', nullable: true)
+      @JsonKey(name: "description", defaultValue: "description", nullable: true)
           String description,
-      @JsonKey(name: 'picture')
+      @JsonKey(name: "picture")
           String picture,
-      @JsonKey(name: 'display_store')
+      @JsonKey(name: "display_store")
           String displayStore,
-      @JsonKey(name: 'has_child')
+      @JsonKey(name: "has_child")
           String hasChild,
-      @JsonKey(name: 'count')
+      @JsonKey(name: "count")
           String count,
-      @JsonKey(name: 'count_total', defaultValue: '0', nullable: true, includeIfNull: true)
+      @JsonKey(name: "count_total", defaultValue: "0", nullable: true, includeIfNull: true)
           String countTotal});
 }
 
@@ -251,61 +251,61 @@ class __$CategoryModelCopyWithImpl<$Res>
 /// @nodoc
 class _$_CategoryModel implements _CategoryModel {
   _$_CategoryModel(
-      {@JsonKey(name: 'kategori_id')
+      {@JsonKey(name: "kategori_id")
           this.kategoriId,
-      @JsonKey(name: 'parent_id')
+      @JsonKey(name: "parent_id")
           this.parentId,
-      @JsonKey(name: 'internal_code')
+      @JsonKey(name: "internal_code")
           this.internalCode,
-      @JsonKey(name: 'kategori_code')
+      @JsonKey(name: "kategori_code")
           this.kategoriCode,
-      @JsonKey(name: 'description', defaultValue: 'description', nullable: true)
+      @JsonKey(name: "description", defaultValue: "description", nullable: true)
           this.description,
-      @JsonKey(name: 'picture')
+      @JsonKey(name: "picture")
           this.picture,
-      @JsonKey(name: 'display_store')
+      @JsonKey(name: "display_store")
           this.displayStore,
-      @JsonKey(name: 'has_child')
+      @JsonKey(name: "has_child")
           this.hasChild,
-      @JsonKey(name: 'count')
+      @JsonKey(name: "count")
           this.count,
-      @JsonKey(name: 'count_total', defaultValue: '0', nullable: true, includeIfNull: true)
+      @JsonKey(name: "count_total", defaultValue: "0", nullable: true, includeIfNull: true)
           this.countTotal});
 
   factory _$_CategoryModel.fromJson(Map<String, dynamic> json) =>
       _$_$_CategoryModelFromJson(json);
 
   @override
-  @JsonKey(name: 'kategori_id')
+  @JsonKey(name: "kategori_id")
   final String kategoriId;
   @override
-  @JsonKey(name: 'parent_id')
+  @JsonKey(name: "parent_id")
   final String parentId;
   @override
-  @JsonKey(name: 'internal_code')
+  @JsonKey(name: "internal_code")
   final String internalCode;
   @override
-  @JsonKey(name: 'kategori_code')
+  @JsonKey(name: "kategori_code")
   final String kategoriCode;
   @override
-  @JsonKey(name: 'description', defaultValue: 'description', nullable: true)
+  @JsonKey(name: "description", defaultValue: "description", nullable: true)
   final String description;
   @override
-  @JsonKey(name: 'picture')
+  @JsonKey(name: "picture")
   final String picture;
   @override
-  @JsonKey(name: 'display_store')
+  @JsonKey(name: "display_store")
   final String displayStore;
   @override
-  @JsonKey(name: 'has_child')
+  @JsonKey(name: "has_child")
   final String hasChild;
   @override
-  @JsonKey(name: 'count')
+  @JsonKey(name: "count")
   final String count;
   @override
   @JsonKey(
-      name: 'count_total',
-      defaultValue: '0',
+      name: "count_total",
+      defaultValue: "0",
       nullable: true,
       includeIfNull: true)
   final String countTotal;
@@ -377,61 +377,61 @@ class _$_CategoryModel implements _CategoryModel {
 
 abstract class _CategoryModel implements CategoryModel {
   factory _CategoryModel(
-      {@JsonKey(name: 'kategori_id')
+      {@JsonKey(name: "kategori_id")
           String kategoriId,
-      @JsonKey(name: 'parent_id')
+      @JsonKey(name: "parent_id")
           String parentId,
-      @JsonKey(name: 'internal_code')
+      @JsonKey(name: "internal_code")
           String internalCode,
-      @JsonKey(name: 'kategori_code')
+      @JsonKey(name: "kategori_code")
           String kategoriCode,
-      @JsonKey(name: 'description', defaultValue: 'description', nullable: true)
+      @JsonKey(name: "description", defaultValue: "description", nullable: true)
           String description,
-      @JsonKey(name: 'picture')
+      @JsonKey(name: "picture")
           String picture,
-      @JsonKey(name: 'display_store')
+      @JsonKey(name: "display_store")
           String displayStore,
-      @JsonKey(name: 'has_child')
+      @JsonKey(name: "has_child")
           String hasChild,
-      @JsonKey(name: 'count')
+      @JsonKey(name: "count")
           String count,
-      @JsonKey(name: 'count_total', defaultValue: '0', nullable: true, includeIfNull: true)
+      @JsonKey(name: "count_total", defaultValue: "0", nullable: true, includeIfNull: true)
           String countTotal}) = _$_CategoryModel;
 
   factory _CategoryModel.fromJson(Map<String, dynamic> json) =
       _$_CategoryModel.fromJson;
 
   @override
-  @JsonKey(name: 'kategori_id')
+  @JsonKey(name: "kategori_id")
   String get kategoriId;
   @override
-  @JsonKey(name: 'parent_id')
+  @JsonKey(name: "parent_id")
   String get parentId;
   @override
-  @JsonKey(name: 'internal_code')
+  @JsonKey(name: "internal_code")
   String get internalCode;
   @override
-  @JsonKey(name: 'kategori_code')
+  @JsonKey(name: "kategori_code")
   String get kategoriCode;
   @override
-  @JsonKey(name: 'description', defaultValue: 'description', nullable: true)
+  @JsonKey(name: "description", defaultValue: "description", nullable: true)
   String get description;
   @override
-  @JsonKey(name: 'picture')
+  @JsonKey(name: "picture")
   String get picture;
   @override
-  @JsonKey(name: 'display_store')
+  @JsonKey(name: "display_store")
   String get displayStore;
   @override
-  @JsonKey(name: 'has_child')
+  @JsonKey(name: "has_child")
   String get hasChild;
   @override
-  @JsonKey(name: 'count')
+  @JsonKey(name: "count")
   String get count;
   @override
   @JsonKey(
-      name: 'count_total',
-      defaultValue: '0',
+      name: "count_total",
+      defaultValue: "0",
       nullable: true,
       includeIfNull: true)
   String get countTotal;

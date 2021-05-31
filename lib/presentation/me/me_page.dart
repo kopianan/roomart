@@ -143,6 +143,7 @@ class _MePageState extends State<MePage> {
                     actions: [
                       TextButton(
                         onPressed: () async {
+                          Get.back();
                           try {
                             authController.removeUserData();
                             await Pref().logOut();

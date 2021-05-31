@@ -1,140 +1,47 @@
-class UserRoomartDataModel {
-  String userId;
-  String parentId;
-  String userName;
-  String email;
-  String phone;
-  String password;
-  String fullName;
-  String typeIds;
-  int status;
-  String birthDate;
-  String address;
-  String shipTo1;
-  String shipTo2;
-  String country;
-  String province;
-  String city;
-  String district;
-  String village;
-  String terrId1;
-  String terrId2;
-  String terrId3;
-  String terrId4;
-  int longitudes;
-  int latitudes;
-  String regDate;
-  String fbToken;
-  String googleToken;
-  String msgToken;
-  String otherToken;
-  bool alreadyInSave;
-  bool isNew;
-  bool modified;
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-  UserRoomartDataModel(
-      {this.userId,
-      this.parentId,
-      this.userName,
-      this.email,
-      this.phone,
-      this.password,
-      this.fullName,
-      this.typeIds,
-      this.status,
-      this.birthDate,
-      this.address,
-      this.shipTo1,
-      this.shipTo2,
-      this.country,
-      this.province,
-      this.city,
-      this.district,
-      this.village,
-      this.terrId1,
-      this.terrId2,
-      this.terrId3,
-      this.terrId4,
-      this.longitudes,
-      this.latitudes,
-      this.regDate,
-      this.fbToken,
-      this.googleToken,
-      this.msgToken,
-      this.otherToken,
-      this.alreadyInSave,
-      this.isNew,
-      this.modified});
+part 'user_roomart_data_model.freezed.dart';
+part 'user_roomart_data_model.g.dart';
 
-  UserRoomartDataModel.fromJson(Map<String, dynamic> json) {
-    userId = json['userId'];
-    parentId = json['parentId'];
-    userName = json['userName'];
-    email = json['email'];
-    phone = json['phone'];
-    password = json['password'];
-    fullName = json['fullName'];
-    typeIds = json['typeIds'];
-    status = json['status'];
-    birthDate = json['birthDate'];
-    address = json['address'];
-    shipTo1 = json['shipTo1'];
-    shipTo2 = json['shipTo2'];
-    country = json['country'];
-    province = json['province'];
-    city = json['city'];
-    district = json['district'];
-    village = json['village'];
-    terrId1 = json['terrId1'];
-    terrId2 = json['terrId2'];
-    terrId3 = json['terrId3'];
-    terrId4 = json['terrId4'];
-    longitudes = json['longitudes'];
-    latitudes = json['latitudes'];
-    regDate = json['regDate'];
-    fbToken = json['fbToken'];
-    googleToken = json['googleToken'];
-    msgToken = json['msgToken'];
-    otherToken = json['otherToken'];
-    alreadyInSave = json['alreadyInSave'];
-    isNew = json['isNew'];
-    modified = json['modified'];
-  }
+@freezed
+abstract class UserRoomartDataModel with _$UserRoomartDataModel {
+  factory UserRoomartDataModel({
+    @JsonKey(name: 'userId', defaultValue: "") String userId,
+    @JsonKey(name: 'parentId', defaultValue: "") String parentId,
+    @JsonKey(name: 'userName', defaultValue: "") String userName,
+    @JsonKey(name: 'email', defaultValue: "") String email,
+    @JsonKey(name: 'phone', defaultValue: "") String phone,
+    @JsonKey(name: 'password', defaultValue: "") String password,
+    @JsonKey(name: 'fullName', defaultValue: "") String fullName,
+    @JsonKey(name: 'typeIds', defaultValue: "") String typeIds,
+    @JsonKey(name: 'status', defaultValue: 0) int status,
+    @JsonKey(name: 'birthDate', defaultValue: "") String birthDate,
+    @JsonKey(name: 'address', defaultValue: "") String address,
+    @JsonKey(name: 'shipTo1', defaultValue: "") String shipTo1,
+    @JsonKey(name: 'shipTo2', defaultValue: "") String shipTo2,
+    @JsonKey(name: 'country', defaultValue: "") String country,
+    @JsonKey(name: 'province', defaultValue: "") String province,
+    @JsonKey(name: 'city', defaultValue: "") String city,
+    @JsonKey(name: 'district', defaultValue: "") String district,
+    @JsonKey(name: 'village', defaultValue: "") String village,
+    @JsonKey(name: 'terrId1', defaultValue: "") String terrId1,
+    @JsonKey(name: 'terrId2', defaultValue: "") String terrId2,
+    @JsonKey(name: 'terrId3', defaultValue: "") String terrId3,
+    @JsonKey(name: 'terrId4', defaultValue: "") String terrId4,
+    @JsonKey(name: 'longitudes', defaultValue: 0) int longitudes,
+    @JsonKey(name: 'latitudes', defaultValue: 0) int latitudes,
+    @JsonKey(name: 'regDate', defaultValue: "") String regDate,
+    @JsonKey(name: 'fbToken', defaultValue: "") String fbToken,
+    @JsonKey(name: 'googleToken', defaultValue: "") String googleToken,
+    @JsonKey(name: 'msgToken', defaultValue: "") String msgToken,
+    @JsonKey(name: 'otherToken', defaultValue: "") String otherToken,
+    @JsonKey(name: 'alreadyInSave', defaultValue: false) bool alreadyInSave,
+    @JsonKey(name: 'isNew', defaultValue: false) bool isNew,
+    @JsonKey(name: 'modified', defaultValue: false) bool modified,
+    @JsonKey(name: 'error', defaultValue: 0) int error,
+    @JsonKey(name: 'message', defaultValue: "") String message,
+  }) = _UserRoomartDataModel;
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['userId'] = this.userId;
-    data['parentId'] = this.parentId;
-    data['userName'] = this.userName;
-    data['email'] = this.email;
-    data['phone'] = this.phone;
-    data['password'] = this.password;
-    data['fullName'] = this.fullName;
-    data['typeIds'] = this.typeIds;
-    data['status'] = this.status;
-    data['birthDate'] = this.birthDate;
-    data['address'] = this.address;
-    data['shipTo1'] = this.shipTo1;
-    data['shipTo2'] = this.shipTo2;
-    data['country'] = this.country;
-    data['province'] = this.province;
-    data['city'] = this.city;
-    data['district'] = this.district;
-    data['village'] = this.village;
-    data['terrId1'] = this.terrId1;
-    data['terrId2'] = this.terrId2;
-    data['terrId3'] = this.terrId3;
-    data['terrId4'] = this.terrId4;
-    data['longitudes'] = this.longitudes;
-    data['latitudes'] = this.latitudes;
-    data['regDate'] = this.regDate;
-    data['fbToken'] = this.fbToken;
-    data['googleToken'] = this.googleToken;
-    data['msgToken'] = this.msgToken;
-    data['otherToken'] = this.otherToken;
-    data['alreadyInSave'] = this.alreadyInSave;
-    data['isNew'] = this.isNew;
-    data['modified'] = this.modified;
-    return data;
-  }
+  factory UserRoomartDataModel.fromJson(Map<String, dynamic> json) =>
+      _$UserRoomartDataModelFromJson(json);
 }
