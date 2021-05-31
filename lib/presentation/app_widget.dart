@@ -35,7 +35,7 @@ class _AppWidgetState extends State<AppWidget> {
           inputDecorationTheme: InputDecorationTheme(
               fillColor: Colors.white,
               filled: true,
-              labelStyle: TextStyle(color: Colors.black),
+              labelStyle: TextStyle(color: Colors.white),
               floatingLabelBehavior: FloatingLabelBehavior.always,
               contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 3),
               focusedBorder: OutlineInputBorder(
@@ -45,7 +45,8 @@ class _AppWidgetState extends State<AppWidget> {
                   borderRadius: BorderRadius.circular(8),
                   borderSide: BorderSide(width: 1, color: Colors.grey))),
           scaffoldBackgroundColor: Colors.white,
-          primarySwatch: ColorToMaterial.fromHEX(primaryColor).getMaterialColor()),
+          primarySwatch:
+              ColorToMaterial.fromHEX(primaryColor).getMaterialColor()),
     );
   }
 }

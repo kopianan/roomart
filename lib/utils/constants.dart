@@ -17,7 +17,7 @@ class Constants {
   String imageBaseUrl = "http://cloud.erp.web.id:8080";
   static const locCode = "SER";
   static const locId = "DM147753742227307918394";
-
+  static const transactionCode = "DC";
   String get getUltimoBaseUrl => this._ultimoBaseUrl;
   String get getBaseUrlProduction => this.baseUrlProduction;
   String get getBaseUrlProductionBackup => this.baseUrlProductionBackup;
