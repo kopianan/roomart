@@ -37,10 +37,14 @@ class PaymentController extends GetxController {
       usedPayment.assignAll(
           _filter([paymentEnum.TRANSF, paymentEnum.DEPO], paymentMethodList));
     }
-    usedPayment.insert(
-        0,
-        paymentMethodList.firstWhere(
-            (element) => element.code == describeEnum(paymentEnum.MID)));
+
+    try {
+      usedPayment.insert(
+          0,
+          paymentMethodList.firstWhere(
+              (element) => element.code == describeEnum(paymentEnum.MID)));
+    } catch (e) {}
+
     // print(usedPayment);
     return usedPayment;
   }

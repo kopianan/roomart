@@ -684,6 +684,8 @@ abstract class _$OnRegisterToRoomartCopyWith<$Res> {
           $Res Function(_OnRegisterToRoomart) then) =
       __$OnRegisterToRoomartCopyWithImpl<$Res>;
   $Res call({UserRoomartDataModel user});
+
+  $UserRoomartDataModelCopyWith<$Res> get user;
 }
 
 /// @nodoc
@@ -704,6 +706,16 @@ class __$OnRegisterToRoomartCopyWithImpl<$Res>
     return _then(_OnRegisterToRoomart(
       user == freezed ? _value.user : user as UserRoomartDataModel,
     ));
+  }
+
+  @override
+  $UserRoomartDataModelCopyWith<$Res> get user {
+    if (_value.user == null) {
+      return null;
+    }
+    return $UserRoomartDataModelCopyWith<$Res>(_value.user, (value) {
+      return _then(_value.copyWith(user: value));
+    });
   }
 }
 

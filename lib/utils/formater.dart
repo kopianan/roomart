@@ -5,21 +5,33 @@ class Formatter {
     final _format =
         NumberFormat.currency(locale: 'id-ID', name: "IDR ", decimalDigits: 0);
 
-    return _format.format(double.parse(price));
+    var _formatted;
+    try {
+      _formatted = _format.format(double.parse(price));
+    } catch (e) {
+      _formatted = "IDR 0";
+    }
+    return _formatted;
   }
 
   String formatStringCurrencyNoSymbol(String price) {
     final _format =
         NumberFormat.currency(locale: 'id-ID', decimalDigits: 0, symbol: "");
 
-    return _format.format(double.parse(price));
+    var _formatted;
+    try {
+      _formatted = _format.format(double.parse(price));
+    } catch (e) {
+      _formatted = "0";
+    }
+    return _formatted;
   }
 
   String dateFormatter(String date) {
     var _date = DateTime.parse(
       date,
     );
-    return DateFormat("dd MMM").format(_date);
+    return DateFormat("dd MMMM").format(_date);
   }
 
   String dateFormatGetYeard(String date) {

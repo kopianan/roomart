@@ -68,14 +68,22 @@ class AuthRepository extends IAuthFacade {
       //Register to POS first
 
       response = await dio.get(
-          "${Constants().auhtBaseUrl}api,User.vm?method=register&email=${request.email}&password=${request.password}&firstname=${request.name}&dobday=${request.dateTime.day}&dobmonth=${request.dateTime.month}&dobyear=${request.dateTime.year}&phone=${request.phone}&address=alamat&tocust=true&ctype=DM151627192557861134072");
-
-      var model1 = UserRoomartDataModel.fromJson(json.decode(response.data));
+          "${Constants().baseUrlProductionBackup}api,User.vm?method=register&email=${request.email}&password=${request.password}&firstname=${request.name}&dobday=${request.dateTime.day}&dobmonth=${request.dateTime.month}&dobyear=${request.dateTime.year}&phone=${request.phone}&address=alamat&tocust=true&ctype=DM151627192557861134072");
+      var model1;
+      if (response.statusCode == 200) {
+        model1 = UserRoomartDataModel.fromJson(json.decode(response.data));
+        if (model1.error == 1) {
+          print("TEST");
+          print(model1.message);
+          return left(model1.message);
+        }
+      }
 
       return right(model1);
     } on DioError catch (e) {
       return left(e.response.data['message'].toString());
     } catch (e) {
+      print("DIO ERROR");
       return left(e.toString());
     }
   }
@@ -87,7 +95,7 @@ class AuthRepository extends IAuthFacade {
 
     try {
       response = await dio.get(
-          "${Constants().auhtBaseUrl}api,User.vm?method=login&email=$email&password=$password");
+          "${Constants().baseUrlProductionBackup}api,User.vm?method=login&email=$email&password=$password");
 
       var data = UserDataModel.fromJson(json.decode(response.data));
       if (data.error != 1) {

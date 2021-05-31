@@ -1,4 +1,3 @@
-
 import 'package:roomart/application/rajaongkir/ongkir_code_data_model.dart';
 
 class Constants {
@@ -10,15 +9,11 @@ class Constants {
 
   String storageBox = 'roomart_storage_key';
 
-  //Login Register
-  String auhtBaseUrl =
-      "http://vipcloud.erp.web.id:8080/roomart/weblayer/template/";
-
   //new base url
   String baseUrlProduction =
       "http://vipcloud.erp.web.id:8080/tokoku-android/weblayer/template/";
   String baseUrlProductionBackup =
-      "http://vipcloud.erp.web.id:8080/tokoku-android/weblayer/template/";
+      "http://vipcloud.erp.web.id:8080/roomart/weblayer/template/";
   String imageBaseUrl = "http://cloud.erp.web.id:8080";
   static const locCode = "SER";
   static const locId = "DM147753742227307918394";
