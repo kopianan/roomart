@@ -36,12 +36,9 @@ class _MePageState extends State<MePage> {
             ),
             child: Column(
               children: [
-                CircleAvatar(
-                  backgroundColor: Colors.green,
-                  radius: 50,
-                ),
                 SizedBox(height: 20),
                 Container(
+                  alignment: Alignment.topLeft,
                   padding: EdgeInsets.symmetric(horizontal: 10),
                   child: Text(
                     authController.getUserDataModel.fullName,
@@ -76,9 +73,8 @@ class _MePageState extends State<MePage> {
                         return Expanded(
                             child: InkWell(
                           onTap: () {
-                            cubit
-                              ..getArBalance(
-                                  authController.getUserDataModel.userId);
+                            cubit.getArBalance(
+                                authController.getUserDataModel.userId);
                           },
                           child: saldoContainer(
                             "Total Saldo",
