@@ -37,7 +37,8 @@ class Constants {
 
   String transactionTypeCredit = "138120846724201371547";
   String transactionTypeTransfer = "DM141509272240368323714";
-
+  //for change origin city delivery cost
+  static const String cityOriginId = "501";
   List<OngkirCodeDataModel> courierList = [
     OngkirCodeDataModel(
         code: "99010001",

@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:roomart/domain/models/discount/discount_code.dart';
 import 'package:roomart/domain/models/discount/discount_data_model.dart';
+import 'package:roomart/domain/raja_ongkir/delivery_cost/cost.dart';
 import 'package:roomart/domain/raja_ongkir/delivery_cost/cost_data_model.dart';
 import 'package:roomart/domain/raja_ongkir/delivery_cost/costs.dart';
 import 'package:roomart/domain/transaction/full_transaction_data_model.dart';
@@ -27,7 +28,7 @@ class TransactionController extends GetxController {
   Rx<DiscountDataModel> selectedDiscount = DiscountDataModel().obs;
   Rx<DiscountCode> selectedDiscountCode = DiscountCode(totalDiscount: "0").obs;
 
-    //Payment
+  //Payment
   double calculateGrandTotal(double subtotal) {
     //subtotal - discount + ongkos kirim
 
@@ -94,7 +95,18 @@ class TransactionController extends GetxController {
 
   //COSTLIST
   void setCostList(List<CostDataModel> data) {
+    //add lain lain
+
+    var otherType =
+        CostDataModel(code: " ", name: "Pengiriman Lain-lain", costs: [
+      Costs(
+          description: "-",
+          service: "Lain-lain",
+          cost: [Cost(etd: "-", note: "Other", value: 0)])
+    ]);
+
     this.costList = data;
+    this.costList.add(otherType);
   }
 
   void setDeliveryCost(Costs costs, CostDataModel costDataModel) {

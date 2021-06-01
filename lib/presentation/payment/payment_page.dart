@@ -413,9 +413,17 @@ class _PaymentPageState extends State<PaymentPage> {
           CartDataCollectionModel(bought: _dsicount, item: DataItemModel());
       paidItem.add(_discountCart);
     }
-    var _selected = Constants().courierList.firstWhere((element) =>
-        element.name.toLowerCase() ==
-        transactionController.getSelectedFullDelivery.code.toLowerCase());
+    var _selected;
+    try {
+      _selected = Constants().courierList.firstWhere((element) =>
+          element.name.toLowerCase() ==
+          transactionController.getSelectedFullDelivery.code.toLowerCase());
+    } catch (e) {
+      _selected = Constants()
+          .courierList
+          .firstWhere((element) => element.name == "Default");
+    }
+
     var boughitem = BoughtItemDataModel(
         itemId: _selected.id,
         itemCode: _selected.code,

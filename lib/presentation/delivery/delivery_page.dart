@@ -34,7 +34,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
     selectedCost = transactionController.getSelectedCost;
     requestModel = CostRequestModel(
         destination: user.terrId3,
-        origin: "501",
+        origin: Constants.cityOriginId,
         weight: cartController.calculateWeight(),
         destinationType: "city",
         originType: "city",
@@ -45,7 +45,9 @@ class _DeliveryPageState extends State<DeliveryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Pilih Pengiriman"),),
+      appBar: AppBar(
+        title: Text("Pilih Pengiriman"),
+      ),
       body: BlocProvider(
         create: (context) => ongkir..getCost(requestModel),
         child: BlocConsumer<RajaongkirCubit, RajaongkirState>(
