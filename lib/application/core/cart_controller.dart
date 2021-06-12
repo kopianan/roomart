@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/domain/item/cart_data_collection_model.dart';
 import 'package:roomart/domain/item/data_item_model.dart';
 import 'package:roomart/domain/transaction/trans_item/bought_item_data_model.dart';
+import 'package:roomart/utils/constants.dart';
 
 class CartController extends GetxController {
   List<CartDataCollectionModel> cartCollection =
       <CartDataCollectionModel>[].obs;
+
+  final authController = Get.put(AuthController());
   var subTotal = 0.0.obs;
   void removeDataFromList(int index) {
     cartCollection.removeAt(index);
@@ -29,16 +33,27 @@ class CartController extends GetxController {
         itemCode: data.itemCode,
         itemId: data.itemId,
         qty: "1",
-        price: data.itemPrice,
+        price: checkResellerPrice(data),
         discount: "0",
         itemImage: data.pic,
         itemName: data.itemName,
         resellerPrice: double.parse(data.newPrice),
         tax: "NoPPN",
       );
+      print(_converted);
 
       var _dta = CartDataCollectionModel(item: data, bought: _converted);
+      print(_dta);
       cartCollection.add(_dta);
+    }
+  }
+
+  String checkResellerPrice(DataItemModel item) {
+    if (item.customerTypeId == Constants().customerTypeReseller ||
+        item.customerTypeId == Constants().customerTypeReseller2) {
+      return item.newPrice;
+    } else {
+      return item.itemPrice;
     }
   }
 
@@ -48,7 +63,7 @@ class CartController extends GetxController {
       itemCode: data.itemCode,
       itemId: data.itemId,
       qty: qty,
-      price: data.itemPrice,
+      price: checkResellerPrice(data),
       discount: "0",
       itemImage: data.pic,
       itemName: data.itemName,

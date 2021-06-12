@@ -9,6 +9,7 @@ import 'package:roomart/application/category/category_cubit.dart';
 import 'package:roomart/application/home/home_controller.dart';
 import 'package:roomart/presentation/category/sub_cotegory_page.dart';
 import 'package:build_daemon/constants.dart';
+import 'package:roomart/presentation/core/widget_collection.dart';
 import 'package:roomart/utils/constants.dart';
 import 'package:search_widget/search_widget.dart';
 import '../../domain/category/category_model.dart';
@@ -39,8 +40,8 @@ class _CategoryPageState extends State<CategoryPage> {
   List<String> dataBanner;
   @override
   void initState() {
-    dataBanner = homeCon.getBannerList; 
-    print(dataBanner) ; 
+    dataBanner = homeCon.getBannerList;
+    print(dataBanner);
     if (isFirstTime && categoryController.getCategoryList.isEmpty) {
       isFirstTime = true;
       categoryBloc.getAllCategory();
@@ -138,19 +139,7 @@ class _CategoryPageState extends State<CategoryPage> {
                             padding: const EdgeInsets.symmetric(vertical: 10),
                             child: Container(
                                 margin: EdgeInsets.only(right: 15),
-                                decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(10),
-                                    boxShadow: [
-                                      BoxShadow(
-                                          blurRadius: 2,
-                                          spreadRadius: 2,
-                                          color: Colors.grey[200],
-                                          offset: Offset(2, 2))
-                                    ],
-                                    image: DecorationImage(
-                                        image: NetworkImage(data),
-                                        fit: BoxFit.cover))),
+                                child: CustomImageProvider(url: data)),
                           ))
                       .toList(),
                 ),

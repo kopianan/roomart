@@ -27,6 +27,13 @@ class Formatter {
     return _formatted;
   }
 
+  String fullDateFormat(String date) {
+    var _date = DateTime.parse(
+      date,
+    );
+    return DateFormat("dd MMMM yyyy").format(_date);
+  }
+
   String dateFormatter(String date) {
     var _date = DateTime.parse(
       date,

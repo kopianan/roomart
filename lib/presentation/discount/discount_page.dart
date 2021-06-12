@@ -46,88 +46,91 @@ class _DiscountPageState extends State<DiscountPage> {
           child: Container(
             margin: EdgeInsets.all(15),
             child: Column(children: [
-              BlocProvider(
-                create: (context) => disCubit,
-                child: BlocConsumer<AuthCubit, AuthState>(
-                    listener: (context, state) {
-                  state.maybeMap(
-                      orElse: () {},
-                      error: (e) {
-                        print(e);
-                      },
-                      onCheckCouponCode: (e) {
-                        if (double.parse(e.status) <= 0) {
-                          Get.showSnackbar(GetBar(
-                            message: "Code tidak valid",
-                            duration: Duration(
-                              seconds: 2,
-                            ),
-                            snackPosition: SnackPosition.TOP,
-                          ));
-                        } else {
-                          var _dis = DiscountCode(
-                              code: req.code, totalDiscount: e.status);
-                          print(_dis);
-                          transController.setSelectedDiscountCode(_dis);
-                          Get.back();
-                          Get.showSnackbar(GetBar(
-                            title: "Discount applied",
-                            message:
-                                Formatter().formatStringCurrency(e.status) +
-                                    " applied",
-                            duration: Duration(
-                              seconds: 2,
-                            ),
-                            snackPosition: SnackPosition.TOP,
-                          ));
-                        }
-                      });
-                }, builder: (context, state) {
-                  return Column(
-                    children: [
-                      Form(
-                        key: formKey,
-                        autovalidateMode: AutovalidateMode.onUserInteraction,
-                        child: TextFormField(
-                          controller: textController,
-                          validator: (e) {
-                            if (e.isEmpty) {
-                              return "Masukkan kode kupon";
-                            } else
-                              return null;
-                          },
-                          decoration: InputDecoration(hintText: "Coupon code"),
+              GetBuilder<TransactionController>(
+                builder: (trans) => BlocProvider(
+                  create: (context) => disCubit,
+                  child: BlocConsumer<AuthCubit, AuthState>(
+                      listener: (context, state) {
+                    state.maybeMap(
+                        orElse: () {},
+                        error: (e) {
+                          print(e);
+                        },
+                        onCheckCouponCode: (e) {
+                          if (double.parse(e.status) <= 0) {
+                            Get.showSnackbar(GetBar(
+                              message: "Code tidak valid",
+                              duration: Duration(
+                                seconds: 2,
+                              ),
+                              snackPosition: SnackPosition.TOP,
+                            ));
+                          } else {
+                            var _dis = DiscountCode(
+                                code: req.code, totalDiscount: e.status);
+                            print(_dis);
+                            trans.setSelectedDiscountCode(_dis);
+                            Get.back();
+                            Get.showSnackbar(GetBar(
+                              title: "Discount applied",
+                              message:
+                                  Formatter().formatStringCurrency(e.status) +
+                                      " applied",
+                              duration: Duration(
+                                seconds: 2,
+                              ),
+                              snackPosition: SnackPosition.TOP,
+                            ));
+                          }
+                        });
+                  }, builder: (context, state) {
+                    return Column(
+                      children: [
+                        Form(
+                          key: formKey,
+                          autovalidateMode: AutovalidateMode.onUserInteraction,
+                          child: TextFormField(
+                            controller: textController,
+                            validator: (e) {
+                              if (e.isEmpty) {
+                                return "Masukkan kode kupon";
+                              } else
+                                return null;
+                            },
+                            decoration:
+                                InputDecoration(hintText: "Coupon code"),
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 20),
-                      Container(
-                        width: double.infinity,
-                        child: DefaultButton1(
-                          color: Colors.purple[300],
-                          text: "Find coupon",
-                          onPressed: () {
-                            if (formKey.currentState.validate()) {
-                              req = DiscountRequest(
-                                  code: textController.text,
-                                  total: cartController
-                                      .getCartSubTotalDouble(
-                                          isReseller:
-                                              authController.checkIfReseller())
-                                      .toString(),
-                                  token: Constants().tokenUltimo);
-                              print(req);
-                              disCubit.checkCouponCode(req);
-                            }
-                          },
+                        SizedBox(height: 20),
+                        Container(
+                          width: double.infinity,
+                          child: DefaultButton1(
+                            color: Colors.purple[300],
+                            text: "Find coupon",
+                            onPressed: () {
+                              if (formKey.currentState.validate()) {
+                                req = DiscountRequest(
+                                    code: textController.text,
+                                    total: cartController
+                                        .getCartSubTotalDouble(
+                                            isReseller: authController
+                                                .checkIfReseller())
+                                        .toString(),
+                                    token: Constants().tokenUltimo);
+                                print(req);
+                                disCubit.checkCouponCode(req);
+                              }
+                            },
+                          ),
                         ),
-                      ),
-                      Divider(
-                        height: 30,
-                        thickness: 2,
-                      ),
-                    ],
-                  );
-                }),
+                        Divider(
+                          height: 30,
+                          thickness: 2,
+                        ),
+                      ],
+                    );
+                  }),
+                ),
               ),
               BlocProvider(
                 create: (context) => getIt<AuthCubit>()..getAvailableDiscount(),

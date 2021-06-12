@@ -95,7 +95,7 @@ class _DashboardPageState extends State<DashboardPage> {
           children: <Widget>[
             HomePage(),
             CategoryPage(),
-
+            
             GetX<AuthController>(builder: (auth) {
               if (auth.getUserDataModel == UserDataModel()) {
                 return AuthPage();
@@ -116,6 +116,8 @@ class _DashboardPageState extends State<DashboardPage> {
               BottomNavigationBarItem(label: "Home", icon: Icon(Icons.home)),
               BottomNavigationBarItem(
                   label: "Category", icon: Icon(Icons.timeline)),
+              BottomNavigationBarItem(
+                  label: "Update", icon: Icon(Icons.mail_outlined)),
               BottomNavigationBarItem(label: "Me", icon: Icon(Icons.person)),
             ],
           ),

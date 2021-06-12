@@ -1,8 +1,10 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:get/route_manager.dart';
 import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/domain/item/data_item_model.dart';
+import 'package:roomart/presentation/core/widget_collection.dart';
 import 'package:roomart/presentation/item_detail/item_detail_page.dart';
 import 'package:roomart/utils/constants.dart';
 import 'package:roomart/utils/formater.dart';
@@ -37,24 +39,14 @@ class ItemListWidget extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 // flex: 7,
-                child: Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      image: DecorationImage(
-                        image: NetworkImage(
-                            "${Constants().imageBaseUrl}${item.pic}"),
-                        fit: BoxFit.cover,
-                        onError: (exception, stackTrace) =>
-                            AssetImage('assets/broken_image.png'),
-                      )),
-                ),
+                child: CustomImageProvider(
+                    url: "${Constants().imageBaseUrl}${item.pic}"),
               ),
               Container(
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
-
                   children: <Widget>[
                     SizedBox(height: 8),
                     Container(

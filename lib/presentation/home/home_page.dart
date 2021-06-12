@@ -12,6 +12,7 @@ import 'package:roomart/application/home/home_cubit.dart';
 import 'package:roomart/application/item/item_controller.dart';
 import 'package:roomart/application/item/item_cubit.dart';
 import 'package:roomart/presentation/category/sub_cotegory_page.dart';
+import 'package:roomart/presentation/core/widget_collection.dart';
 import 'package:roomart/presentation/widgets/item_list_widget.dart';
 import 'package:roomart/utils/category_data.dart';
 import 'package:roomart/utils/constants.dart';
@@ -116,21 +117,9 @@ class _HomePageState extends State<HomePage> {
                                   padding:
                                       const EdgeInsets.symmetric(vertical: 10),
                                   child: Container(
-                                      margin: EdgeInsets.only(right: 15),
-                                      decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                          boxShadow: [
-                                            BoxShadow(
-                                                blurRadius: 2,
-                                                spreadRadius: 2,
-                                                color: Colors.grey[200],
-                                                offset: Offset(2, 2))
-                                          ],
-                                          image: DecorationImage(
-                                              image: NetworkImage(data),
-                                              fit: BoxFit.cover))),
+                                    margin: EdgeInsets.only(right: 15),
+                                    child: CustomImageProvider(url: data),
+                                  ),
                                 ))
                             .toList(),
                       ),
