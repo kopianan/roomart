@@ -18,23 +18,23 @@ class _$TransPostDataModelTearOff {
 
 // ignore: unused_element
   _TransPostDataModel call(
-      {@JsonKey(name: 'trans_no') String transNo,
-      @JsonKey(name: 'trans_type') String transType,
-      @JsonKey(name: 'location') String location,
-      @JsonKey(name: 'trans_dt') String transDt,
-      @JsonKey(name: 'customer') String customer,
-      @JsonKey(name: 'create_by') String createBy,
-      @JsonKey(name: 'remark') String remark,
-      @JsonKey(name: 'pmttype') String pmttype,
-      @JsonKey(name: 'paymentchannel') String paymentchannel,
-      @JsonKey(name: 'total_discount') String pmtterm,
-      @JsonKey(name: 'pmtterm') int bankId,
-      @JsonKey(name: 'bankId') String totalDiscount,
-      @JsonKey(name: 'parent_id') String parentId,
-      @JsonKey(name: 'is_reseller') bool isReseller,
-      @JsonKey(name: 'email') String email,
-      @JsonKey(name: 'fullname') String fullname,
-      @JsonKey(name: 'details') List<BoughtItemDataModel> details}) {
+      {@JsonKey(name: "trans_no") String transNo,
+      @JsonKey(name: "trans_type") String transType,
+      @JsonKey(name: "location") String location,
+      @JsonKey(name: "trans_dt") String transDt,
+      @JsonKey(name: "customer") String customer,
+      @JsonKey(name: "create_by") String createBy,
+      @JsonKey(name: "remark") String remark,
+      @JsonKey(name: "pmttype") String pmttype,
+      @JsonKey(name: "paymentchannel") String paymentchannel,
+      @JsonKey(name: "total_discount") String pmtterm,
+      @JsonKey(name: "pmtterm") int bankId,
+      @JsonKey(name: "bankId") String totalDiscount,
+      @JsonKey(name: "parent_id") String parentId,
+      @JsonKey(name: "is_reseller") bool isReseller,
+      @JsonKey(name: "email") String email,
+      @JsonKey(name: "fullname") String fullname,
+      @JsonKey(name: "details") List<BoughtItemDataModel> details}) {
     return _TransPostDataModel(
       transNo: transNo,
       transType: transType,
@@ -68,39 +68,39 @@ const $TransPostDataModel = _$TransPostDataModelTearOff();
 
 /// @nodoc
 mixin _$TransPostDataModel {
-  @JsonKey(name: 'trans_no')
+  @JsonKey(name: "trans_no")
   String get transNo;
-  @JsonKey(name: 'trans_type')
+  @JsonKey(name: "trans_type")
   String get transType;
-  @JsonKey(name: 'location')
+  @JsonKey(name: "location")
   String get location;
-  @JsonKey(name: 'trans_dt')
+  @JsonKey(name: "trans_dt")
   String get transDt;
-  @JsonKey(name: 'customer')
+  @JsonKey(name: "customer")
   String get customer;
-  @JsonKey(name: 'create_by')
+  @JsonKey(name: "create_by")
   String get createBy;
-  @JsonKey(name: 'remark')
+  @JsonKey(name: "remark")
   String get remark;
-  @JsonKey(name: 'pmttype')
+  @JsonKey(name: "pmttype")
   String get pmttype;
-  @JsonKey(name: 'paymentchannel')
+  @JsonKey(name: "paymentchannel")
   String get paymentchannel;
-  @JsonKey(name: 'total_discount')
+  @JsonKey(name: "total_discount")
   String get pmtterm;
-  @JsonKey(name: 'pmtterm')
+  @JsonKey(name: "pmtterm")
   int get bankId;
-  @JsonKey(name: 'bankId')
+  @JsonKey(name: "bankId")
   String get totalDiscount;
-  @JsonKey(name: 'parent_id')
+  @JsonKey(name: "parent_id")
   String get parentId;
-  @JsonKey(name: 'is_reseller')
+  @JsonKey(name: "is_reseller")
   bool get isReseller;
-  @JsonKey(name: 'email')
+  @JsonKey(name: "email")
   String get email;
-  @JsonKey(name: 'fullname')
+  @JsonKey(name: "fullname")
   String get fullname;
-  @JsonKey(name: 'details')
+  @JsonKey(name: "details")
   List<BoughtItemDataModel> get details;
 
   Map<String, dynamic> toJson();
@@ -114,23 +114,23 @@ abstract class $TransPostDataModelCopyWith<$Res> {
           TransPostDataModel value, $Res Function(TransPostDataModel) then) =
       _$TransPostDataModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'trans_no') String transNo,
-      @JsonKey(name: 'trans_type') String transType,
-      @JsonKey(name: 'location') String location,
-      @JsonKey(name: 'trans_dt') String transDt,
-      @JsonKey(name: 'customer') String customer,
-      @JsonKey(name: 'create_by') String createBy,
-      @JsonKey(name: 'remark') String remark,
-      @JsonKey(name: 'pmttype') String pmttype,
-      @JsonKey(name: 'paymentchannel') String paymentchannel,
-      @JsonKey(name: 'total_discount') String pmtterm,
-      @JsonKey(name: 'pmtterm') int bankId,
-      @JsonKey(name: 'bankId') String totalDiscount,
-      @JsonKey(name: 'parent_id') String parentId,
-      @JsonKey(name: 'is_reseller') bool isReseller,
-      @JsonKey(name: 'email') String email,
-      @JsonKey(name: 'fullname') String fullname,
-      @JsonKey(name: 'details') List<BoughtItemDataModel> details});
+      {@JsonKey(name: "trans_no") String transNo,
+      @JsonKey(name: "trans_type") String transType,
+      @JsonKey(name: "location") String location,
+      @JsonKey(name: "trans_dt") String transDt,
+      @JsonKey(name: "customer") String customer,
+      @JsonKey(name: "create_by") String createBy,
+      @JsonKey(name: "remark") String remark,
+      @JsonKey(name: "pmttype") String pmttype,
+      @JsonKey(name: "paymentchannel") String paymentchannel,
+      @JsonKey(name: "total_discount") String pmtterm,
+      @JsonKey(name: "pmtterm") int bankId,
+      @JsonKey(name: "bankId") String totalDiscount,
+      @JsonKey(name: "parent_id") String parentId,
+      @JsonKey(name: "is_reseller") bool isReseller,
+      @JsonKey(name: "email") String email,
+      @JsonKey(name: "fullname") String fullname,
+      @JsonKey(name: "details") List<BoughtItemDataModel> details});
 }
 
 /// @nodoc
@@ -199,23 +199,23 @@ abstract class _$TransPostDataModelCopyWith<$Res>
       __$TransPostDataModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'trans_no') String transNo,
-      @JsonKey(name: 'trans_type') String transType,
-      @JsonKey(name: 'location') String location,
-      @JsonKey(name: 'trans_dt') String transDt,
-      @JsonKey(name: 'customer') String customer,
-      @JsonKey(name: 'create_by') String createBy,
-      @JsonKey(name: 'remark') String remark,
-      @JsonKey(name: 'pmttype') String pmttype,
-      @JsonKey(name: 'paymentchannel') String paymentchannel,
-      @JsonKey(name: 'total_discount') String pmtterm,
-      @JsonKey(name: 'pmtterm') int bankId,
-      @JsonKey(name: 'bankId') String totalDiscount,
-      @JsonKey(name: 'parent_id') String parentId,
-      @JsonKey(name: 'is_reseller') bool isReseller,
-      @JsonKey(name: 'email') String email,
-      @JsonKey(name: 'fullname') String fullname,
-      @JsonKey(name: 'details') List<BoughtItemDataModel> details});
+      {@JsonKey(name: "trans_no") String transNo,
+      @JsonKey(name: "trans_type") String transType,
+      @JsonKey(name: "location") String location,
+      @JsonKey(name: "trans_dt") String transDt,
+      @JsonKey(name: "customer") String customer,
+      @JsonKey(name: "create_by") String createBy,
+      @JsonKey(name: "remark") String remark,
+      @JsonKey(name: "pmttype") String pmttype,
+      @JsonKey(name: "paymentchannel") String paymentchannel,
+      @JsonKey(name: "total_discount") String pmtterm,
+      @JsonKey(name: "pmtterm") int bankId,
+      @JsonKey(name: "bankId") String totalDiscount,
+      @JsonKey(name: "parent_id") String parentId,
+      @JsonKey(name: "is_reseller") bool isReseller,
+      @JsonKey(name: "email") String email,
+      @JsonKey(name: "fullname") String fullname,
+      @JsonKey(name: "details") List<BoughtItemDataModel> details});
 }
 
 /// @nodoc
@@ -283,77 +283,77 @@ class __$TransPostDataModelCopyWithImpl<$Res>
 /// @nodoc
 class _$_TransPostDataModel implements _TransPostDataModel {
   _$_TransPostDataModel(
-      {@JsonKey(name: 'trans_no') this.transNo,
-      @JsonKey(name: 'trans_type') this.transType,
-      @JsonKey(name: 'location') this.location,
-      @JsonKey(name: 'trans_dt') this.transDt,
-      @JsonKey(name: 'customer') this.customer,
-      @JsonKey(name: 'create_by') this.createBy,
-      @JsonKey(name: 'remark') this.remark,
-      @JsonKey(name: 'pmttype') this.pmttype,
-      @JsonKey(name: 'paymentchannel') this.paymentchannel,
-      @JsonKey(name: 'total_discount') this.pmtterm,
-      @JsonKey(name: 'pmtterm') this.bankId,
-      @JsonKey(name: 'bankId') this.totalDiscount,
-      @JsonKey(name: 'parent_id') this.parentId,
-      @JsonKey(name: 'is_reseller') this.isReseller,
-      @JsonKey(name: 'email') this.email,
-      @JsonKey(name: 'fullname') this.fullname,
-      @JsonKey(name: 'details') this.details});
+      {@JsonKey(name: "trans_no") this.transNo,
+      @JsonKey(name: "trans_type") this.transType,
+      @JsonKey(name: "location") this.location,
+      @JsonKey(name: "trans_dt") this.transDt,
+      @JsonKey(name: "customer") this.customer,
+      @JsonKey(name: "create_by") this.createBy,
+      @JsonKey(name: "remark") this.remark,
+      @JsonKey(name: "pmttype") this.pmttype,
+      @JsonKey(name: "paymentchannel") this.paymentchannel,
+      @JsonKey(name: "total_discount") this.pmtterm,
+      @JsonKey(name: "pmtterm") this.bankId,
+      @JsonKey(name: "bankId") this.totalDiscount,
+      @JsonKey(name: "parent_id") this.parentId,
+      @JsonKey(name: "is_reseller") this.isReseller,
+      @JsonKey(name: "email") this.email,
+      @JsonKey(name: "fullname") this.fullname,
+      @JsonKey(name: "details") this.details});
 
   factory _$_TransPostDataModel.fromJson(Map<String, dynamic> json) =>
       _$_$_TransPostDataModelFromJson(json);
 
   @override
-  @JsonKey(name: 'trans_no')
+  @JsonKey(name: "trans_no")
   final String transNo;
   @override
-  @JsonKey(name: 'trans_type')
+  @JsonKey(name: "trans_type")
   final String transType;
   @override
-  @JsonKey(name: 'location')
+  @JsonKey(name: "location")
   final String location;
   @override
-  @JsonKey(name: 'trans_dt')
+  @JsonKey(name: "trans_dt")
   final String transDt;
   @override
-  @JsonKey(name: 'customer')
+  @JsonKey(name: "customer")
   final String customer;
   @override
-  @JsonKey(name: 'create_by')
+  @JsonKey(name: "create_by")
   final String createBy;
   @override
-  @JsonKey(name: 'remark')
+  @JsonKey(name: "remark")
   final String remark;
   @override
-  @JsonKey(name: 'pmttype')
+  @JsonKey(name: "pmttype")
   final String pmttype;
   @override
-  @JsonKey(name: 'paymentchannel')
+  @JsonKey(name: "paymentchannel")
   final String paymentchannel;
   @override
-  @JsonKey(name: 'total_discount')
+  @JsonKey(name: "total_discount")
   final String pmtterm;
   @override
-  @JsonKey(name: 'pmtterm')
+  @JsonKey(name: "pmtterm")
   final int bankId;
   @override
-  @JsonKey(name: 'bankId')
+  @JsonKey(name: "bankId")
   final String totalDiscount;
   @override
-  @JsonKey(name: 'parent_id')
+  @JsonKey(name: "parent_id")
   final String parentId;
   @override
-  @JsonKey(name: 'is_reseller')
+  @JsonKey(name: "is_reseller")
   final bool isReseller;
   @override
-  @JsonKey(name: 'email')
+  @JsonKey(name: "email")
   final String email;
   @override
-  @JsonKey(name: 'fullname')
+  @JsonKey(name: "fullname")
   final String fullname;
   @override
-  @JsonKey(name: 'details')
+  @JsonKey(name: "details")
   final List<BoughtItemDataModel> details;
 
   @override
@@ -448,78 +448,78 @@ class _$_TransPostDataModel implements _TransPostDataModel {
 
 abstract class _TransPostDataModel implements TransPostDataModel {
   factory _TransPostDataModel(
-          {@JsonKey(name: 'trans_no') String transNo,
-          @JsonKey(name: 'trans_type') String transType,
-          @JsonKey(name: 'location') String location,
-          @JsonKey(name: 'trans_dt') String transDt,
-          @JsonKey(name: 'customer') String customer,
-          @JsonKey(name: 'create_by') String createBy,
-          @JsonKey(name: 'remark') String remark,
-          @JsonKey(name: 'pmttype') String pmttype,
-          @JsonKey(name: 'paymentchannel') String paymentchannel,
-          @JsonKey(name: 'total_discount') String pmtterm,
-          @JsonKey(name: 'pmtterm') int bankId,
-          @JsonKey(name: 'bankId') String totalDiscount,
-          @JsonKey(name: 'parent_id') String parentId,
-          @JsonKey(name: 'is_reseller') bool isReseller,
-          @JsonKey(name: 'email') String email,
-          @JsonKey(name: 'fullname') String fullname,
-          @JsonKey(name: 'details') List<BoughtItemDataModel> details}) =
+          {@JsonKey(name: "trans_no") String transNo,
+          @JsonKey(name: "trans_type") String transType,
+          @JsonKey(name: "location") String location,
+          @JsonKey(name: "trans_dt") String transDt,
+          @JsonKey(name: "customer") String customer,
+          @JsonKey(name: "create_by") String createBy,
+          @JsonKey(name: "remark") String remark,
+          @JsonKey(name: "pmttype") String pmttype,
+          @JsonKey(name: "paymentchannel") String paymentchannel,
+          @JsonKey(name: "total_discount") String pmtterm,
+          @JsonKey(name: "pmtterm") int bankId,
+          @JsonKey(name: "bankId") String totalDiscount,
+          @JsonKey(name: "parent_id") String parentId,
+          @JsonKey(name: "is_reseller") bool isReseller,
+          @JsonKey(name: "email") String email,
+          @JsonKey(name: "fullname") String fullname,
+          @JsonKey(name: "details") List<BoughtItemDataModel> details}) =
       _$_TransPostDataModel;
 
   factory _TransPostDataModel.fromJson(Map<String, dynamic> json) =
       _$_TransPostDataModel.fromJson;
 
   @override
-  @JsonKey(name: 'trans_no')
+  @JsonKey(name: "trans_no")
   String get transNo;
   @override
-  @JsonKey(name: 'trans_type')
+  @JsonKey(name: "trans_type")
   String get transType;
   @override
-  @JsonKey(name: 'location')
+  @JsonKey(name: "location")
   String get location;
   @override
-  @JsonKey(name: 'trans_dt')
+  @JsonKey(name: "trans_dt")
   String get transDt;
   @override
-  @JsonKey(name: 'customer')
+  @JsonKey(name: "customer")
   String get customer;
   @override
-  @JsonKey(name: 'create_by')
+  @JsonKey(name: "create_by")
   String get createBy;
   @override
-  @JsonKey(name: 'remark')
+  @JsonKey(name: "remark")
   String get remark;
   @override
-  @JsonKey(name: 'pmttype')
+  @JsonKey(name: "pmttype")
   String get pmttype;
   @override
-  @JsonKey(name: 'paymentchannel')
+  @JsonKey(name: "paymentchannel")
   String get paymentchannel;
   @override
-  @JsonKey(name: 'total_discount')
+  @JsonKey(name: "total_discount")
   String get pmtterm;
   @override
-  @JsonKey(name: 'pmtterm')
+  @JsonKey(name: "pmtterm")
   int get bankId;
   @override
-  @JsonKey(name: 'bankId')
+  @JsonKey(name: "bankId")
   String get totalDiscount;
   @override
-  @JsonKey(name: 'parent_id')
+  @JsonKey(name: "parent_id")
   String get parentId;
   @override
-  @JsonKey(name: 'is_reseller')
+  @JsonKey(name: "is_reseller")
   bool get isReseller;
   @override
-  @JsonKey(name: 'email')
+  @JsonKey(name: "email")
   String get email;
   @override
-  @JsonKey(name: 'fullname')
+  @JsonKey(name: "fullname")
   String get fullname;
   @override
-  @JsonKey(name: 'details')
+  @JsonKey(name: "details")
   List<BoughtItemDataModel> get details;
   @override
   @JsonKey(ignore: true)

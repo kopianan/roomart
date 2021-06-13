@@ -7,6 +7,7 @@ import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/application/core/cart_controller.dart';
 import 'package:roomart/domain/item/cart_data_collection_model.dart';
 import 'package:roomart/domain/transaction/trans_item/bought_item_data_model.dart';
+import 'package:roomart/presentation/core/widget_collection.dart';
 import 'package:roomart/utils/constants.dart';
 import 'package:roomart/utils/formater.dart';
 
@@ -47,15 +48,11 @@ class _CartListItemState extends State<CartListItem> {
             Expanded(
               flex: 2,
               child: Container(
-                width: 100,
-                height: 100,
-                child: FadeInImage(
-                  fit: BoxFit.cover,
-                  image: NetworkImage(Constants().imageBaseUrl +
-                      cart.getCartItemData[widget.index].item.pic),
-                  placeholder: AssetImage('assets/broken_image.png'),
-                ),
-              ),
+                  width: 100,
+                  height: 100,
+                  child: CustomImageProvider(
+                      url: Constants().imageBaseUrl +
+                          cart.getCartItemData[widget.index].item.pic)),
             ),
             Expanded(
               flex: 3,

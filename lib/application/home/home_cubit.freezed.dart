@@ -36,6 +36,13 @@ class _$HomeStateTearOff {
       data,
     );
   }
+
+// ignore: unused_element
+  _OnGetNewsList onGetNewsList(List<UpdateNewsDataModel> data) {
+    return _OnGetNewsList(
+      data,
+    );
+  }
 }
 
 /// @nodoc
@@ -50,6 +57,7 @@ mixin _$HomeState {
     @required TResult loading(),
     @required TResult error(String e),
     @required TResult onGetBanner(Either<String, List<BannerDataModel>> data),
+    @required TResult onGetNewsList(List<UpdateNewsDataModel> data),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
@@ -57,6 +65,7 @@ mixin _$HomeState {
     TResult loading(),
     TResult error(String e),
     TResult onGetBanner(Either<String, List<BannerDataModel>> data),
+    TResult onGetNewsList(List<UpdateNewsDataModel> data),
     @required TResult orElse(),
   });
   @optionalTypeArgs
@@ -65,6 +74,7 @@ mixin _$HomeState {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult onGetBanner(_OnGetBanner value),
+    @required TResult onGetNewsList(_OnGetNewsList value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
@@ -72,6 +82,7 @@ mixin _$HomeState {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult onGetBanner(_OnGetBanner value),
+    TResult onGetNewsList(_OnGetNewsList value),
     @required TResult orElse(),
   });
 }
@@ -131,11 +142,13 @@ class _$_Initial implements _Initial {
     @required TResult loading(),
     @required TResult error(String e),
     @required TResult onGetBanner(Either<String, List<BannerDataModel>> data),
+    @required TResult onGetNewsList(List<UpdateNewsDataModel> data),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetBanner != null);
+    assert(onGetNewsList != null);
     return initial();
   }
 
@@ -146,6 +159,7 @@ class _$_Initial implements _Initial {
     TResult loading(),
     TResult error(String e),
     TResult onGetBanner(Either<String, List<BannerDataModel>> data),
+    TResult onGetNewsList(List<UpdateNewsDataModel> data),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -162,11 +176,13 @@ class _$_Initial implements _Initial {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult onGetBanner(_OnGetBanner value),
+    @required TResult onGetNewsList(_OnGetNewsList value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetBanner != null);
+    assert(onGetNewsList != null);
     return initial(this);
   }
 
@@ -177,6 +193,7 @@ class _$_Initial implements _Initial {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult onGetBanner(_OnGetBanner value),
+    TResult onGetNewsList(_OnGetNewsList value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -231,11 +248,13 @@ class _$_Loading implements _Loading {
     @required TResult loading(),
     @required TResult error(String e),
     @required TResult onGetBanner(Either<String, List<BannerDataModel>> data),
+    @required TResult onGetNewsList(List<UpdateNewsDataModel> data),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetBanner != null);
+    assert(onGetNewsList != null);
     return loading();
   }
 
@@ -246,6 +265,7 @@ class _$_Loading implements _Loading {
     TResult loading(),
     TResult error(String e),
     TResult onGetBanner(Either<String, List<BannerDataModel>> data),
+    TResult onGetNewsList(List<UpdateNewsDataModel> data),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -262,11 +282,13 @@ class _$_Loading implements _Loading {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult onGetBanner(_OnGetBanner value),
+    @required TResult onGetNewsList(_OnGetNewsList value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetBanner != null);
+    assert(onGetNewsList != null);
     return loading(this);
   }
 
@@ -277,6 +299,7 @@ class _$_Loading implements _Loading {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult onGetBanner(_OnGetBanner value),
+    TResult onGetNewsList(_OnGetNewsList value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -353,11 +376,13 @@ class _$_Error implements _Error {
     @required TResult loading(),
     @required TResult error(String e),
     @required TResult onGetBanner(Either<String, List<BannerDataModel>> data),
+    @required TResult onGetNewsList(List<UpdateNewsDataModel> data),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetBanner != null);
+    assert(onGetNewsList != null);
     return error(e);
   }
 
@@ -368,6 +393,7 @@ class _$_Error implements _Error {
     TResult loading(),
     TResult error(String e),
     TResult onGetBanner(Either<String, List<BannerDataModel>> data),
+    TResult onGetNewsList(List<UpdateNewsDataModel> data),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -384,11 +410,13 @@ class _$_Error implements _Error {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult onGetBanner(_OnGetBanner value),
+    @required TResult onGetNewsList(_OnGetNewsList value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetBanner != null);
+    assert(onGetNewsList != null);
     return error(this);
   }
 
@@ -399,6 +427,7 @@ class _$_Error implements _Error {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult onGetBanner(_OnGetBanner value),
+    TResult onGetNewsList(_OnGetNewsList value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -483,11 +512,13 @@ class _$_OnGetBanner implements _OnGetBanner {
     @required TResult loading(),
     @required TResult error(String e),
     @required TResult onGetBanner(Either<String, List<BannerDataModel>> data),
+    @required TResult onGetNewsList(List<UpdateNewsDataModel> data),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetBanner != null);
+    assert(onGetNewsList != null);
     return onGetBanner(data);
   }
 
@@ -498,6 +529,7 @@ class _$_OnGetBanner implements _OnGetBanner {
     TResult loading(),
     TResult error(String e),
     TResult onGetBanner(Either<String, List<BannerDataModel>> data),
+    TResult onGetNewsList(List<UpdateNewsDataModel> data),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -514,11 +546,13 @@ class _$_OnGetBanner implements _OnGetBanner {
     @required TResult loading(_Loading value),
     @required TResult error(_Error value),
     @required TResult onGetBanner(_OnGetBanner value),
+    @required TResult onGetNewsList(_OnGetNewsList value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(error != null);
     assert(onGetBanner != null);
+    assert(onGetNewsList != null);
     return onGetBanner(this);
   }
 
@@ -529,6 +563,7 @@ class _$_OnGetBanner implements _OnGetBanner {
     TResult loading(_Loading value),
     TResult error(_Error value),
     TResult onGetBanner(_OnGetBanner value),
+    TResult onGetNewsList(_OnGetNewsList value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -546,4 +581,139 @@ abstract class _OnGetBanner implements HomeState {
   Either<String, List<BannerDataModel>> get data;
   @JsonKey(ignore: true)
   _$OnGetBannerCopyWith<_OnGetBanner> get copyWith;
+}
+
+/// @nodoc
+abstract class _$OnGetNewsListCopyWith<$Res> {
+  factory _$OnGetNewsListCopyWith(
+          _OnGetNewsList value, $Res Function(_OnGetNewsList) then) =
+      __$OnGetNewsListCopyWithImpl<$Res>;
+  $Res call({List<UpdateNewsDataModel> data});
+}
+
+/// @nodoc
+class __$OnGetNewsListCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
+    implements _$OnGetNewsListCopyWith<$Res> {
+  __$OnGetNewsListCopyWithImpl(
+      _OnGetNewsList _value, $Res Function(_OnGetNewsList) _then)
+      : super(_value, (v) => _then(v as _OnGetNewsList));
+
+  @override
+  _OnGetNewsList get _value => super._value as _OnGetNewsList;
+
+  @override
+  $Res call({
+    Object data = freezed,
+  }) {
+    return _then(_OnGetNewsList(
+      data == freezed ? _value.data : data as List<UpdateNewsDataModel>,
+    ));
+  }
+}
+
+/// @nodoc
+class _$_OnGetNewsList implements _OnGetNewsList {
+  const _$_OnGetNewsList(this.data) : assert(data != null);
+
+  @override
+  final List<UpdateNewsDataModel> data;
+
+  @override
+  String toString() {
+    return 'HomeState.onGetNewsList(data: $data)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _OnGetNewsList &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(data);
+
+  @JsonKey(ignore: true)
+  @override
+  _$OnGetNewsListCopyWith<_OnGetNewsList> get copyWith =>
+      __$OnGetNewsListCopyWithImpl<_OnGetNewsList>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loading(),
+    @required TResult error(String e),
+    @required TResult onGetBanner(Either<String, List<BannerDataModel>> data),
+    @required TResult onGetNewsList(List<UpdateNewsDataModel> data),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(onGetBanner != null);
+    assert(onGetNewsList != null);
+    return onGetNewsList(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loading(),
+    TResult error(String e),
+    TResult onGetBanner(Either<String, List<BannerDataModel>> data),
+    TResult onGetNewsList(List<UpdateNewsDataModel> data),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (onGetNewsList != null) {
+      return onGetNewsList(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loading(_Loading value),
+    @required TResult error(_Error value),
+    @required TResult onGetBanner(_OnGetBanner value),
+    @required TResult onGetNewsList(_OnGetNewsList value),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(onGetBanner != null);
+    assert(onGetNewsList != null);
+    return onGetNewsList(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loading(_Loading value),
+    TResult error(_Error value),
+    TResult onGetBanner(_OnGetBanner value),
+    TResult onGetNewsList(_OnGetNewsList value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (onGetNewsList != null) {
+      return onGetNewsList(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnGetNewsList implements HomeState {
+  const factory _OnGetNewsList(List<UpdateNewsDataModel> data) =
+      _$_OnGetNewsList;
+
+  List<UpdateNewsDataModel> get data;
+  @JsonKey(ignore: true)
+  _$OnGetNewsListCopyWith<_OnGetNewsList> get copyWith;
 }

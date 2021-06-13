@@ -5,6 +5,7 @@ import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/application/core/cart_controller.dart';
 import 'package:roomart/domain/item/data_item_model.dart';
 import 'package:roomart/presentation/cart/cart_page.dart';
+import 'package:roomart/presentation/core/widget_collection.dart';
 import 'package:roomart/presentation/widgets/button_collection.dart';
 import 'package:roomart/utils/constants.dart';
 import 'package:roomart/utils/formater.dart';
@@ -67,15 +68,9 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
                   children: [
                     Container(
                       height: 320,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(30),
-                            bottomRight: Radius.circular(30),
-                          ),
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  "${Constants().imageBaseUrl}${data.pic}"),
-                              fit: BoxFit.cover)),
+                      child: CustomImageProvider(
+                        url: "${Constants().imageBaseUrl}${data.pic}",
+                      ),
                     ),
                     Container(
                       margin:
@@ -210,6 +205,7 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
                       color: button2,
                       text: "Buy Now",
                       onPressed: () {
+                        controller.addForTheFirstTime(data);
                         Get.toNamed(CartPage.TAG);
                       },
                     ),
@@ -226,7 +222,6 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
                           duration: Duration(seconds: 2),
                           message: "Ditambahkan ke keranjang",
                           snackPosition: SnackPosition.TOP,
-                          
                           icon: Icon(
                             Icons.check,
                             color: Colors.green,
