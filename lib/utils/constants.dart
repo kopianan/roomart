@@ -6,20 +6,20 @@ class Constants {
   static const icon_launcher = "assets/logo.png";
   static const logo = "assets/logo.png";
   static const promotion_image = "assets/promotion.png";
-  static const title_appbar = "ROOMART";
+  static const title_appbar = "Roomart Bogor";
   String resellerParentID = null; //Disesuaikan dengan kode reseller
 
   String storageBox = 'roomart_storage_key';
 
   //new base url
   String baseUrlProduction =
-      "http://cloud.erp.web.id:8080/padasuka/weblayer/template/";
+      "http://vipcloud.erp.web.id:8080/tokoku-android/weblayer/template/";
   String baseUrlProductionBackup =
-      "http://cloud.erp.web.id:8080/roomart/weblayer/template/";
+      "http://vipcloud.erp.web.id:8080/roomart/weblayer/template/";
   String imageBaseUrl = "http://cloud.erp.web.id:8080";
-  static const locCode = "GODM";
-  static const transactionCode = "RA";
-  static const locId = "DM149993946251846586342";
+  static const locCode = "RBOG";
+  static const transactionCode = "DC";
+  static const locId = "DM162244415820602683312";
 
   String get getUltimoBaseUrl => this._ultimoBaseUrl;
   String get getBaseUrlProduction => this.baseUrlProduction;
