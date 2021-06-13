@@ -35,7 +35,7 @@ class _AppWidgetState extends State<AppWidget> {
           inputDecorationTheme: InputDecorationTheme(
               fillColor: Colors.white,
               filled: true,
-              labelStyle: TextStyle(color: Colors.white),
+              labelStyle: TextStyle(color: Colors.black),
               floatingLabelBehavior: FloatingLabelBehavior.always,
               contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 3),
               focusedBorder: OutlineInputBorder(

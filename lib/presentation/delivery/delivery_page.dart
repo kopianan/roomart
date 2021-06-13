@@ -118,6 +118,13 @@ class _DeliveryPageState extends State<DeliveryPage> {
                                       setState(() {
                                         selectedCost = val;
                                       });
+
+                                      Get.back();
+                                      Get.showSnackbar(GetBar(
+                                        message: "Pengiriman dipilih",
+                                        duration: Duration(seconds: 3),
+                                        snackPosition: SnackPosition.TOP,
+                                      ));
                                     },
                                     subtitle: Text(
                                       e.service +

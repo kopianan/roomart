@@ -12,6 +12,8 @@ import 'package:roomart/application/transaction/transaction_cubit.dart';
 import 'package:roomart/domain/core/payment_method_enum.dart';
 import 'package:roomart/domain/item/cart_data_collection_model.dart';
 import 'package:roomart/domain/item/data_item_model.dart';
+import 'package:roomart/domain/models/discount/discount_code.dart';
+import 'package:roomart/domain/models/discount/discount_data_model.dart';
 import 'package:roomart/domain/payment_method/payment_method_data_model.dart';
 import 'package:roomart/domain/raja_ongkir/delivery_cost/costs.dart';
 import 'package:roomart/domain/transaction/trans_item/bought_item_data_model.dart';
@@ -312,15 +314,48 @@ class _PaymentPageState extends State<PaymentPage> {
                             "Promo dan discount",
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
-                          TextButton(
-                              onPressed: () {
-                                Get.toNamed(DiscountPage.TAG);
-                              },
-                              child: (trans.getSelectedDiscount.eventDiscount ==
-                                      null)
-                                  ? Text("Tambah Promo")
-                                  : Text(
-                                      "${trans.getSelectedDiscount.customerName} ${trans.getSelectedDiscount.eventDiscount}")),
+                          (trans.getSelectedDiscount.eventDiscount == null &&
+                                  trans.getSelectedDiscountCode.code == null)
+                              ? TextButton(
+                                  onPressed: () {
+                                    Get.toNamed(DiscountPage.TAG);
+                                  },
+                                  child: Text("Tambah Promo"))
+                              : TextButton(
+                                  onPressed: () {
+                                    //remove discount
+                                    Get.dialog(AlertDialog(
+                                      title: Text("Hapus Discount "),
+                                      content:
+                                          Text("Hapus discount saat ini ? "),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () {
+                                            trans.setSelectedDiscount(
+                                                DiscountDataModel());
+                                            trans.setSelectedDiscountCode(
+                                                DiscountCode(
+                                                    totalDiscount: "0"));
+                                            Get.back();
+                                          },
+                                          child: Text("Ya"),
+                                        ),
+                                        TextButton(
+                                          onPressed: () {
+                                            Get.back();
+                                          },
+                                          child: Text("Batal"),
+                                        ),
+                                      ],
+                                    ));
+                                  },
+                                  child: (trans.getSelectedDiscount
+                                              .eventDiscount ==
+                                          null)
+                                      ? Text(
+                                          "${trans.getSelectedDiscountCode.code}")
+                                      : Text(
+                                          "${trans.getSelectedDiscount.customerCode}"))
                         ],
                       ),
                     ),
@@ -333,7 +368,25 @@ class _PaymentPageState extends State<PaymentPage> {
                       text: "Bayar",
                       onPressed: () {
                         if (isAllDataComplete()) {
-                          makePayment();
+                          Get.dialog(AlertDialog(
+                            title: Text("Bayar"),
+                            content: Text(
+                                "Apakah anda yakin akan melanjutkan pembayaran ? "),
+                            actions: [
+                              TextButton(
+                                  onPressed: () {
+                                    Get.back();
+
+                                    makePayment();
+                                  },
+                                  child: Text("Ya")),
+                              TextButton(
+                                  onPressed: () {
+                                    Get.back();
+                                  },
+                                  child: Text("Tidak")),
+                            ],
+                          ));
                         }
                       },
                     ),
@@ -372,6 +425,7 @@ class _PaymentPageState extends State<PaymentPage> {
   void addDiscountToItemList() {
     //set discount price here
 
+    List<CartDataCollectionModel> newBought = <CartDataCollectionModel>[];
     paidItem.addAll(cartController.getCartItemData);
 
     var data = transactionController.calculateDiscount(cartController
@@ -381,7 +435,7 @@ class _PaymentPageState extends State<PaymentPage> {
       var _dsicount = BoughtItemDataModel(
           itemId: "DM157597749267900354896",
           itemCode: "990992",
-          itemName: "ONGKIR",
+          itemName: "PROMO APPS",
           price: "-" + data,
           qty: "1",
           resellerPrice: double.parse("-" + data),
@@ -398,7 +452,7 @@ class _PaymentPageState extends State<PaymentPage> {
       var _dsicount = BoughtItemDataModel(
           itemId: "DM157597749267900354896",
           itemCode: "990992",
-          itemName: "ONGKIR",
+          itemName: "PROMO APPS",
           price:
               "-" + transactionController.getSelectedDiscountCode.totalDiscount,
           resellerPrice: double.parse(

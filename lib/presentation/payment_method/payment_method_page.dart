@@ -15,8 +15,10 @@ import 'package:roomart/domain/transaction/trans_item/trans_post_data_model.dart
 import 'package:roomart/domain/transaction/trans_item/trans_request.dart';
 import 'package:roomart/domain/transaction/transaction_data_model.dart';
 import 'package:roomart/domain/user/user_data_model.dart';
+import 'package:roomart/presentation/widgets/button_collection.dart';
 import 'package:roomart/utils/constants.dart';
 import 'package:roomart/utils/formater.dart';
+import 'package:roomart/utils/my_color.dart';
 
 import '../../injection.dart';
 
@@ -55,26 +57,12 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
       body: GetBuilder<AuthController>(
         builder: (auth) => MultiBlocProvider(
             providers: [
-              BlocProvider<AuthCubit>(
-                create: (BuildContext context) => authCubit
-                  ..getArBalance(userController.getUserDataModel.userId),
-              ),
               BlocProvider<PaymentCubit>(
                   create: (BuildContext context) =>
                       paymentCubit..getPaymentMethodList()),
             ],
             child: MultiBlocListener(
                 listeners: [
-                  BlocListener<AuthCubit, AuthState>(
-                    listener: (context, state) {
-                      print(state);
-                      state.maybeMap(
-                          orElse: () {},
-                          onGetArBalance: (e) {
-                            auth.setBalance(e.balancd);
-                          });
-                    },
-                  ),
                   BlocListener<PaymentCubit, PaymentState>(
                     listener: (context, state) {
                       state.maybeMap(
@@ -88,41 +76,70 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
                 ],
                 child: Container(
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Card(
-                        elevation: 5,
-                        child: ListTile(
-                          title: Text(
-                            "Poin saya",
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          BlocProvider(
+                            create: (context) => authCubit
+                              ..getArBalance(
+                                  userController.getUserDataModel.userId),
+                            child: BlocConsumer<AuthCubit, AuthState>(
+                              listener: (context, state) {
+                                state.maybeMap(
+                                    orElse: () {},
+                                    onGetArBalance: (e) {
+                                      auth.setBalance(e.balancd);
+                                    });
+                              },
+                              builder: (context, state) {
+                                return Card(
+                                  elevation: 5,
+                                  child: ListTile(
+                                    title: Text(
+                                      "Poin saya",
+                                      style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    trailing: BlocBuilder<AuthCubit, AuthState>(
+                                        builder: (context, state) {
+                                      return state.maybeMap(orElse: () {
+                                        return CircularProgressIndicator();
+                                      }, onGetArBalance: (e) {
+                                        return Text(
+                                          Formatter()
+                                              .formatStringCurrency(e.balancd),
+                                          style: TextStyle(
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.bold),
+                                        );
+                                      });
+                                    }),
+                                  ),
+                                );
+                              },
+                            ),
                           ),
-                          trailing: Text(
-                            Formatter().formatStringCurrency(auth.getBalance),
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold),
+                          Divider(
+                            height: 10,
                           ),
-                        ),
-                      ),
-                      Divider(
-                        height: 10,
-                      ),
-                      BlocBuilder<PaymentCubit, PaymentState>(
-                        builder: (context, state) {
-                          return state.maybeMap(
-                              orElse: () => SizedBox(),
-                              loading: (e) =>
-                                  Center(child: CircularProgressIndicator()),
-                              onGetPaymentMethod: (e) {
-                                var _method = paymentController
-                                    .getFilteredPaymentMethodByUserType(
-                                        userDataModel.typeIds);
-                                return ListView(
-                                  shrinkWrap: true,
-                                  children: _method
-                                      .map((e) =>
-                                          RadioListTile<PaymentMethodDataModel>(
+                          BlocBuilder<PaymentCubit, PaymentState>(
+                            builder: (context, state) {
+                              return state.maybeMap(
+                                  orElse: () => SizedBox(),
+                                  loading: (e) => Center(
+                                      child: CircularProgressIndicator()),
+                                  onGetPaymentMethod: (e) {
+                                    var _method = paymentController
+                                        .getFilteredPaymentMethodByUserType(
+                                            userDataModel.typeIds);
+                                    return ListView(
+                                      shrinkWrap: true,
+                                      children: _method
+                                          .map((e) => RadioListTile<
+                                                  PaymentMethodDataModel>(
                                               value: e,
                                               groupValue: selectedPayment,
                                               title: Text(e.name),
@@ -131,10 +148,22 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
                                                 _onChanged(val, auth);
                                                 //
                                               }))
-                                      .toList(),
-                                );
-                              });
-                        },
+                                          .toList(),
+                                    );
+                                  });
+                            },
+                          )
+                        ],
+                      ),
+                      Container(
+                        margin: EdgeInsets.all(10),
+                        width: double.infinity,
+                        child: DefaultButton1(
+                            color: button1,
+                            text: "Kembali ke pembayaran",
+                            onPressed: () {
+                              Get.back();
+                            }),
                       )
                     ],
                   ),

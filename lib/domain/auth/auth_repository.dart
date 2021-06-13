@@ -1,5 +1,5 @@
 import 'dart:convert';
-
+import 'dart:math';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
@@ -128,9 +128,9 @@ class AuthRepository extends IAuthFacade {
     try {
       response = await dio.get(
           "${Constants().baseUrlProduction}api,AR.vm?cmd=2&custid=$userId");
-      var _balance = json.decode(response.data).first['ar_balance'];
+      var _balance = json.decode(response.data).first['ar_balance'].toString();
 
-      return right(_balance);
+      return right(double.parse(_balance).abs().toString());
     } on DioError catch (e) {
       return left(json.decode(e.response.data)['message'].toString());
     } catch (e) {

@@ -50,23 +50,23 @@ class TransactionController extends GetxController {
 //Discount
   List<DiscountDataModel> listDiscount = <DiscountDataModel>[];
 
-  List<DiscountDataModel> getDiscountList(String userTypeId) {
-    return this.listDiscount;
-  }
   // List<DiscountDataModel> getDiscountList(String userTypeId) {
-  //   DateTime dateTime = DateTime.now();
-  //   List<DiscountDataModel> list = [];
-  //   listDiscount.forEach((element) {
-  //     if (element.customerTypeId == userTypeId) {
-  //       final startTime = DateTime.parse(element.eventEndDate);
-  //       final endTime = DateTime.parse(element.eventBeginDate);
-  //       if (dateTime.isAfter(startTime) && dateTime.isBefore(endTime)) {
-  //         list.add(element);
-  //       }
-  //     } else {}
-  //   });
-  //   return list;
+  //   return this.listDiscount;
   // }
+  List<DiscountDataModel> getDiscountList(String userTypeId) {
+    DateTime dateTime = DateTime.now();
+    List<DiscountDataModel> list = [];
+    listDiscount.forEach((element) {
+      if (element.customerTypeId == userTypeId) {
+        final startTime = DateTime.parse(element.eventEndDate);
+        final endTime = DateTime.parse(element.eventBeginDate);
+        if (dateTime.isAfter(startTime) && dateTime.isBefore(endTime)) {
+          list.add(element);
+        }
+      } else {}
+    });
+    return list;
+  }
 
   void setSelectedDiscount(DiscountDataModel discount) {
     this.selectedDiscount.value = discount;
