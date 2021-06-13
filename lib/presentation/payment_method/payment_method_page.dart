@@ -57,26 +57,12 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
       body: GetBuilder<AuthController>(
         builder: (auth) => MultiBlocProvider(
             providers: [
-              BlocProvider<AuthCubit>(
-                create: (BuildContext context) => authCubit
-                  ..getArBalance(userController.getUserDataModel.userId),
-              ),
               BlocProvider<PaymentCubit>(
                   create: (BuildContext context) =>
                       paymentCubit..getPaymentMethodList()),
             ],
             child: MultiBlocListener(
                 listeners: [
-                  BlocListener<AuthCubit, AuthState>(
-                    listener: (context, state) {
-                      print(state);
-                      state.maybeMap(
-                          orElse: () {},
-                          onGetArBalance: (e) {
-                            auth.setBalance(e.balancd);
-                          });
-                    },
-                  ),
                   BlocListener<PaymentCubit, PaymentState>(
                     listener: (context, state) {
                       state.maybeMap(
@@ -95,29 +81,45 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Card(
-                            elevation: 5,
-                            child: ListTile(
-                              title: Text(
-                                "Poin saya",
-                                style: TextStyle(
-                                    fontSize: 18, fontWeight: FontWeight.bold),
-                              ),
-                              trailing: BlocBuilder<AuthCubit, AuthState>(
-                                  builder: (context, state) {
-                                return state.maybeMap(orElse: () {
-                                  return Center(
-                                    child: CircularProgressIndicator(),
-                                  );
-                                }, onGetArBalance: (e) {
-                                  return Text(
-                                    Formatter().formatStringCurrency(e.balancd),
-                                    style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold),
-                                  );
-                                });
-                              }),
+                          BlocProvider(
+                            create: (context) => authCubit
+                              ..getArBalance(
+                                  userController.getUserDataModel.userId),
+                            child: BlocConsumer<AuthCubit, AuthState>(
+                              listener: (context, state) {
+                                state.maybeMap(
+                                    orElse: () {},
+                                    onGetArBalance: (e) {
+                                      auth.setBalance(e.balancd);
+                                    });
+                              },
+                              builder: (context, state) {
+                                return Card(
+                                  elevation: 5,
+                                  child: ListTile(
+                                    title: Text(
+                                      "Poin saya",
+                                      style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    trailing: BlocBuilder<AuthCubit, AuthState>(
+                                        builder: (context, state) {
+                                      return state.maybeMap(orElse: () {
+                                        return CircularProgressIndicator();
+                                      }, onGetArBalance: (e) {
+                                        return Text(
+                                          Formatter()
+                                              .formatStringCurrency(e.balancd),
+                                          style: TextStyle(
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.bold),
+                                        );
+                                      });
+                                    }),
+                                  ),
+                                );
+                              },
                             ),
                           ),
                           Divider(
