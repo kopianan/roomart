@@ -80,3 +80,6 @@ flutter_icons:
   image_path_ios: "assets/logo.png"
   android: true # can specify file name here e.g. "ic_launcher"
   ios: true # can specify file name here e.g. "My-Launcher-Icon"
+    #flutter  pub  run rename --bundleId com.roomart.roomart_wonogori
+    #flutter  pub  run rename --appname "Roomart Wonogiri"  
+    # flutter pub run flutter_launcher_icons:main
