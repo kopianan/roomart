@@ -14,15 +14,16 @@ class Constants {
   //new base url
   String baseUrlProduction =
       "http://vipcloud.erp.web.id:8080/tokoku-android/weblayer/template/";
-      
+  String itemUrl =
+      "http://vipcloud.erp.web.id:8080/tokoku-android/weblayer/template/";
+
   String baseUrlProductionBackup =
       "http://vipcloud.erp.web.id:8080/roomart/weblayer/template/";
 
   String imageBaseUrl = "http://cloud.erp.web.id:8080";
 
-
   static const locCode = "RWOGI";
-  //dc if vip cloud 
+  //dc if vip cloud
   //Ra if normal
   static const transactionCode = "DC";
   static const locId = "DM162244412367102670786";
