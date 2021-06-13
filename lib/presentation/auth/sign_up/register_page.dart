@@ -63,7 +63,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 RegisterRequestModel user = RegisterRequestModel(
                     token: Constants().tokenUltimo,
                     password: _password.text,
-                    parentID: e.user.parentId,
+                    parentID: Constants().resellerParentID,
                     isReseller: "false",
                     fullname: e.user.fullName,
                     email: e.user.email,

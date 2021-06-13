@@ -7,4 +7,6 @@ abstract class HomeState with _$HomeState {
   const factory HomeState.error(String e) = _Error;
   const factory HomeState.onGetBanner(
       Either<String, List<BannerDataModel>> data) = _OnGetBanner;
+  const factory HomeState.onGetNewsList(List<UpdateNewsDataModel> data) =
+      _OnGetNewsList;
 }

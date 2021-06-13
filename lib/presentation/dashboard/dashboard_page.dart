@@ -11,6 +11,7 @@ import 'package:roomart/presentation/dashboard/widget/cart_icon.dart';
 import 'package:roomart/presentation/dashboard/widget/search_product_page.dart';
 import 'package:roomart/presentation/home/home_page.dart';
 import 'package:roomart/presentation/me/me_page.dart';
+import 'package:roomart/presentation/update/update_page.dart';
 import 'package:roomart/utils/constants.dart';
 import 'package:roomart/utils/my_color.dart';
 
@@ -95,7 +96,7 @@ class _DashboardPageState extends State<DashboardPage> {
           children: <Widget>[
             HomePage(),
             CategoryPage(),
-            
+            UpdatePage(),
             GetX<AuthController>(builder: (auth) {
               if (auth.getUserDataModel == UserDataModel()) {
                 return AuthPage();

@@ -4,6 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:roomart/domain/home/home_repository.dart';
 import 'package:roomart/domain/models/banner/banner_data_model.dart';
+import 'package:roomart/domain/update/update_news_data_model.dart';
 
 part 'home_state.dart';
 part 'home_cubit.freezed.dart';
@@ -18,6 +19,19 @@ class HomeCubit extends Cubit<HomeState> {
     try {
       final _result = await iHomeFacade.getBanner(customerId);
       emit(HomeState.onGetBanner(_result));
+    } catch (e) {
+      emit(HomeState.error(e.toString()));
+    }
+  }
+
+  void getNewsListData({String customerId: ""}) async {
+    emit(HomeState.loading());
+    try {
+      final _result = await iHomeFacade.getNewsList(customerId);
+      _result.fold(
+        (l) => emit(HomeState.error(l)),
+        (r) => emit(HomeState.onGetNewsList(r)),
+      );
     } catch (e) {
       emit(HomeState.error(e.toString()));
     }

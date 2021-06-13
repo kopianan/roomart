@@ -24,6 +24,7 @@ import 'package:roomart/presentation/payment/payment_status_page.dart';
 import 'package:roomart/presentation/payment_method/payment_method_page.dart';
 import 'package:roomart/presentation/splash_screen/splash_screen_page.dart';
 import 'package:roomart/presentation/auth/forgot_password_page.dart';
+import 'package:roomart/presentation/update/update_detail_page.dart';
 import '../presentation/auth/sign_up/register_page.dart';
 
 List<GetPage> pages = [
@@ -51,6 +52,7 @@ List<GetPage> pages = [
   GetPage(name: AddAddressPage.TAG, page: () => AddAddressPage()),
   GetPage(name: PaymentStatusPage.TAG, page: () => PaymentStatusPage()),
   GetPage(name: SearchProductPage.TAG, page: () => SearchProductPage()),
+  GetPage(name: UpdateDetailPage.TAG, page: () => UpdateDetailPage()),
   GetPage(name: PaymentProgressPage.TAG, page: () => PaymentProgressPage()),
   GetPage(name: PaymentMethodPage.TAG, page: () => PaymentMethodPage()),
   GetPage(name: ChangePasswordPage.TAG, page: () => ChangePasswordPage()),

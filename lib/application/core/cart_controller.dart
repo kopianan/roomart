@@ -37,7 +37,7 @@ class CartController extends GetxController {
         discount: "0",
         itemImage: data.pic,
         itemName: data.itemName,
-        resellerPrice: double.parse(data.newPrice),
+        resellerPrice: double.parse(data.itemPrice),
         tax: "NoPPN",
       );
       print(_converted);
@@ -67,7 +67,7 @@ class CartController extends GetxController {
       discount: "0",
       itemImage: data.pic,
       itemName: data.itemName,
-      resellerPrice: double.parse(data.newPrice),
+      resellerPrice: double.parse(data.itemPrice),
       tax: "NoPPN",
     );
 
