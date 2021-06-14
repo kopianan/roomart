@@ -7,7 +7,7 @@ class Constants {
   static const logo = "assets/logo.png";
   static const promotion_image = "assets/promotion.png";
   static const title_appbar = "Sally Store";
-  String resellerParentID = "DM162320705511800059883"; //Disesuaikan dengan kode reseller
+  String resellerParentID = "DM162355984300400041590"; //Disesuaikan dengan kode reseller
 
   String storageBox = 'roomart_storage_key';
 
@@ -16,6 +16,8 @@ class Constants {
       "http://cloud.erp.web.id:8080/padasuka/weblayer/template/";
   String baseUrlProductionBackup =
       "http://cloud.erp.web.id:8080/roomart/weblayer/template/";
+
+  String itemUrl = "http://cloud.erp.web.id:8080/roomart/weblayer/template/";
   String imageBaseUrl = "http://cloud.erp.web.id:8080";
   static const locCode = "GODM";
   static const transactionCode = "RA";
