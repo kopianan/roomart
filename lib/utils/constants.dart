@@ -14,6 +14,7 @@ class Constants {
       "http://vipcloud.erp.web.id:8080/tokoku-android/weblayer/template/";
   String baseUrlProductionBackup =
       "http://vipcloud.erp.web.id:8080/roomart/weblayer/template/";
+  String itemUrl = "http://vipcloud.erp.web.id:8080/tokoku-android/weblayer/template/";
   String imageBaseUrl = "http://cloud.erp.web.id:8080";
   static const locCode = "SER";
   static const locId = "DM147753742227307918394";
