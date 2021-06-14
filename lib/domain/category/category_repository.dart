@@ -30,14 +30,15 @@ class CategoryRepository extends ICategoryFacade {
       Pref().saveCategoryToLocal(responseJson);
       final data =
           responseJson.map((md) => new CategoryModel.fromJson(md)).toList();
-
-      List<CategoryModel> filteredData =
+      List<CategoryModel> filteredData;
+      filteredData =
           data.where((f) => f.parentId == "" && (f.count == "0")).toList();
 
-      filteredData
-          .removeWhere((data) => data.count == "0" && data.hasChild == "false");
       filteredData.removeWhere(
-          (data) => data.countTotal == "0" && data.hasChild == "true");
+          (data) => (data.count == "0") && (data.hasChild == "false"));
+      var newData = filteredData;
+      newData.removeWhere(
+          (data) => (data.countTotal == "0") && (data.hasChild == "true"));
 
       return right(filteredData);
     } on DioError catch (err) {
@@ -51,16 +52,21 @@ class CategoryRepository extends ICategoryFacade {
   Future<Either<String, List<CategoryModel>>> getCategoryByParentId(
       String parentId) async {
     List<CategoryModel> _category;
+    List<CategoryModel> _filtered;
 
     try {
       _category = Pref().getCategoryFromLocal();
 
-      final _filterData =
-          _category.where((f) => f.parentId == parentId).toList();
-      if (_filterData.length == 0) {
+      _filtered = _category.where((f) => f.parentId == parentId).toList();
+      if (_filtered.length == 0) {
         return right(<CategoryModel>[]);
       } else {
-        return right(_filterData);
+        // _filtered.removeWhere(
+        //     (data) => (data.count == "0") && (data.hasChild == "false"));
+
+        // _filtered.removeWhere(
+        //     (data) => (data.countTotal == "0") && (data.hasChild == "true"));
+        return right(_filtered);
       }
     } catch (e) {
       return left("Something wrong");

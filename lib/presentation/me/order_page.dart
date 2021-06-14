@@ -42,7 +42,7 @@ class _OrderPageState extends State<OrderPage> {
             indicatorColor: Colors.black,
             isScrollable: true,
             labelColor: Colors.white,
-            unselectedLabelColor: Colors.black,
+            unselectedLabelColor: Colors.white70,
             labelStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
             tabs: [
               Tab(

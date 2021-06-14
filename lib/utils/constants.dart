@@ -1,28 +1,24 @@
-import 'dart:convert';
-
 import 'package:roomart/application/rajaongkir/ongkir_code_data_model.dart';
 
 class Constants {
   static const icon_launcher = "assets/logo.png";
   static const logo = "assets/logo.png";
   static const promotion_image = "assets/promotion.png";
-  static const title_appbar = "ROOMART";
+  static const title_appbar = "ROOMART SERANG";
   String resellerParentID = null; //Disesuaikan dengan kode reseller
 
   String storageBox = 'roomart_storage_key';
 
   //new base url
   String baseUrlProduction =
-      "http://cloud.erp.web.id:8080/padasuka/weblayer/template/";
+      "http://vipcloud.erp.web.id:8080/tokoku-android/weblayer/template/";
   String baseUrlProductionBackup =
-      "http://cloud.erp.web.id:8080/roomart/weblayer/template/";
-
-  String itemUrl = "http://cloud.erp.web.id:8080/roomart/weblayer/template/";
+      "http://vipcloud.erp.web.id:8080/roomart/weblayer/template/";
+  String itemUrl = "http://vipcloud.erp.web.id:8080/tokoku-android/weblayer/template/";
   String imageBaseUrl = "http://cloud.erp.web.id:8080";
-  static const locCode = "GODM";
-  static const transactionCode = "RA";
-  static const locId = "DM149993946251846586342";
-
+  static const locCode = "SER";
+  static const locId = "DM147753742227307918394";
+  static const transactionCode = "DC";
   String get getUltimoBaseUrl => this._ultimoBaseUrl;
   String get getBaseUrlProduction => this.baseUrlProduction;
   String get getBaseUrlProductionBackup => this.baseUrlProductionBackup;
