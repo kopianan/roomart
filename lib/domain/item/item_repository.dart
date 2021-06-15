@@ -42,7 +42,9 @@ class ItemRepoistory extends IITemFacae {
 
         List<DataItemModel> data =
             jsonData.map((m) => DataItemModel.fromJson(m)).toList();
-
+        if (data.length == 0) {
+          break;
+        }
         data.forEach((element) {
           double data = double.tryParse(element.qty);
           if (data != null) {

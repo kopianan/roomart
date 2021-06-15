@@ -430,7 +430,6 @@ class _PaymentPageState extends State<PaymentPage> {
 
     //filter data+
 
-    print(paidItem.first.bought);
     paidItem.forEach((element) {
       var _new = element.bought.copyWith(
           price: cartController.checkResellerPrice(element.item),
@@ -439,7 +438,6 @@ class _PaymentPageState extends State<PaymentPage> {
     });
     paidItem.assignAll(newBought);
 
-    print(paidItem.first.bought);
     var data = transactionController.calculateDiscount(cartController
         .getCartSubTotalDouble(isReseller: authController.checkIfReseller()));
     if ((transactionController.getSelectedDiscount.isBlank) ||
