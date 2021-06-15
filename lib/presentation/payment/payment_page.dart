@@ -428,6 +428,18 @@ class _PaymentPageState extends State<PaymentPage> {
     List<CartDataCollectionModel> newBought = <CartDataCollectionModel>[];
     paidItem.addAll(cartController.getCartItemData);
 
+    //filter data+
+    
+print(paidItem.first.bought); 
+    paidItem.forEach((element) {
+      var _new = element.bought.copyWith(
+          price: cartController.checkResellerPrice(element.item),
+          resellerPrice: double.parse(element.item.itemPrice));
+      newBought.add(CartDataCollectionModel(bought: _new, item: element.item));
+    });
+    paidItem.assignAll(newBought);
+
+print(paidItem.first.bought); 
     var data = transactionController.calculateDiscount(cartController
         .getCartSubTotalDouble(isReseller: authController.checkIfReseller()));
     if ((transactionController.getSelectedDiscount.isBlank) ||
@@ -530,14 +542,8 @@ class _PaymentPageState extends State<PaymentPage> {
               "Penerima: ${user.fullName}\nNomor Hp: ${user.phone}\nPengiriman :Pengirima\nAlamat :  ${user.address}\nProvinsi: ${user.province}\nCity: ${user.city}\n",
           details: paidItem.map((e) => e.bought).toList())
     ]);
-    Get.toNamed(PaymentProgressPage.TAG, arguments: _salesOrder);
+    // Get.toNamed(PaymentProgressPage.TAG, arguments: _salesOrder);
 
-    // if (paymentMethod.code == describeEnum(paymentEnum.MID)) {
-    //   transCubit.createNewTransaction(_salesOrder);
-    // } else if (paymentMethod.code == describeEnum(paymentEnum.TRANSF) ||
-    //     paymentMethod.code == describeEnum(paymentEnum.CREDIT)) {
-    //   //IS CREDIT OR TRANSFER
-    // }
   }
 
   String generateTransactionNumber(String prefix, String customerId) {
