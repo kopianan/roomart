@@ -17,6 +17,7 @@ import 'full_transaction_data_model.dart';
 abstract class ITransactionFacade {
   Future<Either<String, List<TransactionDataModel>>>
       getHistoryTransactionByStatus(TransactionHistoryRequest request);
+
   Future<Either<String, List<TransactionDataModel>>>
       getHistoryTransactionByMultipleStatus(TransactionHistoryRequest request);
   Future<Either<String, List<TransactionDataModelV2>>>
@@ -28,6 +29,9 @@ abstract class ITransactionFacade {
   Future<Either<String, TransResponse>> addNewTransaction(TransRequest request);
   Future<Either<String, MidtransStatusDataModel>> checkMidtransPaymentStatus(
       String request);
+
+  Future<Either<String, List<FullTransactionDataModel>>> getAllTransaction(
+      String userId);
 }
 
 @LazySingleton(as: ITransactionFacade)
@@ -214,6 +218,33 @@ class TransactionRepository extends ITransactionFacade {
       return right(_result);
     } catch (e) {
       return right(<FullTransactionDataModel>[]);
+    }
+  }
+
+  @override
+  Future<Either<String, List<FullTransactionDataModel>>> getAllTransaction(
+      String userId) async {
+    Response response;
+
+    try {
+      response = await dio.get(
+          "${Constants().baseUrlProduction}api,SPGApps.vm?cmd=4&custcode=${userId}&sortdate=desc");
+
+      if (response.statusCode == 200) {
+        var replace2 = response.data.replaceAll(RegExp(r'\t'), " ");
+
+        List responseJson = await json.decode(replace2.trim());
+
+        final data = responseJson
+            .map((md) => new FullTransactionDataModel.fromJson(md))
+            .toList();
+
+        return right(data);
+      } else {
+        return left("Something Wrong");
+      }
+    } catch (e) {
+      return left(e.toString());
     }
   }
 }

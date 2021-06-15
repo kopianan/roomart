@@ -104,4 +104,17 @@ class TransactionCubit extends Cubit<TransactionState> {
       emit(TransactionState.error(e.toString()));
     }
   }
+
+  void getAllTransaction(String userId) async {
+    emit(TransactionState.loading());
+    try {
+      final _result = await iTransactionFacade.getAllTransaction(userId);
+      _result.fold(
+        (l) => emit(TransactionState.error(l.toString())),
+        (r) => emit(TransactionState.onGetAllTransaction(r)),
+      );
+    } catch (e) {
+      emit(TransactionState.error(e.toString()));
+    }
+  }
 }

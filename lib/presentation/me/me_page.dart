@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/application/auth/auth_cubit.dart';
+import 'package:roomart/application/transaction/transaction_cubit.dart';
 import 'package:roomart/infrastructure/core/pref.dart';
 import 'package:roomart/presentation/cart/cart_page.dart';
 import 'package:roomart/presentation/dashboard/dashboard_page.dart';
@@ -21,6 +22,9 @@ class MePage extends StatefulWidget {
 class _MePageState extends State<MePage> {
   final authController = Get.put(AuthController());
   final cubit = getIt<AuthCubit>();
+
+  final transCubit = getIt<TransactionCubit>();
+  double balanceInProgress = 0;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -95,9 +99,63 @@ class _MePageState extends State<MePage> {
                     },
                   ),
                 ),
-                Expanded(
-                    child: saldoContainer("Dalam Proses", "0", Colors.purple,
-                        textColor: Colors.white)),
+                BlocProvider(
+                  create: (context) => transCubit
+                    ..getAllTransaction(authController.getUserDataModel.userId),
+                  child: BlocConsumer<TransactionCubit, TransactionState>(
+                    listener: (context, state) {
+                      // TODO: implement listener
+                      state.maybeMap(
+                          orElse: () {},
+                          onGetAllTransaction: (e) {
+                            e.data.forEach((data) {
+                           
+                              if (data.transactionStatus == "1") {   print(data.totalAmount);
+                                balanceInProgress =
+                                    double.parse(data.totalAmount) +
+                                        balanceInProgress;
+                                print(balanceInProgress);
+                              }
+                            });
+                          });
+                      print(balanceInProgress);
+                    },
+                    builder: (context, state) {
+                      return state.maybeMap(orElse: () {
+                        return Expanded(
+                            child: saldoContainer(
+                                "Dalam Proses", "Nothing", Colors.purple,
+                                textColor: Colors.white));
+                      }, error: (e) {
+                        return Expanded(
+                            child: InkWell(
+                          onTap: () {
+                            transCubit
+                              ..getAllTransaction(
+                                  authController.getUserDataModel.userId);
+                          },
+                          child: saldoContainer(
+                              "Dalam Proses", "Refresh", Colors.purple,
+                              textColor: Colors.white),
+                        ));
+                      }, loading: (e) {
+                        return Expanded(
+                            child: Center(
+                          child: CircularProgressIndicator(),
+                        ));
+                      }, onGetHistoryTransaction: (e) {
+                        return Expanded(
+                          child: saldoContainer(
+                              "Dalam Proses",
+                              Formatter().formatStringCurrency(
+                                  balanceInProgress.toString()),
+                              Colors.purple,
+                              textColor: Colors.white),
+                        );
+                      });
+                    },
+                  ),
+                ),
               ],
             ),
           ),

@@ -429,8 +429,8 @@ class _PaymentPageState extends State<PaymentPage> {
     paidItem.addAll(cartController.getCartItemData);
 
     //filter data+
-    
-print(paidItem.first.bought); 
+
+    print(paidItem.first.bought);
     paidItem.forEach((element) {
       var _new = element.bought.copyWith(
           price: cartController.checkResellerPrice(element.item),
@@ -439,7 +439,7 @@ print(paidItem.first.bought);
     });
     paidItem.assignAll(newBought);
 
-print(paidItem.first.bought); 
+    print(paidItem.first.bought);
     var data = transactionController.calculateDiscount(cartController
         .getCartSubTotalDouble(isReseller: authController.checkIfReseller()));
     if ((transactionController.getSelectedDiscount.isBlank) ||
@@ -542,8 +542,7 @@ print(paidItem.first.bought);
               "Penerima: ${user.fullName}\nNomor Hp: ${user.phone}\nPengiriman :Pengirima\nAlamat :  ${user.address}\nProvinsi: ${user.province}\nCity: ${user.city}\n",
           details: paidItem.map((e) => e.bought).toList())
     ]);
-    // Get.toNamed(PaymentProgressPage.TAG, arguments: _salesOrder);
-
+    Get.toNamed(PaymentProgressPage.TAG, arguments: _salesOrder);
   }
 
   String generateTransactionNumber(String prefix, String customerId) {

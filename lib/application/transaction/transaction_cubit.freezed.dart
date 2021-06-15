@@ -47,6 +47,14 @@ class _$TransactionStateTearOff {
   }
 
 // ignore: unused_element
+  _OnGetAllTransaction onGetAllTransaction(
+      List<FullTransactionDataModel> data) {
+    return _OnGetAllTransaction(
+      data,
+    );
+  }
+
+// ignore: unused_element
   _OnGetHistoryTransactionV2 onGetHistoryTransactionV2(
       List<TransactionDataModelV2> data) {
     return _OnGetHistoryTransactionV2(
@@ -84,6 +92,7 @@ mixin _$TransactionState {
     @required
         TResult onGetSentHistoryTransaction(
             List<FullTransactionDataModel> data),
+    @required TResult onGetAllTransaction(List<FullTransactionDataModel> data),
     @required
         TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     @required TResult onAddNewTransaction(TransResponse data),
@@ -96,6 +105,7 @@ mixin _$TransactionState {
     TResult error(String error),
     TResult onGetHistoryTransaction(List<TransactionDataModel> data),
     TResult onGetSentHistoryTransaction(List<FullTransactionDataModel> data),
+    TResult onGetAllTransaction(List<FullTransactionDataModel> data),
     TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     TResult onAddNewTransaction(TransResponse data),
     TResult onCheckMidtransStatus(MidtransStatusDataModel data),
@@ -109,6 +119,7 @@ mixin _$TransactionState {
     @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
     @required
         TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
+    @required TResult onGetAllTransaction(_OnGetAllTransaction value),
     @required
         TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     @required TResult onAddNewTransaction(_OnAddNewTransaction value),
@@ -121,6 +132,7 @@ mixin _$TransactionState {
     TResult error(_Error value),
     TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
     TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
+    TResult onGetAllTransaction(_OnGetAllTransaction value),
     TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     TResult onAddNewTransaction(_OnAddNewTransaction value),
     TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
@@ -188,6 +200,7 @@ class _$_Initial implements _Initial {
     @required
         TResult onGetSentHistoryTransaction(
             List<FullTransactionDataModel> data),
+    @required TResult onGetAllTransaction(List<FullTransactionDataModel> data),
     @required
         TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     @required TResult onAddNewTransaction(TransResponse data),
@@ -198,6 +211,7 @@ class _$_Initial implements _Initial {
     assert(error != null);
     assert(onGetHistoryTransaction != null);
     assert(onGetSentHistoryTransaction != null);
+    assert(onGetAllTransaction != null);
     assert(onGetHistoryTransactionV2 != null);
     assert(onAddNewTransaction != null);
     assert(onCheckMidtransStatus != null);
@@ -212,6 +226,7 @@ class _$_Initial implements _Initial {
     TResult error(String error),
     TResult onGetHistoryTransaction(List<TransactionDataModel> data),
     TResult onGetSentHistoryTransaction(List<FullTransactionDataModel> data),
+    TResult onGetAllTransaction(List<FullTransactionDataModel> data),
     TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     TResult onAddNewTransaction(TransResponse data),
     TResult onCheckMidtransStatus(MidtransStatusDataModel data),
@@ -233,6 +248,7 @@ class _$_Initial implements _Initial {
     @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
     @required
         TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
+    @required TResult onGetAllTransaction(_OnGetAllTransaction value),
     @required
         TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     @required TResult onAddNewTransaction(_OnAddNewTransaction value),
@@ -243,6 +259,7 @@ class _$_Initial implements _Initial {
     assert(error != null);
     assert(onGetHistoryTransaction != null);
     assert(onGetSentHistoryTransaction != null);
+    assert(onGetAllTransaction != null);
     assert(onGetHistoryTransactionV2 != null);
     assert(onAddNewTransaction != null);
     assert(onCheckMidtransStatus != null);
@@ -257,6 +274,7 @@ class _$_Initial implements _Initial {
     TResult error(_Error value),
     TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
     TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
+    TResult onGetAllTransaction(_OnGetAllTransaction value),
     TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     TResult onAddNewTransaction(_OnAddNewTransaction value),
     TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
@@ -317,6 +335,7 @@ class _$_Loading implements _Loading {
     @required
         TResult onGetSentHistoryTransaction(
             List<FullTransactionDataModel> data),
+    @required TResult onGetAllTransaction(List<FullTransactionDataModel> data),
     @required
         TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     @required TResult onAddNewTransaction(TransResponse data),
@@ -327,6 +346,7 @@ class _$_Loading implements _Loading {
     assert(error != null);
     assert(onGetHistoryTransaction != null);
     assert(onGetSentHistoryTransaction != null);
+    assert(onGetAllTransaction != null);
     assert(onGetHistoryTransactionV2 != null);
     assert(onAddNewTransaction != null);
     assert(onCheckMidtransStatus != null);
@@ -341,6 +361,7 @@ class _$_Loading implements _Loading {
     TResult error(String error),
     TResult onGetHistoryTransaction(List<TransactionDataModel> data),
     TResult onGetSentHistoryTransaction(List<FullTransactionDataModel> data),
+    TResult onGetAllTransaction(List<FullTransactionDataModel> data),
     TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     TResult onAddNewTransaction(TransResponse data),
     TResult onCheckMidtransStatus(MidtransStatusDataModel data),
@@ -362,6 +383,7 @@ class _$_Loading implements _Loading {
     @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
     @required
         TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
+    @required TResult onGetAllTransaction(_OnGetAllTransaction value),
     @required
         TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     @required TResult onAddNewTransaction(_OnAddNewTransaction value),
@@ -372,6 +394,7 @@ class _$_Loading implements _Loading {
     assert(error != null);
     assert(onGetHistoryTransaction != null);
     assert(onGetSentHistoryTransaction != null);
+    assert(onGetAllTransaction != null);
     assert(onGetHistoryTransactionV2 != null);
     assert(onAddNewTransaction != null);
     assert(onCheckMidtransStatus != null);
@@ -386,6 +409,7 @@ class _$_Loading implements _Loading {
     TResult error(_Error value),
     TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
     TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
+    TResult onGetAllTransaction(_OnGetAllTransaction value),
     TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     TResult onAddNewTransaction(_OnAddNewTransaction value),
     TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
@@ -468,6 +492,7 @@ class _$_Error implements _Error {
     @required
         TResult onGetSentHistoryTransaction(
             List<FullTransactionDataModel> data),
+    @required TResult onGetAllTransaction(List<FullTransactionDataModel> data),
     @required
         TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     @required TResult onAddNewTransaction(TransResponse data),
@@ -478,6 +503,7 @@ class _$_Error implements _Error {
     assert(error != null);
     assert(onGetHistoryTransaction != null);
     assert(onGetSentHistoryTransaction != null);
+    assert(onGetAllTransaction != null);
     assert(onGetHistoryTransactionV2 != null);
     assert(onAddNewTransaction != null);
     assert(onCheckMidtransStatus != null);
@@ -492,6 +518,7 @@ class _$_Error implements _Error {
     TResult error(String error),
     TResult onGetHistoryTransaction(List<TransactionDataModel> data),
     TResult onGetSentHistoryTransaction(List<FullTransactionDataModel> data),
+    TResult onGetAllTransaction(List<FullTransactionDataModel> data),
     TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     TResult onAddNewTransaction(TransResponse data),
     TResult onCheckMidtransStatus(MidtransStatusDataModel data),
@@ -513,6 +540,7 @@ class _$_Error implements _Error {
     @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
     @required
         TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
+    @required TResult onGetAllTransaction(_OnGetAllTransaction value),
     @required
         TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     @required TResult onAddNewTransaction(_OnAddNewTransaction value),
@@ -523,6 +551,7 @@ class _$_Error implements _Error {
     assert(error != null);
     assert(onGetHistoryTransaction != null);
     assert(onGetSentHistoryTransaction != null);
+    assert(onGetAllTransaction != null);
     assert(onGetHistoryTransactionV2 != null);
     assert(onAddNewTransaction != null);
     assert(onCheckMidtransStatus != null);
@@ -537,6 +566,7 @@ class _$_Error implements _Error {
     TResult error(_Error value),
     TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
     TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
+    TResult onGetAllTransaction(_OnGetAllTransaction value),
     TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     TResult onAddNewTransaction(_OnAddNewTransaction value),
     TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
@@ -628,6 +658,7 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
     @required
         TResult onGetSentHistoryTransaction(
             List<FullTransactionDataModel> data),
+    @required TResult onGetAllTransaction(List<FullTransactionDataModel> data),
     @required
         TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     @required TResult onAddNewTransaction(TransResponse data),
@@ -638,6 +669,7 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
     assert(error != null);
     assert(onGetHistoryTransaction != null);
     assert(onGetSentHistoryTransaction != null);
+    assert(onGetAllTransaction != null);
     assert(onGetHistoryTransactionV2 != null);
     assert(onAddNewTransaction != null);
     assert(onCheckMidtransStatus != null);
@@ -652,6 +684,7 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
     TResult error(String error),
     TResult onGetHistoryTransaction(List<TransactionDataModel> data),
     TResult onGetSentHistoryTransaction(List<FullTransactionDataModel> data),
+    TResult onGetAllTransaction(List<FullTransactionDataModel> data),
     TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     TResult onAddNewTransaction(TransResponse data),
     TResult onCheckMidtransStatus(MidtransStatusDataModel data),
@@ -673,6 +706,7 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
     @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
     @required
         TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
+    @required TResult onGetAllTransaction(_OnGetAllTransaction value),
     @required
         TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     @required TResult onAddNewTransaction(_OnAddNewTransaction value),
@@ -683,6 +717,7 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
     assert(error != null);
     assert(onGetHistoryTransaction != null);
     assert(onGetSentHistoryTransaction != null);
+    assert(onGetAllTransaction != null);
     assert(onGetHistoryTransactionV2 != null);
     assert(onAddNewTransaction != null);
     assert(onCheckMidtransStatus != null);
@@ -697,6 +732,7 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
     TResult error(_Error value),
     TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
     TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
+    TResult onGetAllTransaction(_OnGetAllTransaction value),
     TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     TResult onAddNewTransaction(_OnAddNewTransaction value),
     TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
@@ -791,6 +827,7 @@ class _$_OnGetSentHistoryTransaction implements _OnGetSentHistoryTransaction {
     @required
         TResult onGetSentHistoryTransaction(
             List<FullTransactionDataModel> data),
+    @required TResult onGetAllTransaction(List<FullTransactionDataModel> data),
     @required
         TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     @required TResult onAddNewTransaction(TransResponse data),
@@ -801,6 +838,7 @@ class _$_OnGetSentHistoryTransaction implements _OnGetSentHistoryTransaction {
     assert(error != null);
     assert(onGetHistoryTransaction != null);
     assert(onGetSentHistoryTransaction != null);
+    assert(onGetAllTransaction != null);
     assert(onGetHistoryTransactionV2 != null);
     assert(onAddNewTransaction != null);
     assert(onCheckMidtransStatus != null);
@@ -815,6 +853,7 @@ class _$_OnGetSentHistoryTransaction implements _OnGetSentHistoryTransaction {
     TResult error(String error),
     TResult onGetHistoryTransaction(List<TransactionDataModel> data),
     TResult onGetSentHistoryTransaction(List<FullTransactionDataModel> data),
+    TResult onGetAllTransaction(List<FullTransactionDataModel> data),
     TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     TResult onAddNewTransaction(TransResponse data),
     TResult onCheckMidtransStatus(MidtransStatusDataModel data),
@@ -836,6 +875,7 @@ class _$_OnGetSentHistoryTransaction implements _OnGetSentHistoryTransaction {
     @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
     @required
         TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
+    @required TResult onGetAllTransaction(_OnGetAllTransaction value),
     @required
         TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     @required TResult onAddNewTransaction(_OnAddNewTransaction value),
@@ -846,6 +886,7 @@ class _$_OnGetSentHistoryTransaction implements _OnGetSentHistoryTransaction {
     assert(error != null);
     assert(onGetHistoryTransaction != null);
     assert(onGetSentHistoryTransaction != null);
+    assert(onGetAllTransaction != null);
     assert(onGetHistoryTransactionV2 != null);
     assert(onAddNewTransaction != null);
     assert(onCheckMidtransStatus != null);
@@ -860,6 +901,7 @@ class _$_OnGetSentHistoryTransaction implements _OnGetSentHistoryTransaction {
     TResult error(_Error value),
     TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
     TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
+    TResult onGetAllTransaction(_OnGetAllTransaction value),
     TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     TResult onAddNewTransaction(_OnAddNewTransaction value),
     TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
@@ -881,6 +923,172 @@ abstract class _OnGetSentHistoryTransaction implements TransactionState {
   @JsonKey(ignore: true)
   _$OnGetSentHistoryTransactionCopyWith<_OnGetSentHistoryTransaction>
       get copyWith;
+}
+
+/// @nodoc
+abstract class _$OnGetAllTransactionCopyWith<$Res> {
+  factory _$OnGetAllTransactionCopyWith(_OnGetAllTransaction value,
+          $Res Function(_OnGetAllTransaction) then) =
+      __$OnGetAllTransactionCopyWithImpl<$Res>;
+  $Res call({List<FullTransactionDataModel> data});
+}
+
+/// @nodoc
+class __$OnGetAllTransactionCopyWithImpl<$Res>
+    extends _$TransactionStateCopyWithImpl<$Res>
+    implements _$OnGetAllTransactionCopyWith<$Res> {
+  __$OnGetAllTransactionCopyWithImpl(
+      _OnGetAllTransaction _value, $Res Function(_OnGetAllTransaction) _then)
+      : super(_value, (v) => _then(v as _OnGetAllTransaction));
+
+  @override
+  _OnGetAllTransaction get _value => super._value as _OnGetAllTransaction;
+
+  @override
+  $Res call({
+    Object data = freezed,
+  }) {
+    return _then(_OnGetAllTransaction(
+      data == freezed ? _value.data : data as List<FullTransactionDataModel>,
+    ));
+  }
+}
+
+/// @nodoc
+class _$_OnGetAllTransaction implements _OnGetAllTransaction {
+  const _$_OnGetAllTransaction(this.data) : assert(data != null);
+
+  @override
+  final List<FullTransactionDataModel> data;
+
+  @override
+  String toString() {
+    return 'TransactionState.onGetAllTransaction(data: $data)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _OnGetAllTransaction &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(data);
+
+  @JsonKey(ignore: true)
+  @override
+  _$OnGetAllTransactionCopyWith<_OnGetAllTransaction> get copyWith =>
+      __$OnGetAllTransactionCopyWithImpl<_OnGetAllTransaction>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loading(),
+    @required TResult error(String error),
+    @required TResult onGetHistoryTransaction(List<TransactionDataModel> data),
+    @required
+        TResult onGetSentHistoryTransaction(
+            List<FullTransactionDataModel> data),
+    @required TResult onGetAllTransaction(List<FullTransactionDataModel> data),
+    @required
+        TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
+    @required TResult onAddNewTransaction(TransResponse data),
+    @required TResult onCheckMidtransStatus(MidtransStatusDataModel data),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(onGetHistoryTransaction != null);
+    assert(onGetSentHistoryTransaction != null);
+    assert(onGetAllTransaction != null);
+    assert(onGetHistoryTransactionV2 != null);
+    assert(onAddNewTransaction != null);
+    assert(onCheckMidtransStatus != null);
+    return onGetAllTransaction(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loading(),
+    TResult error(String error),
+    TResult onGetHistoryTransaction(List<TransactionDataModel> data),
+    TResult onGetSentHistoryTransaction(List<FullTransactionDataModel> data),
+    TResult onGetAllTransaction(List<FullTransactionDataModel> data),
+    TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
+    TResult onAddNewTransaction(TransResponse data),
+    TResult onCheckMidtransStatus(MidtransStatusDataModel data),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (onGetAllTransaction != null) {
+      return onGetAllTransaction(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loading(_Loading value),
+    @required TResult error(_Error value),
+    @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
+    @required
+        TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
+    @required TResult onGetAllTransaction(_OnGetAllTransaction value),
+    @required
+        TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
+    @required TResult onAddNewTransaction(_OnAddNewTransaction value),
+    @required TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(error != null);
+    assert(onGetHistoryTransaction != null);
+    assert(onGetSentHistoryTransaction != null);
+    assert(onGetAllTransaction != null);
+    assert(onGetHistoryTransactionV2 != null);
+    assert(onAddNewTransaction != null);
+    assert(onCheckMidtransStatus != null);
+    return onGetAllTransaction(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loading(_Loading value),
+    TResult error(_Error value),
+    TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
+    TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
+    TResult onGetAllTransaction(_OnGetAllTransaction value),
+    TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
+    TResult onAddNewTransaction(_OnAddNewTransaction value),
+    TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (onGetAllTransaction != null) {
+      return onGetAllTransaction(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnGetAllTransaction implements TransactionState {
+  const factory _OnGetAllTransaction(List<FullTransactionDataModel> data) =
+      _$_OnGetAllTransaction;
+
+  List<FullTransactionDataModel> get data;
+  @JsonKey(ignore: true)
+  _$OnGetAllTransactionCopyWith<_OnGetAllTransaction> get copyWith;
 }
 
 /// @nodoc
@@ -954,6 +1162,7 @@ class _$_OnGetHistoryTransactionV2 implements _OnGetHistoryTransactionV2 {
     @required
         TResult onGetSentHistoryTransaction(
             List<FullTransactionDataModel> data),
+    @required TResult onGetAllTransaction(List<FullTransactionDataModel> data),
     @required
         TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     @required TResult onAddNewTransaction(TransResponse data),
@@ -964,6 +1173,7 @@ class _$_OnGetHistoryTransactionV2 implements _OnGetHistoryTransactionV2 {
     assert(error != null);
     assert(onGetHistoryTransaction != null);
     assert(onGetSentHistoryTransaction != null);
+    assert(onGetAllTransaction != null);
     assert(onGetHistoryTransactionV2 != null);
     assert(onAddNewTransaction != null);
     assert(onCheckMidtransStatus != null);
@@ -978,6 +1188,7 @@ class _$_OnGetHistoryTransactionV2 implements _OnGetHistoryTransactionV2 {
     TResult error(String error),
     TResult onGetHistoryTransaction(List<TransactionDataModel> data),
     TResult onGetSentHistoryTransaction(List<FullTransactionDataModel> data),
+    TResult onGetAllTransaction(List<FullTransactionDataModel> data),
     TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     TResult onAddNewTransaction(TransResponse data),
     TResult onCheckMidtransStatus(MidtransStatusDataModel data),
@@ -999,6 +1210,7 @@ class _$_OnGetHistoryTransactionV2 implements _OnGetHistoryTransactionV2 {
     @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
     @required
         TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
+    @required TResult onGetAllTransaction(_OnGetAllTransaction value),
     @required
         TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     @required TResult onAddNewTransaction(_OnAddNewTransaction value),
@@ -1009,6 +1221,7 @@ class _$_OnGetHistoryTransactionV2 implements _OnGetHistoryTransactionV2 {
     assert(error != null);
     assert(onGetHistoryTransaction != null);
     assert(onGetSentHistoryTransaction != null);
+    assert(onGetAllTransaction != null);
     assert(onGetHistoryTransactionV2 != null);
     assert(onAddNewTransaction != null);
     assert(onCheckMidtransStatus != null);
@@ -1023,6 +1236,7 @@ class _$_OnGetHistoryTransactionV2 implements _OnGetHistoryTransactionV2 {
     TResult error(_Error value),
     TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
     TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
+    TResult onGetAllTransaction(_OnGetAllTransaction value),
     TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     TResult onAddNewTransaction(_OnAddNewTransaction value),
     TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
@@ -1114,6 +1328,7 @@ class _$_OnAddNewTransaction implements _OnAddNewTransaction {
     @required
         TResult onGetSentHistoryTransaction(
             List<FullTransactionDataModel> data),
+    @required TResult onGetAllTransaction(List<FullTransactionDataModel> data),
     @required
         TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     @required TResult onAddNewTransaction(TransResponse data),
@@ -1124,6 +1339,7 @@ class _$_OnAddNewTransaction implements _OnAddNewTransaction {
     assert(error != null);
     assert(onGetHistoryTransaction != null);
     assert(onGetSentHistoryTransaction != null);
+    assert(onGetAllTransaction != null);
     assert(onGetHistoryTransactionV2 != null);
     assert(onAddNewTransaction != null);
     assert(onCheckMidtransStatus != null);
@@ -1138,6 +1354,7 @@ class _$_OnAddNewTransaction implements _OnAddNewTransaction {
     TResult error(String error),
     TResult onGetHistoryTransaction(List<TransactionDataModel> data),
     TResult onGetSentHistoryTransaction(List<FullTransactionDataModel> data),
+    TResult onGetAllTransaction(List<FullTransactionDataModel> data),
     TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     TResult onAddNewTransaction(TransResponse data),
     TResult onCheckMidtransStatus(MidtransStatusDataModel data),
@@ -1159,6 +1376,7 @@ class _$_OnAddNewTransaction implements _OnAddNewTransaction {
     @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
     @required
         TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
+    @required TResult onGetAllTransaction(_OnGetAllTransaction value),
     @required
         TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     @required TResult onAddNewTransaction(_OnAddNewTransaction value),
@@ -1169,6 +1387,7 @@ class _$_OnAddNewTransaction implements _OnAddNewTransaction {
     assert(error != null);
     assert(onGetHistoryTransaction != null);
     assert(onGetSentHistoryTransaction != null);
+    assert(onGetAllTransaction != null);
     assert(onGetHistoryTransactionV2 != null);
     assert(onAddNewTransaction != null);
     assert(onCheckMidtransStatus != null);
@@ -1183,6 +1402,7 @@ class _$_OnAddNewTransaction implements _OnAddNewTransaction {
     TResult error(_Error value),
     TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
     TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
+    TResult onGetAllTransaction(_OnGetAllTransaction value),
     TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     TResult onAddNewTransaction(_OnAddNewTransaction value),
     TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
@@ -1286,6 +1506,7 @@ class _$_OnCheckMidtransStatus implements _OnCheckMidtransStatus {
     @required
         TResult onGetSentHistoryTransaction(
             List<FullTransactionDataModel> data),
+    @required TResult onGetAllTransaction(List<FullTransactionDataModel> data),
     @required
         TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     @required TResult onAddNewTransaction(TransResponse data),
@@ -1296,6 +1517,7 @@ class _$_OnCheckMidtransStatus implements _OnCheckMidtransStatus {
     assert(error != null);
     assert(onGetHistoryTransaction != null);
     assert(onGetSentHistoryTransaction != null);
+    assert(onGetAllTransaction != null);
     assert(onGetHistoryTransactionV2 != null);
     assert(onAddNewTransaction != null);
     assert(onCheckMidtransStatus != null);
@@ -1310,6 +1532,7 @@ class _$_OnCheckMidtransStatus implements _OnCheckMidtransStatus {
     TResult error(String error),
     TResult onGetHistoryTransaction(List<TransactionDataModel> data),
     TResult onGetSentHistoryTransaction(List<FullTransactionDataModel> data),
+    TResult onGetAllTransaction(List<FullTransactionDataModel> data),
     TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
     TResult onAddNewTransaction(TransResponse data),
     TResult onCheckMidtransStatus(MidtransStatusDataModel data),
@@ -1331,6 +1554,7 @@ class _$_OnCheckMidtransStatus implements _OnCheckMidtransStatus {
     @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
     @required
         TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
+    @required TResult onGetAllTransaction(_OnGetAllTransaction value),
     @required
         TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     @required TResult onAddNewTransaction(_OnAddNewTransaction value),
@@ -1341,6 +1565,7 @@ class _$_OnCheckMidtransStatus implements _OnCheckMidtransStatus {
     assert(error != null);
     assert(onGetHistoryTransaction != null);
     assert(onGetSentHistoryTransaction != null);
+    assert(onGetAllTransaction != null);
     assert(onGetHistoryTransactionV2 != null);
     assert(onAddNewTransaction != null);
     assert(onCheckMidtransStatus != null);
@@ -1355,6 +1580,7 @@ class _$_OnCheckMidtransStatus implements _OnCheckMidtransStatus {
     TResult error(_Error value),
     TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
     TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
+    TResult onGetAllTransaction(_OnGetAllTransaction value),
     TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
     TResult onAddNewTransaction(_OnAddNewTransaction value),
     TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
