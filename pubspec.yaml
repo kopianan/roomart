@@ -80,3 +80,9 @@ flutter_icons:
   image_path_ios: "assets/logo.png"
   android: true # can specify file name here e.g. "ic_launcher"
   ios: true # can specify file name here e.g. "My-Launcher-Icon"
+
+
+
+#     flutter pub run rename --bundleId com.onatcipli.networkUpp
+#     flutter pub run rename --appname "Network Upp"
+#     flutter pub run flutter_launcher_icons:main
