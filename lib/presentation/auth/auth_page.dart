@@ -7,6 +7,7 @@ import 'package:roomart/application/auth/auth_cubit.dart';
 import 'package:roomart/infrastructure/core/pref.dart';
 import 'package:roomart/presentation/auth/sign_up/register_page.dart';
 import 'package:roomart/presentation/config_widgets/widget_collection.dart';
+import 'package:roomart/presentation/splash_screen/splash_screen_page.dart';
 import 'package:roomart/presentation/widgets/button_collection.dart';
 import 'package:roomart/utils/my_color.dart';
 import 'package:roomart/presentation/auth/forgot_password_page.dart';
@@ -65,6 +66,7 @@ class _AuthPageState extends State<AuthPage> {
                   ));
                   Pref().saveUserDataToLocal(e.user.toJson());
                   authController.setDataModel(e.user);
+                  Get.offAllNamed(SplashScreenPage.TAG);
                 });
           }, builder: (context, state) {
             return Container(

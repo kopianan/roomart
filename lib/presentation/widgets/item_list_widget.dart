@@ -1,20 +1,23 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/src/simple/get_state.dart';
-import 'package:get/route_manager.dart';
 import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/domain/item/data_item_model.dart';
+import 'package:roomart/presentation/config_widgets/widget_collection.dart';
 import 'package:roomart/presentation/core/widget_collection.dart';
 import 'package:roomart/presentation/item_detail/item_detail_page.dart';
 import 'package:roomart/utils/constants.dart';
 import 'package:roomart/utils/formater.dart';
+import 'package:get/get.dart';
 
 class ItemListWidget extends StatelessWidget {
-  const ItemListWidget({
+  ItemListWidget({
     Key key,
     @required this.item,
   }) : super(key: key);
   final DataItemModel item;
+
+  final authController = Get.put(AuthController());
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -74,38 +77,8 @@ class ItemListWidget extends StatelessWidget {
                     SizedBox(
                       height: 5.0,
                     ),
-                    (auth.checkIfReseller())
-                        ? Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              (double.parse(item.itemPrice) <
-                                      double.parse(item.newPrice))
-                                  ? SizedBox()
-                                  : Text(
-                                      Formatter()
-                                          .formatStringCurrency(item.itemPrice),
-                                      style: TextStyle(
-                                          decoration:
-                                              TextDecoration.lineThrough,
-                                          color: Colors.red),
-                                    ),
-                              SizedBox(height: 3),
-                              Text(
-                                  Formatter()
-                                      .formatStringCurrency(item.newPrice),
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      color: Colors.purple,
-                                      fontWeight: FontWeight.bold))
-                            ],
-                          )
-                        : Text(
-                            Formatter().formatStringCurrency(item.itemPrice),
-                            style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.purple,
-                                fontWeight: FontWeight.bold),
-                          ),
+                    resellerPrice(
+                        auth.checkIfReseller(), item.itemPrice, item.newPrice)
 
                     // (userData == null)
                     //     ? _itemPrice()

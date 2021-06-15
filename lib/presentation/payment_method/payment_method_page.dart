@@ -105,17 +105,31 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
                                     ),
                                     trailing: BlocBuilder<AuthCubit, AuthState>(
                                         builder: (context, state) {
-                                      return state.maybeMap(orElse: () {
-                                        return CircularProgressIndicator();
-                                      }, onGetArBalance: (e) {
-                                        return Text(
-                                          Formatter()
-                                              .formatStringCurrency(e.balancd),
-                                          style: TextStyle(
-                                              fontSize: 18,
-                                              fontWeight: FontWeight.bold),
-                                        );
-                                      });
+                                      return state.maybeMap(
+                                        orElse: () {
+                                          return CircularProgressIndicator();
+                                        },
+                                        error: (e) {
+                                          return IconButton(
+                                            onPressed: () {
+                                              authCubit.getArBalance(
+                                                  userController
+                                                      .getUserDataModel.userId);
+                                            },
+                                            icon: Icon(Icons.refresh),
+                                            iconSize: 25,
+                                          );
+                                        },
+                                        onGetArBalance: (e) {
+                                          return Text(
+                                            Formatter().formatStringCurrency(
+                                                e.balancd),
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.bold),
+                                          );
+                                        },
+                                      );
                                     }),
                                   ),
                                 );

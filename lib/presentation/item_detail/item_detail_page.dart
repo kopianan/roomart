@@ -5,7 +5,9 @@ import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/application/core/cart_controller.dart';
 import 'package:roomart/domain/item/data_item_model.dart';
 import 'package:roomart/presentation/cart/cart_page.dart';
+import 'package:roomart/presentation/config_widgets/widget_collection.dart';
 import 'package:roomart/presentation/core/widget_collection.dart';
+import 'package:roomart/presentation/dashboard/widget/cart_icon.dart';
 import 'package:roomart/presentation/widgets/button_collection.dart';
 import 'package:roomart/utils/constants.dart';
 import 'package:roomart/utils/formater.dart';
@@ -57,6 +59,9 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Detail"),
+        actions: [
+          CartIcon(),
+        ],
       ),
       body: GetBuilder<AuthController>(
         builder: (auth) => Column(
@@ -102,37 +107,8 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
                           SizedBox(
                             width: 8,
                           ),
-                          (auth.checkIfReseller())
-                              ? Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      Formatter()
-                                          .formatStringCurrency(data.itemPrice),
-                                      style: TextStyle(
-                                          decoration:
-                                              TextDecoration.lineThrough,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.red),
-                                    ),
-                                    SizedBox(height: 3),
-                                    Text(
-                                        Formatter().formatStringCurrency(
-                                            data.newPrice),
-                                        style: TextStyle(
-                                            fontSize: 20,
-                                            color: Colors.purple,
-                                            fontWeight: FontWeight.bold))
-                                  ],
-                                )
-                              : Text(
-                                  Formatter()
-                                      .formatStringCurrency(data.itemPrice),
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.purple,
-                                      fontWeight: FontWeight.bold),
-                                ),
+                          resellerPrice(auth.checkIfReseller(), data.itemPrice,
+                              data.newPrice)
                         ],
                       ),
                     ),
