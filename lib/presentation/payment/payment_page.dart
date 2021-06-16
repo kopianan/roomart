@@ -442,6 +442,7 @@ class _PaymentPageState extends State<PaymentPage> {
 
     var data = transactionController.calculateDiscount(cartController
         .getCartSubTotalDouble(isReseller: authController.checkIfReseller()));
+
     if ((transactionController.getSelectedDiscount.isBlank) ||
         (transactionController.getSelectedDiscount.customerCode != null)) {
       var _dsicount = BoughtItemDataModel(
@@ -542,7 +543,7 @@ class _PaymentPageState extends State<PaymentPage> {
               "Penerima: ${userData.fullName}\nNomor Hp: ${userData.phone}\nPengiriman :${transactionController.getSelectedFullDelivery.name}\nAlamat :  ${userData.address}\nProvinsi: ${userData.province}\nCity: ${userData.city}\n",
           details: paidItem.map((e) => e.bought).toList())
     ]);
-    // print(_salesOrder.salesTrans.first.toJson());
+    print(_salesOrder.salesTrans.first.toJson());
     Get.toNamed(PaymentProgressPage.TAG, arguments: _salesOrder);
   }
 
