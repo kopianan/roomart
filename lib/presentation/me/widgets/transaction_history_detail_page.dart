@@ -22,6 +22,7 @@ class _TransactionHistoryDetailPageState
   @override
   void initState() {
     detail = Get.arguments as TransactionDataModel;
+    print(detail.items); 
     super.initState();
   }
 

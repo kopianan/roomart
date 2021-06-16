@@ -373,13 +373,15 @@ class _PaymentPageState extends State<PaymentPage> {
                             content: Text(
                                 "Apakah anda yakin akan melanjutkan pembayaran ? "),
                             actions: [
-                              TextButton(
-                                  onPressed: () {
-                                    Get.back();
+                              GetBuilder<AuthController>(
+                                builder: (_user) => TextButton(
+                                    onPressed: () {
+                                      Get.back();
 
-                                    makePayment();
-                                  },
-                                  child: Text("Ya")),
+                                      makePayment(_user.getUserDataModel);
+                                    },
+                                    child: Text("Ya")),
+                              ),
                               TextButton(
                                   onPressed: () {
                                     Get.back();
@@ -509,7 +511,7 @@ class _PaymentPageState extends State<PaymentPage> {
     paidItem.add(_ongkirCart);
   }
 
-  void makePayment() {
+  void makePayment(UserDataModel userData) {
     if (paidItem.length == 0) addDiscountToItemList();
     var paymentMethod = paymentController.getSelectedPaymentMethod;
 
@@ -537,9 +539,10 @@ class _PaymentPageState extends State<PaymentPage> {
           email: user.email,
           fullname: user.fullName,
           remark:
-              "Penerima: ${user.fullName}\nNomor Hp: ${user.phone}\nPengiriman :Pengirima\nAlamat :  ${user.address}\nProvinsi: ${user.province}\nCity: ${user.city}\n",
+              "Penerima: ${userData.fullName}\nNomor Hp: ${userData.phone}\nPengiriman :${transactionController.getSelectedFullDelivery.name}\nAlamat :  ${userData.address}\nProvinsi: ${userData.province}\nCity: ${userData.city}\n",
           details: paidItem.map((e) => e.bought).toList())
     ]);
+    // print(_salesOrder.salesTrans.first.toJson());
     Get.toNamed(PaymentProgressPage.TAG, arguments: _salesOrder);
   }
 
