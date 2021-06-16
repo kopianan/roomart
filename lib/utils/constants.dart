@@ -17,6 +17,10 @@ class Constants {
   String baseUrlProductionBackup =
       "http://cloud.erp.web.id:8080/roomart/weblayer/template/";
 
+//if using VIP CLOUD, URL must be roomart version, not padasuka
+  String baseUrlForCategoryOnly =
+      "http://cloud.erp.web.id:8080/padasuka/weblayer/template/";
+
   String itemUrl = "http://cloud.erp.web.id:8080/roomart/weblayer/template/";
   String imageBaseUrl = "http://cloud.erp.web.id:8080";
   static const locCode = "GODM";
