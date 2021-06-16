@@ -17,7 +17,11 @@ class Constants {
   String baseUrlProductionBackup =
       "http://vipcloud.erp.web.id:8080/roomart/weblayer/template/";
 
-  String itemUrl = "http://vipcloud.erp.web.id:8080/roomart/weblayer/template/";
+//if using VIP CLOUD, URL must be roomart version, not padasuka
+  String baseUrlForCategoryOnly =
+      "http://vipcloud.erp.web.id:8080/roomart/weblayer/template/";
+
+  String itemUrl = "http://cloud.erp.web.id:8080/roomart/weblayer/template/";
   String imageBaseUrl = "http://cloud.erp.web.id:8080";
   static const locCode = "RBOG";
   static const transactionCode = "DC";
