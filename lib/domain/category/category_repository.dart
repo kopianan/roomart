@@ -24,8 +24,7 @@ class CategoryRepository extends ICategoryFacade {
     Response _response;
 
     try {
-      _response = await dio.get(
-          "${Constants().baseUrlForCategoryOnly}api,KategoriData.vm?loccode=${Constants.locId}");
+      _response = await dio.get("${Constants().baseUrlForCategoryOnly}");
       List responseJson = json.decode(_response.data);
       Pref().saveCategoryToLocal(responseJson);
       final data =

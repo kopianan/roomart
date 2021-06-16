@@ -18,8 +18,13 @@ class Constants {
       "http://vipcloud.erp.web.id:8080/roomart/weblayer/template/";
 
 //if using VIP CLOUD, URL must be roomart version, not padasuka
+//if CLOUD TEMPLATE
+  // String baseUrlForCategoryOnly =
+  //     "http://cloud.erp.web.id:8080/padasuka/weblayer/template/api,KategoriData.vm?loccode=$locId";
+
+//VIP CLoud template
   String baseUrlForCategoryOnly =
-      "http://vipcloud.erp.web.id:8080/roomart/weblayer/template/";
+      "http://vipcloud.erp.web.id:8080/roomart/weblayer/template/api,KategoriData.vm?locId=$locCode";
 
   String itemUrl = "http://cloud.erp.web.id:8080/roomart/weblayer/template/";
   String imageBaseUrl = "http://cloud.erp.web.id:8080";
