@@ -544,7 +544,7 @@ class _PaymentPageState extends State<PaymentPage> {
           details: paidItem.map((e) => e.bought).toList())
     ]);
     print(_salesOrder.salesTrans.first.toJson());
-    Get.toNamed(PaymentProgressPage.TAG, arguments: _salesOrder);
+    Get.offAllNamed(PaymentProgressPage.TAG, arguments: _salesOrder);
   }
 
   String generateTransactionNumber(String prefix, String customerId) {
