@@ -98,7 +98,7 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
                                   elevation: 5,
                                   child: ListTile(
                                     title: Text(
-                                      "Poin saya",
+                                      "Saldo Saya",
                                       style: TextStyle(
                                           fontSize: 18,
                                           fontWeight: FontWeight.bold),

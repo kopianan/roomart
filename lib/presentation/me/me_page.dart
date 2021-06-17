@@ -109,12 +109,13 @@ class _MePageState extends State<MePage> {
                           orElse: () {},
                           onGetAllTransaction: (e) {
                             e.data.forEach((data) {
-                           
-                              if (data.transactionStatus == "1") {   print(data.totalAmount);
+                              if (data.transactionStatus == "1") {
+                                print("status == 1"); 
+                                print(data.totalAmount);
                                 balanceInProgress =
                                     double.parse(data.totalAmount) +
                                         balanceInProgress;
-                                print(balanceInProgress);
+                                setState(() {});
                               }
                             });
                           });
@@ -147,8 +148,9 @@ class _MePageState extends State<MePage> {
                         return Expanded(
                           child: saldoContainer(
                               "Dalam Proses",
-                              Formatter().formatStringCurrency(
-                                  balanceInProgress.toString()),
+                              // Formatter().formatStringCurrency(
+                              balanceInProgress.toString(),
+                              // ),
                               Colors.purple,
                               textColor: Colors.white),
                         );
