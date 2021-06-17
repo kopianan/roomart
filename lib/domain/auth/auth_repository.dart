@@ -68,7 +68,7 @@ class AuthRepository extends IAuthFacade {
       //Register to POS first
 
       response = await dio.get(
-          "${Constants().baseUrlProductionBackup}api,User.vm?method=register&email=${request.email}&password=${request.password}&firstname=${request.name}&dobday=${request.dateTime.day}&dobmonth=${request.dateTime.month}&dobyear=${request.dateTime.year}&phone=${request.phone}&address=alamat&tocust=true&ctype=DM151627192557861134072");
+          "${Constants().baseUrlProfile}api,User.vm?method=register&email=${request.email}&password=${request.password}&firstname=${request.name}&dobday=${request.dateTime.day}&dobmonth=${request.dateTime.month}&dobyear=${request.dateTime.year}&phone=${request.phone}&address=alamat&tocust=true&ctype=DM151627192557861134072");
       var model1;
       if (response.statusCode == 200) {
         model1 = UserRoomartDataModel.fromJson(json.decode(response.data));
@@ -95,7 +95,7 @@ class AuthRepository extends IAuthFacade {
 
     try {
       response = await dio.get(
-          "${Constants().baseUrlProductionBackup}api,User.vm?method=login&email=$email&password=$password");
+          "${Constants().baseUrlProfile}api,User.vm?method=login&email=$email&password=$password");
 
       var data = UserDataModel.fromJson(json.decode(response.data));
       if (data.error != 1) {
@@ -127,7 +127,7 @@ class AuthRepository extends IAuthFacade {
 
     try {
       response = await dio.get(
-          "${Constants().baseUrlProduction}api,AR.vm?cmd=2&custid=$userId");
+          "${Constants().baseUrlOtherApi}api,AR.vm?cmd=2&custid=$userId");
       var _balance = json.decode(response.data).first['ar_balance'].toString();
 
       return right(double.parse(_balance).abs().toString());
@@ -144,7 +144,7 @@ class AuthRepository extends IAuthFacade {
 
     try {
       response =
-          await dio.get("${Constants().baseUrlProduction}api,SPGDiscount.vm");
+          await dio.get("${Constants().baseUrlOtherApi}api,SPGDiscount.vm");
       List discountList = json.decode(response.data);
 
       var _list =
@@ -164,7 +164,7 @@ class AuthRepository extends IAuthFacade {
 
     try {
       response = await dio.get(
-          "${Constants().getBaseUrlProductionBackup}api,User.vm?method=saveProfile&email=${userData.email}&province=${userData.province}&city=${userData.city}&address=${userData.address}&village=${userData.village}&terrId1=${userData.terrId1}&terrId2=${userData.terrId2}&terrId3=${userData.terrId3}&tocust=true");
+          "${Constants().baseUrlProfile}api,User.vm?method=saveProfile&email=${userData.email}&province=${userData.province}&city=${userData.city}&address=${userData.address}&village=${userData.village}&terrId1=${userData.terrId1}&terrId2=${userData.terrId2}&terrId3=${userData.terrId3}&tocust=true");
       final data = json.decode(response.data);
 
       var _res = UserDataModel.fromJson(data);
@@ -183,7 +183,7 @@ class AuthRepository extends IAuthFacade {
     Response response;
     try {
       response = await dio.get(
-          "${Constants().getBaseUrlProductionBackup}api,SPGApps.vm?cmd=3&custemail=$email");
+          "${Constants().baseUrlProfile}api,SPGApps.vm?cmd=3&custemail=$email");
       List data = json.decode(response.data);
       if (data.length == 0) {
         return left("email tidak ditemukan");
@@ -225,7 +225,7 @@ class AuthRepository extends IAuthFacade {
     Response response;
     try {
       response = await dio.get(
-          '${Constants().baseUrlProductionBackup}/api,User.vm?method=changePassword&email=$username&oldpass=$oldPassword&newpass=$newPassword');
+          '${Constants().baseUrlProfile}/api,User.vm?method=changePassword&email=$username&oldpass=$oldPassword&newpass=$newPassword');
 
       var responseJson = json.decode(response.data);
       var _result = UserDataModel.fromJson(responseJson);

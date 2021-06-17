@@ -11,16 +11,23 @@ class Constants {
 
   String storageBox = 'roomart_storage_key';
 
-  //new base url
-  String baseUrlProduction =
-      "http://cloud.erp.web.id:8080/padasuka/weblayer/template/";
-  String baseUrlProductionBackup =
-      "http://cloud.erp.web.id:8080/roomart/weblayer/template/";
+// Config Cloud
+// Register, Login, Change Address, Forgot password, Edit Profile
+// Untuk Function diatas memakai template URL ini
+//  "http://cloud.erp.web.id:8080/roomart/weblayer/template/";
+//  Api Lain Memakai Template ini
+//   "http://cloud.erp.web.id:8080/padasuka/weblayer/template/";\
 
-//if using VIP CLOUD, URL must be roomart version, not padasuka
-//if CLOUD TEMPLATE
-  String baseUrlForCategoryOnly =
-      "http://cloud.erp.web.id:8080/padasuka/weblayer/template/api,KategoriData.vm?loccode=$locId";
+// Config VIP Cloud
+// Register, Login, Change Address, Forgot password, Edit Profile
+// http://vipcloud.erp.web.id:8080/roomart/weblayer/template/
+//  Api Lain Memakai Template ini
+//  "http://vipcloud.erp.web.id:8080/tokoku-android/weblayer/template/api,KategoriData.vm?locId=$locId";
+
+  String baseUrlProfile =
+      "http://cloud.erp.web.id:8080/roomart/weblayer/template/";
+  String baseUrlOtherApi =
+      "http://cloud.erp.web.id:8080/padasuka/weblayer/template/";
 
 //VIP CLoud template
   // String baseUrlForCategoryOnly =
@@ -33,9 +40,6 @@ class Constants {
   static const locId = "DM149993946251846586342";
 
   String get getUltimoBaseUrl => this._ultimoBaseUrl;
-  String get getBaseUrlProduction => this.baseUrlProduction;
-  String get getBaseUrlProductionBackup => this.baseUrlProductionBackup;
-  //url api untuk get coupon code
   String _ultimoBaseUrl = "http://roomart.erp.web.id/umbraco/api";
   String midtransBaseAPPProduction = "https://app.midtrans.com";
   String midtransBaseAPIProduction = "https://api.midtrans.com";

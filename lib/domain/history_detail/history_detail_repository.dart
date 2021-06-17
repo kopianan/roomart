@@ -26,7 +26,7 @@ class TransactionRepository extends IHistoryDetailFacade {
     Response response;
     try {
       response = await _dio.get(
-          "${Constants().baseUrlProduction}api,SPGApps.vm?cmd=4&txtype=SO_DETAIL&txno=${salesOrderId}");
+          "${Constants().baseUrlOtherApi}api,SPGApps.vm?cmd=4&txtype=SO_DETAIL&txno=${salesOrderId}");
 
       List responseJson = json.decode(response.data);
 
@@ -47,7 +47,7 @@ class TransactionRepository extends IHistoryDetailFacade {
 
     try {
       response = await _dio.get(
-          "${Constants().baseUrlProduction}api,SPGApps.vm?cmd=4&txtype=SI_DETAIL&txno=$salesTransactionID");
+          "${Constants().baseUrlOtherApi}api,SPGApps.vm?cmd=4&txtype=SI_DETAIL&txno=$salesTransactionID");
 
       List responseJson = json.decode(response.data);
 

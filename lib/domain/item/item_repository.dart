@@ -37,7 +37,7 @@ class ItemRepoistory extends IITemFacae {
       do {
         Response response;
         response = await dio.get(
-            '${Constants().baseUrlProductionBackup}api,SPGApps.vm?cmd=2&loccode=${Constants.locCode}&limit=1&offset=$counterOffset&sortby=updateDate&sortdirection=desc');
+            '${Constants().baseUrlProfile}api,SPGApps.vm?cmd=2&loccode=${Constants.locCode}&limit=1&offset=$counterOffset&sortby=updateDate&sortdirection=desc');
         List jsonData = json.decode(response.data.toString());
 
         List<DataItemModel> data =
@@ -97,7 +97,7 @@ class ItemRepoistory extends IITemFacae {
     try {
       Response response;
       response = await dio.get(
-          '${Constants().getBaseUrlProduction}api,SPGApps.vm?cmd=2&loccode=${Constants.locCode}&limit=$limit&itemname=$keywoard&offset=$offset');
+          '${Constants().baseUrlOtherApi}api,SPGApps.vm?cmd=2&loccode=${Constants.locCode}&limit=$limit&itemname=$keywoard&offset=$offset');
       List jsonData = json.decode(response.data);
 
       List<DataItemModel> data =
