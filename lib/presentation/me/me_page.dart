@@ -104,13 +104,12 @@ class _MePageState extends State<MePage> {
                     ..getAllTransaction(authController.getUserDataModel.userId),
                   child: BlocConsumer<TransactionCubit, TransactionState>(
                     listener: (context, state) {
-                      // TODO: implement listener
                       state.maybeMap(
                           orElse: () {},
                           onGetAllTransaction: (e) {
                             e.data.forEach((data) {
                               if (data.transactionStatus == "1") {
-                                print("status == 1"); 
+                                print("status == 1");
                                 print(data.totalAmount);
                                 balanceInProgress =
                                     double.parse(data.totalAmount) +
@@ -141,8 +140,11 @@ class _MePageState extends State<MePage> {
                         ));
                       }, loading: (e) {
                         return Expanded(
-                            child: Center(
-                          child: CircularProgressIndicator(),
+                            child: Container(
+                          color: Colors.purple,
+                          child: Center(
+                            child: CircularProgressIndicator(),
+                          ),
                         ));
                       }, onGetHistoryTransaction: (e) {
                         return Expanded(

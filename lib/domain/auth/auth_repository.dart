@@ -124,14 +124,19 @@ class AuthRepository extends IAuthFacade {
   @override
   Future<Either<String, String>> getUserBalance(String userId) async {
     Response response;
-
     try {
-      response = await dio.get(
-          "${Constants().baseUrlOtherApi}api,AR.vm?cmd=2&custid=$userId");
-      var _balance = json.decode(response.data).first['ar_balance'].toString();
+      response = await dio
+          .get("${Constants().baseUrlOtherApi}api,AR.vm?cmd=2&custid=$userId");
+
+      List listBalance = json.decode(response.data);
+      if (listBalance.length == 0) {
+        return right("0");
+      }
+      var _balance = listBalance.first['ar_balance'].toString();
 
       return right(double.parse(_balance).abs().toString());
     } on DioError catch (e) {
+      print(e);
       return left(json.decode(e.response.data)['message'].toString());
     } catch (e) {
       return left(e.toString());
