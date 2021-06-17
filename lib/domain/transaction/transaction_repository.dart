@@ -71,7 +71,7 @@ class TransactionRepository extends ITransactionFacade {
 // http://cloud.erp.web.id:8080/padasuka/weblayer/template/api,SPGApps.vm?cmd=4&txtype=SI&custcode=DM152204830857645176904&sortdate=desc
     try {
       response = await dio.get(
-        "${Constants().getBaseUrlProduction}api,SPGApps.vm?cmd=4&txtype=SI&custcode=${request.customerId}&sortdate=desc&limit=${request.limit}&offset=${request.offset}",
+        "${Constants().baseUrlOtherApi}api,SPGApps.vm?cmd=4&txtype=SI&custcode=${request.customerId}&sortdate=desc&limit=${request.limit}&offset=${request.offset}",
       );
       List data = json.decode(response.data);
       List<TransactionDataModelV2> _result =
@@ -147,7 +147,7 @@ class TransactionRepository extends ITransactionFacade {
 
     try {
       response = await dio.get(
-        "${Constants().getBaseUrlProduction}api,SPGApps.vm?cmd=4&txtype=SI&custcode=${request.customerId}&sortdate=desc&limit=${request.limit}&offset=${request.offset}",
+        "${Constants().baseUrlOtherApi}api,SPGApps.vm?cmd=4&txtype=SI&custcode=${request.customerId}&sortdate=desc&limit=${request.limit}&offset=${request.offset}",
       );
       List data = json.decode(response.data);
       List<TransactionDataModelV2> _result =
@@ -207,7 +207,7 @@ class TransactionRepository extends ITransactionFacade {
 
     try {
       response = await dio.get(
-        "${Constants().getBaseUrlProduction}api,SPGApps.vm?cmd=4&custcode=${request.customerId}&sortdate=desc&limit=${request.limit}&offset=${request.offset}",
+        "${Constants().baseUrlOtherApi}api,SPGApps.vm?cmd=4&custcode=${request.customerId}&sortdate=desc&limit=${request.limit}&offset=${request.offset}",
       );
 
       List data = json.decode(response.data);
@@ -228,7 +228,7 @@ class TransactionRepository extends ITransactionFacade {
 
     try {
       response = await dio.get(
-          "${Constants().baseUrlProduction}api,SPGApps.vm?cmd=4&custcode=${userId}&sortdate=desc");
+          "${Constants().baseUrlOtherApi}api,SPGApps.vm?cmd=4&custcode=${userId}&sortdate=desc");
 
       if (response.statusCode == 200) {
         var replace2 = response.data.replaceAll(RegExp(r'\t'), " ");

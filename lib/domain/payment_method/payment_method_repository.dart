@@ -23,7 +23,7 @@ class ItemRepoistory extends IPaymentMethodFacade {
     Response response;
     try {
       response =
-          await dio.get("${Constants().baseUrlProduction}api,POSAPI.vm?cmd=4");
+          await dio.get("${Constants().baseUrlOtherApi}api,POSAPI.vm?cmd=4");
 
       List jsonData = json.decode(response.data);
 

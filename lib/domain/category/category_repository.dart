@@ -22,9 +22,10 @@ class CategoryRepository extends ICategoryFacade {
   @override
   Future<Either<String, List<CategoryModel>>> getAllCategory() async {
     Response _response;
-
+          
     try {
-      _response = await dio.get("${Constants().baseUrlForCategoryOnly}");
+      _response = await dio.get(
+        "${Constants().baseUrlOtherApi}api,KategoriData.vm?loccode=${Constants.locId}");
       List responseJson = json.decode(_response.data);
       Pref().saveCategoryToLocal(responseJson);
       final data =
