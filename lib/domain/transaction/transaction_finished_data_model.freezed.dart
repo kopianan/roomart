@@ -19,65 +19,65 @@ class _$TransactionFinishedDataModelTearOff {
 
 // ignore: unused_element
   _TransactionFinishedDataModel call(
-      @JsonKey(name: "sales_transaction_detail_id")
+      @JsonKey(name: 'sales_transaction_detail_id')
           String salesTransactionDetailId,
-      @JsonKey(name: "sales_order_id")
+      @JsonKey(name: 'sales_order_id')
           String salesOrderId,
-      @JsonKey(name: "delivery_order_id")
+      @JsonKey(name: 'delivery_order_id')
           String deliveryOrderId,
-      @JsonKey(name: "delivery_order_detail_id")
+      @JsonKey(name: 'delivery_order_detail_id')
           String deliveryOrderDetailId,
-      @JsonKey(name: "sales_transaction_id")
+      @JsonKey(name: 'sales_transaction_id')
           String salesTransactionId,
-      @JsonKey(name: "index_no")
+      @JsonKey(name: 'index_no')
           String indexNo,
-      @JsonKey(name: "item_id")
+      @JsonKey(name: 'item_id')
           String itemId,
-      @JsonKey(name: "item_code")
+      @JsonKey(name: 'item_code')
           String itemCode,
-      @JsonKey(name: "item_name")
+      @JsonKey(name: 'item_name')
           String itemName,
-      @JsonKey(name: "description")
+      @JsonKey(name: 'description')
           String description,
-      @JsonKey(name: "unit_id")
+      @JsonKey(name: 'unit_id')
           String unitId,
-      @JsonKey(name: "unit_code")
+      @JsonKey(name: 'unit_code')
           String unitCode,
-      @JsonKey(name: "qty")
+      @JsonKey(name: 'qty')
           String qty,
-      @JsonKey(name: "qty_base")
+      @JsonKey(name: 'qty_base')
           String qtyBase,
-      @JsonKey(name: "returned_qty")
+      @JsonKey(name: 'returned_qty')
           String returnedQty,
-      @JsonKey(name: "item_price")
+      @JsonKey(name: 'item_price')
           String itemPrice,
-      @JsonKey(name: "tax_id")
+      @JsonKey(name: 'tax_id')
           String taxId,
-      @JsonKey(name: "tax_amount")
+      @JsonKey(name: 'tax_amount')
           String taxAmount,
-      @JsonKey(name: "sub_total_tax")
+      @JsonKey(name: 'sub_total_tax')
           String subTotalTax,
-      @JsonKey(name: "discount_id")
+      @JsonKey(name: 'discount_id')
           String discountId,
-      @JsonKey(name: "discount")
+      @JsonKey(name: 'discount')
           String discount,
-      @JsonKey(name: "sub_total_disc")
+      @JsonKey(name: 'sub_total_disc')
           String subTotalDisc,
-      @JsonKey(name: "item_cost")
+      @JsonKey(name: 'item_cost')
           String itemCost,
-      @JsonKey(name: "sub_total_cost")
+      @JsonKey(name: 'sub_total_cost')
           String subTotalCost,
-      @JsonKey(name: "sub_total")
+      @JsonKey(name: 'sub_total')
           String subTotal,
-      @JsonKey(name: "project_id")
+      @JsonKey(name: 'project_id')
           String projectId,
-      @JsonKey(name: "department_id")
+      @JsonKey(name: 'department_id')
           String departmentId,
-      @JsonKey(name: "employee_id")
+      @JsonKey(name: 'employee_id')
           String employeeId,
-      @JsonKey(name: "changed_manual")
+      @JsonKey(name: 'changed_manual')
           String changedManual,
-      @JsonKey(name: "item_picture", defaultValue: "")
+      @JsonKey(name: 'item_picture', defaultValue: '')
           String itemPicture) {
     return _TransactionFinishedDataModel(
       salesTransactionDetailId,
@@ -125,65 +125,65 @@ const $TransactionFinishedDataModel = _$TransactionFinishedDataModelTearOff();
 
 /// @nodoc
 mixin _$TransactionFinishedDataModel {
-  @JsonKey(name: "sales_transaction_detail_id")
+  @JsonKey(name: 'sales_transaction_detail_id')
   String get salesTransactionDetailId;
-  @JsonKey(name: "sales_order_id")
+  @JsonKey(name: 'sales_order_id')
   String get salesOrderId;
-  @JsonKey(name: "delivery_order_id")
+  @JsonKey(name: 'delivery_order_id')
   String get deliveryOrderId;
-  @JsonKey(name: "delivery_order_detail_id")
+  @JsonKey(name: 'delivery_order_detail_id')
   String get deliveryOrderDetailId;
-  @JsonKey(name: "sales_transaction_id")
+  @JsonKey(name: 'sales_transaction_id')
   String get salesTransactionId;
-  @JsonKey(name: "index_no")
+  @JsonKey(name: 'index_no')
   String get indexNo;
-  @JsonKey(name: "item_id")
+  @JsonKey(name: 'item_id')
   String get itemId;
-  @JsonKey(name: "item_code")
+  @JsonKey(name: 'item_code')
   String get itemCode;
-  @JsonKey(name: "item_name")
+  @JsonKey(name: 'item_name')
   String get itemName;
-  @JsonKey(name: "description")
+  @JsonKey(name: 'description')
   String get description;
-  @JsonKey(name: "unit_id")
+  @JsonKey(name: 'unit_id')
   String get unitId;
-  @JsonKey(name: "unit_code")
+  @JsonKey(name: 'unit_code')
   String get unitCode;
-  @JsonKey(name: "qty")
+  @JsonKey(name: 'qty')
   String get qty;
-  @JsonKey(name: "qty_base")
+  @JsonKey(name: 'qty_base')
   String get qtyBase;
-  @JsonKey(name: "returned_qty")
+  @JsonKey(name: 'returned_qty')
   String get returnedQty;
-  @JsonKey(name: "item_price")
+  @JsonKey(name: 'item_price')
   String get itemPrice;
-  @JsonKey(name: "tax_id")
+  @JsonKey(name: 'tax_id')
   String get taxId;
-  @JsonKey(name: "tax_amount")
+  @JsonKey(name: 'tax_amount')
   String get taxAmount;
-  @JsonKey(name: "sub_total_tax")
+  @JsonKey(name: 'sub_total_tax')
   String get subTotalTax;
-  @JsonKey(name: "discount_id")
+  @JsonKey(name: 'discount_id')
   String get discountId;
-  @JsonKey(name: "discount")
+  @JsonKey(name: 'discount')
   String get discount;
-  @JsonKey(name: "sub_total_disc")
+  @JsonKey(name: 'sub_total_disc')
   String get subTotalDisc;
-  @JsonKey(name: "item_cost")
+  @JsonKey(name: 'item_cost')
   String get itemCost;
-  @JsonKey(name: "sub_total_cost")
+  @JsonKey(name: 'sub_total_cost')
   String get subTotalCost;
-  @JsonKey(name: "sub_total")
+  @JsonKey(name: 'sub_total')
   String get subTotal;
-  @JsonKey(name: "project_id")
+  @JsonKey(name: 'project_id')
   String get projectId;
-  @JsonKey(name: "department_id")
+  @JsonKey(name: 'department_id')
   String get departmentId;
-  @JsonKey(name: "employee_id")
+  @JsonKey(name: 'employee_id')
   String get employeeId;
-  @JsonKey(name: "changed_manual")
+  @JsonKey(name: 'changed_manual')
   String get changedManual;
-  @JsonKey(name: "item_picture", defaultValue: "")
+  @JsonKey(name: 'item_picture', defaultValue: '')
   String get itemPicture;
 
   Map<String, dynamic> toJson();
@@ -199,65 +199,65 @@ abstract class $TransactionFinishedDataModelCopyWith<$Res> {
           $Res Function(TransactionFinishedDataModel) then) =
       _$TransactionFinishedDataModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: "sales_transaction_detail_id")
+      {@JsonKey(name: 'sales_transaction_detail_id')
           String salesTransactionDetailId,
-      @JsonKey(name: "sales_order_id")
+      @JsonKey(name: 'sales_order_id')
           String salesOrderId,
-      @JsonKey(name: "delivery_order_id")
+      @JsonKey(name: 'delivery_order_id')
           String deliveryOrderId,
-      @JsonKey(name: "delivery_order_detail_id")
+      @JsonKey(name: 'delivery_order_detail_id')
           String deliveryOrderDetailId,
-      @JsonKey(name: "sales_transaction_id")
+      @JsonKey(name: 'sales_transaction_id')
           String salesTransactionId,
-      @JsonKey(name: "index_no")
+      @JsonKey(name: 'index_no')
           String indexNo,
-      @JsonKey(name: "item_id")
+      @JsonKey(name: 'item_id')
           String itemId,
-      @JsonKey(name: "item_code")
+      @JsonKey(name: 'item_code')
           String itemCode,
-      @JsonKey(name: "item_name")
+      @JsonKey(name: 'item_name')
           String itemName,
-      @JsonKey(name: "description")
+      @JsonKey(name: 'description')
           String description,
-      @JsonKey(name: "unit_id")
+      @JsonKey(name: 'unit_id')
           String unitId,
-      @JsonKey(name: "unit_code")
+      @JsonKey(name: 'unit_code')
           String unitCode,
-      @JsonKey(name: "qty")
+      @JsonKey(name: 'qty')
           String qty,
-      @JsonKey(name: "qty_base")
+      @JsonKey(name: 'qty_base')
           String qtyBase,
-      @JsonKey(name: "returned_qty")
+      @JsonKey(name: 'returned_qty')
           String returnedQty,
-      @JsonKey(name: "item_price")
+      @JsonKey(name: 'item_price')
           String itemPrice,
-      @JsonKey(name: "tax_id")
+      @JsonKey(name: 'tax_id')
           String taxId,
-      @JsonKey(name: "tax_amount")
+      @JsonKey(name: 'tax_amount')
           String taxAmount,
-      @JsonKey(name: "sub_total_tax")
+      @JsonKey(name: 'sub_total_tax')
           String subTotalTax,
-      @JsonKey(name: "discount_id")
+      @JsonKey(name: 'discount_id')
           String discountId,
-      @JsonKey(name: "discount")
+      @JsonKey(name: 'discount')
           String discount,
-      @JsonKey(name: "sub_total_disc")
+      @JsonKey(name: 'sub_total_disc')
           String subTotalDisc,
-      @JsonKey(name: "item_cost")
+      @JsonKey(name: 'item_cost')
           String itemCost,
-      @JsonKey(name: "sub_total_cost")
+      @JsonKey(name: 'sub_total_cost')
           String subTotalCost,
-      @JsonKey(name: "sub_total")
+      @JsonKey(name: 'sub_total')
           String subTotal,
-      @JsonKey(name: "project_id")
+      @JsonKey(name: 'project_id')
           String projectId,
-      @JsonKey(name: "department_id")
+      @JsonKey(name: 'department_id')
           String departmentId,
-      @JsonKey(name: "employee_id")
+      @JsonKey(name: 'employee_id')
           String employeeId,
-      @JsonKey(name: "changed_manual")
+      @JsonKey(name: 'changed_manual')
           String changedManual,
-      @JsonKey(name: "item_picture", defaultValue: "")
+      @JsonKey(name: 'item_picture', defaultValue: '')
           String itemPicture});
 }
 
@@ -371,65 +371,65 @@ abstract class _$TransactionFinishedDataModelCopyWith<$Res>
       __$TransactionFinishedDataModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: "sales_transaction_detail_id")
+      {@JsonKey(name: 'sales_transaction_detail_id')
           String salesTransactionDetailId,
-      @JsonKey(name: "sales_order_id")
+      @JsonKey(name: 'sales_order_id')
           String salesOrderId,
-      @JsonKey(name: "delivery_order_id")
+      @JsonKey(name: 'delivery_order_id')
           String deliveryOrderId,
-      @JsonKey(name: "delivery_order_detail_id")
+      @JsonKey(name: 'delivery_order_detail_id')
           String deliveryOrderDetailId,
-      @JsonKey(name: "sales_transaction_id")
+      @JsonKey(name: 'sales_transaction_id')
           String salesTransactionId,
-      @JsonKey(name: "index_no")
+      @JsonKey(name: 'index_no')
           String indexNo,
-      @JsonKey(name: "item_id")
+      @JsonKey(name: 'item_id')
           String itemId,
-      @JsonKey(name: "item_code")
+      @JsonKey(name: 'item_code')
           String itemCode,
-      @JsonKey(name: "item_name")
+      @JsonKey(name: 'item_name')
           String itemName,
-      @JsonKey(name: "description")
+      @JsonKey(name: 'description')
           String description,
-      @JsonKey(name: "unit_id")
+      @JsonKey(name: 'unit_id')
           String unitId,
-      @JsonKey(name: "unit_code")
+      @JsonKey(name: 'unit_code')
           String unitCode,
-      @JsonKey(name: "qty")
+      @JsonKey(name: 'qty')
           String qty,
-      @JsonKey(name: "qty_base")
+      @JsonKey(name: 'qty_base')
           String qtyBase,
-      @JsonKey(name: "returned_qty")
+      @JsonKey(name: 'returned_qty')
           String returnedQty,
-      @JsonKey(name: "item_price")
+      @JsonKey(name: 'item_price')
           String itemPrice,
-      @JsonKey(name: "tax_id")
+      @JsonKey(name: 'tax_id')
           String taxId,
-      @JsonKey(name: "tax_amount")
+      @JsonKey(name: 'tax_amount')
           String taxAmount,
-      @JsonKey(name: "sub_total_tax")
+      @JsonKey(name: 'sub_total_tax')
           String subTotalTax,
-      @JsonKey(name: "discount_id")
+      @JsonKey(name: 'discount_id')
           String discountId,
-      @JsonKey(name: "discount")
+      @JsonKey(name: 'discount')
           String discount,
-      @JsonKey(name: "sub_total_disc")
+      @JsonKey(name: 'sub_total_disc')
           String subTotalDisc,
-      @JsonKey(name: "item_cost")
+      @JsonKey(name: 'item_cost')
           String itemCost,
-      @JsonKey(name: "sub_total_cost")
+      @JsonKey(name: 'sub_total_cost')
           String subTotalCost,
-      @JsonKey(name: "sub_total")
+      @JsonKey(name: 'sub_total')
           String subTotal,
-      @JsonKey(name: "project_id")
+      @JsonKey(name: 'project_id')
           String projectId,
-      @JsonKey(name: "department_id")
+      @JsonKey(name: 'department_id')
           String departmentId,
-      @JsonKey(name: "employee_id")
+      @JsonKey(name: 'employee_id')
           String employeeId,
-      @JsonKey(name: "changed_manual")
+      @JsonKey(name: 'changed_manual')
           String changedManual,
-      @JsonKey(name: "item_picture", defaultValue: "")
+      @JsonKey(name: 'item_picture', defaultValue: '')
           String itemPicture});
 }
 
@@ -527,65 +527,65 @@ class __$TransactionFinishedDataModelCopyWithImpl<$Res>
 /// @nodoc
 class _$_TransactionFinishedDataModel implements _TransactionFinishedDataModel {
   _$_TransactionFinishedDataModel(
-      @JsonKey(name: "sales_transaction_detail_id")
+      @JsonKey(name: 'sales_transaction_detail_id')
           this.salesTransactionDetailId,
-      @JsonKey(name: "sales_order_id")
+      @JsonKey(name: 'sales_order_id')
           this.salesOrderId,
-      @JsonKey(name: "delivery_order_id")
+      @JsonKey(name: 'delivery_order_id')
           this.deliveryOrderId,
-      @JsonKey(name: "delivery_order_detail_id")
+      @JsonKey(name: 'delivery_order_detail_id')
           this.deliveryOrderDetailId,
-      @JsonKey(name: "sales_transaction_id")
+      @JsonKey(name: 'sales_transaction_id')
           this.salesTransactionId,
-      @JsonKey(name: "index_no")
+      @JsonKey(name: 'index_no')
           this.indexNo,
-      @JsonKey(name: "item_id")
+      @JsonKey(name: 'item_id')
           this.itemId,
-      @JsonKey(name: "item_code")
+      @JsonKey(name: 'item_code')
           this.itemCode,
-      @JsonKey(name: "item_name")
+      @JsonKey(name: 'item_name')
           this.itemName,
-      @JsonKey(name: "description")
+      @JsonKey(name: 'description')
           this.description,
-      @JsonKey(name: "unit_id")
+      @JsonKey(name: 'unit_id')
           this.unitId,
-      @JsonKey(name: "unit_code")
+      @JsonKey(name: 'unit_code')
           this.unitCode,
-      @JsonKey(name: "qty")
+      @JsonKey(name: 'qty')
           this.qty,
-      @JsonKey(name: "qty_base")
+      @JsonKey(name: 'qty_base')
           this.qtyBase,
-      @JsonKey(name: "returned_qty")
+      @JsonKey(name: 'returned_qty')
           this.returnedQty,
-      @JsonKey(name: "item_price")
+      @JsonKey(name: 'item_price')
           this.itemPrice,
-      @JsonKey(name: "tax_id")
+      @JsonKey(name: 'tax_id')
           this.taxId,
-      @JsonKey(name: "tax_amount")
+      @JsonKey(name: 'tax_amount')
           this.taxAmount,
-      @JsonKey(name: "sub_total_tax")
+      @JsonKey(name: 'sub_total_tax')
           this.subTotalTax,
-      @JsonKey(name: "discount_id")
+      @JsonKey(name: 'discount_id')
           this.discountId,
-      @JsonKey(name: "discount")
+      @JsonKey(name: 'discount')
           this.discount,
-      @JsonKey(name: "sub_total_disc")
+      @JsonKey(name: 'sub_total_disc')
           this.subTotalDisc,
-      @JsonKey(name: "item_cost")
+      @JsonKey(name: 'item_cost')
           this.itemCost,
-      @JsonKey(name: "sub_total_cost")
+      @JsonKey(name: 'sub_total_cost')
           this.subTotalCost,
-      @JsonKey(name: "sub_total")
+      @JsonKey(name: 'sub_total')
           this.subTotal,
-      @JsonKey(name: "project_id")
+      @JsonKey(name: 'project_id')
           this.projectId,
-      @JsonKey(name: "department_id")
+      @JsonKey(name: 'department_id')
           this.departmentId,
-      @JsonKey(name: "employee_id")
+      @JsonKey(name: 'employee_id')
           this.employeeId,
-      @JsonKey(name: "changed_manual")
+      @JsonKey(name: 'changed_manual')
           this.changedManual,
-      @JsonKey(name: "item_picture", defaultValue: "")
+      @JsonKey(name: 'item_picture', defaultValue: '')
           this.itemPicture)
       : assert(salesTransactionDetailId != null),
         assert(salesOrderId != null),
@@ -622,94 +622,94 @@ class _$_TransactionFinishedDataModel implements _TransactionFinishedDataModel {
       _$_$_TransactionFinishedDataModelFromJson(json);
 
   @override
-  @JsonKey(name: "sales_transaction_detail_id")
+  @JsonKey(name: 'sales_transaction_detail_id')
   final String salesTransactionDetailId;
   @override
-  @JsonKey(name: "sales_order_id")
+  @JsonKey(name: 'sales_order_id')
   final String salesOrderId;
   @override
-  @JsonKey(name: "delivery_order_id")
+  @JsonKey(name: 'delivery_order_id')
   final String deliveryOrderId;
   @override
-  @JsonKey(name: "delivery_order_detail_id")
+  @JsonKey(name: 'delivery_order_detail_id')
   final String deliveryOrderDetailId;
   @override
-  @JsonKey(name: "sales_transaction_id")
+  @JsonKey(name: 'sales_transaction_id')
   final String salesTransactionId;
   @override
-  @JsonKey(name: "index_no")
+  @JsonKey(name: 'index_no')
   final String indexNo;
   @override
-  @JsonKey(name: "item_id")
+  @JsonKey(name: 'item_id')
   final String itemId;
   @override
-  @JsonKey(name: "item_code")
+  @JsonKey(name: 'item_code')
   final String itemCode;
   @override
-  @JsonKey(name: "item_name")
+  @JsonKey(name: 'item_name')
   final String itemName;
   @override
-  @JsonKey(name: "description")
+  @JsonKey(name: 'description')
   final String description;
   @override
-  @JsonKey(name: "unit_id")
+  @JsonKey(name: 'unit_id')
   final String unitId;
   @override
-  @JsonKey(name: "unit_code")
+  @JsonKey(name: 'unit_code')
   final String unitCode;
   @override
-  @JsonKey(name: "qty")
+  @JsonKey(name: 'qty')
   final String qty;
   @override
-  @JsonKey(name: "qty_base")
+  @JsonKey(name: 'qty_base')
   final String qtyBase;
   @override
-  @JsonKey(name: "returned_qty")
+  @JsonKey(name: 'returned_qty')
   final String returnedQty;
   @override
-  @JsonKey(name: "item_price")
+  @JsonKey(name: 'item_price')
   final String itemPrice;
   @override
-  @JsonKey(name: "tax_id")
+  @JsonKey(name: 'tax_id')
   final String taxId;
   @override
-  @JsonKey(name: "tax_amount")
+  @JsonKey(name: 'tax_amount')
   final String taxAmount;
   @override
-  @JsonKey(name: "sub_total_tax")
+  @JsonKey(name: 'sub_total_tax')
   final String subTotalTax;
   @override
-  @JsonKey(name: "discount_id")
+  @JsonKey(name: 'discount_id')
   final String discountId;
   @override
-  @JsonKey(name: "discount")
+  @JsonKey(name: 'discount')
   final String discount;
   @override
-  @JsonKey(name: "sub_total_disc")
+  @JsonKey(name: 'sub_total_disc')
   final String subTotalDisc;
   @override
-  @JsonKey(name: "item_cost")
+  @JsonKey(name: 'item_cost')
   final String itemCost;
   @override
-  @JsonKey(name: "sub_total_cost")
+  @JsonKey(name: 'sub_total_cost')
   final String subTotalCost;
   @override
-  @JsonKey(name: "sub_total")
+  @JsonKey(name: 'sub_total')
   final String subTotal;
   @override
-  @JsonKey(name: "project_id")
+  @JsonKey(name: 'project_id')
   final String projectId;
   @override
-  @JsonKey(name: "department_id")
+  @JsonKey(name: 'department_id')
   final String departmentId;
   @override
-  @JsonKey(name: "employee_id")
+  @JsonKey(name: 'employee_id')
   final String employeeId;
   @override
-  @JsonKey(name: "changed_manual")
+  @JsonKey(name: 'changed_manual')
   final String changedManual;
   @override
-  @JsonKey(name: "item_picture", defaultValue: "")
+  @JsonKey(name: 'item_picture', defaultValue: '')
   final String itemPicture;
 
   @override
@@ -835,159 +835,159 @@ class _$_TransactionFinishedDataModel implements _TransactionFinishedDataModel {
 abstract class _TransactionFinishedDataModel
     implements TransactionFinishedDataModel {
   factory _TransactionFinishedDataModel(
-      @JsonKey(name: "sales_transaction_detail_id")
+      @JsonKey(name: 'sales_transaction_detail_id')
           String salesTransactionDetailId,
-      @JsonKey(name: "sales_order_id")
+      @JsonKey(name: 'sales_order_id')
           String salesOrderId,
-      @JsonKey(name: "delivery_order_id")
+      @JsonKey(name: 'delivery_order_id')
           String deliveryOrderId,
-      @JsonKey(name: "delivery_order_detail_id")
+      @JsonKey(name: 'delivery_order_detail_id')
           String deliveryOrderDetailId,
-      @JsonKey(name: "sales_transaction_id")
+      @JsonKey(name: 'sales_transaction_id')
           String salesTransactionId,
-      @JsonKey(name: "index_no")
+      @JsonKey(name: 'index_no')
           String indexNo,
-      @JsonKey(name: "item_id")
+      @JsonKey(name: 'item_id')
           String itemId,
-      @JsonKey(name: "item_code")
+      @JsonKey(name: 'item_code')
           String itemCode,
-      @JsonKey(name: "item_name")
+      @JsonKey(name: 'item_name')
           String itemName,
-      @JsonKey(name: "description")
+      @JsonKey(name: 'description')
           String description,
-      @JsonKey(name: "unit_id")
+      @JsonKey(name: 'unit_id')
           String unitId,
-      @JsonKey(name: "unit_code")
+      @JsonKey(name: 'unit_code')
           String unitCode,
-      @JsonKey(name: "qty")
+      @JsonKey(name: 'qty')
           String qty,
-      @JsonKey(name: "qty_base")
+      @JsonKey(name: 'qty_base')
           String qtyBase,
-      @JsonKey(name: "returned_qty")
+      @JsonKey(name: 'returned_qty')
           String returnedQty,
-      @JsonKey(name: "item_price")
+      @JsonKey(name: 'item_price')
           String itemPrice,
-      @JsonKey(name: "tax_id")
+      @JsonKey(name: 'tax_id')
           String taxId,
-      @JsonKey(name: "tax_amount")
+      @JsonKey(name: 'tax_amount')
           String taxAmount,
-      @JsonKey(name: "sub_total_tax")
+      @JsonKey(name: 'sub_total_tax')
           String subTotalTax,
-      @JsonKey(name: "discount_id")
+      @JsonKey(name: 'discount_id')
           String discountId,
-      @JsonKey(name: "discount")
+      @JsonKey(name: 'discount')
           String discount,
-      @JsonKey(name: "sub_total_disc")
+      @JsonKey(name: 'sub_total_disc')
           String subTotalDisc,
-      @JsonKey(name: "item_cost")
+      @JsonKey(name: 'item_cost')
           String itemCost,
-      @JsonKey(name: "sub_total_cost")
+      @JsonKey(name: 'sub_total_cost')
           String subTotalCost,
-      @JsonKey(name: "sub_total")
+      @JsonKey(name: 'sub_total')
           String subTotal,
-      @JsonKey(name: "project_id")
+      @JsonKey(name: 'project_id')
           String projectId,
-      @JsonKey(name: "department_id")
+      @JsonKey(name: 'department_id')
           String departmentId,
-      @JsonKey(name: "employee_id")
+      @JsonKey(name: 'employee_id')
           String employeeId,
-      @JsonKey(name: "changed_manual")
+      @JsonKey(name: 'changed_manual')
           String changedManual,
-      @JsonKey(name: "item_picture", defaultValue: "")
+      @JsonKey(name: 'item_picture', defaultValue: '')
           String itemPicture) = _$_TransactionFinishedDataModel;
 
   factory _TransactionFinishedDataModel.fromJson(Map<String, dynamic> json) =
       _$_TransactionFinishedDataModel.fromJson;
 
   @override
-  @JsonKey(name: "sales_transaction_detail_id")
+  @JsonKey(name: 'sales_transaction_detail_id')
   String get salesTransactionDetailId;
   @override
-  @JsonKey(name: "sales_order_id")
+  @JsonKey(name: 'sales_order_id')
   String get salesOrderId;
   @override
-  @JsonKey(name: "delivery_order_id")
+  @JsonKey(name: 'delivery_order_id')
   String get deliveryOrderId;
   @override
-  @JsonKey(name: "delivery_order_detail_id")
+  @JsonKey(name: 'delivery_order_detail_id')
   String get deliveryOrderDetailId;
   @override
-  @JsonKey(name: "sales_transaction_id")
+  @JsonKey(name: 'sales_transaction_id')
   String get salesTransactionId;
   @override
-  @JsonKey(name: "index_no")
+  @JsonKey(name: 'index_no')
   String get indexNo;
   @override
-  @JsonKey(name: "item_id")
+  @JsonKey(name: 'item_id')
   String get itemId;
   @override
-  @JsonKey(name: "item_code")
+  @JsonKey(name: 'item_code')
   String get itemCode;
   @override
-  @JsonKey(name: "item_name")
+  @JsonKey(name: 'item_name')
   String get itemName;
   @override
-  @JsonKey(name: "description")
+  @JsonKey(name: 'description')
   String get description;
   @override
-  @JsonKey(name: "unit_id")
+  @JsonKey(name: 'unit_id')
   String get unitId;
   @override
-  @JsonKey(name: "unit_code")
+  @JsonKey(name: 'unit_code')
   String get unitCode;
   @override
-  @JsonKey(name: "qty")
+  @JsonKey(name: 'qty')
   String get qty;
   @override
-  @JsonKey(name: "qty_base")
+  @JsonKey(name: 'qty_base')
   String get qtyBase;
   @override
-  @JsonKey(name: "returned_qty")
+  @JsonKey(name: 'returned_qty')
   String get returnedQty;
   @override
-  @JsonKey(name: "item_price")
+  @JsonKey(name: 'item_price')
   String get itemPrice;
   @override
-  @JsonKey(name: "tax_id")
+  @JsonKey(name: 'tax_id')
   String get taxId;
   @override
-  @JsonKey(name: "tax_amount")
+  @JsonKey(name: 'tax_amount')
   String get taxAmount;
   @override
-  @JsonKey(name: "sub_total_tax")
+  @JsonKey(name: 'sub_total_tax')
   String get subTotalTax;
   @override
-  @JsonKey(name: "discount_id")
+  @JsonKey(name: 'discount_id')
   String get discountId;
   @override
-  @JsonKey(name: "discount")
+  @JsonKey(name: 'discount')
   String get discount;
   @override
-  @JsonKey(name: "sub_total_disc")
+  @JsonKey(name: 'sub_total_disc')
   String get subTotalDisc;
   @override
-  @JsonKey(name: "item_cost")
+  @JsonKey(name: 'item_cost')
   String get itemCost;
   @override
-  @JsonKey(name: "sub_total_cost")
+  @JsonKey(name: 'sub_total_cost')
   String get subTotalCost;
   @override
-  @JsonKey(name: "sub_total")
+  @JsonKey(name: 'sub_total')
   String get subTotal;
   @override
-  @JsonKey(name: "project_id")
+  @JsonKey(name: 'project_id')
   String get projectId;
   @override
-  @JsonKey(name: "department_id")
+  @JsonKey(name: 'department_id')
   String get departmentId;
   @override
-  @JsonKey(name: "employee_id")
+  @JsonKey(name: 'employee_id')
   String get employeeId;
   @override
-  @JsonKey(name: "changed_manual")
+  @JsonKey(name: 'changed_manual')
   String get changedManual;
   @override
-  @JsonKey(name: "item_picture", defaultValue: "")
+  @JsonKey(name: 'item_picture', defaultValue: '')
   String get itemPicture;
   @override
   @JsonKey(ignore: true)

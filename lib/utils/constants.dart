@@ -7,26 +7,41 @@ class Constants {
   static const logo = "assets/logo.png";
   static const promotion_image = "assets/promotion.png";
   static const title_appbar = "Sally Store";
-  String resellerParentID = "DM162355984300400041590"; //Disesuaikan dengan kode reseller
+  String resellerParentID =
+      "DM162355984300400041590"; //Disesuaikan dengan kode reseller
 
   String storageBox = 'roomart_storage_key';
 
-  //new base url
-  String baseUrlProduction =
-      "http://cloud.erp.web.id:8080/padasuka/weblayer/template/";
-  String baseUrlProductionBackup =
-      "http://cloud.erp.web.id:8080/roomart/weblayer/template/";
+// Config Cloud
+// Register, Login, Change Address, Forgot password, Edit Profile
+// Untuk Function diatas memakai template URL ini
+//  "http://cloud.erp.web.id:8080/roomart/weblayer/template/";
+//  Api Lain Memakai Template ini
+//   "http://cloud.erp.web.id:8080/padasuka/weblayer/template/";\
 
-  String itemUrl = "http://cloud.erp.web.id:8080/roomart/weblayer/template/";
+// Config VIP Cloud
+// Register, Login, Change Address, Forgot password, Edit Profile
+// http://vipcloud.erp.web.id:8080/roomart/weblayer/template/
+//  Api Lain Memakai Template ini
+//  "http://vipcloud.erp.web.id:8080/tokoku-android/weblayer/template/";
+
+  String baseUrlProfile =
+      "http://vipcloud.erp.web.id:8080/roomart/weblayer/template/";
+  String baseUrlOtherApi =
+      "http://cloud.erp.web.id:8080/padasuka/weblayer/template/";
+
+//VIP CLoud template
+  // String baseUrlForCategoryOnly =
+  //     "http://vipcloud.erp.web.id:8080/roomart/weblayer/template/api,KategoriData.vm?locId=$locId";
+
+  String itemUrl = "http://cloud.erp.web.id:8080/padasuka/weblayer/template/";
+
   String imageBaseUrl = "http://cloud.erp.web.id:8080";
   static const locCode = "GODM";
   static const transactionCode = "RA";
   static const locId = "DM149993946251846586342";
 
   String get getUltimoBaseUrl => this._ultimoBaseUrl;
-  String get getBaseUrlProduction => this.baseUrlProduction;
-  String get getBaseUrlProductionBackup => this.baseUrlProductionBackup;
-  //url api untuk get coupon code
   String _ultimoBaseUrl = "http://roomart.erp.web.id/umbraco/api";
   String midtransBaseAPPProduction = "https://app.midtrans.com";
   String midtransBaseAPIProduction = "https://api.midtrans.com";

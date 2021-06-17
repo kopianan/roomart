@@ -83,6 +83,6 @@ flutter_icons:
 
 
 
-
-    # flutter pub run rename --bundleId com.onatcipli.networkUpp
-    # flutter pub run rename --appname "Network Upp"
+#     flutter pub run rename --bundleId com.onatcipli.networkUpp
+#     flutter pub run rename --appname "Network Upp"
+#     flutter pub run flutter_launcher_icons:main

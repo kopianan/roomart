@@ -22,6 +22,7 @@ class _TransactionHistoryDetailPageState
   @override
   void initState() {
     detail = Get.arguments as TransactionDataModel;
+    print(detail.items); 
     super.initState();
   }
 
@@ -210,8 +211,8 @@ class SummaryDetail extends StatelessWidget {
     return Column(
       children: [
         // detailSummaryItem(label: "Ongkos kirim", value: "90000"),
-        detailSummaryItem(
-            label: "Discount", value: data.totalDiscount.toString()),
+        // detailSummaryItem(
+        //     label: "Discount", value: data.totalDiscount.toString()),
         detailSummaryItem(label: "Total", value: data.total.toString()),
       ],
     );

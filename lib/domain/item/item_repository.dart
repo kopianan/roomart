@@ -37,12 +37,14 @@ class ItemRepoistory extends IITemFacae {
       do {
         Response response;
         response = await dio.get(
-            '${Constants().baseUrlProductionBackup}api,SPGApps.vm?cmd=2&loccode=${Constants.locCode}&limit=1&offset=$counterOffset&sortby=updateDate&sortdirection=desc');
+            '${Constants().baseUrlProfile}api,SPGApps.vm?cmd=2&loccode=${Constants.locCode}&limit=1&offset=$counterOffset&sortby=updateDate&sortdirection=desc');
         List jsonData = json.decode(response.data.toString());
 
         List<DataItemModel> data =
             jsonData.map((m) => DataItemModel.fromJson(m)).toList();
-
+        if (data.length == 0) {
+          break;
+        }
         data.forEach((element) {
           double data = double.tryParse(element.qty);
           if (data != null) {
@@ -66,6 +68,8 @@ class ItemRepoistory extends IITemFacae {
     List<DataItemModel> _tempData = <DataItemModel>[];
     Response response;
     try {
+      response = await dio.get(
+          "${Constants().itemUrl}api,SPGApps.vm?cmd=2&loccode=${Constants.locCode}&kategoriid=${categoryId}&limit=$limit&offset=$offset");
       // response = await dio.get(
           // "http://cloud.erp.web.id:8080/roomart/weblayer/template/api,SPGApps.vm?cmd=2&loccode=${Constants.locCode}&kategoriid=${categoryId}&limit=$limit&offset=$offset");
       response = await dio.get(
@@ -95,7 +99,7 @@ class ItemRepoistory extends IITemFacae {
     try {
       Response response;
       response = await dio.get(
-          '${Constants().getBaseUrlProduction}api,SPGApps.vm?cmd=2&loccode=${Constants.locCode}&limit=$limit&itemname=$keywoard&offset=$offset');
+          '${Constants().baseUrlOtherApi}api,SPGApps.vm?cmd=2&loccode=${Constants.locCode}&limit=$limit&itemname=$keywoard&offset=$offset');
       List jsonData = json.decode(response.data);
 
       List<DataItemModel> data =

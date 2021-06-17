@@ -33,11 +33,13 @@ class CartController extends GetxController {
         itemCode: data.itemCode,
         itemId: data.itemId,
         qty: "1",
-        price: checkResellerPrice(data),
+        // price: checkResellerPrice(data),
+        price: data.itemPrice,
         discount: "0",
         itemImage: data.pic,
         itemName: data.itemName,
-        resellerPrice: double.parse(data.itemPrice),
+        // resellerPrice: double.parse(data.itemPrice),
+        resellerPrice: double.parse(data.newPrice),
         tax: "NoPPN",
       );
       print(_converted);
@@ -63,11 +65,14 @@ class CartController extends GetxController {
       itemCode: data.itemCode,
       itemId: data.itemId,
       qty: qty,
-      price: checkResellerPrice(data),
+      // price: checkResellerPrice(data),
+      price: data.itemPrice,
       discount: "0",
       itemImage: data.pic,
       itemName: data.itemName,
-      resellerPrice: double.parse(data.itemPrice),
+      // resellerPrice: double.parse(data.itemPrice),
+      resellerPrice: double.parse(data.newPrice),
+
       tax: "NoPPN",
     );
 
