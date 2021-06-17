@@ -229,7 +229,7 @@ class TransactionRepository extends ITransactionFacade {
     try {
       response = await dio.get(
           "${Constants().baseUrlOtherApi}api,SPGApps.vm?cmd=4&custcode=${userId}&sortdate=desc");
-
+      print(response);
       if (response.statusCode == 200) {
         var replace2 = response.data.replaceAll(RegExp(r'\t'), " ");
 
