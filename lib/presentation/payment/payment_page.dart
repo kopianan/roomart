@@ -519,9 +519,9 @@ class _PaymentPageState extends State<PaymentPage> {
     var _salesOrder = TransRequest(token: Constants().tokenUltimo, salesTrans: [
       TransPostDataModel(
           transNo: generateTransactionNumber(
-              "${Constants.transactionCode}-GODM", user.userId),
+              "${Constants.transactionCode}-${Constants.locCode}", user.userId),
           transType: "SO",
-          location: "GODM",
+          location: "${Constants.locCode}",
           transDt: DateFormat("dd/MM/yyyy").format(DateTime.now()),
           customer: user.userId,
           createBy: user.fullName,
