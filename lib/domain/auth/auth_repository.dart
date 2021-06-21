@@ -173,6 +173,9 @@ class AuthRepository extends IAuthFacade {
       final data = json.decode(response.data);
 
       var _res = UserDataModel.fromJson(data);
+      if (_res.error == 1) {
+        return left(_res.messageError);
+      }
       return right(_res);
     } on DioError catch (e) {
       print(e.requestOptions);
