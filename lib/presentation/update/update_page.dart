@@ -53,6 +53,7 @@ class _UpdatePageState extends State<UpdatePage> {
             ..getNewsListData(customerId: auth.getUserDataModel.userId),
           child: BlocConsumer<HomeCubit, HomeState>(
             listener: (context, state) {
+              print(state);
               state.maybeMap(
                 orElse: () {
                   _refreshController.refreshCompleted();
@@ -63,6 +64,26 @@ class _UpdatePageState extends State<UpdatePage> {
             builder: (context, state) {
               return state.maybeMap(orElse: () {
                 return Container();
+              }, error: (e) {
+                return Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.refresh,
+                        size: 80,
+                        color: Colors.grey,
+                      ),
+                      SizedBox(height: 20),
+                      TextButton(
+                          onPressed: () {
+                            homeCubit.getNewsListData(
+                                customerId: auth.getUserDataModel.userId);
+                          },
+                          child: Text("Refresh"))
+                    ],
+                  ),
+                );
               }, onGetNewsList: (e) {
                 return SmartRefresher(
                     enablePullDown: true,
