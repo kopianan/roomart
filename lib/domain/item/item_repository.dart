@@ -69,7 +69,7 @@ class ItemRepoistory extends IITemFacae {
     Response response;
     try {
       response = await dio.get(
-          "${Constants().itemUrl}api,SPGApps.vm?cmd=2&loccode=${Constants.locCode}&kategoriid=${categoryId}&limit=$limit&offset=$offset");
+          "${Constants().baseUrlOtherApi}api,SPGApps.vm?cmd=2&loccode=${Constants.locCode}&kategoriid=${categoryId}&limit=$limit&offset=$offset");
       // response = await dio.get(
       //     "${Constants().baseUrlProductionBackup}api,SPGApps.vm?cmd=2&loccode=${Constants.locCode}&kategoriid=${categoryId}&limit=$limit&offset=$offset");
 

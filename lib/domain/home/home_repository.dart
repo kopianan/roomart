@@ -44,12 +44,13 @@ class HomeRepository extends IHomeFacade {
   Future<Either<String, List<UpdateNewsDataModel>>> getNewsList(
       String customerId) async {
     var data = {"Token": Constants().tokenUltimo, "CustomerID": customerId};
+    print(data); 
     try {
       var response = await dio.post(
           "${Constants().getUltimoBaseUrl}/Announcement/GetAllMessageByCustomerID",
           data: data,
           options: options);
-
+      print(response.requestOptions);
       List _data = response.data;
       final List _result =
           _data.map((e) => UpdateNewsDataModel.fromJson(e)).toList();

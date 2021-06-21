@@ -29,7 +29,11 @@ class Constants {
   String baseUrlOtherApi =
       "http://vipcloud.erp.web.id:8080/tokoku-android/weblayer/template/";
 
-  String itemUrl = "http://vipcloud.erp.web.id:8080/tokoku-android/weblayer/template/";
+//VIP CLoud template
+  // String baseUrlForCategoryOnly =
+  //     "http://vipcloud.erp.web.id:8080/roomart/weblayer/template/api,KategoriData.vm?locId=$locId";
+
+  // String itemUrl = "http://cloud.erp.web.id:8080/roomart/weblayer/template/";
   String imageBaseUrl = "http://cloud.erp.web.id:8080";
   static const locCode = "RBOG";
   static const transactionCode = "DC";

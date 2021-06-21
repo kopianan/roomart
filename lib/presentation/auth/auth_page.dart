@@ -4,6 +4,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/application/auth/auth_cubit.dart';
+import 'package:roomart/application/home/home_controller.dart';
 import 'package:roomart/infrastructure/core/pref.dart';
 import 'package:roomart/presentation/auth/sign_up/register_page.dart';
 import 'package:roomart/presentation/config_widgets/widget_collection.dart';
@@ -26,7 +27,7 @@ class _AuthPageState extends State<AuthPage> {
   final formKey = GlobalKey<FormState>();
   final authController = Get.put(AuthController());
   bool isObsecure = true;
-
+  final homeController = Get.put(HomeController());
   final authCubit = getIt<AuthCubit>();
   @override
   Widget build(BuildContext context) {
@@ -66,7 +67,8 @@ class _AuthPageState extends State<AuthPage> {
                   ));
                   Pref().saveUserDataToLocal(e.user.toJson());
                   authController.setDataModel(e.user);
-                  Get.offAllNamed(SplashScreenPage.TAG);
+                  homeController.pageChanged(0);
+                  homeController.onBottomTap(0);
                 });
           }, builder: (context, state) {
             return Container(

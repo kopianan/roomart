@@ -117,7 +117,7 @@ class _RegisterPageState extends State<RegisterPage> {
                           lastDate: DateTime.now(),
                         );
                         String formatted =
-                            DateFormat("dd MMMMM yyyy").format(date);
+                            DateFormat("dd MMMM yyyy").format(date);
                         _dateOfBirth.text = formatted;
                       },
                     ),

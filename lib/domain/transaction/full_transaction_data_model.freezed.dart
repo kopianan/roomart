@@ -19,53 +19,53 @@ class _$FullTransactionDataModelTearOff {
 
 // ignore: unused_element
   _FullTransactionDataModel call(
-      {@JsonKey(name: 'sales_order_id') String salesOrderId,
-      @JsonKey(name: 'transaction_status') String transactionStatus,
-      @JsonKey(name: 'sales_order_no') String salesOrderNo,
-      @JsonKey(name: 'transaction_date') String transactionDate,
-      @JsonKey(name: 'due_date') String dueDate,
-      @JsonKey(name: 'customer_id') String customerId,
-      @JsonKey(name: 'customer_name') String customerName,
-      @JsonKey(name: 'customer_po_no') String customerPoNo,
-      @JsonKey(name: 'customer_po_date') String customerPoDate,
-      @JsonKey(name: 'total_qty') String totalQty,
-      @JsonKey(name: 'total_amount') String totalAmount,
-      @JsonKey(name: 'total_discount_pct') String totalDiscountPct,
-      @JsonKey(name: 'total_discount') String totalDiscount,
-      @JsonKey(name: 'total_fee') String totalFee,
-      @JsonKey(name: 'total_tax') String totalTax,
-      @JsonKey(name: 'remark') String remark,
-      @JsonKey(name: 'payment_type_id') String paymentTypeId,
-      @JsonKey(name: 'payment_term_id') String paymentTermId,
-      @JsonKey(name: 'currency_id') String currencyId,
-      @JsonKey(name: 'currency_rate') String currencyRate,
-      @JsonKey(name: 'location_id') String locationId,
-      @JsonKey(name: 'print_times') String printTimes,
-      @JsonKey(name: 'user_name') String userName,
-      @JsonKey(name: 'confirm_by') String confirmBy,
-      @JsonKey(name: 'confirm_date') String confirmDate,
-      @JsonKey(name: 'down_payment') String downPayment,
-      @JsonKey(name: 'ship_to') String shipTo,
-      @JsonKey(name: 'ship_date') String shipDate,
-      @JsonKey(name: 'bank_id') String bankId,
-      @JsonKey(name: 'bank_issuer') String bankIssuer,
-      @JsonKey(name: 'dp_account_id') String dpAccountId,
-      @JsonKey(name: 'dp_due_date') String dpDueDate,
-      @JsonKey(name: 'reference_no') String referenceNo,
-      @JsonKey(name: 'cash_flow_type_id') String cashFlowTypeId,
-      @JsonKey(name: 'sales_id') String salesId,
-      @JsonKey(name: 'courier_id') String courierId,
-      @JsonKey(name: 'fob_id') String fobId,
-      @JsonKey(name: 'estimated_freight') String estimatedFreight,
-      @JsonKey(name: 'is_taxable') String isTaxable,
-      @JsonKey(name: 'is_inclusive_tax') String isInclusiveTax,
-      @JsonKey(name: 'fiscal_rate') String fiscalRate,
-      @JsonKey(name: 'freight_account_id') String freightAccountId,
-      @JsonKey(name: 'is_inclusive_freight') String isInclusiveFreight,
-      @JsonKey(name: 'cancel_by') String cancelBy,
-      @JsonKey(name: 'cancel_date') String cancelDate,
-      @JsonKey(name: 'ongkir') String ongkir,
-      @JsonKey(name: 'promocode') String promocode}) {
+      {@JsonKey(name: "sales_order_id") String salesOrderId,
+      @JsonKey(name: "transaction_status") String transactionStatus,
+      @JsonKey(name: "sales_order_no") String salesOrderNo,
+      @JsonKey(name: "transaction_date") String transactionDate,
+      @JsonKey(name: "due_date") String dueDate,
+      @JsonKey(name: "customer_id") String customerId,
+      @JsonKey(name: "customer_name") String customerName,
+      @JsonKey(name: "customer_po_no") String customerPoNo,
+      @JsonKey(name: "customer_po_date") String customerPoDate,
+      @JsonKey(name: "total_qty") String totalQty,
+      @JsonKey(name: "total_amount") String totalAmount,
+      @JsonKey(name: "total_discount_pct") String totalDiscountPct,
+      @JsonKey(name: "total_discount") String totalDiscount,
+      @JsonKey(name: "total_fee") String totalFee,
+      @JsonKey(name: "total_tax") String totalTax,
+      @JsonKey(name: "remark") String remark,
+      @JsonKey(name: "payment_type_id") String paymentTypeId,
+      @JsonKey(name: "payment_term_id") String paymentTermId,
+      @JsonKey(name: "currency_id") String currencyId,
+      @JsonKey(name: "currency_rate") String currencyRate,
+      @JsonKey(name: "location_id") String locationId,
+      @JsonKey(name: "print_times") String printTimes,
+      @JsonKey(name: "user_name") String userName,
+      @JsonKey(name: "confirm_by") String confirmBy,
+      @JsonKey(name: "confirm_date") String confirmDate,
+      @JsonKey(name: "down_payment") String downPayment,
+      @JsonKey(name: "ship_to") String shipTo,
+      @JsonKey(name: "ship_date") String shipDate,
+      @JsonKey(name: "bank_id") String bankId,
+      @JsonKey(name: "bank_issuer") String bankIssuer,
+      @JsonKey(name: "dp_account_id") String dpAccountId,
+      @JsonKey(name: "dp_due_date") String dpDueDate,
+      @JsonKey(name: "reference_no") String referenceNo,
+      @JsonKey(name: "cash_flow_type_id") String cashFlowTypeId,
+      @JsonKey(name: "sales_id") String salesId,
+      @JsonKey(name: "courier_id") String courierId,
+      @JsonKey(name: "fob_id") String fobId,
+      @JsonKey(name: "estimated_freight") String estimatedFreight,
+      @JsonKey(name: "is_taxable") String isTaxable,
+      @JsonKey(name: "is_inclusive_tax") String isInclusiveTax,
+      @JsonKey(name: "fiscal_rate") String fiscalRate,
+      @JsonKey(name: "freight_account_id") String freightAccountId,
+      @JsonKey(name: "is_inclusive_freight") String isInclusiveFreight,
+      @JsonKey(name: "cancel_by") String cancelBy,
+      @JsonKey(name: "cancel_date") String cancelDate,
+      @JsonKey(name: "ongkir") String ongkir,
+      @JsonKey(name: "promocode") String promocode}) {
     return _FullTransactionDataModel(
       salesOrderId: salesOrderId,
       transactionStatus: transactionStatus,
@@ -129,99 +129,99 @@ const $FullTransactionDataModel = _$FullTransactionDataModelTearOff();
 
 /// @nodoc
 mixin _$FullTransactionDataModel {
-  @JsonKey(name: 'sales_order_id')
+  @JsonKey(name: "sales_order_id")
   String get salesOrderId;
-  @JsonKey(name: 'transaction_status')
+  @JsonKey(name: "transaction_status")
   String get transactionStatus;
-  @JsonKey(name: 'sales_order_no')
+  @JsonKey(name: "sales_order_no")
   String get salesOrderNo;
-  @JsonKey(name: 'transaction_date')
+  @JsonKey(name: "transaction_date")
   String get transactionDate;
-  @JsonKey(name: 'due_date')
+  @JsonKey(name: "due_date")
   String get dueDate;
-  @JsonKey(name: 'customer_id')
+  @JsonKey(name: "customer_id")
   String get customerId;
-  @JsonKey(name: 'customer_name')
+  @JsonKey(name: "customer_name")
   String get customerName;
-  @JsonKey(name: 'customer_po_no')
+  @JsonKey(name: "customer_po_no")
   String get customerPoNo;
-  @JsonKey(name: 'customer_po_date')
+  @JsonKey(name: "customer_po_date")
   String get customerPoDate;
-  @JsonKey(name: 'total_qty')
+  @JsonKey(name: "total_qty")
   String get totalQty;
-  @JsonKey(name: 'total_amount')
+  @JsonKey(name: "total_amount")
   String get totalAmount;
-  @JsonKey(name: 'total_discount_pct')
+  @JsonKey(name: "total_discount_pct")
   String get totalDiscountPct;
-  @JsonKey(name: 'total_discount')
+  @JsonKey(name: "total_discount")
   String get totalDiscount;
-  @JsonKey(name: 'total_fee')
+  @JsonKey(name: "total_fee")
   String get totalFee;
-  @JsonKey(name: 'total_tax')
+  @JsonKey(name: "total_tax")
   String get totalTax;
-  @JsonKey(name: 'remark')
+  @JsonKey(name: "remark")
   String get remark;
-  @JsonKey(name: 'payment_type_id')
+  @JsonKey(name: "payment_type_id")
   String get paymentTypeId;
-  @JsonKey(name: 'payment_term_id')
+  @JsonKey(name: "payment_term_id")
   String get paymentTermId;
-  @JsonKey(name: 'currency_id')
+  @JsonKey(name: "currency_id")
   String get currencyId;
-  @JsonKey(name: 'currency_rate')
+  @JsonKey(name: "currency_rate")
   String get currencyRate;
-  @JsonKey(name: 'location_id')
+  @JsonKey(name: "location_id")
   String get locationId;
-  @JsonKey(name: 'print_times')
+  @JsonKey(name: "print_times")
   String get printTimes;
-  @JsonKey(name: 'user_name')
+  @JsonKey(name: "user_name")
   String get userName;
-  @JsonKey(name: 'confirm_by')
+  @JsonKey(name: "confirm_by")
   String get confirmBy;
-  @JsonKey(name: 'confirm_date')
+  @JsonKey(name: "confirm_date")
   String get confirmDate;
-  @JsonKey(name: 'down_payment')
+  @JsonKey(name: "down_payment")
   String get downPayment;
-  @JsonKey(name: 'ship_to')
+  @JsonKey(name: "ship_to")
   String get shipTo;
-  @JsonKey(name: 'ship_date')
+  @JsonKey(name: "ship_date")
   String get shipDate;
-  @JsonKey(name: 'bank_id')
+  @JsonKey(name: "bank_id")
   String get bankId;
-  @JsonKey(name: 'bank_issuer')
+  @JsonKey(name: "bank_issuer")
   String get bankIssuer;
-  @JsonKey(name: 'dp_account_id')
+  @JsonKey(name: "dp_account_id")
   String get dpAccountId;
-  @JsonKey(name: 'dp_due_date')
+  @JsonKey(name: "dp_due_date")
   String get dpDueDate;
-  @JsonKey(name: 'reference_no')
+  @JsonKey(name: "reference_no")
   String get referenceNo;
-  @JsonKey(name: 'cash_flow_type_id')
+  @JsonKey(name: "cash_flow_type_id")
   String get cashFlowTypeId;
-  @JsonKey(name: 'sales_id')
+  @JsonKey(name: "sales_id")
   String get salesId;
-  @JsonKey(name: 'courier_id')
+  @JsonKey(name: "courier_id")
   String get courierId;
-  @JsonKey(name: 'fob_id')
+  @JsonKey(name: "fob_id")
   String get fobId;
-  @JsonKey(name: 'estimated_freight')
+  @JsonKey(name: "estimated_freight")
   String get estimatedFreight;
-  @JsonKey(name: 'is_taxable')
+  @JsonKey(name: "is_taxable")
   String get isTaxable;
-  @JsonKey(name: 'is_inclusive_tax')
+  @JsonKey(name: "is_inclusive_tax")
   String get isInclusiveTax;
-  @JsonKey(name: 'fiscal_rate')
+  @JsonKey(name: "fiscal_rate")
   String get fiscalRate;
-  @JsonKey(name: 'freight_account_id')
+  @JsonKey(name: "freight_account_id")
   String get freightAccountId;
-  @JsonKey(name: 'is_inclusive_freight')
+  @JsonKey(name: "is_inclusive_freight")
   String get isInclusiveFreight;
-  @JsonKey(name: 'cancel_by')
+  @JsonKey(name: "cancel_by")
   String get cancelBy;
-  @JsonKey(name: 'cancel_date')
+  @JsonKey(name: "cancel_date")
   String get cancelDate;
-  @JsonKey(name: 'ongkir')
+  @JsonKey(name: "ongkir")
   String get ongkir;
-  @JsonKey(name: 'promocode')
+  @JsonKey(name: "promocode")
   String get promocode;
 
   Map<String, dynamic> toJson();
@@ -235,53 +235,53 @@ abstract class $FullTransactionDataModelCopyWith<$Res> {
           $Res Function(FullTransactionDataModel) then) =
       _$FullTransactionDataModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'sales_order_id') String salesOrderId,
-      @JsonKey(name: 'transaction_status') String transactionStatus,
-      @JsonKey(name: 'sales_order_no') String salesOrderNo,
-      @JsonKey(name: 'transaction_date') String transactionDate,
-      @JsonKey(name: 'due_date') String dueDate,
-      @JsonKey(name: 'customer_id') String customerId,
-      @JsonKey(name: 'customer_name') String customerName,
-      @JsonKey(name: 'customer_po_no') String customerPoNo,
-      @JsonKey(name: 'customer_po_date') String customerPoDate,
-      @JsonKey(name: 'total_qty') String totalQty,
-      @JsonKey(name: 'total_amount') String totalAmount,
-      @JsonKey(name: 'total_discount_pct') String totalDiscountPct,
-      @JsonKey(name: 'total_discount') String totalDiscount,
-      @JsonKey(name: 'total_fee') String totalFee,
-      @JsonKey(name: 'total_tax') String totalTax,
-      @JsonKey(name: 'remark') String remark,
-      @JsonKey(name: 'payment_type_id') String paymentTypeId,
-      @JsonKey(name: 'payment_term_id') String paymentTermId,
-      @JsonKey(name: 'currency_id') String currencyId,
-      @JsonKey(name: 'currency_rate') String currencyRate,
-      @JsonKey(name: 'location_id') String locationId,
-      @JsonKey(name: 'print_times') String printTimes,
-      @JsonKey(name: 'user_name') String userName,
-      @JsonKey(name: 'confirm_by') String confirmBy,
-      @JsonKey(name: 'confirm_date') String confirmDate,
-      @JsonKey(name: 'down_payment') String downPayment,
-      @JsonKey(name: 'ship_to') String shipTo,
-      @JsonKey(name: 'ship_date') String shipDate,
-      @JsonKey(name: 'bank_id') String bankId,
-      @JsonKey(name: 'bank_issuer') String bankIssuer,
-      @JsonKey(name: 'dp_account_id') String dpAccountId,
-      @JsonKey(name: 'dp_due_date') String dpDueDate,
-      @JsonKey(name: 'reference_no') String referenceNo,
-      @JsonKey(name: 'cash_flow_type_id') String cashFlowTypeId,
-      @JsonKey(name: 'sales_id') String salesId,
-      @JsonKey(name: 'courier_id') String courierId,
-      @JsonKey(name: 'fob_id') String fobId,
-      @JsonKey(name: 'estimated_freight') String estimatedFreight,
-      @JsonKey(name: 'is_taxable') String isTaxable,
-      @JsonKey(name: 'is_inclusive_tax') String isInclusiveTax,
-      @JsonKey(name: 'fiscal_rate') String fiscalRate,
-      @JsonKey(name: 'freight_account_id') String freightAccountId,
-      @JsonKey(name: 'is_inclusive_freight') String isInclusiveFreight,
-      @JsonKey(name: 'cancel_by') String cancelBy,
-      @JsonKey(name: 'cancel_date') String cancelDate,
-      @JsonKey(name: 'ongkir') String ongkir,
-      @JsonKey(name: 'promocode') String promocode});
+      {@JsonKey(name: "sales_order_id") String salesOrderId,
+      @JsonKey(name: "transaction_status") String transactionStatus,
+      @JsonKey(name: "sales_order_no") String salesOrderNo,
+      @JsonKey(name: "transaction_date") String transactionDate,
+      @JsonKey(name: "due_date") String dueDate,
+      @JsonKey(name: "customer_id") String customerId,
+      @JsonKey(name: "customer_name") String customerName,
+      @JsonKey(name: "customer_po_no") String customerPoNo,
+      @JsonKey(name: "customer_po_date") String customerPoDate,
+      @JsonKey(name: "total_qty") String totalQty,
+      @JsonKey(name: "total_amount") String totalAmount,
+      @JsonKey(name: "total_discount_pct") String totalDiscountPct,
+      @JsonKey(name: "total_discount") String totalDiscount,
+      @JsonKey(name: "total_fee") String totalFee,
+      @JsonKey(name: "total_tax") String totalTax,
+      @JsonKey(name: "remark") String remark,
+      @JsonKey(name: "payment_type_id") String paymentTypeId,
+      @JsonKey(name: "payment_term_id") String paymentTermId,
+      @JsonKey(name: "currency_id") String currencyId,
+      @JsonKey(name: "currency_rate") String currencyRate,
+      @JsonKey(name: "location_id") String locationId,
+      @JsonKey(name: "print_times") String printTimes,
+      @JsonKey(name: "user_name") String userName,
+      @JsonKey(name: "confirm_by") String confirmBy,
+      @JsonKey(name: "confirm_date") String confirmDate,
+      @JsonKey(name: "down_payment") String downPayment,
+      @JsonKey(name: "ship_to") String shipTo,
+      @JsonKey(name: "ship_date") String shipDate,
+      @JsonKey(name: "bank_id") String bankId,
+      @JsonKey(name: "bank_issuer") String bankIssuer,
+      @JsonKey(name: "dp_account_id") String dpAccountId,
+      @JsonKey(name: "dp_due_date") String dpDueDate,
+      @JsonKey(name: "reference_no") String referenceNo,
+      @JsonKey(name: "cash_flow_type_id") String cashFlowTypeId,
+      @JsonKey(name: "sales_id") String salesId,
+      @JsonKey(name: "courier_id") String courierId,
+      @JsonKey(name: "fob_id") String fobId,
+      @JsonKey(name: "estimated_freight") String estimatedFreight,
+      @JsonKey(name: "is_taxable") String isTaxable,
+      @JsonKey(name: "is_inclusive_tax") String isInclusiveTax,
+      @JsonKey(name: "fiscal_rate") String fiscalRate,
+      @JsonKey(name: "freight_account_id") String freightAccountId,
+      @JsonKey(name: "is_inclusive_freight") String isInclusiveFreight,
+      @JsonKey(name: "cancel_by") String cancelBy,
+      @JsonKey(name: "cancel_date") String cancelDate,
+      @JsonKey(name: "ongkir") String ongkir,
+      @JsonKey(name: "promocode") String promocode});
 }
 
 /// @nodoc
@@ -449,53 +449,53 @@ abstract class _$FullTransactionDataModelCopyWith<$Res>
       __$FullTransactionDataModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'sales_order_id') String salesOrderId,
-      @JsonKey(name: 'transaction_status') String transactionStatus,
-      @JsonKey(name: 'sales_order_no') String salesOrderNo,
-      @JsonKey(name: 'transaction_date') String transactionDate,
-      @JsonKey(name: 'due_date') String dueDate,
-      @JsonKey(name: 'customer_id') String customerId,
-      @JsonKey(name: 'customer_name') String customerName,
-      @JsonKey(name: 'customer_po_no') String customerPoNo,
-      @JsonKey(name: 'customer_po_date') String customerPoDate,
-      @JsonKey(name: 'total_qty') String totalQty,
-      @JsonKey(name: 'total_amount') String totalAmount,
-      @JsonKey(name: 'total_discount_pct') String totalDiscountPct,
-      @JsonKey(name: 'total_discount') String totalDiscount,
-      @JsonKey(name: 'total_fee') String totalFee,
-      @JsonKey(name: 'total_tax') String totalTax,
-      @JsonKey(name: 'remark') String remark,
-      @JsonKey(name: 'payment_type_id') String paymentTypeId,
-      @JsonKey(name: 'payment_term_id') String paymentTermId,
-      @JsonKey(name: 'currency_id') String currencyId,
-      @JsonKey(name: 'currency_rate') String currencyRate,
-      @JsonKey(name: 'location_id') String locationId,
-      @JsonKey(name: 'print_times') String printTimes,
-      @JsonKey(name: 'user_name') String userName,
-      @JsonKey(name: 'confirm_by') String confirmBy,
-      @JsonKey(name: 'confirm_date') String confirmDate,
-      @JsonKey(name: 'down_payment') String downPayment,
-      @JsonKey(name: 'ship_to') String shipTo,
-      @JsonKey(name: 'ship_date') String shipDate,
-      @JsonKey(name: 'bank_id') String bankId,
-      @JsonKey(name: 'bank_issuer') String bankIssuer,
-      @JsonKey(name: 'dp_account_id') String dpAccountId,
-      @JsonKey(name: 'dp_due_date') String dpDueDate,
-      @JsonKey(name: 'reference_no') String referenceNo,
-      @JsonKey(name: 'cash_flow_type_id') String cashFlowTypeId,
-      @JsonKey(name: 'sales_id') String salesId,
-      @JsonKey(name: 'courier_id') String courierId,
-      @JsonKey(name: 'fob_id') String fobId,
-      @JsonKey(name: 'estimated_freight') String estimatedFreight,
-      @JsonKey(name: 'is_taxable') String isTaxable,
-      @JsonKey(name: 'is_inclusive_tax') String isInclusiveTax,
-      @JsonKey(name: 'fiscal_rate') String fiscalRate,
-      @JsonKey(name: 'freight_account_id') String freightAccountId,
-      @JsonKey(name: 'is_inclusive_freight') String isInclusiveFreight,
-      @JsonKey(name: 'cancel_by') String cancelBy,
-      @JsonKey(name: 'cancel_date') String cancelDate,
-      @JsonKey(name: 'ongkir') String ongkir,
-      @JsonKey(name: 'promocode') String promocode});
+      {@JsonKey(name: "sales_order_id") String salesOrderId,
+      @JsonKey(name: "transaction_status") String transactionStatus,
+      @JsonKey(name: "sales_order_no") String salesOrderNo,
+      @JsonKey(name: "transaction_date") String transactionDate,
+      @JsonKey(name: "due_date") String dueDate,
+      @JsonKey(name: "customer_id") String customerId,
+      @JsonKey(name: "customer_name") String customerName,
+      @JsonKey(name: "customer_po_no") String customerPoNo,
+      @JsonKey(name: "customer_po_date") String customerPoDate,
+      @JsonKey(name: "total_qty") String totalQty,
+      @JsonKey(name: "total_amount") String totalAmount,
+      @JsonKey(name: "total_discount_pct") String totalDiscountPct,
+      @JsonKey(name: "total_discount") String totalDiscount,
+      @JsonKey(name: "total_fee") String totalFee,
+      @JsonKey(name: "total_tax") String totalTax,
+      @JsonKey(name: "remark") String remark,
+      @JsonKey(name: "payment_type_id") String paymentTypeId,
+      @JsonKey(name: "payment_term_id") String paymentTermId,
+      @JsonKey(name: "currency_id") String currencyId,
+      @JsonKey(name: "currency_rate") String currencyRate,
+      @JsonKey(name: "location_id") String locationId,
+      @JsonKey(name: "print_times") String printTimes,
+      @JsonKey(name: "user_name") String userName,
+      @JsonKey(name: "confirm_by") String confirmBy,
+      @JsonKey(name: "confirm_date") String confirmDate,
+      @JsonKey(name: "down_payment") String downPayment,
+      @JsonKey(name: "ship_to") String shipTo,
+      @JsonKey(name: "ship_date") String shipDate,
+      @JsonKey(name: "bank_id") String bankId,
+      @JsonKey(name: "bank_issuer") String bankIssuer,
+      @JsonKey(name: "dp_account_id") String dpAccountId,
+      @JsonKey(name: "dp_due_date") String dpDueDate,
+      @JsonKey(name: "reference_no") String referenceNo,
+      @JsonKey(name: "cash_flow_type_id") String cashFlowTypeId,
+      @JsonKey(name: "sales_id") String salesId,
+      @JsonKey(name: "courier_id") String courierId,
+      @JsonKey(name: "fob_id") String fobId,
+      @JsonKey(name: "estimated_freight") String estimatedFreight,
+      @JsonKey(name: "is_taxable") String isTaxable,
+      @JsonKey(name: "is_inclusive_tax") String isInclusiveTax,
+      @JsonKey(name: "fiscal_rate") String fiscalRate,
+      @JsonKey(name: "freight_account_id") String freightAccountId,
+      @JsonKey(name: "is_inclusive_freight") String isInclusiveFreight,
+      @JsonKey(name: "cancel_by") String cancelBy,
+      @JsonKey(name: "cancel_date") String cancelDate,
+      @JsonKey(name: "ongkir") String ongkir,
+      @JsonKey(name: "promocode") String promocode});
 }
 
 /// @nodoc
@@ -663,197 +663,197 @@ class __$FullTransactionDataModelCopyWithImpl<$Res>
 /// @nodoc
 class _$_FullTransactionDataModel implements _FullTransactionDataModel {
   _$_FullTransactionDataModel(
-      {@JsonKey(name: 'sales_order_id') this.salesOrderId,
-      @JsonKey(name: 'transaction_status') this.transactionStatus,
-      @JsonKey(name: 'sales_order_no') this.salesOrderNo,
-      @JsonKey(name: 'transaction_date') this.transactionDate,
-      @JsonKey(name: 'due_date') this.dueDate,
-      @JsonKey(name: 'customer_id') this.customerId,
-      @JsonKey(name: 'customer_name') this.customerName,
-      @JsonKey(name: 'customer_po_no') this.customerPoNo,
-      @JsonKey(name: 'customer_po_date') this.customerPoDate,
-      @JsonKey(name: 'total_qty') this.totalQty,
-      @JsonKey(name: 'total_amount') this.totalAmount,
-      @JsonKey(name: 'total_discount_pct') this.totalDiscountPct,
-      @JsonKey(name: 'total_discount') this.totalDiscount,
-      @JsonKey(name: 'total_fee') this.totalFee,
-      @JsonKey(name: 'total_tax') this.totalTax,
-      @JsonKey(name: 'remark') this.remark,
-      @JsonKey(name: 'payment_type_id') this.paymentTypeId,
-      @JsonKey(name: 'payment_term_id') this.paymentTermId,
-      @JsonKey(name: 'currency_id') this.currencyId,
-      @JsonKey(name: 'currency_rate') this.currencyRate,
-      @JsonKey(name: 'location_id') this.locationId,
-      @JsonKey(name: 'print_times') this.printTimes,
-      @JsonKey(name: 'user_name') this.userName,
-      @JsonKey(name: 'confirm_by') this.confirmBy,
-      @JsonKey(name: 'confirm_date') this.confirmDate,
-      @JsonKey(name: 'down_payment') this.downPayment,
-      @JsonKey(name: 'ship_to') this.shipTo,
-      @JsonKey(name: 'ship_date') this.shipDate,
-      @JsonKey(name: 'bank_id') this.bankId,
-      @JsonKey(name: 'bank_issuer') this.bankIssuer,
-      @JsonKey(name: 'dp_account_id') this.dpAccountId,
-      @JsonKey(name: 'dp_due_date') this.dpDueDate,
-      @JsonKey(name: 'reference_no') this.referenceNo,
-      @JsonKey(name: 'cash_flow_type_id') this.cashFlowTypeId,
-      @JsonKey(name: 'sales_id') this.salesId,
-      @JsonKey(name: 'courier_id') this.courierId,
-      @JsonKey(name: 'fob_id') this.fobId,
-      @JsonKey(name: 'estimated_freight') this.estimatedFreight,
-      @JsonKey(name: 'is_taxable') this.isTaxable,
-      @JsonKey(name: 'is_inclusive_tax') this.isInclusiveTax,
-      @JsonKey(name: 'fiscal_rate') this.fiscalRate,
-      @JsonKey(name: 'freight_account_id') this.freightAccountId,
-      @JsonKey(name: 'is_inclusive_freight') this.isInclusiveFreight,
-      @JsonKey(name: 'cancel_by') this.cancelBy,
-      @JsonKey(name: 'cancel_date') this.cancelDate,
-      @JsonKey(name: 'ongkir') this.ongkir,
-      @JsonKey(name: 'promocode') this.promocode});
+      {@JsonKey(name: "sales_order_id") this.salesOrderId,
+      @JsonKey(name: "transaction_status") this.transactionStatus,
+      @JsonKey(name: "sales_order_no") this.salesOrderNo,
+      @JsonKey(name: "transaction_date") this.transactionDate,
+      @JsonKey(name: "due_date") this.dueDate,
+      @JsonKey(name: "customer_id") this.customerId,
+      @JsonKey(name: "customer_name") this.customerName,
+      @JsonKey(name: "customer_po_no") this.customerPoNo,
+      @JsonKey(name: "customer_po_date") this.customerPoDate,
+      @JsonKey(name: "total_qty") this.totalQty,
+      @JsonKey(name: "total_amount") this.totalAmount,
+      @JsonKey(name: "total_discount_pct") this.totalDiscountPct,
+      @JsonKey(name: "total_discount") this.totalDiscount,
+      @JsonKey(name: "total_fee") this.totalFee,
+      @JsonKey(name: "total_tax") this.totalTax,
+      @JsonKey(name: "remark") this.remark,
+      @JsonKey(name: "payment_type_id") this.paymentTypeId,
+      @JsonKey(name: "payment_term_id") this.paymentTermId,
+      @JsonKey(name: "currency_id") this.currencyId,
+      @JsonKey(name: "currency_rate") this.currencyRate,
+      @JsonKey(name: "location_id") this.locationId,
+      @JsonKey(name: "print_times") this.printTimes,
+      @JsonKey(name: "user_name") this.userName,
+      @JsonKey(name: "confirm_by") this.confirmBy,
+      @JsonKey(name: "confirm_date") this.confirmDate,
+      @JsonKey(name: "down_payment") this.downPayment,
+      @JsonKey(name: "ship_to") this.shipTo,
+      @JsonKey(name: "ship_date") this.shipDate,
+      @JsonKey(name: "bank_id") this.bankId,
+      @JsonKey(name: "bank_issuer") this.bankIssuer,
+      @JsonKey(name: "dp_account_id") this.dpAccountId,
+      @JsonKey(name: "dp_due_date") this.dpDueDate,
+      @JsonKey(name: "reference_no") this.referenceNo,
+      @JsonKey(name: "cash_flow_type_id") this.cashFlowTypeId,
+      @JsonKey(name: "sales_id") this.salesId,
+      @JsonKey(name: "courier_id") this.courierId,
+      @JsonKey(name: "fob_id") this.fobId,
+      @JsonKey(name: "estimated_freight") this.estimatedFreight,
+      @JsonKey(name: "is_taxable") this.isTaxable,
+      @JsonKey(name: "is_inclusive_tax") this.isInclusiveTax,
+      @JsonKey(name: "fiscal_rate") this.fiscalRate,
+      @JsonKey(name: "freight_account_id") this.freightAccountId,
+      @JsonKey(name: "is_inclusive_freight") this.isInclusiveFreight,
+      @JsonKey(name: "cancel_by") this.cancelBy,
+      @JsonKey(name: "cancel_date") this.cancelDate,
+      @JsonKey(name: "ongkir") this.ongkir,
+      @JsonKey(name: "promocode") this.promocode});
 
   factory _$_FullTransactionDataModel.fromJson(Map<String, dynamic> json) =>
       _$_$_FullTransactionDataModelFromJson(json);
 
   @override
-  @JsonKey(name: 'sales_order_id')
+  @JsonKey(name: "sales_order_id")
   final String salesOrderId;
   @override
-  @JsonKey(name: 'transaction_status')
+  @JsonKey(name: "transaction_status")
   final String transactionStatus;
   @override
-  @JsonKey(name: 'sales_order_no')
+  @JsonKey(name: "sales_order_no")
   final String salesOrderNo;
   @override
-  @JsonKey(name: 'transaction_date')
+  @JsonKey(name: "transaction_date")
   final String transactionDate;
   @override
-  @JsonKey(name: 'due_date')
+  @JsonKey(name: "due_date")
   final String dueDate;
   @override
-  @JsonKey(name: 'customer_id')
+  @JsonKey(name: "customer_id")
   final String customerId;
   @override
-  @JsonKey(name: 'customer_name')
+  @JsonKey(name: "customer_name")
   final String customerName;
   @override
-  @JsonKey(name: 'customer_po_no')
+  @JsonKey(name: "customer_po_no")
   final String customerPoNo;
   @override
-  @JsonKey(name: 'customer_po_date')
+  @JsonKey(name: "customer_po_date")
   final String customerPoDate;
   @override
-  @JsonKey(name: 'total_qty')
+  @JsonKey(name: "total_qty")
   final String totalQty;
   @override
-  @JsonKey(name: 'total_amount')
+  @JsonKey(name: "total_amount")
   final String totalAmount;
   @override
-  @JsonKey(name: 'total_discount_pct')
+  @JsonKey(name: "total_discount_pct")
   final String totalDiscountPct;
   @override
-  @JsonKey(name: 'total_discount')
+  @JsonKey(name: "total_discount")
   final String totalDiscount;
   @override
-  @JsonKey(name: 'total_fee')
+  @JsonKey(name: "total_fee")
   final String totalFee;
   @override
-  @JsonKey(name: 'total_tax')
+  @JsonKey(name: "total_tax")
   final String totalTax;
   @override
-  @JsonKey(name: 'remark')
+  @JsonKey(name: "remark")
   final String remark;
   @override
-  @JsonKey(name: 'payment_type_id')
+  @JsonKey(name: "payment_type_id")
   final String paymentTypeId;
   @override
-  @JsonKey(name: 'payment_term_id')
+  @JsonKey(name: "payment_term_id")
   final String paymentTermId;
   @override
-  @JsonKey(name: 'currency_id')
+  @JsonKey(name: "currency_id")
   final String currencyId;
   @override
-  @JsonKey(name: 'currency_rate')
+  @JsonKey(name: "currency_rate")
   final String currencyRate;
   @override
-  @JsonKey(name: 'location_id')
+  @JsonKey(name: "location_id")
   final String locationId;
   @override
-  @JsonKey(name: 'print_times')
+  @JsonKey(name: "print_times")
   final String printTimes;
   @override
-  @JsonKey(name: 'user_name')
+  @JsonKey(name: "user_name")
   final String userName;
   @override
-  @JsonKey(name: 'confirm_by')
+  @JsonKey(name: "confirm_by")
   final String confirmBy;
   @override
-  @JsonKey(name: 'confirm_date')
+  @JsonKey(name: "confirm_date")
   final String confirmDate;
   @override
-  @JsonKey(name: 'down_payment')
+  @JsonKey(name: "down_payment")
   final String downPayment;
   @override
-  @JsonKey(name: 'ship_to')
+  @JsonKey(name: "ship_to")
   final String shipTo;
   @override
-  @JsonKey(name: 'ship_date')
+  @JsonKey(name: "ship_date")
   final String shipDate;
   @override
-  @JsonKey(name: 'bank_id')
+  @JsonKey(name: "bank_id")
   final String bankId;
   @override
-  @JsonKey(name: 'bank_issuer')
+  @JsonKey(name: "bank_issuer")
   final String bankIssuer;
   @override
-  @JsonKey(name: 'dp_account_id')
+  @JsonKey(name: "dp_account_id")
   final String dpAccountId;
   @override
-  @JsonKey(name: 'dp_due_date')
+  @JsonKey(name: "dp_due_date")
   final String dpDueDate;
   @override
-  @JsonKey(name: 'reference_no')
+  @JsonKey(name: "reference_no")
   final String referenceNo;
   @override
-  @JsonKey(name: 'cash_flow_type_id')
+  @JsonKey(name: "cash_flow_type_id")
   final String cashFlowTypeId;
   @override
-  @JsonKey(name: 'sales_id')
+  @JsonKey(name: "sales_id")
   final String salesId;
   @override
-  @JsonKey(name: 'courier_id')
+  @JsonKey(name: "courier_id")
   final String courierId;
   @override
-  @JsonKey(name: 'fob_id')
+  @JsonKey(name: "fob_id")
   final String fobId;
   @override
-  @JsonKey(name: 'estimated_freight')
+  @JsonKey(name: "estimated_freight")
   final String estimatedFreight;
   @override
-  @JsonKey(name: 'is_taxable')
+  @JsonKey(name: "is_taxable")
   final String isTaxable;
   @override
-  @JsonKey(name: 'is_inclusive_tax')
+  @JsonKey(name: "is_inclusive_tax")
   final String isInclusiveTax;
   @override
-  @JsonKey(name: 'fiscal_rate')
+  @JsonKey(name: "fiscal_rate")
   final String fiscalRate;
   @override
-  @JsonKey(name: 'freight_account_id')
+  @JsonKey(name: "freight_account_id")
   final String freightAccountId;
   @override
-  @JsonKey(name: 'is_inclusive_freight')
+  @JsonKey(name: "is_inclusive_freight")
   final String isInclusiveFreight;
   @override
-  @JsonKey(name: 'cancel_by')
+  @JsonKey(name: "cancel_by")
   final String cancelBy;
   @override
-  @JsonKey(name: 'cancel_date')
+  @JsonKey(name: "cancel_date")
   final String cancelDate;
   @override
-  @JsonKey(name: 'ongkir')
+  @JsonKey(name: "ongkir")
   final String ongkir;
   @override
-  @JsonKey(name: 'promocode')
+  @JsonKey(name: "promocode")
   final String promocode;
 
   @override
@@ -1022,198 +1022,198 @@ class _$_FullTransactionDataModel implements _FullTransactionDataModel {
 
 abstract class _FullTransactionDataModel implements FullTransactionDataModel {
   factory _FullTransactionDataModel(
-          {@JsonKey(name: 'sales_order_id') String salesOrderId,
-          @JsonKey(name: 'transaction_status') String transactionStatus,
-          @JsonKey(name: 'sales_order_no') String salesOrderNo,
-          @JsonKey(name: 'transaction_date') String transactionDate,
-          @JsonKey(name: 'due_date') String dueDate,
-          @JsonKey(name: 'customer_id') String customerId,
-          @JsonKey(name: 'customer_name') String customerName,
-          @JsonKey(name: 'customer_po_no') String customerPoNo,
-          @JsonKey(name: 'customer_po_date') String customerPoDate,
-          @JsonKey(name: 'total_qty') String totalQty,
-          @JsonKey(name: 'total_amount') String totalAmount,
-          @JsonKey(name: 'total_discount_pct') String totalDiscountPct,
-          @JsonKey(name: 'total_discount') String totalDiscount,
-          @JsonKey(name: 'total_fee') String totalFee,
-          @JsonKey(name: 'total_tax') String totalTax,
-          @JsonKey(name: 'remark') String remark,
-          @JsonKey(name: 'payment_type_id') String paymentTypeId,
-          @JsonKey(name: 'payment_term_id') String paymentTermId,
-          @JsonKey(name: 'currency_id') String currencyId,
-          @JsonKey(name: 'currency_rate') String currencyRate,
-          @JsonKey(name: 'location_id') String locationId,
-          @JsonKey(name: 'print_times') String printTimes,
-          @JsonKey(name: 'user_name') String userName,
-          @JsonKey(name: 'confirm_by') String confirmBy,
-          @JsonKey(name: 'confirm_date') String confirmDate,
-          @JsonKey(name: 'down_payment') String downPayment,
-          @JsonKey(name: 'ship_to') String shipTo,
-          @JsonKey(name: 'ship_date') String shipDate,
-          @JsonKey(name: 'bank_id') String bankId,
-          @JsonKey(name: 'bank_issuer') String bankIssuer,
-          @JsonKey(name: 'dp_account_id') String dpAccountId,
-          @JsonKey(name: 'dp_due_date') String dpDueDate,
-          @JsonKey(name: 'reference_no') String referenceNo,
-          @JsonKey(name: 'cash_flow_type_id') String cashFlowTypeId,
-          @JsonKey(name: 'sales_id') String salesId,
-          @JsonKey(name: 'courier_id') String courierId,
-          @JsonKey(name: 'fob_id') String fobId,
-          @JsonKey(name: 'estimated_freight') String estimatedFreight,
-          @JsonKey(name: 'is_taxable') String isTaxable,
-          @JsonKey(name: 'is_inclusive_tax') String isInclusiveTax,
-          @JsonKey(name: 'fiscal_rate') String fiscalRate,
-          @JsonKey(name: 'freight_account_id') String freightAccountId,
-          @JsonKey(name: 'is_inclusive_freight') String isInclusiveFreight,
-          @JsonKey(name: 'cancel_by') String cancelBy,
-          @JsonKey(name: 'cancel_date') String cancelDate,
-          @JsonKey(name: 'ongkir') String ongkir,
-          @JsonKey(name: 'promocode') String promocode}) =
+          {@JsonKey(name: "sales_order_id") String salesOrderId,
+          @JsonKey(name: "transaction_status") String transactionStatus,
+          @JsonKey(name: "sales_order_no") String salesOrderNo,
+          @JsonKey(name: "transaction_date") String transactionDate,
+          @JsonKey(name: "due_date") String dueDate,
+          @JsonKey(name: "customer_id") String customerId,
+          @JsonKey(name: "customer_name") String customerName,
+          @JsonKey(name: "customer_po_no") String customerPoNo,
+          @JsonKey(name: "customer_po_date") String customerPoDate,
+          @JsonKey(name: "total_qty") String totalQty,
+          @JsonKey(name: "total_amount") String totalAmount,
+          @JsonKey(name: "total_discount_pct") String totalDiscountPct,
+          @JsonKey(name: "total_discount") String totalDiscount,
+          @JsonKey(name: "total_fee") String totalFee,
+          @JsonKey(name: "total_tax") String totalTax,
+          @JsonKey(name: "remark") String remark,
+          @JsonKey(name: "payment_type_id") String paymentTypeId,
+          @JsonKey(name: "payment_term_id") String paymentTermId,
+          @JsonKey(name: "currency_id") String currencyId,
+          @JsonKey(name: "currency_rate") String currencyRate,
+          @JsonKey(name: "location_id") String locationId,
+          @JsonKey(name: "print_times") String printTimes,
+          @JsonKey(name: "user_name") String userName,
+          @JsonKey(name: "confirm_by") String confirmBy,
+          @JsonKey(name: "confirm_date") String confirmDate,
+          @JsonKey(name: "down_payment") String downPayment,
+          @JsonKey(name: "ship_to") String shipTo,
+          @JsonKey(name: "ship_date") String shipDate,
+          @JsonKey(name: "bank_id") String bankId,
+          @JsonKey(name: "bank_issuer") String bankIssuer,
+          @JsonKey(name: "dp_account_id") String dpAccountId,
+          @JsonKey(name: "dp_due_date") String dpDueDate,
+          @JsonKey(name: "reference_no") String referenceNo,
+          @JsonKey(name: "cash_flow_type_id") String cashFlowTypeId,
+          @JsonKey(name: "sales_id") String salesId,
+          @JsonKey(name: "courier_id") String courierId,
+          @JsonKey(name: "fob_id") String fobId,
+          @JsonKey(name: "estimated_freight") String estimatedFreight,
+          @JsonKey(name: "is_taxable") String isTaxable,
+          @JsonKey(name: "is_inclusive_tax") String isInclusiveTax,
+          @JsonKey(name: "fiscal_rate") String fiscalRate,
+          @JsonKey(name: "freight_account_id") String freightAccountId,
+          @JsonKey(name: "is_inclusive_freight") String isInclusiveFreight,
+          @JsonKey(name: "cancel_by") String cancelBy,
+          @JsonKey(name: "cancel_date") String cancelDate,
+          @JsonKey(name: "ongkir") String ongkir,
+          @JsonKey(name: "promocode") String promocode}) =
       _$_FullTransactionDataModel;
 
   factory _FullTransactionDataModel.fromJson(Map<String, dynamic> json) =
       _$_FullTransactionDataModel.fromJson;
 
   @override
-  @JsonKey(name: 'sales_order_id')
+  @JsonKey(name: "sales_order_id")
   String get salesOrderId;
   @override
-  @JsonKey(name: 'transaction_status')
+  @JsonKey(name: "transaction_status")
   String get transactionStatus;
   @override
-  @JsonKey(name: 'sales_order_no')
+  @JsonKey(name: "sales_order_no")
   String get salesOrderNo;
   @override
-  @JsonKey(name: 'transaction_date')
+  @JsonKey(name: "transaction_date")
   String get transactionDate;
   @override
-  @JsonKey(name: 'due_date')
+  @JsonKey(name: "due_date")
   String get dueDate;
   @override
-  @JsonKey(name: 'customer_id')
+  @JsonKey(name: "customer_id")
   String get customerId;
   @override
-  @JsonKey(name: 'customer_name')
+  @JsonKey(name: "customer_name")
   String get customerName;
   @override
-  @JsonKey(name: 'customer_po_no')
+  @JsonKey(name: "customer_po_no")
   String get customerPoNo;
   @override
-  @JsonKey(name: 'customer_po_date')
+  @JsonKey(name: "customer_po_date")
   String get customerPoDate;
   @override
-  @JsonKey(name: 'total_qty')
+  @JsonKey(name: "total_qty")
   String get totalQty;
   @override
-  @JsonKey(name: 'total_amount')
+  @JsonKey(name: "total_amount")
   String get totalAmount;
   @override
-  @JsonKey(name: 'total_discount_pct')
+  @JsonKey(name: "total_discount_pct")
   String get totalDiscountPct;
   @override
-  @JsonKey(name: 'total_discount')
+  @JsonKey(name: "total_discount")
   String get totalDiscount;
   @override
-  @JsonKey(name: 'total_fee')
+  @JsonKey(name: "total_fee")
   String get totalFee;
   @override
-  @JsonKey(name: 'total_tax')
+  @JsonKey(name: "total_tax")
   String get totalTax;
   @override
-  @JsonKey(name: 'remark')
+  @JsonKey(name: "remark")
   String get remark;
   @override
-  @JsonKey(name: 'payment_type_id')
+  @JsonKey(name: "payment_type_id")
   String get paymentTypeId;
   @override
-  @JsonKey(name: 'payment_term_id')
+  @JsonKey(name: "payment_term_id")
   String get paymentTermId;
   @override
-  @JsonKey(name: 'currency_id')
+  @JsonKey(name: "currency_id")
   String get currencyId;
   @override
-  @JsonKey(name: 'currency_rate')
+  @JsonKey(name: "currency_rate")
   String get currencyRate;
   @override
-  @JsonKey(name: 'location_id')
+  @JsonKey(name: "location_id")
   String get locationId;
   @override
-  @JsonKey(name: 'print_times')
+  @JsonKey(name: "print_times")
   String get printTimes;
   @override
-  @JsonKey(name: 'user_name')
+  @JsonKey(name: "user_name")
   String get userName;
   @override
-  @JsonKey(name: 'confirm_by')
+  @JsonKey(name: "confirm_by")
   String get confirmBy;
   @override
-  @JsonKey(name: 'confirm_date')
+  @JsonKey(name: "confirm_date")
   String get confirmDate;
   @override
-  @JsonKey(name: 'down_payment')
+  @JsonKey(name: "down_payment")
   String get downPayment;
   @override
-  @JsonKey(name: 'ship_to')
+  @JsonKey(name: "ship_to")
   String get shipTo;
   @override
-  @JsonKey(name: 'ship_date')
+  @JsonKey(name: "ship_date")
   String get shipDate;
   @override
-  @JsonKey(name: 'bank_id')
+  @JsonKey(name: "bank_id")
   String get bankId;
   @override
-  @JsonKey(name: 'bank_issuer')
+  @JsonKey(name: "bank_issuer")
   String get bankIssuer;
   @override
-  @JsonKey(name: 'dp_account_id')
+  @JsonKey(name: "dp_account_id")
   String get dpAccountId;
   @override
-  @JsonKey(name: 'dp_due_date')
+  @JsonKey(name: "dp_due_date")
   String get dpDueDate;
   @override
-  @JsonKey(name: 'reference_no')
+  @JsonKey(name: "reference_no")
   String get referenceNo;
   @override
-  @JsonKey(name: 'cash_flow_type_id')
+  @JsonKey(name: "cash_flow_type_id")
   String get cashFlowTypeId;
   @override
-  @JsonKey(name: 'sales_id')
+  @JsonKey(name: "sales_id")
   String get salesId;
   @override
-  @JsonKey(name: 'courier_id')
+  @JsonKey(name: "courier_id")
   String get courierId;
   @override
-  @JsonKey(name: 'fob_id')
+  @JsonKey(name: "fob_id")
   String get fobId;
   @override
-  @JsonKey(name: 'estimated_freight')
+  @JsonKey(name: "estimated_freight")
   String get estimatedFreight;
   @override
-  @JsonKey(name: 'is_taxable')
+  @JsonKey(name: "is_taxable")
   String get isTaxable;
   @override
-  @JsonKey(name: 'is_inclusive_tax')
+  @JsonKey(name: "is_inclusive_tax")
   String get isInclusiveTax;
   @override
-  @JsonKey(name: 'fiscal_rate')
+  @JsonKey(name: "fiscal_rate")
   String get fiscalRate;
   @override
-  @JsonKey(name: 'freight_account_id')
+  @JsonKey(name: "freight_account_id")
   String get freightAccountId;
   @override
-  @JsonKey(name: 'is_inclusive_freight')
+  @JsonKey(name: "is_inclusive_freight")
   String get isInclusiveFreight;
   @override
-  @JsonKey(name: 'cancel_by')
+  @JsonKey(name: "cancel_by")
   String get cancelBy;
   @override
-  @JsonKey(name: 'cancel_date')
+  @JsonKey(name: "cancel_date")
   String get cancelDate;
   @override
-  @JsonKey(name: 'ongkir')
+  @JsonKey(name: "ongkir")
   String get ongkir;
   @override
-  @JsonKey(name: 'promocode')
+  @JsonKey(name: "promocode")
   String get promocode;
   @override
   @JsonKey(ignore: true)
