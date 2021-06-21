@@ -6,46 +6,38 @@ part 'user_data_model.g.dart';
 @freezed
 abstract class UserDataModel with _$UserDataModel {
   factory UserDataModel({
-    @JsonKey(name: "userId") String userId,
-    @JsonKey(name: "error") int error,
-    @JsonKey(name: "parentId") String parentId,
-    @JsonKey(name: "userName") String userName,
-    @JsonKey(name: "message") String messageError,
-    @JsonKey(name: "email") String email,
-    @JsonKey(name: "phone") String phone,
-    @JsonKey(name: "password") String password,
-    @JsonKey(name: "fullName") String fullName,
-    @JsonKey(name: "typeIds") String typeIds,
-    @JsonKey(name: "status") double status,
-    @JsonKey(name: "address") String address,
-    @JsonKey(name: "shipTo1") String shipTo1,
-    @JsonKey(name: "shipTo2") String shipTo2,
-    @JsonKey(name: "country", defaultValue: null, nullable: true)
-        String country,
-    @JsonKey(name: "province", defaultValue: null, nullable: true)
-        String province,
-    @JsonKey(name: "city", defaultValue: null, nullable: true) String city,
-    @JsonKey(name: "district", defaultValue: null, nullable: true)
-        String district,
-    @JsonKey(name: "village", defaultValue: null, nullable: true)
-        String village,
-    @JsonKey(name: "terrId1", defaultValue: null, nullable: true)
-        String terrId1,
-    @JsonKey(name: "terrId2", defaultValue: null, nullable: true)
-        String terrId2,
-    @JsonKey(name: "terrId3", defaultValue: null, nullable: true)
-        String terrId3,
-    @JsonKey(name: "terrId4", defaultValue: null, nullable: true)
-        String terrId4,
-    @JsonKey(name: "longitudes") double longitudes,
-    @JsonKey(name: "latitudes") double latitudes,
-    @JsonKey(name: "fbToken") String fbToken,
-    @JsonKey(name: "googleToken") String googleToken,
-    @JsonKey(name: "msgToken") String msgToken,
-    @JsonKey(name: "otherToken") String otherToken,
-    @JsonKey(name: "alreadyInSave") bool alreadyInSave,
-    @JsonKey(name: "isNew") bool isNew,
-    @JsonKey(name: "modified") bool modified,
+    @JsonKey(name: "userId", defaultValue: "") String userId,
+    @JsonKey(name: "error", defaultValue: 0) int error,
+    @JsonKey(name: "parentId", defaultValue: "") String parentId,
+    @JsonKey(name: "userName", defaultValue: "") String userName,
+    @JsonKey(name: "message", defaultValue: "") String messageError,
+    @JsonKey(name: "email", defaultValue: "") String email,
+    @JsonKey(name: "phone", defaultValue: "") String phone,
+    @JsonKey(name: "password", defaultValue: "") String password,
+    @JsonKey(name: "fullName", defaultValue: "") String fullName,
+    @JsonKey(name: "typeIds", defaultValue: "") String typeIds,
+    @JsonKey(name: "status", defaultValue: 0) double status,
+    @JsonKey(name: "address", defaultValue: "") String address,
+    @JsonKey(name: "shipTo1", defaultValue: "") String shipTo1,
+    @JsonKey(name: "shipTo2", defaultValue: "") String shipTo2,
+    @JsonKey(name: "country", defaultValue: "") String country,
+    @JsonKey(name: "province", defaultValue: "") String province,
+    @JsonKey(name: "city", defaultValue: "") String city,
+    @JsonKey(name: "district", defaultValue: "") String district,
+    @JsonKey(name: "village", defaultValue: "") String village,
+    @JsonKey(name: "terrId1", defaultValue: "") String terrId1,
+    @JsonKey(name: "terrId2", defaultValue: "") String terrId2,
+    @JsonKey(name: "terrId3", defaultValue: "") String terrId3,
+    @JsonKey(name: "terrId4", defaultValue: "") String terrId4,
+    @JsonKey(name: "longitudes", defaultValue: 0) double longitudes,
+    @JsonKey(name: "latitudes", defaultValue: 0) double latitudes,
+    @JsonKey(name: "fbToken", defaultValue: "") String fbToken,
+    @JsonKey(name: "googleToken", defaultValue: "") String googleToken,
+    @JsonKey(name: "msgToken", defaultValue: "") String msgToken,
+    @JsonKey(name: "otherToken", defaultValue: "") String otherToken,
+    @JsonKey(name: "alreadyInSave", defaultValue: false) bool alreadyInSave,
+    @JsonKey(name: "isNew", defaultValue: false) bool isNew,
+    @JsonKey(name: "modified", defaultValue: false) bool modified,
   }) = _UserDataModel;
 
   factory UserDataModel.fromJson(Map<String, dynamic> json) =>

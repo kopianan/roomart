@@ -220,7 +220,8 @@ class _AddAddressPageState extends State<AddAddressPage> {
                                     items: e.result
                                         .map((e) =>
                                             DropdownMenuItem<FullDataModel>(
-                                              child: Text(e.cityName),
+                                              child: Text(
+                                                  e.type + " " + e.cityName),
                                               value: e,
                                             ))
                                         .toList(),

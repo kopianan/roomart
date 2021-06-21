@@ -109,8 +109,6 @@ class _MePageState extends State<MePage> {
                           onGetAllTransaction: (e) {
                             e.data.forEach((data) {
                               if (data.transactionStatus == "1") {
-                                print("status == 1");
-                                print(data.totalAmount);
                                 balanceInProgress =
                                     double.parse(data.totalAmount) +
                                         balanceInProgress;
@@ -118,7 +116,6 @@ class _MePageState extends State<MePage> {
                               }
                             });
                           });
-                      print(balanceInProgress);
                     },
                     builder: (context, state) {
                       return state.maybeMap(orElse: () {
@@ -146,7 +143,7 @@ class _MePageState extends State<MePage> {
                             child: CircularProgressIndicator(),
                           ),
                         ));
-                      }, onGetHistoryTransaction: (e) {
+                      }, onGetAllTransaction: (e) {
                         return Expanded(
                           child: saldoContainer(
                               "Dalam Proses",

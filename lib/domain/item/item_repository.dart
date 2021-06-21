@@ -69,11 +69,11 @@ class ItemRepoistory extends IITemFacae {
     Response response;
     try {
       response = await dio.get(
-          "${Constants().itemUrl}api,SPGApps.vm?cmd=2&loccode=${Constants.locCode}&kategoriid=${categoryId}&limit=$limit&offset=$offset");
+          "${Constants().baseUrlOtherApi}api,SPGApps.vm?cmd=2&loccode=${Constants.locCode}&kategoriid=${categoryId}&limit=$limit&offset=$offset");
       // response = await dio.get(
-          // "http://cloud.erp.web.id:8080/roomart/weblayer/template/api,SPGApps.vm?cmd=2&loccode=${Constants.locCode}&kategoriid=${categoryId}&limit=$limit&offset=$offset");
+      // "http://cloud.erp.web.id:8080/roomart/weblayer/template/api,SPGApps.vm?cmd=2&loccode=${Constants.locCode}&kategoriid=${categoryId}&limit=$limit&offset=$offset");
       response = await dio.get(
-          "${Constants().itemUrl}api,SPGApps.vm?cmd=2&loccode=${Constants.locCode}&kategoriid=${categoryId}&limit=$limit&offset=$offset");
+          "${Constants().baseUrlOtherApi}api,SPGApps.vm?cmd=2&loccode=${Constants.locCode}&kategoriid=${categoryId}&limit=$limit&offset=$offset");
 
       List jsonData = json.decode(response.data);
 
