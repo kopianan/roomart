@@ -26,7 +26,7 @@ class Constants {
 //  "http://vipcloud.erp.web.id:8080/tokoku-android/weblayer/template/";
 
   String baseUrlProfile =
-      "http://vipcloud.erp.web.id:8080/roomart/weblayer/template/";
+      "http://cloud.erp.web.id:8080/roomart/weblayer/template/";
   String baseUrlOtherApi =
       "http://cloud.erp.web.id:8080/padasuka/weblayer/template/";
 
