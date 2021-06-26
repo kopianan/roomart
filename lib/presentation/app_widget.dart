@@ -1,7 +1,10 @@
-
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import 'package:roomart/application/auth/auth_controller.dart';
+import 'package:roomart/presentation/dashboard/dashboard_page.dart';
 import 'package:roomart/presentation/splash_screen/splash_screen_page.dart';
 import 'package:roomart/routes/router.dart';
 
@@ -13,6 +16,15 @@ class AppWidget extends StatefulWidget {
 
 class _AppWidgetState extends State<AppWidget> {
   final authController = Get.put(AuthController());
+  FirebaseMessaging firebaseMessaging = FirebaseMessaging.instance;
+  @override
+  void initState() {
+    firebaseMessaging
+        .subscribeToTopic("all")
+        .then((value) => print("Subs to topic"));
+
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +53,7 @@ class _AppWidgetState extends State<AppWidget> {
                   borderRadius: BorderRadius.circular(8),
                   borderSide: BorderSide(width: 1, color: Colors.grey))),
           scaffoldBackgroundColor: Colors.white,
-          primarySwatch:Colors.deepOrange),
+          primarySwatch: Colors.deepOrange),
     );
   }
 }

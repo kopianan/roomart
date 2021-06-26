@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "889497442900",
+    "project_id": "roomart-ae24f",
+    "storage_bucket": "roomart-ae24f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889497442900:android:20d00398538009d5162bc1",
+        "android_client_info": {
+          "package_name": "com.example.ecommerce_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "889497442900-v6bisuksvo9j03qeob5bmh1hks4vd0sq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQs1HpmPk--anhDob0oOyW12lweGgFCTw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "889497442900-v6bisuksvo9j03qeob5bmh1hks4vd0sq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889497442900:android:24b39862a72662f0162bc1",
+        "android_client_info": {
+          "package_name": "com.roomart.roomartapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "889497442900-h0imcint6bmlj32cnl5sle48fhrsjs4t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.roomart.roomartapplication",
+            "certificate_hash": "4e17dcdc348b7ee7b0e05d4aea7e9f3418a75007"
+          }
+        },
+        {
+          "client_id": "889497442900-v6bisuksvo9j03qeob5bmh1hks4vd0sq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQs1HpmPk--anhDob0oOyW12lweGgFCTw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "889497442900-v6bisuksvo9j03qeob5bmh1hks4vd0sq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
