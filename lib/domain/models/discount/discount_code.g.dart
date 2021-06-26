@@ -8,8 +8,8 @@ part of 'discount_code.dart';
 
 _$_DiscountCode _$_$_DiscountCodeFromJson(Map<String, dynamic> json) {
   return _$_DiscountCode(
-    code: json['code'] as String,
-    totalDiscount: json['totalDiscount'] as String,
+    code: json['code'] as String?,
+    totalDiscount: json['totalDiscount'] as String?,
   );
 }
 

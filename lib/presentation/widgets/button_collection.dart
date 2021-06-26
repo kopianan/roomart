@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class DefaultButton1 extends StatelessWidget {
   const DefaultButton1({
-    @required this.color,
-    @required this.text,
-    @required this.onPressed,
+    required this.color,
+    required this.text,
+    required this.onPressed,
   });
-  final Color color;
+  final Color? color;
   final String text;
   final Function onPressed;
 
@@ -16,7 +16,7 @@ class DefaultButton1 extends StatelessWidget {
         height: 45,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
         color: color,
-        onPressed: onPressed,
+        onPressed: onPressed as void Function()?,
         child: Text(
           text,
           style: TextStyle(color: Colors.white, fontSize: 17),
@@ -40,10 +40,10 @@ class LoadingButton1 extends StatelessWidget {
 
 class DefaultButton2 extends StatelessWidget {
   const DefaultButton2({
-    Key key,
-    @required this.color,
-    @required this.text,
-    @required this.onPressed,
+    Key? key,
+    required this.color,
+    required this.text,
+    required this.onPressed,
   }) : super(key: key);
 
   final Color color;
@@ -59,7 +59,7 @@ class DefaultButton2 extends StatelessWidget {
           borderRadius: BorderRadius.circular(6),
         ),
         color: Colors.white,
-        onPressed: onPressed,
+        onPressed: onPressed as void Function()?,
         child: Text(
           text,
           style: TextStyle(color: color, fontSize: 17),

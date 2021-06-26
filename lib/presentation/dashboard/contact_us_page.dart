@@ -43,8 +43,8 @@ class _ContactUsPageState extends State<ContactUsPage> {
         Container(
             child: Html(
           data: snapshot.data,
-          onLinkTap: (val) {
-            launch(val);
+          onLinkTap: (link, context, data, element) {
+            launch(link!);
           },
         )),
       ],

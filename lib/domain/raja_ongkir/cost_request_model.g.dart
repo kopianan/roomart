@@ -8,17 +8,15 @@ part of 'cost_request_model.dart';
 
 _$_CostRequestModel _$_$_CostRequestModelFromJson(Map<String, dynamic> json) {
   return _$_CostRequestModel(
-    origin: json['origin'] as String,
-    destination: json['destination'] as String,
-    originType: json['originType'] as String,
-    destinationType: json['destinationType'] as String,
-    weight: (json['weight'] as num)?.toDouble(),
-    courier: json['courier'] as String,
-    courirList: (json['courirList'] as List)
-        ?.map((e) => e == null
-            ? null
-            : OngkirCodeDataModel.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    origin: json['origin'] as String?,
+    destination: json['destination'] as String?,
+    originType: json['originType'] as String?,
+    destinationType: json['destinationType'] as String?,
+    weight: (json['weight'] as num?)?.toDouble(),
+    courier: json['courier'] as String?,
+    courirList: (json['courirList'] as List<dynamic>?)
+        ?.map((e) => OngkirCodeDataModel.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 

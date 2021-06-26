@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'cost_data_model.dart';
 
@@ -8,6 +8,10 @@ part of 'cost_data_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 CostDataModel _$CostDataModelFromJson(Map<String, dynamic> json) {
   return _CostDataModel.fromJson(json);
 }
@@ -16,8 +20,7 @@ CostDataModel _$CostDataModelFromJson(Map<String, dynamic> json) {
 class _$CostDataModelTearOff {
   const _$CostDataModelTearOff();
 
-// ignore: unused_element
-  _CostDataModel call({String code, String name, List<Costs> costs}) {
+  _CostDataModel call({String? code, String? name, List<Costs>? costs}) {
     return _CostDataModel(
       code: code,
       name: name,
@@ -25,25 +28,24 @@ class _$CostDataModelTearOff {
     );
   }
 
-// ignore: unused_element
   CostDataModel fromJson(Map<String, Object> json) {
     return CostDataModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CostDataModel = _$CostDataModelTearOff();
 
 /// @nodoc
 mixin _$CostDataModel {
-  String get code;
-  String get name;
-  List<Costs> get costs;
+  String? get code => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  List<Costs>? get costs => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CostDataModelCopyWith<CostDataModel> get copyWith;
+  $CostDataModelCopyWith<CostDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -51,7 +53,7 @@ abstract class $CostDataModelCopyWith<$Res> {
   factory $CostDataModelCopyWith(
           CostDataModel value, $Res Function(CostDataModel) then) =
       _$CostDataModelCopyWithImpl<$Res>;
-  $Res call({String code, String name, List<Costs> costs});
+  $Res call({String? code, String? name, List<Costs>? costs});
 }
 
 /// @nodoc
@@ -65,14 +67,23 @@ class _$CostDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object code = freezed,
-    Object name = freezed,
-    Object costs = freezed,
+    Object? code = freezed,
+    Object? name = freezed,
+    Object? costs = freezed,
   }) {
     return _then(_value.copyWith(
-      code: code == freezed ? _value.code : code as String,
-      name: name == freezed ? _value.name : name as String,
-      costs: costs == freezed ? _value.costs : costs as List<Costs>,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      costs: costs == freezed
+          ? _value.costs
+          : costs // ignore: cast_nullable_to_non_nullable
+              as List<Costs>?,
     ));
   }
 }
@@ -84,7 +95,7 @@ abstract class _$CostDataModelCopyWith<$Res>
           _CostDataModel value, $Res Function(_CostDataModel) then) =
       __$CostDataModelCopyWithImpl<$Res>;
   @override
-  $Res call({String code, String name, List<Costs> costs});
+  $Res call({String? code, String? name, List<Costs>? costs});
 }
 
 /// @nodoc
@@ -100,21 +111,29 @@ class __$CostDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object code = freezed,
-    Object name = freezed,
-    Object costs = freezed,
+    Object? code = freezed,
+    Object? name = freezed,
+    Object? costs = freezed,
   }) {
     return _then(_CostDataModel(
-      code: code == freezed ? _value.code : code as String,
-      name: name == freezed ? _value.name : name as String,
-      costs: costs == freezed ? _value.costs : costs as List<Costs>,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      costs: costs == freezed
+          ? _value.costs
+          : costs // ignore: cast_nullable_to_non_nullable
+              as List<Costs>?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CostDataModel implements _CostDataModel {
   _$_CostDataModel({this.code, this.name, this.costs});
 
@@ -122,11 +141,11 @@ class _$_CostDataModel implements _CostDataModel {
       _$_$_CostDataModelFromJson(json);
 
   @override
-  final String code;
+  final String? code;
   @override
-  final String name;
+  final String? name;
   @override
-  final List<Costs> costs;
+  final List<Costs>? costs;
 
   @override
   String toString() {
@@ -164,19 +183,20 @@ class _$_CostDataModel implements _CostDataModel {
 }
 
 abstract class _CostDataModel implements CostDataModel {
-  factory _CostDataModel({String code, String name, List<Costs> costs}) =
+  factory _CostDataModel({String? code, String? name, List<Costs>? costs}) =
       _$_CostDataModel;
 
   factory _CostDataModel.fromJson(Map<String, dynamic> json) =
       _$_CostDataModel.fromJson;
 
   @override
-  String get code;
+  String? get code => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
-  List<Costs> get costs;
+  List<Costs>? get costs => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CostDataModelCopyWith<_CostDataModel> get copyWith;
+  _$CostDataModelCopyWith<_CostDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

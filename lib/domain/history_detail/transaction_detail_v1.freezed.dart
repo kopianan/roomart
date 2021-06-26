@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'transaction_detail_v1.dart';
 
@@ -8,6 +8,10 @@ part of 'transaction_detail_v1.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 TransactionDetailV1 _$TransactionDetailV1FromJson(Map<String, dynamic> json) {
   return _TransactionDetailV1.fromJson(json);
 }
@@ -16,88 +20,87 @@ TransactionDetailV1 _$TransactionDetailV1FromJson(Map<String, dynamic> json) {
 class _$TransactionDetailV1TearOff {
   const _$TransactionDetailV1TearOff();
 
-// ignore: unused_element
   _TransactionDetailV1 call(
-      {@JsonKey(name: 'sales_order_detail_id') String salesOrderDetailId,
-      @JsonKey(name: 'sales_order_id') String salesOrderId,
-      @JsonKey(name: 'index_no') String indexNo,
-      @JsonKey(name: 'item_id') String itemId,
-      @JsonKey(name: 'item_code') String itemCode,
-      @JsonKey(name: 'item_name') String itemName,
-      @JsonKey(name: 'description') String description,
-      @JsonKey(name: 'unit_id') String unitId,
-      @JsonKey(name: 'unit_code') String unitCode,
-      @JsonKey(name: 'tax_id') String taxId,
-      @JsonKey(name: 'tax_amount') String taxAmount,
-      @JsonKey(name: 'sub_total_tax') String subTotalTax,
-      @JsonKey(name: 'discount') String discount,
-      @JsonKey(name: 'sub_total_disc') String subTotalDisc,
-      @JsonKey(name: 'qty') String qty,
-      @JsonKey(name: 'qty_base') String qtyBase,
-      @JsonKey(name: 'item_price') String itemPrice,
-      @JsonKey(name: 'sub_total') String subTotal,
-      @JsonKey(name: 'cost_per_unit') String costPerUnit,
-      @JsonKey(name: 'delivered_qty') String deliveredQty,
-      @JsonKey(name: 'closed') String closed,
-      @JsonKey(name: 'project_id') String projectId,
-      @JsonKey(name: 'department_id') String departmentId,
-      @JsonKey(name: 'employee_id') String employeeId,
-      @JsonKey(name: 'quotation_id') String quotationId,
-      @JsonKey(name: 'quotation_detail_id') String quotationDetailId,
-      @JsonKey(name: 'barcode') String barcode,
-      @JsonKey(name: 'item_sku') String itemSku,
-      @JsonKey(name: 'item_sku_name') String itemSkuName,
-      @JsonKey(name: 'vendor_item_code') String vendorItemCode,
-      @JsonKey(name: 'vendor_item_name') String vendorItemName,
-      @JsonKey(name: 'item_type') String itemType,
-      @JsonKey(name: 'kategori_id') String kategoriId,
-      @JsonKey(name: 'purchase_unit_id') String purchaseUnitId,
-      @JsonKey(name: 'purchase_tax_id') String purchaseTaxId,
-      @JsonKey(name: 'prefered_vendor_id') String preferedVendorId,
-      @JsonKey(name: 'min_price') String minPrice,
-      @JsonKey(name: 'is_fixed_price') String isFixedPrice,
-      @JsonKey(name: 'item_picture') String itemPicture,
-      @JsonKey(name: 'last_purchase_price') String lastPurchasePrice,
-      @JsonKey(name: 'last_purchase_curr') String lastPurchaseCurr,
-      @JsonKey(name: 'last_purchase_rate') String lastPurchaseRate,
-      @JsonKey(name: 'profit_margin') String profitMargin,
-      @JsonKey(name: 'minimum_stock') String minimumStock,
-      @JsonKey(name: 'reorder_point') String reorderPoint,
-      @JsonKey(name: 'maximum_stock') String maximumStock,
-      @JsonKey(name: 'rack_location') String rackLocation,
-      @JsonKey(name: 'warehouse_id') String warehouseId,
-      @JsonKey(name: 'delivery_type') String deliveryType,
-      @JsonKey(name: 'item_status_code_id') String itemStatusCodeId,
-      @JsonKey(name: 'status_color') String statusColor,
-      @JsonKey(name: 'discount_amount') String discountAmount,
-      @JsonKey(name: 'create_by') String createBy,
-      @JsonKey(name: 'add_date') String addDate,
-      @JsonKey(name: 'update_date') String updateDate,
-      @JsonKey(name: 'last_adjustment') String lastAdjustment,
-      @JsonKey(name: 'size') String size,
-      @JsonKey(name: 'color') String color,
-      @JsonKey(name: 'size_unit') String sizeUnit,
-      @JsonKey(name: 'unit_conversion') String unitConversion,
-      @JsonKey(name: 'manufacturer') String manufacturer,
-      @JsonKey(name: 'track_serial_no') String trackSerialNo,
-      @JsonKey(name: 'track_batch_no') String trackBatchNo,
-      @JsonKey(name: 'item_status') String itemStatus,
-      @JsonKey(name: 'inventory_account') String inventoryAccount,
-      @JsonKey(name: 'sales_account') String salesAccount,
-      @JsonKey(name: 'sales_return_account') String salesReturnAccount,
-      @JsonKey(name: 'item_discount_account') String itemDiscountAccount,
-      @JsonKey(name: 'cogs_account') String cogsAccount,
-      @JsonKey(name: 'purchase_return_account') String purchaseReturnAccount,
-      @JsonKey(name: 'expense_account') String expenseAccount,
-      @JsonKey(name: 'unbilled_goods_account') String unbilledGoodsAccount,
-      @JsonKey(name: 'is_consignment') String isConsignment,
-      @JsonKey(name: 'is_discontinue') String isDiscontinue,
-      @JsonKey(name: 'display_store') String displayStore,
-      @JsonKey(name: 'display_desc') String displayDesc,
-      @JsonKey(name: 'tags') String tags,
-      @JsonKey(name: 'weight') String weight,
-      @JsonKey(name: 'volume') String volume,
-      @JsonKey(name: 'brand') String brand}) {
+      {@JsonKey(name: "sales_order_detail_id") String? salesOrderDetailId,
+      @JsonKey(name: "sales_order_id") String? salesOrderId,
+      @JsonKey(name: "index_no") String? indexNo,
+      @JsonKey(name: "item_id") String? itemId,
+      @JsonKey(name: "item_code") String? itemCode,
+      @JsonKey(name: "item_name") String? itemName,
+      @JsonKey(name: "description") String? description,
+      @JsonKey(name: "unit_id") String? unitId,
+      @JsonKey(name: "unit_code") String? unitCode,
+      @JsonKey(name: "tax_id") String? taxId,
+      @JsonKey(name: "tax_amount") String? taxAmount,
+      @JsonKey(name: "sub_total_tax") String? subTotalTax,
+      @JsonKey(name: "discount") String? discount,
+      @JsonKey(name: "sub_total_disc") String? subTotalDisc,
+      @JsonKey(name: "qty") String? qty,
+      @JsonKey(name: "qty_base") String? qtyBase,
+      @JsonKey(name: "item_price") String? itemPrice,
+      @JsonKey(name: "sub_total") String? subTotal,
+      @JsonKey(name: "cost_per_unit") String? costPerUnit,
+      @JsonKey(name: "delivered_qty") String? deliveredQty,
+      @JsonKey(name: "closed") String? closed,
+      @JsonKey(name: "project_id") String? projectId,
+      @JsonKey(name: "department_id") String? departmentId,
+      @JsonKey(name: "employee_id") String? employeeId,
+      @JsonKey(name: "quotation_id") String? quotationId,
+      @JsonKey(name: "quotation_detail_id") String? quotationDetailId,
+      @JsonKey(name: "barcode") String? barcode,
+      @JsonKey(name: "item_sku") String? itemSku,
+      @JsonKey(name: "item_sku_name") String? itemSkuName,
+      @JsonKey(name: "vendor_item_code") String? vendorItemCode,
+      @JsonKey(name: "vendor_item_name") String? vendorItemName,
+      @JsonKey(name: "item_type") String? itemType,
+      @JsonKey(name: "kategori_id") String? kategoriId,
+      @JsonKey(name: "purchase_unit_id") String? purchaseUnitId,
+      @JsonKey(name: "purchase_tax_id") String? purchaseTaxId,
+      @JsonKey(name: "prefered_vendor_id") String? preferedVendorId,
+      @JsonKey(name: "min_price") String? minPrice,
+      @JsonKey(name: "is_fixed_price") String? isFixedPrice,
+      @JsonKey(name: "item_picture") String? itemPicture,
+      @JsonKey(name: "last_purchase_price") String? lastPurchasePrice,
+      @JsonKey(name: "last_purchase_curr") String? lastPurchaseCurr,
+      @JsonKey(name: "last_purchase_rate") String? lastPurchaseRate,
+      @JsonKey(name: "profit_margin") String? profitMargin,
+      @JsonKey(name: "minimum_stock") String? minimumStock,
+      @JsonKey(name: "reorder_point") String? reorderPoint,
+      @JsonKey(name: "maximum_stock") String? maximumStock,
+      @JsonKey(name: "rack_location") String? rackLocation,
+      @JsonKey(name: "warehouse_id") String? warehouseId,
+      @JsonKey(name: "delivery_type") String? deliveryType,
+      @JsonKey(name: "item_status_code_id") String? itemStatusCodeId,
+      @JsonKey(name: "status_color") String? statusColor,
+      @JsonKey(name: "discount_amount") String? discountAmount,
+      @JsonKey(name: "create_by") String? createBy,
+      @JsonKey(name: "add_date") String? addDate,
+      @JsonKey(name: "update_date") String? updateDate,
+      @JsonKey(name: "last_adjustment") String? lastAdjustment,
+      @JsonKey(name: "size") String? size,
+      @JsonKey(name: "color") String? color,
+      @JsonKey(name: "size_unit") String? sizeUnit,
+      @JsonKey(name: "unit_conversion") String? unitConversion,
+      @JsonKey(name: "manufacturer") String? manufacturer,
+      @JsonKey(name: "track_serial_no") String? trackSerialNo,
+      @JsonKey(name: "track_batch_no") String? trackBatchNo,
+      @JsonKey(name: "item_status") String? itemStatus,
+      @JsonKey(name: "inventory_account") String? inventoryAccount,
+      @JsonKey(name: "sales_account") String? salesAccount,
+      @JsonKey(name: "sales_return_account") String? salesReturnAccount,
+      @JsonKey(name: "item_discount_account") String? itemDiscountAccount,
+      @JsonKey(name: "cogs_account") String? cogsAccount,
+      @JsonKey(name: "purchase_return_account") String? purchaseReturnAccount,
+      @JsonKey(name: "expense_account") String? expenseAccount,
+      @JsonKey(name: "unbilled_goods_account") String? unbilledGoodsAccount,
+      @JsonKey(name: "is_consignment") String? isConsignment,
+      @JsonKey(name: "is_discontinue") String? isDiscontinue,
+      @JsonKey(name: "display_store") String? displayStore,
+      @JsonKey(name: "display_desc") String? displayDesc,
+      @JsonKey(name: "tags") String? tags,
+      @JsonKey(name: "weight") String? weight,
+      @JsonKey(name: "volume") String? volume,
+      @JsonKey(name: "brand") String? brand}) {
     return _TransactionDetailV1(
       salesOrderDetailId: salesOrderDetailId,
       salesOrderId: salesOrderId,
@@ -182,182 +185,181 @@ class _$TransactionDetailV1TearOff {
     );
   }
 
-// ignore: unused_element
   TransactionDetailV1 fromJson(Map<String, Object> json) {
     return TransactionDetailV1.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $TransactionDetailV1 = _$TransactionDetailV1TearOff();
 
 /// @nodoc
 mixin _$TransactionDetailV1 {
-  @JsonKey(name: 'sales_order_detail_id')
-  String get salesOrderDetailId;
-  @JsonKey(name: 'sales_order_id')
-  String get salesOrderId;
-  @JsonKey(name: 'index_no')
-  String get indexNo;
-  @JsonKey(name: 'item_id')
-  String get itemId;
-  @JsonKey(name: 'item_code')
-  String get itemCode;
-  @JsonKey(name: 'item_name')
-  String get itemName;
-  @JsonKey(name: 'description')
-  String get description;
-  @JsonKey(name: 'unit_id')
-  String get unitId;
-  @JsonKey(name: 'unit_code')
-  String get unitCode;
-  @JsonKey(name: 'tax_id')
-  String get taxId;
-  @JsonKey(name: 'tax_amount')
-  String get taxAmount;
-  @JsonKey(name: 'sub_total_tax')
-  String get subTotalTax;
-  @JsonKey(name: 'discount')
-  String get discount;
-  @JsonKey(name: 'sub_total_disc')
-  String get subTotalDisc;
-  @JsonKey(name: 'qty')
-  String get qty;
-  @JsonKey(name: 'qty_base')
-  String get qtyBase;
-  @JsonKey(name: 'item_price')
-  String get itemPrice;
-  @JsonKey(name: 'sub_total')
-  String get subTotal;
-  @JsonKey(name: 'cost_per_unit')
-  String get costPerUnit;
-  @JsonKey(name: 'delivered_qty')
-  String get deliveredQty;
-  @JsonKey(name: 'closed')
-  String get closed;
-  @JsonKey(name: 'project_id')
-  String get projectId;
-  @JsonKey(name: 'department_id')
-  String get departmentId;
-  @JsonKey(name: 'employee_id')
-  String get employeeId;
-  @JsonKey(name: 'quotation_id')
-  String get quotationId;
-  @JsonKey(name: 'quotation_detail_id')
-  String get quotationDetailId;
-  @JsonKey(name: 'barcode')
-  String get barcode;
-  @JsonKey(name: 'item_sku')
-  String get itemSku;
-  @JsonKey(name: 'item_sku_name')
-  String get itemSkuName;
-  @JsonKey(name: 'vendor_item_code')
-  String get vendorItemCode;
-  @JsonKey(name: 'vendor_item_name')
-  String get vendorItemName;
-  @JsonKey(name: 'item_type')
-  String get itemType;
-  @JsonKey(name: 'kategori_id')
-  String get kategoriId;
-  @JsonKey(name: 'purchase_unit_id')
-  String get purchaseUnitId;
-  @JsonKey(name: 'purchase_tax_id')
-  String get purchaseTaxId;
-  @JsonKey(name: 'prefered_vendor_id')
-  String get preferedVendorId;
-  @JsonKey(name: 'min_price')
-  String get minPrice;
-  @JsonKey(name: 'is_fixed_price')
-  String get isFixedPrice;
-  @JsonKey(name: 'item_picture')
-  String get itemPicture;
-  @JsonKey(name: 'last_purchase_price')
-  String get lastPurchasePrice;
-  @JsonKey(name: 'last_purchase_curr')
-  String get lastPurchaseCurr;
-  @JsonKey(name: 'last_purchase_rate')
-  String get lastPurchaseRate;
-  @JsonKey(name: 'profit_margin')
-  String get profitMargin;
-  @JsonKey(name: 'minimum_stock')
-  String get minimumStock;
-  @JsonKey(name: 'reorder_point')
-  String get reorderPoint;
-  @JsonKey(name: 'maximum_stock')
-  String get maximumStock;
-  @JsonKey(name: 'rack_location')
-  String get rackLocation;
-  @JsonKey(name: 'warehouse_id')
-  String get warehouseId;
-  @JsonKey(name: 'delivery_type')
-  String get deliveryType;
-  @JsonKey(name: 'item_status_code_id')
-  String get itemStatusCodeId;
-  @JsonKey(name: 'status_color')
-  String get statusColor;
-  @JsonKey(name: 'discount_amount')
-  String get discountAmount;
-  @JsonKey(name: 'create_by')
-  String get createBy;
-  @JsonKey(name: 'add_date')
-  String get addDate;
-  @JsonKey(name: 'update_date')
-  String get updateDate;
-  @JsonKey(name: 'last_adjustment')
-  String get lastAdjustment;
-  @JsonKey(name: 'size')
-  String get size;
-  @JsonKey(name: 'color')
-  String get color;
-  @JsonKey(name: 'size_unit')
-  String get sizeUnit;
-  @JsonKey(name: 'unit_conversion')
-  String get unitConversion;
-  @JsonKey(name: 'manufacturer')
-  String get manufacturer;
-  @JsonKey(name: 'track_serial_no')
-  String get trackSerialNo;
-  @JsonKey(name: 'track_batch_no')
-  String get trackBatchNo;
-  @JsonKey(name: 'item_status')
-  String get itemStatus;
-  @JsonKey(name: 'inventory_account')
-  String get inventoryAccount;
-  @JsonKey(name: 'sales_account')
-  String get salesAccount;
-  @JsonKey(name: 'sales_return_account')
-  String get salesReturnAccount;
-  @JsonKey(name: 'item_discount_account')
-  String get itemDiscountAccount;
-  @JsonKey(name: 'cogs_account')
-  String get cogsAccount;
-  @JsonKey(name: 'purchase_return_account')
-  String get purchaseReturnAccount;
-  @JsonKey(name: 'expense_account')
-  String get expenseAccount;
-  @JsonKey(name: 'unbilled_goods_account')
-  String get unbilledGoodsAccount;
-  @JsonKey(name: 'is_consignment')
-  String get isConsignment;
-  @JsonKey(name: 'is_discontinue')
-  String get isDiscontinue;
-  @JsonKey(name: 'display_store')
-  String get displayStore;
-  @JsonKey(name: 'display_desc')
-  String get displayDesc;
-  @JsonKey(name: 'tags')
-  String get tags;
-  @JsonKey(name: 'weight')
-  String get weight;
-  @JsonKey(name: 'volume')
-  String get volume;
-  @JsonKey(name: 'brand')
-  String get brand;
+  @JsonKey(name: "sales_order_detail_id")
+  String? get salesOrderDetailId => throw _privateConstructorUsedError;
+  @JsonKey(name: "sales_order_id")
+  String? get salesOrderId => throw _privateConstructorUsedError;
+  @JsonKey(name: "index_no")
+  String? get indexNo => throw _privateConstructorUsedError;
+  @JsonKey(name: "item_id")
+  String? get itemId => throw _privateConstructorUsedError;
+  @JsonKey(name: "item_code")
+  String? get itemCode => throw _privateConstructorUsedError;
+  @JsonKey(name: "item_name")
+  String? get itemName => throw _privateConstructorUsedError;
+  @JsonKey(name: "description")
+  String? get description => throw _privateConstructorUsedError;
+  @JsonKey(name: "unit_id")
+  String? get unitId => throw _privateConstructorUsedError;
+  @JsonKey(name: "unit_code")
+  String? get unitCode => throw _privateConstructorUsedError;
+  @JsonKey(name: "tax_id")
+  String? get taxId => throw _privateConstructorUsedError;
+  @JsonKey(name: "tax_amount")
+  String? get taxAmount => throw _privateConstructorUsedError;
+  @JsonKey(name: "sub_total_tax")
+  String? get subTotalTax => throw _privateConstructorUsedError;
+  @JsonKey(name: "discount")
+  String? get discount => throw _privateConstructorUsedError;
+  @JsonKey(name: "sub_total_disc")
+  String? get subTotalDisc => throw _privateConstructorUsedError;
+  @JsonKey(name: "qty")
+  String? get qty => throw _privateConstructorUsedError;
+  @JsonKey(name: "qty_base")
+  String? get qtyBase => throw _privateConstructorUsedError;
+  @JsonKey(name: "item_price")
+  String? get itemPrice => throw _privateConstructorUsedError;
+  @JsonKey(name: "sub_total")
+  String? get subTotal => throw _privateConstructorUsedError;
+  @JsonKey(name: "cost_per_unit")
+  String? get costPerUnit => throw _privateConstructorUsedError;
+  @JsonKey(name: "delivered_qty")
+  String? get deliveredQty => throw _privateConstructorUsedError;
+  @JsonKey(name: "closed")
+  String? get closed => throw _privateConstructorUsedError;
+  @JsonKey(name: "project_id")
+  String? get projectId => throw _privateConstructorUsedError;
+  @JsonKey(name: "department_id")
+  String? get departmentId => throw _privateConstructorUsedError;
+  @JsonKey(name: "employee_id")
+  String? get employeeId => throw _privateConstructorUsedError;
+  @JsonKey(name: "quotation_id")
+  String? get quotationId => throw _privateConstructorUsedError;
+  @JsonKey(name: "quotation_detail_id")
+  String? get quotationDetailId => throw _privateConstructorUsedError;
+  @JsonKey(name: "barcode")
+  String? get barcode => throw _privateConstructorUsedError;
+  @JsonKey(name: "item_sku")
+  String? get itemSku => throw _privateConstructorUsedError;
+  @JsonKey(name: "item_sku_name")
+  String? get itemSkuName => throw _privateConstructorUsedError;
+  @JsonKey(name: "vendor_item_code")
+  String? get vendorItemCode => throw _privateConstructorUsedError;
+  @JsonKey(name: "vendor_item_name")
+  String? get vendorItemName => throw _privateConstructorUsedError;
+  @JsonKey(name: "item_type")
+  String? get itemType => throw _privateConstructorUsedError;
+  @JsonKey(name: "kategori_id")
+  String? get kategoriId => throw _privateConstructorUsedError;
+  @JsonKey(name: "purchase_unit_id")
+  String? get purchaseUnitId => throw _privateConstructorUsedError;
+  @JsonKey(name: "purchase_tax_id")
+  String? get purchaseTaxId => throw _privateConstructorUsedError;
+  @JsonKey(name: "prefered_vendor_id")
+  String? get preferedVendorId => throw _privateConstructorUsedError;
+  @JsonKey(name: "min_price")
+  String? get minPrice => throw _privateConstructorUsedError;
+  @JsonKey(name: "is_fixed_price")
+  String? get isFixedPrice => throw _privateConstructorUsedError;
+  @JsonKey(name: "item_picture")
+  String? get itemPicture => throw _privateConstructorUsedError;
+  @JsonKey(name: "last_purchase_price")
+  String? get lastPurchasePrice => throw _privateConstructorUsedError;
+  @JsonKey(name: "last_purchase_curr")
+  String? get lastPurchaseCurr => throw _privateConstructorUsedError;
+  @JsonKey(name: "last_purchase_rate")
+  String? get lastPurchaseRate => throw _privateConstructorUsedError;
+  @JsonKey(name: "profit_margin")
+  String? get profitMargin => throw _privateConstructorUsedError;
+  @JsonKey(name: "minimum_stock")
+  String? get minimumStock => throw _privateConstructorUsedError;
+  @JsonKey(name: "reorder_point")
+  String? get reorderPoint => throw _privateConstructorUsedError;
+  @JsonKey(name: "maximum_stock")
+  String? get maximumStock => throw _privateConstructorUsedError;
+  @JsonKey(name: "rack_location")
+  String? get rackLocation => throw _privateConstructorUsedError;
+  @JsonKey(name: "warehouse_id")
+  String? get warehouseId => throw _privateConstructorUsedError;
+  @JsonKey(name: "delivery_type")
+  String? get deliveryType => throw _privateConstructorUsedError;
+  @JsonKey(name: "item_status_code_id")
+  String? get itemStatusCodeId => throw _privateConstructorUsedError;
+  @JsonKey(name: "status_color")
+  String? get statusColor => throw _privateConstructorUsedError;
+  @JsonKey(name: "discount_amount")
+  String? get discountAmount => throw _privateConstructorUsedError;
+  @JsonKey(name: "create_by")
+  String? get createBy => throw _privateConstructorUsedError;
+  @JsonKey(name: "add_date")
+  String? get addDate => throw _privateConstructorUsedError;
+  @JsonKey(name: "update_date")
+  String? get updateDate => throw _privateConstructorUsedError;
+  @JsonKey(name: "last_adjustment")
+  String? get lastAdjustment => throw _privateConstructorUsedError;
+  @JsonKey(name: "size")
+  String? get size => throw _privateConstructorUsedError;
+  @JsonKey(name: "color")
+  String? get color => throw _privateConstructorUsedError;
+  @JsonKey(name: "size_unit")
+  String? get sizeUnit => throw _privateConstructorUsedError;
+  @JsonKey(name: "unit_conversion")
+  String? get unitConversion => throw _privateConstructorUsedError;
+  @JsonKey(name: "manufacturer")
+  String? get manufacturer => throw _privateConstructorUsedError;
+  @JsonKey(name: "track_serial_no")
+  String? get trackSerialNo => throw _privateConstructorUsedError;
+  @JsonKey(name: "track_batch_no")
+  String? get trackBatchNo => throw _privateConstructorUsedError;
+  @JsonKey(name: "item_status")
+  String? get itemStatus => throw _privateConstructorUsedError;
+  @JsonKey(name: "inventory_account")
+  String? get inventoryAccount => throw _privateConstructorUsedError;
+  @JsonKey(name: "sales_account")
+  String? get salesAccount => throw _privateConstructorUsedError;
+  @JsonKey(name: "sales_return_account")
+  String? get salesReturnAccount => throw _privateConstructorUsedError;
+  @JsonKey(name: "item_discount_account")
+  String? get itemDiscountAccount => throw _privateConstructorUsedError;
+  @JsonKey(name: "cogs_account")
+  String? get cogsAccount => throw _privateConstructorUsedError;
+  @JsonKey(name: "purchase_return_account")
+  String? get purchaseReturnAccount => throw _privateConstructorUsedError;
+  @JsonKey(name: "expense_account")
+  String? get expenseAccount => throw _privateConstructorUsedError;
+  @JsonKey(name: "unbilled_goods_account")
+  String? get unbilledGoodsAccount => throw _privateConstructorUsedError;
+  @JsonKey(name: "is_consignment")
+  String? get isConsignment => throw _privateConstructorUsedError;
+  @JsonKey(name: "is_discontinue")
+  String? get isDiscontinue => throw _privateConstructorUsedError;
+  @JsonKey(name: "display_store")
+  String? get displayStore => throw _privateConstructorUsedError;
+  @JsonKey(name: "display_desc")
+  String? get displayDesc => throw _privateConstructorUsedError;
+  @JsonKey(name: "tags")
+  String? get tags => throw _privateConstructorUsedError;
+  @JsonKey(name: "weight")
+  String? get weight => throw _privateConstructorUsedError;
+  @JsonKey(name: "volume")
+  String? get volume => throw _privateConstructorUsedError;
+  @JsonKey(name: "brand")
+  String? get brand => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $TransactionDetailV1CopyWith<TransactionDetailV1> get copyWith;
+  $TransactionDetailV1CopyWith<TransactionDetailV1> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -366,86 +368,86 @@ abstract class $TransactionDetailV1CopyWith<$Res> {
           TransactionDetailV1 value, $Res Function(TransactionDetailV1) then) =
       _$TransactionDetailV1CopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'sales_order_detail_id') String salesOrderDetailId,
-      @JsonKey(name: 'sales_order_id') String salesOrderId,
-      @JsonKey(name: 'index_no') String indexNo,
-      @JsonKey(name: 'item_id') String itemId,
-      @JsonKey(name: 'item_code') String itemCode,
-      @JsonKey(name: 'item_name') String itemName,
-      @JsonKey(name: 'description') String description,
-      @JsonKey(name: 'unit_id') String unitId,
-      @JsonKey(name: 'unit_code') String unitCode,
-      @JsonKey(name: 'tax_id') String taxId,
-      @JsonKey(name: 'tax_amount') String taxAmount,
-      @JsonKey(name: 'sub_total_tax') String subTotalTax,
-      @JsonKey(name: 'discount') String discount,
-      @JsonKey(name: 'sub_total_disc') String subTotalDisc,
-      @JsonKey(name: 'qty') String qty,
-      @JsonKey(name: 'qty_base') String qtyBase,
-      @JsonKey(name: 'item_price') String itemPrice,
-      @JsonKey(name: 'sub_total') String subTotal,
-      @JsonKey(name: 'cost_per_unit') String costPerUnit,
-      @JsonKey(name: 'delivered_qty') String deliveredQty,
-      @JsonKey(name: 'closed') String closed,
-      @JsonKey(name: 'project_id') String projectId,
-      @JsonKey(name: 'department_id') String departmentId,
-      @JsonKey(name: 'employee_id') String employeeId,
-      @JsonKey(name: 'quotation_id') String quotationId,
-      @JsonKey(name: 'quotation_detail_id') String quotationDetailId,
-      @JsonKey(name: 'barcode') String barcode,
-      @JsonKey(name: 'item_sku') String itemSku,
-      @JsonKey(name: 'item_sku_name') String itemSkuName,
-      @JsonKey(name: 'vendor_item_code') String vendorItemCode,
-      @JsonKey(name: 'vendor_item_name') String vendorItemName,
-      @JsonKey(name: 'item_type') String itemType,
-      @JsonKey(name: 'kategori_id') String kategoriId,
-      @JsonKey(name: 'purchase_unit_id') String purchaseUnitId,
-      @JsonKey(name: 'purchase_tax_id') String purchaseTaxId,
-      @JsonKey(name: 'prefered_vendor_id') String preferedVendorId,
-      @JsonKey(name: 'min_price') String minPrice,
-      @JsonKey(name: 'is_fixed_price') String isFixedPrice,
-      @JsonKey(name: 'item_picture') String itemPicture,
-      @JsonKey(name: 'last_purchase_price') String lastPurchasePrice,
-      @JsonKey(name: 'last_purchase_curr') String lastPurchaseCurr,
-      @JsonKey(name: 'last_purchase_rate') String lastPurchaseRate,
-      @JsonKey(name: 'profit_margin') String profitMargin,
-      @JsonKey(name: 'minimum_stock') String minimumStock,
-      @JsonKey(name: 'reorder_point') String reorderPoint,
-      @JsonKey(name: 'maximum_stock') String maximumStock,
-      @JsonKey(name: 'rack_location') String rackLocation,
-      @JsonKey(name: 'warehouse_id') String warehouseId,
-      @JsonKey(name: 'delivery_type') String deliveryType,
-      @JsonKey(name: 'item_status_code_id') String itemStatusCodeId,
-      @JsonKey(name: 'status_color') String statusColor,
-      @JsonKey(name: 'discount_amount') String discountAmount,
-      @JsonKey(name: 'create_by') String createBy,
-      @JsonKey(name: 'add_date') String addDate,
-      @JsonKey(name: 'update_date') String updateDate,
-      @JsonKey(name: 'last_adjustment') String lastAdjustment,
-      @JsonKey(name: 'size') String size,
-      @JsonKey(name: 'color') String color,
-      @JsonKey(name: 'size_unit') String sizeUnit,
-      @JsonKey(name: 'unit_conversion') String unitConversion,
-      @JsonKey(name: 'manufacturer') String manufacturer,
-      @JsonKey(name: 'track_serial_no') String trackSerialNo,
-      @JsonKey(name: 'track_batch_no') String trackBatchNo,
-      @JsonKey(name: 'item_status') String itemStatus,
-      @JsonKey(name: 'inventory_account') String inventoryAccount,
-      @JsonKey(name: 'sales_account') String salesAccount,
-      @JsonKey(name: 'sales_return_account') String salesReturnAccount,
-      @JsonKey(name: 'item_discount_account') String itemDiscountAccount,
-      @JsonKey(name: 'cogs_account') String cogsAccount,
-      @JsonKey(name: 'purchase_return_account') String purchaseReturnAccount,
-      @JsonKey(name: 'expense_account') String expenseAccount,
-      @JsonKey(name: 'unbilled_goods_account') String unbilledGoodsAccount,
-      @JsonKey(name: 'is_consignment') String isConsignment,
-      @JsonKey(name: 'is_discontinue') String isDiscontinue,
-      @JsonKey(name: 'display_store') String displayStore,
-      @JsonKey(name: 'display_desc') String displayDesc,
-      @JsonKey(name: 'tags') String tags,
-      @JsonKey(name: 'weight') String weight,
-      @JsonKey(name: 'volume') String volume,
-      @JsonKey(name: 'brand') String brand});
+      {@JsonKey(name: "sales_order_detail_id") String? salesOrderDetailId,
+      @JsonKey(name: "sales_order_id") String? salesOrderId,
+      @JsonKey(name: "index_no") String? indexNo,
+      @JsonKey(name: "item_id") String? itemId,
+      @JsonKey(name: "item_code") String? itemCode,
+      @JsonKey(name: "item_name") String? itemName,
+      @JsonKey(name: "description") String? description,
+      @JsonKey(name: "unit_id") String? unitId,
+      @JsonKey(name: "unit_code") String? unitCode,
+      @JsonKey(name: "tax_id") String? taxId,
+      @JsonKey(name: "tax_amount") String? taxAmount,
+      @JsonKey(name: "sub_total_tax") String? subTotalTax,
+      @JsonKey(name: "discount") String? discount,
+      @JsonKey(name: "sub_total_disc") String? subTotalDisc,
+      @JsonKey(name: "qty") String? qty,
+      @JsonKey(name: "qty_base") String? qtyBase,
+      @JsonKey(name: "item_price") String? itemPrice,
+      @JsonKey(name: "sub_total") String? subTotal,
+      @JsonKey(name: "cost_per_unit") String? costPerUnit,
+      @JsonKey(name: "delivered_qty") String? deliveredQty,
+      @JsonKey(name: "closed") String? closed,
+      @JsonKey(name: "project_id") String? projectId,
+      @JsonKey(name: "department_id") String? departmentId,
+      @JsonKey(name: "employee_id") String? employeeId,
+      @JsonKey(name: "quotation_id") String? quotationId,
+      @JsonKey(name: "quotation_detail_id") String? quotationDetailId,
+      @JsonKey(name: "barcode") String? barcode,
+      @JsonKey(name: "item_sku") String? itemSku,
+      @JsonKey(name: "item_sku_name") String? itemSkuName,
+      @JsonKey(name: "vendor_item_code") String? vendorItemCode,
+      @JsonKey(name: "vendor_item_name") String? vendorItemName,
+      @JsonKey(name: "item_type") String? itemType,
+      @JsonKey(name: "kategori_id") String? kategoriId,
+      @JsonKey(name: "purchase_unit_id") String? purchaseUnitId,
+      @JsonKey(name: "purchase_tax_id") String? purchaseTaxId,
+      @JsonKey(name: "prefered_vendor_id") String? preferedVendorId,
+      @JsonKey(name: "min_price") String? minPrice,
+      @JsonKey(name: "is_fixed_price") String? isFixedPrice,
+      @JsonKey(name: "item_picture") String? itemPicture,
+      @JsonKey(name: "last_purchase_price") String? lastPurchasePrice,
+      @JsonKey(name: "last_purchase_curr") String? lastPurchaseCurr,
+      @JsonKey(name: "last_purchase_rate") String? lastPurchaseRate,
+      @JsonKey(name: "profit_margin") String? profitMargin,
+      @JsonKey(name: "minimum_stock") String? minimumStock,
+      @JsonKey(name: "reorder_point") String? reorderPoint,
+      @JsonKey(name: "maximum_stock") String? maximumStock,
+      @JsonKey(name: "rack_location") String? rackLocation,
+      @JsonKey(name: "warehouse_id") String? warehouseId,
+      @JsonKey(name: "delivery_type") String? deliveryType,
+      @JsonKey(name: "item_status_code_id") String? itemStatusCodeId,
+      @JsonKey(name: "status_color") String? statusColor,
+      @JsonKey(name: "discount_amount") String? discountAmount,
+      @JsonKey(name: "create_by") String? createBy,
+      @JsonKey(name: "add_date") String? addDate,
+      @JsonKey(name: "update_date") String? updateDate,
+      @JsonKey(name: "last_adjustment") String? lastAdjustment,
+      @JsonKey(name: "size") String? size,
+      @JsonKey(name: "color") String? color,
+      @JsonKey(name: "size_unit") String? sizeUnit,
+      @JsonKey(name: "unit_conversion") String? unitConversion,
+      @JsonKey(name: "manufacturer") String? manufacturer,
+      @JsonKey(name: "track_serial_no") String? trackSerialNo,
+      @JsonKey(name: "track_batch_no") String? trackBatchNo,
+      @JsonKey(name: "item_status") String? itemStatus,
+      @JsonKey(name: "inventory_account") String? inventoryAccount,
+      @JsonKey(name: "sales_account") String? salesAccount,
+      @JsonKey(name: "sales_return_account") String? salesReturnAccount,
+      @JsonKey(name: "item_discount_account") String? itemDiscountAccount,
+      @JsonKey(name: "cogs_account") String? cogsAccount,
+      @JsonKey(name: "purchase_return_account") String? purchaseReturnAccount,
+      @JsonKey(name: "expense_account") String? expenseAccount,
+      @JsonKey(name: "unbilled_goods_account") String? unbilledGoodsAccount,
+      @JsonKey(name: "is_consignment") String? isConsignment,
+      @JsonKey(name: "is_discontinue") String? isDiscontinue,
+      @JsonKey(name: "display_store") String? displayStore,
+      @JsonKey(name: "display_desc") String? displayDesc,
+      @JsonKey(name: "tags") String? tags,
+      @JsonKey(name: "weight") String? weight,
+      @JsonKey(name: "volume") String? volume,
+      @JsonKey(name: "brand") String? brand});
 }
 
 /// @nodoc
@@ -459,258 +461,408 @@ class _$TransactionDetailV1CopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object salesOrderDetailId = freezed,
-    Object salesOrderId = freezed,
-    Object indexNo = freezed,
-    Object itemId = freezed,
-    Object itemCode = freezed,
-    Object itemName = freezed,
-    Object description = freezed,
-    Object unitId = freezed,
-    Object unitCode = freezed,
-    Object taxId = freezed,
-    Object taxAmount = freezed,
-    Object subTotalTax = freezed,
-    Object discount = freezed,
-    Object subTotalDisc = freezed,
-    Object qty = freezed,
-    Object qtyBase = freezed,
-    Object itemPrice = freezed,
-    Object subTotal = freezed,
-    Object costPerUnit = freezed,
-    Object deliveredQty = freezed,
-    Object closed = freezed,
-    Object projectId = freezed,
-    Object departmentId = freezed,
-    Object employeeId = freezed,
-    Object quotationId = freezed,
-    Object quotationDetailId = freezed,
-    Object barcode = freezed,
-    Object itemSku = freezed,
-    Object itemSkuName = freezed,
-    Object vendorItemCode = freezed,
-    Object vendorItemName = freezed,
-    Object itemType = freezed,
-    Object kategoriId = freezed,
-    Object purchaseUnitId = freezed,
-    Object purchaseTaxId = freezed,
-    Object preferedVendorId = freezed,
-    Object minPrice = freezed,
-    Object isFixedPrice = freezed,
-    Object itemPicture = freezed,
-    Object lastPurchasePrice = freezed,
-    Object lastPurchaseCurr = freezed,
-    Object lastPurchaseRate = freezed,
-    Object profitMargin = freezed,
-    Object minimumStock = freezed,
-    Object reorderPoint = freezed,
-    Object maximumStock = freezed,
-    Object rackLocation = freezed,
-    Object warehouseId = freezed,
-    Object deliveryType = freezed,
-    Object itemStatusCodeId = freezed,
-    Object statusColor = freezed,
-    Object discountAmount = freezed,
-    Object createBy = freezed,
-    Object addDate = freezed,
-    Object updateDate = freezed,
-    Object lastAdjustment = freezed,
-    Object size = freezed,
-    Object color = freezed,
-    Object sizeUnit = freezed,
-    Object unitConversion = freezed,
-    Object manufacturer = freezed,
-    Object trackSerialNo = freezed,
-    Object trackBatchNo = freezed,
-    Object itemStatus = freezed,
-    Object inventoryAccount = freezed,
-    Object salesAccount = freezed,
-    Object salesReturnAccount = freezed,
-    Object itemDiscountAccount = freezed,
-    Object cogsAccount = freezed,
-    Object purchaseReturnAccount = freezed,
-    Object expenseAccount = freezed,
-    Object unbilledGoodsAccount = freezed,
-    Object isConsignment = freezed,
-    Object isDiscontinue = freezed,
-    Object displayStore = freezed,
-    Object displayDesc = freezed,
-    Object tags = freezed,
-    Object weight = freezed,
-    Object volume = freezed,
-    Object brand = freezed,
+    Object? salesOrderDetailId = freezed,
+    Object? salesOrderId = freezed,
+    Object? indexNo = freezed,
+    Object? itemId = freezed,
+    Object? itemCode = freezed,
+    Object? itemName = freezed,
+    Object? description = freezed,
+    Object? unitId = freezed,
+    Object? unitCode = freezed,
+    Object? taxId = freezed,
+    Object? taxAmount = freezed,
+    Object? subTotalTax = freezed,
+    Object? discount = freezed,
+    Object? subTotalDisc = freezed,
+    Object? qty = freezed,
+    Object? qtyBase = freezed,
+    Object? itemPrice = freezed,
+    Object? subTotal = freezed,
+    Object? costPerUnit = freezed,
+    Object? deliveredQty = freezed,
+    Object? closed = freezed,
+    Object? projectId = freezed,
+    Object? departmentId = freezed,
+    Object? employeeId = freezed,
+    Object? quotationId = freezed,
+    Object? quotationDetailId = freezed,
+    Object? barcode = freezed,
+    Object? itemSku = freezed,
+    Object? itemSkuName = freezed,
+    Object? vendorItemCode = freezed,
+    Object? vendorItemName = freezed,
+    Object? itemType = freezed,
+    Object? kategoriId = freezed,
+    Object? purchaseUnitId = freezed,
+    Object? purchaseTaxId = freezed,
+    Object? preferedVendorId = freezed,
+    Object? minPrice = freezed,
+    Object? isFixedPrice = freezed,
+    Object? itemPicture = freezed,
+    Object? lastPurchasePrice = freezed,
+    Object? lastPurchaseCurr = freezed,
+    Object? lastPurchaseRate = freezed,
+    Object? profitMargin = freezed,
+    Object? minimumStock = freezed,
+    Object? reorderPoint = freezed,
+    Object? maximumStock = freezed,
+    Object? rackLocation = freezed,
+    Object? warehouseId = freezed,
+    Object? deliveryType = freezed,
+    Object? itemStatusCodeId = freezed,
+    Object? statusColor = freezed,
+    Object? discountAmount = freezed,
+    Object? createBy = freezed,
+    Object? addDate = freezed,
+    Object? updateDate = freezed,
+    Object? lastAdjustment = freezed,
+    Object? size = freezed,
+    Object? color = freezed,
+    Object? sizeUnit = freezed,
+    Object? unitConversion = freezed,
+    Object? manufacturer = freezed,
+    Object? trackSerialNo = freezed,
+    Object? trackBatchNo = freezed,
+    Object? itemStatus = freezed,
+    Object? inventoryAccount = freezed,
+    Object? salesAccount = freezed,
+    Object? salesReturnAccount = freezed,
+    Object? itemDiscountAccount = freezed,
+    Object? cogsAccount = freezed,
+    Object? purchaseReturnAccount = freezed,
+    Object? expenseAccount = freezed,
+    Object? unbilledGoodsAccount = freezed,
+    Object? isConsignment = freezed,
+    Object? isDiscontinue = freezed,
+    Object? displayStore = freezed,
+    Object? displayDesc = freezed,
+    Object? tags = freezed,
+    Object? weight = freezed,
+    Object? volume = freezed,
+    Object? brand = freezed,
   }) {
     return _then(_value.copyWith(
       salesOrderDetailId: salesOrderDetailId == freezed
           ? _value.salesOrderDetailId
-          : salesOrderDetailId as String,
+          : salesOrderDetailId // ignore: cast_nullable_to_non_nullable
+              as String?,
       salesOrderId: salesOrderId == freezed
           ? _value.salesOrderId
-          : salesOrderId as String,
-      indexNo: indexNo == freezed ? _value.indexNo : indexNo as String,
-      itemId: itemId == freezed ? _value.itemId : itemId as String,
-      itemCode: itemCode == freezed ? _value.itemCode : itemCode as String,
-      itemName: itemName == freezed ? _value.itemName : itemName as String,
-      description:
-          description == freezed ? _value.description : description as String,
-      unitId: unitId == freezed ? _value.unitId : unitId as String,
-      unitCode: unitCode == freezed ? _value.unitCode : unitCode as String,
-      taxId: taxId == freezed ? _value.taxId : taxId as String,
-      taxAmount: taxAmount == freezed ? _value.taxAmount : taxAmount as String,
-      subTotalTax:
-          subTotalTax == freezed ? _value.subTotalTax : subTotalTax as String,
-      discount: discount == freezed ? _value.discount : discount as String,
+          : salesOrderId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      indexNo: indexNo == freezed
+          ? _value.indexNo
+          : indexNo // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemId: itemId == freezed
+          ? _value.itemId
+          : itemId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemCode: itemCode == freezed
+          ? _value.itemCode
+          : itemCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemName: itemName == freezed
+          ? _value.itemName
+          : itemName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      unitId: unitId == freezed
+          ? _value.unitId
+          : unitId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      unitCode: unitCode == freezed
+          ? _value.unitCode
+          : unitCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      taxId: taxId == freezed
+          ? _value.taxId
+          : taxId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      taxAmount: taxAmount == freezed
+          ? _value.taxAmount
+          : taxAmount // ignore: cast_nullable_to_non_nullable
+              as String?,
+      subTotalTax: subTotalTax == freezed
+          ? _value.subTotalTax
+          : subTotalTax // ignore: cast_nullable_to_non_nullable
+              as String?,
+      discount: discount == freezed
+          ? _value.discount
+          : discount // ignore: cast_nullable_to_non_nullable
+              as String?,
       subTotalDisc: subTotalDisc == freezed
           ? _value.subTotalDisc
-          : subTotalDisc as String,
-      qty: qty == freezed ? _value.qty : qty as String,
-      qtyBase: qtyBase == freezed ? _value.qtyBase : qtyBase as String,
-      itemPrice: itemPrice == freezed ? _value.itemPrice : itemPrice as String,
-      subTotal: subTotal == freezed ? _value.subTotal : subTotal as String,
-      costPerUnit:
-          costPerUnit == freezed ? _value.costPerUnit : costPerUnit as String,
+          : subTotalDisc // ignore: cast_nullable_to_non_nullable
+              as String?,
+      qty: qty == freezed
+          ? _value.qty
+          : qty // ignore: cast_nullable_to_non_nullable
+              as String?,
+      qtyBase: qtyBase == freezed
+          ? _value.qtyBase
+          : qtyBase // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemPrice: itemPrice == freezed
+          ? _value.itemPrice
+          : itemPrice // ignore: cast_nullable_to_non_nullable
+              as String?,
+      subTotal: subTotal == freezed
+          ? _value.subTotal
+          : subTotal // ignore: cast_nullable_to_non_nullable
+              as String?,
+      costPerUnit: costPerUnit == freezed
+          ? _value.costPerUnit
+          : costPerUnit // ignore: cast_nullable_to_non_nullable
+              as String?,
       deliveredQty: deliveredQty == freezed
           ? _value.deliveredQty
-          : deliveredQty as String,
-      closed: closed == freezed ? _value.closed : closed as String,
-      projectId: projectId == freezed ? _value.projectId : projectId as String,
+          : deliveredQty // ignore: cast_nullable_to_non_nullable
+              as String?,
+      closed: closed == freezed
+          ? _value.closed
+          : closed // ignore: cast_nullable_to_non_nullable
+              as String?,
+      projectId: projectId == freezed
+          ? _value.projectId
+          : projectId // ignore: cast_nullable_to_non_nullable
+              as String?,
       departmentId: departmentId == freezed
           ? _value.departmentId
-          : departmentId as String,
-      employeeId:
-          employeeId == freezed ? _value.employeeId : employeeId as String,
-      quotationId:
-          quotationId == freezed ? _value.quotationId : quotationId as String,
+          : departmentId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      employeeId: employeeId == freezed
+          ? _value.employeeId
+          : employeeId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      quotationId: quotationId == freezed
+          ? _value.quotationId
+          : quotationId // ignore: cast_nullable_to_non_nullable
+              as String?,
       quotationDetailId: quotationDetailId == freezed
           ? _value.quotationDetailId
-          : quotationDetailId as String,
-      barcode: barcode == freezed ? _value.barcode : barcode as String,
-      itemSku: itemSku == freezed ? _value.itemSku : itemSku as String,
-      itemSkuName:
-          itemSkuName == freezed ? _value.itemSkuName : itemSkuName as String,
+          : quotationDetailId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      barcode: barcode == freezed
+          ? _value.barcode
+          : barcode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemSku: itemSku == freezed
+          ? _value.itemSku
+          : itemSku // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemSkuName: itemSkuName == freezed
+          ? _value.itemSkuName
+          : itemSkuName // ignore: cast_nullable_to_non_nullable
+              as String?,
       vendorItemCode: vendorItemCode == freezed
           ? _value.vendorItemCode
-          : vendorItemCode as String,
+          : vendorItemCode // ignore: cast_nullable_to_non_nullable
+              as String?,
       vendorItemName: vendorItemName == freezed
           ? _value.vendorItemName
-          : vendorItemName as String,
-      itemType: itemType == freezed ? _value.itemType : itemType as String,
-      kategoriId:
-          kategoriId == freezed ? _value.kategoriId : kategoriId as String,
+          : vendorItemName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemType: itemType == freezed
+          ? _value.itemType
+          : itemType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      kategoriId: kategoriId == freezed
+          ? _value.kategoriId
+          : kategoriId // ignore: cast_nullable_to_non_nullable
+              as String?,
       purchaseUnitId: purchaseUnitId == freezed
           ? _value.purchaseUnitId
-          : purchaseUnitId as String,
+          : purchaseUnitId // ignore: cast_nullable_to_non_nullable
+              as String?,
       purchaseTaxId: purchaseTaxId == freezed
           ? _value.purchaseTaxId
-          : purchaseTaxId as String,
+          : purchaseTaxId // ignore: cast_nullable_to_non_nullable
+              as String?,
       preferedVendorId: preferedVendorId == freezed
           ? _value.preferedVendorId
-          : preferedVendorId as String,
-      minPrice: minPrice == freezed ? _value.minPrice : minPrice as String,
+          : preferedVendorId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      minPrice: minPrice == freezed
+          ? _value.minPrice
+          : minPrice // ignore: cast_nullable_to_non_nullable
+              as String?,
       isFixedPrice: isFixedPrice == freezed
           ? _value.isFixedPrice
-          : isFixedPrice as String,
-      itemPicture:
-          itemPicture == freezed ? _value.itemPicture : itemPicture as String,
+          : isFixedPrice // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemPicture: itemPicture == freezed
+          ? _value.itemPicture
+          : itemPicture // ignore: cast_nullable_to_non_nullable
+              as String?,
       lastPurchasePrice: lastPurchasePrice == freezed
           ? _value.lastPurchasePrice
-          : lastPurchasePrice as String,
+          : lastPurchasePrice // ignore: cast_nullable_to_non_nullable
+              as String?,
       lastPurchaseCurr: lastPurchaseCurr == freezed
           ? _value.lastPurchaseCurr
-          : lastPurchaseCurr as String,
+          : lastPurchaseCurr // ignore: cast_nullable_to_non_nullable
+              as String?,
       lastPurchaseRate: lastPurchaseRate == freezed
           ? _value.lastPurchaseRate
-          : lastPurchaseRate as String,
+          : lastPurchaseRate // ignore: cast_nullable_to_non_nullable
+              as String?,
       profitMargin: profitMargin == freezed
           ? _value.profitMargin
-          : profitMargin as String,
+          : profitMargin // ignore: cast_nullable_to_non_nullable
+              as String?,
       minimumStock: minimumStock == freezed
           ? _value.minimumStock
-          : minimumStock as String,
+          : minimumStock // ignore: cast_nullable_to_non_nullable
+              as String?,
       reorderPoint: reorderPoint == freezed
           ? _value.reorderPoint
-          : reorderPoint as String,
+          : reorderPoint // ignore: cast_nullable_to_non_nullable
+              as String?,
       maximumStock: maximumStock == freezed
           ? _value.maximumStock
-          : maximumStock as String,
+          : maximumStock // ignore: cast_nullable_to_non_nullable
+              as String?,
       rackLocation: rackLocation == freezed
           ? _value.rackLocation
-          : rackLocation as String,
-      warehouseId:
-          warehouseId == freezed ? _value.warehouseId : warehouseId as String,
+          : rackLocation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      warehouseId: warehouseId == freezed
+          ? _value.warehouseId
+          : warehouseId // ignore: cast_nullable_to_non_nullable
+              as String?,
       deliveryType: deliveryType == freezed
           ? _value.deliveryType
-          : deliveryType as String,
+          : deliveryType // ignore: cast_nullable_to_non_nullable
+              as String?,
       itemStatusCodeId: itemStatusCodeId == freezed
           ? _value.itemStatusCodeId
-          : itemStatusCodeId as String,
-      statusColor:
-          statusColor == freezed ? _value.statusColor : statusColor as String,
+          : itemStatusCodeId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      statusColor: statusColor == freezed
+          ? _value.statusColor
+          : statusColor // ignore: cast_nullable_to_non_nullable
+              as String?,
       discountAmount: discountAmount == freezed
           ? _value.discountAmount
-          : discountAmount as String,
-      createBy: createBy == freezed ? _value.createBy : createBy as String,
-      addDate: addDate == freezed ? _value.addDate : addDate as String,
-      updateDate:
-          updateDate == freezed ? _value.updateDate : updateDate as String,
+          : discountAmount // ignore: cast_nullable_to_non_nullable
+              as String?,
+      createBy: createBy == freezed
+          ? _value.createBy
+          : createBy // ignore: cast_nullable_to_non_nullable
+              as String?,
+      addDate: addDate == freezed
+          ? _value.addDate
+          : addDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      updateDate: updateDate == freezed
+          ? _value.updateDate
+          : updateDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       lastAdjustment: lastAdjustment == freezed
           ? _value.lastAdjustment
-          : lastAdjustment as String,
-      size: size == freezed ? _value.size : size as String,
-      color: color == freezed ? _value.color : color as String,
-      sizeUnit: sizeUnit == freezed ? _value.sizeUnit : sizeUnit as String,
+          : lastAdjustment // ignore: cast_nullable_to_non_nullable
+              as String?,
+      size: size == freezed
+          ? _value.size
+          : size // ignore: cast_nullable_to_non_nullable
+              as String?,
+      color: color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sizeUnit: sizeUnit == freezed
+          ? _value.sizeUnit
+          : sizeUnit // ignore: cast_nullable_to_non_nullable
+              as String?,
       unitConversion: unitConversion == freezed
           ? _value.unitConversion
-          : unitConversion as String,
+          : unitConversion // ignore: cast_nullable_to_non_nullable
+              as String?,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
-          : manufacturer as String,
+          : manufacturer // ignore: cast_nullable_to_non_nullable
+              as String?,
       trackSerialNo: trackSerialNo == freezed
           ? _value.trackSerialNo
-          : trackSerialNo as String,
+          : trackSerialNo // ignore: cast_nullable_to_non_nullable
+              as String?,
       trackBatchNo: trackBatchNo == freezed
           ? _value.trackBatchNo
-          : trackBatchNo as String,
-      itemStatus:
-          itemStatus == freezed ? _value.itemStatus : itemStatus as String,
+          : trackBatchNo // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemStatus: itemStatus == freezed
+          ? _value.itemStatus
+          : itemStatus // ignore: cast_nullable_to_non_nullable
+              as String?,
       inventoryAccount: inventoryAccount == freezed
           ? _value.inventoryAccount
-          : inventoryAccount as String,
+          : inventoryAccount // ignore: cast_nullable_to_non_nullable
+              as String?,
       salesAccount: salesAccount == freezed
           ? _value.salesAccount
-          : salesAccount as String,
+          : salesAccount // ignore: cast_nullable_to_non_nullable
+              as String?,
       salesReturnAccount: salesReturnAccount == freezed
           ? _value.salesReturnAccount
-          : salesReturnAccount as String,
+          : salesReturnAccount // ignore: cast_nullable_to_non_nullable
+              as String?,
       itemDiscountAccount: itemDiscountAccount == freezed
           ? _value.itemDiscountAccount
-          : itemDiscountAccount as String,
-      cogsAccount:
-          cogsAccount == freezed ? _value.cogsAccount : cogsAccount as String,
+          : itemDiscountAccount // ignore: cast_nullable_to_non_nullable
+              as String?,
+      cogsAccount: cogsAccount == freezed
+          ? _value.cogsAccount
+          : cogsAccount // ignore: cast_nullable_to_non_nullable
+              as String?,
       purchaseReturnAccount: purchaseReturnAccount == freezed
           ? _value.purchaseReturnAccount
-          : purchaseReturnAccount as String,
+          : purchaseReturnAccount // ignore: cast_nullable_to_non_nullable
+              as String?,
       expenseAccount: expenseAccount == freezed
           ? _value.expenseAccount
-          : expenseAccount as String,
+          : expenseAccount // ignore: cast_nullable_to_non_nullable
+              as String?,
       unbilledGoodsAccount: unbilledGoodsAccount == freezed
           ? _value.unbilledGoodsAccount
-          : unbilledGoodsAccount as String,
+          : unbilledGoodsAccount // ignore: cast_nullable_to_non_nullable
+              as String?,
       isConsignment: isConsignment == freezed
           ? _value.isConsignment
-          : isConsignment as String,
+          : isConsignment // ignore: cast_nullable_to_non_nullable
+              as String?,
       isDiscontinue: isDiscontinue == freezed
           ? _value.isDiscontinue
-          : isDiscontinue as String,
+          : isDiscontinue // ignore: cast_nullable_to_non_nullable
+              as String?,
       displayStore: displayStore == freezed
           ? _value.displayStore
-          : displayStore as String,
-      displayDesc:
-          displayDesc == freezed ? _value.displayDesc : displayDesc as String,
-      tags: tags == freezed ? _value.tags : tags as String,
-      weight: weight == freezed ? _value.weight : weight as String,
-      volume: volume == freezed ? _value.volume : volume as String,
-      brand: brand == freezed ? _value.brand : brand as String,
+          : displayStore // ignore: cast_nullable_to_non_nullable
+              as String?,
+      displayDesc: displayDesc == freezed
+          ? _value.displayDesc
+          : displayDesc // ignore: cast_nullable_to_non_nullable
+              as String?,
+      tags: tags == freezed
+          ? _value.tags
+          : tags // ignore: cast_nullable_to_non_nullable
+              as String?,
+      weight: weight == freezed
+          ? _value.weight
+          : weight // ignore: cast_nullable_to_non_nullable
+              as String?,
+      volume: volume == freezed
+          ? _value.volume
+          : volume // ignore: cast_nullable_to_non_nullable
+              as String?,
+      brand: brand == freezed
+          ? _value.brand
+          : brand // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -723,86 +875,86 @@ abstract class _$TransactionDetailV1CopyWith<$Res>
       __$TransactionDetailV1CopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'sales_order_detail_id') String salesOrderDetailId,
-      @JsonKey(name: 'sales_order_id') String salesOrderId,
-      @JsonKey(name: 'index_no') String indexNo,
-      @JsonKey(name: 'item_id') String itemId,
-      @JsonKey(name: 'item_code') String itemCode,
-      @JsonKey(name: 'item_name') String itemName,
-      @JsonKey(name: 'description') String description,
-      @JsonKey(name: 'unit_id') String unitId,
-      @JsonKey(name: 'unit_code') String unitCode,
-      @JsonKey(name: 'tax_id') String taxId,
-      @JsonKey(name: 'tax_amount') String taxAmount,
-      @JsonKey(name: 'sub_total_tax') String subTotalTax,
-      @JsonKey(name: 'discount') String discount,
-      @JsonKey(name: 'sub_total_disc') String subTotalDisc,
-      @JsonKey(name: 'qty') String qty,
-      @JsonKey(name: 'qty_base') String qtyBase,
-      @JsonKey(name: 'item_price') String itemPrice,
-      @JsonKey(name: 'sub_total') String subTotal,
-      @JsonKey(name: 'cost_per_unit') String costPerUnit,
-      @JsonKey(name: 'delivered_qty') String deliveredQty,
-      @JsonKey(name: 'closed') String closed,
-      @JsonKey(name: 'project_id') String projectId,
-      @JsonKey(name: 'department_id') String departmentId,
-      @JsonKey(name: 'employee_id') String employeeId,
-      @JsonKey(name: 'quotation_id') String quotationId,
-      @JsonKey(name: 'quotation_detail_id') String quotationDetailId,
-      @JsonKey(name: 'barcode') String barcode,
-      @JsonKey(name: 'item_sku') String itemSku,
-      @JsonKey(name: 'item_sku_name') String itemSkuName,
-      @JsonKey(name: 'vendor_item_code') String vendorItemCode,
-      @JsonKey(name: 'vendor_item_name') String vendorItemName,
-      @JsonKey(name: 'item_type') String itemType,
-      @JsonKey(name: 'kategori_id') String kategoriId,
-      @JsonKey(name: 'purchase_unit_id') String purchaseUnitId,
-      @JsonKey(name: 'purchase_tax_id') String purchaseTaxId,
-      @JsonKey(name: 'prefered_vendor_id') String preferedVendorId,
-      @JsonKey(name: 'min_price') String minPrice,
-      @JsonKey(name: 'is_fixed_price') String isFixedPrice,
-      @JsonKey(name: 'item_picture') String itemPicture,
-      @JsonKey(name: 'last_purchase_price') String lastPurchasePrice,
-      @JsonKey(name: 'last_purchase_curr') String lastPurchaseCurr,
-      @JsonKey(name: 'last_purchase_rate') String lastPurchaseRate,
-      @JsonKey(name: 'profit_margin') String profitMargin,
-      @JsonKey(name: 'minimum_stock') String minimumStock,
-      @JsonKey(name: 'reorder_point') String reorderPoint,
-      @JsonKey(name: 'maximum_stock') String maximumStock,
-      @JsonKey(name: 'rack_location') String rackLocation,
-      @JsonKey(name: 'warehouse_id') String warehouseId,
-      @JsonKey(name: 'delivery_type') String deliveryType,
-      @JsonKey(name: 'item_status_code_id') String itemStatusCodeId,
-      @JsonKey(name: 'status_color') String statusColor,
-      @JsonKey(name: 'discount_amount') String discountAmount,
-      @JsonKey(name: 'create_by') String createBy,
-      @JsonKey(name: 'add_date') String addDate,
-      @JsonKey(name: 'update_date') String updateDate,
-      @JsonKey(name: 'last_adjustment') String lastAdjustment,
-      @JsonKey(name: 'size') String size,
-      @JsonKey(name: 'color') String color,
-      @JsonKey(name: 'size_unit') String sizeUnit,
-      @JsonKey(name: 'unit_conversion') String unitConversion,
-      @JsonKey(name: 'manufacturer') String manufacturer,
-      @JsonKey(name: 'track_serial_no') String trackSerialNo,
-      @JsonKey(name: 'track_batch_no') String trackBatchNo,
-      @JsonKey(name: 'item_status') String itemStatus,
-      @JsonKey(name: 'inventory_account') String inventoryAccount,
-      @JsonKey(name: 'sales_account') String salesAccount,
-      @JsonKey(name: 'sales_return_account') String salesReturnAccount,
-      @JsonKey(name: 'item_discount_account') String itemDiscountAccount,
-      @JsonKey(name: 'cogs_account') String cogsAccount,
-      @JsonKey(name: 'purchase_return_account') String purchaseReturnAccount,
-      @JsonKey(name: 'expense_account') String expenseAccount,
-      @JsonKey(name: 'unbilled_goods_account') String unbilledGoodsAccount,
-      @JsonKey(name: 'is_consignment') String isConsignment,
-      @JsonKey(name: 'is_discontinue') String isDiscontinue,
-      @JsonKey(name: 'display_store') String displayStore,
-      @JsonKey(name: 'display_desc') String displayDesc,
-      @JsonKey(name: 'tags') String tags,
-      @JsonKey(name: 'weight') String weight,
-      @JsonKey(name: 'volume') String volume,
-      @JsonKey(name: 'brand') String brand});
+      {@JsonKey(name: "sales_order_detail_id") String? salesOrderDetailId,
+      @JsonKey(name: "sales_order_id") String? salesOrderId,
+      @JsonKey(name: "index_no") String? indexNo,
+      @JsonKey(name: "item_id") String? itemId,
+      @JsonKey(name: "item_code") String? itemCode,
+      @JsonKey(name: "item_name") String? itemName,
+      @JsonKey(name: "description") String? description,
+      @JsonKey(name: "unit_id") String? unitId,
+      @JsonKey(name: "unit_code") String? unitCode,
+      @JsonKey(name: "tax_id") String? taxId,
+      @JsonKey(name: "tax_amount") String? taxAmount,
+      @JsonKey(name: "sub_total_tax") String? subTotalTax,
+      @JsonKey(name: "discount") String? discount,
+      @JsonKey(name: "sub_total_disc") String? subTotalDisc,
+      @JsonKey(name: "qty") String? qty,
+      @JsonKey(name: "qty_base") String? qtyBase,
+      @JsonKey(name: "item_price") String? itemPrice,
+      @JsonKey(name: "sub_total") String? subTotal,
+      @JsonKey(name: "cost_per_unit") String? costPerUnit,
+      @JsonKey(name: "delivered_qty") String? deliveredQty,
+      @JsonKey(name: "closed") String? closed,
+      @JsonKey(name: "project_id") String? projectId,
+      @JsonKey(name: "department_id") String? departmentId,
+      @JsonKey(name: "employee_id") String? employeeId,
+      @JsonKey(name: "quotation_id") String? quotationId,
+      @JsonKey(name: "quotation_detail_id") String? quotationDetailId,
+      @JsonKey(name: "barcode") String? barcode,
+      @JsonKey(name: "item_sku") String? itemSku,
+      @JsonKey(name: "item_sku_name") String? itemSkuName,
+      @JsonKey(name: "vendor_item_code") String? vendorItemCode,
+      @JsonKey(name: "vendor_item_name") String? vendorItemName,
+      @JsonKey(name: "item_type") String? itemType,
+      @JsonKey(name: "kategori_id") String? kategoriId,
+      @JsonKey(name: "purchase_unit_id") String? purchaseUnitId,
+      @JsonKey(name: "purchase_tax_id") String? purchaseTaxId,
+      @JsonKey(name: "prefered_vendor_id") String? preferedVendorId,
+      @JsonKey(name: "min_price") String? minPrice,
+      @JsonKey(name: "is_fixed_price") String? isFixedPrice,
+      @JsonKey(name: "item_picture") String? itemPicture,
+      @JsonKey(name: "last_purchase_price") String? lastPurchasePrice,
+      @JsonKey(name: "last_purchase_curr") String? lastPurchaseCurr,
+      @JsonKey(name: "last_purchase_rate") String? lastPurchaseRate,
+      @JsonKey(name: "profit_margin") String? profitMargin,
+      @JsonKey(name: "minimum_stock") String? minimumStock,
+      @JsonKey(name: "reorder_point") String? reorderPoint,
+      @JsonKey(name: "maximum_stock") String? maximumStock,
+      @JsonKey(name: "rack_location") String? rackLocation,
+      @JsonKey(name: "warehouse_id") String? warehouseId,
+      @JsonKey(name: "delivery_type") String? deliveryType,
+      @JsonKey(name: "item_status_code_id") String? itemStatusCodeId,
+      @JsonKey(name: "status_color") String? statusColor,
+      @JsonKey(name: "discount_amount") String? discountAmount,
+      @JsonKey(name: "create_by") String? createBy,
+      @JsonKey(name: "add_date") String? addDate,
+      @JsonKey(name: "update_date") String? updateDate,
+      @JsonKey(name: "last_adjustment") String? lastAdjustment,
+      @JsonKey(name: "size") String? size,
+      @JsonKey(name: "color") String? color,
+      @JsonKey(name: "size_unit") String? sizeUnit,
+      @JsonKey(name: "unit_conversion") String? unitConversion,
+      @JsonKey(name: "manufacturer") String? manufacturer,
+      @JsonKey(name: "track_serial_no") String? trackSerialNo,
+      @JsonKey(name: "track_batch_no") String? trackBatchNo,
+      @JsonKey(name: "item_status") String? itemStatus,
+      @JsonKey(name: "inventory_account") String? inventoryAccount,
+      @JsonKey(name: "sales_account") String? salesAccount,
+      @JsonKey(name: "sales_return_account") String? salesReturnAccount,
+      @JsonKey(name: "item_discount_account") String? itemDiscountAccount,
+      @JsonKey(name: "cogs_account") String? cogsAccount,
+      @JsonKey(name: "purchase_return_account") String? purchaseReturnAccount,
+      @JsonKey(name: "expense_account") String? expenseAccount,
+      @JsonKey(name: "unbilled_goods_account") String? unbilledGoodsAccount,
+      @JsonKey(name: "is_consignment") String? isConsignment,
+      @JsonKey(name: "is_discontinue") String? isDiscontinue,
+      @JsonKey(name: "display_store") String? displayStore,
+      @JsonKey(name: "display_desc") String? displayDesc,
+      @JsonKey(name: "tags") String? tags,
+      @JsonKey(name: "weight") String? weight,
+      @JsonKey(name: "volume") String? volume,
+      @JsonKey(name: "brand") String? brand});
 }
 
 /// @nodoc
@@ -818,591 +970,740 @@ class __$TransactionDetailV1CopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object salesOrderDetailId = freezed,
-    Object salesOrderId = freezed,
-    Object indexNo = freezed,
-    Object itemId = freezed,
-    Object itemCode = freezed,
-    Object itemName = freezed,
-    Object description = freezed,
-    Object unitId = freezed,
-    Object unitCode = freezed,
-    Object taxId = freezed,
-    Object taxAmount = freezed,
-    Object subTotalTax = freezed,
-    Object discount = freezed,
-    Object subTotalDisc = freezed,
-    Object qty = freezed,
-    Object qtyBase = freezed,
-    Object itemPrice = freezed,
-    Object subTotal = freezed,
-    Object costPerUnit = freezed,
-    Object deliveredQty = freezed,
-    Object closed = freezed,
-    Object projectId = freezed,
-    Object departmentId = freezed,
-    Object employeeId = freezed,
-    Object quotationId = freezed,
-    Object quotationDetailId = freezed,
-    Object barcode = freezed,
-    Object itemSku = freezed,
-    Object itemSkuName = freezed,
-    Object vendorItemCode = freezed,
-    Object vendorItemName = freezed,
-    Object itemType = freezed,
-    Object kategoriId = freezed,
-    Object purchaseUnitId = freezed,
-    Object purchaseTaxId = freezed,
-    Object preferedVendorId = freezed,
-    Object minPrice = freezed,
-    Object isFixedPrice = freezed,
-    Object itemPicture = freezed,
-    Object lastPurchasePrice = freezed,
-    Object lastPurchaseCurr = freezed,
-    Object lastPurchaseRate = freezed,
-    Object profitMargin = freezed,
-    Object minimumStock = freezed,
-    Object reorderPoint = freezed,
-    Object maximumStock = freezed,
-    Object rackLocation = freezed,
-    Object warehouseId = freezed,
-    Object deliveryType = freezed,
-    Object itemStatusCodeId = freezed,
-    Object statusColor = freezed,
-    Object discountAmount = freezed,
-    Object createBy = freezed,
-    Object addDate = freezed,
-    Object updateDate = freezed,
-    Object lastAdjustment = freezed,
-    Object size = freezed,
-    Object color = freezed,
-    Object sizeUnit = freezed,
-    Object unitConversion = freezed,
-    Object manufacturer = freezed,
-    Object trackSerialNo = freezed,
-    Object trackBatchNo = freezed,
-    Object itemStatus = freezed,
-    Object inventoryAccount = freezed,
-    Object salesAccount = freezed,
-    Object salesReturnAccount = freezed,
-    Object itemDiscountAccount = freezed,
-    Object cogsAccount = freezed,
-    Object purchaseReturnAccount = freezed,
-    Object expenseAccount = freezed,
-    Object unbilledGoodsAccount = freezed,
-    Object isConsignment = freezed,
-    Object isDiscontinue = freezed,
-    Object displayStore = freezed,
-    Object displayDesc = freezed,
-    Object tags = freezed,
-    Object weight = freezed,
-    Object volume = freezed,
-    Object brand = freezed,
+    Object? salesOrderDetailId = freezed,
+    Object? salesOrderId = freezed,
+    Object? indexNo = freezed,
+    Object? itemId = freezed,
+    Object? itemCode = freezed,
+    Object? itemName = freezed,
+    Object? description = freezed,
+    Object? unitId = freezed,
+    Object? unitCode = freezed,
+    Object? taxId = freezed,
+    Object? taxAmount = freezed,
+    Object? subTotalTax = freezed,
+    Object? discount = freezed,
+    Object? subTotalDisc = freezed,
+    Object? qty = freezed,
+    Object? qtyBase = freezed,
+    Object? itemPrice = freezed,
+    Object? subTotal = freezed,
+    Object? costPerUnit = freezed,
+    Object? deliveredQty = freezed,
+    Object? closed = freezed,
+    Object? projectId = freezed,
+    Object? departmentId = freezed,
+    Object? employeeId = freezed,
+    Object? quotationId = freezed,
+    Object? quotationDetailId = freezed,
+    Object? barcode = freezed,
+    Object? itemSku = freezed,
+    Object? itemSkuName = freezed,
+    Object? vendorItemCode = freezed,
+    Object? vendorItemName = freezed,
+    Object? itemType = freezed,
+    Object? kategoriId = freezed,
+    Object? purchaseUnitId = freezed,
+    Object? purchaseTaxId = freezed,
+    Object? preferedVendorId = freezed,
+    Object? minPrice = freezed,
+    Object? isFixedPrice = freezed,
+    Object? itemPicture = freezed,
+    Object? lastPurchasePrice = freezed,
+    Object? lastPurchaseCurr = freezed,
+    Object? lastPurchaseRate = freezed,
+    Object? profitMargin = freezed,
+    Object? minimumStock = freezed,
+    Object? reorderPoint = freezed,
+    Object? maximumStock = freezed,
+    Object? rackLocation = freezed,
+    Object? warehouseId = freezed,
+    Object? deliveryType = freezed,
+    Object? itemStatusCodeId = freezed,
+    Object? statusColor = freezed,
+    Object? discountAmount = freezed,
+    Object? createBy = freezed,
+    Object? addDate = freezed,
+    Object? updateDate = freezed,
+    Object? lastAdjustment = freezed,
+    Object? size = freezed,
+    Object? color = freezed,
+    Object? sizeUnit = freezed,
+    Object? unitConversion = freezed,
+    Object? manufacturer = freezed,
+    Object? trackSerialNo = freezed,
+    Object? trackBatchNo = freezed,
+    Object? itemStatus = freezed,
+    Object? inventoryAccount = freezed,
+    Object? salesAccount = freezed,
+    Object? salesReturnAccount = freezed,
+    Object? itemDiscountAccount = freezed,
+    Object? cogsAccount = freezed,
+    Object? purchaseReturnAccount = freezed,
+    Object? expenseAccount = freezed,
+    Object? unbilledGoodsAccount = freezed,
+    Object? isConsignment = freezed,
+    Object? isDiscontinue = freezed,
+    Object? displayStore = freezed,
+    Object? displayDesc = freezed,
+    Object? tags = freezed,
+    Object? weight = freezed,
+    Object? volume = freezed,
+    Object? brand = freezed,
   }) {
     return _then(_TransactionDetailV1(
       salesOrderDetailId: salesOrderDetailId == freezed
           ? _value.salesOrderDetailId
-          : salesOrderDetailId as String,
+          : salesOrderDetailId // ignore: cast_nullable_to_non_nullable
+              as String?,
       salesOrderId: salesOrderId == freezed
           ? _value.salesOrderId
-          : salesOrderId as String,
-      indexNo: indexNo == freezed ? _value.indexNo : indexNo as String,
-      itemId: itemId == freezed ? _value.itemId : itemId as String,
-      itemCode: itemCode == freezed ? _value.itemCode : itemCode as String,
-      itemName: itemName == freezed ? _value.itemName : itemName as String,
-      description:
-          description == freezed ? _value.description : description as String,
-      unitId: unitId == freezed ? _value.unitId : unitId as String,
-      unitCode: unitCode == freezed ? _value.unitCode : unitCode as String,
-      taxId: taxId == freezed ? _value.taxId : taxId as String,
-      taxAmount: taxAmount == freezed ? _value.taxAmount : taxAmount as String,
-      subTotalTax:
-          subTotalTax == freezed ? _value.subTotalTax : subTotalTax as String,
-      discount: discount == freezed ? _value.discount : discount as String,
+          : salesOrderId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      indexNo: indexNo == freezed
+          ? _value.indexNo
+          : indexNo // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemId: itemId == freezed
+          ? _value.itemId
+          : itemId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemCode: itemCode == freezed
+          ? _value.itemCode
+          : itemCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemName: itemName == freezed
+          ? _value.itemName
+          : itemName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      unitId: unitId == freezed
+          ? _value.unitId
+          : unitId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      unitCode: unitCode == freezed
+          ? _value.unitCode
+          : unitCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      taxId: taxId == freezed
+          ? _value.taxId
+          : taxId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      taxAmount: taxAmount == freezed
+          ? _value.taxAmount
+          : taxAmount // ignore: cast_nullable_to_non_nullable
+              as String?,
+      subTotalTax: subTotalTax == freezed
+          ? _value.subTotalTax
+          : subTotalTax // ignore: cast_nullable_to_non_nullable
+              as String?,
+      discount: discount == freezed
+          ? _value.discount
+          : discount // ignore: cast_nullable_to_non_nullable
+              as String?,
       subTotalDisc: subTotalDisc == freezed
           ? _value.subTotalDisc
-          : subTotalDisc as String,
-      qty: qty == freezed ? _value.qty : qty as String,
-      qtyBase: qtyBase == freezed ? _value.qtyBase : qtyBase as String,
-      itemPrice: itemPrice == freezed ? _value.itemPrice : itemPrice as String,
-      subTotal: subTotal == freezed ? _value.subTotal : subTotal as String,
-      costPerUnit:
-          costPerUnit == freezed ? _value.costPerUnit : costPerUnit as String,
+          : subTotalDisc // ignore: cast_nullable_to_non_nullable
+              as String?,
+      qty: qty == freezed
+          ? _value.qty
+          : qty // ignore: cast_nullable_to_non_nullable
+              as String?,
+      qtyBase: qtyBase == freezed
+          ? _value.qtyBase
+          : qtyBase // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemPrice: itemPrice == freezed
+          ? _value.itemPrice
+          : itemPrice // ignore: cast_nullable_to_non_nullable
+              as String?,
+      subTotal: subTotal == freezed
+          ? _value.subTotal
+          : subTotal // ignore: cast_nullable_to_non_nullable
+              as String?,
+      costPerUnit: costPerUnit == freezed
+          ? _value.costPerUnit
+          : costPerUnit // ignore: cast_nullable_to_non_nullable
+              as String?,
       deliveredQty: deliveredQty == freezed
           ? _value.deliveredQty
-          : deliveredQty as String,
-      closed: closed == freezed ? _value.closed : closed as String,
-      projectId: projectId == freezed ? _value.projectId : projectId as String,
+          : deliveredQty // ignore: cast_nullable_to_non_nullable
+              as String?,
+      closed: closed == freezed
+          ? _value.closed
+          : closed // ignore: cast_nullable_to_non_nullable
+              as String?,
+      projectId: projectId == freezed
+          ? _value.projectId
+          : projectId // ignore: cast_nullable_to_non_nullable
+              as String?,
       departmentId: departmentId == freezed
           ? _value.departmentId
-          : departmentId as String,
-      employeeId:
-          employeeId == freezed ? _value.employeeId : employeeId as String,
-      quotationId:
-          quotationId == freezed ? _value.quotationId : quotationId as String,
+          : departmentId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      employeeId: employeeId == freezed
+          ? _value.employeeId
+          : employeeId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      quotationId: quotationId == freezed
+          ? _value.quotationId
+          : quotationId // ignore: cast_nullable_to_non_nullable
+              as String?,
       quotationDetailId: quotationDetailId == freezed
           ? _value.quotationDetailId
-          : quotationDetailId as String,
-      barcode: barcode == freezed ? _value.barcode : barcode as String,
-      itemSku: itemSku == freezed ? _value.itemSku : itemSku as String,
-      itemSkuName:
-          itemSkuName == freezed ? _value.itemSkuName : itemSkuName as String,
+          : quotationDetailId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      barcode: barcode == freezed
+          ? _value.barcode
+          : barcode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemSku: itemSku == freezed
+          ? _value.itemSku
+          : itemSku // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemSkuName: itemSkuName == freezed
+          ? _value.itemSkuName
+          : itemSkuName // ignore: cast_nullable_to_non_nullable
+              as String?,
       vendorItemCode: vendorItemCode == freezed
           ? _value.vendorItemCode
-          : vendorItemCode as String,
+          : vendorItemCode // ignore: cast_nullable_to_non_nullable
+              as String?,
       vendorItemName: vendorItemName == freezed
           ? _value.vendorItemName
-          : vendorItemName as String,
-      itemType: itemType == freezed ? _value.itemType : itemType as String,
-      kategoriId:
-          kategoriId == freezed ? _value.kategoriId : kategoriId as String,
+          : vendorItemName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemType: itemType == freezed
+          ? _value.itemType
+          : itemType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      kategoriId: kategoriId == freezed
+          ? _value.kategoriId
+          : kategoriId // ignore: cast_nullable_to_non_nullable
+              as String?,
       purchaseUnitId: purchaseUnitId == freezed
           ? _value.purchaseUnitId
-          : purchaseUnitId as String,
+          : purchaseUnitId // ignore: cast_nullable_to_non_nullable
+              as String?,
       purchaseTaxId: purchaseTaxId == freezed
           ? _value.purchaseTaxId
-          : purchaseTaxId as String,
+          : purchaseTaxId // ignore: cast_nullable_to_non_nullable
+              as String?,
       preferedVendorId: preferedVendorId == freezed
           ? _value.preferedVendorId
-          : preferedVendorId as String,
-      minPrice: minPrice == freezed ? _value.minPrice : minPrice as String,
+          : preferedVendorId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      minPrice: minPrice == freezed
+          ? _value.minPrice
+          : minPrice // ignore: cast_nullable_to_non_nullable
+              as String?,
       isFixedPrice: isFixedPrice == freezed
           ? _value.isFixedPrice
-          : isFixedPrice as String,
-      itemPicture:
-          itemPicture == freezed ? _value.itemPicture : itemPicture as String,
+          : isFixedPrice // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemPicture: itemPicture == freezed
+          ? _value.itemPicture
+          : itemPicture // ignore: cast_nullable_to_non_nullable
+              as String?,
       lastPurchasePrice: lastPurchasePrice == freezed
           ? _value.lastPurchasePrice
-          : lastPurchasePrice as String,
+          : lastPurchasePrice // ignore: cast_nullable_to_non_nullable
+              as String?,
       lastPurchaseCurr: lastPurchaseCurr == freezed
           ? _value.lastPurchaseCurr
-          : lastPurchaseCurr as String,
+          : lastPurchaseCurr // ignore: cast_nullable_to_non_nullable
+              as String?,
       lastPurchaseRate: lastPurchaseRate == freezed
           ? _value.lastPurchaseRate
-          : lastPurchaseRate as String,
+          : lastPurchaseRate // ignore: cast_nullable_to_non_nullable
+              as String?,
       profitMargin: profitMargin == freezed
           ? _value.profitMargin
-          : profitMargin as String,
+          : profitMargin // ignore: cast_nullable_to_non_nullable
+              as String?,
       minimumStock: minimumStock == freezed
           ? _value.minimumStock
-          : minimumStock as String,
+          : minimumStock // ignore: cast_nullable_to_non_nullable
+              as String?,
       reorderPoint: reorderPoint == freezed
           ? _value.reorderPoint
-          : reorderPoint as String,
+          : reorderPoint // ignore: cast_nullable_to_non_nullable
+              as String?,
       maximumStock: maximumStock == freezed
           ? _value.maximumStock
-          : maximumStock as String,
+          : maximumStock // ignore: cast_nullable_to_non_nullable
+              as String?,
       rackLocation: rackLocation == freezed
           ? _value.rackLocation
-          : rackLocation as String,
-      warehouseId:
-          warehouseId == freezed ? _value.warehouseId : warehouseId as String,
+          : rackLocation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      warehouseId: warehouseId == freezed
+          ? _value.warehouseId
+          : warehouseId // ignore: cast_nullable_to_non_nullable
+              as String?,
       deliveryType: deliveryType == freezed
           ? _value.deliveryType
-          : deliveryType as String,
+          : deliveryType // ignore: cast_nullable_to_non_nullable
+              as String?,
       itemStatusCodeId: itemStatusCodeId == freezed
           ? _value.itemStatusCodeId
-          : itemStatusCodeId as String,
-      statusColor:
-          statusColor == freezed ? _value.statusColor : statusColor as String,
+          : itemStatusCodeId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      statusColor: statusColor == freezed
+          ? _value.statusColor
+          : statusColor // ignore: cast_nullable_to_non_nullable
+              as String?,
       discountAmount: discountAmount == freezed
           ? _value.discountAmount
-          : discountAmount as String,
-      createBy: createBy == freezed ? _value.createBy : createBy as String,
-      addDate: addDate == freezed ? _value.addDate : addDate as String,
-      updateDate:
-          updateDate == freezed ? _value.updateDate : updateDate as String,
+          : discountAmount // ignore: cast_nullable_to_non_nullable
+              as String?,
+      createBy: createBy == freezed
+          ? _value.createBy
+          : createBy // ignore: cast_nullable_to_non_nullable
+              as String?,
+      addDate: addDate == freezed
+          ? _value.addDate
+          : addDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      updateDate: updateDate == freezed
+          ? _value.updateDate
+          : updateDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       lastAdjustment: lastAdjustment == freezed
           ? _value.lastAdjustment
-          : lastAdjustment as String,
-      size: size == freezed ? _value.size : size as String,
-      color: color == freezed ? _value.color : color as String,
-      sizeUnit: sizeUnit == freezed ? _value.sizeUnit : sizeUnit as String,
+          : lastAdjustment // ignore: cast_nullable_to_non_nullable
+              as String?,
+      size: size == freezed
+          ? _value.size
+          : size // ignore: cast_nullable_to_non_nullable
+              as String?,
+      color: color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sizeUnit: sizeUnit == freezed
+          ? _value.sizeUnit
+          : sizeUnit // ignore: cast_nullable_to_non_nullable
+              as String?,
       unitConversion: unitConversion == freezed
           ? _value.unitConversion
-          : unitConversion as String,
+          : unitConversion // ignore: cast_nullable_to_non_nullable
+              as String?,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
-          : manufacturer as String,
+          : manufacturer // ignore: cast_nullable_to_non_nullable
+              as String?,
       trackSerialNo: trackSerialNo == freezed
           ? _value.trackSerialNo
-          : trackSerialNo as String,
+          : trackSerialNo // ignore: cast_nullable_to_non_nullable
+              as String?,
       trackBatchNo: trackBatchNo == freezed
           ? _value.trackBatchNo
-          : trackBatchNo as String,
-      itemStatus:
-          itemStatus == freezed ? _value.itemStatus : itemStatus as String,
+          : trackBatchNo // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemStatus: itemStatus == freezed
+          ? _value.itemStatus
+          : itemStatus // ignore: cast_nullable_to_non_nullable
+              as String?,
       inventoryAccount: inventoryAccount == freezed
           ? _value.inventoryAccount
-          : inventoryAccount as String,
+          : inventoryAccount // ignore: cast_nullable_to_non_nullable
+              as String?,
       salesAccount: salesAccount == freezed
           ? _value.salesAccount
-          : salesAccount as String,
+          : salesAccount // ignore: cast_nullable_to_non_nullable
+              as String?,
       salesReturnAccount: salesReturnAccount == freezed
           ? _value.salesReturnAccount
-          : salesReturnAccount as String,
+          : salesReturnAccount // ignore: cast_nullable_to_non_nullable
+              as String?,
       itemDiscountAccount: itemDiscountAccount == freezed
           ? _value.itemDiscountAccount
-          : itemDiscountAccount as String,
-      cogsAccount:
-          cogsAccount == freezed ? _value.cogsAccount : cogsAccount as String,
+          : itemDiscountAccount // ignore: cast_nullable_to_non_nullable
+              as String?,
+      cogsAccount: cogsAccount == freezed
+          ? _value.cogsAccount
+          : cogsAccount // ignore: cast_nullable_to_non_nullable
+              as String?,
       purchaseReturnAccount: purchaseReturnAccount == freezed
           ? _value.purchaseReturnAccount
-          : purchaseReturnAccount as String,
+          : purchaseReturnAccount // ignore: cast_nullable_to_non_nullable
+              as String?,
       expenseAccount: expenseAccount == freezed
           ? _value.expenseAccount
-          : expenseAccount as String,
+          : expenseAccount // ignore: cast_nullable_to_non_nullable
+              as String?,
       unbilledGoodsAccount: unbilledGoodsAccount == freezed
           ? _value.unbilledGoodsAccount
-          : unbilledGoodsAccount as String,
+          : unbilledGoodsAccount // ignore: cast_nullable_to_non_nullable
+              as String?,
       isConsignment: isConsignment == freezed
           ? _value.isConsignment
-          : isConsignment as String,
+          : isConsignment // ignore: cast_nullable_to_non_nullable
+              as String?,
       isDiscontinue: isDiscontinue == freezed
           ? _value.isDiscontinue
-          : isDiscontinue as String,
+          : isDiscontinue // ignore: cast_nullable_to_non_nullable
+              as String?,
       displayStore: displayStore == freezed
           ? _value.displayStore
-          : displayStore as String,
-      displayDesc:
-          displayDesc == freezed ? _value.displayDesc : displayDesc as String,
-      tags: tags == freezed ? _value.tags : tags as String,
-      weight: weight == freezed ? _value.weight : weight as String,
-      volume: volume == freezed ? _value.volume : volume as String,
-      brand: brand == freezed ? _value.brand : brand as String,
+          : displayStore // ignore: cast_nullable_to_non_nullable
+              as String?,
+      displayDesc: displayDesc == freezed
+          ? _value.displayDesc
+          : displayDesc // ignore: cast_nullable_to_non_nullable
+              as String?,
+      tags: tags == freezed
+          ? _value.tags
+          : tags // ignore: cast_nullable_to_non_nullable
+              as String?,
+      weight: weight == freezed
+          ? _value.weight
+          : weight // ignore: cast_nullable_to_non_nullable
+              as String?,
+      volume: volume == freezed
+          ? _value.volume
+          : volume // ignore: cast_nullable_to_non_nullable
+              as String?,
+      brand: brand == freezed
+          ? _value.brand
+          : brand // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TransactionDetailV1 implements _TransactionDetailV1 {
   _$_TransactionDetailV1(
-      {@JsonKey(name: 'sales_order_detail_id') this.salesOrderDetailId,
-      @JsonKey(name: 'sales_order_id') this.salesOrderId,
-      @JsonKey(name: 'index_no') this.indexNo,
-      @JsonKey(name: 'item_id') this.itemId,
-      @JsonKey(name: 'item_code') this.itemCode,
-      @JsonKey(name: 'item_name') this.itemName,
-      @JsonKey(name: 'description') this.description,
-      @JsonKey(name: 'unit_id') this.unitId,
-      @JsonKey(name: 'unit_code') this.unitCode,
-      @JsonKey(name: 'tax_id') this.taxId,
-      @JsonKey(name: 'tax_amount') this.taxAmount,
-      @JsonKey(name: 'sub_total_tax') this.subTotalTax,
-      @JsonKey(name: 'discount') this.discount,
-      @JsonKey(name: 'sub_total_disc') this.subTotalDisc,
-      @JsonKey(name: 'qty') this.qty,
-      @JsonKey(name: 'qty_base') this.qtyBase,
-      @JsonKey(name: 'item_price') this.itemPrice,
-      @JsonKey(name: 'sub_total') this.subTotal,
-      @JsonKey(name: 'cost_per_unit') this.costPerUnit,
-      @JsonKey(name: 'delivered_qty') this.deliveredQty,
-      @JsonKey(name: 'closed') this.closed,
-      @JsonKey(name: 'project_id') this.projectId,
-      @JsonKey(name: 'department_id') this.departmentId,
-      @JsonKey(name: 'employee_id') this.employeeId,
-      @JsonKey(name: 'quotation_id') this.quotationId,
-      @JsonKey(name: 'quotation_detail_id') this.quotationDetailId,
-      @JsonKey(name: 'barcode') this.barcode,
-      @JsonKey(name: 'item_sku') this.itemSku,
-      @JsonKey(name: 'item_sku_name') this.itemSkuName,
-      @JsonKey(name: 'vendor_item_code') this.vendorItemCode,
-      @JsonKey(name: 'vendor_item_name') this.vendorItemName,
-      @JsonKey(name: 'item_type') this.itemType,
-      @JsonKey(name: 'kategori_id') this.kategoriId,
-      @JsonKey(name: 'purchase_unit_id') this.purchaseUnitId,
-      @JsonKey(name: 'purchase_tax_id') this.purchaseTaxId,
-      @JsonKey(name: 'prefered_vendor_id') this.preferedVendorId,
-      @JsonKey(name: 'min_price') this.minPrice,
-      @JsonKey(name: 'is_fixed_price') this.isFixedPrice,
-      @JsonKey(name: 'item_picture') this.itemPicture,
-      @JsonKey(name: 'last_purchase_price') this.lastPurchasePrice,
-      @JsonKey(name: 'last_purchase_curr') this.lastPurchaseCurr,
-      @JsonKey(name: 'last_purchase_rate') this.lastPurchaseRate,
-      @JsonKey(name: 'profit_margin') this.profitMargin,
-      @JsonKey(name: 'minimum_stock') this.minimumStock,
-      @JsonKey(name: 'reorder_point') this.reorderPoint,
-      @JsonKey(name: 'maximum_stock') this.maximumStock,
-      @JsonKey(name: 'rack_location') this.rackLocation,
-      @JsonKey(name: 'warehouse_id') this.warehouseId,
-      @JsonKey(name: 'delivery_type') this.deliveryType,
-      @JsonKey(name: 'item_status_code_id') this.itemStatusCodeId,
-      @JsonKey(name: 'status_color') this.statusColor,
-      @JsonKey(name: 'discount_amount') this.discountAmount,
-      @JsonKey(name: 'create_by') this.createBy,
-      @JsonKey(name: 'add_date') this.addDate,
-      @JsonKey(name: 'update_date') this.updateDate,
-      @JsonKey(name: 'last_adjustment') this.lastAdjustment,
-      @JsonKey(name: 'size') this.size,
-      @JsonKey(name: 'color') this.color,
-      @JsonKey(name: 'size_unit') this.sizeUnit,
-      @JsonKey(name: 'unit_conversion') this.unitConversion,
-      @JsonKey(name: 'manufacturer') this.manufacturer,
-      @JsonKey(name: 'track_serial_no') this.trackSerialNo,
-      @JsonKey(name: 'track_batch_no') this.trackBatchNo,
-      @JsonKey(name: 'item_status') this.itemStatus,
-      @JsonKey(name: 'inventory_account') this.inventoryAccount,
-      @JsonKey(name: 'sales_account') this.salesAccount,
-      @JsonKey(name: 'sales_return_account') this.salesReturnAccount,
-      @JsonKey(name: 'item_discount_account') this.itemDiscountAccount,
-      @JsonKey(name: 'cogs_account') this.cogsAccount,
-      @JsonKey(name: 'purchase_return_account') this.purchaseReturnAccount,
-      @JsonKey(name: 'expense_account') this.expenseAccount,
-      @JsonKey(name: 'unbilled_goods_account') this.unbilledGoodsAccount,
-      @JsonKey(name: 'is_consignment') this.isConsignment,
-      @JsonKey(name: 'is_discontinue') this.isDiscontinue,
-      @JsonKey(name: 'display_store') this.displayStore,
-      @JsonKey(name: 'display_desc') this.displayDesc,
-      @JsonKey(name: 'tags') this.tags,
-      @JsonKey(name: 'weight') this.weight,
-      @JsonKey(name: 'volume') this.volume,
-      @JsonKey(name: 'brand') this.brand});
+      {@JsonKey(name: "sales_order_detail_id") this.salesOrderDetailId,
+      @JsonKey(name: "sales_order_id") this.salesOrderId,
+      @JsonKey(name: "index_no") this.indexNo,
+      @JsonKey(name: "item_id") this.itemId,
+      @JsonKey(name: "item_code") this.itemCode,
+      @JsonKey(name: "item_name") this.itemName,
+      @JsonKey(name: "description") this.description,
+      @JsonKey(name: "unit_id") this.unitId,
+      @JsonKey(name: "unit_code") this.unitCode,
+      @JsonKey(name: "tax_id") this.taxId,
+      @JsonKey(name: "tax_amount") this.taxAmount,
+      @JsonKey(name: "sub_total_tax") this.subTotalTax,
+      @JsonKey(name: "discount") this.discount,
+      @JsonKey(name: "sub_total_disc") this.subTotalDisc,
+      @JsonKey(name: "qty") this.qty,
+      @JsonKey(name: "qty_base") this.qtyBase,
+      @JsonKey(name: "item_price") this.itemPrice,
+      @JsonKey(name: "sub_total") this.subTotal,
+      @JsonKey(name: "cost_per_unit") this.costPerUnit,
+      @JsonKey(name: "delivered_qty") this.deliveredQty,
+      @JsonKey(name: "closed") this.closed,
+      @JsonKey(name: "project_id") this.projectId,
+      @JsonKey(name: "department_id") this.departmentId,
+      @JsonKey(name: "employee_id") this.employeeId,
+      @JsonKey(name: "quotation_id") this.quotationId,
+      @JsonKey(name: "quotation_detail_id") this.quotationDetailId,
+      @JsonKey(name: "barcode") this.barcode,
+      @JsonKey(name: "item_sku") this.itemSku,
+      @JsonKey(name: "item_sku_name") this.itemSkuName,
+      @JsonKey(name: "vendor_item_code") this.vendorItemCode,
+      @JsonKey(name: "vendor_item_name") this.vendorItemName,
+      @JsonKey(name: "item_type") this.itemType,
+      @JsonKey(name: "kategori_id") this.kategoriId,
+      @JsonKey(name: "purchase_unit_id") this.purchaseUnitId,
+      @JsonKey(name: "purchase_tax_id") this.purchaseTaxId,
+      @JsonKey(name: "prefered_vendor_id") this.preferedVendorId,
+      @JsonKey(name: "min_price") this.minPrice,
+      @JsonKey(name: "is_fixed_price") this.isFixedPrice,
+      @JsonKey(name: "item_picture") this.itemPicture,
+      @JsonKey(name: "last_purchase_price") this.lastPurchasePrice,
+      @JsonKey(name: "last_purchase_curr") this.lastPurchaseCurr,
+      @JsonKey(name: "last_purchase_rate") this.lastPurchaseRate,
+      @JsonKey(name: "profit_margin") this.profitMargin,
+      @JsonKey(name: "minimum_stock") this.minimumStock,
+      @JsonKey(name: "reorder_point") this.reorderPoint,
+      @JsonKey(name: "maximum_stock") this.maximumStock,
+      @JsonKey(name: "rack_location") this.rackLocation,
+      @JsonKey(name: "warehouse_id") this.warehouseId,
+      @JsonKey(name: "delivery_type") this.deliveryType,
+      @JsonKey(name: "item_status_code_id") this.itemStatusCodeId,
+      @JsonKey(name: "status_color") this.statusColor,
+      @JsonKey(name: "discount_amount") this.discountAmount,
+      @JsonKey(name: "create_by") this.createBy,
+      @JsonKey(name: "add_date") this.addDate,
+      @JsonKey(name: "update_date") this.updateDate,
+      @JsonKey(name: "last_adjustment") this.lastAdjustment,
+      @JsonKey(name: "size") this.size,
+      @JsonKey(name: "color") this.color,
+      @JsonKey(name: "size_unit") this.sizeUnit,
+      @JsonKey(name: "unit_conversion") this.unitConversion,
+      @JsonKey(name: "manufacturer") this.manufacturer,
+      @JsonKey(name: "track_serial_no") this.trackSerialNo,
+      @JsonKey(name: "track_batch_no") this.trackBatchNo,
+      @JsonKey(name: "item_status") this.itemStatus,
+      @JsonKey(name: "inventory_account") this.inventoryAccount,
+      @JsonKey(name: "sales_account") this.salesAccount,
+      @JsonKey(name: "sales_return_account") this.salesReturnAccount,
+      @JsonKey(name: "item_discount_account") this.itemDiscountAccount,
+      @JsonKey(name: "cogs_account") this.cogsAccount,
+      @JsonKey(name: "purchase_return_account") this.purchaseReturnAccount,
+      @JsonKey(name: "expense_account") this.expenseAccount,
+      @JsonKey(name: "unbilled_goods_account") this.unbilledGoodsAccount,
+      @JsonKey(name: "is_consignment") this.isConsignment,
+      @JsonKey(name: "is_discontinue") this.isDiscontinue,
+      @JsonKey(name: "display_store") this.displayStore,
+      @JsonKey(name: "display_desc") this.displayDesc,
+      @JsonKey(name: "tags") this.tags,
+      @JsonKey(name: "weight") this.weight,
+      @JsonKey(name: "volume") this.volume,
+      @JsonKey(name: "brand") this.brand});
 
   factory _$_TransactionDetailV1.fromJson(Map<String, dynamic> json) =>
       _$_$_TransactionDetailV1FromJson(json);
 
   @override
-  @JsonKey(name: 'sales_order_detail_id')
-  final String salesOrderDetailId;
+  @JsonKey(name: "sales_order_detail_id")
+  final String? salesOrderDetailId;
   @override
-  @JsonKey(name: 'sales_order_id')
-  final String salesOrderId;
+  @JsonKey(name: "sales_order_id")
+  final String? salesOrderId;
   @override
-  @JsonKey(name: 'index_no')
-  final String indexNo;
+  @JsonKey(name: "index_no")
+  final String? indexNo;
   @override
-  @JsonKey(name: 'item_id')
-  final String itemId;
+  @JsonKey(name: "item_id")
+  final String? itemId;
   @override
-  @JsonKey(name: 'item_code')
-  final String itemCode;
+  @JsonKey(name: "item_code")
+  final String? itemCode;
   @override
-  @JsonKey(name: 'item_name')
-  final String itemName;
+  @JsonKey(name: "item_name")
+  final String? itemName;
   @override
-  @JsonKey(name: 'description')
-  final String description;
+  @JsonKey(name: "description")
+  final String? description;
   @override
-  @JsonKey(name: 'unit_id')
-  final String unitId;
+  @JsonKey(name: "unit_id")
+  final String? unitId;
   @override
-  @JsonKey(name: 'unit_code')
-  final String unitCode;
+  @JsonKey(name: "unit_code")
+  final String? unitCode;
   @override
-  @JsonKey(name: 'tax_id')
-  final String taxId;
+  @JsonKey(name: "tax_id")
+  final String? taxId;
   @override
-  @JsonKey(name: 'tax_amount')
-  final String taxAmount;
+  @JsonKey(name: "tax_amount")
+  final String? taxAmount;
   @override
-  @JsonKey(name: 'sub_total_tax')
-  final String subTotalTax;
+  @JsonKey(name: "sub_total_tax")
+  final String? subTotalTax;
   @override
-  @JsonKey(name: 'discount')
-  final String discount;
+  @JsonKey(name: "discount")
+  final String? discount;
   @override
-  @JsonKey(name: 'sub_total_disc')
-  final String subTotalDisc;
+  @JsonKey(name: "sub_total_disc")
+  final String? subTotalDisc;
   @override
-  @JsonKey(name: 'qty')
-  final String qty;
+  @JsonKey(name: "qty")
+  final String? qty;
   @override
-  @JsonKey(name: 'qty_base')
-  final String qtyBase;
+  @JsonKey(name: "qty_base")
+  final String? qtyBase;
   @override
-  @JsonKey(name: 'item_price')
-  final String itemPrice;
+  @JsonKey(name: "item_price")
+  final String? itemPrice;
   @override
-  @JsonKey(name: 'sub_total')
-  final String subTotal;
+  @JsonKey(name: "sub_total")
+  final String? subTotal;
   @override
-  @JsonKey(name: 'cost_per_unit')
-  final String costPerUnit;
+  @JsonKey(name: "cost_per_unit")
+  final String? costPerUnit;
   @override
-  @JsonKey(name: 'delivered_qty')
-  final String deliveredQty;
+  @JsonKey(name: "delivered_qty")
+  final String? deliveredQty;
   @override
-  @JsonKey(name: 'closed')
-  final String closed;
+  @JsonKey(name: "closed")
+  final String? closed;
   @override
-  @JsonKey(name: 'project_id')
-  final String projectId;
+  @JsonKey(name: "project_id")
+  final String? projectId;
   @override
-  @JsonKey(name: 'department_id')
-  final String departmentId;
+  @JsonKey(name: "department_id")
+  final String? departmentId;
   @override
-  @JsonKey(name: 'employee_id')
-  final String employeeId;
+  @JsonKey(name: "employee_id")
+  final String? employeeId;
   @override
-  @JsonKey(name: 'quotation_id')
-  final String quotationId;
+  @JsonKey(name: "quotation_id")
+  final String? quotationId;
   @override
-  @JsonKey(name: 'quotation_detail_id')
-  final String quotationDetailId;
+  @JsonKey(name: "quotation_detail_id")
+  final String? quotationDetailId;
   @override
-  @JsonKey(name: 'barcode')
-  final String barcode;
+  @JsonKey(name: "barcode")
+  final String? barcode;
   @override
-  @JsonKey(name: 'item_sku')
-  final String itemSku;
+  @JsonKey(name: "item_sku")
+  final String? itemSku;
   @override
-  @JsonKey(name: 'item_sku_name')
-  final String itemSkuName;
+  @JsonKey(name: "item_sku_name")
+  final String? itemSkuName;
   @override
-  @JsonKey(name: 'vendor_item_code')
-  final String vendorItemCode;
+  @JsonKey(name: "vendor_item_code")
+  final String? vendorItemCode;
   @override
-  @JsonKey(name: 'vendor_item_name')
-  final String vendorItemName;
+  @JsonKey(name: "vendor_item_name")
+  final String? vendorItemName;
   @override
-  @JsonKey(name: 'item_type')
-  final String itemType;
+  @JsonKey(name: "item_type")
+  final String? itemType;
   @override
-  @JsonKey(name: 'kategori_id')
-  final String kategoriId;
+  @JsonKey(name: "kategori_id")
+  final String? kategoriId;
   @override
-  @JsonKey(name: 'purchase_unit_id')
-  final String purchaseUnitId;
+  @JsonKey(name: "purchase_unit_id")
+  final String? purchaseUnitId;
   @override
-  @JsonKey(name: 'purchase_tax_id')
-  final String purchaseTaxId;
+  @JsonKey(name: "purchase_tax_id")
+  final String? purchaseTaxId;
   @override
-  @JsonKey(name: 'prefered_vendor_id')
-  final String preferedVendorId;
+  @JsonKey(name: "prefered_vendor_id")
+  final String? preferedVendorId;
   @override
-  @JsonKey(name: 'min_price')
-  final String minPrice;
+  @JsonKey(name: "min_price")
+  final String? minPrice;
   @override
-  @JsonKey(name: 'is_fixed_price')
-  final String isFixedPrice;
+  @JsonKey(name: "is_fixed_price")
+  final String? isFixedPrice;
   @override
-  @JsonKey(name: 'item_picture')
-  final String itemPicture;
+  @JsonKey(name: "item_picture")
+  final String? itemPicture;
   @override
-  @JsonKey(name: 'last_purchase_price')
-  final String lastPurchasePrice;
+  @JsonKey(name: "last_purchase_price")
+  final String? lastPurchasePrice;
   @override
-  @JsonKey(name: 'last_purchase_curr')
-  final String lastPurchaseCurr;
+  @JsonKey(name: "last_purchase_curr")
+  final String? lastPurchaseCurr;
   @override
-  @JsonKey(name: 'last_purchase_rate')
-  final String lastPurchaseRate;
+  @JsonKey(name: "last_purchase_rate")
+  final String? lastPurchaseRate;
   @override
-  @JsonKey(name: 'profit_margin')
-  final String profitMargin;
+  @JsonKey(name: "profit_margin")
+  final String? profitMargin;
   @override
-  @JsonKey(name: 'minimum_stock')
-  final String minimumStock;
+  @JsonKey(name: "minimum_stock")
+  final String? minimumStock;
   @override
-  @JsonKey(name: 'reorder_point')
-  final String reorderPoint;
+  @JsonKey(name: "reorder_point")
+  final String? reorderPoint;
   @override
-  @JsonKey(name: 'maximum_stock')
-  final String maximumStock;
+  @JsonKey(name: "maximum_stock")
+  final String? maximumStock;
   @override
-  @JsonKey(name: 'rack_location')
-  final String rackLocation;
+  @JsonKey(name: "rack_location")
+  final String? rackLocation;
   @override
-  @JsonKey(name: 'warehouse_id')
-  final String warehouseId;
+  @JsonKey(name: "warehouse_id")
+  final String? warehouseId;
   @override
-  @JsonKey(name: 'delivery_type')
-  final String deliveryType;
+  @JsonKey(name: "delivery_type")
+  final String? deliveryType;
   @override
-  @JsonKey(name: 'item_status_code_id')
-  final String itemStatusCodeId;
+  @JsonKey(name: "item_status_code_id")
+  final String? itemStatusCodeId;
   @override
-  @JsonKey(name: 'status_color')
-  final String statusColor;
+  @JsonKey(name: "status_color")
+  final String? statusColor;
   @override
-  @JsonKey(name: 'discount_amount')
-  final String discountAmount;
+  @JsonKey(name: "discount_amount")
+  final String? discountAmount;
   @override
-  @JsonKey(name: 'create_by')
-  final String createBy;
+  @JsonKey(name: "create_by")
+  final String? createBy;
   @override
-  @JsonKey(name: 'add_date')
-  final String addDate;
+  @JsonKey(name: "add_date")
+  final String? addDate;
   @override
-  @JsonKey(name: 'update_date')
-  final String updateDate;
+  @JsonKey(name: "update_date")
+  final String? updateDate;
   @override
-  @JsonKey(name: 'last_adjustment')
-  final String lastAdjustment;
+  @JsonKey(name: "last_adjustment")
+  final String? lastAdjustment;
   @override
-  @JsonKey(name: 'size')
-  final String size;
+  @JsonKey(name: "size")
+  final String? size;
   @override
-  @JsonKey(name: 'color')
-  final String color;
+  @JsonKey(name: "color")
+  final String? color;
   @override
-  @JsonKey(name: 'size_unit')
-  final String sizeUnit;
+  @JsonKey(name: "size_unit")
+  final String? sizeUnit;
   @override
-  @JsonKey(name: 'unit_conversion')
-  final String unitConversion;
+  @JsonKey(name: "unit_conversion")
+  final String? unitConversion;
   @override
-  @JsonKey(name: 'manufacturer')
-  final String manufacturer;
+  @JsonKey(name: "manufacturer")
+  final String? manufacturer;
   @override
-  @JsonKey(name: 'track_serial_no')
-  final String trackSerialNo;
+  @JsonKey(name: "track_serial_no")
+  final String? trackSerialNo;
   @override
-  @JsonKey(name: 'track_batch_no')
-  final String trackBatchNo;
+  @JsonKey(name: "track_batch_no")
+  final String? trackBatchNo;
   @override
-  @JsonKey(name: 'item_status')
-  final String itemStatus;
+  @JsonKey(name: "item_status")
+  final String? itemStatus;
   @override
-  @JsonKey(name: 'inventory_account')
-  final String inventoryAccount;
+  @JsonKey(name: "inventory_account")
+  final String? inventoryAccount;
   @override
-  @JsonKey(name: 'sales_account')
-  final String salesAccount;
+  @JsonKey(name: "sales_account")
+  final String? salesAccount;
   @override
-  @JsonKey(name: 'sales_return_account')
-  final String salesReturnAccount;
+  @JsonKey(name: "sales_return_account")
+  final String? salesReturnAccount;
   @override
-  @JsonKey(name: 'item_discount_account')
-  final String itemDiscountAccount;
+  @JsonKey(name: "item_discount_account")
+  final String? itemDiscountAccount;
   @override
-  @JsonKey(name: 'cogs_account')
-  final String cogsAccount;
+  @JsonKey(name: "cogs_account")
+  final String? cogsAccount;
   @override
-  @JsonKey(name: 'purchase_return_account')
-  final String purchaseReturnAccount;
+  @JsonKey(name: "purchase_return_account")
+  final String? purchaseReturnAccount;
   @override
-  @JsonKey(name: 'expense_account')
-  final String expenseAccount;
+  @JsonKey(name: "expense_account")
+  final String? expenseAccount;
   @override
-  @JsonKey(name: 'unbilled_goods_account')
-  final String unbilledGoodsAccount;
+  @JsonKey(name: "unbilled_goods_account")
+  final String? unbilledGoodsAccount;
   @override
-  @JsonKey(name: 'is_consignment')
-  final String isConsignment;
+  @JsonKey(name: "is_consignment")
+  final String? isConsignment;
   @override
-  @JsonKey(name: 'is_discontinue')
-  final String isDiscontinue;
+  @JsonKey(name: "is_discontinue")
+  final String? isDiscontinue;
   @override
-  @JsonKey(name: 'display_store')
-  final String displayStore;
+  @JsonKey(name: "display_store")
+  final String? displayStore;
   @override
-  @JsonKey(name: 'display_desc')
-  final String displayDesc;
+  @JsonKey(name: "display_desc")
+  final String? displayDesc;
   @override
-  @JsonKey(name: 'tags')
-  final String tags;
+  @JsonKey(name: "tags")
+  final String? tags;
   @override
-  @JsonKey(name: 'weight')
-  final String weight;
+  @JsonKey(name: "weight")
+  final String? weight;
   @override
-  @JsonKey(name: 'volume')
-  final String volume;
+  @JsonKey(name: "volume")
+  final String? volume;
   @override
-  @JsonKey(name: 'brand')
-  final String brand;
+  @JsonKey(name: "brand")
+  final String? brand;
 
   @override
   String toString() {
@@ -1636,331 +1937,332 @@ class _$_TransactionDetailV1 implements _TransactionDetailV1 {
 
 abstract class _TransactionDetailV1 implements TransactionDetailV1 {
   factory _TransactionDetailV1(
-      {@JsonKey(name: 'sales_order_detail_id') String salesOrderDetailId,
-      @JsonKey(name: 'sales_order_id') String salesOrderId,
-      @JsonKey(name: 'index_no') String indexNo,
-      @JsonKey(name: 'item_id') String itemId,
-      @JsonKey(name: 'item_code') String itemCode,
-      @JsonKey(name: 'item_name') String itemName,
-      @JsonKey(name: 'description') String description,
-      @JsonKey(name: 'unit_id') String unitId,
-      @JsonKey(name: 'unit_code') String unitCode,
-      @JsonKey(name: 'tax_id') String taxId,
-      @JsonKey(name: 'tax_amount') String taxAmount,
-      @JsonKey(name: 'sub_total_tax') String subTotalTax,
-      @JsonKey(name: 'discount') String discount,
-      @JsonKey(name: 'sub_total_disc') String subTotalDisc,
-      @JsonKey(name: 'qty') String qty,
-      @JsonKey(name: 'qty_base') String qtyBase,
-      @JsonKey(name: 'item_price') String itemPrice,
-      @JsonKey(name: 'sub_total') String subTotal,
-      @JsonKey(name: 'cost_per_unit') String costPerUnit,
-      @JsonKey(name: 'delivered_qty') String deliveredQty,
-      @JsonKey(name: 'closed') String closed,
-      @JsonKey(name: 'project_id') String projectId,
-      @JsonKey(name: 'department_id') String departmentId,
-      @JsonKey(name: 'employee_id') String employeeId,
-      @JsonKey(name: 'quotation_id') String quotationId,
-      @JsonKey(name: 'quotation_detail_id') String quotationDetailId,
-      @JsonKey(name: 'barcode') String barcode,
-      @JsonKey(name: 'item_sku') String itemSku,
-      @JsonKey(name: 'item_sku_name') String itemSkuName,
-      @JsonKey(name: 'vendor_item_code') String vendorItemCode,
-      @JsonKey(name: 'vendor_item_name') String vendorItemName,
-      @JsonKey(name: 'item_type') String itemType,
-      @JsonKey(name: 'kategori_id') String kategoriId,
-      @JsonKey(name: 'purchase_unit_id') String purchaseUnitId,
-      @JsonKey(name: 'purchase_tax_id') String purchaseTaxId,
-      @JsonKey(name: 'prefered_vendor_id') String preferedVendorId,
-      @JsonKey(name: 'min_price') String minPrice,
-      @JsonKey(name: 'is_fixed_price') String isFixedPrice,
-      @JsonKey(name: 'item_picture') String itemPicture,
-      @JsonKey(name: 'last_purchase_price') String lastPurchasePrice,
-      @JsonKey(name: 'last_purchase_curr') String lastPurchaseCurr,
-      @JsonKey(name: 'last_purchase_rate') String lastPurchaseRate,
-      @JsonKey(name: 'profit_margin') String profitMargin,
-      @JsonKey(name: 'minimum_stock') String minimumStock,
-      @JsonKey(name: 'reorder_point') String reorderPoint,
-      @JsonKey(name: 'maximum_stock') String maximumStock,
-      @JsonKey(name: 'rack_location') String rackLocation,
-      @JsonKey(name: 'warehouse_id') String warehouseId,
-      @JsonKey(name: 'delivery_type') String deliveryType,
-      @JsonKey(name: 'item_status_code_id') String itemStatusCodeId,
-      @JsonKey(name: 'status_color') String statusColor,
-      @JsonKey(name: 'discount_amount') String discountAmount,
-      @JsonKey(name: 'create_by') String createBy,
-      @JsonKey(name: 'add_date') String addDate,
-      @JsonKey(name: 'update_date') String updateDate,
-      @JsonKey(name: 'last_adjustment') String lastAdjustment,
-      @JsonKey(name: 'size') String size,
-      @JsonKey(name: 'color') String color,
-      @JsonKey(name: 'size_unit') String sizeUnit,
-      @JsonKey(name: 'unit_conversion') String unitConversion,
-      @JsonKey(name: 'manufacturer') String manufacturer,
-      @JsonKey(name: 'track_serial_no') String trackSerialNo,
-      @JsonKey(name: 'track_batch_no') String trackBatchNo,
-      @JsonKey(name: 'item_status') String itemStatus,
-      @JsonKey(name: 'inventory_account') String inventoryAccount,
-      @JsonKey(name: 'sales_account') String salesAccount,
-      @JsonKey(name: 'sales_return_account') String salesReturnAccount,
-      @JsonKey(name: 'item_discount_account') String itemDiscountAccount,
-      @JsonKey(name: 'cogs_account') String cogsAccount,
-      @JsonKey(name: 'purchase_return_account') String purchaseReturnAccount,
-      @JsonKey(name: 'expense_account') String expenseAccount,
-      @JsonKey(name: 'unbilled_goods_account') String unbilledGoodsAccount,
-      @JsonKey(name: 'is_consignment') String isConsignment,
-      @JsonKey(name: 'is_discontinue') String isDiscontinue,
-      @JsonKey(name: 'display_store') String displayStore,
-      @JsonKey(name: 'display_desc') String displayDesc,
-      @JsonKey(name: 'tags') String tags,
-      @JsonKey(name: 'weight') String weight,
-      @JsonKey(name: 'volume') String volume,
-      @JsonKey(name: 'brand') String brand}) = _$_TransactionDetailV1;
+      {@JsonKey(name: "sales_order_detail_id") String? salesOrderDetailId,
+      @JsonKey(name: "sales_order_id") String? salesOrderId,
+      @JsonKey(name: "index_no") String? indexNo,
+      @JsonKey(name: "item_id") String? itemId,
+      @JsonKey(name: "item_code") String? itemCode,
+      @JsonKey(name: "item_name") String? itemName,
+      @JsonKey(name: "description") String? description,
+      @JsonKey(name: "unit_id") String? unitId,
+      @JsonKey(name: "unit_code") String? unitCode,
+      @JsonKey(name: "tax_id") String? taxId,
+      @JsonKey(name: "tax_amount") String? taxAmount,
+      @JsonKey(name: "sub_total_tax") String? subTotalTax,
+      @JsonKey(name: "discount") String? discount,
+      @JsonKey(name: "sub_total_disc") String? subTotalDisc,
+      @JsonKey(name: "qty") String? qty,
+      @JsonKey(name: "qty_base") String? qtyBase,
+      @JsonKey(name: "item_price") String? itemPrice,
+      @JsonKey(name: "sub_total") String? subTotal,
+      @JsonKey(name: "cost_per_unit") String? costPerUnit,
+      @JsonKey(name: "delivered_qty") String? deliveredQty,
+      @JsonKey(name: "closed") String? closed,
+      @JsonKey(name: "project_id") String? projectId,
+      @JsonKey(name: "department_id") String? departmentId,
+      @JsonKey(name: "employee_id") String? employeeId,
+      @JsonKey(name: "quotation_id") String? quotationId,
+      @JsonKey(name: "quotation_detail_id") String? quotationDetailId,
+      @JsonKey(name: "barcode") String? barcode,
+      @JsonKey(name: "item_sku") String? itemSku,
+      @JsonKey(name: "item_sku_name") String? itemSkuName,
+      @JsonKey(name: "vendor_item_code") String? vendorItemCode,
+      @JsonKey(name: "vendor_item_name") String? vendorItemName,
+      @JsonKey(name: "item_type") String? itemType,
+      @JsonKey(name: "kategori_id") String? kategoriId,
+      @JsonKey(name: "purchase_unit_id") String? purchaseUnitId,
+      @JsonKey(name: "purchase_tax_id") String? purchaseTaxId,
+      @JsonKey(name: "prefered_vendor_id") String? preferedVendorId,
+      @JsonKey(name: "min_price") String? minPrice,
+      @JsonKey(name: "is_fixed_price") String? isFixedPrice,
+      @JsonKey(name: "item_picture") String? itemPicture,
+      @JsonKey(name: "last_purchase_price") String? lastPurchasePrice,
+      @JsonKey(name: "last_purchase_curr") String? lastPurchaseCurr,
+      @JsonKey(name: "last_purchase_rate") String? lastPurchaseRate,
+      @JsonKey(name: "profit_margin") String? profitMargin,
+      @JsonKey(name: "minimum_stock") String? minimumStock,
+      @JsonKey(name: "reorder_point") String? reorderPoint,
+      @JsonKey(name: "maximum_stock") String? maximumStock,
+      @JsonKey(name: "rack_location") String? rackLocation,
+      @JsonKey(name: "warehouse_id") String? warehouseId,
+      @JsonKey(name: "delivery_type") String? deliveryType,
+      @JsonKey(name: "item_status_code_id") String? itemStatusCodeId,
+      @JsonKey(name: "status_color") String? statusColor,
+      @JsonKey(name: "discount_amount") String? discountAmount,
+      @JsonKey(name: "create_by") String? createBy,
+      @JsonKey(name: "add_date") String? addDate,
+      @JsonKey(name: "update_date") String? updateDate,
+      @JsonKey(name: "last_adjustment") String? lastAdjustment,
+      @JsonKey(name: "size") String? size,
+      @JsonKey(name: "color") String? color,
+      @JsonKey(name: "size_unit") String? sizeUnit,
+      @JsonKey(name: "unit_conversion") String? unitConversion,
+      @JsonKey(name: "manufacturer") String? manufacturer,
+      @JsonKey(name: "track_serial_no") String? trackSerialNo,
+      @JsonKey(name: "track_batch_no") String? trackBatchNo,
+      @JsonKey(name: "item_status") String? itemStatus,
+      @JsonKey(name: "inventory_account") String? inventoryAccount,
+      @JsonKey(name: "sales_account") String? salesAccount,
+      @JsonKey(name: "sales_return_account") String? salesReturnAccount,
+      @JsonKey(name: "item_discount_account") String? itemDiscountAccount,
+      @JsonKey(name: "cogs_account") String? cogsAccount,
+      @JsonKey(name: "purchase_return_account") String? purchaseReturnAccount,
+      @JsonKey(name: "expense_account") String? expenseAccount,
+      @JsonKey(name: "unbilled_goods_account") String? unbilledGoodsAccount,
+      @JsonKey(name: "is_consignment") String? isConsignment,
+      @JsonKey(name: "is_discontinue") String? isDiscontinue,
+      @JsonKey(name: "display_store") String? displayStore,
+      @JsonKey(name: "display_desc") String? displayDesc,
+      @JsonKey(name: "tags") String? tags,
+      @JsonKey(name: "weight") String? weight,
+      @JsonKey(name: "volume") String? volume,
+      @JsonKey(name: "brand") String? brand}) = _$_TransactionDetailV1;
 
   factory _TransactionDetailV1.fromJson(Map<String, dynamic> json) =
       _$_TransactionDetailV1.fromJson;
 
   @override
-  @JsonKey(name: 'sales_order_detail_id')
-  String get salesOrderDetailId;
+  @JsonKey(name: "sales_order_detail_id")
+  String? get salesOrderDetailId => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'sales_order_id')
-  String get salesOrderId;
+  @JsonKey(name: "sales_order_id")
+  String? get salesOrderId => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'index_no')
-  String get indexNo;
+  @JsonKey(name: "index_no")
+  String? get indexNo => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'item_id')
-  String get itemId;
+  @JsonKey(name: "item_id")
+  String? get itemId => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'item_code')
-  String get itemCode;
+  @JsonKey(name: "item_code")
+  String? get itemCode => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'item_name')
-  String get itemName;
+  @JsonKey(name: "item_name")
+  String? get itemName => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'description')
-  String get description;
+  @JsonKey(name: "description")
+  String? get description => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'unit_id')
-  String get unitId;
+  @JsonKey(name: "unit_id")
+  String? get unitId => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'unit_code')
-  String get unitCode;
+  @JsonKey(name: "unit_code")
+  String? get unitCode => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'tax_id')
-  String get taxId;
+  @JsonKey(name: "tax_id")
+  String? get taxId => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'tax_amount')
-  String get taxAmount;
+  @JsonKey(name: "tax_amount")
+  String? get taxAmount => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'sub_total_tax')
-  String get subTotalTax;
+  @JsonKey(name: "sub_total_tax")
+  String? get subTotalTax => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'discount')
-  String get discount;
+  @JsonKey(name: "discount")
+  String? get discount => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'sub_total_disc')
-  String get subTotalDisc;
+  @JsonKey(name: "sub_total_disc")
+  String? get subTotalDisc => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'qty')
-  String get qty;
+  @JsonKey(name: "qty")
+  String? get qty => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'qty_base')
-  String get qtyBase;
+  @JsonKey(name: "qty_base")
+  String? get qtyBase => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'item_price')
-  String get itemPrice;
+  @JsonKey(name: "item_price")
+  String? get itemPrice => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'sub_total')
-  String get subTotal;
+  @JsonKey(name: "sub_total")
+  String? get subTotal => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'cost_per_unit')
-  String get costPerUnit;
+  @JsonKey(name: "cost_per_unit")
+  String? get costPerUnit => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'delivered_qty')
-  String get deliveredQty;
+  @JsonKey(name: "delivered_qty")
+  String? get deliveredQty => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'closed')
-  String get closed;
+  @JsonKey(name: "closed")
+  String? get closed => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'project_id')
-  String get projectId;
+  @JsonKey(name: "project_id")
+  String? get projectId => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'department_id')
-  String get departmentId;
+  @JsonKey(name: "department_id")
+  String? get departmentId => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'employee_id')
-  String get employeeId;
+  @JsonKey(name: "employee_id")
+  String? get employeeId => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'quotation_id')
-  String get quotationId;
+  @JsonKey(name: "quotation_id")
+  String? get quotationId => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'quotation_detail_id')
-  String get quotationDetailId;
+  @JsonKey(name: "quotation_detail_id")
+  String? get quotationDetailId => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'barcode')
-  String get barcode;
+  @JsonKey(name: "barcode")
+  String? get barcode => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'item_sku')
-  String get itemSku;
+  @JsonKey(name: "item_sku")
+  String? get itemSku => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'item_sku_name')
-  String get itemSkuName;
+  @JsonKey(name: "item_sku_name")
+  String? get itemSkuName => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'vendor_item_code')
-  String get vendorItemCode;
+  @JsonKey(name: "vendor_item_code")
+  String? get vendorItemCode => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'vendor_item_name')
-  String get vendorItemName;
+  @JsonKey(name: "vendor_item_name")
+  String? get vendorItemName => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'item_type')
-  String get itemType;
+  @JsonKey(name: "item_type")
+  String? get itemType => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'kategori_id')
-  String get kategoriId;
+  @JsonKey(name: "kategori_id")
+  String? get kategoriId => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'purchase_unit_id')
-  String get purchaseUnitId;
+  @JsonKey(name: "purchase_unit_id")
+  String? get purchaseUnitId => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'purchase_tax_id')
-  String get purchaseTaxId;
+  @JsonKey(name: "purchase_tax_id")
+  String? get purchaseTaxId => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'prefered_vendor_id')
-  String get preferedVendorId;
+  @JsonKey(name: "prefered_vendor_id")
+  String? get preferedVendorId => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'min_price')
-  String get minPrice;
+  @JsonKey(name: "min_price")
+  String? get minPrice => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'is_fixed_price')
-  String get isFixedPrice;
+  @JsonKey(name: "is_fixed_price")
+  String? get isFixedPrice => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'item_picture')
-  String get itemPicture;
+  @JsonKey(name: "item_picture")
+  String? get itemPicture => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'last_purchase_price')
-  String get lastPurchasePrice;
+  @JsonKey(name: "last_purchase_price")
+  String? get lastPurchasePrice => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'last_purchase_curr')
-  String get lastPurchaseCurr;
+  @JsonKey(name: "last_purchase_curr")
+  String? get lastPurchaseCurr => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'last_purchase_rate')
-  String get lastPurchaseRate;
+  @JsonKey(name: "last_purchase_rate")
+  String? get lastPurchaseRate => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'profit_margin')
-  String get profitMargin;
+  @JsonKey(name: "profit_margin")
+  String? get profitMargin => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'minimum_stock')
-  String get minimumStock;
+  @JsonKey(name: "minimum_stock")
+  String? get minimumStock => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'reorder_point')
-  String get reorderPoint;
+  @JsonKey(name: "reorder_point")
+  String? get reorderPoint => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'maximum_stock')
-  String get maximumStock;
+  @JsonKey(name: "maximum_stock")
+  String? get maximumStock => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'rack_location')
-  String get rackLocation;
+  @JsonKey(name: "rack_location")
+  String? get rackLocation => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'warehouse_id')
-  String get warehouseId;
+  @JsonKey(name: "warehouse_id")
+  String? get warehouseId => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'delivery_type')
-  String get deliveryType;
+  @JsonKey(name: "delivery_type")
+  String? get deliveryType => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'item_status_code_id')
-  String get itemStatusCodeId;
+  @JsonKey(name: "item_status_code_id")
+  String? get itemStatusCodeId => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'status_color')
-  String get statusColor;
+  @JsonKey(name: "status_color")
+  String? get statusColor => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'discount_amount')
-  String get discountAmount;
+  @JsonKey(name: "discount_amount")
+  String? get discountAmount => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'create_by')
-  String get createBy;
+  @JsonKey(name: "create_by")
+  String? get createBy => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'add_date')
-  String get addDate;
+  @JsonKey(name: "add_date")
+  String? get addDate => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'update_date')
-  String get updateDate;
+  @JsonKey(name: "update_date")
+  String? get updateDate => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'last_adjustment')
-  String get lastAdjustment;
+  @JsonKey(name: "last_adjustment")
+  String? get lastAdjustment => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'size')
-  String get size;
+  @JsonKey(name: "size")
+  String? get size => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'color')
-  String get color;
+  @JsonKey(name: "color")
+  String? get color => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'size_unit')
-  String get sizeUnit;
+  @JsonKey(name: "size_unit")
+  String? get sizeUnit => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'unit_conversion')
-  String get unitConversion;
+  @JsonKey(name: "unit_conversion")
+  String? get unitConversion => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'manufacturer')
-  String get manufacturer;
+  @JsonKey(name: "manufacturer")
+  String? get manufacturer => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'track_serial_no')
-  String get trackSerialNo;
+  @JsonKey(name: "track_serial_no")
+  String? get trackSerialNo => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'track_batch_no')
-  String get trackBatchNo;
+  @JsonKey(name: "track_batch_no")
+  String? get trackBatchNo => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'item_status')
-  String get itemStatus;
+  @JsonKey(name: "item_status")
+  String? get itemStatus => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'inventory_account')
-  String get inventoryAccount;
+  @JsonKey(name: "inventory_account")
+  String? get inventoryAccount => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'sales_account')
-  String get salesAccount;
+  @JsonKey(name: "sales_account")
+  String? get salesAccount => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'sales_return_account')
-  String get salesReturnAccount;
+  @JsonKey(name: "sales_return_account")
+  String? get salesReturnAccount => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'item_discount_account')
-  String get itemDiscountAccount;
+  @JsonKey(name: "item_discount_account")
+  String? get itemDiscountAccount => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'cogs_account')
-  String get cogsAccount;
+  @JsonKey(name: "cogs_account")
+  String? get cogsAccount => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'purchase_return_account')
-  String get purchaseReturnAccount;
+  @JsonKey(name: "purchase_return_account")
+  String? get purchaseReturnAccount => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'expense_account')
-  String get expenseAccount;
+  @JsonKey(name: "expense_account")
+  String? get expenseAccount => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'unbilled_goods_account')
-  String get unbilledGoodsAccount;
+  @JsonKey(name: "unbilled_goods_account")
+  String? get unbilledGoodsAccount => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'is_consignment')
-  String get isConsignment;
+  @JsonKey(name: "is_consignment")
+  String? get isConsignment => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'is_discontinue')
-  String get isDiscontinue;
+  @JsonKey(name: "is_discontinue")
+  String? get isDiscontinue => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'display_store')
-  String get displayStore;
+  @JsonKey(name: "display_store")
+  String? get displayStore => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'display_desc')
-  String get displayDesc;
+  @JsonKey(name: "display_desc")
+  String? get displayDesc => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'tags')
-  String get tags;
+  @JsonKey(name: "tags")
+  String? get tags => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'weight')
-  String get weight;
+  @JsonKey(name: "weight")
+  String? get weight => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'volume')
-  String get volume;
+  @JsonKey(name: "volume")
+  String? get volume => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'brand')
-  String get brand;
+  @JsonKey(name: "brand")
+  String? get brand => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TransactionDetailV1CopyWith<_TransactionDetailV1> get copyWith;
+  _$TransactionDetailV1CopyWith<_TransactionDetailV1> get copyWith =>
+      throw _privateConstructorUsedError;
 }

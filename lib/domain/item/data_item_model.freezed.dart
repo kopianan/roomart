@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'data_item_model.dart';
 
@@ -8,6 +8,10 @@ part of 'data_item_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 DataItemModel _$DataItemModelFromJson(Map<String, dynamic> json) {
   return _DataItemModel.fromJson(json);
 }
@@ -16,34 +20,33 @@ DataItemModel _$DataItemModelFromJson(Map<String, dynamic> json) {
 class _$DataItemModelTearOff {
   const _$DataItemModelTearOff();
 
-// ignore: unused_element
   _DataItemModel call(
-      {@JsonKey(name: 'item_id') String itemId,
-      @JsonKey(name: 'item_code') String itemCode,
-      @JsonKey(name: 'barcode') String barcode,
-      @JsonKey(name: 'item_sku') String itemSku,
-      @JsonKey(name: 'update_date') String updateDate,
-      @JsonKey(name: 'kategori_id') String kategoriId,
-      @JsonKey(name: 'internal_code') String internalCode,
-      @JsonKey(name: 'kategori_code') String kategoriCode,
-      @JsonKey(name: 'kategori') String kategori,
-      @JsonKey(name: 'kat_picture') String katPicture,
-      @JsonKey(name: 'item_name') String itemName,
-      @JsonKey(name: 'display_desc') String displayDesc,
-      @JsonKey(name: 'item_price') String itemPrice,
-      @JsonKey(name: 'customer_type_id') String customerTypeId,
-      @JsonKey(name: 'new_price') String newPrice,
-      @JsonKey(name: 'itm_price_fmt') String itmPriceFmt,
-      @JsonKey(name: 'is_fixed_price') String isFixedPrice,
-      @JsonKey(name: 'qty') String qty,
-      @JsonKey(name: 'qty_cart') String qtyCart,
-      @JsonKey(name: 'unit_code') String unitCode,
-      @JsonKey(name: 'tax_code') String taxCode,
-      @JsonKey(name: 'pic') String pic,
-      @JsonKey(name: 'display_store') String displayStore,
-      @JsonKey(name: 'price_list_code') String priceListCode,
-      @JsonKey(name: 'weight') String weight,
-      @JsonKey(name: 'in_order') String inOrder}) {
+      {@JsonKey(name: 'item_id') String? itemId,
+      @JsonKey(name: 'item_code') String? itemCode,
+      @JsonKey(name: 'barcode') String? barcode,
+      @JsonKey(name: 'item_sku') String? itemSku,
+      @JsonKey(name: 'update_date') String? updateDate,
+      @JsonKey(name: 'kategori_id') String? kategoriId,
+      @JsonKey(name: 'internal_code') String? internalCode,
+      @JsonKey(name: 'kategori_code') String? kategoriCode,
+      @JsonKey(name: 'kategori') String? kategori,
+      @JsonKey(name: 'kat_picture') String? katPicture,
+      @JsonKey(name: 'item_name') String? itemName,
+      @JsonKey(name: 'display_desc') String? displayDesc,
+      @JsonKey(name: 'item_price') String? itemPrice,
+      @JsonKey(name: 'customer_type_id') String? customerTypeId,
+      @JsonKey(name: 'new_price') String? newPrice,
+      @JsonKey(name: 'itm_price_fmt') String? itmPriceFmt,
+      @JsonKey(name: 'is_fixed_price') String? isFixedPrice,
+      @JsonKey(name: 'qty') String? qty,
+      @JsonKey(name: 'qty_cart') String? qtyCart,
+      @JsonKey(name: 'unit_code') String? unitCode,
+      @JsonKey(name: 'tax_code') String? taxCode,
+      @JsonKey(name: 'pic') String? pic,
+      @JsonKey(name: 'display_store') String? displayStore,
+      @JsonKey(name: 'price_list_code') String? priceListCode,
+      @JsonKey(name: 'weight') String? weight,
+      @JsonKey(name: 'in_order') String? inOrder}) {
     return _DataItemModel(
       itemId: itemId,
       itemCode: itemCode,
@@ -74,74 +77,73 @@ class _$DataItemModelTearOff {
     );
   }
 
-// ignore: unused_element
   DataItemModel fromJson(Map<String, Object> json) {
     return DataItemModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $DataItemModel = _$DataItemModelTearOff();
 
 /// @nodoc
 mixin _$DataItemModel {
   @JsonKey(name: 'item_id')
-  String get itemId;
+  String? get itemId => throw _privateConstructorUsedError;
   @JsonKey(name: 'item_code')
-  String get itemCode;
+  String? get itemCode => throw _privateConstructorUsedError;
   @JsonKey(name: 'barcode')
-  String get barcode;
+  String? get barcode => throw _privateConstructorUsedError;
   @JsonKey(name: 'item_sku')
-  String get itemSku;
+  String? get itemSku => throw _privateConstructorUsedError;
   @JsonKey(name: 'update_date')
-  String get updateDate;
+  String? get updateDate => throw _privateConstructorUsedError;
   @JsonKey(name: 'kategori_id')
-  String get kategoriId;
+  String? get kategoriId => throw _privateConstructorUsedError;
   @JsonKey(name: 'internal_code')
-  String get internalCode;
+  String? get internalCode => throw _privateConstructorUsedError;
   @JsonKey(name: 'kategori_code')
-  String get kategoriCode;
+  String? get kategoriCode => throw _privateConstructorUsedError;
   @JsonKey(name: 'kategori')
-  String get kategori;
+  String? get kategori => throw _privateConstructorUsedError;
   @JsonKey(name: 'kat_picture')
-  String get katPicture;
+  String? get katPicture => throw _privateConstructorUsedError;
   @JsonKey(name: 'item_name')
-  String get itemName;
+  String? get itemName => throw _privateConstructorUsedError;
   @JsonKey(name: 'display_desc')
-  String get displayDesc;
+  String? get displayDesc => throw _privateConstructorUsedError;
   @JsonKey(name: 'item_price')
-  String get itemPrice;
+  String? get itemPrice => throw _privateConstructorUsedError;
   @JsonKey(name: 'customer_type_id')
-  String get customerTypeId;
+  String? get customerTypeId => throw _privateConstructorUsedError;
   @JsonKey(name: 'new_price')
-  String get newPrice;
+  String? get newPrice => throw _privateConstructorUsedError;
   @JsonKey(name: 'itm_price_fmt')
-  String get itmPriceFmt;
+  String? get itmPriceFmt => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_fixed_price')
-  String get isFixedPrice;
+  String? get isFixedPrice => throw _privateConstructorUsedError;
   @JsonKey(name: 'qty')
-  String get qty;
+  String? get qty => throw _privateConstructorUsedError;
   @JsonKey(name: 'qty_cart')
-  String get qtyCart; //Added by Sai,
+  String? get qtyCart => throw _privateConstructorUsedError; //Added by Sai,
   @JsonKey(name: 'unit_code')
-  String get unitCode;
+  String? get unitCode => throw _privateConstructorUsedError;
   @JsonKey(name: 'tax_code')
-  String get taxCode;
+  String? get taxCode => throw _privateConstructorUsedError;
   @JsonKey(name: 'pic')
-  String get pic;
+  String? get pic => throw _privateConstructorUsedError;
   @JsonKey(name: 'display_store')
-  String get displayStore;
+  String? get displayStore => throw _privateConstructorUsedError;
   @JsonKey(name: 'price_list_code')
-  String get priceListCode;
+  String? get priceListCode => throw _privateConstructorUsedError;
   @JsonKey(name: 'weight')
-  String get weight;
+  String? get weight => throw _privateConstructorUsedError;
   @JsonKey(name: 'in_order')
-  String get inOrder;
+  String? get inOrder => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $DataItemModelCopyWith<DataItemModel> get copyWith;
+  $DataItemModelCopyWith<DataItemModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -150,32 +152,32 @@ abstract class $DataItemModelCopyWith<$Res> {
           DataItemModel value, $Res Function(DataItemModel) then) =
       _$DataItemModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'item_id') String itemId,
-      @JsonKey(name: 'item_code') String itemCode,
-      @JsonKey(name: 'barcode') String barcode,
-      @JsonKey(name: 'item_sku') String itemSku,
-      @JsonKey(name: 'update_date') String updateDate,
-      @JsonKey(name: 'kategori_id') String kategoriId,
-      @JsonKey(name: 'internal_code') String internalCode,
-      @JsonKey(name: 'kategori_code') String kategoriCode,
-      @JsonKey(name: 'kategori') String kategori,
-      @JsonKey(name: 'kat_picture') String katPicture,
-      @JsonKey(name: 'item_name') String itemName,
-      @JsonKey(name: 'display_desc') String displayDesc,
-      @JsonKey(name: 'item_price') String itemPrice,
-      @JsonKey(name: 'customer_type_id') String customerTypeId,
-      @JsonKey(name: 'new_price') String newPrice,
-      @JsonKey(name: 'itm_price_fmt') String itmPriceFmt,
-      @JsonKey(name: 'is_fixed_price') String isFixedPrice,
-      @JsonKey(name: 'qty') String qty,
-      @JsonKey(name: 'qty_cart') String qtyCart,
-      @JsonKey(name: 'unit_code') String unitCode,
-      @JsonKey(name: 'tax_code') String taxCode,
-      @JsonKey(name: 'pic') String pic,
-      @JsonKey(name: 'display_store') String displayStore,
-      @JsonKey(name: 'price_list_code') String priceListCode,
-      @JsonKey(name: 'weight') String weight,
-      @JsonKey(name: 'in_order') String inOrder});
+      {@JsonKey(name: 'item_id') String? itemId,
+      @JsonKey(name: 'item_code') String? itemCode,
+      @JsonKey(name: 'barcode') String? barcode,
+      @JsonKey(name: 'item_sku') String? itemSku,
+      @JsonKey(name: 'update_date') String? updateDate,
+      @JsonKey(name: 'kategori_id') String? kategoriId,
+      @JsonKey(name: 'internal_code') String? internalCode,
+      @JsonKey(name: 'kategori_code') String? kategoriCode,
+      @JsonKey(name: 'kategori') String? kategori,
+      @JsonKey(name: 'kat_picture') String? katPicture,
+      @JsonKey(name: 'item_name') String? itemName,
+      @JsonKey(name: 'display_desc') String? displayDesc,
+      @JsonKey(name: 'item_price') String? itemPrice,
+      @JsonKey(name: 'customer_type_id') String? customerTypeId,
+      @JsonKey(name: 'new_price') String? newPrice,
+      @JsonKey(name: 'itm_price_fmt') String? itmPriceFmt,
+      @JsonKey(name: 'is_fixed_price') String? isFixedPrice,
+      @JsonKey(name: 'qty') String? qty,
+      @JsonKey(name: 'qty_cart') String? qtyCart,
+      @JsonKey(name: 'unit_code') String? unitCode,
+      @JsonKey(name: 'tax_code') String? taxCode,
+      @JsonKey(name: 'pic') String? pic,
+      @JsonKey(name: 'display_store') String? displayStore,
+      @JsonKey(name: 'price_list_code') String? priceListCode,
+      @JsonKey(name: 'weight') String? weight,
+      @JsonKey(name: 'in_order') String? inOrder});
 }
 
 /// @nodoc
@@ -189,77 +191,138 @@ class _$DataItemModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object itemId = freezed,
-    Object itemCode = freezed,
-    Object barcode = freezed,
-    Object itemSku = freezed,
-    Object updateDate = freezed,
-    Object kategoriId = freezed,
-    Object internalCode = freezed,
-    Object kategoriCode = freezed,
-    Object kategori = freezed,
-    Object katPicture = freezed,
-    Object itemName = freezed,
-    Object displayDesc = freezed,
-    Object itemPrice = freezed,
-    Object customerTypeId = freezed,
-    Object newPrice = freezed,
-    Object itmPriceFmt = freezed,
-    Object isFixedPrice = freezed,
-    Object qty = freezed,
-    Object qtyCart = freezed,
-    Object unitCode = freezed,
-    Object taxCode = freezed,
-    Object pic = freezed,
-    Object displayStore = freezed,
-    Object priceListCode = freezed,
-    Object weight = freezed,
-    Object inOrder = freezed,
+    Object? itemId = freezed,
+    Object? itemCode = freezed,
+    Object? barcode = freezed,
+    Object? itemSku = freezed,
+    Object? updateDate = freezed,
+    Object? kategoriId = freezed,
+    Object? internalCode = freezed,
+    Object? kategoriCode = freezed,
+    Object? kategori = freezed,
+    Object? katPicture = freezed,
+    Object? itemName = freezed,
+    Object? displayDesc = freezed,
+    Object? itemPrice = freezed,
+    Object? customerTypeId = freezed,
+    Object? newPrice = freezed,
+    Object? itmPriceFmt = freezed,
+    Object? isFixedPrice = freezed,
+    Object? qty = freezed,
+    Object? qtyCart = freezed,
+    Object? unitCode = freezed,
+    Object? taxCode = freezed,
+    Object? pic = freezed,
+    Object? displayStore = freezed,
+    Object? priceListCode = freezed,
+    Object? weight = freezed,
+    Object? inOrder = freezed,
   }) {
     return _then(_value.copyWith(
-      itemId: itemId == freezed ? _value.itemId : itemId as String,
-      itemCode: itemCode == freezed ? _value.itemCode : itemCode as String,
-      barcode: barcode == freezed ? _value.barcode : barcode as String,
-      itemSku: itemSku == freezed ? _value.itemSku : itemSku as String,
-      updateDate:
-          updateDate == freezed ? _value.updateDate : updateDate as String,
-      kategoriId:
-          kategoriId == freezed ? _value.kategoriId : kategoriId as String,
+      itemId: itemId == freezed
+          ? _value.itemId
+          : itemId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemCode: itemCode == freezed
+          ? _value.itemCode
+          : itemCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      barcode: barcode == freezed
+          ? _value.barcode
+          : barcode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemSku: itemSku == freezed
+          ? _value.itemSku
+          : itemSku // ignore: cast_nullable_to_non_nullable
+              as String?,
+      updateDate: updateDate == freezed
+          ? _value.updateDate
+          : updateDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      kategoriId: kategoriId == freezed
+          ? _value.kategoriId
+          : kategoriId // ignore: cast_nullable_to_non_nullable
+              as String?,
       internalCode: internalCode == freezed
           ? _value.internalCode
-          : internalCode as String,
+          : internalCode // ignore: cast_nullable_to_non_nullable
+              as String?,
       kategoriCode: kategoriCode == freezed
           ? _value.kategoriCode
-          : kategoriCode as String,
-      kategori: kategori == freezed ? _value.kategori : kategori as String,
-      katPicture:
-          katPicture == freezed ? _value.katPicture : katPicture as String,
-      itemName: itemName == freezed ? _value.itemName : itemName as String,
-      displayDesc:
-          displayDesc == freezed ? _value.displayDesc : displayDesc as String,
-      itemPrice: itemPrice == freezed ? _value.itemPrice : itemPrice as String,
+          : kategoriCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      kategori: kategori == freezed
+          ? _value.kategori
+          : kategori // ignore: cast_nullable_to_non_nullable
+              as String?,
+      katPicture: katPicture == freezed
+          ? _value.katPicture
+          : katPicture // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemName: itemName == freezed
+          ? _value.itemName
+          : itemName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      displayDesc: displayDesc == freezed
+          ? _value.displayDesc
+          : displayDesc // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemPrice: itemPrice == freezed
+          ? _value.itemPrice
+          : itemPrice // ignore: cast_nullable_to_non_nullable
+              as String?,
       customerTypeId: customerTypeId == freezed
           ? _value.customerTypeId
-          : customerTypeId as String,
-      newPrice: newPrice == freezed ? _value.newPrice : newPrice as String,
-      itmPriceFmt:
-          itmPriceFmt == freezed ? _value.itmPriceFmt : itmPriceFmt as String,
+          : customerTypeId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      newPrice: newPrice == freezed
+          ? _value.newPrice
+          : newPrice // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itmPriceFmt: itmPriceFmt == freezed
+          ? _value.itmPriceFmt
+          : itmPriceFmt // ignore: cast_nullable_to_non_nullable
+              as String?,
       isFixedPrice: isFixedPrice == freezed
           ? _value.isFixedPrice
-          : isFixedPrice as String,
-      qty: qty == freezed ? _value.qty : qty as String,
-      qtyCart: qtyCart == freezed ? _value.qtyCart : qtyCart as String,
-      unitCode: unitCode == freezed ? _value.unitCode : unitCode as String,
-      taxCode: taxCode == freezed ? _value.taxCode : taxCode as String,
-      pic: pic == freezed ? _value.pic : pic as String,
+          : isFixedPrice // ignore: cast_nullable_to_non_nullable
+              as String?,
+      qty: qty == freezed
+          ? _value.qty
+          : qty // ignore: cast_nullable_to_non_nullable
+              as String?,
+      qtyCart: qtyCart == freezed
+          ? _value.qtyCart
+          : qtyCart // ignore: cast_nullable_to_non_nullable
+              as String?,
+      unitCode: unitCode == freezed
+          ? _value.unitCode
+          : unitCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      taxCode: taxCode == freezed
+          ? _value.taxCode
+          : taxCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pic: pic == freezed
+          ? _value.pic
+          : pic // ignore: cast_nullable_to_non_nullable
+              as String?,
       displayStore: displayStore == freezed
           ? _value.displayStore
-          : displayStore as String,
+          : displayStore // ignore: cast_nullable_to_non_nullable
+              as String?,
       priceListCode: priceListCode == freezed
           ? _value.priceListCode
-          : priceListCode as String,
-      weight: weight == freezed ? _value.weight : weight as String,
-      inOrder: inOrder == freezed ? _value.inOrder : inOrder as String,
+          : priceListCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      weight: weight == freezed
+          ? _value.weight
+          : weight // ignore: cast_nullable_to_non_nullable
+              as String?,
+      inOrder: inOrder == freezed
+          ? _value.inOrder
+          : inOrder // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -272,32 +335,32 @@ abstract class _$DataItemModelCopyWith<$Res>
       __$DataItemModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'item_id') String itemId,
-      @JsonKey(name: 'item_code') String itemCode,
-      @JsonKey(name: 'barcode') String barcode,
-      @JsonKey(name: 'item_sku') String itemSku,
-      @JsonKey(name: 'update_date') String updateDate,
-      @JsonKey(name: 'kategori_id') String kategoriId,
-      @JsonKey(name: 'internal_code') String internalCode,
-      @JsonKey(name: 'kategori_code') String kategoriCode,
-      @JsonKey(name: 'kategori') String kategori,
-      @JsonKey(name: 'kat_picture') String katPicture,
-      @JsonKey(name: 'item_name') String itemName,
-      @JsonKey(name: 'display_desc') String displayDesc,
-      @JsonKey(name: 'item_price') String itemPrice,
-      @JsonKey(name: 'customer_type_id') String customerTypeId,
-      @JsonKey(name: 'new_price') String newPrice,
-      @JsonKey(name: 'itm_price_fmt') String itmPriceFmt,
-      @JsonKey(name: 'is_fixed_price') String isFixedPrice,
-      @JsonKey(name: 'qty') String qty,
-      @JsonKey(name: 'qty_cart') String qtyCart,
-      @JsonKey(name: 'unit_code') String unitCode,
-      @JsonKey(name: 'tax_code') String taxCode,
-      @JsonKey(name: 'pic') String pic,
-      @JsonKey(name: 'display_store') String displayStore,
-      @JsonKey(name: 'price_list_code') String priceListCode,
-      @JsonKey(name: 'weight') String weight,
-      @JsonKey(name: 'in_order') String inOrder});
+      {@JsonKey(name: 'item_id') String? itemId,
+      @JsonKey(name: 'item_code') String? itemCode,
+      @JsonKey(name: 'barcode') String? barcode,
+      @JsonKey(name: 'item_sku') String? itemSku,
+      @JsonKey(name: 'update_date') String? updateDate,
+      @JsonKey(name: 'kategori_id') String? kategoriId,
+      @JsonKey(name: 'internal_code') String? internalCode,
+      @JsonKey(name: 'kategori_code') String? kategoriCode,
+      @JsonKey(name: 'kategori') String? kategori,
+      @JsonKey(name: 'kat_picture') String? katPicture,
+      @JsonKey(name: 'item_name') String? itemName,
+      @JsonKey(name: 'display_desc') String? displayDesc,
+      @JsonKey(name: 'item_price') String? itemPrice,
+      @JsonKey(name: 'customer_type_id') String? customerTypeId,
+      @JsonKey(name: 'new_price') String? newPrice,
+      @JsonKey(name: 'itm_price_fmt') String? itmPriceFmt,
+      @JsonKey(name: 'is_fixed_price') String? isFixedPrice,
+      @JsonKey(name: 'qty') String? qty,
+      @JsonKey(name: 'qty_cart') String? qtyCart,
+      @JsonKey(name: 'unit_code') String? unitCode,
+      @JsonKey(name: 'tax_code') String? taxCode,
+      @JsonKey(name: 'pic') String? pic,
+      @JsonKey(name: 'display_store') String? displayStore,
+      @JsonKey(name: 'price_list_code') String? priceListCode,
+      @JsonKey(name: 'weight') String? weight,
+      @JsonKey(name: 'in_order') String? inOrder});
 }
 
 /// @nodoc
@@ -313,84 +376,144 @@ class __$DataItemModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object itemId = freezed,
-    Object itemCode = freezed,
-    Object barcode = freezed,
-    Object itemSku = freezed,
-    Object updateDate = freezed,
-    Object kategoriId = freezed,
-    Object internalCode = freezed,
-    Object kategoriCode = freezed,
-    Object kategori = freezed,
-    Object katPicture = freezed,
-    Object itemName = freezed,
-    Object displayDesc = freezed,
-    Object itemPrice = freezed,
-    Object customerTypeId = freezed,
-    Object newPrice = freezed,
-    Object itmPriceFmt = freezed,
-    Object isFixedPrice = freezed,
-    Object qty = freezed,
-    Object qtyCart = freezed,
-    Object unitCode = freezed,
-    Object taxCode = freezed,
-    Object pic = freezed,
-    Object displayStore = freezed,
-    Object priceListCode = freezed,
-    Object weight = freezed,
-    Object inOrder = freezed,
+    Object? itemId = freezed,
+    Object? itemCode = freezed,
+    Object? barcode = freezed,
+    Object? itemSku = freezed,
+    Object? updateDate = freezed,
+    Object? kategoriId = freezed,
+    Object? internalCode = freezed,
+    Object? kategoriCode = freezed,
+    Object? kategori = freezed,
+    Object? katPicture = freezed,
+    Object? itemName = freezed,
+    Object? displayDesc = freezed,
+    Object? itemPrice = freezed,
+    Object? customerTypeId = freezed,
+    Object? newPrice = freezed,
+    Object? itmPriceFmt = freezed,
+    Object? isFixedPrice = freezed,
+    Object? qty = freezed,
+    Object? qtyCart = freezed,
+    Object? unitCode = freezed,
+    Object? taxCode = freezed,
+    Object? pic = freezed,
+    Object? displayStore = freezed,
+    Object? priceListCode = freezed,
+    Object? weight = freezed,
+    Object? inOrder = freezed,
   }) {
     return _then(_DataItemModel(
-      itemId: itemId == freezed ? _value.itemId : itemId as String,
-      itemCode: itemCode == freezed ? _value.itemCode : itemCode as String,
-      barcode: barcode == freezed ? _value.barcode : barcode as String,
-      itemSku: itemSku == freezed ? _value.itemSku : itemSku as String,
-      updateDate:
-          updateDate == freezed ? _value.updateDate : updateDate as String,
-      kategoriId:
-          kategoriId == freezed ? _value.kategoriId : kategoriId as String,
+      itemId: itemId == freezed
+          ? _value.itemId
+          : itemId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemCode: itemCode == freezed
+          ? _value.itemCode
+          : itemCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      barcode: barcode == freezed
+          ? _value.barcode
+          : barcode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemSku: itemSku == freezed
+          ? _value.itemSku
+          : itemSku // ignore: cast_nullable_to_non_nullable
+              as String?,
+      updateDate: updateDate == freezed
+          ? _value.updateDate
+          : updateDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      kategoriId: kategoriId == freezed
+          ? _value.kategoriId
+          : kategoriId // ignore: cast_nullable_to_non_nullable
+              as String?,
       internalCode: internalCode == freezed
           ? _value.internalCode
-          : internalCode as String,
+          : internalCode // ignore: cast_nullable_to_non_nullable
+              as String?,
       kategoriCode: kategoriCode == freezed
           ? _value.kategoriCode
-          : kategoriCode as String,
-      kategori: kategori == freezed ? _value.kategori : kategori as String,
-      katPicture:
-          katPicture == freezed ? _value.katPicture : katPicture as String,
-      itemName: itemName == freezed ? _value.itemName : itemName as String,
-      displayDesc:
-          displayDesc == freezed ? _value.displayDesc : displayDesc as String,
-      itemPrice: itemPrice == freezed ? _value.itemPrice : itemPrice as String,
+          : kategoriCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      kategori: kategori == freezed
+          ? _value.kategori
+          : kategori // ignore: cast_nullable_to_non_nullable
+              as String?,
+      katPicture: katPicture == freezed
+          ? _value.katPicture
+          : katPicture // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemName: itemName == freezed
+          ? _value.itemName
+          : itemName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      displayDesc: displayDesc == freezed
+          ? _value.displayDesc
+          : displayDesc // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemPrice: itemPrice == freezed
+          ? _value.itemPrice
+          : itemPrice // ignore: cast_nullable_to_non_nullable
+              as String?,
       customerTypeId: customerTypeId == freezed
           ? _value.customerTypeId
-          : customerTypeId as String,
-      newPrice: newPrice == freezed ? _value.newPrice : newPrice as String,
-      itmPriceFmt:
-          itmPriceFmt == freezed ? _value.itmPriceFmt : itmPriceFmt as String,
+          : customerTypeId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      newPrice: newPrice == freezed
+          ? _value.newPrice
+          : newPrice // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itmPriceFmt: itmPriceFmt == freezed
+          ? _value.itmPriceFmt
+          : itmPriceFmt // ignore: cast_nullable_to_non_nullable
+              as String?,
       isFixedPrice: isFixedPrice == freezed
           ? _value.isFixedPrice
-          : isFixedPrice as String,
-      qty: qty == freezed ? _value.qty : qty as String,
-      qtyCart: qtyCart == freezed ? _value.qtyCart : qtyCart as String,
-      unitCode: unitCode == freezed ? _value.unitCode : unitCode as String,
-      taxCode: taxCode == freezed ? _value.taxCode : taxCode as String,
-      pic: pic == freezed ? _value.pic : pic as String,
+          : isFixedPrice // ignore: cast_nullable_to_non_nullable
+              as String?,
+      qty: qty == freezed
+          ? _value.qty
+          : qty // ignore: cast_nullable_to_non_nullable
+              as String?,
+      qtyCart: qtyCart == freezed
+          ? _value.qtyCart
+          : qtyCart // ignore: cast_nullable_to_non_nullable
+              as String?,
+      unitCode: unitCode == freezed
+          ? _value.unitCode
+          : unitCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      taxCode: taxCode == freezed
+          ? _value.taxCode
+          : taxCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pic: pic == freezed
+          ? _value.pic
+          : pic // ignore: cast_nullable_to_non_nullable
+              as String?,
       displayStore: displayStore == freezed
           ? _value.displayStore
-          : displayStore as String,
+          : displayStore // ignore: cast_nullable_to_non_nullable
+              as String?,
       priceListCode: priceListCode == freezed
           ? _value.priceListCode
-          : priceListCode as String,
-      weight: weight == freezed ? _value.weight : weight as String,
-      inOrder: inOrder == freezed ? _value.inOrder : inOrder as String,
+          : priceListCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      weight: weight == freezed
+          ? _value.weight
+          : weight // ignore: cast_nullable_to_non_nullable
+              as String?,
+      inOrder: inOrder == freezed
+          ? _value.inOrder
+          : inOrder // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DataItemModel implements _DataItemModel {
   _$_DataItemModel(
       {@JsonKey(name: 'item_id') this.itemId,
@@ -425,82 +548,82 @@ class _$_DataItemModel implements _DataItemModel {
 
   @override
   @JsonKey(name: 'item_id')
-  final String itemId;
+  final String? itemId;
   @override
   @JsonKey(name: 'item_code')
-  final String itemCode;
+  final String? itemCode;
   @override
   @JsonKey(name: 'barcode')
-  final String barcode;
+  final String? barcode;
   @override
   @JsonKey(name: 'item_sku')
-  final String itemSku;
+  final String? itemSku;
   @override
   @JsonKey(name: 'update_date')
-  final String updateDate;
+  final String? updateDate;
   @override
   @JsonKey(name: 'kategori_id')
-  final String kategoriId;
+  final String? kategoriId;
   @override
   @JsonKey(name: 'internal_code')
-  final String internalCode;
+  final String? internalCode;
   @override
   @JsonKey(name: 'kategori_code')
-  final String kategoriCode;
+  final String? kategoriCode;
   @override
   @JsonKey(name: 'kategori')
-  final String kategori;
+  final String? kategori;
   @override
   @JsonKey(name: 'kat_picture')
-  final String katPicture;
+  final String? katPicture;
   @override
   @JsonKey(name: 'item_name')
-  final String itemName;
+  final String? itemName;
   @override
   @JsonKey(name: 'display_desc')
-  final String displayDesc;
+  final String? displayDesc;
   @override
   @JsonKey(name: 'item_price')
-  final String itemPrice;
+  final String? itemPrice;
   @override
   @JsonKey(name: 'customer_type_id')
-  final String customerTypeId;
+  final String? customerTypeId;
   @override
   @JsonKey(name: 'new_price')
-  final String newPrice;
+  final String? newPrice;
   @override
   @JsonKey(name: 'itm_price_fmt')
-  final String itmPriceFmt;
+  final String? itmPriceFmt;
   @override
   @JsonKey(name: 'is_fixed_price')
-  final String isFixedPrice;
+  final String? isFixedPrice;
   @override
   @JsonKey(name: 'qty')
-  final String qty;
+  final String? qty;
   @override
   @JsonKey(name: 'qty_cart')
-  final String qtyCart;
+  final String? qtyCart;
   @override //Added by Sai,
   @JsonKey(name: 'unit_code')
-  final String unitCode;
+  final String? unitCode;
   @override
   @JsonKey(name: 'tax_code')
-  final String taxCode;
+  final String? taxCode;
   @override
   @JsonKey(name: 'pic')
-  final String pic;
+  final String? pic;
   @override
   @JsonKey(name: 'display_store')
-  final String displayStore;
+  final String? displayStore;
   @override
   @JsonKey(name: 'price_list_code')
-  final String priceListCode;
+  final String? priceListCode;
   @override
   @JsonKey(name: 'weight')
-  final String weight;
+  final String? weight;
   @override
   @JsonKey(name: 'in_order')
-  final String inOrder;
+  final String? inOrder;
 
   @override
   String toString() {
@@ -625,115 +748,116 @@ class _$_DataItemModel implements _DataItemModel {
 
 abstract class _DataItemModel implements DataItemModel {
   factory _DataItemModel(
-      {@JsonKey(name: 'item_id') String itemId,
-      @JsonKey(name: 'item_code') String itemCode,
-      @JsonKey(name: 'barcode') String barcode,
-      @JsonKey(name: 'item_sku') String itemSku,
-      @JsonKey(name: 'update_date') String updateDate,
-      @JsonKey(name: 'kategori_id') String kategoriId,
-      @JsonKey(name: 'internal_code') String internalCode,
-      @JsonKey(name: 'kategori_code') String kategoriCode,
-      @JsonKey(name: 'kategori') String kategori,
-      @JsonKey(name: 'kat_picture') String katPicture,
-      @JsonKey(name: 'item_name') String itemName,
-      @JsonKey(name: 'display_desc') String displayDesc,
-      @JsonKey(name: 'item_price') String itemPrice,
-      @JsonKey(name: 'customer_type_id') String customerTypeId,
-      @JsonKey(name: 'new_price') String newPrice,
-      @JsonKey(name: 'itm_price_fmt') String itmPriceFmt,
-      @JsonKey(name: 'is_fixed_price') String isFixedPrice,
-      @JsonKey(name: 'qty') String qty,
-      @JsonKey(name: 'qty_cart') String qtyCart,
-      @JsonKey(name: 'unit_code') String unitCode,
-      @JsonKey(name: 'tax_code') String taxCode,
-      @JsonKey(name: 'pic') String pic,
-      @JsonKey(name: 'display_store') String displayStore,
-      @JsonKey(name: 'price_list_code') String priceListCode,
-      @JsonKey(name: 'weight') String weight,
-      @JsonKey(name: 'in_order') String inOrder}) = _$_DataItemModel;
+      {@JsonKey(name: 'item_id') String? itemId,
+      @JsonKey(name: 'item_code') String? itemCode,
+      @JsonKey(name: 'barcode') String? barcode,
+      @JsonKey(name: 'item_sku') String? itemSku,
+      @JsonKey(name: 'update_date') String? updateDate,
+      @JsonKey(name: 'kategori_id') String? kategoriId,
+      @JsonKey(name: 'internal_code') String? internalCode,
+      @JsonKey(name: 'kategori_code') String? kategoriCode,
+      @JsonKey(name: 'kategori') String? kategori,
+      @JsonKey(name: 'kat_picture') String? katPicture,
+      @JsonKey(name: 'item_name') String? itemName,
+      @JsonKey(name: 'display_desc') String? displayDesc,
+      @JsonKey(name: 'item_price') String? itemPrice,
+      @JsonKey(name: 'customer_type_id') String? customerTypeId,
+      @JsonKey(name: 'new_price') String? newPrice,
+      @JsonKey(name: 'itm_price_fmt') String? itmPriceFmt,
+      @JsonKey(name: 'is_fixed_price') String? isFixedPrice,
+      @JsonKey(name: 'qty') String? qty,
+      @JsonKey(name: 'qty_cart') String? qtyCart,
+      @JsonKey(name: 'unit_code') String? unitCode,
+      @JsonKey(name: 'tax_code') String? taxCode,
+      @JsonKey(name: 'pic') String? pic,
+      @JsonKey(name: 'display_store') String? displayStore,
+      @JsonKey(name: 'price_list_code') String? priceListCode,
+      @JsonKey(name: 'weight') String? weight,
+      @JsonKey(name: 'in_order') String? inOrder}) = _$_DataItemModel;
 
   factory _DataItemModel.fromJson(Map<String, dynamic> json) =
       _$_DataItemModel.fromJson;
 
   @override
   @JsonKey(name: 'item_id')
-  String get itemId;
+  String? get itemId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'item_code')
-  String get itemCode;
+  String? get itemCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'barcode')
-  String get barcode;
+  String? get barcode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'item_sku')
-  String get itemSku;
+  String? get itemSku => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'update_date')
-  String get updateDate;
+  String? get updateDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'kategori_id')
-  String get kategoriId;
+  String? get kategoriId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'internal_code')
-  String get internalCode;
+  String? get internalCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'kategori_code')
-  String get kategoriCode;
+  String? get kategoriCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'kategori')
-  String get kategori;
+  String? get kategori => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'kat_picture')
-  String get katPicture;
+  String? get katPicture => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'item_name')
-  String get itemName;
+  String? get itemName => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'display_desc')
-  String get displayDesc;
+  String? get displayDesc => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'item_price')
-  String get itemPrice;
+  String? get itemPrice => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'customer_type_id')
-  String get customerTypeId;
+  String? get customerTypeId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'new_price')
-  String get newPrice;
+  String? get newPrice => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'itm_price_fmt')
-  String get itmPriceFmt;
+  String? get itmPriceFmt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'is_fixed_price')
-  String get isFixedPrice;
+  String? get isFixedPrice => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'qty')
-  String get qty;
+  String? get qty => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'qty_cart')
-  String get qtyCart;
+  String? get qtyCart => throw _privateConstructorUsedError;
   @override //Added by Sai,
   @JsonKey(name: 'unit_code')
-  String get unitCode;
+  String? get unitCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'tax_code')
-  String get taxCode;
+  String? get taxCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'pic')
-  String get pic;
+  String? get pic => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'display_store')
-  String get displayStore;
+  String? get displayStore => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'price_list_code')
-  String get priceListCode;
+  String? get priceListCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'weight')
-  String get weight;
+  String? get weight => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'in_order')
-  String get inOrder;
+  String? get inOrder => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DataItemModelCopyWith<_DataItemModel> get copyWith;
+  _$DataItemModelCopyWith<_DataItemModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

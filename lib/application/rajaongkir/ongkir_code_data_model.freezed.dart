@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'ongkir_code_data_model.dart';
 
@@ -8,6 +8,10 @@ part of 'ongkir_code_data_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 OngkirCodeDataModel _$OngkirCodeDataModelFromJson(Map<String, dynamic> json) {
   return _OngkirCodeDataModel.fromJson(json);
 }
@@ -16,9 +20,8 @@ OngkirCodeDataModel _$OngkirCodeDataModelFromJson(Map<String, dynamic> json) {
 class _$OngkirCodeDataModelTearOff {
   const _$OngkirCodeDataModelTearOff();
 
-// ignore: unused_element
   _OngkirCodeDataModel call(
-      {String id, String code, String label, String name}) {
+      {String? id, String? code, String? label, String? name}) {
     return _OngkirCodeDataModel(
       id: id,
       code: code,
@@ -27,26 +30,25 @@ class _$OngkirCodeDataModelTearOff {
     );
   }
 
-// ignore: unused_element
   OngkirCodeDataModel fromJson(Map<String, Object> json) {
     return OngkirCodeDataModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $OngkirCodeDataModel = _$OngkirCodeDataModelTearOff();
 
 /// @nodoc
 mixin _$OngkirCodeDataModel {
-  String get id;
-  String get code;
-  String get label;
-  String get name;
+  String? get id => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
+  String? get label => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $OngkirCodeDataModelCopyWith<OngkirCodeDataModel> get copyWith;
+  $OngkirCodeDataModelCopyWith<OngkirCodeDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -54,7 +56,7 @@ abstract class $OngkirCodeDataModelCopyWith<$Res> {
   factory $OngkirCodeDataModelCopyWith(
           OngkirCodeDataModel value, $Res Function(OngkirCodeDataModel) then) =
       _$OngkirCodeDataModelCopyWithImpl<$Res>;
-  $Res call({String id, String code, String label, String name});
+  $Res call({String? id, String? code, String? label, String? name});
 }
 
 /// @nodoc
@@ -68,16 +70,28 @@ class _$OngkirCodeDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object code = freezed,
-    Object label = freezed,
-    Object name = freezed,
+    Object? id = freezed,
+    Object? code = freezed,
+    Object? label = freezed,
+    Object? name = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      code: code == freezed ? _value.code : code as String,
-      label: label == freezed ? _value.label : label as String,
-      name: name == freezed ? _value.name : name as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as String?,
+      label: label == freezed
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -89,7 +103,7 @@ abstract class _$OngkirCodeDataModelCopyWith<$Res>
           $Res Function(_OngkirCodeDataModel) then) =
       __$OngkirCodeDataModelCopyWithImpl<$Res>;
   @override
-  $Res call({String id, String code, String label, String name});
+  $Res call({String? id, String? code, String? label, String? name});
 }
 
 /// @nodoc
@@ -105,23 +119,34 @@ class __$OngkirCodeDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object code = freezed,
-    Object label = freezed,
-    Object name = freezed,
+    Object? id = freezed,
+    Object? code = freezed,
+    Object? label = freezed,
+    Object? name = freezed,
   }) {
     return _then(_OngkirCodeDataModel(
-      id: id == freezed ? _value.id : id as String,
-      code: code == freezed ? _value.code : code as String,
-      label: label == freezed ? _value.label : label as String,
-      name: name == freezed ? _value.name : name as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as String?,
+      label: label == freezed
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OngkirCodeDataModel implements _OngkirCodeDataModel {
   _$_OngkirCodeDataModel({this.id, this.code, this.label, this.name});
 
@@ -129,13 +154,13 @@ class _$_OngkirCodeDataModel implements _OngkirCodeDataModel {
       _$_$_OngkirCodeDataModelFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
-  final String code;
+  final String? code;
   @override
-  final String label;
+  final String? label;
   @override
-  final String name;
+  final String? name;
 
   @override
   String toString() {
@@ -178,23 +203,24 @@ class _$_OngkirCodeDataModel implements _OngkirCodeDataModel {
 
 abstract class _OngkirCodeDataModel implements OngkirCodeDataModel {
   factory _OngkirCodeDataModel(
-      {String id,
-      String code,
-      String label,
-      String name}) = _$_OngkirCodeDataModel;
+      {String? id,
+      String? code,
+      String? label,
+      String? name}) = _$_OngkirCodeDataModel;
 
   factory _OngkirCodeDataModel.fromJson(Map<String, dynamic> json) =
       _$_OngkirCodeDataModel.fromJson;
 
   @override
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  String get code;
+  String? get code => throw _privateConstructorUsedError;
   @override
-  String get label;
+  String? get label => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$OngkirCodeDataModelCopyWith<_OngkirCodeDataModel> get copyWith;
+  _$OngkirCodeDataModelCopyWith<_OngkirCodeDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

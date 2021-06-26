@@ -9,8 +9,8 @@ import 'package:roomart/utils/formater.dart';
 
 class TransactionItemWidgetV2 extends StatelessWidget {
   const TransactionItemWidgetV2({
-    Key key,
-    @required TransactionDataModelV2 data,
+    Key? key,
+    required TransactionDataModelV2 data,
   })  : _data = data,
         super(key: key);
 
@@ -34,12 +34,12 @@ class TransactionItemWidgetV2 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        _data.invoiceNo,
+                        _data.invoiceNo!,
                         style: TextStyle(fontSize: 18),
                       ),
                       SizedBox(height: 5),
                       Text(
-                        Formatter().fullDateFormat(_data.transactionDate),
+                        Formatter().fullDateFormat(_data.transactionDate!),
                       ),
                     ],
                   ),

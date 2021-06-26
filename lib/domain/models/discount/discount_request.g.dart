@@ -8,9 +8,9 @@ part of 'discount_request.dart';
 
 _$_DiscountRequest _$_$_DiscountRequestFromJson(Map<String, dynamic> json) {
   return _$_DiscountRequest(
-    token: json['token'] as String,
-    code: json['Code'] as String,
-    total: json['ShoppingTotal'] as String,
+    token: json['token'] as String?,
+    code: json['Code'] as String?,
+    total: json['ShoppingTotal'] as String?,
   );
 }
 

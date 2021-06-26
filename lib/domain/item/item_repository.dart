@@ -11,11 +11,11 @@ import 'package:roomart/utils/constants.dart';
 
 abstract class IITemFacae {
   Future<Either<String, List<DataItemModel>>> getItemLazyLoading(
-      {int offset, int limit});
+      {int? offset, int? limit});
   Future<Either<String, List<DataItemModel>>> searchItem(
-      {int offset, int limit, String keywoard});
+      {int? offset, int? limit, String? keywoard});
   Future<Either<String, List<DataItemModel>>> getItemListByCategoryId(
-      {int offset = 0, int limit = 1000, @required String categoryId});
+      {int offset = 0, int limit = 1000, required String? categoryId});
 }
 
 @LazySingleton(as: IITemFacae)
@@ -28,10 +28,10 @@ class ItemRepoistory extends IITemFacae {
 
   @override
   Future<Either<String, List<DataItemModel>>> getItemLazyLoading(
-      {int offset, int limit}) async {
+      {int? offset, int? limit}) async {
     List<DataItemModel> _tempData = <DataItemModel>[];
 
-    int counterOffset = offset;
+    int? counterOffset = offset;
 
     try {
       do {
@@ -46,16 +46,16 @@ class ItemRepoistory extends IITemFacae {
           break;
         }
         data.forEach((element) {
-          double data = double.tryParse(element.qty);
+          double? data = double.tryParse(element.qty!);
           if (data != null) {
             if (data > 0) {
               _tempData.add(element);
             }
           }
         });
-        counterOffset++;
-      } while (_tempData.length < limit);
-      itemController.setOffset(counterOffset);
+        counterOffset = counterOffset! + 1;
+      } while (_tempData.length < limit!);
+      itemController.setOffset(counterOffset!);
       return right(_tempData);
     } catch (e) {
       return left(e.toString());
@@ -64,7 +64,7 @@ class ItemRepoistory extends IITemFacae {
 
   @override
   Future<Either<String, List<DataItemModel>>> getItemListByCategoryId(
-      {int offset = 0, int limit = 1000, @required String categoryId}) async {
+      {int offset = 0, int limit = 1000, required String? categoryId}) async {
     List<DataItemModel> _tempData = <DataItemModel>[];
     Response response;
     try {
@@ -81,7 +81,7 @@ class ItemRepoistory extends IITemFacae {
       data.removeWhere((obj) => (obj.qty == "null" ||
           obj.qty == "" ||
           obj.qty == " " ||
-          double.parse(obj.qty).toStringAsFixed(0) == "0"));
+          double.parse(obj.qty!).toStringAsFixed(0) == "0"));
 
       return right(data);
     } catch (e) {
@@ -91,7 +91,7 @@ class ItemRepoistory extends IITemFacae {
 
   @override
   Future<Either<String, List<DataItemModel>>> searchItem(
-      {int offset, int limit, String keywoard}) async {
+      {int? offset, int? limit, String? keywoard}) async {
     List<DataItemModel> _tempData = <DataItemModel>[];
 
     try {
@@ -104,7 +104,7 @@ class ItemRepoistory extends IITemFacae {
           jsonData.map((m) => DataItemModel.fromJson(m)).toList();
 
       data.forEach((element) {
-        double data = double.tryParse(element.qty);
+        double? data = double.tryParse(element.qty!);
         if (data != null) {
           if (data > 0) {
             _tempData.add(element);

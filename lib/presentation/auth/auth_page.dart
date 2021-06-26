@@ -28,7 +28,7 @@ class _AuthPageState extends State<AuthPage> {
   final authController = Get.put(AuthController());
   bool isObsecure = true;
   final homeController = Get.put(HomeController());
-  final authCubit = getIt<AuthCubit>();
+  final AuthCubit authCubit = getIt<AuthCubit>();
   @override
   Widget build(BuildContext context) {
     final node = FocusScope.of(context);

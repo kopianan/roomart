@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'transaction_item_data_model.dart';
 
@@ -8,6 +8,10 @@ part of 'transaction_item_data_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 TransactionItemDataModel _$TransactionItemDataModelFromJson(
     Map<String, dynamic> json) {
   return _TransactionItemDataModel.fromJson(json);
@@ -17,21 +21,20 @@ TransactionItemDataModel _$TransactionItemDataModelFromJson(
 class _$TransactionItemDataModelTearOff {
   const _$TransactionItemDataModelTearOff();
 
-// ignore: unused_element
   _TransactionItemDataModel call(
-      {@JsonKey(name: 'ID') String iD,
-      @JsonKey(name: 'TransactionID') String transactionID,
-      @JsonKey(name: 'ItemID') String itemID,
-      @JsonKey(name: 'ItemName') String itemName,
-      @JsonKey(name: 'Qty') int qty,
-      @JsonKey(name: 'ResellerPrice') double resellerPrice,
-      @JsonKey(name: 'Price') double price,
-      @JsonKey(name: 'Cashback') double cashback,
-      @JsonKey(name: 'ItemImage') String itemImage,
-      @JsonKey(name: 'Unit') String unit,
-      @JsonKey(name: 'Tax') String tax,
-      @JsonKey(name: 'Discount') double discount,
-      @JsonKey(name: 'Date') String date}) {
+      {@JsonKey(name: "ID") String? iD,
+      @JsonKey(name: "TransactionID") String? transactionID,
+      @JsonKey(name: "ItemID") String? itemID,
+      @JsonKey(name: "ItemName") String? itemName,
+      @JsonKey(name: "Qty") int? qty,
+      @JsonKey(name: "ResellerPrice") double? resellerPrice,
+      @JsonKey(name: "Price") double? price,
+      @JsonKey(name: "Cashback") double? cashback,
+      @JsonKey(name: "ItemImage") String? itemImage,
+      @JsonKey(name: "Unit") String? unit,
+      @JsonKey(name: "Tax") String? tax,
+      @JsonKey(name: "Discount") double? discount,
+      @JsonKey(name: "Date") String? date}) {
     return _TransactionItemDataModel(
       iD: iD,
       transactionID: transactionID,
@@ -49,48 +52,47 @@ class _$TransactionItemDataModelTearOff {
     );
   }
 
-// ignore: unused_element
   TransactionItemDataModel fromJson(Map<String, Object> json) {
     return TransactionItemDataModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $TransactionItemDataModel = _$TransactionItemDataModelTearOff();
 
 /// @nodoc
 mixin _$TransactionItemDataModel {
-  @JsonKey(name: 'ID')
-  String get iD;
-  @JsonKey(name: 'TransactionID')
-  String get transactionID;
-  @JsonKey(name: 'ItemID')
-  String get itemID;
-  @JsonKey(name: 'ItemName')
-  String get itemName;
-  @JsonKey(name: 'Qty')
-  int get qty;
-  @JsonKey(name: 'ResellerPrice')
-  double get resellerPrice;
-  @JsonKey(name: 'Price')
-  double get price;
-  @JsonKey(name: 'Cashback')
-  double get cashback;
-  @JsonKey(name: 'ItemImage')
-  String get itemImage;
-  @JsonKey(name: 'Unit')
-  String get unit;
-  @JsonKey(name: 'Tax')
-  String get tax;
-  @JsonKey(name: 'Discount')
-  double get discount;
-  @JsonKey(name: 'Date')
-  String get date;
+  @JsonKey(name: "ID")
+  String? get iD => throw _privateConstructorUsedError;
+  @JsonKey(name: "TransactionID")
+  String? get transactionID => throw _privateConstructorUsedError;
+  @JsonKey(name: "ItemID")
+  String? get itemID => throw _privateConstructorUsedError;
+  @JsonKey(name: "ItemName")
+  String? get itemName => throw _privateConstructorUsedError;
+  @JsonKey(name: "Qty")
+  int? get qty => throw _privateConstructorUsedError;
+  @JsonKey(name: "ResellerPrice")
+  double? get resellerPrice => throw _privateConstructorUsedError;
+  @JsonKey(name: "Price")
+  double? get price => throw _privateConstructorUsedError;
+  @JsonKey(name: "Cashback")
+  double? get cashback => throw _privateConstructorUsedError;
+  @JsonKey(name: "ItemImage")
+  String? get itemImage => throw _privateConstructorUsedError;
+  @JsonKey(name: "Unit")
+  String? get unit => throw _privateConstructorUsedError;
+  @JsonKey(name: "Tax")
+  String? get tax => throw _privateConstructorUsedError;
+  @JsonKey(name: "Discount")
+  double? get discount => throw _privateConstructorUsedError;
+  @JsonKey(name: "Date")
+  String? get date => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $TransactionItemDataModelCopyWith<TransactionItemDataModel> get copyWith;
+  $TransactionItemDataModelCopyWith<TransactionItemDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -99,19 +101,19 @@ abstract class $TransactionItemDataModelCopyWith<$Res> {
           $Res Function(TransactionItemDataModel) then) =
       _$TransactionItemDataModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'ID') String iD,
-      @JsonKey(name: 'TransactionID') String transactionID,
-      @JsonKey(name: 'ItemID') String itemID,
-      @JsonKey(name: 'ItemName') String itemName,
-      @JsonKey(name: 'Qty') int qty,
-      @JsonKey(name: 'ResellerPrice') double resellerPrice,
-      @JsonKey(name: 'Price') double price,
-      @JsonKey(name: 'Cashback') double cashback,
-      @JsonKey(name: 'ItemImage') String itemImage,
-      @JsonKey(name: 'Unit') String unit,
-      @JsonKey(name: 'Tax') String tax,
-      @JsonKey(name: 'Discount') double discount,
-      @JsonKey(name: 'Date') String date});
+      {@JsonKey(name: "ID") String? iD,
+      @JsonKey(name: "TransactionID") String? transactionID,
+      @JsonKey(name: "ItemID") String? itemID,
+      @JsonKey(name: "ItemName") String? itemName,
+      @JsonKey(name: "Qty") int? qty,
+      @JsonKey(name: "ResellerPrice") double? resellerPrice,
+      @JsonKey(name: "Price") double? price,
+      @JsonKey(name: "Cashback") double? cashback,
+      @JsonKey(name: "ItemImage") String? itemImage,
+      @JsonKey(name: "Unit") String? unit,
+      @JsonKey(name: "Tax") String? tax,
+      @JsonKey(name: "Discount") double? discount,
+      @JsonKey(name: "Date") String? date});
 }
 
 /// @nodoc
@@ -125,38 +127,73 @@ class _$TransactionItemDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object iD = freezed,
-    Object transactionID = freezed,
-    Object itemID = freezed,
-    Object itemName = freezed,
-    Object qty = freezed,
-    Object resellerPrice = freezed,
-    Object price = freezed,
-    Object cashback = freezed,
-    Object itemImage = freezed,
-    Object unit = freezed,
-    Object tax = freezed,
-    Object discount = freezed,
-    Object date = freezed,
+    Object? iD = freezed,
+    Object? transactionID = freezed,
+    Object? itemID = freezed,
+    Object? itemName = freezed,
+    Object? qty = freezed,
+    Object? resellerPrice = freezed,
+    Object? price = freezed,
+    Object? cashback = freezed,
+    Object? itemImage = freezed,
+    Object? unit = freezed,
+    Object? tax = freezed,
+    Object? discount = freezed,
+    Object? date = freezed,
   }) {
     return _then(_value.copyWith(
-      iD: iD == freezed ? _value.iD : iD as String,
+      iD: iD == freezed
+          ? _value.iD
+          : iD // ignore: cast_nullable_to_non_nullable
+              as String?,
       transactionID: transactionID == freezed
           ? _value.transactionID
-          : transactionID as String,
-      itemID: itemID == freezed ? _value.itemID : itemID as String,
-      itemName: itemName == freezed ? _value.itemName : itemName as String,
-      qty: qty == freezed ? _value.qty : qty as int,
+          : transactionID // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemID: itemID == freezed
+          ? _value.itemID
+          : itemID // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemName: itemName == freezed
+          ? _value.itemName
+          : itemName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      qty: qty == freezed
+          ? _value.qty
+          : qty // ignore: cast_nullable_to_non_nullable
+              as int?,
       resellerPrice: resellerPrice == freezed
           ? _value.resellerPrice
-          : resellerPrice as double,
-      price: price == freezed ? _value.price : price as double,
-      cashback: cashback == freezed ? _value.cashback : cashback as double,
-      itemImage: itemImage == freezed ? _value.itemImage : itemImage as String,
-      unit: unit == freezed ? _value.unit : unit as String,
-      tax: tax == freezed ? _value.tax : tax as String,
-      discount: discount == freezed ? _value.discount : discount as double,
-      date: date == freezed ? _value.date : date as String,
+          : resellerPrice // ignore: cast_nullable_to_non_nullable
+              as double?,
+      price: price == freezed
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
+              as double?,
+      cashback: cashback == freezed
+          ? _value.cashback
+          : cashback // ignore: cast_nullable_to_non_nullable
+              as double?,
+      itemImage: itemImage == freezed
+          ? _value.itemImage
+          : itemImage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      unit: unit == freezed
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
+              as String?,
+      tax: tax == freezed
+          ? _value.tax
+          : tax // ignore: cast_nullable_to_non_nullable
+              as String?,
+      discount: discount == freezed
+          ? _value.discount
+          : discount // ignore: cast_nullable_to_non_nullable
+              as double?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -169,19 +206,19 @@ abstract class _$TransactionItemDataModelCopyWith<$Res>
       __$TransactionItemDataModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'ID') String iD,
-      @JsonKey(name: 'TransactionID') String transactionID,
-      @JsonKey(name: 'ItemID') String itemID,
-      @JsonKey(name: 'ItemName') String itemName,
-      @JsonKey(name: 'Qty') int qty,
-      @JsonKey(name: 'ResellerPrice') double resellerPrice,
-      @JsonKey(name: 'Price') double price,
-      @JsonKey(name: 'Cashback') double cashback,
-      @JsonKey(name: 'ItemImage') String itemImage,
-      @JsonKey(name: 'Unit') String unit,
-      @JsonKey(name: 'Tax') String tax,
-      @JsonKey(name: 'Discount') double discount,
-      @JsonKey(name: 'Date') String date});
+      {@JsonKey(name: "ID") String? iD,
+      @JsonKey(name: "TransactionID") String? transactionID,
+      @JsonKey(name: "ItemID") String? itemID,
+      @JsonKey(name: "ItemName") String? itemName,
+      @JsonKey(name: "Qty") int? qty,
+      @JsonKey(name: "ResellerPrice") double? resellerPrice,
+      @JsonKey(name: "Price") double? price,
+      @JsonKey(name: "Cashback") double? cashback,
+      @JsonKey(name: "ItemImage") String? itemImage,
+      @JsonKey(name: "Unit") String? unit,
+      @JsonKey(name: "Tax") String? tax,
+      @JsonKey(name: "Discount") double? discount,
+      @JsonKey(name: "Date") String? date});
 }
 
 /// @nodoc
@@ -198,103 +235,137 @@ class __$TransactionItemDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object iD = freezed,
-    Object transactionID = freezed,
-    Object itemID = freezed,
-    Object itemName = freezed,
-    Object qty = freezed,
-    Object resellerPrice = freezed,
-    Object price = freezed,
-    Object cashback = freezed,
-    Object itemImage = freezed,
-    Object unit = freezed,
-    Object tax = freezed,
-    Object discount = freezed,
-    Object date = freezed,
+    Object? iD = freezed,
+    Object? transactionID = freezed,
+    Object? itemID = freezed,
+    Object? itemName = freezed,
+    Object? qty = freezed,
+    Object? resellerPrice = freezed,
+    Object? price = freezed,
+    Object? cashback = freezed,
+    Object? itemImage = freezed,
+    Object? unit = freezed,
+    Object? tax = freezed,
+    Object? discount = freezed,
+    Object? date = freezed,
   }) {
     return _then(_TransactionItemDataModel(
-      iD: iD == freezed ? _value.iD : iD as String,
+      iD: iD == freezed
+          ? _value.iD
+          : iD // ignore: cast_nullable_to_non_nullable
+              as String?,
       transactionID: transactionID == freezed
           ? _value.transactionID
-          : transactionID as String,
-      itemID: itemID == freezed ? _value.itemID : itemID as String,
-      itemName: itemName == freezed ? _value.itemName : itemName as String,
-      qty: qty == freezed ? _value.qty : qty as int,
+          : transactionID // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemID: itemID == freezed
+          ? _value.itemID
+          : itemID // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemName: itemName == freezed
+          ? _value.itemName
+          : itemName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      qty: qty == freezed
+          ? _value.qty
+          : qty // ignore: cast_nullable_to_non_nullable
+              as int?,
       resellerPrice: resellerPrice == freezed
           ? _value.resellerPrice
-          : resellerPrice as double,
-      price: price == freezed ? _value.price : price as double,
-      cashback: cashback == freezed ? _value.cashback : cashback as double,
-      itemImage: itemImage == freezed ? _value.itemImage : itemImage as String,
-      unit: unit == freezed ? _value.unit : unit as String,
-      tax: tax == freezed ? _value.tax : tax as String,
-      discount: discount == freezed ? _value.discount : discount as double,
-      date: date == freezed ? _value.date : date as String,
+          : resellerPrice // ignore: cast_nullable_to_non_nullable
+              as double?,
+      price: price == freezed
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
+              as double?,
+      cashback: cashback == freezed
+          ? _value.cashback
+          : cashback // ignore: cast_nullable_to_non_nullable
+              as double?,
+      itemImage: itemImage == freezed
+          ? _value.itemImage
+          : itemImage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      unit: unit == freezed
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
+              as String?,
+      tax: tax == freezed
+          ? _value.tax
+          : tax // ignore: cast_nullable_to_non_nullable
+              as String?,
+      discount: discount == freezed
+          ? _value.discount
+          : discount // ignore: cast_nullable_to_non_nullable
+              as double?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TransactionItemDataModel implements _TransactionItemDataModel {
   _$_TransactionItemDataModel(
-      {@JsonKey(name: 'ID') this.iD,
-      @JsonKey(name: 'TransactionID') this.transactionID,
-      @JsonKey(name: 'ItemID') this.itemID,
-      @JsonKey(name: 'ItemName') this.itemName,
-      @JsonKey(name: 'Qty') this.qty,
-      @JsonKey(name: 'ResellerPrice') this.resellerPrice,
-      @JsonKey(name: 'Price') this.price,
-      @JsonKey(name: 'Cashback') this.cashback,
-      @JsonKey(name: 'ItemImage') this.itemImage,
-      @JsonKey(name: 'Unit') this.unit,
-      @JsonKey(name: 'Tax') this.tax,
-      @JsonKey(name: 'Discount') this.discount,
-      @JsonKey(name: 'Date') this.date});
+      {@JsonKey(name: "ID") this.iD,
+      @JsonKey(name: "TransactionID") this.transactionID,
+      @JsonKey(name: "ItemID") this.itemID,
+      @JsonKey(name: "ItemName") this.itemName,
+      @JsonKey(name: "Qty") this.qty,
+      @JsonKey(name: "ResellerPrice") this.resellerPrice,
+      @JsonKey(name: "Price") this.price,
+      @JsonKey(name: "Cashback") this.cashback,
+      @JsonKey(name: "ItemImage") this.itemImage,
+      @JsonKey(name: "Unit") this.unit,
+      @JsonKey(name: "Tax") this.tax,
+      @JsonKey(name: "Discount") this.discount,
+      @JsonKey(name: "Date") this.date});
 
   factory _$_TransactionItemDataModel.fromJson(Map<String, dynamic> json) =>
       _$_$_TransactionItemDataModelFromJson(json);
 
   @override
-  @JsonKey(name: 'ID')
-  final String iD;
+  @JsonKey(name: "ID")
+  final String? iD;
   @override
-  @JsonKey(name: 'TransactionID')
-  final String transactionID;
+  @JsonKey(name: "TransactionID")
+  final String? transactionID;
   @override
-  @JsonKey(name: 'ItemID')
-  final String itemID;
+  @JsonKey(name: "ItemID")
+  final String? itemID;
   @override
-  @JsonKey(name: 'ItemName')
-  final String itemName;
+  @JsonKey(name: "ItemName")
+  final String? itemName;
   @override
-  @JsonKey(name: 'Qty')
-  final int qty;
+  @JsonKey(name: "Qty")
+  final int? qty;
   @override
-  @JsonKey(name: 'ResellerPrice')
-  final double resellerPrice;
+  @JsonKey(name: "ResellerPrice")
+  final double? resellerPrice;
   @override
-  @JsonKey(name: 'Price')
-  final double price;
+  @JsonKey(name: "Price")
+  final double? price;
   @override
-  @JsonKey(name: 'Cashback')
-  final double cashback;
+  @JsonKey(name: "Cashback")
+  final double? cashback;
   @override
-  @JsonKey(name: 'ItemImage')
-  final String itemImage;
+  @JsonKey(name: "ItemImage")
+  final String? itemImage;
   @override
-  @JsonKey(name: 'Unit')
-  final String unit;
+  @JsonKey(name: "Unit")
+  final String? unit;
   @override
-  @JsonKey(name: 'Tax')
-  final String tax;
+  @JsonKey(name: "Tax")
+  final String? tax;
   @override
-  @JsonKey(name: 'Discount')
-  final double discount;
+  @JsonKey(name: "Discount")
+  final double? discount;
   @override
-  @JsonKey(name: 'Date')
-  final String date;
+  @JsonKey(name: "Date")
+  final String? date;
 
   @override
   String toString() {
@@ -370,63 +441,64 @@ class _$_TransactionItemDataModel implements _TransactionItemDataModel {
 
 abstract class _TransactionItemDataModel implements TransactionItemDataModel {
   factory _TransactionItemDataModel(
-      {@JsonKey(name: 'ID') String iD,
-      @JsonKey(name: 'TransactionID') String transactionID,
-      @JsonKey(name: 'ItemID') String itemID,
-      @JsonKey(name: 'ItemName') String itemName,
-      @JsonKey(name: 'Qty') int qty,
-      @JsonKey(name: 'ResellerPrice') double resellerPrice,
-      @JsonKey(name: 'Price') double price,
-      @JsonKey(name: 'Cashback') double cashback,
-      @JsonKey(name: 'ItemImage') String itemImage,
-      @JsonKey(name: 'Unit') String unit,
-      @JsonKey(name: 'Tax') String tax,
-      @JsonKey(name: 'Discount') double discount,
-      @JsonKey(name: 'Date') String date}) = _$_TransactionItemDataModel;
+      {@JsonKey(name: "ID") String? iD,
+      @JsonKey(name: "TransactionID") String? transactionID,
+      @JsonKey(name: "ItemID") String? itemID,
+      @JsonKey(name: "ItemName") String? itemName,
+      @JsonKey(name: "Qty") int? qty,
+      @JsonKey(name: "ResellerPrice") double? resellerPrice,
+      @JsonKey(name: "Price") double? price,
+      @JsonKey(name: "Cashback") double? cashback,
+      @JsonKey(name: "ItemImage") String? itemImage,
+      @JsonKey(name: "Unit") String? unit,
+      @JsonKey(name: "Tax") String? tax,
+      @JsonKey(name: "Discount") double? discount,
+      @JsonKey(name: "Date") String? date}) = _$_TransactionItemDataModel;
 
   factory _TransactionItemDataModel.fromJson(Map<String, dynamic> json) =
       _$_TransactionItemDataModel.fromJson;
 
   @override
-  @JsonKey(name: 'ID')
-  String get iD;
+  @JsonKey(name: "ID")
+  String? get iD => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'TransactionID')
-  String get transactionID;
+  @JsonKey(name: "TransactionID")
+  String? get transactionID => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'ItemID')
-  String get itemID;
+  @JsonKey(name: "ItemID")
+  String? get itemID => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'ItemName')
-  String get itemName;
+  @JsonKey(name: "ItemName")
+  String? get itemName => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Qty')
-  int get qty;
+  @JsonKey(name: "Qty")
+  int? get qty => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'ResellerPrice')
-  double get resellerPrice;
+  @JsonKey(name: "ResellerPrice")
+  double? get resellerPrice => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Price')
-  double get price;
+  @JsonKey(name: "Price")
+  double? get price => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Cashback')
-  double get cashback;
+  @JsonKey(name: "Cashback")
+  double? get cashback => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'ItemImage')
-  String get itemImage;
+  @JsonKey(name: "ItemImage")
+  String? get itemImage => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Unit')
-  String get unit;
+  @JsonKey(name: "Unit")
+  String? get unit => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Tax')
-  String get tax;
+  @JsonKey(name: "Tax")
+  String? get tax => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Discount')
-  double get discount;
+  @JsonKey(name: "Discount")
+  double? get discount => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Date')
-  String get date;
+  @JsonKey(name: "Date")
+  String? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TransactionItemDataModelCopyWith<_TransactionItemDataModel> get copyWith;
+  _$TransactionItemDataModelCopyWith<_TransactionItemDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

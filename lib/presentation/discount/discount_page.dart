@@ -26,10 +26,10 @@ class _DiscountPageState extends State<DiscountPage> {
   final transController = Get.put(TransactionController());
   final cartController = Get.put(CartController());
   final textController = TextEditingController();
-  UserDataModel user;
-  final disCubit = getIt<AuthCubit>();
+  UserDataModel? user;
+  final AuthCubit disCubit = getIt<AuthCubit>();
   final formKey = GlobalKey<FormState>();
-  DiscountRequest req;
+  DiscountRequest? req;
   @override
   void initState() {
     user = authController.getUserDataModel;
@@ -67,7 +67,7 @@ class _DiscountPageState extends State<DiscountPage> {
                             ));
                           } else {
                             var _dis = DiscountCode(
-                                code: req.code, totalDiscount: e.status);
+                                code: req!.code, totalDiscount: e.status);
                             print(_dis);
                             trans.setSelectedDiscountCode(_dis);
                             Get.back();
@@ -92,7 +92,7 @@ class _DiscountPageState extends State<DiscountPage> {
                           child: TextFormField(
                             controller: textController,
                             validator: (e) {
-                              if (e.isEmpty) {
+                              if (e!.isEmpty) {
                                 return "Masukkan kode kupon";
                               } else
                                 return null;
@@ -108,7 +108,7 @@ class _DiscountPageState extends State<DiscountPage> {
                             color: Colors.purple[300],
                             text: "Find coupon",
                             onPressed: () {
-                              if (formKey.currentState.validate()) {
+                              if (formKey.currentState!.validate()) {
                                 req = DiscountRequest(
                                     code: textController.text,
                                     total: cartController
@@ -146,7 +146,7 @@ class _DiscountPageState extends State<DiscountPage> {
                         });
                   },
                   builder: (context, state) {
-                    if (transController.getDiscountList(user.userId).length ==
+                    if (transController.getDiscountList(user!.userId).length ==
                         0) {
                       return Center(
                           child: Text(
@@ -158,7 +158,7 @@ class _DiscountPageState extends State<DiscountPage> {
                       ));
                     } else
                       return DiscountList(
-                        typeId: user.typeIds,
+                        typeId: user!.typeIds,
                       );
                   },
                 ),
@@ -170,8 +170,8 @@ class _DiscountPageState extends State<DiscountPage> {
 }
 
 class DiscountList extends StatelessWidget {
-  const DiscountList({Key key, @required this.typeId}) : super(key: key);
-  final String typeId;
+  const DiscountList({Key? key, required this.typeId}) : super(key: key);
+  final String? typeId;
   @override
   Widget build(BuildContext context) {
     return GetBuilder<TransactionController>(
@@ -184,7 +184,7 @@ class DiscountList extends StatelessWidget {
                   elevation: 4,
                   child: ListTile(
                     subtitle: Text(
-                      e.eventDiscount,
+                      e.eventDiscount!,
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     trailing: TextButton(
@@ -197,7 +197,7 @@ class DiscountList extends StatelessWidget {
                           style: TextStyle(color: Colors.green),
                         )),
                     title: Text(
-                      e.customerName,
+                      e.customerName!,
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ),

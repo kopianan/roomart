@@ -3,8 +3,8 @@ import 'package:roomart/application/transaction/transaction_controller.dart';
 import 'package:roomart/utils/formater.dart';
 
 class DeliveryDetail extends StatelessWidget {
-  const DeliveryDetail({Key key, this.trX}) : super(key: key);
-  final TransactionController trX;
+  const DeliveryDetail({Key? key, this.trX}) : super(key: key);
+  final TransactionController? trX;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,14 +28,14 @@ class DeliveryDetail extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                    "${trX.getSelectedCost.service} (${trX.getSelectedCost.cost.first.etd} hari)"),
-                Text(trX.getSelectedCost.description)
+                    "${trX!.getSelectedCost!.service} (${trX!.getSelectedCost!.cost!.first.etd} hari)"),
+                Text(trX!.getSelectedCost!.description!)
               ],
             ),
           ),
           Text(
             Formatter().formatStringCurrencyNoSymbol(
-              trX.getSelectedCost.cost.first.value.toString(),
+              trX!.getSelectedCost!.cost!.first.value.toString(),
             ),
             style: TextStyle(fontSize: 17),
           )

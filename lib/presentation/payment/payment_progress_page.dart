@@ -31,8 +31,8 @@ class _PaymentProgressPageState extends State<PaymentProgressPage> {
   final authController = Get.put(AuthController());
   final transactionController = Get.put(TransactionController());
   final paymentController = Get.put(PaymentController());
-  final transCubit = getIt<TransactionCubit>();
-  TransRequest transRequest;
+  final TransactionCubit transCubit = getIt<TransactionCubit>();
+  TransRequest? transRequest;
   void paymentMethod() {
     // if (paymentController.getSelectedPaymentMethod.code ==
     //     describeEnum(paymentEnum.MID)) {
@@ -45,12 +45,12 @@ class _PaymentProgressPageState extends State<PaymentProgressPage> {
 
   @override
   void initState() {
-    transRequest = Get.arguments as TransRequest;
+    transRequest = Get.arguments as TransRequest?;
     paymentMethod();
     super.initState();
   }
 
-  Future<void> openWeb(String url, String transNo) async {
+  Future<void> openWeb(String url, String? transNo) async {
     await launch(url);
     transCubit.checkMidtransTransactionStatus(transNo);
   }
@@ -77,12 +77,12 @@ class _PaymentProgressPageState extends State<PaymentProgressPage> {
                   print("Loading");
                 },
                 onAddNewTransaction: (e) async {
-                  if ((e.data.salesTrans.first.paymentGatewayUrl == null) ||
-                      e.data.salesTrans.first.paymentGatewayUrl.isBlank) {
+                  if ((e.data.salesTrans!.first.paymentGatewayUrl == null) ||
+                      e.data.salesTrans!.first.paymentGatewayUrl.isBlank!) {
                   } else {
-                    print(e.data.salesTrans.single.paymentGatewayUrl);
-                    await openWeb(e.data.salesTrans.first.paymentGatewayUrl,
-                        e.data.salesTrans.first.transNo);
+                    print(e.data.salesTrans!.single.paymentGatewayUrl);
+                    await openWeb(e.data.salesTrans!.first.paymentGatewayUrl!,
+                        e.data.salesTrans!.first.transNo);
                   }
                 },
                 onCheckMidtransStatus: (e) {
@@ -92,7 +92,7 @@ class _PaymentProgressPageState extends State<PaymentProgressPage> {
           builder: (context, state) {
             return state.maybeMap(
                 orElse: () =>
-                    midtransWaiting(transRequest.salesTrans.first.transNo),
+                    midtransWaiting(transRequest!.salesTrans!.first.transNo),
                 // successGeneralPayment(),
                 loading: (e) {
                   return Center(
@@ -113,11 +113,11 @@ class _PaymentProgressPageState extends State<PaymentProgressPage> {
                   );
                 },
                 onAddNewTransaction: (e) {
-                  if ((e.data.salesTrans.first.paymentGatewayUrl == null) ||
-                      e.data.salesTrans.first.paymentGatewayUrl.isBlank) {
+                  if ((e.data.salesTrans!.first.paymentGatewayUrl == null) ||
+                      e.data.salesTrans!.first.paymentGatewayUrl.isBlank!) {
                     return successGeneralPayment();
                   } else {
-                    return midtransWaiting(e.data.salesTrans.first.transNo);
+                    return midtransWaiting(e.data.salesTrans!.first.transNo);
                   }
                 },
                 onCheckMidtransStatus: (e) {
@@ -170,7 +170,7 @@ class _PaymentProgressPageState extends State<PaymentProgressPage> {
     );
   }
 
-  Container midtransWaiting(String id) {
+  Container midtransWaiting(String? id) {
     return Container(
       padding: EdgeInsets.all(20),
       width: double.infinity,

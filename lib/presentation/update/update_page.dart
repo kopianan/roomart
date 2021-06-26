@@ -13,7 +13,7 @@ import '../../injection.dart';
 
 class UpdatePage extends StatefulWidget {
   static final String TAG = '/update_page';
-  const UpdatePage({Key key}) : super(key: key);
+  const UpdatePage({Key? key}) : super(key: key);
 
   @override
   _UpdatePageState createState() => _UpdatePageState();
@@ -23,12 +23,12 @@ class _UpdatePageState extends State<UpdatePage> {
   RefreshController _refreshController =
       RefreshController(initialRefresh: false);
   void _onRefresh() {
-    homeCubit.getNewsListData(customerId: auth.getUserDataModel.userId);
+    homeCubit.getNewsListData(customerId: auth.getUserDataModel!.userId);
   }
 
   void _onLoading() {}
   final auth = Get.put(AuthController());
-  final homeCubit = getIt<HomeCubit>();
+  final HomeCubit homeCubit = getIt<HomeCubit>();
   @override
   Widget build(BuildContext context) {
     if (auth.getUserDataModel == UserDataModel()) {
@@ -50,10 +50,9 @@ class _UpdatePageState extends State<UpdatePage> {
       return Container(
         child: BlocProvider(
           create: (context) => homeCubit
-            ..getNewsListData(customerId: auth.getUserDataModel.userId),
+            ..getNewsListData(customerId: auth.getUserDataModel!.userId),
           child: BlocConsumer<HomeCubit, HomeState>(
             listener: (context, state) {
-              print(state);
               state.maybeMap(
                 orElse: () {
                   _refreshController.refreshCompleted();
@@ -78,7 +77,7 @@ class _UpdatePageState extends State<UpdatePage> {
                       TextButton(
                           onPressed: () {
                             homeCubit.getNewsListData(
-                                customerId: auth.getUserDataModel.userId);
+                                customerId: auth.getUserDataModel!.userId);
                           },
                           child: Text("Refresh"))
                     ],
@@ -90,7 +89,7 @@ class _UpdatePageState extends State<UpdatePage> {
                     enablePullUp: false,
                     header: WaterDropHeader(),
                     footer: CustomFooter(
-                      builder: (BuildContext context, LoadStatus mode) {
+                      builder: (BuildContext context, LoadStatus? mode) {
                         Widget body;
                         if (mode == LoadStatus.idle) {
                           body = Text("pull up load");
@@ -137,7 +136,7 @@ class _UpdatePageState extends State<UpdatePage> {
                                       child: Column(
                                         children: [
                                           Text(
-                                            e.data[index].title,
+                                            e.data[index].title!,
                                             maxLines: 2,
                                             overflow: TextOverflow.ellipsis,
                                             style: TextStyle(
@@ -146,7 +145,7 @@ class _UpdatePageState extends State<UpdatePage> {
                                           ),
                                           SizedBox(height: 10),
                                           Text(
-                                            e.data[index].content,
+                                            e.data[index].content!,
                                             overflow: TextOverflow.ellipsis,
                                             maxLines: 4,
                                           ),

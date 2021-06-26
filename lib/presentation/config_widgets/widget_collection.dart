@@ -13,18 +13,18 @@ Container get getLogoOnAuthPage => Container(
                 blurRadius: 2,
                 spreadRadius: 2,
                 offset: Offset(2, 2),
-                color: Colors.grey[300])
+                color: Colors.grey[300]!)
           ],
           image: DecorationImage(
               image: AssetImage(Constants.logo), fit: BoxFit.cover)),
     );
 
-Widget resellerPrice(bool isReseller, String itemPrice, String resellerPrice) {
+Widget resellerPrice(bool isReseller, String? itemPrice, String? resellerPrice) {
   return (isReseller)
       ? Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            (double.parse(itemPrice) <= double.parse(resellerPrice))
+            (double.parse(itemPrice!) <= double.parse(resellerPrice!))
                 ? SizedBox()
                 : Text(
                     Formatter().formatStringCurrency(itemPrice),
@@ -41,7 +41,7 @@ Widget resellerPrice(bool isReseller, String itemPrice, String resellerPrice) {
           ],
         )
       : Text(
-          Formatter().formatStringCurrency(itemPrice),
+          Formatter().formatStringCurrency(itemPrice!),
           style: TextStyle(
               fontSize: 18, color: Colors.purple, fontWeight: FontWeight.bold),
         );

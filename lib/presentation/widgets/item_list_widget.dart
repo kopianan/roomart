@@ -11,8 +11,8 @@ import 'package:get/get.dart';
 
 class ItemListWidget extends StatelessWidget {
   ItemListWidget({
-    Key key,
-    @required this.item,
+    Key? key,
+    required this.item,
   }) : super(key: key);
   final DataItemModel item;
 
@@ -33,7 +33,7 @@ class ItemListWidget extends StatelessWidget {
                 BoxShadow(
                     blurRadius: 2,
                     spreadRadius: 2,
-                    color: Colors.grey[200],
+                    color: Colors.grey[200]!,
                     offset: Offset(2, 2))
               ]),
           child: Column(
@@ -54,7 +54,7 @@ class ItemListWidget extends StatelessWidget {
                     SizedBox(height: 8),
                     Container(
                       child: Text(
-                        item.itemName,
+                        item.itemName!,
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
@@ -72,7 +72,7 @@ class ItemListWidget extends StatelessWidget {
                             style: TextStyle(fontSize: 13),
                           )
                         : Text(
-                            "Quantity : ${double.parse(item.qty).toStringAsFixed(0)}",
+                            "Quantity : ${double.parse(item.qty!).toStringAsFixed(0)}",
                             style: TextStyle(fontSize: 13)),
                     SizedBox(
                       height: 5.0,

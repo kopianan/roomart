@@ -33,7 +33,7 @@ class _SearchProductPageState extends State<SearchProductPage> {
   //   itemBloc..searchItemLazy(limit, itemConroller.getSearchOffset);
   // }
 
-  final itemBloc = getIt<ItemCubit>();
+  final ItemCubit itemBloc = getIt<ItemCubit>();
   final searchController = TextEditingController();
   int limit = 10;
   final itemConroller = Get.put(ItemController());
@@ -55,7 +55,7 @@ class _SearchProductPageState extends State<SearchProductPage> {
           enablePullUp: true,
           header: WaterDropHeader(),
           footer: CustomFooter(
-            builder: (BuildContext context, LoadStatus mode) {
+            builder: (BuildContext context, LoadStatus? mode) {
               Widget body;
               if (mode == LoadStatus.idle) {
                 body = Text("pull up load");
@@ -202,12 +202,12 @@ class _SearchProductPageState extends State<SearchProductPage> {
                       color: Color(0xFFFDF3E8),
                       boxShadow: [
                         BoxShadow(
-                            color: Colors.grey[300],
+                            color: Colors.grey[300]!,
                             blurRadius: 1,
                             spreadRadius: 1,
                             offset: Offset(1, 1))
                       ]),
-                  child: Text(ctgry.description,
+                  child: Text(ctgry.description!,
                       maxLines: 1,
                       textAlign: TextAlign.center,
                       style: TextStyle(

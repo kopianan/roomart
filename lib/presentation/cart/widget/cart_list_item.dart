@@ -12,7 +12,7 @@ import 'package:roomart/utils/constants.dart';
 import 'package:roomart/utils/formater.dart';
 
 class CartListItem extends StatefulWidget {
-  CartListItem({@required this.index});
+  CartListItem({required this.index});
   final int index;
   @override
   _CartListItemState createState() => _CartListItemState();
@@ -52,7 +52,7 @@ class _CartListItemState extends State<CartListItem> {
                   height: 100,
                   child: CustomImageProvider(
                       url: Constants().imageBaseUrl +
-                          cart.getCartItemData[widget.index].item.pic)),
+                          cart.getCartItemData[widget.index]!.item!.pic!)),
             ),
             Expanded(
               flex: 3,
@@ -63,7 +63,7 @@ class _CartListItemState extends State<CartListItem> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      cart.getCartItemData[widget.index].item.itemName,
+                      cart.getCartItemData[widget.index]!.item!.itemName!,
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
                       style:
@@ -96,7 +96,7 @@ class _CartListItemState extends State<CartListItem> {
                           val.toStringAsFixed(0));
                     },
                     value: int.parse(
-                        cart.getCartItemData[widget.index].bought.qty),
+                        cart.getCartItemData[widget.index]!.bought!.qty!),
                     displayFormat: NumberFormat(),
                     textStyle:
                         TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
@@ -110,12 +110,12 @@ class _CartListItemState extends State<CartListItem> {
     );
   }
 
-  String isResellerCheck(CartDataCollectionModel cart) {
+  String isResellerCheck(CartDataCollectionModel? cart) {
     double price = 0;
     if (auth.checkIfReseller()) {
-      price = cart.bought.resellerPrice * double.parse(cart.bought.qty);
+      price = cart!.bought!.resellerPrice! * double.parse(cart.bought!.qty!);
     } else {
-      price = (double.parse(cart.bought.price) * double.parse(cart.bought.qty));
+      price = (double.parse(cart!.bought!.price!) * double.parse(cart.bought!.qty!));
     }
     return price.toString();
   }

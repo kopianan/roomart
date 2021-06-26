@@ -4,7 +4,7 @@ part 'transaction_finished_data_model.freezed.dart';
 part 'transaction_finished_data_model.g.dart';
 
 @freezed
-abstract class TransactionFinishedDataModel
+ class TransactionFinishedDataModel
     with _$TransactionFinishedDataModel {
   factory TransactionFinishedDataModel(
     @JsonKey(name: "sales_transaction_detail_id")

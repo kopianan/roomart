@@ -12,12 +12,12 @@ part 'history_detail_cubit.freezed.dart';
 @injectable
 class HistoryDetailCubit extends Cubit<HistoryDetailState> {
   HistoryDetailCubit(this.iHistory) : super(HistoryDetailState.initial());
-  IHistoryDetailFacade iHistory;
+  IHistoryDetailFacade? iHistory;
 
   void getHistoryDetailTransaction(String salesOrderId) async {
     emit(HistoryDetailState.loading());
     try {
-      final _result = await iHistory.getHistoryDetailTransaction(salesOrderId);
+      final _result = await iHistory!.getHistoryDetailTransaction(salesOrderId);
       _result.fold(
         (l) => emit(HistoryDetailState.error(l.toString())),
         (r) => emit(HistoryDetailState.onGetDetailHistory(r)),
@@ -27,11 +27,11 @@ class HistoryDetailCubit extends Cubit<HistoryDetailState> {
     }
   }
 
-  void getFinishedHistoryTransaction(String salesTransactionID) async {
+  void getFinishedHistoryTransaction(String? salesTransactionID) async {
     emit(HistoryDetailState.loading());
     try {
       final _result =
-          await iHistory.getHistoryFinishedTransaction(salesTransactionID);
+          await iHistory!.getHistoryFinishedTransaction(salesTransactionID);
       _result.fold(
         (l) => emit(HistoryDetailState.error(l.toString())),
         (r) => emit(HistoryDetailState.onGetFinishedDetail(r)),

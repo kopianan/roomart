@@ -1,9 +1,9 @@
 class RegisterResponseModel {
-  String customerID;
-  String parentID;
-  String createdDate;
-  String fullname;
-  String email;
+  String? customerID;
+  String? parentID;
+  String? createdDate;
+  String? fullname;
+  String? email;
 
   RegisterResponseModel(
       {this.customerID,

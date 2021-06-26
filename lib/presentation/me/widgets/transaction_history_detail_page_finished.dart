@@ -22,14 +22,14 @@ class TransactionHistoryDetailPageFinished extends StatefulWidget {
 
 class _TransactionHistoryDetailPageFinishedState
     extends State<TransactionHistoryDetailPageFinished> {
-  TransactionDataModelV2 detail;
+  TransactionDataModelV2? detail;
   @override
   void initState() {
-    detail = Get.arguments as TransactionDataModelV2;
+    detail = Get.arguments as TransactionDataModelV2?;
     super.initState();
   }
 
-  final dTransactionCubit = getIt<HistoryDetailCubit>();
+  final HistoryDetailCubit dTransactionCubit = getIt<HistoryDetailCubit>();
   final auth = Get.put(AuthController());
 
   @override
@@ -40,7 +40,7 @@ class _TransactionHistoryDetailPageFinishedState
       ),
       body: BlocProvider(
           create: (context) => dTransactionCubit
-            ..getFinishedHistoryTransaction(detail.salesTransactionId),
+            ..getFinishedHistoryTransaction(detail!.salesTransactionId),
           child: BlocConsumer<HistoryDetailCubit, HistoryDetailState>(
               listener: (context, state) {
             state.maybeMap(
@@ -70,12 +70,12 @@ class _TransactionHistoryDetailPageFinishedState
                                       fontSize: 18,
                                       fontWeight: FontWeight.bold),
                                 ),
-                                subtitle: Text(this.detail.invoiceNo),
+                                subtitle: Text(this.detail!.invoiceNo!),
                               ),
                               Divider(),
                               ListTile(
                                 title: checkPaymentStatus(
-                                    int.parse(this.detail.status)),
+                                    int.parse(this.detail!.status!)),
                                 subtitle: Text("Status pembayaran"),
                               ),
                             ]),
@@ -106,7 +106,7 @@ class _TransactionHistoryDetailPageFinishedState
                                       ),
                                     ),
                                     SizedBox(width: 20),
-                                    Expanded(child: Html(data: detail.remark))
+                                    Expanded(child: Html(data: detail!.remark))
                                   ],
                                 ),
                               ],
@@ -218,8 +218,8 @@ class _TransactionHistoryDetailPageFinishedState
 }
 
 class SummaryDetail extends StatelessWidget {
-  SummaryDetail({Key key, this.data}) : super(key: key);
-  final TransactionDataModelV2 data;
+  SummaryDetail({Key? key, this.data}) : super(key: key);
+  final TransactionDataModelV2? data;
 
   @override
   Widget build(BuildContext context) {
@@ -228,12 +228,12 @@ class SummaryDetail extends StatelessWidget {
         // detailSummaryItem(label: "Ongkos kirim", value: "90000"),
         // detailSummaryItem(
         //     label: "Discount", value: data.totalDiscount.toString()),
-        detailSummaryItem(label: "Total", value: data.totalAmount.toString()),
+        detailSummaryItem(label: "Total", value: data!.totalAmount.toString()),
       ],
     );
   }
 
-  Row detailSummaryItem({String label, String value}) {
+  Row detailSummaryItem({required String label, required String value}) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [

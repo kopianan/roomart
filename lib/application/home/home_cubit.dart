@@ -13,21 +13,21 @@ part 'home_cubit.freezed.dart';
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit({this.iHomeFacade}) : super(HomeState.initial());
 
-  final IHomeFacade iHomeFacade;
+  final IHomeFacade? iHomeFacade;
   void getHomeBanner({String customerId: ""}) async {
     emit(HomeState.loading());
     try {
-      final _result = await iHomeFacade.getBanner(customerId);
+      final _result = await iHomeFacade!.getBanner(customerId);
       emit(HomeState.onGetBanner(_result));
     } catch (e) {
       emit(HomeState.error(e.toString()));
     }
   }
 
-  void getNewsListData({String customerId: ""}) async {
+  void getNewsListData({String? customerId: ""}) async {
     emit(HomeState.loading());
     try {
-      final _result = await iHomeFacade.getNewsList(customerId);
+      final _result = await iHomeFacade!.getNewsList(customerId);
       _result.fold(
         (l) => emit(HomeState.error(l)),
         (r) => emit(HomeState.onGetNewsList(r)),

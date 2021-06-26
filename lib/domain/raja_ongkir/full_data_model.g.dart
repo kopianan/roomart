@@ -8,12 +8,12 @@ part of 'full_data_model.dart';
 
 _$_FullDataModel _$_$_FullDataModelFromJson(Map<String, dynamic> json) {
   return _$_FullDataModel(
-    cityId: json['city_id'] as String,
-    provinceId: json['province_id'] as String,
-    province: json['province'] as String,
-    type: json['type'] as String,
-    cityName: json['city_name'] as String,
-    postalCode: json['postal_code'] as String,
+    cityId: json['city_id'] as String?,
+    provinceId: json['province_id'] as String?,
+    province: json['province'] as String?,
+    type: json['type'] as String?,
+    cityName: json['city_name'] as String?,
+    postalCode: json['postal_code'] as String?,
   );
 }
 

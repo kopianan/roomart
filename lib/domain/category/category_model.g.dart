@@ -8,16 +8,16 @@ part of 'category_model.dart';
 
 _$_CategoryModel _$_$_CategoryModelFromJson(Map<String, dynamic> json) {
   return _$_CategoryModel(
-    kategoriId: json['kategori_id'] as String,
-    parentId: json['parent_id'] as String,
-    internalCode: json['internal_code'] as String,
-    kategoriCode: json['kategori_code'] as String,
-    description: json['description'] as String ?? 'description',
-    picture: json['picture'] as String,
-    displayStore: json['display_store'] as String,
-    hasChild: json['has_child'] as String,
-    count: json['count'] as String,
-    countTotal: json['count_total'] as String ?? '0',
+    kategoriId: json['kategori_id'] as String?,
+    parentId: json['parent_id'] as String?,
+    internalCode: json['internal_code'] as String?,
+    kategoriCode: json['kategori_code'] as String?,
+    description: json['description'] as String? ?? 'description',
+    picture: json['picture'] as String?,
+    displayStore: json['display_store'] as String?,
+    hasChild: json['has_child'] as String?,
+    count: json['count'] as String?,
+    countTotal: json['count_total'] as String? ?? '0',
   );
 }
 

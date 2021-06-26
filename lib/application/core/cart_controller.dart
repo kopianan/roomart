@@ -7,7 +7,7 @@ import 'package:roomart/domain/transaction/trans_item/bought_item_data_model.dar
 import 'package:roomart/utils/constants.dart';
 
 class CartController extends GetxController {
-  List<CartDataCollectionModel> cartCollection =
+  List<CartDataCollectionModel?> cartCollection =
       <CartDataCollectionModel>[].obs;
 
   final authController = Get.put(AuthController());
@@ -20,17 +20,17 @@ class CartController extends GetxController {
     cartCollection.add(data);
   }
 
-  void addForTheFirstTime(DataItemModel data) {
+  void addForTheFirstTime(DataItemModel? data) {
     try {
       //data already there
       var _filter = cartCollection
-          .firstWhere((element) => element.bought.itemId == data.itemId);
-      var _newQty = (int.parse(_filter.bought.qty) + 1).toString();
+          .firstWhere((element) => element!.bought!.itemId == data!.itemId)!;
+      var _newQty = (int.parse(_filter.bought!.qty!) + 1).toString();
       addQuantity(_filter, _newQty);
     } catch (e) {
       final _converted = BoughtItemDataModel(
         unit: "PCS",
-        itemCode: data.itemCode,
+        itemCode: data!.itemCode,
         itemId: data.itemId,
         qty: "1",
         // price: checkResellerPrice(data),
@@ -39,7 +39,7 @@ class CartController extends GetxController {
         itemImage: data.pic,
         itemName: data.itemName,
         // resellerPrice: double.parse(data.itemPrice),
-        resellerPrice: double.parse(data.newPrice),
+        resellerPrice: double.parse(data.newPrice!),
         tax: "NoPPN",
       );
       print(_converted);
@@ -50,7 +50,7 @@ class CartController extends GetxController {
     }
   }
 
-  String checkResellerPrice(DataItemModel item) {
+  String? checkResellerPrice(DataItemModel item) {
     if (item.customerTypeId == Constants().customerTypeReseller ||
         item.customerTypeId == Constants().customerTypeReseller2) {
       return item.newPrice;
@@ -71,7 +71,7 @@ class CartController extends GetxController {
       itemImage: data.pic,
       itemName: data.itemName,
       // resellerPrice: double.parse(data.itemPrice),
-      resellerPrice: double.parse(data.newPrice),
+      resellerPrice: double.parse(data.newPrice!),
 
       tax: "NoPPN",
     );
@@ -81,15 +81,15 @@ class CartController extends GetxController {
     cartCollection.add(_dta);
   }
 
-  void addQuantity(CartDataCollectionModel item, String newQty) {
-    List<CartDataCollectionModel> _new = [];
+  void addQuantity(CartDataCollectionModel? item, String newQty) {
+    List<CartDataCollectionModel?> _new = [];
 
     var _index = cartCollection.indexOf(item);
-    var _firstData = cartCollection
-        .firstWhere((element) => element.bought == item.bought)
-        .bought
+    BoughtItemDataModel? _firstData = cartCollection
+        .firstWhere((element) => element!.bought == item!.bought)!
+        .bought!
         .copyWith(qty: newQty);
-    _new.add(cartCollection[_index].copyWith(bought: _firstData));
+    _new.add(cartCollection[_index]!.copyWith(bought: _firstData));
 
     cartCollection.replaceRange(_index, _index + 1, _new);
   }
@@ -107,16 +107,16 @@ class CartController extends GetxController {
   //   return subTotal.value.toString();
   // }
 
-  double getCartSubTotalDouble({@required bool isReseller}) {
+  double getCartSubTotalDouble({required bool isReseller}) {
     var _subtotal = 0.0;
 
     cartCollection.forEach((element) {
       if (isReseller) {
         _subtotal +=
-            int.parse(element.bought.qty) * element.bought.resellerPrice;
+            int.parse(element!.bought!.qty!) * element.bought!.resellerPrice!;
       } else {
         _subtotal +=
-            int.parse(element.bought.qty) * double.parse(element.bought.price);
+            int.parse(element!.bought!.qty!) * double.parse(element.bought!.price!);
       }
     });
     subTotal.value = _subtotal;
@@ -127,14 +127,14 @@ class CartController extends GetxController {
     var _weighTotal = 0.0;
 
     cartCollection.forEach((element) {
-      if (element.item.weight.isEmpty || (element.item.weight == "")) {
-        _weighTotal += 1000 * double.parse(element.bought.qty);
+      if (element!.item!.weight!.isEmpty || (element.item!.weight == "")) {
+        _weighTotal += 1000 * double.parse(element.bought!.qty!);
       } else
-        _weighTotal += double.parse(element.item.weight) *
-            double.parse(element.bought.qty);
+        _weighTotal += double.parse(element.item!.weight!) *
+            double.parse(element.bought!.qty!);
     });
     return _weighTotal;
   }
 
-  List<CartDataCollectionModel> get getCartItemData => this.cartCollection;
+  List<CartDataCollectionModel?> get getCartItemData => this.cartCollection;
 }

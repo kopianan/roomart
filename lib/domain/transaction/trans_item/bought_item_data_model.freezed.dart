@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'bought_item_data_model.dart';
 
@@ -8,6 +8,10 @@ part of 'bought_item_data_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 BoughtItemDataModel _$BoughtItemDataModelFromJson(Map<String, dynamic> json) {
   return _BoughtItemDataModel.fromJson(json);
 }
@@ -16,18 +20,17 @@ BoughtItemDataModel _$BoughtItemDataModelFromJson(Map<String, dynamic> json) {
 class _$BoughtItemDataModelTearOff {
   const _$BoughtItemDataModelTearOff();
 
-// ignore: unused_element
   _BoughtItemDataModel call(
-      {@JsonKey(name: 'item_code') String itemCode,
-      @JsonKey(name: 'item_id') String itemId,
-      @JsonKey(name: 'qty') String qty,
-      @JsonKey(name: 'unit') String unit,
-      @JsonKey(name: 'price') String price,
-      @JsonKey(name: 'tax') String tax,
-      @JsonKey(name: 'item_name') String itemName,
-      @JsonKey(name: 'reseller_price') double resellerPrice,
-      @JsonKey(name: 'itemImage') String itemImage,
-      @JsonKey(name: 'discount') String discount}) {
+      {@JsonKey(name: "item_code") String? itemCode,
+      @JsonKey(name: "item_id") String? itemId,
+      @JsonKey(name: "qty") String? qty,
+      @JsonKey(name: "unit") String? unit,
+      @JsonKey(name: "price") String? price,
+      @JsonKey(name: "tax") String? tax,
+      @JsonKey(name: "item_name") String? itemName,
+      @JsonKey(name: "reseller_price") double? resellerPrice,
+      @JsonKey(name: "itemImage") String? itemImage,
+      @JsonKey(name: "discount") String? discount}) {
     return _BoughtItemDataModel(
       itemCode: itemCode,
       itemId: itemId,
@@ -42,42 +45,41 @@ class _$BoughtItemDataModelTearOff {
     );
   }
 
-// ignore: unused_element
   BoughtItemDataModel fromJson(Map<String, Object> json) {
     return BoughtItemDataModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $BoughtItemDataModel = _$BoughtItemDataModelTearOff();
 
 /// @nodoc
 mixin _$BoughtItemDataModel {
-  @JsonKey(name: 'item_code')
-  String get itemCode;
-  @JsonKey(name: 'item_id')
-  String get itemId;
-  @JsonKey(name: 'qty')
-  String get qty;
-  @JsonKey(name: 'unit')
-  String get unit;
-  @JsonKey(name: 'price')
-  String get price;
-  @JsonKey(name: 'tax')
-  String get tax;
-  @JsonKey(name: 'item_name')
-  String get itemName;
-  @JsonKey(name: 'reseller_price')
-  double get resellerPrice;
-  @JsonKey(name: 'itemImage')
-  String get itemImage;
-  @JsonKey(name: 'discount')
-  String get discount;
+  @JsonKey(name: "item_code")
+  String? get itemCode => throw _privateConstructorUsedError;
+  @JsonKey(name: "item_id")
+  String? get itemId => throw _privateConstructorUsedError;
+  @JsonKey(name: "qty")
+  String? get qty => throw _privateConstructorUsedError;
+  @JsonKey(name: "unit")
+  String? get unit => throw _privateConstructorUsedError;
+  @JsonKey(name: "price")
+  String? get price => throw _privateConstructorUsedError;
+  @JsonKey(name: "tax")
+  String? get tax => throw _privateConstructorUsedError;
+  @JsonKey(name: "item_name")
+  String? get itemName => throw _privateConstructorUsedError;
+  @JsonKey(name: "reseller_price")
+  double? get resellerPrice => throw _privateConstructorUsedError;
+  @JsonKey(name: "itemImage")
+  String? get itemImage => throw _privateConstructorUsedError;
+  @JsonKey(name: "discount")
+  String? get discount => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BoughtItemDataModelCopyWith<BoughtItemDataModel> get copyWith;
+  $BoughtItemDataModelCopyWith<BoughtItemDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -86,16 +88,16 @@ abstract class $BoughtItemDataModelCopyWith<$Res> {
           BoughtItemDataModel value, $Res Function(BoughtItemDataModel) then) =
       _$BoughtItemDataModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'item_code') String itemCode,
-      @JsonKey(name: 'item_id') String itemId,
-      @JsonKey(name: 'qty') String qty,
-      @JsonKey(name: 'unit') String unit,
-      @JsonKey(name: 'price') String price,
-      @JsonKey(name: 'tax') String tax,
-      @JsonKey(name: 'item_name') String itemName,
-      @JsonKey(name: 'reseller_price') double resellerPrice,
-      @JsonKey(name: 'itemImage') String itemImage,
-      @JsonKey(name: 'discount') String discount});
+      {@JsonKey(name: "item_code") String? itemCode,
+      @JsonKey(name: "item_id") String? itemId,
+      @JsonKey(name: "qty") String? qty,
+      @JsonKey(name: "unit") String? unit,
+      @JsonKey(name: "price") String? price,
+      @JsonKey(name: "tax") String? tax,
+      @JsonKey(name: "item_name") String? itemName,
+      @JsonKey(name: "reseller_price") double? resellerPrice,
+      @JsonKey(name: "itemImage") String? itemImage,
+      @JsonKey(name: "discount") String? discount});
 }
 
 /// @nodoc
@@ -109,30 +111,58 @@ class _$BoughtItemDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object itemCode = freezed,
-    Object itemId = freezed,
-    Object qty = freezed,
-    Object unit = freezed,
-    Object price = freezed,
-    Object tax = freezed,
-    Object itemName = freezed,
-    Object resellerPrice = freezed,
-    Object itemImage = freezed,
-    Object discount = freezed,
+    Object? itemCode = freezed,
+    Object? itemId = freezed,
+    Object? qty = freezed,
+    Object? unit = freezed,
+    Object? price = freezed,
+    Object? tax = freezed,
+    Object? itemName = freezed,
+    Object? resellerPrice = freezed,
+    Object? itemImage = freezed,
+    Object? discount = freezed,
   }) {
     return _then(_value.copyWith(
-      itemCode: itemCode == freezed ? _value.itemCode : itemCode as String,
-      itemId: itemId == freezed ? _value.itemId : itemId as String,
-      qty: qty == freezed ? _value.qty : qty as String,
-      unit: unit == freezed ? _value.unit : unit as String,
-      price: price == freezed ? _value.price : price as String,
-      tax: tax == freezed ? _value.tax : tax as String,
-      itemName: itemName == freezed ? _value.itemName : itemName as String,
+      itemCode: itemCode == freezed
+          ? _value.itemCode
+          : itemCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemId: itemId == freezed
+          ? _value.itemId
+          : itemId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      qty: qty == freezed
+          ? _value.qty
+          : qty // ignore: cast_nullable_to_non_nullable
+              as String?,
+      unit: unit == freezed
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
+              as String?,
+      price: price == freezed
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
+              as String?,
+      tax: tax == freezed
+          ? _value.tax
+          : tax // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemName: itemName == freezed
+          ? _value.itemName
+          : itemName // ignore: cast_nullable_to_non_nullable
+              as String?,
       resellerPrice: resellerPrice == freezed
           ? _value.resellerPrice
-          : resellerPrice as double,
-      itemImage: itemImage == freezed ? _value.itemImage : itemImage as String,
-      discount: discount == freezed ? _value.discount : discount as String,
+          : resellerPrice // ignore: cast_nullable_to_non_nullable
+              as double?,
+      itemImage: itemImage == freezed
+          ? _value.itemImage
+          : itemImage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      discount: discount == freezed
+          ? _value.discount
+          : discount // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -145,16 +175,16 @@ abstract class _$BoughtItemDataModelCopyWith<$Res>
       __$BoughtItemDataModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'item_code') String itemCode,
-      @JsonKey(name: 'item_id') String itemId,
-      @JsonKey(name: 'qty') String qty,
-      @JsonKey(name: 'unit') String unit,
-      @JsonKey(name: 'price') String price,
-      @JsonKey(name: 'tax') String tax,
-      @JsonKey(name: 'item_name') String itemName,
-      @JsonKey(name: 'reseller_price') double resellerPrice,
-      @JsonKey(name: 'itemImage') String itemImage,
-      @JsonKey(name: 'discount') String discount});
+      {@JsonKey(name: "item_code") String? itemCode,
+      @JsonKey(name: "item_id") String? itemId,
+      @JsonKey(name: "qty") String? qty,
+      @JsonKey(name: "unit") String? unit,
+      @JsonKey(name: "price") String? price,
+      @JsonKey(name: "tax") String? tax,
+      @JsonKey(name: "item_name") String? itemName,
+      @JsonKey(name: "reseller_price") double? resellerPrice,
+      @JsonKey(name: "itemImage") String? itemImage,
+      @JsonKey(name: "discount") String? discount});
 }
 
 /// @nodoc
@@ -170,83 +200,110 @@ class __$BoughtItemDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object itemCode = freezed,
-    Object itemId = freezed,
-    Object qty = freezed,
-    Object unit = freezed,
-    Object price = freezed,
-    Object tax = freezed,
-    Object itemName = freezed,
-    Object resellerPrice = freezed,
-    Object itemImage = freezed,
-    Object discount = freezed,
+    Object? itemCode = freezed,
+    Object? itemId = freezed,
+    Object? qty = freezed,
+    Object? unit = freezed,
+    Object? price = freezed,
+    Object? tax = freezed,
+    Object? itemName = freezed,
+    Object? resellerPrice = freezed,
+    Object? itemImage = freezed,
+    Object? discount = freezed,
   }) {
     return _then(_BoughtItemDataModel(
-      itemCode: itemCode == freezed ? _value.itemCode : itemCode as String,
-      itemId: itemId == freezed ? _value.itemId : itemId as String,
-      qty: qty == freezed ? _value.qty : qty as String,
-      unit: unit == freezed ? _value.unit : unit as String,
-      price: price == freezed ? _value.price : price as String,
-      tax: tax == freezed ? _value.tax : tax as String,
-      itemName: itemName == freezed ? _value.itemName : itemName as String,
+      itemCode: itemCode == freezed
+          ? _value.itemCode
+          : itemCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemId: itemId == freezed
+          ? _value.itemId
+          : itemId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      qty: qty == freezed
+          ? _value.qty
+          : qty // ignore: cast_nullable_to_non_nullable
+              as String?,
+      unit: unit == freezed
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
+              as String?,
+      price: price == freezed
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
+              as String?,
+      tax: tax == freezed
+          ? _value.tax
+          : tax // ignore: cast_nullable_to_non_nullable
+              as String?,
+      itemName: itemName == freezed
+          ? _value.itemName
+          : itemName // ignore: cast_nullable_to_non_nullable
+              as String?,
       resellerPrice: resellerPrice == freezed
           ? _value.resellerPrice
-          : resellerPrice as double,
-      itemImage: itemImage == freezed ? _value.itemImage : itemImage as String,
-      discount: discount == freezed ? _value.discount : discount as String,
+          : resellerPrice // ignore: cast_nullable_to_non_nullable
+              as double?,
+      itemImage: itemImage == freezed
+          ? _value.itemImage
+          : itemImage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      discount: discount == freezed
+          ? _value.discount
+          : discount // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BoughtItemDataModel implements _BoughtItemDataModel {
   _$_BoughtItemDataModel(
-      {@JsonKey(name: 'item_code') this.itemCode,
-      @JsonKey(name: 'item_id') this.itemId,
-      @JsonKey(name: 'qty') this.qty,
-      @JsonKey(name: 'unit') this.unit,
-      @JsonKey(name: 'price') this.price,
-      @JsonKey(name: 'tax') this.tax,
-      @JsonKey(name: 'item_name') this.itemName,
-      @JsonKey(name: 'reseller_price') this.resellerPrice,
-      @JsonKey(name: 'itemImage') this.itemImage,
-      @JsonKey(name: 'discount') this.discount});
+      {@JsonKey(name: "item_code") this.itemCode,
+      @JsonKey(name: "item_id") this.itemId,
+      @JsonKey(name: "qty") this.qty,
+      @JsonKey(name: "unit") this.unit,
+      @JsonKey(name: "price") this.price,
+      @JsonKey(name: "tax") this.tax,
+      @JsonKey(name: "item_name") this.itemName,
+      @JsonKey(name: "reseller_price") this.resellerPrice,
+      @JsonKey(name: "itemImage") this.itemImage,
+      @JsonKey(name: "discount") this.discount});
 
   factory _$_BoughtItemDataModel.fromJson(Map<String, dynamic> json) =>
       _$_$_BoughtItemDataModelFromJson(json);
 
   @override
-  @JsonKey(name: 'item_code')
-  final String itemCode;
+  @JsonKey(name: "item_code")
+  final String? itemCode;
   @override
-  @JsonKey(name: 'item_id')
-  final String itemId;
+  @JsonKey(name: "item_id")
+  final String? itemId;
   @override
-  @JsonKey(name: 'qty')
-  final String qty;
+  @JsonKey(name: "qty")
+  final String? qty;
   @override
-  @JsonKey(name: 'unit')
-  final String unit;
+  @JsonKey(name: "unit")
+  final String? unit;
   @override
-  @JsonKey(name: 'price')
-  final String price;
+  @JsonKey(name: "price")
+  final String? price;
   @override
-  @JsonKey(name: 'tax')
-  final String tax;
+  @JsonKey(name: "tax")
+  final String? tax;
   @override
-  @JsonKey(name: 'item_name')
-  final String itemName;
+  @JsonKey(name: "item_name")
+  final String? itemName;
   @override
-  @JsonKey(name: 'reseller_price')
-  final double resellerPrice;
+  @JsonKey(name: "reseller_price")
+  final double? resellerPrice;
   @override
-  @JsonKey(name: 'itemImage')
-  final String itemImage;
+  @JsonKey(name: "itemImage")
+  final String? itemImage;
   @override
-  @JsonKey(name: 'discount')
-  final String discount;
+  @JsonKey(name: "discount")
+  final String? discount;
 
   @override
   String toString() {
@@ -312,51 +369,52 @@ class _$_BoughtItemDataModel implements _BoughtItemDataModel {
 
 abstract class _BoughtItemDataModel implements BoughtItemDataModel {
   factory _BoughtItemDataModel(
-      {@JsonKey(name: 'item_code') String itemCode,
-      @JsonKey(name: 'item_id') String itemId,
-      @JsonKey(name: 'qty') String qty,
-      @JsonKey(name: 'unit') String unit,
-      @JsonKey(name: 'price') String price,
-      @JsonKey(name: 'tax') String tax,
-      @JsonKey(name: 'item_name') String itemName,
-      @JsonKey(name: 'reseller_price') double resellerPrice,
-      @JsonKey(name: 'itemImage') String itemImage,
-      @JsonKey(name: 'discount') String discount}) = _$_BoughtItemDataModel;
+      {@JsonKey(name: "item_code") String? itemCode,
+      @JsonKey(name: "item_id") String? itemId,
+      @JsonKey(name: "qty") String? qty,
+      @JsonKey(name: "unit") String? unit,
+      @JsonKey(name: "price") String? price,
+      @JsonKey(name: "tax") String? tax,
+      @JsonKey(name: "item_name") String? itemName,
+      @JsonKey(name: "reseller_price") double? resellerPrice,
+      @JsonKey(name: "itemImage") String? itemImage,
+      @JsonKey(name: "discount") String? discount}) = _$_BoughtItemDataModel;
 
   factory _BoughtItemDataModel.fromJson(Map<String, dynamic> json) =
       _$_BoughtItemDataModel.fromJson;
 
   @override
-  @JsonKey(name: 'item_code')
-  String get itemCode;
+  @JsonKey(name: "item_code")
+  String? get itemCode => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'item_id')
-  String get itemId;
+  @JsonKey(name: "item_id")
+  String? get itemId => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'qty')
-  String get qty;
+  @JsonKey(name: "qty")
+  String? get qty => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'unit')
-  String get unit;
+  @JsonKey(name: "unit")
+  String? get unit => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'price')
-  String get price;
+  @JsonKey(name: "price")
+  String? get price => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'tax')
-  String get tax;
+  @JsonKey(name: "tax")
+  String? get tax => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'item_name')
-  String get itemName;
+  @JsonKey(name: "item_name")
+  String? get itemName => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'reseller_price')
-  double get resellerPrice;
+  @JsonKey(name: "reseller_price")
+  double? get resellerPrice => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'itemImage')
-  String get itemImage;
+  @JsonKey(name: "itemImage")
+  String? get itemImage => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'discount')
-  String get discount;
+  @JsonKey(name: "discount")
+  String? get discount => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BoughtItemDataModelCopyWith<_BoughtItemDataModel> get copyWith;
+  _$BoughtItemDataModelCopyWith<_BoughtItemDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

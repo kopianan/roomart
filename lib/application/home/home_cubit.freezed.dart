@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'home_cubit.dart';
 
@@ -9,35 +9,33 @@ part of 'home_cubit.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$HomeStateTearOff {
   const _$HomeStateTearOff();
 
-// ignore: unused_element
   _Initial initial() {
     return const _Initial();
   }
 
-// ignore: unused_element
   _Loading loading() {
     return const _Loading();
   }
 
-// ignore: unused_element
   _Error error(String e) {
     return _Error(
       e,
     );
   }
 
-// ignore: unused_element
   _OnGetBanner onGetBanner(Either<String, List<BannerDataModel>> data) {
     return _OnGetBanner(
       data,
     );
   }
 
-// ignore: unused_element
   _OnGetNewsList onGetNewsList(List<UpdateNewsDataModel> data) {
     return _OnGetNewsList(
       data,
@@ -46,45 +44,49 @@ class _$HomeStateTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $HomeState = _$HomeStateTearOff();
 
 /// @nodoc
 mixin _$HomeState {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String e),
-    @required TResult onGetBanner(Either<String, List<BannerDataModel>> data),
-    @required TResult onGetNewsList(List<UpdateNewsDataModel> data),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String e) error,
+    required TResult Function(Either<String, List<BannerDataModel>> data)
+        onGetBanner,
+    required TResult Function(List<UpdateNewsDataModel> data) onGetNewsList,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String e),
-    TResult onGetBanner(Either<String, List<BannerDataModel>> data),
-    TResult onGetNewsList(List<UpdateNewsDataModel> data),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String e)? error,
+    TResult Function(Either<String, List<BannerDataModel>> data)? onGetBanner,
+    TResult Function(List<UpdateNewsDataModel> data)? onGetNewsList,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onGetBanner(_OnGetBanner value),
-    @required TResult onGetNewsList(_OnGetNewsList value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnGetBanner value) onGetBanner,
+    required TResult Function(_OnGetNewsList value) onGetNewsList,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onGetBanner(_OnGetBanner value),
-    TResult onGetNewsList(_OnGetNewsList value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnGetBanner value)? onGetBanner,
+    TResult Function(_OnGetNewsList value)? onGetNewsList,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -119,6 +121,7 @@ class __$InitialCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_Initial implements _Initial {
   const _$_Initial();
 
@@ -137,32 +140,27 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String e),
-    @required TResult onGetBanner(Either<String, List<BannerDataModel>> data),
-    @required TResult onGetNewsList(List<UpdateNewsDataModel> data),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String e) error,
+    required TResult Function(Either<String, List<BannerDataModel>> data)
+        onGetBanner,
+    required TResult Function(List<UpdateNewsDataModel> data) onGetNewsList,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetBanner != null);
-    assert(onGetNewsList != null);
     return initial();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String e),
-    TResult onGetBanner(Either<String, List<BannerDataModel>> data),
-    TResult onGetNewsList(List<UpdateNewsDataModel> data),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String e)? error,
+    TResult Function(Either<String, List<BannerDataModel>> data)? onGetBanner,
+    TResult Function(List<UpdateNewsDataModel> data)? onGetNewsList,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial();
     }
@@ -171,32 +169,26 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onGetBanner(_OnGetBanner value),
-    @required TResult onGetNewsList(_OnGetNewsList value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnGetBanner value) onGetBanner,
+    required TResult Function(_OnGetNewsList value) onGetNewsList,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetBanner != null);
-    assert(onGetNewsList != null);
     return initial(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onGetBanner(_OnGetBanner value),
-    TResult onGetNewsList(_OnGetNewsList value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnGetBanner value)? onGetBanner,
+    TResult Function(_OnGetNewsList value)? onGetNewsList,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial(this);
     }
@@ -225,6 +217,7 @@ class __$LoadingCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_Loading implements _Loading {
   const _$_Loading();
 
@@ -243,32 +236,27 @@ class _$_Loading implements _Loading {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String e),
-    @required TResult onGetBanner(Either<String, List<BannerDataModel>> data),
-    @required TResult onGetNewsList(List<UpdateNewsDataModel> data),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String e) error,
+    required TResult Function(Either<String, List<BannerDataModel>> data)
+        onGetBanner,
+    required TResult Function(List<UpdateNewsDataModel> data) onGetNewsList,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetBanner != null);
-    assert(onGetNewsList != null);
     return loading();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String e),
-    TResult onGetBanner(Either<String, List<BannerDataModel>> data),
-    TResult onGetNewsList(List<UpdateNewsDataModel> data),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String e)? error,
+    TResult Function(Either<String, List<BannerDataModel>> data)? onGetBanner,
+    TResult Function(List<UpdateNewsDataModel> data)? onGetNewsList,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loading != null) {
       return loading();
     }
@@ -277,32 +265,26 @@ class _$_Loading implements _Loading {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onGetBanner(_OnGetBanner value),
-    @required TResult onGetNewsList(_OnGetNewsList value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnGetBanner value) onGetBanner,
+    required TResult Function(_OnGetNewsList value) onGetNewsList,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetBanner != null);
-    assert(onGetNewsList != null);
     return loading(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onGetBanner(_OnGetBanner value),
-    TResult onGetNewsList(_OnGetNewsList value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnGetBanner value)? onGetBanner,
+    TResult Function(_OnGetNewsList value)? onGetNewsList,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loading != null) {
       return loading(this);
     }
@@ -332,17 +314,21 @@ class __$ErrorCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object e = freezed,
+    Object? e = freezed,
   }) {
     return _then(_Error(
-      e == freezed ? _value.e : e as String,
+      e == freezed
+          ? _value.e
+          : e // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_Error implements _Error {
-  const _$_Error(this.e) : assert(e != null);
+  const _$_Error(this.e);
 
   @override
   final String e;
@@ -371,32 +357,27 @@ class _$_Error implements _Error {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String e),
-    @required TResult onGetBanner(Either<String, List<BannerDataModel>> data),
-    @required TResult onGetNewsList(List<UpdateNewsDataModel> data),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String e) error,
+    required TResult Function(Either<String, List<BannerDataModel>> data)
+        onGetBanner,
+    required TResult Function(List<UpdateNewsDataModel> data) onGetNewsList,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetBanner != null);
-    assert(onGetNewsList != null);
     return error(e);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String e),
-    TResult onGetBanner(Either<String, List<BannerDataModel>> data),
-    TResult onGetNewsList(List<UpdateNewsDataModel> data),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String e)? error,
+    TResult Function(Either<String, List<BannerDataModel>> data)? onGetBanner,
+    TResult Function(List<UpdateNewsDataModel> data)? onGetNewsList,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (error != null) {
       return error(e);
     }
@@ -405,32 +386,26 @@ class _$_Error implements _Error {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onGetBanner(_OnGetBanner value),
-    @required TResult onGetNewsList(_OnGetNewsList value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnGetBanner value) onGetBanner,
+    required TResult Function(_OnGetNewsList value) onGetNewsList,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetBanner != null);
-    assert(onGetNewsList != null);
     return error(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onGetBanner(_OnGetBanner value),
-    TResult onGetNewsList(_OnGetNewsList value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnGetBanner value)? onGetBanner,
+    TResult Function(_OnGetNewsList value)? onGetNewsList,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (error != null) {
       return error(this);
     }
@@ -441,9 +416,9 @@ class _$_Error implements _Error {
 abstract class _Error implements HomeState {
   const factory _Error(String e) = _$_Error;
 
-  String get e;
+  String get e => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$ErrorCopyWith<_Error> get copyWith;
+  _$ErrorCopyWith<_Error> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -466,19 +441,21 @@ class __$OnGetBannerCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_OnGetBanner(
       data == freezed
           ? _value.data
-          : data as Either<String, List<BannerDataModel>>,
+          : data // ignore: cast_nullable_to_non_nullable
+              as Either<String, List<BannerDataModel>>,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_OnGetBanner implements _OnGetBanner {
-  const _$_OnGetBanner(this.data) : assert(data != null);
+  const _$_OnGetBanner(this.data);
 
   @override
   final Either<String, List<BannerDataModel>> data;
@@ -507,32 +484,27 @@ class _$_OnGetBanner implements _OnGetBanner {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String e),
-    @required TResult onGetBanner(Either<String, List<BannerDataModel>> data),
-    @required TResult onGetNewsList(List<UpdateNewsDataModel> data),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String e) error,
+    required TResult Function(Either<String, List<BannerDataModel>> data)
+        onGetBanner,
+    required TResult Function(List<UpdateNewsDataModel> data) onGetNewsList,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetBanner != null);
-    assert(onGetNewsList != null);
     return onGetBanner(data);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String e),
-    TResult onGetBanner(Either<String, List<BannerDataModel>> data),
-    TResult onGetNewsList(List<UpdateNewsDataModel> data),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String e)? error,
+    TResult Function(Either<String, List<BannerDataModel>> data)? onGetBanner,
+    TResult Function(List<UpdateNewsDataModel> data)? onGetNewsList,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onGetBanner != null) {
       return onGetBanner(data);
     }
@@ -541,32 +513,26 @@ class _$_OnGetBanner implements _OnGetBanner {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onGetBanner(_OnGetBanner value),
-    @required TResult onGetNewsList(_OnGetNewsList value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnGetBanner value) onGetBanner,
+    required TResult Function(_OnGetNewsList value) onGetNewsList,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetBanner != null);
-    assert(onGetNewsList != null);
     return onGetBanner(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onGetBanner(_OnGetBanner value),
-    TResult onGetNewsList(_OnGetNewsList value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnGetBanner value)? onGetBanner,
+    TResult Function(_OnGetNewsList value)? onGetNewsList,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onGetBanner != null) {
       return onGetBanner(this);
     }
@@ -578,9 +544,11 @@ abstract class _OnGetBanner implements HomeState {
   const factory _OnGetBanner(Either<String, List<BannerDataModel>> data) =
       _$_OnGetBanner;
 
-  Either<String, List<BannerDataModel>> get data;
+  Either<String, List<BannerDataModel>> get data =>
+      throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$OnGetBannerCopyWith<_OnGetBanner> get copyWith;
+  _$OnGetBannerCopyWith<_OnGetBanner> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -603,17 +571,21 @@ class __$OnGetNewsListCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_OnGetNewsList(
-      data == freezed ? _value.data : data as List<UpdateNewsDataModel>,
+      data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<UpdateNewsDataModel>,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_OnGetNewsList implements _OnGetNewsList {
-  const _$_OnGetNewsList(this.data) : assert(data != null);
+  const _$_OnGetNewsList(this.data);
 
   @override
   final List<UpdateNewsDataModel> data;
@@ -642,32 +614,27 @@ class _$_OnGetNewsList implements _OnGetNewsList {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String e),
-    @required TResult onGetBanner(Either<String, List<BannerDataModel>> data),
-    @required TResult onGetNewsList(List<UpdateNewsDataModel> data),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String e) error,
+    required TResult Function(Either<String, List<BannerDataModel>> data)
+        onGetBanner,
+    required TResult Function(List<UpdateNewsDataModel> data) onGetNewsList,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetBanner != null);
-    assert(onGetNewsList != null);
     return onGetNewsList(data);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String e),
-    TResult onGetBanner(Either<String, List<BannerDataModel>> data),
-    TResult onGetNewsList(List<UpdateNewsDataModel> data),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String e)? error,
+    TResult Function(Either<String, List<BannerDataModel>> data)? onGetBanner,
+    TResult Function(List<UpdateNewsDataModel> data)? onGetNewsList,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onGetNewsList != null) {
       return onGetNewsList(data);
     }
@@ -676,32 +643,26 @@ class _$_OnGetNewsList implements _OnGetNewsList {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onGetBanner(_OnGetBanner value),
-    @required TResult onGetNewsList(_OnGetNewsList value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnGetBanner value) onGetBanner,
+    required TResult Function(_OnGetNewsList value) onGetNewsList,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetBanner != null);
-    assert(onGetNewsList != null);
     return onGetNewsList(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onGetBanner(_OnGetBanner value),
-    TResult onGetNewsList(_OnGetNewsList value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnGetBanner value)? onGetBanner,
+    TResult Function(_OnGetNewsList value)? onGetNewsList,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onGetNewsList != null) {
       return onGetNewsList(this);
     }
@@ -713,7 +674,8 @@ abstract class _OnGetNewsList implements HomeState {
   const factory _OnGetNewsList(List<UpdateNewsDataModel> data) =
       _$_OnGetNewsList;
 
-  List<UpdateNewsDataModel> get data;
+  List<UpdateNewsDataModel> get data => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$OnGetNewsListCopyWith<_OnGetNewsList> get copyWith;
+  _$OnGetNewsListCopyWith<_OnGetNewsList> get copyWith =>
+      throw _privateConstructorUsedError;
 }

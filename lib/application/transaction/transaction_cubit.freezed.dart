@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'transaction_cubit.dart';
 
@@ -9,28 +9,27 @@ part of 'transaction_cubit.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$TransactionStateTearOff {
   const _$TransactionStateTearOff();
 
-// ignore: unused_element
   _Initial initial() {
     return const _Initial();
   }
 
-// ignore: unused_element
   _Loading loading() {
     return const _Loading();
   }
 
-// ignore: unused_element
   _Error error(String error) {
     return _Error(
       error,
     );
   }
 
-// ignore: unused_element
   _OnGetHistoryTransaction onGetHistoryTransaction(
       List<TransactionDataModel> data) {
     return _OnGetHistoryTransaction(
@@ -38,7 +37,6 @@ class _$TransactionStateTearOff {
     );
   }
 
-// ignore: unused_element
   _OnGetSentHistoryTransaction onGetSentHistoryTransaction(
       List<FullTransactionDataModel> data) {
     return _OnGetSentHistoryTransaction(
@@ -46,7 +44,6 @@ class _$TransactionStateTearOff {
     );
   }
 
-// ignore: unused_element
   _OnGetAllTransaction onGetAllTransaction(
       List<FullTransactionDataModel> data) {
     return _OnGetAllTransaction(
@@ -54,7 +51,6 @@ class _$TransactionStateTearOff {
     );
   }
 
-// ignore: unused_element
   _OnGetHistoryTransactionV2 onGetHistoryTransactionV2(
       List<TransactionDataModelV2> data) {
     return _OnGetHistoryTransactionV2(
@@ -62,14 +58,12 @@ class _$TransactionStateTearOff {
     );
   }
 
-// ignore: unused_element
   _OnAddNewTransaction onAddNewTransaction(TransResponse data) {
     return _OnAddNewTransaction(
       data,
     );
   }
 
-// ignore: unused_element
   _OnCheckMidtransStatus onCheckMidtransStatus(MidtransStatusDataModel data) {
     return _OnCheckMidtransStatus(
       data,
@@ -78,66 +72,77 @@ class _$TransactionStateTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $TransactionState = _$TransactionStateTearOff();
 
 /// @nodoc
 mixin _$TransactionState {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onGetHistoryTransaction(List<TransactionDataModel> data),
-    @required
-        TResult onGetSentHistoryTransaction(
-            List<FullTransactionDataModel> data),
-    @required TResult onGetAllTransaction(List<FullTransactionDataModel> data),
-    @required
-        TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
-    @required TResult onAddNewTransaction(TransResponse data),
-    @required TResult onCheckMidtransStatus(MidtransStatusDataModel data),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(List<TransactionDataModel> data)
+        onGetHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetSentHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetAllTransaction,
+    required TResult Function(List<TransactionDataModelV2> data)
+        onGetHistoryTransactionV2,
+    required TResult Function(TransResponse data) onAddNewTransaction,
+    required TResult Function(MidtransStatusDataModel data)
+        onCheckMidtransStatus,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onGetHistoryTransaction(List<TransactionDataModel> data),
-    TResult onGetSentHistoryTransaction(List<FullTransactionDataModel> data),
-    TResult onGetAllTransaction(List<FullTransactionDataModel> data),
-    TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
-    TResult onAddNewTransaction(TransResponse data),
-    TResult onCheckMidtransStatus(MidtransStatusDataModel data),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)?
+        onGetSentHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)? onGetAllTransaction,
+    TResult Function(List<TransactionDataModelV2> data)?
+        onGetHistoryTransactionV2,
+    TResult Function(TransResponse data)? onAddNewTransaction,
+    TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
-    @required
-        TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
-    @required TResult onGetAllTransaction(_OnGetAllTransaction value),
-    @required
-        TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
-    @required TResult onAddNewTransaction(_OnAddNewTransaction value),
-    @required TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnGetHistoryTransaction value)
+        onGetHistoryTransaction,
+    required TResult Function(_OnGetSentHistoryTransaction value)
+        onGetSentHistoryTransaction,
+    required TResult Function(_OnGetAllTransaction value) onGetAllTransaction,
+    required TResult Function(_OnGetHistoryTransactionV2 value)
+        onGetHistoryTransactionV2,
+    required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
+    required TResult Function(_OnCheckMidtransStatus value)
+        onCheckMidtransStatus,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
-    TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
-    TResult onGetAllTransaction(_OnGetAllTransaction value),
-    TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
-    TResult onAddNewTransaction(_OnAddNewTransaction value),
-    TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
+    TResult Function(_OnGetSentHistoryTransaction value)?
+        onGetSentHistoryTransaction,
+    TResult Function(_OnGetAllTransaction value)? onGetAllTransaction,
+    TResult Function(_OnGetHistoryTransactionV2 value)?
+        onGetHistoryTransactionV2,
+    TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
+    TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -174,6 +179,7 @@ class __$InitialCopyWithImpl<$Res> extends _$TransactionStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_Initial implements _Initial {
   const _$_Initial();
 
@@ -192,47 +198,41 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onGetHistoryTransaction(List<TransactionDataModel> data),
-    @required
-        TResult onGetSentHistoryTransaction(
-            List<FullTransactionDataModel> data),
-    @required TResult onGetAllTransaction(List<FullTransactionDataModel> data),
-    @required
-        TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
-    @required TResult onAddNewTransaction(TransResponse data),
-    @required TResult onCheckMidtransStatus(MidtransStatusDataModel data),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(List<TransactionDataModel> data)
+        onGetHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetSentHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetAllTransaction,
+    required TResult Function(List<TransactionDataModelV2> data)
+        onGetHistoryTransactionV2,
+    required TResult Function(TransResponse data) onAddNewTransaction,
+    required TResult Function(MidtransStatusDataModel data)
+        onCheckMidtransStatus,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetHistoryTransaction != null);
-    assert(onGetSentHistoryTransaction != null);
-    assert(onGetAllTransaction != null);
-    assert(onGetHistoryTransactionV2 != null);
-    assert(onAddNewTransaction != null);
-    assert(onCheckMidtransStatus != null);
     return initial();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onGetHistoryTransaction(List<TransactionDataModel> data),
-    TResult onGetSentHistoryTransaction(List<FullTransactionDataModel> data),
-    TResult onGetAllTransaction(List<FullTransactionDataModel> data),
-    TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
-    TResult onAddNewTransaction(TransResponse data),
-    TResult onCheckMidtransStatus(MidtransStatusDataModel data),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)?
+        onGetSentHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)? onGetAllTransaction,
+    TResult Function(List<TransactionDataModelV2> data)?
+        onGetHistoryTransactionV2,
+    TResult Function(TransResponse data)? onAddNewTransaction,
+    TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial();
     }
@@ -241,46 +241,40 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
-    @required
-        TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
-    @required TResult onGetAllTransaction(_OnGetAllTransaction value),
-    @required
-        TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
-    @required TResult onAddNewTransaction(_OnAddNewTransaction value),
-    @required TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnGetHistoryTransaction value)
+        onGetHistoryTransaction,
+    required TResult Function(_OnGetSentHistoryTransaction value)
+        onGetSentHistoryTransaction,
+    required TResult Function(_OnGetAllTransaction value) onGetAllTransaction,
+    required TResult Function(_OnGetHistoryTransactionV2 value)
+        onGetHistoryTransactionV2,
+    required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
+    required TResult Function(_OnCheckMidtransStatus value)
+        onCheckMidtransStatus,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetHistoryTransaction != null);
-    assert(onGetSentHistoryTransaction != null);
-    assert(onGetAllTransaction != null);
-    assert(onGetHistoryTransactionV2 != null);
-    assert(onAddNewTransaction != null);
-    assert(onCheckMidtransStatus != null);
     return initial(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
-    TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
-    TResult onGetAllTransaction(_OnGetAllTransaction value),
-    TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
-    TResult onAddNewTransaction(_OnAddNewTransaction value),
-    TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
+    TResult Function(_OnGetSentHistoryTransaction value)?
+        onGetSentHistoryTransaction,
+    TResult Function(_OnGetAllTransaction value)? onGetAllTransaction,
+    TResult Function(_OnGetHistoryTransactionV2 value)?
+        onGetHistoryTransactionV2,
+    TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
+    TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial(this);
     }
@@ -309,6 +303,7 @@ class __$LoadingCopyWithImpl<$Res> extends _$TransactionStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_Loading implements _Loading {
   const _$_Loading();
 
@@ -327,47 +322,41 @@ class _$_Loading implements _Loading {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onGetHistoryTransaction(List<TransactionDataModel> data),
-    @required
-        TResult onGetSentHistoryTransaction(
-            List<FullTransactionDataModel> data),
-    @required TResult onGetAllTransaction(List<FullTransactionDataModel> data),
-    @required
-        TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
-    @required TResult onAddNewTransaction(TransResponse data),
-    @required TResult onCheckMidtransStatus(MidtransStatusDataModel data),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(List<TransactionDataModel> data)
+        onGetHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetSentHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetAllTransaction,
+    required TResult Function(List<TransactionDataModelV2> data)
+        onGetHistoryTransactionV2,
+    required TResult Function(TransResponse data) onAddNewTransaction,
+    required TResult Function(MidtransStatusDataModel data)
+        onCheckMidtransStatus,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetHistoryTransaction != null);
-    assert(onGetSentHistoryTransaction != null);
-    assert(onGetAllTransaction != null);
-    assert(onGetHistoryTransactionV2 != null);
-    assert(onAddNewTransaction != null);
-    assert(onCheckMidtransStatus != null);
     return loading();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onGetHistoryTransaction(List<TransactionDataModel> data),
-    TResult onGetSentHistoryTransaction(List<FullTransactionDataModel> data),
-    TResult onGetAllTransaction(List<FullTransactionDataModel> data),
-    TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
-    TResult onAddNewTransaction(TransResponse data),
-    TResult onCheckMidtransStatus(MidtransStatusDataModel data),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)?
+        onGetSentHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)? onGetAllTransaction,
+    TResult Function(List<TransactionDataModelV2> data)?
+        onGetHistoryTransactionV2,
+    TResult Function(TransResponse data)? onAddNewTransaction,
+    TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loading != null) {
       return loading();
     }
@@ -376,46 +365,40 @@ class _$_Loading implements _Loading {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
-    @required
-        TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
-    @required TResult onGetAllTransaction(_OnGetAllTransaction value),
-    @required
-        TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
-    @required TResult onAddNewTransaction(_OnAddNewTransaction value),
-    @required TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnGetHistoryTransaction value)
+        onGetHistoryTransaction,
+    required TResult Function(_OnGetSentHistoryTransaction value)
+        onGetSentHistoryTransaction,
+    required TResult Function(_OnGetAllTransaction value) onGetAllTransaction,
+    required TResult Function(_OnGetHistoryTransactionV2 value)
+        onGetHistoryTransactionV2,
+    required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
+    required TResult Function(_OnCheckMidtransStatus value)
+        onCheckMidtransStatus,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetHistoryTransaction != null);
-    assert(onGetSentHistoryTransaction != null);
-    assert(onGetAllTransaction != null);
-    assert(onGetHistoryTransactionV2 != null);
-    assert(onAddNewTransaction != null);
-    assert(onCheckMidtransStatus != null);
     return loading(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
-    TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
-    TResult onGetAllTransaction(_OnGetAllTransaction value),
-    TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
-    TResult onAddNewTransaction(_OnAddNewTransaction value),
-    TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
+    TResult Function(_OnGetSentHistoryTransaction value)?
+        onGetSentHistoryTransaction,
+    TResult Function(_OnGetAllTransaction value)? onGetAllTransaction,
+    TResult Function(_OnGetHistoryTransactionV2 value)?
+        onGetHistoryTransactionV2,
+    TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
+    TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loading != null) {
       return loading(this);
     }
@@ -445,17 +428,21 @@ class __$ErrorCopyWithImpl<$Res> extends _$TransactionStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object error = freezed,
+    Object? error = freezed,
   }) {
     return _then(_Error(
-      error == freezed ? _value.error : error as String,
+      error == freezed
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_Error implements _Error {
-  const _$_Error(this.error) : assert(error != null);
+  const _$_Error(this.error);
 
   @override
   final String error;
@@ -484,47 +471,41 @@ class _$_Error implements _Error {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onGetHistoryTransaction(List<TransactionDataModel> data),
-    @required
-        TResult onGetSentHistoryTransaction(
-            List<FullTransactionDataModel> data),
-    @required TResult onGetAllTransaction(List<FullTransactionDataModel> data),
-    @required
-        TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
-    @required TResult onAddNewTransaction(TransResponse data),
-    @required TResult onCheckMidtransStatus(MidtransStatusDataModel data),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(List<TransactionDataModel> data)
+        onGetHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetSentHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetAllTransaction,
+    required TResult Function(List<TransactionDataModelV2> data)
+        onGetHistoryTransactionV2,
+    required TResult Function(TransResponse data) onAddNewTransaction,
+    required TResult Function(MidtransStatusDataModel data)
+        onCheckMidtransStatus,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetHistoryTransaction != null);
-    assert(onGetSentHistoryTransaction != null);
-    assert(onGetAllTransaction != null);
-    assert(onGetHistoryTransactionV2 != null);
-    assert(onAddNewTransaction != null);
-    assert(onCheckMidtransStatus != null);
     return error(this.error);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onGetHistoryTransaction(List<TransactionDataModel> data),
-    TResult onGetSentHistoryTransaction(List<FullTransactionDataModel> data),
-    TResult onGetAllTransaction(List<FullTransactionDataModel> data),
-    TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
-    TResult onAddNewTransaction(TransResponse data),
-    TResult onCheckMidtransStatus(MidtransStatusDataModel data),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)?
+        onGetSentHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)? onGetAllTransaction,
+    TResult Function(List<TransactionDataModelV2> data)?
+        onGetHistoryTransactionV2,
+    TResult Function(TransResponse data)? onAddNewTransaction,
+    TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (error != null) {
       return error(this.error);
     }
@@ -533,46 +514,40 @@ class _$_Error implements _Error {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
-    @required
-        TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
-    @required TResult onGetAllTransaction(_OnGetAllTransaction value),
-    @required
-        TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
-    @required TResult onAddNewTransaction(_OnAddNewTransaction value),
-    @required TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnGetHistoryTransaction value)
+        onGetHistoryTransaction,
+    required TResult Function(_OnGetSentHistoryTransaction value)
+        onGetSentHistoryTransaction,
+    required TResult Function(_OnGetAllTransaction value) onGetAllTransaction,
+    required TResult Function(_OnGetHistoryTransactionV2 value)
+        onGetHistoryTransactionV2,
+    required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
+    required TResult Function(_OnCheckMidtransStatus value)
+        onCheckMidtransStatus,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetHistoryTransaction != null);
-    assert(onGetSentHistoryTransaction != null);
-    assert(onGetAllTransaction != null);
-    assert(onGetHistoryTransactionV2 != null);
-    assert(onAddNewTransaction != null);
-    assert(onCheckMidtransStatus != null);
     return error(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
-    TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
-    TResult onGetAllTransaction(_OnGetAllTransaction value),
-    TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
-    TResult onAddNewTransaction(_OnAddNewTransaction value),
-    TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
+    TResult Function(_OnGetSentHistoryTransaction value)?
+        onGetSentHistoryTransaction,
+    TResult Function(_OnGetAllTransaction value)? onGetAllTransaction,
+    TResult Function(_OnGetHistoryTransactionV2 value)?
+        onGetHistoryTransactionV2,
+    TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
+    TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (error != null) {
       return error(this);
     }
@@ -583,9 +558,9 @@ class _$_Error implements _Error {
 abstract class _Error implements TransactionState {
   const factory _Error(String error) = _$_Error;
 
-  String get error;
+  String get error => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$ErrorCopyWith<_Error> get copyWith;
+  _$ErrorCopyWith<_Error> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -610,17 +585,21 @@ class __$OnGetHistoryTransactionCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_OnGetHistoryTransaction(
-      data == freezed ? _value.data : data as List<TransactionDataModel>,
+      data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<TransactionDataModel>,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
-  const _$_OnGetHistoryTransaction(this.data) : assert(data != null);
+  const _$_OnGetHistoryTransaction(this.data);
 
   @override
   final List<TransactionDataModel> data;
@@ -650,47 +629,41 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onGetHistoryTransaction(List<TransactionDataModel> data),
-    @required
-        TResult onGetSentHistoryTransaction(
-            List<FullTransactionDataModel> data),
-    @required TResult onGetAllTransaction(List<FullTransactionDataModel> data),
-    @required
-        TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
-    @required TResult onAddNewTransaction(TransResponse data),
-    @required TResult onCheckMidtransStatus(MidtransStatusDataModel data),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(List<TransactionDataModel> data)
+        onGetHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetSentHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetAllTransaction,
+    required TResult Function(List<TransactionDataModelV2> data)
+        onGetHistoryTransactionV2,
+    required TResult Function(TransResponse data) onAddNewTransaction,
+    required TResult Function(MidtransStatusDataModel data)
+        onCheckMidtransStatus,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetHistoryTransaction != null);
-    assert(onGetSentHistoryTransaction != null);
-    assert(onGetAllTransaction != null);
-    assert(onGetHistoryTransactionV2 != null);
-    assert(onAddNewTransaction != null);
-    assert(onCheckMidtransStatus != null);
     return onGetHistoryTransaction(data);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onGetHistoryTransaction(List<TransactionDataModel> data),
-    TResult onGetSentHistoryTransaction(List<FullTransactionDataModel> data),
-    TResult onGetAllTransaction(List<FullTransactionDataModel> data),
-    TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
-    TResult onAddNewTransaction(TransResponse data),
-    TResult onCheckMidtransStatus(MidtransStatusDataModel data),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)?
+        onGetSentHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)? onGetAllTransaction,
+    TResult Function(List<TransactionDataModelV2> data)?
+        onGetHistoryTransactionV2,
+    TResult Function(TransResponse data)? onAddNewTransaction,
+    TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onGetHistoryTransaction != null) {
       return onGetHistoryTransaction(data);
     }
@@ -699,46 +672,40 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
-    @required
-        TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
-    @required TResult onGetAllTransaction(_OnGetAllTransaction value),
-    @required
-        TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
-    @required TResult onAddNewTransaction(_OnAddNewTransaction value),
-    @required TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnGetHistoryTransaction value)
+        onGetHistoryTransaction,
+    required TResult Function(_OnGetSentHistoryTransaction value)
+        onGetSentHistoryTransaction,
+    required TResult Function(_OnGetAllTransaction value) onGetAllTransaction,
+    required TResult Function(_OnGetHistoryTransactionV2 value)
+        onGetHistoryTransactionV2,
+    required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
+    required TResult Function(_OnCheckMidtransStatus value)
+        onCheckMidtransStatus,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetHistoryTransaction != null);
-    assert(onGetSentHistoryTransaction != null);
-    assert(onGetAllTransaction != null);
-    assert(onGetHistoryTransactionV2 != null);
-    assert(onAddNewTransaction != null);
-    assert(onCheckMidtransStatus != null);
     return onGetHistoryTransaction(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
-    TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
-    TResult onGetAllTransaction(_OnGetAllTransaction value),
-    TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
-    TResult onAddNewTransaction(_OnAddNewTransaction value),
-    TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
+    TResult Function(_OnGetSentHistoryTransaction value)?
+        onGetSentHistoryTransaction,
+    TResult Function(_OnGetAllTransaction value)? onGetAllTransaction,
+    TResult Function(_OnGetHistoryTransactionV2 value)?
+        onGetHistoryTransactionV2,
+    TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
+    TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onGetHistoryTransaction != null) {
       return onGetHistoryTransaction(this);
     }
@@ -750,9 +717,10 @@ abstract class _OnGetHistoryTransaction implements TransactionState {
   const factory _OnGetHistoryTransaction(List<TransactionDataModel> data) =
       _$_OnGetHistoryTransaction;
 
-  List<TransactionDataModel> get data;
+  List<TransactionDataModel> get data => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$OnGetHistoryTransactionCopyWith<_OnGetHistoryTransaction> get copyWith;
+  _$OnGetHistoryTransactionCopyWith<_OnGetHistoryTransaction> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -779,17 +747,21 @@ class __$OnGetSentHistoryTransactionCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_OnGetSentHistoryTransaction(
-      data == freezed ? _value.data : data as List<FullTransactionDataModel>,
+      data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<FullTransactionDataModel>,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_OnGetSentHistoryTransaction implements _OnGetSentHistoryTransaction {
-  const _$_OnGetSentHistoryTransaction(this.data) : assert(data != null);
+  const _$_OnGetSentHistoryTransaction(this.data);
 
   @override
   final List<FullTransactionDataModel> data;
@@ -819,47 +791,41 @@ class _$_OnGetSentHistoryTransaction implements _OnGetSentHistoryTransaction {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onGetHistoryTransaction(List<TransactionDataModel> data),
-    @required
-        TResult onGetSentHistoryTransaction(
-            List<FullTransactionDataModel> data),
-    @required TResult onGetAllTransaction(List<FullTransactionDataModel> data),
-    @required
-        TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
-    @required TResult onAddNewTransaction(TransResponse data),
-    @required TResult onCheckMidtransStatus(MidtransStatusDataModel data),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(List<TransactionDataModel> data)
+        onGetHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetSentHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetAllTransaction,
+    required TResult Function(List<TransactionDataModelV2> data)
+        onGetHistoryTransactionV2,
+    required TResult Function(TransResponse data) onAddNewTransaction,
+    required TResult Function(MidtransStatusDataModel data)
+        onCheckMidtransStatus,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetHistoryTransaction != null);
-    assert(onGetSentHistoryTransaction != null);
-    assert(onGetAllTransaction != null);
-    assert(onGetHistoryTransactionV2 != null);
-    assert(onAddNewTransaction != null);
-    assert(onCheckMidtransStatus != null);
     return onGetSentHistoryTransaction(data);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onGetHistoryTransaction(List<TransactionDataModel> data),
-    TResult onGetSentHistoryTransaction(List<FullTransactionDataModel> data),
-    TResult onGetAllTransaction(List<FullTransactionDataModel> data),
-    TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
-    TResult onAddNewTransaction(TransResponse data),
-    TResult onCheckMidtransStatus(MidtransStatusDataModel data),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)?
+        onGetSentHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)? onGetAllTransaction,
+    TResult Function(List<TransactionDataModelV2> data)?
+        onGetHistoryTransactionV2,
+    TResult Function(TransResponse data)? onAddNewTransaction,
+    TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onGetSentHistoryTransaction != null) {
       return onGetSentHistoryTransaction(data);
     }
@@ -868,46 +834,40 @@ class _$_OnGetSentHistoryTransaction implements _OnGetSentHistoryTransaction {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
-    @required
-        TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
-    @required TResult onGetAllTransaction(_OnGetAllTransaction value),
-    @required
-        TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
-    @required TResult onAddNewTransaction(_OnAddNewTransaction value),
-    @required TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnGetHistoryTransaction value)
+        onGetHistoryTransaction,
+    required TResult Function(_OnGetSentHistoryTransaction value)
+        onGetSentHistoryTransaction,
+    required TResult Function(_OnGetAllTransaction value) onGetAllTransaction,
+    required TResult Function(_OnGetHistoryTransactionV2 value)
+        onGetHistoryTransactionV2,
+    required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
+    required TResult Function(_OnCheckMidtransStatus value)
+        onCheckMidtransStatus,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetHistoryTransaction != null);
-    assert(onGetSentHistoryTransaction != null);
-    assert(onGetAllTransaction != null);
-    assert(onGetHistoryTransactionV2 != null);
-    assert(onAddNewTransaction != null);
-    assert(onCheckMidtransStatus != null);
     return onGetSentHistoryTransaction(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
-    TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
-    TResult onGetAllTransaction(_OnGetAllTransaction value),
-    TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
-    TResult onAddNewTransaction(_OnAddNewTransaction value),
-    TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
+    TResult Function(_OnGetSentHistoryTransaction value)?
+        onGetSentHistoryTransaction,
+    TResult Function(_OnGetAllTransaction value)? onGetAllTransaction,
+    TResult Function(_OnGetHistoryTransactionV2 value)?
+        onGetHistoryTransactionV2,
+    TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
+    TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onGetSentHistoryTransaction != null) {
       return onGetSentHistoryTransaction(this);
     }
@@ -919,10 +879,10 @@ abstract class _OnGetSentHistoryTransaction implements TransactionState {
   const factory _OnGetSentHistoryTransaction(
       List<FullTransactionDataModel> data) = _$_OnGetSentHistoryTransaction;
 
-  List<FullTransactionDataModel> get data;
+  List<FullTransactionDataModel> get data => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$OnGetSentHistoryTransactionCopyWith<_OnGetSentHistoryTransaction>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -946,17 +906,21 @@ class __$OnGetAllTransactionCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_OnGetAllTransaction(
-      data == freezed ? _value.data : data as List<FullTransactionDataModel>,
+      data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<FullTransactionDataModel>,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_OnGetAllTransaction implements _OnGetAllTransaction {
-  const _$_OnGetAllTransaction(this.data) : assert(data != null);
+  const _$_OnGetAllTransaction(this.data);
 
   @override
   final List<FullTransactionDataModel> data;
@@ -986,47 +950,41 @@ class _$_OnGetAllTransaction implements _OnGetAllTransaction {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onGetHistoryTransaction(List<TransactionDataModel> data),
-    @required
-        TResult onGetSentHistoryTransaction(
-            List<FullTransactionDataModel> data),
-    @required TResult onGetAllTransaction(List<FullTransactionDataModel> data),
-    @required
-        TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
-    @required TResult onAddNewTransaction(TransResponse data),
-    @required TResult onCheckMidtransStatus(MidtransStatusDataModel data),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(List<TransactionDataModel> data)
+        onGetHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetSentHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetAllTransaction,
+    required TResult Function(List<TransactionDataModelV2> data)
+        onGetHistoryTransactionV2,
+    required TResult Function(TransResponse data) onAddNewTransaction,
+    required TResult Function(MidtransStatusDataModel data)
+        onCheckMidtransStatus,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetHistoryTransaction != null);
-    assert(onGetSentHistoryTransaction != null);
-    assert(onGetAllTransaction != null);
-    assert(onGetHistoryTransactionV2 != null);
-    assert(onAddNewTransaction != null);
-    assert(onCheckMidtransStatus != null);
     return onGetAllTransaction(data);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onGetHistoryTransaction(List<TransactionDataModel> data),
-    TResult onGetSentHistoryTransaction(List<FullTransactionDataModel> data),
-    TResult onGetAllTransaction(List<FullTransactionDataModel> data),
-    TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
-    TResult onAddNewTransaction(TransResponse data),
-    TResult onCheckMidtransStatus(MidtransStatusDataModel data),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)?
+        onGetSentHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)? onGetAllTransaction,
+    TResult Function(List<TransactionDataModelV2> data)?
+        onGetHistoryTransactionV2,
+    TResult Function(TransResponse data)? onAddNewTransaction,
+    TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onGetAllTransaction != null) {
       return onGetAllTransaction(data);
     }
@@ -1035,46 +993,40 @@ class _$_OnGetAllTransaction implements _OnGetAllTransaction {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
-    @required
-        TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
-    @required TResult onGetAllTransaction(_OnGetAllTransaction value),
-    @required
-        TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
-    @required TResult onAddNewTransaction(_OnAddNewTransaction value),
-    @required TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnGetHistoryTransaction value)
+        onGetHistoryTransaction,
+    required TResult Function(_OnGetSentHistoryTransaction value)
+        onGetSentHistoryTransaction,
+    required TResult Function(_OnGetAllTransaction value) onGetAllTransaction,
+    required TResult Function(_OnGetHistoryTransactionV2 value)
+        onGetHistoryTransactionV2,
+    required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
+    required TResult Function(_OnCheckMidtransStatus value)
+        onCheckMidtransStatus,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetHistoryTransaction != null);
-    assert(onGetSentHistoryTransaction != null);
-    assert(onGetAllTransaction != null);
-    assert(onGetHistoryTransactionV2 != null);
-    assert(onAddNewTransaction != null);
-    assert(onCheckMidtransStatus != null);
     return onGetAllTransaction(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
-    TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
-    TResult onGetAllTransaction(_OnGetAllTransaction value),
-    TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
-    TResult onAddNewTransaction(_OnAddNewTransaction value),
-    TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
+    TResult Function(_OnGetSentHistoryTransaction value)?
+        onGetSentHistoryTransaction,
+    TResult Function(_OnGetAllTransaction value)? onGetAllTransaction,
+    TResult Function(_OnGetHistoryTransactionV2 value)?
+        onGetHistoryTransactionV2,
+    TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
+    TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onGetAllTransaction != null) {
       return onGetAllTransaction(this);
     }
@@ -1086,9 +1038,10 @@ abstract class _OnGetAllTransaction implements TransactionState {
   const factory _OnGetAllTransaction(List<FullTransactionDataModel> data) =
       _$_OnGetAllTransaction;
 
-  List<FullTransactionDataModel> get data;
+  List<FullTransactionDataModel> get data => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$OnGetAllTransactionCopyWith<_OnGetAllTransaction> get copyWith;
+  _$OnGetAllTransactionCopyWith<_OnGetAllTransaction> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1113,17 +1066,21 @@ class __$OnGetHistoryTransactionV2CopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_OnGetHistoryTransactionV2(
-      data == freezed ? _value.data : data as List<TransactionDataModelV2>,
+      data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<TransactionDataModelV2>,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_OnGetHistoryTransactionV2 implements _OnGetHistoryTransactionV2 {
-  const _$_OnGetHistoryTransactionV2(this.data) : assert(data != null);
+  const _$_OnGetHistoryTransactionV2(this.data);
 
   @override
   final List<TransactionDataModelV2> data;
@@ -1154,47 +1111,41 @@ class _$_OnGetHistoryTransactionV2 implements _OnGetHistoryTransactionV2 {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onGetHistoryTransaction(List<TransactionDataModel> data),
-    @required
-        TResult onGetSentHistoryTransaction(
-            List<FullTransactionDataModel> data),
-    @required TResult onGetAllTransaction(List<FullTransactionDataModel> data),
-    @required
-        TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
-    @required TResult onAddNewTransaction(TransResponse data),
-    @required TResult onCheckMidtransStatus(MidtransStatusDataModel data),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(List<TransactionDataModel> data)
+        onGetHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetSentHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetAllTransaction,
+    required TResult Function(List<TransactionDataModelV2> data)
+        onGetHistoryTransactionV2,
+    required TResult Function(TransResponse data) onAddNewTransaction,
+    required TResult Function(MidtransStatusDataModel data)
+        onCheckMidtransStatus,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetHistoryTransaction != null);
-    assert(onGetSentHistoryTransaction != null);
-    assert(onGetAllTransaction != null);
-    assert(onGetHistoryTransactionV2 != null);
-    assert(onAddNewTransaction != null);
-    assert(onCheckMidtransStatus != null);
     return onGetHistoryTransactionV2(data);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onGetHistoryTransaction(List<TransactionDataModel> data),
-    TResult onGetSentHistoryTransaction(List<FullTransactionDataModel> data),
-    TResult onGetAllTransaction(List<FullTransactionDataModel> data),
-    TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
-    TResult onAddNewTransaction(TransResponse data),
-    TResult onCheckMidtransStatus(MidtransStatusDataModel data),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)?
+        onGetSentHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)? onGetAllTransaction,
+    TResult Function(List<TransactionDataModelV2> data)?
+        onGetHistoryTransactionV2,
+    TResult Function(TransResponse data)? onAddNewTransaction,
+    TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onGetHistoryTransactionV2 != null) {
       return onGetHistoryTransactionV2(data);
     }
@@ -1203,46 +1154,40 @@ class _$_OnGetHistoryTransactionV2 implements _OnGetHistoryTransactionV2 {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
-    @required
-        TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
-    @required TResult onGetAllTransaction(_OnGetAllTransaction value),
-    @required
-        TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
-    @required TResult onAddNewTransaction(_OnAddNewTransaction value),
-    @required TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnGetHistoryTransaction value)
+        onGetHistoryTransaction,
+    required TResult Function(_OnGetSentHistoryTransaction value)
+        onGetSentHistoryTransaction,
+    required TResult Function(_OnGetAllTransaction value) onGetAllTransaction,
+    required TResult Function(_OnGetHistoryTransactionV2 value)
+        onGetHistoryTransactionV2,
+    required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
+    required TResult Function(_OnCheckMidtransStatus value)
+        onCheckMidtransStatus,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetHistoryTransaction != null);
-    assert(onGetSentHistoryTransaction != null);
-    assert(onGetAllTransaction != null);
-    assert(onGetHistoryTransactionV2 != null);
-    assert(onAddNewTransaction != null);
-    assert(onCheckMidtransStatus != null);
     return onGetHistoryTransactionV2(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
-    TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
-    TResult onGetAllTransaction(_OnGetAllTransaction value),
-    TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
-    TResult onAddNewTransaction(_OnAddNewTransaction value),
-    TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
+    TResult Function(_OnGetSentHistoryTransaction value)?
+        onGetSentHistoryTransaction,
+    TResult Function(_OnGetAllTransaction value)? onGetAllTransaction,
+    TResult Function(_OnGetHistoryTransactionV2 value)?
+        onGetHistoryTransactionV2,
+    TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
+    TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onGetHistoryTransactionV2 != null) {
       return onGetHistoryTransactionV2(this);
     }
@@ -1254,9 +1199,10 @@ abstract class _OnGetHistoryTransactionV2 implements TransactionState {
   const factory _OnGetHistoryTransactionV2(List<TransactionDataModelV2> data) =
       _$_OnGetHistoryTransactionV2;
 
-  List<TransactionDataModelV2> get data;
+  List<TransactionDataModelV2> get data => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$OnGetHistoryTransactionV2CopyWith<_OnGetHistoryTransactionV2> get copyWith;
+  _$OnGetHistoryTransactionV2CopyWith<_OnGetHistoryTransactionV2>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1280,17 +1226,21 @@ class __$OnAddNewTransactionCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_OnAddNewTransaction(
-      data == freezed ? _value.data : data as TransResponse,
+      data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as TransResponse,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_OnAddNewTransaction implements _OnAddNewTransaction {
-  const _$_OnAddNewTransaction(this.data) : assert(data != null);
+  const _$_OnAddNewTransaction(this.data);
 
   @override
   final TransResponse data;
@@ -1320,47 +1270,41 @@ class _$_OnAddNewTransaction implements _OnAddNewTransaction {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onGetHistoryTransaction(List<TransactionDataModel> data),
-    @required
-        TResult onGetSentHistoryTransaction(
-            List<FullTransactionDataModel> data),
-    @required TResult onGetAllTransaction(List<FullTransactionDataModel> data),
-    @required
-        TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
-    @required TResult onAddNewTransaction(TransResponse data),
-    @required TResult onCheckMidtransStatus(MidtransStatusDataModel data),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(List<TransactionDataModel> data)
+        onGetHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetSentHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetAllTransaction,
+    required TResult Function(List<TransactionDataModelV2> data)
+        onGetHistoryTransactionV2,
+    required TResult Function(TransResponse data) onAddNewTransaction,
+    required TResult Function(MidtransStatusDataModel data)
+        onCheckMidtransStatus,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetHistoryTransaction != null);
-    assert(onGetSentHistoryTransaction != null);
-    assert(onGetAllTransaction != null);
-    assert(onGetHistoryTransactionV2 != null);
-    assert(onAddNewTransaction != null);
-    assert(onCheckMidtransStatus != null);
     return onAddNewTransaction(data);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onGetHistoryTransaction(List<TransactionDataModel> data),
-    TResult onGetSentHistoryTransaction(List<FullTransactionDataModel> data),
-    TResult onGetAllTransaction(List<FullTransactionDataModel> data),
-    TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
-    TResult onAddNewTransaction(TransResponse data),
-    TResult onCheckMidtransStatus(MidtransStatusDataModel data),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)?
+        onGetSentHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)? onGetAllTransaction,
+    TResult Function(List<TransactionDataModelV2> data)?
+        onGetHistoryTransactionV2,
+    TResult Function(TransResponse data)? onAddNewTransaction,
+    TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onAddNewTransaction != null) {
       return onAddNewTransaction(data);
     }
@@ -1369,46 +1313,40 @@ class _$_OnAddNewTransaction implements _OnAddNewTransaction {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
-    @required
-        TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
-    @required TResult onGetAllTransaction(_OnGetAllTransaction value),
-    @required
-        TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
-    @required TResult onAddNewTransaction(_OnAddNewTransaction value),
-    @required TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnGetHistoryTransaction value)
+        onGetHistoryTransaction,
+    required TResult Function(_OnGetSentHistoryTransaction value)
+        onGetSentHistoryTransaction,
+    required TResult Function(_OnGetAllTransaction value) onGetAllTransaction,
+    required TResult Function(_OnGetHistoryTransactionV2 value)
+        onGetHistoryTransactionV2,
+    required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
+    required TResult Function(_OnCheckMidtransStatus value)
+        onCheckMidtransStatus,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetHistoryTransaction != null);
-    assert(onGetSentHistoryTransaction != null);
-    assert(onGetAllTransaction != null);
-    assert(onGetHistoryTransactionV2 != null);
-    assert(onAddNewTransaction != null);
-    assert(onCheckMidtransStatus != null);
     return onAddNewTransaction(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
-    TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
-    TResult onGetAllTransaction(_OnGetAllTransaction value),
-    TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
-    TResult onAddNewTransaction(_OnAddNewTransaction value),
-    TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
+    TResult Function(_OnGetSentHistoryTransaction value)?
+        onGetSentHistoryTransaction,
+    TResult Function(_OnGetAllTransaction value)? onGetAllTransaction,
+    TResult Function(_OnGetHistoryTransactionV2 value)?
+        onGetHistoryTransactionV2,
+    TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
+    TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onAddNewTransaction != null) {
       return onAddNewTransaction(this);
     }
@@ -1420,9 +1358,10 @@ abstract class _OnAddNewTransaction implements TransactionState {
   const factory _OnAddNewTransaction(TransResponse data) =
       _$_OnAddNewTransaction;
 
-  TransResponse get data;
+  TransResponse get data => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$OnAddNewTransactionCopyWith<_OnAddNewTransaction> get copyWith;
+  _$OnAddNewTransactionCopyWith<_OnAddNewTransaction> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1448,18 +1387,18 @@ class __$OnCheckMidtransStatusCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_OnCheckMidtransStatus(
-      data == freezed ? _value.data : data as MidtransStatusDataModel,
+      data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as MidtransStatusDataModel,
     ));
   }
 
   @override
   $MidtransStatusDataModelCopyWith<$Res> get data {
-    if (_value.data == null) {
-      return null;
-    }
     return $MidtransStatusDataModelCopyWith<$Res>(_value.data, (value) {
       return _then(_value.copyWith(data: value));
     });
@@ -1467,8 +1406,9 @@ class __$OnCheckMidtransStatusCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_OnCheckMidtransStatus implements _OnCheckMidtransStatus {
-  const _$_OnCheckMidtransStatus(this.data) : assert(data != null);
+  const _$_OnCheckMidtransStatus(this.data);
 
   @override
   final MidtransStatusDataModel data;
@@ -1498,47 +1438,41 @@ class _$_OnCheckMidtransStatus implements _OnCheckMidtransStatus {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onGetHistoryTransaction(List<TransactionDataModel> data),
-    @required
-        TResult onGetSentHistoryTransaction(
-            List<FullTransactionDataModel> data),
-    @required TResult onGetAllTransaction(List<FullTransactionDataModel> data),
-    @required
-        TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
-    @required TResult onAddNewTransaction(TransResponse data),
-    @required TResult onCheckMidtransStatus(MidtransStatusDataModel data),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(List<TransactionDataModel> data)
+        onGetHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetSentHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetAllTransaction,
+    required TResult Function(List<TransactionDataModelV2> data)
+        onGetHistoryTransactionV2,
+    required TResult Function(TransResponse data) onAddNewTransaction,
+    required TResult Function(MidtransStatusDataModel data)
+        onCheckMidtransStatus,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetHistoryTransaction != null);
-    assert(onGetSentHistoryTransaction != null);
-    assert(onGetAllTransaction != null);
-    assert(onGetHistoryTransactionV2 != null);
-    assert(onAddNewTransaction != null);
-    assert(onCheckMidtransStatus != null);
     return onCheckMidtransStatus(data);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onGetHistoryTransaction(List<TransactionDataModel> data),
-    TResult onGetSentHistoryTransaction(List<FullTransactionDataModel> data),
-    TResult onGetAllTransaction(List<FullTransactionDataModel> data),
-    TResult onGetHistoryTransactionV2(List<TransactionDataModelV2> data),
-    TResult onAddNewTransaction(TransResponse data),
-    TResult onCheckMidtransStatus(MidtransStatusDataModel data),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)?
+        onGetSentHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)? onGetAllTransaction,
+    TResult Function(List<TransactionDataModelV2> data)?
+        onGetHistoryTransactionV2,
+    TResult Function(TransResponse data)? onAddNewTransaction,
+    TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onCheckMidtransStatus != null) {
       return onCheckMidtransStatus(data);
     }
@@ -1547,46 +1481,40 @@ class _$_OnCheckMidtransStatus implements _OnCheckMidtransStatus {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
-    @required
-        TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
-    @required TResult onGetAllTransaction(_OnGetAllTransaction value),
-    @required
-        TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
-    @required TResult onAddNewTransaction(_OnAddNewTransaction value),
-    @required TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnGetHistoryTransaction value)
+        onGetHistoryTransaction,
+    required TResult Function(_OnGetSentHistoryTransaction value)
+        onGetSentHistoryTransaction,
+    required TResult Function(_OnGetAllTransaction value) onGetAllTransaction,
+    required TResult Function(_OnGetHistoryTransactionV2 value)
+        onGetHistoryTransactionV2,
+    required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
+    required TResult Function(_OnCheckMidtransStatus value)
+        onCheckMidtransStatus,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetHistoryTransaction != null);
-    assert(onGetSentHistoryTransaction != null);
-    assert(onGetAllTransaction != null);
-    assert(onGetHistoryTransactionV2 != null);
-    assert(onAddNewTransaction != null);
-    assert(onCheckMidtransStatus != null);
     return onCheckMidtransStatus(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onGetHistoryTransaction(_OnGetHistoryTransaction value),
-    TResult onGetSentHistoryTransaction(_OnGetSentHistoryTransaction value),
-    TResult onGetAllTransaction(_OnGetAllTransaction value),
-    TResult onGetHistoryTransactionV2(_OnGetHistoryTransactionV2 value),
-    TResult onAddNewTransaction(_OnAddNewTransaction value),
-    TResult onCheckMidtransStatus(_OnCheckMidtransStatus value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
+    TResult Function(_OnGetSentHistoryTransaction value)?
+        onGetSentHistoryTransaction,
+    TResult Function(_OnGetAllTransaction value)? onGetAllTransaction,
+    TResult Function(_OnGetHistoryTransactionV2 value)?
+        onGetHistoryTransactionV2,
+    TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
+    TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onCheckMidtransStatus != null) {
       return onCheckMidtransStatus(this);
     }
@@ -1598,7 +1526,8 @@ abstract class _OnCheckMidtransStatus implements TransactionState {
   const factory _OnCheckMidtransStatus(MidtransStatusDataModel data) =
       _$_OnCheckMidtransStatus;
 
-  MidtransStatusDataModel get data;
+  MidtransStatusDataModel get data => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$OnCheckMidtransStatusCopyWith<_OnCheckMidtransStatus> get copyWith;
+  _$OnCheckMidtransStatusCopyWith<_OnCheckMidtransStatus> get copyWith =>
+      throw _privateConstructorUsedError;
 }

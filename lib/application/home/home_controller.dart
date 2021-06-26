@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 class HomeController extends GetxController {
   RxInt bottomSelectedIndex = 0.obs;
 
-  List<String> bannerList = <String>[];
+  List<String>? bannerList = <String>[];
   PageController pageController = PageController(
     initialPage: 0,
     keepPage: true,
@@ -14,13 +14,13 @@ class HomeController extends GetxController {
     update();
   }
 
-  void setBannerList(List<String> data) {
+  void setBannerList(List<String>? data) {
     this.bannerList = data;
     print("SEt banner");
     update();
   }
 
-  List<String> get getBannerList => this.bannerList;
+  List<String>? get getBannerList => this.bannerList;
 
   void onBottomTap(int index) {
     pageController.jumpToPage(index);

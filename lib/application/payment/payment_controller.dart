@@ -24,7 +24,7 @@ class PaymentController extends GetxController {
       this.selectedPaymentMethod.value;
 
   List<PaymentMethodDataModel> getFilteredPaymentMethodByUserType(
-      String currentUserTypeId) {
+      String? currentUserTypeId) {
     List<PaymentMethodDataModel> usedPayment = <PaymentMethodDataModel>[];
 
     if (currentUserTypeId == constants.customerTypeReseller2) {

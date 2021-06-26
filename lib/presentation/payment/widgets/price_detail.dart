@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class PriceDetail extends StatelessWidget {
   const PriceDetail(
-      {Key key,
-      @required this.label,
-      @required this.value,
+      {Key? key,
+      required this.label,
+      required this.value,
       this.color = Colors.black})
       : super(key: key);
   final String label;

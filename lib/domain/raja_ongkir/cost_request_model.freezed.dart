@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'cost_request_model.dart';
 
@@ -8,6 +8,10 @@ part of 'cost_request_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 CostRequestModel _$CostRequestModelFromJson(Map<String, dynamic> json) {
   return _CostRequestModel.fromJson(json);
 }
@@ -16,15 +20,14 @@ CostRequestModel _$CostRequestModelFromJson(Map<String, dynamic> json) {
 class _$CostRequestModelTearOff {
   const _$CostRequestModelTearOff();
 
-// ignore: unused_element
   _CostRequestModel call(
-      {String origin,
-      String destination,
-      String originType,
-      String destinationType,
-      double weight,
-      String courier,
-      List<OngkirCodeDataModel> courirList}) {
+      {String? origin,
+      String? destination,
+      String? originType,
+      String? destinationType,
+      double? weight,
+      String? courier,
+      List<OngkirCodeDataModel>? courirList}) {
     return _CostRequestModel(
       origin: origin,
       destination: destination,
@@ -36,29 +39,29 @@ class _$CostRequestModelTearOff {
     );
   }
 
-// ignore: unused_element
   CostRequestModel fromJson(Map<String, Object> json) {
     return CostRequestModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CostRequestModel = _$CostRequestModelTearOff();
 
 /// @nodoc
 mixin _$CostRequestModel {
-  String get origin;
-  String get destination;
-  String get originType;
-  String get destinationType;
-  double get weight;
-  String get courier;
-  List<OngkirCodeDataModel> get courirList;
+  String? get origin => throw _privateConstructorUsedError;
+  String? get destination => throw _privateConstructorUsedError;
+  String? get originType => throw _privateConstructorUsedError;
+  String? get destinationType => throw _privateConstructorUsedError;
+  double? get weight => throw _privateConstructorUsedError;
+  String? get courier => throw _privateConstructorUsedError;
+  List<OngkirCodeDataModel>? get courirList =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CostRequestModelCopyWith<CostRequestModel> get copyWith;
+  $CostRequestModelCopyWith<CostRequestModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -67,13 +70,13 @@ abstract class $CostRequestModelCopyWith<$Res> {
           CostRequestModel value, $Res Function(CostRequestModel) then) =
       _$CostRequestModelCopyWithImpl<$Res>;
   $Res call(
-      {String origin,
-      String destination,
-      String originType,
-      String destinationType,
-      double weight,
-      String courier,
-      List<OngkirCodeDataModel> courirList});
+      {String? origin,
+      String? destination,
+      String? originType,
+      String? destinationType,
+      double? weight,
+      String? courier,
+      List<OngkirCodeDataModel>? courirList});
 }
 
 /// @nodoc
@@ -87,28 +90,43 @@ class _$CostRequestModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object origin = freezed,
-    Object destination = freezed,
-    Object originType = freezed,
-    Object destinationType = freezed,
-    Object weight = freezed,
-    Object courier = freezed,
-    Object courirList = freezed,
+    Object? origin = freezed,
+    Object? destination = freezed,
+    Object? originType = freezed,
+    Object? destinationType = freezed,
+    Object? weight = freezed,
+    Object? courier = freezed,
+    Object? courirList = freezed,
   }) {
     return _then(_value.copyWith(
-      origin: origin == freezed ? _value.origin : origin as String,
-      destination:
-          destination == freezed ? _value.destination : destination as String,
-      originType:
-          originType == freezed ? _value.originType : originType as String,
+      origin: origin == freezed
+          ? _value.origin
+          : origin // ignore: cast_nullable_to_non_nullable
+              as String?,
+      destination: destination == freezed
+          ? _value.destination
+          : destination // ignore: cast_nullable_to_non_nullable
+              as String?,
+      originType: originType == freezed
+          ? _value.originType
+          : originType // ignore: cast_nullable_to_non_nullable
+              as String?,
       destinationType: destinationType == freezed
           ? _value.destinationType
-          : destinationType as String,
-      weight: weight == freezed ? _value.weight : weight as double,
-      courier: courier == freezed ? _value.courier : courier as String,
+          : destinationType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      weight: weight == freezed
+          ? _value.weight
+          : weight // ignore: cast_nullable_to_non_nullable
+              as double?,
+      courier: courier == freezed
+          ? _value.courier
+          : courier // ignore: cast_nullable_to_non_nullable
+              as String?,
       courirList: courirList == freezed
           ? _value.courirList
-          : courirList as List<OngkirCodeDataModel>,
+          : courirList // ignore: cast_nullable_to_non_nullable
+              as List<OngkirCodeDataModel>?,
     ));
   }
 }
@@ -121,13 +139,13 @@ abstract class _$CostRequestModelCopyWith<$Res>
       __$CostRequestModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String origin,
-      String destination,
-      String originType,
-      String destinationType,
-      double weight,
-      String courier,
-      List<OngkirCodeDataModel> courirList});
+      {String? origin,
+      String? destination,
+      String? originType,
+      String? destinationType,
+      double? weight,
+      String? courier,
+      List<OngkirCodeDataModel>? courirList});
 }
 
 /// @nodoc
@@ -143,35 +161,49 @@ class __$CostRequestModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object origin = freezed,
-    Object destination = freezed,
-    Object originType = freezed,
-    Object destinationType = freezed,
-    Object weight = freezed,
-    Object courier = freezed,
-    Object courirList = freezed,
+    Object? origin = freezed,
+    Object? destination = freezed,
+    Object? originType = freezed,
+    Object? destinationType = freezed,
+    Object? weight = freezed,
+    Object? courier = freezed,
+    Object? courirList = freezed,
   }) {
     return _then(_CostRequestModel(
-      origin: origin == freezed ? _value.origin : origin as String,
-      destination:
-          destination == freezed ? _value.destination : destination as String,
-      originType:
-          originType == freezed ? _value.originType : originType as String,
+      origin: origin == freezed
+          ? _value.origin
+          : origin // ignore: cast_nullable_to_non_nullable
+              as String?,
+      destination: destination == freezed
+          ? _value.destination
+          : destination // ignore: cast_nullable_to_non_nullable
+              as String?,
+      originType: originType == freezed
+          ? _value.originType
+          : originType // ignore: cast_nullable_to_non_nullable
+              as String?,
       destinationType: destinationType == freezed
           ? _value.destinationType
-          : destinationType as String,
-      weight: weight == freezed ? _value.weight : weight as double,
-      courier: courier == freezed ? _value.courier : courier as String,
+          : destinationType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      weight: weight == freezed
+          ? _value.weight
+          : weight // ignore: cast_nullable_to_non_nullable
+              as double?,
+      courier: courier == freezed
+          ? _value.courier
+          : courier // ignore: cast_nullable_to_non_nullable
+              as String?,
       courirList: courirList == freezed
           ? _value.courirList
-          : courirList as List<OngkirCodeDataModel>,
+          : courirList // ignore: cast_nullable_to_non_nullable
+              as List<OngkirCodeDataModel>?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CostRequestModel implements _CostRequestModel {
   _$_CostRequestModel(
       {this.origin,
@@ -186,19 +218,19 @@ class _$_CostRequestModel implements _CostRequestModel {
       _$_$_CostRequestModelFromJson(json);
 
   @override
-  final String origin;
+  final String? origin;
   @override
-  final String destination;
+  final String? destination;
   @override
-  final String originType;
+  final String? originType;
   @override
-  final String destinationType;
+  final String? destinationType;
   @override
-  final double weight;
+  final double? weight;
   @override
-  final String courier;
+  final String? courier;
   @override
-  final List<OngkirCodeDataModel> courirList;
+  final List<OngkirCodeDataModel>? courirList;
 
   @override
   String toString() {
@@ -254,32 +286,34 @@ class _$_CostRequestModel implements _CostRequestModel {
 
 abstract class _CostRequestModel implements CostRequestModel {
   factory _CostRequestModel(
-      {String origin,
-      String destination,
-      String originType,
-      String destinationType,
-      double weight,
-      String courier,
-      List<OngkirCodeDataModel> courirList}) = _$_CostRequestModel;
+      {String? origin,
+      String? destination,
+      String? originType,
+      String? destinationType,
+      double? weight,
+      String? courier,
+      List<OngkirCodeDataModel>? courirList}) = _$_CostRequestModel;
 
   factory _CostRequestModel.fromJson(Map<String, dynamic> json) =
       _$_CostRequestModel.fromJson;
 
   @override
-  String get origin;
+  String? get origin => throw _privateConstructorUsedError;
   @override
-  String get destination;
+  String? get destination => throw _privateConstructorUsedError;
   @override
-  String get originType;
+  String? get originType => throw _privateConstructorUsedError;
   @override
-  String get destinationType;
+  String? get destinationType => throw _privateConstructorUsedError;
   @override
-  double get weight;
+  double? get weight => throw _privateConstructorUsedError;
   @override
-  String get courier;
+  String? get courier => throw _privateConstructorUsedError;
   @override
-  List<OngkirCodeDataModel> get courirList;
+  List<OngkirCodeDataModel>? get courirList =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CostRequestModelCopyWith<_CostRequestModel> get copyWith;
+  _$CostRequestModelCopyWith<_CostRequestModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'midtrans_status_data_model.dart';
 
@@ -8,6 +8,10 @@ part of 'midtrans_status_data_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 MidtransStatusDataModel _$MidtransStatusDataModelFromJson(
     Map<String, dynamic> json) {
   return _MidtransStatusDataModel.fromJson(json);
@@ -17,20 +21,19 @@ MidtransStatusDataModel _$MidtransStatusDataModelFromJson(
 class _$MidtransStatusDataModelTearOff {
   const _$MidtransStatusDataModelTearOff();
 
-// ignore: unused_element
   _MidtransStatusDataModel call(
-      {@JsonKey(name: 'transaction_time') String transactionTime,
-      @JsonKey(name: 'gross_amount') String grossAmount,
-      @JsonKey(name: 'currency') String currency,
-      @JsonKey(name: 'order_id') String orderId,
-      @JsonKey(name: 'payment_type') String paymentType,
-      @JsonKey(name: 'signature_key') String signatureKey,
-      @JsonKey(name: 'status_code') String statusCode,
-      @JsonKey(name: 'transaction_id') String transactionId,
-      @JsonKey(name: 'transaction_status') String transactionStatus,
-      @JsonKey(name: 'fraud_status') String fraudStatus,
-      @JsonKey(name: 'status_message') String statusMessage,
-      @JsonKey(name: 'merchant_id') String merchantId}) {
+      {@JsonKey(name: 'transaction_time') String? transactionTime,
+      @JsonKey(name: 'gross_amount') String? grossAmount,
+      @JsonKey(name: 'currency') String? currency,
+      @JsonKey(name: 'order_id') String? orderId,
+      @JsonKey(name: 'payment_type') String? paymentType,
+      @JsonKey(name: 'signature_key') String? signatureKey,
+      @JsonKey(name: 'status_code') String? statusCode,
+      @JsonKey(name: 'transaction_id') String? transactionId,
+      @JsonKey(name: 'transaction_status') String? transactionStatus,
+      @JsonKey(name: 'fraud_status') String? fraudStatus,
+      @JsonKey(name: 'status_message') String? statusMessage,
+      @JsonKey(name: 'merchant_id') String? merchantId}) {
     return _MidtransStatusDataModel(
       transactionTime: transactionTime,
       grossAmount: grossAmount,
@@ -47,46 +50,45 @@ class _$MidtransStatusDataModelTearOff {
     );
   }
 
-// ignore: unused_element
   MidtransStatusDataModel fromJson(Map<String, Object> json) {
     return MidtransStatusDataModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $MidtransStatusDataModel = _$MidtransStatusDataModelTearOff();
 
 /// @nodoc
 mixin _$MidtransStatusDataModel {
   @JsonKey(name: 'transaction_time')
-  String get transactionTime;
+  String? get transactionTime => throw _privateConstructorUsedError;
   @JsonKey(name: 'gross_amount')
-  String get grossAmount;
+  String? get grossAmount => throw _privateConstructorUsedError;
   @JsonKey(name: 'currency')
-  String get currency;
+  String? get currency => throw _privateConstructorUsedError;
   @JsonKey(name: 'order_id')
-  String get orderId;
+  String? get orderId => throw _privateConstructorUsedError;
   @JsonKey(name: 'payment_type')
-  String get paymentType;
+  String? get paymentType => throw _privateConstructorUsedError;
   @JsonKey(name: 'signature_key')
-  String get signatureKey;
+  String? get signatureKey => throw _privateConstructorUsedError;
   @JsonKey(name: 'status_code')
-  String get statusCode;
+  String? get statusCode => throw _privateConstructorUsedError;
   @JsonKey(name: 'transaction_id')
-  String get transactionId;
+  String? get transactionId => throw _privateConstructorUsedError;
   @JsonKey(name: 'transaction_status')
-  String get transactionStatus;
+  String? get transactionStatus => throw _privateConstructorUsedError;
   @JsonKey(name: 'fraud_status')
-  String get fraudStatus;
+  String? get fraudStatus => throw _privateConstructorUsedError;
   @JsonKey(name: 'status_message')
-  String get statusMessage;
+  String? get statusMessage => throw _privateConstructorUsedError;
   @JsonKey(name: 'merchant_id')
-  String get merchantId;
+  String? get merchantId => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MidtransStatusDataModelCopyWith<MidtransStatusDataModel> get copyWith;
+  $MidtransStatusDataModelCopyWith<MidtransStatusDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -95,18 +97,18 @@ abstract class $MidtransStatusDataModelCopyWith<$Res> {
           $Res Function(MidtransStatusDataModel) then) =
       _$MidtransStatusDataModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'transaction_time') String transactionTime,
-      @JsonKey(name: 'gross_amount') String grossAmount,
-      @JsonKey(name: 'currency') String currency,
-      @JsonKey(name: 'order_id') String orderId,
-      @JsonKey(name: 'payment_type') String paymentType,
-      @JsonKey(name: 'signature_key') String signatureKey,
-      @JsonKey(name: 'status_code') String statusCode,
-      @JsonKey(name: 'transaction_id') String transactionId,
-      @JsonKey(name: 'transaction_status') String transactionStatus,
-      @JsonKey(name: 'fraud_status') String fraudStatus,
-      @JsonKey(name: 'status_message') String statusMessage,
-      @JsonKey(name: 'merchant_id') String merchantId});
+      {@JsonKey(name: 'transaction_time') String? transactionTime,
+      @JsonKey(name: 'gross_amount') String? grossAmount,
+      @JsonKey(name: 'currency') String? currency,
+      @JsonKey(name: 'order_id') String? orderId,
+      @JsonKey(name: 'payment_type') String? paymentType,
+      @JsonKey(name: 'signature_key') String? signatureKey,
+      @JsonKey(name: 'status_code') String? statusCode,
+      @JsonKey(name: 'transaction_id') String? transactionId,
+      @JsonKey(name: 'transaction_status') String? transactionStatus,
+      @JsonKey(name: 'fraud_status') String? fraudStatus,
+      @JsonKey(name: 'status_message') String? statusMessage,
+      @JsonKey(name: 'merchant_id') String? merchantId});
 }
 
 /// @nodoc
@@ -120,47 +122,68 @@ class _$MidtransStatusDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object transactionTime = freezed,
-    Object grossAmount = freezed,
-    Object currency = freezed,
-    Object orderId = freezed,
-    Object paymentType = freezed,
-    Object signatureKey = freezed,
-    Object statusCode = freezed,
-    Object transactionId = freezed,
-    Object transactionStatus = freezed,
-    Object fraudStatus = freezed,
-    Object statusMessage = freezed,
-    Object merchantId = freezed,
+    Object? transactionTime = freezed,
+    Object? grossAmount = freezed,
+    Object? currency = freezed,
+    Object? orderId = freezed,
+    Object? paymentType = freezed,
+    Object? signatureKey = freezed,
+    Object? statusCode = freezed,
+    Object? transactionId = freezed,
+    Object? transactionStatus = freezed,
+    Object? fraudStatus = freezed,
+    Object? statusMessage = freezed,
+    Object? merchantId = freezed,
   }) {
     return _then(_value.copyWith(
       transactionTime: transactionTime == freezed
           ? _value.transactionTime
-          : transactionTime as String,
-      grossAmount:
-          grossAmount == freezed ? _value.grossAmount : grossAmount as String,
-      currency: currency == freezed ? _value.currency : currency as String,
-      orderId: orderId == freezed ? _value.orderId : orderId as String,
-      paymentType:
-          paymentType == freezed ? _value.paymentType : paymentType as String,
+          : transactionTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      grossAmount: grossAmount == freezed
+          ? _value.grossAmount
+          : grossAmount // ignore: cast_nullable_to_non_nullable
+              as String?,
+      currency: currency == freezed
+          ? _value.currency
+          : currency // ignore: cast_nullable_to_non_nullable
+              as String?,
+      orderId: orderId == freezed
+          ? _value.orderId
+          : orderId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      paymentType: paymentType == freezed
+          ? _value.paymentType
+          : paymentType // ignore: cast_nullable_to_non_nullable
+              as String?,
       signatureKey: signatureKey == freezed
           ? _value.signatureKey
-          : signatureKey as String,
-      statusCode:
-          statusCode == freezed ? _value.statusCode : statusCode as String,
+          : signatureKey // ignore: cast_nullable_to_non_nullable
+              as String?,
+      statusCode: statusCode == freezed
+          ? _value.statusCode
+          : statusCode // ignore: cast_nullable_to_non_nullable
+              as String?,
       transactionId: transactionId == freezed
           ? _value.transactionId
-          : transactionId as String,
+          : transactionId // ignore: cast_nullable_to_non_nullable
+              as String?,
       transactionStatus: transactionStatus == freezed
           ? _value.transactionStatus
-          : transactionStatus as String,
-      fraudStatus:
-          fraudStatus == freezed ? _value.fraudStatus : fraudStatus as String,
+          : transactionStatus // ignore: cast_nullable_to_non_nullable
+              as String?,
+      fraudStatus: fraudStatus == freezed
+          ? _value.fraudStatus
+          : fraudStatus // ignore: cast_nullable_to_non_nullable
+              as String?,
       statusMessage: statusMessage == freezed
           ? _value.statusMessage
-          : statusMessage as String,
-      merchantId:
-          merchantId == freezed ? _value.merchantId : merchantId as String,
+          : statusMessage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      merchantId: merchantId == freezed
+          ? _value.merchantId
+          : merchantId // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -173,18 +196,18 @@ abstract class _$MidtransStatusDataModelCopyWith<$Res>
       __$MidtransStatusDataModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'transaction_time') String transactionTime,
-      @JsonKey(name: 'gross_amount') String grossAmount,
-      @JsonKey(name: 'currency') String currency,
-      @JsonKey(name: 'order_id') String orderId,
-      @JsonKey(name: 'payment_type') String paymentType,
-      @JsonKey(name: 'signature_key') String signatureKey,
-      @JsonKey(name: 'status_code') String statusCode,
-      @JsonKey(name: 'transaction_id') String transactionId,
-      @JsonKey(name: 'transaction_status') String transactionStatus,
-      @JsonKey(name: 'fraud_status') String fraudStatus,
-      @JsonKey(name: 'status_message') String statusMessage,
-      @JsonKey(name: 'merchant_id') String merchantId});
+      {@JsonKey(name: 'transaction_time') String? transactionTime,
+      @JsonKey(name: 'gross_amount') String? grossAmount,
+      @JsonKey(name: 'currency') String? currency,
+      @JsonKey(name: 'order_id') String? orderId,
+      @JsonKey(name: 'payment_type') String? paymentType,
+      @JsonKey(name: 'signature_key') String? signatureKey,
+      @JsonKey(name: 'status_code') String? statusCode,
+      @JsonKey(name: 'transaction_id') String? transactionId,
+      @JsonKey(name: 'transaction_status') String? transactionStatus,
+      @JsonKey(name: 'fraud_status') String? fraudStatus,
+      @JsonKey(name: 'status_message') String? statusMessage,
+      @JsonKey(name: 'merchant_id') String? merchantId});
 }
 
 /// @nodoc
@@ -201,54 +224,74 @@ class __$MidtransStatusDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object transactionTime = freezed,
-    Object grossAmount = freezed,
-    Object currency = freezed,
-    Object orderId = freezed,
-    Object paymentType = freezed,
-    Object signatureKey = freezed,
-    Object statusCode = freezed,
-    Object transactionId = freezed,
-    Object transactionStatus = freezed,
-    Object fraudStatus = freezed,
-    Object statusMessage = freezed,
-    Object merchantId = freezed,
+    Object? transactionTime = freezed,
+    Object? grossAmount = freezed,
+    Object? currency = freezed,
+    Object? orderId = freezed,
+    Object? paymentType = freezed,
+    Object? signatureKey = freezed,
+    Object? statusCode = freezed,
+    Object? transactionId = freezed,
+    Object? transactionStatus = freezed,
+    Object? fraudStatus = freezed,
+    Object? statusMessage = freezed,
+    Object? merchantId = freezed,
   }) {
     return _then(_MidtransStatusDataModel(
       transactionTime: transactionTime == freezed
           ? _value.transactionTime
-          : transactionTime as String,
-      grossAmount:
-          grossAmount == freezed ? _value.grossAmount : grossAmount as String,
-      currency: currency == freezed ? _value.currency : currency as String,
-      orderId: orderId == freezed ? _value.orderId : orderId as String,
-      paymentType:
-          paymentType == freezed ? _value.paymentType : paymentType as String,
+          : transactionTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      grossAmount: grossAmount == freezed
+          ? _value.grossAmount
+          : grossAmount // ignore: cast_nullable_to_non_nullable
+              as String?,
+      currency: currency == freezed
+          ? _value.currency
+          : currency // ignore: cast_nullable_to_non_nullable
+              as String?,
+      orderId: orderId == freezed
+          ? _value.orderId
+          : orderId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      paymentType: paymentType == freezed
+          ? _value.paymentType
+          : paymentType // ignore: cast_nullable_to_non_nullable
+              as String?,
       signatureKey: signatureKey == freezed
           ? _value.signatureKey
-          : signatureKey as String,
-      statusCode:
-          statusCode == freezed ? _value.statusCode : statusCode as String,
+          : signatureKey // ignore: cast_nullable_to_non_nullable
+              as String?,
+      statusCode: statusCode == freezed
+          ? _value.statusCode
+          : statusCode // ignore: cast_nullable_to_non_nullable
+              as String?,
       transactionId: transactionId == freezed
           ? _value.transactionId
-          : transactionId as String,
+          : transactionId // ignore: cast_nullable_to_non_nullable
+              as String?,
       transactionStatus: transactionStatus == freezed
           ? _value.transactionStatus
-          : transactionStatus as String,
-      fraudStatus:
-          fraudStatus == freezed ? _value.fraudStatus : fraudStatus as String,
+          : transactionStatus // ignore: cast_nullable_to_non_nullable
+              as String?,
+      fraudStatus: fraudStatus == freezed
+          ? _value.fraudStatus
+          : fraudStatus // ignore: cast_nullable_to_non_nullable
+              as String?,
       statusMessage: statusMessage == freezed
           ? _value.statusMessage
-          : statusMessage as String,
-      merchantId:
-          merchantId == freezed ? _value.merchantId : merchantId as String,
+          : statusMessage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      merchantId: merchantId == freezed
+          ? _value.merchantId
+          : merchantId // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MidtransStatusDataModel implements _MidtransStatusDataModel {
   _$_MidtransStatusDataModel(
       {@JsonKey(name: 'transaction_time') this.transactionTime,
@@ -269,40 +312,40 @@ class _$_MidtransStatusDataModel implements _MidtransStatusDataModel {
 
   @override
   @JsonKey(name: 'transaction_time')
-  final String transactionTime;
+  final String? transactionTime;
   @override
   @JsonKey(name: 'gross_amount')
-  final String grossAmount;
+  final String? grossAmount;
   @override
   @JsonKey(name: 'currency')
-  final String currency;
+  final String? currency;
   @override
   @JsonKey(name: 'order_id')
-  final String orderId;
+  final String? orderId;
   @override
   @JsonKey(name: 'payment_type')
-  final String paymentType;
+  final String? paymentType;
   @override
   @JsonKey(name: 'signature_key')
-  final String signatureKey;
+  final String? signatureKey;
   @override
   @JsonKey(name: 'status_code')
-  final String statusCode;
+  final String? statusCode;
   @override
   @JsonKey(name: 'transaction_id')
-  final String transactionId;
+  final String? transactionId;
   @override
   @JsonKey(name: 'transaction_status')
-  final String transactionStatus;
+  final String? transactionStatus;
   @override
   @JsonKey(name: 'fraud_status')
-  final String fraudStatus;
+  final String? fraudStatus;
   @override
   @JsonKey(name: 'status_message')
-  final String statusMessage;
+  final String? statusMessage;
   @override
   @JsonKey(name: 'merchant_id')
-  final String merchantId;
+  final String? merchantId;
 
   @override
   String toString() {
@@ -381,18 +424,18 @@ class _$_MidtransStatusDataModel implements _MidtransStatusDataModel {
 
 abstract class _MidtransStatusDataModel implements MidtransStatusDataModel {
   factory _MidtransStatusDataModel(
-          {@JsonKey(name: 'transaction_time') String transactionTime,
-          @JsonKey(name: 'gross_amount') String grossAmount,
-          @JsonKey(name: 'currency') String currency,
-          @JsonKey(name: 'order_id') String orderId,
-          @JsonKey(name: 'payment_type') String paymentType,
-          @JsonKey(name: 'signature_key') String signatureKey,
-          @JsonKey(name: 'status_code') String statusCode,
-          @JsonKey(name: 'transaction_id') String transactionId,
-          @JsonKey(name: 'transaction_status') String transactionStatus,
-          @JsonKey(name: 'fraud_status') String fraudStatus,
-          @JsonKey(name: 'status_message') String statusMessage,
-          @JsonKey(name: 'merchant_id') String merchantId}) =
+          {@JsonKey(name: 'transaction_time') String? transactionTime,
+          @JsonKey(name: 'gross_amount') String? grossAmount,
+          @JsonKey(name: 'currency') String? currency,
+          @JsonKey(name: 'order_id') String? orderId,
+          @JsonKey(name: 'payment_type') String? paymentType,
+          @JsonKey(name: 'signature_key') String? signatureKey,
+          @JsonKey(name: 'status_code') String? statusCode,
+          @JsonKey(name: 'transaction_id') String? transactionId,
+          @JsonKey(name: 'transaction_status') String? transactionStatus,
+          @JsonKey(name: 'fraud_status') String? fraudStatus,
+          @JsonKey(name: 'status_message') String? statusMessage,
+          @JsonKey(name: 'merchant_id') String? merchantId}) =
       _$_MidtransStatusDataModel;
 
   factory _MidtransStatusDataModel.fromJson(Map<String, dynamic> json) =
@@ -400,41 +443,42 @@ abstract class _MidtransStatusDataModel implements MidtransStatusDataModel {
 
   @override
   @JsonKey(name: 'transaction_time')
-  String get transactionTime;
+  String? get transactionTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'gross_amount')
-  String get grossAmount;
+  String? get grossAmount => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'currency')
-  String get currency;
+  String? get currency => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'order_id')
-  String get orderId;
+  String? get orderId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'payment_type')
-  String get paymentType;
+  String? get paymentType => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'signature_key')
-  String get signatureKey;
+  String? get signatureKey => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'status_code')
-  String get statusCode;
+  String? get statusCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'transaction_id')
-  String get transactionId;
+  String? get transactionId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'transaction_status')
-  String get transactionStatus;
+  String? get transactionStatus => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fraud_status')
-  String get fraudStatus;
+  String? get fraudStatus => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'status_message')
-  String get statusMessage;
+  String? get statusMessage => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'merchant_id')
-  String get merchantId;
+  String? get merchantId => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MidtransStatusDataModelCopyWith<_MidtransStatusDataModel> get copyWith;
+  _$MidtransStatusDataModelCopyWith<_MidtransStatusDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -17,13 +17,13 @@ part 'transaction_cubit.freezed.dart';
 @injectable
 class TransactionCubit extends Cubit<TransactionState> {
   TransactionCubit(this.iTransactionFacade) : super(TransactionState.initial());
-  final ITransactionFacade iTransactionFacade;
+  final ITransactionFacade? iTransactionFacade;
 
   void getHistoryTransactionByStatus(TransactionHistoryRequest request) async {
     emit(TransactionState.loading());
     try {
       final _result =
-          await iTransactionFacade.getHistoryTransactionByStatus(request);
+          await iTransactionFacade!.getHistoryTransactionByStatus(request);
       _result.fold(
         (l) => emit(TransactionState.error(l.toString())),
         (r) => emit(TransactionState.onGetHistoryTransaction(r)),
@@ -37,7 +37,7 @@ class TransactionCubit extends Cubit<TransactionState> {
       TransactionHistoryRequest request) async {
     emit(TransactionState.loading());
     try {
-      final _result = await iTransactionFacade
+      final _result = await iTransactionFacade!
           .getHistoryTransactionByMultipleStatus(request);
       _result.fold(
         (l) => emit(TransactionState.error(l.toString())),
@@ -53,7 +53,7 @@ class TransactionCubit extends Cubit<TransactionState> {
     emit(TransactionState.loading());
     try {
       final _result =
-          await iTransactionFacade.getHistoryTransactionByStatusV2(request);
+          await iTransactionFacade!.getHistoryTransactionByStatusV2(request);
       _result.fold(
         (l) => emit(TransactionState.error(l.toString())),
         (r) => emit(TransactionState.onGetHistoryTransactionV2(r)),
@@ -68,7 +68,7 @@ class TransactionCubit extends Cubit<TransactionState> {
     emit(TransactionState.loading());
     try {
       final _result =
-          await iTransactionFacade.getHistorySentTransaction(request);
+          await iTransactionFacade!.getHistorySentTransaction(request);
       _result.fold(
         (l) => emit(TransactionState.error(l.toString())),
         (r) => emit(TransactionState.onGetSentHistoryTransaction(r)),
@@ -78,10 +78,10 @@ class TransactionCubit extends Cubit<TransactionState> {
     }
   }
 
-  void createNewTransaction(TransRequest request) async {
+  void createNewTransaction(TransRequest? request) async {
     emit(TransactionState.loading());
     try {
-      final _result = await iTransactionFacade.addNewTransaction(request);
+      final _result = await iTransactionFacade!.addNewTransaction(request);
       _result.fold(
         (l) => emit(TransactionState.error(l.toString())),
         (r) => emit(TransactionState.onAddNewTransaction(r)),
@@ -91,11 +91,11 @@ class TransactionCubit extends Cubit<TransactionState> {
     }
   }
 
-  void checkMidtransTransactionStatus(String oerderId) async {
+  void checkMidtransTransactionStatus(String? oerderId) async {
     emit(TransactionState.loading());
     try {
       final _result =
-          await iTransactionFacade.checkMidtransPaymentStatus(oerderId);
+          await iTransactionFacade!.checkMidtransPaymentStatus(oerderId);
       _result.fold(
         (l) => emit(TransactionState.error(l.toString())),
         (r) => emit(TransactionState.onCheckMidtransStatus(r)),
@@ -105,10 +105,10 @@ class TransactionCubit extends Cubit<TransactionState> {
     }
   }
 
-  void getAllTransaction(String userId) async {
+  void getAllTransaction(String? userId) async {
     emit(TransactionState.loading());
     try {
-      final _result = await iTransactionFacade.getAllTransaction(userId);
+      final _result = await iTransactionFacade!.getAllTransaction(userId);
       _result.fold(
         (l) => emit(TransactionState.error(l.toString())),
         (r) => emit(TransactionState.onGetAllTransaction(r)),

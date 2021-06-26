@@ -41,7 +41,7 @@ class Pref {
 
   List<CategoryModel> getCategoryFromLocal() {
     try {
-      List _data = box.read<List<dynamic>>('categories');
+      List _data = box.read<List<dynamic>>('categories')!;
       final _result = _data.map((e) => CategoryModel.fromJson(e)).toList();
       return _result;
     } catch (e) {

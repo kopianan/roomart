@@ -9,7 +9,7 @@ import 'package:roomart/utils/constants.dart';
 import 'package:roomart/utils/formater.dart';
 
 class ItemListDetail extends StatefulWidget {
-  ItemListDetail({@required this.index});
+  ItemListDetail({required this.index});
   final int index;
   @override
   _ItemListDetailState createState() => _ItemListDetailState();
@@ -27,8 +27,8 @@ class _ItemListDetailState extends State<ItemListDetail> {
   Widget build(BuildContext context) {
     return GetX<CartController>(
       builder: (cart) {
-        var fullItem = cart.getCartItemData[widget.index].item;
-        var bought = cart.getCartItemData[widget.index].bought;
+        var fullItem = cart.getCartItemData[widget.index]!.item!;
+        var bought = cart.getCartItemData[widget.index]!.bought!;
         return Row(
           children: <Widget>[
             Expanded(
@@ -37,7 +37,7 @@ class _ItemListDetailState extends State<ItemListDetail> {
                   width: 100,
                   height: 100,
                   child: CustomImageProvider(
-                    url: Constants().imageBaseUrl + fullItem.pic,
+                    url: Constants().imageBaseUrl + fullItem.pic!,
                   )),
             ),
             Expanded(
@@ -49,14 +49,14 @@ class _ItemListDetailState extends State<ItemListDetail> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      fullItem.itemName,
+                      fullItem.itemName!,
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
                       style:
                           TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(height: 4),
-                    Text("Quantity: " + int.parse(bought.qty).toString(),
+                    Text("Quantity: " + int.parse(bought.qty!).toString(),
                         style: TextStyle())
                   ],
                 ),
@@ -93,9 +93,9 @@ class _ItemListDetailState extends State<ItemListDetail> {
   String isResellerCheck(BoughtItemDataModel data) {
     double price = 0;
     if (auth.checkIfReseller()) {
-      price = data.resellerPrice * double.parse(data.qty);
+      price = data.resellerPrice! * double.parse(data.qty!);
     } else {
-      price = (double.parse(data.price) * double.parse(data.qty));
+      price = (double.parse(data.price!) * double.parse(data.qty!));
     }
     return price.toString();
   }

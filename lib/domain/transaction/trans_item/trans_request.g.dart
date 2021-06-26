@@ -9,11 +9,9 @@ part of 'trans_request.dart';
 _$_TransRequest _$_$_TransRequestFromJson(Map<String, dynamic> json) {
   return _$_TransRequest(
     token: json['token'] as String,
-    salesTrans: (json['sales_trans'] as List)
-        ?.map((e) => e == null
-            ? null
-            : TransPostDataModel.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    salesTrans: (json['sales_trans'] as List<dynamic>?)
+        ?.map((e) => TransPostDataModel.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 

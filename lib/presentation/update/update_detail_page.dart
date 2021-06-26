@@ -5,17 +5,17 @@ import 'package:roomart/presentation/core/widget_collection.dart';
 
 class UpdateDetailPage extends StatefulWidget {
   static final String TAG = '/update_detail_page';
-  const UpdateDetailPage({Key key}) : super(key: key);
+  const UpdateDetailPage({Key? key}) : super(key: key);
 
   @override
   _UpdateDetailPageState createState() => _UpdateDetailPageState();
 }
 
 class _UpdateDetailPageState extends State<UpdateDetailPage> {
-  UpdateNewsDataModel _data;
+  UpdateNewsDataModel? _data;
   @override
   void initState() {
-    _data = Get.arguments as UpdateNewsDataModel;
+    _data = Get.arguments as UpdateNewsDataModel?;
     super.initState();
   }
 
@@ -31,7 +31,7 @@ class _UpdateDetailPageState extends State<UpdateDetailPage> {
           Container(
             height: 300,
             child: CustomImageProvider(
-              url: _data.imageURL,
+              url: _data!.imageURL,
             ),
           ),
           Padding(
@@ -40,7 +40,7 @@ class _UpdateDetailPageState extends State<UpdateDetailPage> {
               children: [
                 Container(
                   child: Text(
-                    _data.title,
+                    _data!.title!,
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -49,7 +49,7 @@ class _UpdateDetailPageState extends State<UpdateDetailPage> {
                 ),
                 Container(
                   child: Text(
-                    _data.title,
+                    _data!.title!,
                   ),
                 ),
               ],

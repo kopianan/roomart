@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'banner_data_model.dart';
 
@@ -8,6 +8,10 @@ part of 'banner_data_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 BannerDataModel _$BannerDataModelFromJson(Map<String, dynamic> json) {
   return _BannerDataModel.fromJson(json);
 }
@@ -16,36 +20,34 @@ BannerDataModel _$BannerDataModelFromJson(Map<String, dynamic> json) {
 class _$BannerDataModelTearOff {
   const _$BannerDataModelTearOff();
 
-// ignore: unused_element
   _BannerDataModel call(
-      {@JsonKey(name: 'BannerName') String bannerName,
-      @JsonKey(name: 'ImageList') List<String> imageLIst}) {
+      {@JsonKey(name: "BannerName") String? bannerName,
+      @JsonKey(name: "ImageList") List<String>? imageLIst}) {
     return _BannerDataModel(
       bannerName: bannerName,
       imageLIst: imageLIst,
     );
   }
 
-// ignore: unused_element
   BannerDataModel fromJson(Map<String, Object> json) {
     return BannerDataModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $BannerDataModel = _$BannerDataModelTearOff();
 
 /// @nodoc
 mixin _$BannerDataModel {
-  @JsonKey(name: 'BannerName')
-  String get bannerName;
-  @JsonKey(name: 'ImageList')
-  List<String> get imageLIst;
+  @JsonKey(name: "BannerName")
+  String? get bannerName => throw _privateConstructorUsedError;
+  @JsonKey(name: "ImageList")
+  List<String>? get imageLIst => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BannerDataModelCopyWith<BannerDataModel> get copyWith;
+  $BannerDataModelCopyWith<BannerDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -54,8 +56,8 @@ abstract class $BannerDataModelCopyWith<$Res> {
           BannerDataModel value, $Res Function(BannerDataModel) then) =
       _$BannerDataModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'BannerName') String bannerName,
-      @JsonKey(name: 'ImageList') List<String> imageLIst});
+      {@JsonKey(name: "BannerName") String? bannerName,
+      @JsonKey(name: "ImageList") List<String>? imageLIst});
 }
 
 /// @nodoc
@@ -69,14 +71,18 @@ class _$BannerDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object bannerName = freezed,
-    Object imageLIst = freezed,
+    Object? bannerName = freezed,
+    Object? imageLIst = freezed,
   }) {
     return _then(_value.copyWith(
-      bannerName:
-          bannerName == freezed ? _value.bannerName : bannerName as String,
-      imageLIst:
-          imageLIst == freezed ? _value.imageLIst : imageLIst as List<String>,
+      bannerName: bannerName == freezed
+          ? _value.bannerName
+          : bannerName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      imageLIst: imageLIst == freezed
+          ? _value.imageLIst
+          : imageLIst // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 }
@@ -89,8 +95,8 @@ abstract class _$BannerDataModelCopyWith<$Res>
       __$BannerDataModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'BannerName') String bannerName,
-      @JsonKey(name: 'ImageList') List<String> imageLIst});
+      {@JsonKey(name: "BannerName") String? bannerName,
+      @JsonKey(name: "ImageList") List<String>? imageLIst});
 }
 
 /// @nodoc
@@ -106,35 +112,38 @@ class __$BannerDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object bannerName = freezed,
-    Object imageLIst = freezed,
+    Object? bannerName = freezed,
+    Object? imageLIst = freezed,
   }) {
     return _then(_BannerDataModel(
-      bannerName:
-          bannerName == freezed ? _value.bannerName : bannerName as String,
-      imageLIst:
-          imageLIst == freezed ? _value.imageLIst : imageLIst as List<String>,
+      bannerName: bannerName == freezed
+          ? _value.bannerName
+          : bannerName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      imageLIst: imageLIst == freezed
+          ? _value.imageLIst
+          : imageLIst // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BannerDataModel implements _BannerDataModel {
   _$_BannerDataModel(
-      {@JsonKey(name: 'BannerName') this.bannerName,
-      @JsonKey(name: 'ImageList') this.imageLIst});
+      {@JsonKey(name: "BannerName") this.bannerName,
+      @JsonKey(name: "ImageList") this.imageLIst});
 
   factory _$_BannerDataModel.fromJson(Map<String, dynamic> json) =>
       _$_$_BannerDataModelFromJson(json);
 
   @override
-  @JsonKey(name: 'BannerName')
-  final String bannerName;
+  @JsonKey(name: "BannerName")
+  final String? bannerName;
   @override
-  @JsonKey(name: 'ImageList')
-  final List<String> imageLIst;
+  @JsonKey(name: "ImageList")
+  final List<String>? imageLIst;
 
   @override
   String toString() {
@@ -172,19 +181,21 @@ class _$_BannerDataModel implements _BannerDataModel {
 
 abstract class _BannerDataModel implements BannerDataModel {
   factory _BannerDataModel(
-      {@JsonKey(name: 'BannerName') String bannerName,
-      @JsonKey(name: 'ImageList') List<String> imageLIst}) = _$_BannerDataModel;
+          {@JsonKey(name: "BannerName") String? bannerName,
+          @JsonKey(name: "ImageList") List<String>? imageLIst}) =
+      _$_BannerDataModel;
 
   factory _BannerDataModel.fromJson(Map<String, dynamic> json) =
       _$_BannerDataModel.fromJson;
 
   @override
-  @JsonKey(name: 'BannerName')
-  String get bannerName;
+  @JsonKey(name: "BannerName")
+  String? get bannerName => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'ImageList')
-  List<String> get imageLIst;
+  @JsonKey(name: "ImageList")
+  List<String>? get imageLIst => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BannerDataModelCopyWith<_BannerDataModel> get copyWith;
+  _$BannerDataModelCopyWith<_BannerDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

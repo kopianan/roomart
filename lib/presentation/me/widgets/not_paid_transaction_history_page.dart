@@ -15,7 +15,7 @@ import '../../../injection.dart';
 class NotPaidTransactionHistory extends StatefulWidget {
   NotPaidTransactionHistory({this.status = "", this.customerId});
   final String status;
-  final String customerId;
+  final String? customerId;
   @override
   _NotPaidTransactionHistoryState createState() =>
       _NotPaidTransactionHistoryState();
@@ -24,9 +24,9 @@ class NotPaidTransactionHistory extends StatefulWidget {
 class _NotPaidTransactionHistoryState extends State<NotPaidTransactionHistory> {
   RefreshController _refreshController =
       RefreshController(initialRefresh: true);
-  String STATUS;
+  String? STATUS;
   static final int LIMIT = 10;
-  final transCubit = getIt<TransactionCubit>();
+  final TransactionCubit transCubit = getIt<TransactionCubit>();
   final transController = Get.put(TransactionController());
 
   void _onRefresh() {
@@ -98,7 +98,7 @@ class _NotPaidTransactionHistoryState extends State<NotPaidTransactionHistory> {
                 enablePullUp: true,
                 header: WaterDropHeader(),
                 footer: CustomFooter(
-                  builder: (BuildContext context, LoadStatus mode) {
+                  builder: (BuildContext context, LoadStatus? mode) {
                     Widget body;
                     if (mode == LoadStatus.idle) {
                       body = Text("pull up load");

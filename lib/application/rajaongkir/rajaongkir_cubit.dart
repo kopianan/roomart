@@ -13,12 +13,12 @@ part 'rajaongkir_cubit.freezed.dart';
 @injectable
 class RajaongkirCubit extends Cubit<RajaongkirState> {
   RajaongkirCubit(this.iTrajaOngkirFacade) : super(RajaongkirState.initial());
-  final ITrajaOngkirFacade iTrajaOngkirFacade;
+  final ITrajaOngkirFacade? iTrajaOngkirFacade;
 
   void getProvinceData() async {
     emit(RajaongkirState.loading());
     try {
-      final _result = await iTrajaOngkirFacade.getProvinceList();
+      final _result = await iTrajaOngkirFacade!.getProvinceList();
       _result.fold(
         (l) => emit(RajaongkirState.error(l.toString())),
         (r) => emit(RajaongkirState.getProvinceData(r)),
@@ -28,10 +28,10 @@ class RajaongkirCubit extends Cubit<RajaongkirState> {
     }
   }
 
-  void getCityData(String provinceId) async {
+  void getCityData(String? provinceId) async {
     emit(RajaongkirState.loading());
     try {
-      final _result = await iTrajaOngkirFacade.getCityDataList(provinceId);
+      final _result = await iTrajaOngkirFacade!.getCityDataList(provinceId);
       _result.fold(
         (l) => emit(RajaongkirState.error(l.toString())),
         (r) => emit(RajaongkirState.getCityData(r)),
@@ -41,10 +41,10 @@ class RajaongkirCubit extends Cubit<RajaongkirState> {
     }
   }
 
-  void getCost(CostRequestModel request) async {
+  void getCost(CostRequestModel? request) async {
     emit(RajaongkirState.loading());
     try {
-      final _result = await iTrajaOngkirFacade.getCost(request);
+      final _result = await iTrajaOngkirFacade!.getCost(request);
       _result.fold(
         (l) => emit(RajaongkirState.error(l.toString())),
         (r) => emit(RajaongkirState.getCostsList(r)),

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'trans_post_data_model.dart';
 
@@ -8,6 +8,10 @@ part of 'trans_post_data_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 TransPostDataModel _$TransPostDataModelFromJson(Map<String, dynamic> json) {
   return _TransPostDataModel.fromJson(json);
 }
@@ -16,25 +20,24 @@ TransPostDataModel _$TransPostDataModelFromJson(Map<String, dynamic> json) {
 class _$TransPostDataModelTearOff {
   const _$TransPostDataModelTearOff();
 
-// ignore: unused_element
   _TransPostDataModel call(
-      {@JsonKey(name: 'trans_no') String transNo,
-      @JsonKey(name: 'trans_type') String transType,
-      @JsonKey(name: 'location') String location,
-      @JsonKey(name: 'trans_dt') String transDt,
-      @JsonKey(name: 'customer') String customer,
-      @JsonKey(name: 'create_by') String createBy,
-      @JsonKey(name: 'remark') String remark,
-      @JsonKey(name: 'pmttype') String pmttype,
-      @JsonKey(name: 'paymentchannel') String paymentchannel,
-      @JsonKey(name: 'total_discount') String pmtterm,
-      @JsonKey(name: 'pmtterm') int bankId,
-      @JsonKey(name: 'bankId') String totalDiscount,
-      @JsonKey(name: 'parent_id') String parentId,
-      @JsonKey(name: 'is_reseller') bool isReseller,
-      @JsonKey(name: 'email') String email,
-      @JsonKey(name: 'fullname') String fullname,
-      @JsonKey(name: 'details') List<BoughtItemDataModel> details}) {
+      {@JsonKey(name: "trans_no") String? transNo,
+      @JsonKey(name: "trans_type") String? transType,
+      @JsonKey(name: "location") String? location,
+      @JsonKey(name: "trans_dt") String? transDt,
+      @JsonKey(name: "customer") String? customer,
+      @JsonKey(name: "create_by") String? createBy,
+      @JsonKey(name: "remark") String? remark,
+      @JsonKey(name: "pmttype") String? pmttype,
+      @JsonKey(name: "paymentchannel") String? paymentchannel,
+      @JsonKey(name: "total_discount") String? pmtterm,
+      @JsonKey(name: "pmtterm") int? bankId,
+      @JsonKey(name: "bankId") String? totalDiscount,
+      @JsonKey(name: "parent_id") String? parentId,
+      @JsonKey(name: "is_reseller") bool? isReseller,
+      @JsonKey(name: "email") String? email,
+      @JsonKey(name: "fullname") String? fullname,
+      @JsonKey(name: "details") List<BoughtItemDataModel?>? details}) {
     return _TransPostDataModel(
       transNo: transNo,
       transType: transType,
@@ -56,56 +59,55 @@ class _$TransPostDataModelTearOff {
     );
   }
 
-// ignore: unused_element
   TransPostDataModel fromJson(Map<String, Object> json) {
     return TransPostDataModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $TransPostDataModel = _$TransPostDataModelTearOff();
 
 /// @nodoc
 mixin _$TransPostDataModel {
-  @JsonKey(name: 'trans_no')
-  String get transNo;
-  @JsonKey(name: 'trans_type')
-  String get transType;
-  @JsonKey(name: 'location')
-  String get location;
-  @JsonKey(name: 'trans_dt')
-  String get transDt;
-  @JsonKey(name: 'customer')
-  String get customer;
-  @JsonKey(name: 'create_by')
-  String get createBy;
-  @JsonKey(name: 'remark')
-  String get remark;
-  @JsonKey(name: 'pmttype')
-  String get pmttype;
-  @JsonKey(name: 'paymentchannel')
-  String get paymentchannel;
-  @JsonKey(name: 'total_discount')
-  String get pmtterm;
-  @JsonKey(name: 'pmtterm')
-  int get bankId;
-  @JsonKey(name: 'bankId')
-  String get totalDiscount;
-  @JsonKey(name: 'parent_id')
-  String get parentId;
-  @JsonKey(name: 'is_reseller')
-  bool get isReseller;
-  @JsonKey(name: 'email')
-  String get email;
-  @JsonKey(name: 'fullname')
-  String get fullname;
-  @JsonKey(name: 'details')
-  List<BoughtItemDataModel> get details;
+  @JsonKey(name: "trans_no")
+  String? get transNo => throw _privateConstructorUsedError;
+  @JsonKey(name: "trans_type")
+  String? get transType => throw _privateConstructorUsedError;
+  @JsonKey(name: "location")
+  String? get location => throw _privateConstructorUsedError;
+  @JsonKey(name: "trans_dt")
+  String? get transDt => throw _privateConstructorUsedError;
+  @JsonKey(name: "customer")
+  String? get customer => throw _privateConstructorUsedError;
+  @JsonKey(name: "create_by")
+  String? get createBy => throw _privateConstructorUsedError;
+  @JsonKey(name: "remark")
+  String? get remark => throw _privateConstructorUsedError;
+  @JsonKey(name: "pmttype")
+  String? get pmttype => throw _privateConstructorUsedError;
+  @JsonKey(name: "paymentchannel")
+  String? get paymentchannel => throw _privateConstructorUsedError;
+  @JsonKey(name: "total_discount")
+  String? get pmtterm => throw _privateConstructorUsedError;
+  @JsonKey(name: "pmtterm")
+  int? get bankId => throw _privateConstructorUsedError;
+  @JsonKey(name: "bankId")
+  String? get totalDiscount => throw _privateConstructorUsedError;
+  @JsonKey(name: "parent_id")
+  String? get parentId => throw _privateConstructorUsedError;
+  @JsonKey(name: "is_reseller")
+  bool? get isReseller => throw _privateConstructorUsedError;
+  @JsonKey(name: "email")
+  String? get email => throw _privateConstructorUsedError;
+  @JsonKey(name: "fullname")
+  String? get fullname => throw _privateConstructorUsedError;
+  @JsonKey(name: "details")
+  List<BoughtItemDataModel?>? get details => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $TransPostDataModelCopyWith<TransPostDataModel> get copyWith;
+  $TransPostDataModelCopyWith<TransPostDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -114,23 +116,23 @@ abstract class $TransPostDataModelCopyWith<$Res> {
           TransPostDataModel value, $Res Function(TransPostDataModel) then) =
       _$TransPostDataModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'trans_no') String transNo,
-      @JsonKey(name: 'trans_type') String transType,
-      @JsonKey(name: 'location') String location,
-      @JsonKey(name: 'trans_dt') String transDt,
-      @JsonKey(name: 'customer') String customer,
-      @JsonKey(name: 'create_by') String createBy,
-      @JsonKey(name: 'remark') String remark,
-      @JsonKey(name: 'pmttype') String pmttype,
-      @JsonKey(name: 'paymentchannel') String paymentchannel,
-      @JsonKey(name: 'total_discount') String pmtterm,
-      @JsonKey(name: 'pmtterm') int bankId,
-      @JsonKey(name: 'bankId') String totalDiscount,
-      @JsonKey(name: 'parent_id') String parentId,
-      @JsonKey(name: 'is_reseller') bool isReseller,
-      @JsonKey(name: 'email') String email,
-      @JsonKey(name: 'fullname') String fullname,
-      @JsonKey(name: 'details') List<BoughtItemDataModel> details});
+      {@JsonKey(name: "trans_no") String? transNo,
+      @JsonKey(name: "trans_type") String? transType,
+      @JsonKey(name: "location") String? location,
+      @JsonKey(name: "trans_dt") String? transDt,
+      @JsonKey(name: "customer") String? customer,
+      @JsonKey(name: "create_by") String? createBy,
+      @JsonKey(name: "remark") String? remark,
+      @JsonKey(name: "pmttype") String? pmttype,
+      @JsonKey(name: "paymentchannel") String? paymentchannel,
+      @JsonKey(name: "total_discount") String? pmtterm,
+      @JsonKey(name: "pmtterm") int? bankId,
+      @JsonKey(name: "bankId") String? totalDiscount,
+      @JsonKey(name: "parent_id") String? parentId,
+      @JsonKey(name: "is_reseller") bool? isReseller,
+      @JsonKey(name: "email") String? email,
+      @JsonKey(name: "fullname") String? fullname,
+      @JsonKey(name: "details") List<BoughtItemDataModel?>? details});
 }
 
 /// @nodoc
@@ -144,49 +146,93 @@ class _$TransPostDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object transNo = freezed,
-    Object transType = freezed,
-    Object location = freezed,
-    Object transDt = freezed,
-    Object customer = freezed,
-    Object createBy = freezed,
-    Object remark = freezed,
-    Object pmttype = freezed,
-    Object paymentchannel = freezed,
-    Object pmtterm = freezed,
-    Object bankId = freezed,
-    Object totalDiscount = freezed,
-    Object parentId = freezed,
-    Object isReseller = freezed,
-    Object email = freezed,
-    Object fullname = freezed,
-    Object details = freezed,
+    Object? transNo = freezed,
+    Object? transType = freezed,
+    Object? location = freezed,
+    Object? transDt = freezed,
+    Object? customer = freezed,
+    Object? createBy = freezed,
+    Object? remark = freezed,
+    Object? pmttype = freezed,
+    Object? paymentchannel = freezed,
+    Object? pmtterm = freezed,
+    Object? bankId = freezed,
+    Object? totalDiscount = freezed,
+    Object? parentId = freezed,
+    Object? isReseller = freezed,
+    Object? email = freezed,
+    Object? fullname = freezed,
+    Object? details = freezed,
   }) {
     return _then(_value.copyWith(
-      transNo: transNo == freezed ? _value.transNo : transNo as String,
-      transType: transType == freezed ? _value.transType : transType as String,
-      location: location == freezed ? _value.location : location as String,
-      transDt: transDt == freezed ? _value.transDt : transDt as String,
-      customer: customer == freezed ? _value.customer : customer as String,
-      createBy: createBy == freezed ? _value.createBy : createBy as String,
-      remark: remark == freezed ? _value.remark : remark as String,
-      pmttype: pmttype == freezed ? _value.pmttype : pmttype as String,
+      transNo: transNo == freezed
+          ? _value.transNo
+          : transNo // ignore: cast_nullable_to_non_nullable
+              as String?,
+      transType: transType == freezed
+          ? _value.transType
+          : transType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as String?,
+      transDt: transDt == freezed
+          ? _value.transDt
+          : transDt // ignore: cast_nullable_to_non_nullable
+              as String?,
+      customer: customer == freezed
+          ? _value.customer
+          : customer // ignore: cast_nullable_to_non_nullable
+              as String?,
+      createBy: createBy == freezed
+          ? _value.createBy
+          : createBy // ignore: cast_nullable_to_non_nullable
+              as String?,
+      remark: remark == freezed
+          ? _value.remark
+          : remark // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pmttype: pmttype == freezed
+          ? _value.pmttype
+          : pmttype // ignore: cast_nullable_to_non_nullable
+              as String?,
       paymentchannel: paymentchannel == freezed
           ? _value.paymentchannel
-          : paymentchannel as String,
-      pmtterm: pmtterm == freezed ? _value.pmtterm : pmtterm as String,
-      bankId: bankId == freezed ? _value.bankId : bankId as int,
+          : paymentchannel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pmtterm: pmtterm == freezed
+          ? _value.pmtterm
+          : pmtterm // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bankId: bankId == freezed
+          ? _value.bankId
+          : bankId // ignore: cast_nullable_to_non_nullable
+              as int?,
       totalDiscount: totalDiscount == freezed
           ? _value.totalDiscount
-          : totalDiscount as String,
-      parentId: parentId == freezed ? _value.parentId : parentId as String,
-      isReseller:
-          isReseller == freezed ? _value.isReseller : isReseller as bool,
-      email: email == freezed ? _value.email : email as String,
-      fullname: fullname == freezed ? _value.fullname : fullname as String,
+          : totalDiscount // ignore: cast_nullable_to_non_nullable
+              as String?,
+      parentId: parentId == freezed
+          ? _value.parentId
+          : parentId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      isReseller: isReseller == freezed
+          ? _value.isReseller
+          : isReseller // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String?,
+      fullname: fullname == freezed
+          ? _value.fullname
+          : fullname // ignore: cast_nullable_to_non_nullable
+              as String?,
       details: details == freezed
           ? _value.details
-          : details as List<BoughtItemDataModel>,
+          : details // ignore: cast_nullable_to_non_nullable
+              as List<BoughtItemDataModel?>?,
     ));
   }
 }
@@ -199,23 +245,23 @@ abstract class _$TransPostDataModelCopyWith<$Res>
       __$TransPostDataModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'trans_no') String transNo,
-      @JsonKey(name: 'trans_type') String transType,
-      @JsonKey(name: 'location') String location,
-      @JsonKey(name: 'trans_dt') String transDt,
-      @JsonKey(name: 'customer') String customer,
-      @JsonKey(name: 'create_by') String createBy,
-      @JsonKey(name: 'remark') String remark,
-      @JsonKey(name: 'pmttype') String pmttype,
-      @JsonKey(name: 'paymentchannel') String paymentchannel,
-      @JsonKey(name: 'total_discount') String pmtterm,
-      @JsonKey(name: 'pmtterm') int bankId,
-      @JsonKey(name: 'bankId') String totalDiscount,
-      @JsonKey(name: 'parent_id') String parentId,
-      @JsonKey(name: 'is_reseller') bool isReseller,
-      @JsonKey(name: 'email') String email,
-      @JsonKey(name: 'fullname') String fullname,
-      @JsonKey(name: 'details') List<BoughtItemDataModel> details});
+      {@JsonKey(name: "trans_no") String? transNo,
+      @JsonKey(name: "trans_type") String? transType,
+      @JsonKey(name: "location") String? location,
+      @JsonKey(name: "trans_dt") String? transDt,
+      @JsonKey(name: "customer") String? customer,
+      @JsonKey(name: "create_by") String? createBy,
+      @JsonKey(name: "remark") String? remark,
+      @JsonKey(name: "pmttype") String? pmttype,
+      @JsonKey(name: "paymentchannel") String? paymentchannel,
+      @JsonKey(name: "total_discount") String? pmtterm,
+      @JsonKey(name: "pmtterm") int? bankId,
+      @JsonKey(name: "bankId") String? totalDiscount,
+      @JsonKey(name: "parent_id") String? parentId,
+      @JsonKey(name: "is_reseller") bool? isReseller,
+      @JsonKey(name: "email") String? email,
+      @JsonKey(name: "fullname") String? fullname,
+      @JsonKey(name: "details") List<BoughtItemDataModel?>? details});
 }
 
 /// @nodoc
@@ -231,130 +277,173 @@ class __$TransPostDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object transNo = freezed,
-    Object transType = freezed,
-    Object location = freezed,
-    Object transDt = freezed,
-    Object customer = freezed,
-    Object createBy = freezed,
-    Object remark = freezed,
-    Object pmttype = freezed,
-    Object paymentchannel = freezed,
-    Object pmtterm = freezed,
-    Object bankId = freezed,
-    Object totalDiscount = freezed,
-    Object parentId = freezed,
-    Object isReseller = freezed,
-    Object email = freezed,
-    Object fullname = freezed,
-    Object details = freezed,
+    Object? transNo = freezed,
+    Object? transType = freezed,
+    Object? location = freezed,
+    Object? transDt = freezed,
+    Object? customer = freezed,
+    Object? createBy = freezed,
+    Object? remark = freezed,
+    Object? pmttype = freezed,
+    Object? paymentchannel = freezed,
+    Object? pmtterm = freezed,
+    Object? bankId = freezed,
+    Object? totalDiscount = freezed,
+    Object? parentId = freezed,
+    Object? isReseller = freezed,
+    Object? email = freezed,
+    Object? fullname = freezed,
+    Object? details = freezed,
   }) {
     return _then(_TransPostDataModel(
-      transNo: transNo == freezed ? _value.transNo : transNo as String,
-      transType: transType == freezed ? _value.transType : transType as String,
-      location: location == freezed ? _value.location : location as String,
-      transDt: transDt == freezed ? _value.transDt : transDt as String,
-      customer: customer == freezed ? _value.customer : customer as String,
-      createBy: createBy == freezed ? _value.createBy : createBy as String,
-      remark: remark == freezed ? _value.remark : remark as String,
-      pmttype: pmttype == freezed ? _value.pmttype : pmttype as String,
+      transNo: transNo == freezed
+          ? _value.transNo
+          : transNo // ignore: cast_nullable_to_non_nullable
+              as String?,
+      transType: transType == freezed
+          ? _value.transType
+          : transType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as String?,
+      transDt: transDt == freezed
+          ? _value.transDt
+          : transDt // ignore: cast_nullable_to_non_nullable
+              as String?,
+      customer: customer == freezed
+          ? _value.customer
+          : customer // ignore: cast_nullable_to_non_nullable
+              as String?,
+      createBy: createBy == freezed
+          ? _value.createBy
+          : createBy // ignore: cast_nullable_to_non_nullable
+              as String?,
+      remark: remark == freezed
+          ? _value.remark
+          : remark // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pmttype: pmttype == freezed
+          ? _value.pmttype
+          : pmttype // ignore: cast_nullable_to_non_nullable
+              as String?,
       paymentchannel: paymentchannel == freezed
           ? _value.paymentchannel
-          : paymentchannel as String,
-      pmtterm: pmtterm == freezed ? _value.pmtterm : pmtterm as String,
-      bankId: bankId == freezed ? _value.bankId : bankId as int,
+          : paymentchannel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pmtterm: pmtterm == freezed
+          ? _value.pmtterm
+          : pmtterm // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bankId: bankId == freezed
+          ? _value.bankId
+          : bankId // ignore: cast_nullable_to_non_nullable
+              as int?,
       totalDiscount: totalDiscount == freezed
           ? _value.totalDiscount
-          : totalDiscount as String,
-      parentId: parentId == freezed ? _value.parentId : parentId as String,
-      isReseller:
-          isReseller == freezed ? _value.isReseller : isReseller as bool,
-      email: email == freezed ? _value.email : email as String,
-      fullname: fullname == freezed ? _value.fullname : fullname as String,
+          : totalDiscount // ignore: cast_nullable_to_non_nullable
+              as String?,
+      parentId: parentId == freezed
+          ? _value.parentId
+          : parentId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      isReseller: isReseller == freezed
+          ? _value.isReseller
+          : isReseller // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String?,
+      fullname: fullname == freezed
+          ? _value.fullname
+          : fullname // ignore: cast_nullable_to_non_nullable
+              as String?,
       details: details == freezed
           ? _value.details
-          : details as List<BoughtItemDataModel>,
+          : details // ignore: cast_nullable_to_non_nullable
+              as List<BoughtItemDataModel?>?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TransPostDataModel implements _TransPostDataModel {
   _$_TransPostDataModel(
-      {@JsonKey(name: 'trans_no') this.transNo,
-      @JsonKey(name: 'trans_type') this.transType,
-      @JsonKey(name: 'location') this.location,
-      @JsonKey(name: 'trans_dt') this.transDt,
-      @JsonKey(name: 'customer') this.customer,
-      @JsonKey(name: 'create_by') this.createBy,
-      @JsonKey(name: 'remark') this.remark,
-      @JsonKey(name: 'pmttype') this.pmttype,
-      @JsonKey(name: 'paymentchannel') this.paymentchannel,
-      @JsonKey(name: 'total_discount') this.pmtterm,
-      @JsonKey(name: 'pmtterm') this.bankId,
-      @JsonKey(name: 'bankId') this.totalDiscount,
-      @JsonKey(name: 'parent_id') this.parentId,
-      @JsonKey(name: 'is_reseller') this.isReseller,
-      @JsonKey(name: 'email') this.email,
-      @JsonKey(name: 'fullname') this.fullname,
-      @JsonKey(name: 'details') this.details});
+      {@JsonKey(name: "trans_no") this.transNo,
+      @JsonKey(name: "trans_type") this.transType,
+      @JsonKey(name: "location") this.location,
+      @JsonKey(name: "trans_dt") this.transDt,
+      @JsonKey(name: "customer") this.customer,
+      @JsonKey(name: "create_by") this.createBy,
+      @JsonKey(name: "remark") this.remark,
+      @JsonKey(name: "pmttype") this.pmttype,
+      @JsonKey(name: "paymentchannel") this.paymentchannel,
+      @JsonKey(name: "total_discount") this.pmtterm,
+      @JsonKey(name: "pmtterm") this.bankId,
+      @JsonKey(name: "bankId") this.totalDiscount,
+      @JsonKey(name: "parent_id") this.parentId,
+      @JsonKey(name: "is_reseller") this.isReseller,
+      @JsonKey(name: "email") this.email,
+      @JsonKey(name: "fullname") this.fullname,
+      @JsonKey(name: "details") this.details});
 
   factory _$_TransPostDataModel.fromJson(Map<String, dynamic> json) =>
       _$_$_TransPostDataModelFromJson(json);
 
   @override
-  @JsonKey(name: 'trans_no')
-  final String transNo;
+  @JsonKey(name: "trans_no")
+  final String? transNo;
   @override
-  @JsonKey(name: 'trans_type')
-  final String transType;
+  @JsonKey(name: "trans_type")
+  final String? transType;
   @override
-  @JsonKey(name: 'location')
-  final String location;
+  @JsonKey(name: "location")
+  final String? location;
   @override
-  @JsonKey(name: 'trans_dt')
-  final String transDt;
+  @JsonKey(name: "trans_dt")
+  final String? transDt;
   @override
-  @JsonKey(name: 'customer')
-  final String customer;
+  @JsonKey(name: "customer")
+  final String? customer;
   @override
-  @JsonKey(name: 'create_by')
-  final String createBy;
+  @JsonKey(name: "create_by")
+  final String? createBy;
   @override
-  @JsonKey(name: 'remark')
-  final String remark;
+  @JsonKey(name: "remark")
+  final String? remark;
   @override
-  @JsonKey(name: 'pmttype')
-  final String pmttype;
+  @JsonKey(name: "pmttype")
+  final String? pmttype;
   @override
-  @JsonKey(name: 'paymentchannel')
-  final String paymentchannel;
+  @JsonKey(name: "paymentchannel")
+  final String? paymentchannel;
   @override
-  @JsonKey(name: 'total_discount')
-  final String pmtterm;
+  @JsonKey(name: "total_discount")
+  final String? pmtterm;
   @override
-  @JsonKey(name: 'pmtterm')
-  final int bankId;
+  @JsonKey(name: "pmtterm")
+  final int? bankId;
   @override
-  @JsonKey(name: 'bankId')
-  final String totalDiscount;
+  @JsonKey(name: "bankId")
+  final String? totalDiscount;
   @override
-  @JsonKey(name: 'parent_id')
-  final String parentId;
+  @JsonKey(name: "parent_id")
+  final String? parentId;
   @override
-  @JsonKey(name: 'is_reseller')
-  final bool isReseller;
+  @JsonKey(name: "is_reseller")
+  final bool? isReseller;
   @override
-  @JsonKey(name: 'email')
-  final String email;
+  @JsonKey(name: "email")
+  final String? email;
   @override
-  @JsonKey(name: 'fullname')
-  final String fullname;
+  @JsonKey(name: "fullname")
+  final String? fullname;
   @override
-  @JsonKey(name: 'details')
-  final List<BoughtItemDataModel> details;
+  @JsonKey(name: "details")
+  final List<BoughtItemDataModel?>? details;
 
   @override
   String toString() {
@@ -448,80 +537,81 @@ class _$_TransPostDataModel implements _TransPostDataModel {
 
 abstract class _TransPostDataModel implements TransPostDataModel {
   factory _TransPostDataModel(
-          {@JsonKey(name: 'trans_no') String transNo,
-          @JsonKey(name: 'trans_type') String transType,
-          @JsonKey(name: 'location') String location,
-          @JsonKey(name: 'trans_dt') String transDt,
-          @JsonKey(name: 'customer') String customer,
-          @JsonKey(name: 'create_by') String createBy,
-          @JsonKey(name: 'remark') String remark,
-          @JsonKey(name: 'pmttype') String pmttype,
-          @JsonKey(name: 'paymentchannel') String paymentchannel,
-          @JsonKey(name: 'total_discount') String pmtterm,
-          @JsonKey(name: 'pmtterm') int bankId,
-          @JsonKey(name: 'bankId') String totalDiscount,
-          @JsonKey(name: 'parent_id') String parentId,
-          @JsonKey(name: 'is_reseller') bool isReseller,
-          @JsonKey(name: 'email') String email,
-          @JsonKey(name: 'fullname') String fullname,
-          @JsonKey(name: 'details') List<BoughtItemDataModel> details}) =
+          {@JsonKey(name: "trans_no") String? transNo,
+          @JsonKey(name: "trans_type") String? transType,
+          @JsonKey(name: "location") String? location,
+          @JsonKey(name: "trans_dt") String? transDt,
+          @JsonKey(name: "customer") String? customer,
+          @JsonKey(name: "create_by") String? createBy,
+          @JsonKey(name: "remark") String? remark,
+          @JsonKey(name: "pmttype") String? pmttype,
+          @JsonKey(name: "paymentchannel") String? paymentchannel,
+          @JsonKey(name: "total_discount") String? pmtterm,
+          @JsonKey(name: "pmtterm") int? bankId,
+          @JsonKey(name: "bankId") String? totalDiscount,
+          @JsonKey(name: "parent_id") String? parentId,
+          @JsonKey(name: "is_reseller") bool? isReseller,
+          @JsonKey(name: "email") String? email,
+          @JsonKey(name: "fullname") String? fullname,
+          @JsonKey(name: "details") List<BoughtItemDataModel?>? details}) =
       _$_TransPostDataModel;
 
   factory _TransPostDataModel.fromJson(Map<String, dynamic> json) =
       _$_TransPostDataModel.fromJson;
 
   @override
-  @JsonKey(name: 'trans_no')
-  String get transNo;
+  @JsonKey(name: "trans_no")
+  String? get transNo => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'trans_type')
-  String get transType;
+  @JsonKey(name: "trans_type")
+  String? get transType => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'location')
-  String get location;
+  @JsonKey(name: "location")
+  String? get location => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'trans_dt')
-  String get transDt;
+  @JsonKey(name: "trans_dt")
+  String? get transDt => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'customer')
-  String get customer;
+  @JsonKey(name: "customer")
+  String? get customer => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'create_by')
-  String get createBy;
+  @JsonKey(name: "create_by")
+  String? get createBy => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'remark')
-  String get remark;
+  @JsonKey(name: "remark")
+  String? get remark => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'pmttype')
-  String get pmttype;
+  @JsonKey(name: "pmttype")
+  String? get pmttype => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'paymentchannel')
-  String get paymentchannel;
+  @JsonKey(name: "paymentchannel")
+  String? get paymentchannel => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'total_discount')
-  String get pmtterm;
+  @JsonKey(name: "total_discount")
+  String? get pmtterm => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'pmtterm')
-  int get bankId;
+  @JsonKey(name: "pmtterm")
+  int? get bankId => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'bankId')
-  String get totalDiscount;
+  @JsonKey(name: "bankId")
+  String? get totalDiscount => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'parent_id')
-  String get parentId;
+  @JsonKey(name: "parent_id")
+  String? get parentId => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'is_reseller')
-  bool get isReseller;
+  @JsonKey(name: "is_reseller")
+  bool? get isReseller => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'email')
-  String get email;
+  @JsonKey(name: "email")
+  String? get email => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'fullname')
-  String get fullname;
+  @JsonKey(name: "fullname")
+  String? get fullname => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'details')
-  List<BoughtItemDataModel> get details;
+  @JsonKey(name: "details")
+  List<BoughtItemDataModel?>? get details => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TransPostDataModelCopyWith<_TransPostDataModel> get copyWith;
+  _$TransPostDataModelCopyWith<_TransPostDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

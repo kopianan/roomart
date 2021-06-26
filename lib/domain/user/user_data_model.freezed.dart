@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'user_data_model.dart';
 
@@ -8,6 +8,10 @@ part of 'user_data_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 UserDataModel _$UserDataModelFromJson(Map<String, dynamic> json) {
   return _UserDataModel.fromJson(json);
 }
@@ -16,40 +20,39 @@ UserDataModel _$UserDataModelFromJson(Map<String, dynamic> json) {
 class _$UserDataModelTearOff {
   const _$UserDataModelTearOff();
 
-// ignore: unused_element
   _UserDataModel call(
-      {@JsonKey(name: "userId", defaultValue: "") String userId,
-      @JsonKey(name: "error", defaultValue: 0) int error,
-      @JsonKey(name: "parentId", defaultValue: "") String parentId,
-      @JsonKey(name: "userName", defaultValue: "") String userName,
-      @JsonKey(name: "message", defaultValue: "") String messageError,
-      @JsonKey(name: "email", defaultValue: "") String email,
-      @JsonKey(name: "phone", defaultValue: "") String phone,
-      @JsonKey(name: "password", defaultValue: "") String password,
-      @JsonKey(name: "fullName", defaultValue: "") String fullName,
-      @JsonKey(name: "typeIds", defaultValue: "") String typeIds,
-      @JsonKey(name: "status", defaultValue: 0) double status,
-      @JsonKey(name: "address", defaultValue: "") String address,
-      @JsonKey(name: "shipTo1", defaultValue: "") String shipTo1,
-      @JsonKey(name: "shipTo2", defaultValue: "") String shipTo2,
-      @JsonKey(name: "country", defaultValue: "") String country,
-      @JsonKey(name: "province", defaultValue: "") String province,
-      @JsonKey(name: "city", defaultValue: "") String city,
-      @JsonKey(name: "district", defaultValue: "") String district,
-      @JsonKey(name: "village", defaultValue: "") String village,
-      @JsonKey(name: "terrId1", defaultValue: "") String terrId1,
-      @JsonKey(name: "terrId2", defaultValue: "") String terrId2,
-      @JsonKey(name: "terrId3", defaultValue: "") String terrId3,
-      @JsonKey(name: "terrId4", defaultValue: "") String terrId4,
-      @JsonKey(name: "longitudes", defaultValue: 0) double longitudes,
-      @JsonKey(name: "latitudes", defaultValue: 0) double latitudes,
-      @JsonKey(name: "fbToken", defaultValue: "") String fbToken,
-      @JsonKey(name: "googleToken", defaultValue: "") String googleToken,
-      @JsonKey(name: "msgToken", defaultValue: "") String msgToken,
-      @JsonKey(name: "otherToken", defaultValue: "") String otherToken,
-      @JsonKey(name: "alreadyInSave", defaultValue: false) bool alreadyInSave,
-      @JsonKey(name: "isNew", defaultValue: false) bool isNew,
-      @JsonKey(name: "modified", defaultValue: false) bool modified}) {
+      {@JsonKey(name: "userId", defaultValue: "") String? userId,
+      @JsonKey(name: "error", defaultValue: 0) int? error,
+      @JsonKey(name: "parentId", defaultValue: "") String? parentId,
+      @JsonKey(name: "userName", defaultValue: "") String? userName,
+      @JsonKey(name: "message", defaultValue: "") String? messageError,
+      @JsonKey(name: "email", defaultValue: "") String? email,
+      @JsonKey(name: "phone", defaultValue: "") String? phone,
+      @JsonKey(name: "password", defaultValue: "") String? password,
+      @JsonKey(name: "fullName", defaultValue: "") String? fullName,
+      @JsonKey(name: "typeIds", defaultValue: "") String? typeIds,
+      @JsonKey(name: "status", defaultValue: 0) double? status,
+      @JsonKey(name: "address", defaultValue: "") String? address,
+      @JsonKey(name: "shipTo1", defaultValue: "") String? shipTo1,
+      @JsonKey(name: "shipTo2", defaultValue: "") String? shipTo2,
+      @JsonKey(name: "country", defaultValue: "") String? country,
+      @JsonKey(name: "province", defaultValue: "") String? province,
+      @JsonKey(name: "city", defaultValue: "") String? city,
+      @JsonKey(name: "district", defaultValue: "") String? district,
+      @JsonKey(name: "village", defaultValue: "") String? village,
+      @JsonKey(name: "terrId1", defaultValue: "") String? terrId1,
+      @JsonKey(name: "terrId2", defaultValue: "") String? terrId2,
+      @JsonKey(name: "terrId3", defaultValue: "") String? terrId3,
+      @JsonKey(name: "terrId4", defaultValue: "") String? terrId4,
+      @JsonKey(name: "longitudes", defaultValue: 0) double? longitudes,
+      @JsonKey(name: "latitudes", defaultValue: 0) double? latitudes,
+      @JsonKey(name: "fbToken", defaultValue: "") String? fbToken,
+      @JsonKey(name: "googleToken", defaultValue: "") String? googleToken,
+      @JsonKey(name: "msgToken", defaultValue: "") String? msgToken,
+      @JsonKey(name: "otherToken", defaultValue: "") String? otherToken,
+      @JsonKey(name: "alreadyInSave", defaultValue: false) bool? alreadyInSave,
+      @JsonKey(name: "isNew", defaultValue: false) bool? isNew,
+      @JsonKey(name: "modified", defaultValue: false) bool? modified}) {
     return _UserDataModel(
       userId: userId,
       error: error,
@@ -86,86 +89,85 @@ class _$UserDataModelTearOff {
     );
   }
 
-// ignore: unused_element
   UserDataModel fromJson(Map<String, Object> json) {
     return UserDataModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $UserDataModel = _$UserDataModelTearOff();
 
 /// @nodoc
 mixin _$UserDataModel {
   @JsonKey(name: "userId", defaultValue: "")
-  String get userId;
+  String? get userId => throw _privateConstructorUsedError;
   @JsonKey(name: "error", defaultValue: 0)
-  int get error;
+  int? get error => throw _privateConstructorUsedError;
   @JsonKey(name: "parentId", defaultValue: "")
-  String get parentId;
+  String? get parentId => throw _privateConstructorUsedError;
   @JsonKey(name: "userName", defaultValue: "")
-  String get userName;
+  String? get userName => throw _privateConstructorUsedError;
   @JsonKey(name: "message", defaultValue: "")
-  String get messageError;
+  String? get messageError => throw _privateConstructorUsedError;
   @JsonKey(name: "email", defaultValue: "")
-  String get email;
+  String? get email => throw _privateConstructorUsedError;
   @JsonKey(name: "phone", defaultValue: "")
-  String get phone;
+  String? get phone => throw _privateConstructorUsedError;
   @JsonKey(name: "password", defaultValue: "")
-  String get password;
+  String? get password => throw _privateConstructorUsedError;
   @JsonKey(name: "fullName", defaultValue: "")
-  String get fullName;
+  String? get fullName => throw _privateConstructorUsedError;
   @JsonKey(name: "typeIds", defaultValue: "")
-  String get typeIds;
+  String? get typeIds => throw _privateConstructorUsedError;
   @JsonKey(name: "status", defaultValue: 0)
-  double get status;
+  double? get status => throw _privateConstructorUsedError;
   @JsonKey(name: "address", defaultValue: "")
-  String get address;
+  String? get address => throw _privateConstructorUsedError;
   @JsonKey(name: "shipTo1", defaultValue: "")
-  String get shipTo1;
+  String? get shipTo1 => throw _privateConstructorUsedError;
   @JsonKey(name: "shipTo2", defaultValue: "")
-  String get shipTo2;
+  String? get shipTo2 => throw _privateConstructorUsedError;
   @JsonKey(name: "country", defaultValue: "")
-  String get country;
+  String? get country => throw _privateConstructorUsedError;
   @JsonKey(name: "province", defaultValue: "")
-  String get province;
+  String? get province => throw _privateConstructorUsedError;
   @JsonKey(name: "city", defaultValue: "")
-  String get city;
+  String? get city => throw _privateConstructorUsedError;
   @JsonKey(name: "district", defaultValue: "")
-  String get district;
+  String? get district => throw _privateConstructorUsedError;
   @JsonKey(name: "village", defaultValue: "")
-  String get village;
+  String? get village => throw _privateConstructorUsedError;
   @JsonKey(name: "terrId1", defaultValue: "")
-  String get terrId1;
+  String? get terrId1 => throw _privateConstructorUsedError;
   @JsonKey(name: "terrId2", defaultValue: "")
-  String get terrId2;
+  String? get terrId2 => throw _privateConstructorUsedError;
   @JsonKey(name: "terrId3", defaultValue: "")
-  String get terrId3;
+  String? get terrId3 => throw _privateConstructorUsedError;
   @JsonKey(name: "terrId4", defaultValue: "")
-  String get terrId4;
+  String? get terrId4 => throw _privateConstructorUsedError;
   @JsonKey(name: "longitudes", defaultValue: 0)
-  double get longitudes;
+  double? get longitudes => throw _privateConstructorUsedError;
   @JsonKey(name: "latitudes", defaultValue: 0)
-  double get latitudes;
+  double? get latitudes => throw _privateConstructorUsedError;
   @JsonKey(name: "fbToken", defaultValue: "")
-  String get fbToken;
+  String? get fbToken => throw _privateConstructorUsedError;
   @JsonKey(name: "googleToken", defaultValue: "")
-  String get googleToken;
+  String? get googleToken => throw _privateConstructorUsedError;
   @JsonKey(name: "msgToken", defaultValue: "")
-  String get msgToken;
+  String? get msgToken => throw _privateConstructorUsedError;
   @JsonKey(name: "otherToken", defaultValue: "")
-  String get otherToken;
+  String? get otherToken => throw _privateConstructorUsedError;
   @JsonKey(name: "alreadyInSave", defaultValue: false)
-  bool get alreadyInSave;
+  bool? get alreadyInSave => throw _privateConstructorUsedError;
   @JsonKey(name: "isNew", defaultValue: false)
-  bool get isNew;
+  bool? get isNew => throw _privateConstructorUsedError;
   @JsonKey(name: "modified", defaultValue: false)
-  bool get modified;
+  bool? get modified => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UserDataModelCopyWith<UserDataModel> get copyWith;
+  $UserDataModelCopyWith<UserDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -174,38 +176,38 @@ abstract class $UserDataModelCopyWith<$Res> {
           UserDataModel value, $Res Function(UserDataModel) then) =
       _$UserDataModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: "userId", defaultValue: "") String userId,
-      @JsonKey(name: "error", defaultValue: 0) int error,
-      @JsonKey(name: "parentId", defaultValue: "") String parentId,
-      @JsonKey(name: "userName", defaultValue: "") String userName,
-      @JsonKey(name: "message", defaultValue: "") String messageError,
-      @JsonKey(name: "email", defaultValue: "") String email,
-      @JsonKey(name: "phone", defaultValue: "") String phone,
-      @JsonKey(name: "password", defaultValue: "") String password,
-      @JsonKey(name: "fullName", defaultValue: "") String fullName,
-      @JsonKey(name: "typeIds", defaultValue: "") String typeIds,
-      @JsonKey(name: "status", defaultValue: 0) double status,
-      @JsonKey(name: "address", defaultValue: "") String address,
-      @JsonKey(name: "shipTo1", defaultValue: "") String shipTo1,
-      @JsonKey(name: "shipTo2", defaultValue: "") String shipTo2,
-      @JsonKey(name: "country", defaultValue: "") String country,
-      @JsonKey(name: "province", defaultValue: "") String province,
-      @JsonKey(name: "city", defaultValue: "") String city,
-      @JsonKey(name: "district", defaultValue: "") String district,
-      @JsonKey(name: "village", defaultValue: "") String village,
-      @JsonKey(name: "terrId1", defaultValue: "") String terrId1,
-      @JsonKey(name: "terrId2", defaultValue: "") String terrId2,
-      @JsonKey(name: "terrId3", defaultValue: "") String terrId3,
-      @JsonKey(name: "terrId4", defaultValue: "") String terrId4,
-      @JsonKey(name: "longitudes", defaultValue: 0) double longitudes,
-      @JsonKey(name: "latitudes", defaultValue: 0) double latitudes,
-      @JsonKey(name: "fbToken", defaultValue: "") String fbToken,
-      @JsonKey(name: "googleToken", defaultValue: "") String googleToken,
-      @JsonKey(name: "msgToken", defaultValue: "") String msgToken,
-      @JsonKey(name: "otherToken", defaultValue: "") String otherToken,
-      @JsonKey(name: "alreadyInSave", defaultValue: false) bool alreadyInSave,
-      @JsonKey(name: "isNew", defaultValue: false) bool isNew,
-      @JsonKey(name: "modified", defaultValue: false) bool modified});
+      {@JsonKey(name: "userId", defaultValue: "") String? userId,
+      @JsonKey(name: "error", defaultValue: 0) int? error,
+      @JsonKey(name: "parentId", defaultValue: "") String? parentId,
+      @JsonKey(name: "userName", defaultValue: "") String? userName,
+      @JsonKey(name: "message", defaultValue: "") String? messageError,
+      @JsonKey(name: "email", defaultValue: "") String? email,
+      @JsonKey(name: "phone", defaultValue: "") String? phone,
+      @JsonKey(name: "password", defaultValue: "") String? password,
+      @JsonKey(name: "fullName", defaultValue: "") String? fullName,
+      @JsonKey(name: "typeIds", defaultValue: "") String? typeIds,
+      @JsonKey(name: "status", defaultValue: 0) double? status,
+      @JsonKey(name: "address", defaultValue: "") String? address,
+      @JsonKey(name: "shipTo1", defaultValue: "") String? shipTo1,
+      @JsonKey(name: "shipTo2", defaultValue: "") String? shipTo2,
+      @JsonKey(name: "country", defaultValue: "") String? country,
+      @JsonKey(name: "province", defaultValue: "") String? province,
+      @JsonKey(name: "city", defaultValue: "") String? city,
+      @JsonKey(name: "district", defaultValue: "") String? district,
+      @JsonKey(name: "village", defaultValue: "") String? village,
+      @JsonKey(name: "terrId1", defaultValue: "") String? terrId1,
+      @JsonKey(name: "terrId2", defaultValue: "") String? terrId2,
+      @JsonKey(name: "terrId3", defaultValue: "") String? terrId3,
+      @JsonKey(name: "terrId4", defaultValue: "") String? terrId4,
+      @JsonKey(name: "longitudes", defaultValue: 0) double? longitudes,
+      @JsonKey(name: "latitudes", defaultValue: 0) double? latitudes,
+      @JsonKey(name: "fbToken", defaultValue: "") String? fbToken,
+      @JsonKey(name: "googleToken", defaultValue: "") String? googleToken,
+      @JsonKey(name: "msgToken", defaultValue: "") String? msgToken,
+      @JsonKey(name: "otherToken", defaultValue: "") String? otherToken,
+      @JsonKey(name: "alreadyInSave", defaultValue: false) bool? alreadyInSave,
+      @JsonKey(name: "isNew", defaultValue: false) bool? isNew,
+      @JsonKey(name: "modified", defaultValue: false) bool? modified});
 }
 
 /// @nodoc
@@ -219,79 +221,168 @@ class _$UserDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object userId = freezed,
-    Object error = freezed,
-    Object parentId = freezed,
-    Object userName = freezed,
-    Object messageError = freezed,
-    Object email = freezed,
-    Object phone = freezed,
-    Object password = freezed,
-    Object fullName = freezed,
-    Object typeIds = freezed,
-    Object status = freezed,
-    Object address = freezed,
-    Object shipTo1 = freezed,
-    Object shipTo2 = freezed,
-    Object country = freezed,
-    Object province = freezed,
-    Object city = freezed,
-    Object district = freezed,
-    Object village = freezed,
-    Object terrId1 = freezed,
-    Object terrId2 = freezed,
-    Object terrId3 = freezed,
-    Object terrId4 = freezed,
-    Object longitudes = freezed,
-    Object latitudes = freezed,
-    Object fbToken = freezed,
-    Object googleToken = freezed,
-    Object msgToken = freezed,
-    Object otherToken = freezed,
-    Object alreadyInSave = freezed,
-    Object isNew = freezed,
-    Object modified = freezed,
+    Object? userId = freezed,
+    Object? error = freezed,
+    Object? parentId = freezed,
+    Object? userName = freezed,
+    Object? messageError = freezed,
+    Object? email = freezed,
+    Object? phone = freezed,
+    Object? password = freezed,
+    Object? fullName = freezed,
+    Object? typeIds = freezed,
+    Object? status = freezed,
+    Object? address = freezed,
+    Object? shipTo1 = freezed,
+    Object? shipTo2 = freezed,
+    Object? country = freezed,
+    Object? province = freezed,
+    Object? city = freezed,
+    Object? district = freezed,
+    Object? village = freezed,
+    Object? terrId1 = freezed,
+    Object? terrId2 = freezed,
+    Object? terrId3 = freezed,
+    Object? terrId4 = freezed,
+    Object? longitudes = freezed,
+    Object? latitudes = freezed,
+    Object? fbToken = freezed,
+    Object? googleToken = freezed,
+    Object? msgToken = freezed,
+    Object? otherToken = freezed,
+    Object? alreadyInSave = freezed,
+    Object? isNew = freezed,
+    Object? modified = freezed,
   }) {
     return _then(_value.copyWith(
-      userId: userId == freezed ? _value.userId : userId as String,
-      error: error == freezed ? _value.error : error as int,
-      parentId: parentId == freezed ? _value.parentId : parentId as String,
-      userName: userName == freezed ? _value.userName : userName as String,
+      userId: userId == freezed
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      error: error == freezed
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as int?,
+      parentId: parentId == freezed
+          ? _value.parentId
+          : parentId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      userName: userName == freezed
+          ? _value.userName
+          : userName // ignore: cast_nullable_to_non_nullable
+              as String?,
       messageError: messageError == freezed
           ? _value.messageError
-          : messageError as String,
-      email: email == freezed ? _value.email : email as String,
-      phone: phone == freezed ? _value.phone : phone as String,
-      password: password == freezed ? _value.password : password as String,
-      fullName: fullName == freezed ? _value.fullName : fullName as String,
-      typeIds: typeIds == freezed ? _value.typeIds : typeIds as String,
-      status: status == freezed ? _value.status : status as double,
-      address: address == freezed ? _value.address : address as String,
-      shipTo1: shipTo1 == freezed ? _value.shipTo1 : shipTo1 as String,
-      shipTo2: shipTo2 == freezed ? _value.shipTo2 : shipTo2 as String,
-      country: country == freezed ? _value.country : country as String,
-      province: province == freezed ? _value.province : province as String,
-      city: city == freezed ? _value.city : city as String,
-      district: district == freezed ? _value.district : district as String,
-      village: village == freezed ? _value.village : village as String,
-      terrId1: terrId1 == freezed ? _value.terrId1 : terrId1 as String,
-      terrId2: terrId2 == freezed ? _value.terrId2 : terrId2 as String,
-      terrId3: terrId3 == freezed ? _value.terrId3 : terrId3 as String,
-      terrId4: terrId4 == freezed ? _value.terrId4 : terrId4 as String,
-      longitudes:
-          longitudes == freezed ? _value.longitudes : longitudes as double,
-      latitudes: latitudes == freezed ? _value.latitudes : latitudes as double,
-      fbToken: fbToken == freezed ? _value.fbToken : fbToken as String,
-      googleToken:
-          googleToken == freezed ? _value.googleToken : googleToken as String,
-      msgToken: msgToken == freezed ? _value.msgToken : msgToken as String,
-      otherToken:
-          otherToken == freezed ? _value.otherToken : otherToken as String,
+          : messageError // ignore: cast_nullable_to_non_nullable
+              as String?,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String?,
+      phone: phone == freezed
+          ? _value.phone
+          : phone // ignore: cast_nullable_to_non_nullable
+              as String?,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String?,
+      fullName: fullName == freezed
+          ? _value.fullName
+          : fullName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      typeIds: typeIds == freezed
+          ? _value.typeIds
+          : typeIds // ignore: cast_nullable_to_non_nullable
+              as String?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as double?,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as String?,
+      shipTo1: shipTo1 == freezed
+          ? _value.shipTo1
+          : shipTo1 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      shipTo2: shipTo2 == freezed
+          ? _value.shipTo2
+          : shipTo2 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      country: country == freezed
+          ? _value.country
+          : country // ignore: cast_nullable_to_non_nullable
+              as String?,
+      province: province == freezed
+          ? _value.province
+          : province // ignore: cast_nullable_to_non_nullable
+              as String?,
+      city: city == freezed
+          ? _value.city
+          : city // ignore: cast_nullable_to_non_nullable
+              as String?,
+      district: district == freezed
+          ? _value.district
+          : district // ignore: cast_nullable_to_non_nullable
+              as String?,
+      village: village == freezed
+          ? _value.village
+          : village // ignore: cast_nullable_to_non_nullable
+              as String?,
+      terrId1: terrId1 == freezed
+          ? _value.terrId1
+          : terrId1 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      terrId2: terrId2 == freezed
+          ? _value.terrId2
+          : terrId2 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      terrId3: terrId3 == freezed
+          ? _value.terrId3
+          : terrId3 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      terrId4: terrId4 == freezed
+          ? _value.terrId4
+          : terrId4 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longitudes: longitudes == freezed
+          ? _value.longitudes
+          : longitudes // ignore: cast_nullable_to_non_nullable
+              as double?,
+      latitudes: latitudes == freezed
+          ? _value.latitudes
+          : latitudes // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fbToken: fbToken == freezed
+          ? _value.fbToken
+          : fbToken // ignore: cast_nullable_to_non_nullable
+              as String?,
+      googleToken: googleToken == freezed
+          ? _value.googleToken
+          : googleToken // ignore: cast_nullable_to_non_nullable
+              as String?,
+      msgToken: msgToken == freezed
+          ? _value.msgToken
+          : msgToken // ignore: cast_nullable_to_non_nullable
+              as String?,
+      otherToken: otherToken == freezed
+          ? _value.otherToken
+          : otherToken // ignore: cast_nullable_to_non_nullable
+              as String?,
       alreadyInSave: alreadyInSave == freezed
           ? _value.alreadyInSave
-          : alreadyInSave as bool,
-      isNew: isNew == freezed ? _value.isNew : isNew as bool,
-      modified: modified == freezed ? _value.modified : modified as bool,
+          : alreadyInSave // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      isNew: isNew == freezed
+          ? _value.isNew
+          : isNew // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      modified: modified == freezed
+          ? _value.modified
+          : modified // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -304,38 +395,38 @@ abstract class _$UserDataModelCopyWith<$Res>
       __$UserDataModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: "userId", defaultValue: "") String userId,
-      @JsonKey(name: "error", defaultValue: 0) int error,
-      @JsonKey(name: "parentId", defaultValue: "") String parentId,
-      @JsonKey(name: "userName", defaultValue: "") String userName,
-      @JsonKey(name: "message", defaultValue: "") String messageError,
-      @JsonKey(name: "email", defaultValue: "") String email,
-      @JsonKey(name: "phone", defaultValue: "") String phone,
-      @JsonKey(name: "password", defaultValue: "") String password,
-      @JsonKey(name: "fullName", defaultValue: "") String fullName,
-      @JsonKey(name: "typeIds", defaultValue: "") String typeIds,
-      @JsonKey(name: "status", defaultValue: 0) double status,
-      @JsonKey(name: "address", defaultValue: "") String address,
-      @JsonKey(name: "shipTo1", defaultValue: "") String shipTo1,
-      @JsonKey(name: "shipTo2", defaultValue: "") String shipTo2,
-      @JsonKey(name: "country", defaultValue: "") String country,
-      @JsonKey(name: "province", defaultValue: "") String province,
-      @JsonKey(name: "city", defaultValue: "") String city,
-      @JsonKey(name: "district", defaultValue: "") String district,
-      @JsonKey(name: "village", defaultValue: "") String village,
-      @JsonKey(name: "terrId1", defaultValue: "") String terrId1,
-      @JsonKey(name: "terrId2", defaultValue: "") String terrId2,
-      @JsonKey(name: "terrId3", defaultValue: "") String terrId3,
-      @JsonKey(name: "terrId4", defaultValue: "") String terrId4,
-      @JsonKey(name: "longitudes", defaultValue: 0) double longitudes,
-      @JsonKey(name: "latitudes", defaultValue: 0) double latitudes,
-      @JsonKey(name: "fbToken", defaultValue: "") String fbToken,
-      @JsonKey(name: "googleToken", defaultValue: "") String googleToken,
-      @JsonKey(name: "msgToken", defaultValue: "") String msgToken,
-      @JsonKey(name: "otherToken", defaultValue: "") String otherToken,
-      @JsonKey(name: "alreadyInSave", defaultValue: false) bool alreadyInSave,
-      @JsonKey(name: "isNew", defaultValue: false) bool isNew,
-      @JsonKey(name: "modified", defaultValue: false) bool modified});
+      {@JsonKey(name: "userId", defaultValue: "") String? userId,
+      @JsonKey(name: "error", defaultValue: 0) int? error,
+      @JsonKey(name: "parentId", defaultValue: "") String? parentId,
+      @JsonKey(name: "userName", defaultValue: "") String? userName,
+      @JsonKey(name: "message", defaultValue: "") String? messageError,
+      @JsonKey(name: "email", defaultValue: "") String? email,
+      @JsonKey(name: "phone", defaultValue: "") String? phone,
+      @JsonKey(name: "password", defaultValue: "") String? password,
+      @JsonKey(name: "fullName", defaultValue: "") String? fullName,
+      @JsonKey(name: "typeIds", defaultValue: "") String? typeIds,
+      @JsonKey(name: "status", defaultValue: 0) double? status,
+      @JsonKey(name: "address", defaultValue: "") String? address,
+      @JsonKey(name: "shipTo1", defaultValue: "") String? shipTo1,
+      @JsonKey(name: "shipTo2", defaultValue: "") String? shipTo2,
+      @JsonKey(name: "country", defaultValue: "") String? country,
+      @JsonKey(name: "province", defaultValue: "") String? province,
+      @JsonKey(name: "city", defaultValue: "") String? city,
+      @JsonKey(name: "district", defaultValue: "") String? district,
+      @JsonKey(name: "village", defaultValue: "") String? village,
+      @JsonKey(name: "terrId1", defaultValue: "") String? terrId1,
+      @JsonKey(name: "terrId2", defaultValue: "") String? terrId2,
+      @JsonKey(name: "terrId3", defaultValue: "") String? terrId3,
+      @JsonKey(name: "terrId4", defaultValue: "") String? terrId4,
+      @JsonKey(name: "longitudes", defaultValue: 0) double? longitudes,
+      @JsonKey(name: "latitudes", defaultValue: 0) double? latitudes,
+      @JsonKey(name: "fbToken", defaultValue: "") String? fbToken,
+      @JsonKey(name: "googleToken", defaultValue: "") String? googleToken,
+      @JsonKey(name: "msgToken", defaultValue: "") String? msgToken,
+      @JsonKey(name: "otherToken", defaultValue: "") String? otherToken,
+      @JsonKey(name: "alreadyInSave", defaultValue: false) bool? alreadyInSave,
+      @JsonKey(name: "isNew", defaultValue: false) bool? isNew,
+      @JsonKey(name: "modified", defaultValue: false) bool? modified});
 }
 
 /// @nodoc
@@ -351,86 +442,174 @@ class __$UserDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object userId = freezed,
-    Object error = freezed,
-    Object parentId = freezed,
-    Object userName = freezed,
-    Object messageError = freezed,
-    Object email = freezed,
-    Object phone = freezed,
-    Object password = freezed,
-    Object fullName = freezed,
-    Object typeIds = freezed,
-    Object status = freezed,
-    Object address = freezed,
-    Object shipTo1 = freezed,
-    Object shipTo2 = freezed,
-    Object country = freezed,
-    Object province = freezed,
-    Object city = freezed,
-    Object district = freezed,
-    Object village = freezed,
-    Object terrId1 = freezed,
-    Object terrId2 = freezed,
-    Object terrId3 = freezed,
-    Object terrId4 = freezed,
-    Object longitudes = freezed,
-    Object latitudes = freezed,
-    Object fbToken = freezed,
-    Object googleToken = freezed,
-    Object msgToken = freezed,
-    Object otherToken = freezed,
-    Object alreadyInSave = freezed,
-    Object isNew = freezed,
-    Object modified = freezed,
+    Object? userId = freezed,
+    Object? error = freezed,
+    Object? parentId = freezed,
+    Object? userName = freezed,
+    Object? messageError = freezed,
+    Object? email = freezed,
+    Object? phone = freezed,
+    Object? password = freezed,
+    Object? fullName = freezed,
+    Object? typeIds = freezed,
+    Object? status = freezed,
+    Object? address = freezed,
+    Object? shipTo1 = freezed,
+    Object? shipTo2 = freezed,
+    Object? country = freezed,
+    Object? province = freezed,
+    Object? city = freezed,
+    Object? district = freezed,
+    Object? village = freezed,
+    Object? terrId1 = freezed,
+    Object? terrId2 = freezed,
+    Object? terrId3 = freezed,
+    Object? terrId4 = freezed,
+    Object? longitudes = freezed,
+    Object? latitudes = freezed,
+    Object? fbToken = freezed,
+    Object? googleToken = freezed,
+    Object? msgToken = freezed,
+    Object? otherToken = freezed,
+    Object? alreadyInSave = freezed,
+    Object? isNew = freezed,
+    Object? modified = freezed,
   }) {
     return _then(_UserDataModel(
-      userId: userId == freezed ? _value.userId : userId as String,
-      error: error == freezed ? _value.error : error as int,
-      parentId: parentId == freezed ? _value.parentId : parentId as String,
-      userName: userName == freezed ? _value.userName : userName as String,
+      userId: userId == freezed
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      error: error == freezed
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as int?,
+      parentId: parentId == freezed
+          ? _value.parentId
+          : parentId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      userName: userName == freezed
+          ? _value.userName
+          : userName // ignore: cast_nullable_to_non_nullable
+              as String?,
       messageError: messageError == freezed
           ? _value.messageError
-          : messageError as String,
-      email: email == freezed ? _value.email : email as String,
-      phone: phone == freezed ? _value.phone : phone as String,
-      password: password == freezed ? _value.password : password as String,
-      fullName: fullName == freezed ? _value.fullName : fullName as String,
-      typeIds: typeIds == freezed ? _value.typeIds : typeIds as String,
-      status: status == freezed ? _value.status : status as double,
-      address: address == freezed ? _value.address : address as String,
-      shipTo1: shipTo1 == freezed ? _value.shipTo1 : shipTo1 as String,
-      shipTo2: shipTo2 == freezed ? _value.shipTo2 : shipTo2 as String,
-      country: country == freezed ? _value.country : country as String,
-      province: province == freezed ? _value.province : province as String,
-      city: city == freezed ? _value.city : city as String,
-      district: district == freezed ? _value.district : district as String,
-      village: village == freezed ? _value.village : village as String,
-      terrId1: terrId1 == freezed ? _value.terrId1 : terrId1 as String,
-      terrId2: terrId2 == freezed ? _value.terrId2 : terrId2 as String,
-      terrId3: terrId3 == freezed ? _value.terrId3 : terrId3 as String,
-      terrId4: terrId4 == freezed ? _value.terrId4 : terrId4 as String,
-      longitudes:
-          longitudes == freezed ? _value.longitudes : longitudes as double,
-      latitudes: latitudes == freezed ? _value.latitudes : latitudes as double,
-      fbToken: fbToken == freezed ? _value.fbToken : fbToken as String,
-      googleToken:
-          googleToken == freezed ? _value.googleToken : googleToken as String,
-      msgToken: msgToken == freezed ? _value.msgToken : msgToken as String,
-      otherToken:
-          otherToken == freezed ? _value.otherToken : otherToken as String,
+          : messageError // ignore: cast_nullable_to_non_nullable
+              as String?,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String?,
+      phone: phone == freezed
+          ? _value.phone
+          : phone // ignore: cast_nullable_to_non_nullable
+              as String?,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String?,
+      fullName: fullName == freezed
+          ? _value.fullName
+          : fullName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      typeIds: typeIds == freezed
+          ? _value.typeIds
+          : typeIds // ignore: cast_nullable_to_non_nullable
+              as String?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as double?,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as String?,
+      shipTo1: shipTo1 == freezed
+          ? _value.shipTo1
+          : shipTo1 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      shipTo2: shipTo2 == freezed
+          ? _value.shipTo2
+          : shipTo2 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      country: country == freezed
+          ? _value.country
+          : country // ignore: cast_nullable_to_non_nullable
+              as String?,
+      province: province == freezed
+          ? _value.province
+          : province // ignore: cast_nullable_to_non_nullable
+              as String?,
+      city: city == freezed
+          ? _value.city
+          : city // ignore: cast_nullable_to_non_nullable
+              as String?,
+      district: district == freezed
+          ? _value.district
+          : district // ignore: cast_nullable_to_non_nullable
+              as String?,
+      village: village == freezed
+          ? _value.village
+          : village // ignore: cast_nullable_to_non_nullable
+              as String?,
+      terrId1: terrId1 == freezed
+          ? _value.terrId1
+          : terrId1 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      terrId2: terrId2 == freezed
+          ? _value.terrId2
+          : terrId2 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      terrId3: terrId3 == freezed
+          ? _value.terrId3
+          : terrId3 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      terrId4: terrId4 == freezed
+          ? _value.terrId4
+          : terrId4 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longitudes: longitudes == freezed
+          ? _value.longitudes
+          : longitudes // ignore: cast_nullable_to_non_nullable
+              as double?,
+      latitudes: latitudes == freezed
+          ? _value.latitudes
+          : latitudes // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fbToken: fbToken == freezed
+          ? _value.fbToken
+          : fbToken // ignore: cast_nullable_to_non_nullable
+              as String?,
+      googleToken: googleToken == freezed
+          ? _value.googleToken
+          : googleToken // ignore: cast_nullable_to_non_nullable
+              as String?,
+      msgToken: msgToken == freezed
+          ? _value.msgToken
+          : msgToken // ignore: cast_nullable_to_non_nullable
+              as String?,
+      otherToken: otherToken == freezed
+          ? _value.otherToken
+          : otherToken // ignore: cast_nullable_to_non_nullable
+              as String?,
       alreadyInSave: alreadyInSave == freezed
           ? _value.alreadyInSave
-          : alreadyInSave as bool,
-      isNew: isNew == freezed ? _value.isNew : isNew as bool,
-      modified: modified == freezed ? _value.modified : modified as bool,
+          : alreadyInSave // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      isNew: isNew == freezed
+          ? _value.isNew
+          : isNew // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      modified: modified == freezed
+          ? _value.modified
+          : modified // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_UserDataModel implements _UserDataModel {
   _$_UserDataModel(
       {@JsonKey(name: "userId", defaultValue: "") this.userId,
@@ -471,100 +650,100 @@ class _$_UserDataModel implements _UserDataModel {
 
   @override
   @JsonKey(name: "userId", defaultValue: "")
-  final String userId;
+  final String? userId;
   @override
   @JsonKey(name: "error", defaultValue: 0)
-  final int error;
+  final int? error;
   @override
   @JsonKey(name: "parentId", defaultValue: "")
-  final String parentId;
+  final String? parentId;
   @override
   @JsonKey(name: "userName", defaultValue: "")
-  final String userName;
+  final String? userName;
   @override
   @JsonKey(name: "message", defaultValue: "")
-  final String messageError;
+  final String? messageError;
   @override
   @JsonKey(name: "email", defaultValue: "")
-  final String email;
+  final String? email;
   @override
   @JsonKey(name: "phone", defaultValue: "")
-  final String phone;
+  final String? phone;
   @override
   @JsonKey(name: "password", defaultValue: "")
-  final String password;
+  final String? password;
   @override
   @JsonKey(name: "fullName", defaultValue: "")
-  final String fullName;
+  final String? fullName;
   @override
   @JsonKey(name: "typeIds", defaultValue: "")
-  final String typeIds;
+  final String? typeIds;
   @override
   @JsonKey(name: "status", defaultValue: 0)
-  final double status;
+  final double? status;
   @override
   @JsonKey(name: "address", defaultValue: "")
-  final String address;
+  final String? address;
   @override
   @JsonKey(name: "shipTo1", defaultValue: "")
-  final String shipTo1;
+  final String? shipTo1;
   @override
   @JsonKey(name: "shipTo2", defaultValue: "")
-  final String shipTo2;
+  final String? shipTo2;
   @override
   @JsonKey(name: "country", defaultValue: "")
-  final String country;
+  final String? country;
   @override
   @JsonKey(name: "province", defaultValue: "")
-  final String province;
+  final String? province;
   @override
   @JsonKey(name: "city", defaultValue: "")
-  final String city;
+  final String? city;
   @override
   @JsonKey(name: "district", defaultValue: "")
-  final String district;
+  final String? district;
   @override
   @JsonKey(name: "village", defaultValue: "")
-  final String village;
+  final String? village;
   @override
   @JsonKey(name: "terrId1", defaultValue: "")
-  final String terrId1;
+  final String? terrId1;
   @override
   @JsonKey(name: "terrId2", defaultValue: "")
-  final String terrId2;
+  final String? terrId2;
   @override
   @JsonKey(name: "terrId3", defaultValue: "")
-  final String terrId3;
+  final String? terrId3;
   @override
   @JsonKey(name: "terrId4", defaultValue: "")
-  final String terrId4;
+  final String? terrId4;
   @override
   @JsonKey(name: "longitudes", defaultValue: 0)
-  final double longitudes;
+  final double? longitudes;
   @override
   @JsonKey(name: "latitudes", defaultValue: 0)
-  final double latitudes;
+  final double? latitudes;
   @override
   @JsonKey(name: "fbToken", defaultValue: "")
-  final String fbToken;
+  final String? fbToken;
   @override
   @JsonKey(name: "googleToken", defaultValue: "")
-  final String googleToken;
+  final String? googleToken;
   @override
   @JsonKey(name: "msgToken", defaultValue: "")
-  final String msgToken;
+  final String? msgToken;
   @override
   @JsonKey(name: "otherToken", defaultValue: "")
-  final String otherToken;
+  final String? otherToken;
   @override
   @JsonKey(name: "alreadyInSave", defaultValue: false)
-  final bool alreadyInSave;
+  final bool? alreadyInSave;
   @override
   @JsonKey(name: "isNew", defaultValue: false)
-  final bool isNew;
+  final bool? isNew;
   @override
   @JsonKey(name: "modified", defaultValue: false)
-  final bool modified;
+  final bool? modified;
 
   @override
   String toString() {
@@ -702,170 +881,171 @@ class _$_UserDataModel implements _UserDataModel {
 abstract class _UserDataModel implements UserDataModel {
   factory _UserDataModel(
       {@JsonKey(name: "userId", defaultValue: "")
-          String userId,
+          String? userId,
       @JsonKey(name: "error", defaultValue: 0)
-          int error,
+          int? error,
       @JsonKey(name: "parentId", defaultValue: "")
-          String parentId,
+          String? parentId,
       @JsonKey(name: "userName", defaultValue: "")
-          String userName,
+          String? userName,
       @JsonKey(name: "message", defaultValue: "")
-          String messageError,
+          String? messageError,
       @JsonKey(name: "email", defaultValue: "")
-          String email,
+          String? email,
       @JsonKey(name: "phone", defaultValue: "")
-          String phone,
+          String? phone,
       @JsonKey(name: "password", defaultValue: "")
-          String password,
+          String? password,
       @JsonKey(name: "fullName", defaultValue: "")
-          String fullName,
+          String? fullName,
       @JsonKey(name: "typeIds", defaultValue: "")
-          String typeIds,
+          String? typeIds,
       @JsonKey(name: "status", defaultValue: 0)
-          double status,
+          double? status,
       @JsonKey(name: "address", defaultValue: "")
-          String address,
+          String? address,
       @JsonKey(name: "shipTo1", defaultValue: "")
-          String shipTo1,
+          String? shipTo1,
       @JsonKey(name: "shipTo2", defaultValue: "")
-          String shipTo2,
+          String? shipTo2,
       @JsonKey(name: "country", defaultValue: "")
-          String country,
+          String? country,
       @JsonKey(name: "province", defaultValue: "")
-          String province,
+          String? province,
       @JsonKey(name: "city", defaultValue: "")
-          String city,
+          String? city,
       @JsonKey(name: "district", defaultValue: "")
-          String district,
+          String? district,
       @JsonKey(name: "village", defaultValue: "")
-          String village,
+          String? village,
       @JsonKey(name: "terrId1", defaultValue: "")
-          String terrId1,
+          String? terrId1,
       @JsonKey(name: "terrId2", defaultValue: "")
-          String terrId2,
+          String? terrId2,
       @JsonKey(name: "terrId3", defaultValue: "")
-          String terrId3,
+          String? terrId3,
       @JsonKey(name: "terrId4", defaultValue: "")
-          String terrId4,
+          String? terrId4,
       @JsonKey(name: "longitudes", defaultValue: 0)
-          double longitudes,
+          double? longitudes,
       @JsonKey(name: "latitudes", defaultValue: 0)
-          double latitudes,
+          double? latitudes,
       @JsonKey(name: "fbToken", defaultValue: "")
-          String fbToken,
+          String? fbToken,
       @JsonKey(name: "googleToken", defaultValue: "")
-          String googleToken,
+          String? googleToken,
       @JsonKey(name: "msgToken", defaultValue: "")
-          String msgToken,
+          String? msgToken,
       @JsonKey(name: "otherToken", defaultValue: "")
-          String otherToken,
+          String? otherToken,
       @JsonKey(name: "alreadyInSave", defaultValue: false)
-          bool alreadyInSave,
+          bool? alreadyInSave,
       @JsonKey(name: "isNew", defaultValue: false)
-          bool isNew,
+          bool? isNew,
       @JsonKey(name: "modified", defaultValue: false)
-          bool modified}) = _$_UserDataModel;
+          bool? modified}) = _$_UserDataModel;
 
   factory _UserDataModel.fromJson(Map<String, dynamic> json) =
       _$_UserDataModel.fromJson;
 
   @override
   @JsonKey(name: "userId", defaultValue: "")
-  String get userId;
+  String? get userId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "error", defaultValue: 0)
-  int get error;
+  int? get error => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "parentId", defaultValue: "")
-  String get parentId;
+  String? get parentId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "userName", defaultValue: "")
-  String get userName;
+  String? get userName => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "message", defaultValue: "")
-  String get messageError;
+  String? get messageError => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "email", defaultValue: "")
-  String get email;
+  String? get email => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "phone", defaultValue: "")
-  String get phone;
+  String? get phone => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "password", defaultValue: "")
-  String get password;
+  String? get password => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "fullName", defaultValue: "")
-  String get fullName;
+  String? get fullName => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "typeIds", defaultValue: "")
-  String get typeIds;
+  String? get typeIds => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "status", defaultValue: 0)
-  double get status;
+  double? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "address", defaultValue: "")
-  String get address;
+  String? get address => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "shipTo1", defaultValue: "")
-  String get shipTo1;
+  String? get shipTo1 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "shipTo2", defaultValue: "")
-  String get shipTo2;
+  String? get shipTo2 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "country", defaultValue: "")
-  String get country;
+  String? get country => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "province", defaultValue: "")
-  String get province;
+  String? get province => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "city", defaultValue: "")
-  String get city;
+  String? get city => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "district", defaultValue: "")
-  String get district;
+  String? get district => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "village", defaultValue: "")
-  String get village;
+  String? get village => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "terrId1", defaultValue: "")
-  String get terrId1;
+  String? get terrId1 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "terrId2", defaultValue: "")
-  String get terrId2;
+  String? get terrId2 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "terrId3", defaultValue: "")
-  String get terrId3;
+  String? get terrId3 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "terrId4", defaultValue: "")
-  String get terrId4;
+  String? get terrId4 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "longitudes", defaultValue: 0)
-  double get longitudes;
+  double? get longitudes => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "latitudes", defaultValue: 0)
-  double get latitudes;
+  double? get latitudes => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "fbToken", defaultValue: "")
-  String get fbToken;
+  String? get fbToken => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "googleToken", defaultValue: "")
-  String get googleToken;
+  String? get googleToken => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "msgToken", defaultValue: "")
-  String get msgToken;
+  String? get msgToken => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "otherToken", defaultValue: "")
-  String get otherToken;
+  String? get otherToken => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "alreadyInSave", defaultValue: false)
-  bool get alreadyInSave;
+  bool? get alreadyInSave => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "isNew", defaultValue: false)
-  bool get isNew;
+  bool? get isNew => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "modified", defaultValue: false)
-  bool get modified;
+  bool? get modified => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$UserDataModelCopyWith<_UserDataModel> get copyWith;
+  _$UserDataModelCopyWith<_UserDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

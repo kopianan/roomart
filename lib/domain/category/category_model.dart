@@ -4,28 +4,28 @@ part 'category_model.freezed.dart';
 part 'category_model.g.dart';
 
 @freezed
-abstract class CategoryModel with _$CategoryModel {
+ class CategoryModel with _$CategoryModel {
   factory CategoryModel(
       {@JsonKey(name: "kategori_id")
-          String kategoriId,
+          String? kategoriId,
       @JsonKey(name: "parent_id")
-          String parentId,
+          String? parentId,
       @JsonKey(name: "internal_code")
-          String internalCode,
+          String? internalCode,
       @JsonKey(name: "kategori_code")
-          String kategoriCode,
+          String? kategoriCode,
       @JsonKey(name: "description", defaultValue: "description", nullable: true)
-          String description,
+          String? description,
       @JsonKey(name: "picture")
-          String picture,
+          String? picture,
       @JsonKey(name: "display_store")
-          String displayStore,
+          String? displayStore,
       @JsonKey(name: "has_child")
-          String hasChild,
+          String? hasChild,
       @JsonKey(name: "count")
-          String count,
+          String? count,
       @JsonKey(name: "count_total", defaultValue: "0", nullable: true, includeIfNull: true)
-          String countTotal}) = _CategoryModel;
+          String? countTotal}) = _CategoryModel;
 
   factory CategoryModel.fromJson(Map<String, dynamic> json) =>
       _$CategoryModelFromJson(json);

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'auth_cubit.dart';
 
@@ -9,91 +9,81 @@ part of 'auth_cubit.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$AuthStateTearOff {
   const _$AuthStateTearOff();
 
-// ignore: unused_element
   _Initial initial() {
     return const _Initial();
   }
 
-// ignore: unused_element
   _Loading loading() {
     return const _Loading();
   }
 
-// ignore: unused_element
   _Error error(String error) {
     return _Error(
       error,
     );
   }
 
-// ignore: unused_element
   _OnRegisterToRoomart onRegisterToRoomart(UserRoomartDataModel user) {
     return _OnRegisterToRoomart(
       user,
     );
   }
 
-// ignore: unused_element
   _OnRegiserUser onRegiserUser(RegisterResponseModel response) {
     return _OnRegiserUser(
       response,
     );
   }
 
-// ignore: unused_element
   _OnLoginUser onLoginUser(UserDataModel user) {
     return _OnLoginUser(
       user,
     );
   }
 
-// ignore: unused_element
   _OnGetArBalance onGetArBalance(String balancd) {
     return _OnGetArBalance(
       balancd,
     );
   }
 
-// ignore: unused_element
   _OnGetAvailableDiscount onGetAvailableDiscount(List<DiscountDataModel> list) {
     return _OnGetAvailableDiscount(
       list,
     );
   }
 
-// ignore: unused_element
   _OnAuthenticated onAuthenticated(UserDataModel user) {
     return _OnAuthenticated(
       user,
     );
   }
 
-// ignore: unused_element
   _OnChangeAddress onChangeAddress(UserDataModel user) {
     return _OnChangeAddress(
       user,
     );
   }
 
-// ignore: unused_element
   _OnForgotPassword onForgotPassword(String status) {
     return _OnForgotPassword(
       status,
     );
   }
 
-// ignore: unused_element
   _OnCheckCouponCode onCheckCouponCode(String status) {
     return _OnCheckCouponCode(
       status,
     );
   }
 
-// ignore: unused_element
   _OnChangePassword onChangePassword(UserDataModel status) {
     return _OnChangePassword(
       status,
@@ -102,77 +92,82 @@ class _$AuthStateTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $AuthState = _$AuthStateTearOff();
 
 /// @nodoc
 mixin _$AuthState {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onRegisterToRoomart(UserRoomartDataModel user),
-    @required TResult onRegiserUser(RegisterResponseModel response),
-    @required TResult onLoginUser(UserDataModel user),
-    @required TResult onGetArBalance(String balancd),
-    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    @required TResult onAuthenticated(UserDataModel user),
-    @required TResult onChangeAddress(UserDataModel user),
-    @required TResult onForgotPassword(String status),
-    @required TResult onCheckCouponCode(String status),
-    @required TResult onChangePassword(UserDataModel status),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(UserRoomartDataModel user) onRegisterToRoomart,
+    required TResult Function(RegisterResponseModel response) onRegiserUser,
+    required TResult Function(UserDataModel user) onLoginUser,
+    required TResult Function(String balancd) onGetArBalance,
+    required TResult Function(List<DiscountDataModel> list)
+        onGetAvailableDiscount,
+    required TResult Function(UserDataModel user) onAuthenticated,
+    required TResult Function(UserDataModel user) onChangeAddress,
+    required TResult Function(String status) onForgotPassword,
+    required TResult Function(String status) onCheckCouponCode,
+    required TResult Function(UserDataModel status) onChangePassword,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onRegisterToRoomart(UserRoomartDataModel user),
-    TResult onRegiserUser(RegisterResponseModel response),
-    TResult onLoginUser(UserDataModel user),
-    TResult onGetArBalance(String balancd),
-    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    TResult onAuthenticated(UserDataModel user),
-    TResult onChangeAddress(UserDataModel user),
-    TResult onForgotPassword(String status),
-    TResult onCheckCouponCode(String status),
-    TResult onChangePassword(UserDataModel status),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(UserRoomartDataModel user)? onRegisterToRoomart,
+    TResult Function(RegisterResponseModel response)? onRegiserUser,
+    TResult Function(UserDataModel user)? onLoginUser,
+    TResult Function(String balancd)? onGetArBalance,
+    TResult Function(List<DiscountDataModel> list)? onGetAvailableDiscount,
+    TResult Function(UserDataModel user)? onAuthenticated,
+    TResult Function(UserDataModel user)? onChangeAddress,
+    TResult Function(String status)? onForgotPassword,
+    TResult Function(String status)? onCheckCouponCode,
+    TResult Function(UserDataModel status)? onChangePassword,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    @required TResult onRegiserUser(_OnRegiserUser value),
-    @required TResult onLoginUser(_OnLoginUser value),
-    @required TResult onGetArBalance(_OnGetArBalance value),
-    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    @required TResult onAuthenticated(_OnAuthenticated value),
-    @required TResult onChangeAddress(_OnChangeAddress value),
-    @required TResult onForgotPassword(_OnForgotPassword value),
-    @required TResult onCheckCouponCode(_OnCheckCouponCode value),
-    @required TResult onChangePassword(_OnChangePassword value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnRegisterToRoomart value) onRegisterToRoomart,
+    required TResult Function(_OnRegiserUser value) onRegiserUser,
+    required TResult Function(_OnLoginUser value) onLoginUser,
+    required TResult Function(_OnGetArBalance value) onGetArBalance,
+    required TResult Function(_OnGetAvailableDiscount value)
+        onGetAvailableDiscount,
+    required TResult Function(_OnAuthenticated value) onAuthenticated,
+    required TResult Function(_OnChangeAddress value) onChangeAddress,
+    required TResult Function(_OnForgotPassword value) onForgotPassword,
+    required TResult Function(_OnCheckCouponCode value) onCheckCouponCode,
+    required TResult Function(_OnChangePassword value) onChangePassword,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    TResult onRegiserUser(_OnRegiserUser value),
-    TResult onLoginUser(_OnLoginUser value),
-    TResult onGetArBalance(_OnGetArBalance value),
-    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    TResult onAuthenticated(_OnAuthenticated value),
-    TResult onChangeAddress(_OnChangeAddress value),
-    TResult onForgotPassword(_OnForgotPassword value),
-    TResult onCheckCouponCode(_OnCheckCouponCode value),
-    TResult onChangePassword(_OnChangePassword value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnRegisterToRoomart value)? onRegisterToRoomart,
+    TResult Function(_OnRegiserUser value)? onRegiserUser,
+    TResult Function(_OnLoginUser value)? onLoginUser,
+    TResult Function(_OnGetArBalance value)? onGetArBalance,
+    TResult Function(_OnGetAvailableDiscount value)? onGetAvailableDiscount,
+    TResult Function(_OnAuthenticated value)? onAuthenticated,
+    TResult Function(_OnChangeAddress value)? onChangeAddress,
+    TResult Function(_OnForgotPassword value)? onForgotPassword,
+    TResult Function(_OnCheckCouponCode value)? onCheckCouponCode,
+    TResult Function(_OnChangePassword value)? onChangePassword,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -207,6 +202,7 @@ class __$InitialCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_Initial implements _Initial {
   const _$_Initial();
 
@@ -225,56 +221,43 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onRegisterToRoomart(UserRoomartDataModel user),
-    @required TResult onRegiserUser(RegisterResponseModel response),
-    @required TResult onLoginUser(UserDataModel user),
-    @required TResult onGetArBalance(String balancd),
-    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    @required TResult onAuthenticated(UserDataModel user),
-    @required TResult onChangeAddress(UserDataModel user),
-    @required TResult onForgotPassword(String status),
-    @required TResult onCheckCouponCode(String status),
-    @required TResult onChangePassword(UserDataModel status),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(UserRoomartDataModel user) onRegisterToRoomart,
+    required TResult Function(RegisterResponseModel response) onRegiserUser,
+    required TResult Function(UserDataModel user) onLoginUser,
+    required TResult Function(String balancd) onGetArBalance,
+    required TResult Function(List<DiscountDataModel> list)
+        onGetAvailableDiscount,
+    required TResult Function(UserDataModel user) onAuthenticated,
+    required TResult Function(UserDataModel user) onChangeAddress,
+    required TResult Function(String status) onForgotPassword,
+    required TResult Function(String status) onCheckCouponCode,
+    required TResult Function(UserDataModel status) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return initial();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onRegisterToRoomart(UserRoomartDataModel user),
-    TResult onRegiserUser(RegisterResponseModel response),
-    TResult onLoginUser(UserDataModel user),
-    TResult onGetArBalance(String balancd),
-    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    TResult onAuthenticated(UserDataModel user),
-    TResult onChangeAddress(UserDataModel user),
-    TResult onForgotPassword(String status),
-    TResult onCheckCouponCode(String status),
-    TResult onChangePassword(UserDataModel status),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(UserRoomartDataModel user)? onRegisterToRoomart,
+    TResult Function(RegisterResponseModel response)? onRegiserUser,
+    TResult Function(UserDataModel user)? onLoginUser,
+    TResult Function(String balancd)? onGetArBalance,
+    TResult Function(List<DiscountDataModel> list)? onGetAvailableDiscount,
+    TResult Function(UserDataModel user)? onAuthenticated,
+    TResult Function(UserDataModel user)? onChangeAddress,
+    TResult Function(String status)? onForgotPassword,
+    TResult Function(String status)? onCheckCouponCode,
+    TResult Function(UserDataModel status)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial();
     }
@@ -283,56 +266,43 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    @required TResult onRegiserUser(_OnRegiserUser value),
-    @required TResult onLoginUser(_OnLoginUser value),
-    @required TResult onGetArBalance(_OnGetArBalance value),
-    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    @required TResult onAuthenticated(_OnAuthenticated value),
-    @required TResult onChangeAddress(_OnChangeAddress value),
-    @required TResult onForgotPassword(_OnForgotPassword value),
-    @required TResult onCheckCouponCode(_OnCheckCouponCode value),
-    @required TResult onChangePassword(_OnChangePassword value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnRegisterToRoomart value) onRegisterToRoomart,
+    required TResult Function(_OnRegiserUser value) onRegiserUser,
+    required TResult Function(_OnLoginUser value) onLoginUser,
+    required TResult Function(_OnGetArBalance value) onGetArBalance,
+    required TResult Function(_OnGetAvailableDiscount value)
+        onGetAvailableDiscount,
+    required TResult Function(_OnAuthenticated value) onAuthenticated,
+    required TResult Function(_OnChangeAddress value) onChangeAddress,
+    required TResult Function(_OnForgotPassword value) onForgotPassword,
+    required TResult Function(_OnCheckCouponCode value) onCheckCouponCode,
+    required TResult Function(_OnChangePassword value) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return initial(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    TResult onRegiserUser(_OnRegiserUser value),
-    TResult onLoginUser(_OnLoginUser value),
-    TResult onGetArBalance(_OnGetArBalance value),
-    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    TResult onAuthenticated(_OnAuthenticated value),
-    TResult onChangeAddress(_OnChangeAddress value),
-    TResult onForgotPassword(_OnForgotPassword value),
-    TResult onCheckCouponCode(_OnCheckCouponCode value),
-    TResult onChangePassword(_OnChangePassword value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnRegisterToRoomart value)? onRegisterToRoomart,
+    TResult Function(_OnRegiserUser value)? onRegiserUser,
+    TResult Function(_OnLoginUser value)? onLoginUser,
+    TResult Function(_OnGetArBalance value)? onGetArBalance,
+    TResult Function(_OnGetAvailableDiscount value)? onGetAvailableDiscount,
+    TResult Function(_OnAuthenticated value)? onAuthenticated,
+    TResult Function(_OnChangeAddress value)? onChangeAddress,
+    TResult Function(_OnForgotPassword value)? onForgotPassword,
+    TResult Function(_OnCheckCouponCode value)? onCheckCouponCode,
+    TResult Function(_OnChangePassword value)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial(this);
     }
@@ -361,6 +331,7 @@ class __$LoadingCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_Loading implements _Loading {
   const _$_Loading();
 
@@ -379,56 +350,43 @@ class _$_Loading implements _Loading {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onRegisterToRoomart(UserRoomartDataModel user),
-    @required TResult onRegiserUser(RegisterResponseModel response),
-    @required TResult onLoginUser(UserDataModel user),
-    @required TResult onGetArBalance(String balancd),
-    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    @required TResult onAuthenticated(UserDataModel user),
-    @required TResult onChangeAddress(UserDataModel user),
-    @required TResult onForgotPassword(String status),
-    @required TResult onCheckCouponCode(String status),
-    @required TResult onChangePassword(UserDataModel status),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(UserRoomartDataModel user) onRegisterToRoomart,
+    required TResult Function(RegisterResponseModel response) onRegiserUser,
+    required TResult Function(UserDataModel user) onLoginUser,
+    required TResult Function(String balancd) onGetArBalance,
+    required TResult Function(List<DiscountDataModel> list)
+        onGetAvailableDiscount,
+    required TResult Function(UserDataModel user) onAuthenticated,
+    required TResult Function(UserDataModel user) onChangeAddress,
+    required TResult Function(String status) onForgotPassword,
+    required TResult Function(String status) onCheckCouponCode,
+    required TResult Function(UserDataModel status) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return loading();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onRegisterToRoomart(UserRoomartDataModel user),
-    TResult onRegiserUser(RegisterResponseModel response),
-    TResult onLoginUser(UserDataModel user),
-    TResult onGetArBalance(String balancd),
-    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    TResult onAuthenticated(UserDataModel user),
-    TResult onChangeAddress(UserDataModel user),
-    TResult onForgotPassword(String status),
-    TResult onCheckCouponCode(String status),
-    TResult onChangePassword(UserDataModel status),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(UserRoomartDataModel user)? onRegisterToRoomart,
+    TResult Function(RegisterResponseModel response)? onRegiserUser,
+    TResult Function(UserDataModel user)? onLoginUser,
+    TResult Function(String balancd)? onGetArBalance,
+    TResult Function(List<DiscountDataModel> list)? onGetAvailableDiscount,
+    TResult Function(UserDataModel user)? onAuthenticated,
+    TResult Function(UserDataModel user)? onChangeAddress,
+    TResult Function(String status)? onForgotPassword,
+    TResult Function(String status)? onCheckCouponCode,
+    TResult Function(UserDataModel status)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loading != null) {
       return loading();
     }
@@ -437,56 +395,43 @@ class _$_Loading implements _Loading {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    @required TResult onRegiserUser(_OnRegiserUser value),
-    @required TResult onLoginUser(_OnLoginUser value),
-    @required TResult onGetArBalance(_OnGetArBalance value),
-    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    @required TResult onAuthenticated(_OnAuthenticated value),
-    @required TResult onChangeAddress(_OnChangeAddress value),
-    @required TResult onForgotPassword(_OnForgotPassword value),
-    @required TResult onCheckCouponCode(_OnCheckCouponCode value),
-    @required TResult onChangePassword(_OnChangePassword value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnRegisterToRoomart value) onRegisterToRoomart,
+    required TResult Function(_OnRegiserUser value) onRegiserUser,
+    required TResult Function(_OnLoginUser value) onLoginUser,
+    required TResult Function(_OnGetArBalance value) onGetArBalance,
+    required TResult Function(_OnGetAvailableDiscount value)
+        onGetAvailableDiscount,
+    required TResult Function(_OnAuthenticated value) onAuthenticated,
+    required TResult Function(_OnChangeAddress value) onChangeAddress,
+    required TResult Function(_OnForgotPassword value) onForgotPassword,
+    required TResult Function(_OnCheckCouponCode value) onCheckCouponCode,
+    required TResult Function(_OnChangePassword value) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return loading(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    TResult onRegiserUser(_OnRegiserUser value),
-    TResult onLoginUser(_OnLoginUser value),
-    TResult onGetArBalance(_OnGetArBalance value),
-    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    TResult onAuthenticated(_OnAuthenticated value),
-    TResult onChangeAddress(_OnChangeAddress value),
-    TResult onForgotPassword(_OnForgotPassword value),
-    TResult onCheckCouponCode(_OnCheckCouponCode value),
-    TResult onChangePassword(_OnChangePassword value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnRegisterToRoomart value)? onRegisterToRoomart,
+    TResult Function(_OnRegiserUser value)? onRegiserUser,
+    TResult Function(_OnLoginUser value)? onLoginUser,
+    TResult Function(_OnGetArBalance value)? onGetArBalance,
+    TResult Function(_OnGetAvailableDiscount value)? onGetAvailableDiscount,
+    TResult Function(_OnAuthenticated value)? onAuthenticated,
+    TResult Function(_OnChangeAddress value)? onChangeAddress,
+    TResult Function(_OnForgotPassword value)? onForgotPassword,
+    TResult Function(_OnCheckCouponCode value)? onCheckCouponCode,
+    TResult Function(_OnChangePassword value)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loading != null) {
       return loading(this);
     }
@@ -516,17 +461,21 @@ class __$ErrorCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object error = freezed,
+    Object? error = freezed,
   }) {
     return _then(_Error(
-      error == freezed ? _value.error : error as String,
+      error == freezed
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_Error implements _Error {
-  const _$_Error(this.error) : assert(error != null);
+  const _$_Error(this.error);
 
   @override
   final String error;
@@ -555,56 +504,43 @@ class _$_Error implements _Error {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onRegisterToRoomart(UserRoomartDataModel user),
-    @required TResult onRegiserUser(RegisterResponseModel response),
-    @required TResult onLoginUser(UserDataModel user),
-    @required TResult onGetArBalance(String balancd),
-    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    @required TResult onAuthenticated(UserDataModel user),
-    @required TResult onChangeAddress(UserDataModel user),
-    @required TResult onForgotPassword(String status),
-    @required TResult onCheckCouponCode(String status),
-    @required TResult onChangePassword(UserDataModel status),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(UserRoomartDataModel user) onRegisterToRoomart,
+    required TResult Function(RegisterResponseModel response) onRegiserUser,
+    required TResult Function(UserDataModel user) onLoginUser,
+    required TResult Function(String balancd) onGetArBalance,
+    required TResult Function(List<DiscountDataModel> list)
+        onGetAvailableDiscount,
+    required TResult Function(UserDataModel user) onAuthenticated,
+    required TResult Function(UserDataModel user) onChangeAddress,
+    required TResult Function(String status) onForgotPassword,
+    required TResult Function(String status) onCheckCouponCode,
+    required TResult Function(UserDataModel status) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return error(this.error);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onRegisterToRoomart(UserRoomartDataModel user),
-    TResult onRegiserUser(RegisterResponseModel response),
-    TResult onLoginUser(UserDataModel user),
-    TResult onGetArBalance(String balancd),
-    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    TResult onAuthenticated(UserDataModel user),
-    TResult onChangeAddress(UserDataModel user),
-    TResult onForgotPassword(String status),
-    TResult onCheckCouponCode(String status),
-    TResult onChangePassword(UserDataModel status),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(UserRoomartDataModel user)? onRegisterToRoomart,
+    TResult Function(RegisterResponseModel response)? onRegiserUser,
+    TResult Function(UserDataModel user)? onLoginUser,
+    TResult Function(String balancd)? onGetArBalance,
+    TResult Function(List<DiscountDataModel> list)? onGetAvailableDiscount,
+    TResult Function(UserDataModel user)? onAuthenticated,
+    TResult Function(UserDataModel user)? onChangeAddress,
+    TResult Function(String status)? onForgotPassword,
+    TResult Function(String status)? onCheckCouponCode,
+    TResult Function(UserDataModel status)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (error != null) {
       return error(this.error);
     }
@@ -613,56 +549,43 @@ class _$_Error implements _Error {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    @required TResult onRegiserUser(_OnRegiserUser value),
-    @required TResult onLoginUser(_OnLoginUser value),
-    @required TResult onGetArBalance(_OnGetArBalance value),
-    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    @required TResult onAuthenticated(_OnAuthenticated value),
-    @required TResult onChangeAddress(_OnChangeAddress value),
-    @required TResult onForgotPassword(_OnForgotPassword value),
-    @required TResult onCheckCouponCode(_OnCheckCouponCode value),
-    @required TResult onChangePassword(_OnChangePassword value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnRegisterToRoomart value) onRegisterToRoomart,
+    required TResult Function(_OnRegiserUser value) onRegiserUser,
+    required TResult Function(_OnLoginUser value) onLoginUser,
+    required TResult Function(_OnGetArBalance value) onGetArBalance,
+    required TResult Function(_OnGetAvailableDiscount value)
+        onGetAvailableDiscount,
+    required TResult Function(_OnAuthenticated value) onAuthenticated,
+    required TResult Function(_OnChangeAddress value) onChangeAddress,
+    required TResult Function(_OnForgotPassword value) onForgotPassword,
+    required TResult Function(_OnCheckCouponCode value) onCheckCouponCode,
+    required TResult Function(_OnChangePassword value) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return error(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    TResult onRegiserUser(_OnRegiserUser value),
-    TResult onLoginUser(_OnLoginUser value),
-    TResult onGetArBalance(_OnGetArBalance value),
-    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    TResult onAuthenticated(_OnAuthenticated value),
-    TResult onChangeAddress(_OnChangeAddress value),
-    TResult onForgotPassword(_OnForgotPassword value),
-    TResult onCheckCouponCode(_OnCheckCouponCode value),
-    TResult onChangePassword(_OnChangePassword value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnRegisterToRoomart value)? onRegisterToRoomart,
+    TResult Function(_OnRegiserUser value)? onRegiserUser,
+    TResult Function(_OnLoginUser value)? onLoginUser,
+    TResult Function(_OnGetArBalance value)? onGetArBalance,
+    TResult Function(_OnGetAvailableDiscount value)? onGetAvailableDiscount,
+    TResult Function(_OnAuthenticated value)? onAuthenticated,
+    TResult Function(_OnChangeAddress value)? onChangeAddress,
+    TResult Function(_OnForgotPassword value)? onForgotPassword,
+    TResult Function(_OnCheckCouponCode value)? onCheckCouponCode,
+    TResult Function(_OnChangePassword value)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (error != null) {
       return error(this);
     }
@@ -673,9 +596,9 @@ class _$_Error implements _Error {
 abstract class _Error implements AuthState {
   const factory _Error(String error) = _$_Error;
 
-  String get error;
+  String get error => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$ErrorCopyWith<_Error> get copyWith;
+  _$ErrorCopyWith<_Error> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -701,18 +624,18 @@ class __$OnRegisterToRoomartCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object user = freezed,
+    Object? user = freezed,
   }) {
     return _then(_OnRegisterToRoomart(
-      user == freezed ? _value.user : user as UserRoomartDataModel,
+      user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserRoomartDataModel,
     ));
   }
 
   @override
   $UserRoomartDataModelCopyWith<$Res> get user {
-    if (_value.user == null) {
-      return null;
-    }
     return $UserRoomartDataModelCopyWith<$Res>(_value.user, (value) {
       return _then(_value.copyWith(user: value));
     });
@@ -720,8 +643,9 @@ class __$OnRegisterToRoomartCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_OnRegisterToRoomart implements _OnRegisterToRoomart {
-  const _$_OnRegisterToRoomart(this.user) : assert(user != null);
+  const _$_OnRegisterToRoomart(this.user);
 
   @override
   final UserRoomartDataModel user;
@@ -751,56 +675,43 @@ class _$_OnRegisterToRoomart implements _OnRegisterToRoomart {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onRegisterToRoomart(UserRoomartDataModel user),
-    @required TResult onRegiserUser(RegisterResponseModel response),
-    @required TResult onLoginUser(UserDataModel user),
-    @required TResult onGetArBalance(String balancd),
-    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    @required TResult onAuthenticated(UserDataModel user),
-    @required TResult onChangeAddress(UserDataModel user),
-    @required TResult onForgotPassword(String status),
-    @required TResult onCheckCouponCode(String status),
-    @required TResult onChangePassword(UserDataModel status),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(UserRoomartDataModel user) onRegisterToRoomart,
+    required TResult Function(RegisterResponseModel response) onRegiserUser,
+    required TResult Function(UserDataModel user) onLoginUser,
+    required TResult Function(String balancd) onGetArBalance,
+    required TResult Function(List<DiscountDataModel> list)
+        onGetAvailableDiscount,
+    required TResult Function(UserDataModel user) onAuthenticated,
+    required TResult Function(UserDataModel user) onChangeAddress,
+    required TResult Function(String status) onForgotPassword,
+    required TResult Function(String status) onCheckCouponCode,
+    required TResult Function(UserDataModel status) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return onRegisterToRoomart(user);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onRegisterToRoomart(UserRoomartDataModel user),
-    TResult onRegiserUser(RegisterResponseModel response),
-    TResult onLoginUser(UserDataModel user),
-    TResult onGetArBalance(String balancd),
-    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    TResult onAuthenticated(UserDataModel user),
-    TResult onChangeAddress(UserDataModel user),
-    TResult onForgotPassword(String status),
-    TResult onCheckCouponCode(String status),
-    TResult onChangePassword(UserDataModel status),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(UserRoomartDataModel user)? onRegisterToRoomart,
+    TResult Function(RegisterResponseModel response)? onRegiserUser,
+    TResult Function(UserDataModel user)? onLoginUser,
+    TResult Function(String balancd)? onGetArBalance,
+    TResult Function(List<DiscountDataModel> list)? onGetAvailableDiscount,
+    TResult Function(UserDataModel user)? onAuthenticated,
+    TResult Function(UserDataModel user)? onChangeAddress,
+    TResult Function(String status)? onForgotPassword,
+    TResult Function(String status)? onCheckCouponCode,
+    TResult Function(UserDataModel status)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onRegisterToRoomart != null) {
       return onRegisterToRoomart(user);
     }
@@ -809,56 +720,43 @@ class _$_OnRegisterToRoomart implements _OnRegisterToRoomart {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    @required TResult onRegiserUser(_OnRegiserUser value),
-    @required TResult onLoginUser(_OnLoginUser value),
-    @required TResult onGetArBalance(_OnGetArBalance value),
-    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    @required TResult onAuthenticated(_OnAuthenticated value),
-    @required TResult onChangeAddress(_OnChangeAddress value),
-    @required TResult onForgotPassword(_OnForgotPassword value),
-    @required TResult onCheckCouponCode(_OnCheckCouponCode value),
-    @required TResult onChangePassword(_OnChangePassword value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnRegisterToRoomart value) onRegisterToRoomart,
+    required TResult Function(_OnRegiserUser value) onRegiserUser,
+    required TResult Function(_OnLoginUser value) onLoginUser,
+    required TResult Function(_OnGetArBalance value) onGetArBalance,
+    required TResult Function(_OnGetAvailableDiscount value)
+        onGetAvailableDiscount,
+    required TResult Function(_OnAuthenticated value) onAuthenticated,
+    required TResult Function(_OnChangeAddress value) onChangeAddress,
+    required TResult Function(_OnForgotPassword value) onForgotPassword,
+    required TResult Function(_OnCheckCouponCode value) onCheckCouponCode,
+    required TResult Function(_OnChangePassword value) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return onRegisterToRoomart(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    TResult onRegiserUser(_OnRegiserUser value),
-    TResult onLoginUser(_OnLoginUser value),
-    TResult onGetArBalance(_OnGetArBalance value),
-    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    TResult onAuthenticated(_OnAuthenticated value),
-    TResult onChangeAddress(_OnChangeAddress value),
-    TResult onForgotPassword(_OnForgotPassword value),
-    TResult onCheckCouponCode(_OnCheckCouponCode value),
-    TResult onChangePassword(_OnChangePassword value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnRegisterToRoomart value)? onRegisterToRoomart,
+    TResult Function(_OnRegiserUser value)? onRegiserUser,
+    TResult Function(_OnLoginUser value)? onLoginUser,
+    TResult Function(_OnGetArBalance value)? onGetArBalance,
+    TResult Function(_OnGetAvailableDiscount value)? onGetAvailableDiscount,
+    TResult Function(_OnAuthenticated value)? onAuthenticated,
+    TResult Function(_OnChangeAddress value)? onChangeAddress,
+    TResult Function(_OnForgotPassword value)? onForgotPassword,
+    TResult Function(_OnCheckCouponCode value)? onCheckCouponCode,
+    TResult Function(_OnChangePassword value)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onRegisterToRoomart != null) {
       return onRegisterToRoomart(this);
     }
@@ -870,9 +768,10 @@ abstract class _OnRegisterToRoomart implements AuthState {
   const factory _OnRegisterToRoomart(UserRoomartDataModel user) =
       _$_OnRegisterToRoomart;
 
-  UserRoomartDataModel get user;
+  UserRoomartDataModel get user => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$OnRegisterToRoomartCopyWith<_OnRegisterToRoomart> get copyWith;
+  _$OnRegisterToRoomartCopyWith<_OnRegisterToRoomart> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -895,17 +794,21 @@ class __$OnRegiserUserCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object response = freezed,
+    Object? response = freezed,
   }) {
     return _then(_OnRegiserUser(
-      response == freezed ? _value.response : response as RegisterResponseModel,
+      response == freezed
+          ? _value.response
+          : response // ignore: cast_nullable_to_non_nullable
+              as RegisterResponseModel,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_OnRegiserUser implements _OnRegiserUser {
-  const _$_OnRegiserUser(this.response) : assert(response != null);
+  const _$_OnRegiserUser(this.response);
 
   @override
   final RegisterResponseModel response;
@@ -935,56 +838,43 @@ class _$_OnRegiserUser implements _OnRegiserUser {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onRegisterToRoomart(UserRoomartDataModel user),
-    @required TResult onRegiserUser(RegisterResponseModel response),
-    @required TResult onLoginUser(UserDataModel user),
-    @required TResult onGetArBalance(String balancd),
-    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    @required TResult onAuthenticated(UserDataModel user),
-    @required TResult onChangeAddress(UserDataModel user),
-    @required TResult onForgotPassword(String status),
-    @required TResult onCheckCouponCode(String status),
-    @required TResult onChangePassword(UserDataModel status),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(UserRoomartDataModel user) onRegisterToRoomart,
+    required TResult Function(RegisterResponseModel response) onRegiserUser,
+    required TResult Function(UserDataModel user) onLoginUser,
+    required TResult Function(String balancd) onGetArBalance,
+    required TResult Function(List<DiscountDataModel> list)
+        onGetAvailableDiscount,
+    required TResult Function(UserDataModel user) onAuthenticated,
+    required TResult Function(UserDataModel user) onChangeAddress,
+    required TResult Function(String status) onForgotPassword,
+    required TResult Function(String status) onCheckCouponCode,
+    required TResult Function(UserDataModel status) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return onRegiserUser(response);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onRegisterToRoomart(UserRoomartDataModel user),
-    TResult onRegiserUser(RegisterResponseModel response),
-    TResult onLoginUser(UserDataModel user),
-    TResult onGetArBalance(String balancd),
-    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    TResult onAuthenticated(UserDataModel user),
-    TResult onChangeAddress(UserDataModel user),
-    TResult onForgotPassword(String status),
-    TResult onCheckCouponCode(String status),
-    TResult onChangePassword(UserDataModel status),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(UserRoomartDataModel user)? onRegisterToRoomart,
+    TResult Function(RegisterResponseModel response)? onRegiserUser,
+    TResult Function(UserDataModel user)? onLoginUser,
+    TResult Function(String balancd)? onGetArBalance,
+    TResult Function(List<DiscountDataModel> list)? onGetAvailableDiscount,
+    TResult Function(UserDataModel user)? onAuthenticated,
+    TResult Function(UserDataModel user)? onChangeAddress,
+    TResult Function(String status)? onForgotPassword,
+    TResult Function(String status)? onCheckCouponCode,
+    TResult Function(UserDataModel status)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onRegiserUser != null) {
       return onRegiserUser(response);
     }
@@ -993,56 +883,43 @@ class _$_OnRegiserUser implements _OnRegiserUser {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    @required TResult onRegiserUser(_OnRegiserUser value),
-    @required TResult onLoginUser(_OnLoginUser value),
-    @required TResult onGetArBalance(_OnGetArBalance value),
-    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    @required TResult onAuthenticated(_OnAuthenticated value),
-    @required TResult onChangeAddress(_OnChangeAddress value),
-    @required TResult onForgotPassword(_OnForgotPassword value),
-    @required TResult onCheckCouponCode(_OnCheckCouponCode value),
-    @required TResult onChangePassword(_OnChangePassword value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnRegisterToRoomart value) onRegisterToRoomart,
+    required TResult Function(_OnRegiserUser value) onRegiserUser,
+    required TResult Function(_OnLoginUser value) onLoginUser,
+    required TResult Function(_OnGetArBalance value) onGetArBalance,
+    required TResult Function(_OnGetAvailableDiscount value)
+        onGetAvailableDiscount,
+    required TResult Function(_OnAuthenticated value) onAuthenticated,
+    required TResult Function(_OnChangeAddress value) onChangeAddress,
+    required TResult Function(_OnForgotPassword value) onForgotPassword,
+    required TResult Function(_OnCheckCouponCode value) onCheckCouponCode,
+    required TResult Function(_OnChangePassword value) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return onRegiserUser(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    TResult onRegiserUser(_OnRegiserUser value),
-    TResult onLoginUser(_OnLoginUser value),
-    TResult onGetArBalance(_OnGetArBalance value),
-    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    TResult onAuthenticated(_OnAuthenticated value),
-    TResult onChangeAddress(_OnChangeAddress value),
-    TResult onForgotPassword(_OnForgotPassword value),
-    TResult onCheckCouponCode(_OnCheckCouponCode value),
-    TResult onChangePassword(_OnChangePassword value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnRegisterToRoomart value)? onRegisterToRoomart,
+    TResult Function(_OnRegiserUser value)? onRegiserUser,
+    TResult Function(_OnLoginUser value)? onLoginUser,
+    TResult Function(_OnGetArBalance value)? onGetArBalance,
+    TResult Function(_OnGetAvailableDiscount value)? onGetAvailableDiscount,
+    TResult Function(_OnAuthenticated value)? onAuthenticated,
+    TResult Function(_OnChangeAddress value)? onChangeAddress,
+    TResult Function(_OnForgotPassword value)? onForgotPassword,
+    TResult Function(_OnCheckCouponCode value)? onCheckCouponCode,
+    TResult Function(_OnChangePassword value)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onRegiserUser != null) {
       return onRegiserUser(this);
     }
@@ -1054,9 +931,10 @@ abstract class _OnRegiserUser implements AuthState {
   const factory _OnRegiserUser(RegisterResponseModel response) =
       _$_OnRegiserUser;
 
-  RegisterResponseModel get response;
+  RegisterResponseModel get response => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$OnRegiserUserCopyWith<_OnRegiserUser> get copyWith;
+  _$OnRegiserUserCopyWith<_OnRegiserUser> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1081,18 +959,18 @@ class __$OnLoginUserCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object user = freezed,
+    Object? user = freezed,
   }) {
     return _then(_OnLoginUser(
-      user == freezed ? _value.user : user as UserDataModel,
+      user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserDataModel,
     ));
   }
 
   @override
   $UserDataModelCopyWith<$Res> get user {
-    if (_value.user == null) {
-      return null;
-    }
     return $UserDataModelCopyWith<$Res>(_value.user, (value) {
       return _then(_value.copyWith(user: value));
     });
@@ -1100,8 +978,9 @@ class __$OnLoginUserCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_OnLoginUser implements _OnLoginUser {
-  const _$_OnLoginUser(this.user) : assert(user != null);
+  const _$_OnLoginUser(this.user);
 
   @override
   final UserDataModel user;
@@ -1130,56 +1009,43 @@ class _$_OnLoginUser implements _OnLoginUser {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onRegisterToRoomart(UserRoomartDataModel user),
-    @required TResult onRegiserUser(RegisterResponseModel response),
-    @required TResult onLoginUser(UserDataModel user),
-    @required TResult onGetArBalance(String balancd),
-    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    @required TResult onAuthenticated(UserDataModel user),
-    @required TResult onChangeAddress(UserDataModel user),
-    @required TResult onForgotPassword(String status),
-    @required TResult onCheckCouponCode(String status),
-    @required TResult onChangePassword(UserDataModel status),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(UserRoomartDataModel user) onRegisterToRoomart,
+    required TResult Function(RegisterResponseModel response) onRegiserUser,
+    required TResult Function(UserDataModel user) onLoginUser,
+    required TResult Function(String balancd) onGetArBalance,
+    required TResult Function(List<DiscountDataModel> list)
+        onGetAvailableDiscount,
+    required TResult Function(UserDataModel user) onAuthenticated,
+    required TResult Function(UserDataModel user) onChangeAddress,
+    required TResult Function(String status) onForgotPassword,
+    required TResult Function(String status) onCheckCouponCode,
+    required TResult Function(UserDataModel status) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return onLoginUser(user);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onRegisterToRoomart(UserRoomartDataModel user),
-    TResult onRegiserUser(RegisterResponseModel response),
-    TResult onLoginUser(UserDataModel user),
-    TResult onGetArBalance(String balancd),
-    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    TResult onAuthenticated(UserDataModel user),
-    TResult onChangeAddress(UserDataModel user),
-    TResult onForgotPassword(String status),
-    TResult onCheckCouponCode(String status),
-    TResult onChangePassword(UserDataModel status),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(UserRoomartDataModel user)? onRegisterToRoomart,
+    TResult Function(RegisterResponseModel response)? onRegiserUser,
+    TResult Function(UserDataModel user)? onLoginUser,
+    TResult Function(String balancd)? onGetArBalance,
+    TResult Function(List<DiscountDataModel> list)? onGetAvailableDiscount,
+    TResult Function(UserDataModel user)? onAuthenticated,
+    TResult Function(UserDataModel user)? onChangeAddress,
+    TResult Function(String status)? onForgotPassword,
+    TResult Function(String status)? onCheckCouponCode,
+    TResult Function(UserDataModel status)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onLoginUser != null) {
       return onLoginUser(user);
     }
@@ -1188,56 +1054,43 @@ class _$_OnLoginUser implements _OnLoginUser {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    @required TResult onRegiserUser(_OnRegiserUser value),
-    @required TResult onLoginUser(_OnLoginUser value),
-    @required TResult onGetArBalance(_OnGetArBalance value),
-    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    @required TResult onAuthenticated(_OnAuthenticated value),
-    @required TResult onChangeAddress(_OnChangeAddress value),
-    @required TResult onForgotPassword(_OnForgotPassword value),
-    @required TResult onCheckCouponCode(_OnCheckCouponCode value),
-    @required TResult onChangePassword(_OnChangePassword value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnRegisterToRoomart value) onRegisterToRoomart,
+    required TResult Function(_OnRegiserUser value) onRegiserUser,
+    required TResult Function(_OnLoginUser value) onLoginUser,
+    required TResult Function(_OnGetArBalance value) onGetArBalance,
+    required TResult Function(_OnGetAvailableDiscount value)
+        onGetAvailableDiscount,
+    required TResult Function(_OnAuthenticated value) onAuthenticated,
+    required TResult Function(_OnChangeAddress value) onChangeAddress,
+    required TResult Function(_OnForgotPassword value) onForgotPassword,
+    required TResult Function(_OnCheckCouponCode value) onCheckCouponCode,
+    required TResult Function(_OnChangePassword value) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return onLoginUser(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    TResult onRegiserUser(_OnRegiserUser value),
-    TResult onLoginUser(_OnLoginUser value),
-    TResult onGetArBalance(_OnGetArBalance value),
-    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    TResult onAuthenticated(_OnAuthenticated value),
-    TResult onChangeAddress(_OnChangeAddress value),
-    TResult onForgotPassword(_OnForgotPassword value),
-    TResult onCheckCouponCode(_OnCheckCouponCode value),
-    TResult onChangePassword(_OnChangePassword value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnRegisterToRoomart value)? onRegisterToRoomart,
+    TResult Function(_OnRegiserUser value)? onRegiserUser,
+    TResult Function(_OnLoginUser value)? onLoginUser,
+    TResult Function(_OnGetArBalance value)? onGetArBalance,
+    TResult Function(_OnGetAvailableDiscount value)? onGetAvailableDiscount,
+    TResult Function(_OnAuthenticated value)? onAuthenticated,
+    TResult Function(_OnChangeAddress value)? onChangeAddress,
+    TResult Function(_OnForgotPassword value)? onForgotPassword,
+    TResult Function(_OnCheckCouponCode value)? onCheckCouponCode,
+    TResult Function(_OnChangePassword value)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onLoginUser != null) {
       return onLoginUser(this);
     }
@@ -1248,9 +1101,10 @@ class _$_OnLoginUser implements _OnLoginUser {
 abstract class _OnLoginUser implements AuthState {
   const factory _OnLoginUser(UserDataModel user) = _$_OnLoginUser;
 
-  UserDataModel get user;
+  UserDataModel get user => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$OnLoginUserCopyWith<_OnLoginUser> get copyWith;
+  _$OnLoginUserCopyWith<_OnLoginUser> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1273,17 +1127,21 @@ class __$OnGetArBalanceCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object balancd = freezed,
+    Object? balancd = freezed,
   }) {
     return _then(_OnGetArBalance(
-      balancd == freezed ? _value.balancd : balancd as String,
+      balancd == freezed
+          ? _value.balancd
+          : balancd // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_OnGetArBalance implements _OnGetArBalance {
-  const _$_OnGetArBalance(this.balancd) : assert(balancd != null);
+  const _$_OnGetArBalance(this.balancd);
 
   @override
   final String balancd;
@@ -1312,56 +1170,43 @@ class _$_OnGetArBalance implements _OnGetArBalance {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onRegisterToRoomart(UserRoomartDataModel user),
-    @required TResult onRegiserUser(RegisterResponseModel response),
-    @required TResult onLoginUser(UserDataModel user),
-    @required TResult onGetArBalance(String balancd),
-    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    @required TResult onAuthenticated(UserDataModel user),
-    @required TResult onChangeAddress(UserDataModel user),
-    @required TResult onForgotPassword(String status),
-    @required TResult onCheckCouponCode(String status),
-    @required TResult onChangePassword(UserDataModel status),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(UserRoomartDataModel user) onRegisterToRoomart,
+    required TResult Function(RegisterResponseModel response) onRegiserUser,
+    required TResult Function(UserDataModel user) onLoginUser,
+    required TResult Function(String balancd) onGetArBalance,
+    required TResult Function(List<DiscountDataModel> list)
+        onGetAvailableDiscount,
+    required TResult Function(UserDataModel user) onAuthenticated,
+    required TResult Function(UserDataModel user) onChangeAddress,
+    required TResult Function(String status) onForgotPassword,
+    required TResult Function(String status) onCheckCouponCode,
+    required TResult Function(UserDataModel status) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return onGetArBalance(balancd);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onRegisterToRoomart(UserRoomartDataModel user),
-    TResult onRegiserUser(RegisterResponseModel response),
-    TResult onLoginUser(UserDataModel user),
-    TResult onGetArBalance(String balancd),
-    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    TResult onAuthenticated(UserDataModel user),
-    TResult onChangeAddress(UserDataModel user),
-    TResult onForgotPassword(String status),
-    TResult onCheckCouponCode(String status),
-    TResult onChangePassword(UserDataModel status),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(UserRoomartDataModel user)? onRegisterToRoomart,
+    TResult Function(RegisterResponseModel response)? onRegiserUser,
+    TResult Function(UserDataModel user)? onLoginUser,
+    TResult Function(String balancd)? onGetArBalance,
+    TResult Function(List<DiscountDataModel> list)? onGetAvailableDiscount,
+    TResult Function(UserDataModel user)? onAuthenticated,
+    TResult Function(UserDataModel user)? onChangeAddress,
+    TResult Function(String status)? onForgotPassword,
+    TResult Function(String status)? onCheckCouponCode,
+    TResult Function(UserDataModel status)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onGetArBalance != null) {
       return onGetArBalance(balancd);
     }
@@ -1370,56 +1215,43 @@ class _$_OnGetArBalance implements _OnGetArBalance {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    @required TResult onRegiserUser(_OnRegiserUser value),
-    @required TResult onLoginUser(_OnLoginUser value),
-    @required TResult onGetArBalance(_OnGetArBalance value),
-    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    @required TResult onAuthenticated(_OnAuthenticated value),
-    @required TResult onChangeAddress(_OnChangeAddress value),
-    @required TResult onForgotPassword(_OnForgotPassword value),
-    @required TResult onCheckCouponCode(_OnCheckCouponCode value),
-    @required TResult onChangePassword(_OnChangePassword value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnRegisterToRoomart value) onRegisterToRoomart,
+    required TResult Function(_OnRegiserUser value) onRegiserUser,
+    required TResult Function(_OnLoginUser value) onLoginUser,
+    required TResult Function(_OnGetArBalance value) onGetArBalance,
+    required TResult Function(_OnGetAvailableDiscount value)
+        onGetAvailableDiscount,
+    required TResult Function(_OnAuthenticated value) onAuthenticated,
+    required TResult Function(_OnChangeAddress value) onChangeAddress,
+    required TResult Function(_OnForgotPassword value) onForgotPassword,
+    required TResult Function(_OnCheckCouponCode value) onCheckCouponCode,
+    required TResult Function(_OnChangePassword value) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return onGetArBalance(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    TResult onRegiserUser(_OnRegiserUser value),
-    TResult onLoginUser(_OnLoginUser value),
-    TResult onGetArBalance(_OnGetArBalance value),
-    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    TResult onAuthenticated(_OnAuthenticated value),
-    TResult onChangeAddress(_OnChangeAddress value),
-    TResult onForgotPassword(_OnForgotPassword value),
-    TResult onCheckCouponCode(_OnCheckCouponCode value),
-    TResult onChangePassword(_OnChangePassword value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnRegisterToRoomart value)? onRegisterToRoomart,
+    TResult Function(_OnRegiserUser value)? onRegiserUser,
+    TResult Function(_OnLoginUser value)? onLoginUser,
+    TResult Function(_OnGetArBalance value)? onGetArBalance,
+    TResult Function(_OnGetAvailableDiscount value)? onGetAvailableDiscount,
+    TResult Function(_OnAuthenticated value)? onAuthenticated,
+    TResult Function(_OnChangeAddress value)? onChangeAddress,
+    TResult Function(_OnForgotPassword value)? onForgotPassword,
+    TResult Function(_OnCheckCouponCode value)? onCheckCouponCode,
+    TResult Function(_OnChangePassword value)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onGetArBalance != null) {
       return onGetArBalance(this);
     }
@@ -1430,9 +1262,10 @@ class _$_OnGetArBalance implements _OnGetArBalance {
 abstract class _OnGetArBalance implements AuthState {
   const factory _OnGetArBalance(String balancd) = _$_OnGetArBalance;
 
-  String get balancd;
+  String get balancd => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$OnGetArBalanceCopyWith<_OnGetArBalance> get copyWith;
+  _$OnGetArBalanceCopyWith<_OnGetArBalance> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1456,17 +1289,21 @@ class __$OnGetAvailableDiscountCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object list = freezed,
+    Object? list = freezed,
   }) {
     return _then(_OnGetAvailableDiscount(
-      list == freezed ? _value.list : list as List<DiscountDataModel>,
+      list == freezed
+          ? _value.list
+          : list // ignore: cast_nullable_to_non_nullable
+              as List<DiscountDataModel>,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_OnGetAvailableDiscount implements _OnGetAvailableDiscount {
-  const _$_OnGetAvailableDiscount(this.list) : assert(list != null);
+  const _$_OnGetAvailableDiscount(this.list);
 
   @override
   final List<DiscountDataModel> list;
@@ -1496,56 +1333,43 @@ class _$_OnGetAvailableDiscount implements _OnGetAvailableDiscount {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onRegisterToRoomart(UserRoomartDataModel user),
-    @required TResult onRegiserUser(RegisterResponseModel response),
-    @required TResult onLoginUser(UserDataModel user),
-    @required TResult onGetArBalance(String balancd),
-    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    @required TResult onAuthenticated(UserDataModel user),
-    @required TResult onChangeAddress(UserDataModel user),
-    @required TResult onForgotPassword(String status),
-    @required TResult onCheckCouponCode(String status),
-    @required TResult onChangePassword(UserDataModel status),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(UserRoomartDataModel user) onRegisterToRoomart,
+    required TResult Function(RegisterResponseModel response) onRegiserUser,
+    required TResult Function(UserDataModel user) onLoginUser,
+    required TResult Function(String balancd) onGetArBalance,
+    required TResult Function(List<DiscountDataModel> list)
+        onGetAvailableDiscount,
+    required TResult Function(UserDataModel user) onAuthenticated,
+    required TResult Function(UserDataModel user) onChangeAddress,
+    required TResult Function(String status) onForgotPassword,
+    required TResult Function(String status) onCheckCouponCode,
+    required TResult Function(UserDataModel status) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return onGetAvailableDiscount(list);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onRegisterToRoomart(UserRoomartDataModel user),
-    TResult onRegiserUser(RegisterResponseModel response),
-    TResult onLoginUser(UserDataModel user),
-    TResult onGetArBalance(String balancd),
-    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    TResult onAuthenticated(UserDataModel user),
-    TResult onChangeAddress(UserDataModel user),
-    TResult onForgotPassword(String status),
-    TResult onCheckCouponCode(String status),
-    TResult onChangePassword(UserDataModel status),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(UserRoomartDataModel user)? onRegisterToRoomart,
+    TResult Function(RegisterResponseModel response)? onRegiserUser,
+    TResult Function(UserDataModel user)? onLoginUser,
+    TResult Function(String balancd)? onGetArBalance,
+    TResult Function(List<DiscountDataModel> list)? onGetAvailableDiscount,
+    TResult Function(UserDataModel user)? onAuthenticated,
+    TResult Function(UserDataModel user)? onChangeAddress,
+    TResult Function(String status)? onForgotPassword,
+    TResult Function(String status)? onCheckCouponCode,
+    TResult Function(UserDataModel status)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onGetAvailableDiscount != null) {
       return onGetAvailableDiscount(list);
     }
@@ -1554,56 +1378,43 @@ class _$_OnGetAvailableDiscount implements _OnGetAvailableDiscount {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    @required TResult onRegiserUser(_OnRegiserUser value),
-    @required TResult onLoginUser(_OnLoginUser value),
-    @required TResult onGetArBalance(_OnGetArBalance value),
-    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    @required TResult onAuthenticated(_OnAuthenticated value),
-    @required TResult onChangeAddress(_OnChangeAddress value),
-    @required TResult onForgotPassword(_OnForgotPassword value),
-    @required TResult onCheckCouponCode(_OnCheckCouponCode value),
-    @required TResult onChangePassword(_OnChangePassword value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnRegisterToRoomart value) onRegisterToRoomart,
+    required TResult Function(_OnRegiserUser value) onRegiserUser,
+    required TResult Function(_OnLoginUser value) onLoginUser,
+    required TResult Function(_OnGetArBalance value) onGetArBalance,
+    required TResult Function(_OnGetAvailableDiscount value)
+        onGetAvailableDiscount,
+    required TResult Function(_OnAuthenticated value) onAuthenticated,
+    required TResult Function(_OnChangeAddress value) onChangeAddress,
+    required TResult Function(_OnForgotPassword value) onForgotPassword,
+    required TResult Function(_OnCheckCouponCode value) onCheckCouponCode,
+    required TResult Function(_OnChangePassword value) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return onGetAvailableDiscount(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    TResult onRegiserUser(_OnRegiserUser value),
-    TResult onLoginUser(_OnLoginUser value),
-    TResult onGetArBalance(_OnGetArBalance value),
-    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    TResult onAuthenticated(_OnAuthenticated value),
-    TResult onChangeAddress(_OnChangeAddress value),
-    TResult onForgotPassword(_OnForgotPassword value),
-    TResult onCheckCouponCode(_OnCheckCouponCode value),
-    TResult onChangePassword(_OnChangePassword value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnRegisterToRoomart value)? onRegisterToRoomart,
+    TResult Function(_OnRegiserUser value)? onRegiserUser,
+    TResult Function(_OnLoginUser value)? onLoginUser,
+    TResult Function(_OnGetArBalance value)? onGetArBalance,
+    TResult Function(_OnGetAvailableDiscount value)? onGetAvailableDiscount,
+    TResult Function(_OnAuthenticated value)? onAuthenticated,
+    TResult Function(_OnChangeAddress value)? onChangeAddress,
+    TResult Function(_OnForgotPassword value)? onForgotPassword,
+    TResult Function(_OnCheckCouponCode value)? onCheckCouponCode,
+    TResult Function(_OnChangePassword value)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onGetAvailableDiscount != null) {
       return onGetAvailableDiscount(this);
     }
@@ -1615,9 +1426,10 @@ abstract class _OnGetAvailableDiscount implements AuthState {
   const factory _OnGetAvailableDiscount(List<DiscountDataModel> list) =
       _$_OnGetAvailableDiscount;
 
-  List<DiscountDataModel> get list;
+  List<DiscountDataModel> get list => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$OnGetAvailableDiscountCopyWith<_OnGetAvailableDiscount> get copyWith;
+  _$OnGetAvailableDiscountCopyWith<_OnGetAvailableDiscount> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1642,18 +1454,18 @@ class __$OnAuthenticatedCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object user = freezed,
+    Object? user = freezed,
   }) {
     return _then(_OnAuthenticated(
-      user == freezed ? _value.user : user as UserDataModel,
+      user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserDataModel,
     ));
   }
 
   @override
   $UserDataModelCopyWith<$Res> get user {
-    if (_value.user == null) {
-      return null;
-    }
     return $UserDataModelCopyWith<$Res>(_value.user, (value) {
       return _then(_value.copyWith(user: value));
     });
@@ -1661,8 +1473,9 @@ class __$OnAuthenticatedCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_OnAuthenticated implements _OnAuthenticated {
-  const _$_OnAuthenticated(this.user) : assert(user != null);
+  const _$_OnAuthenticated(this.user);
 
   @override
   final UserDataModel user;
@@ -1691,56 +1504,43 @@ class _$_OnAuthenticated implements _OnAuthenticated {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onRegisterToRoomart(UserRoomartDataModel user),
-    @required TResult onRegiserUser(RegisterResponseModel response),
-    @required TResult onLoginUser(UserDataModel user),
-    @required TResult onGetArBalance(String balancd),
-    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    @required TResult onAuthenticated(UserDataModel user),
-    @required TResult onChangeAddress(UserDataModel user),
-    @required TResult onForgotPassword(String status),
-    @required TResult onCheckCouponCode(String status),
-    @required TResult onChangePassword(UserDataModel status),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(UserRoomartDataModel user) onRegisterToRoomart,
+    required TResult Function(RegisterResponseModel response) onRegiserUser,
+    required TResult Function(UserDataModel user) onLoginUser,
+    required TResult Function(String balancd) onGetArBalance,
+    required TResult Function(List<DiscountDataModel> list)
+        onGetAvailableDiscount,
+    required TResult Function(UserDataModel user) onAuthenticated,
+    required TResult Function(UserDataModel user) onChangeAddress,
+    required TResult Function(String status) onForgotPassword,
+    required TResult Function(String status) onCheckCouponCode,
+    required TResult Function(UserDataModel status) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return onAuthenticated(user);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onRegisterToRoomart(UserRoomartDataModel user),
-    TResult onRegiserUser(RegisterResponseModel response),
-    TResult onLoginUser(UserDataModel user),
-    TResult onGetArBalance(String balancd),
-    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    TResult onAuthenticated(UserDataModel user),
-    TResult onChangeAddress(UserDataModel user),
-    TResult onForgotPassword(String status),
-    TResult onCheckCouponCode(String status),
-    TResult onChangePassword(UserDataModel status),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(UserRoomartDataModel user)? onRegisterToRoomart,
+    TResult Function(RegisterResponseModel response)? onRegiserUser,
+    TResult Function(UserDataModel user)? onLoginUser,
+    TResult Function(String balancd)? onGetArBalance,
+    TResult Function(List<DiscountDataModel> list)? onGetAvailableDiscount,
+    TResult Function(UserDataModel user)? onAuthenticated,
+    TResult Function(UserDataModel user)? onChangeAddress,
+    TResult Function(String status)? onForgotPassword,
+    TResult Function(String status)? onCheckCouponCode,
+    TResult Function(UserDataModel status)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onAuthenticated != null) {
       return onAuthenticated(user);
     }
@@ -1749,56 +1549,43 @@ class _$_OnAuthenticated implements _OnAuthenticated {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    @required TResult onRegiserUser(_OnRegiserUser value),
-    @required TResult onLoginUser(_OnLoginUser value),
-    @required TResult onGetArBalance(_OnGetArBalance value),
-    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    @required TResult onAuthenticated(_OnAuthenticated value),
-    @required TResult onChangeAddress(_OnChangeAddress value),
-    @required TResult onForgotPassword(_OnForgotPassword value),
-    @required TResult onCheckCouponCode(_OnCheckCouponCode value),
-    @required TResult onChangePassword(_OnChangePassword value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnRegisterToRoomart value) onRegisterToRoomart,
+    required TResult Function(_OnRegiserUser value) onRegiserUser,
+    required TResult Function(_OnLoginUser value) onLoginUser,
+    required TResult Function(_OnGetArBalance value) onGetArBalance,
+    required TResult Function(_OnGetAvailableDiscount value)
+        onGetAvailableDiscount,
+    required TResult Function(_OnAuthenticated value) onAuthenticated,
+    required TResult Function(_OnChangeAddress value) onChangeAddress,
+    required TResult Function(_OnForgotPassword value) onForgotPassword,
+    required TResult Function(_OnCheckCouponCode value) onCheckCouponCode,
+    required TResult Function(_OnChangePassword value) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return onAuthenticated(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    TResult onRegiserUser(_OnRegiserUser value),
-    TResult onLoginUser(_OnLoginUser value),
-    TResult onGetArBalance(_OnGetArBalance value),
-    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    TResult onAuthenticated(_OnAuthenticated value),
-    TResult onChangeAddress(_OnChangeAddress value),
-    TResult onForgotPassword(_OnForgotPassword value),
-    TResult onCheckCouponCode(_OnCheckCouponCode value),
-    TResult onChangePassword(_OnChangePassword value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnRegisterToRoomart value)? onRegisterToRoomart,
+    TResult Function(_OnRegiserUser value)? onRegiserUser,
+    TResult Function(_OnLoginUser value)? onLoginUser,
+    TResult Function(_OnGetArBalance value)? onGetArBalance,
+    TResult Function(_OnGetAvailableDiscount value)? onGetAvailableDiscount,
+    TResult Function(_OnAuthenticated value)? onAuthenticated,
+    TResult Function(_OnChangeAddress value)? onChangeAddress,
+    TResult Function(_OnForgotPassword value)? onForgotPassword,
+    TResult Function(_OnCheckCouponCode value)? onCheckCouponCode,
+    TResult Function(_OnChangePassword value)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onAuthenticated != null) {
       return onAuthenticated(this);
     }
@@ -1809,9 +1596,10 @@ class _$_OnAuthenticated implements _OnAuthenticated {
 abstract class _OnAuthenticated implements AuthState {
   const factory _OnAuthenticated(UserDataModel user) = _$_OnAuthenticated;
 
-  UserDataModel get user;
+  UserDataModel get user => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$OnAuthenticatedCopyWith<_OnAuthenticated> get copyWith;
+  _$OnAuthenticatedCopyWith<_OnAuthenticated> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1836,18 +1624,18 @@ class __$OnChangeAddressCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object user = freezed,
+    Object? user = freezed,
   }) {
     return _then(_OnChangeAddress(
-      user == freezed ? _value.user : user as UserDataModel,
+      user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserDataModel,
     ));
   }
 
   @override
   $UserDataModelCopyWith<$Res> get user {
-    if (_value.user == null) {
-      return null;
-    }
     return $UserDataModelCopyWith<$Res>(_value.user, (value) {
       return _then(_value.copyWith(user: value));
     });
@@ -1855,8 +1643,9 @@ class __$OnChangeAddressCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_OnChangeAddress implements _OnChangeAddress {
-  const _$_OnChangeAddress(this.user) : assert(user != null);
+  const _$_OnChangeAddress(this.user);
 
   @override
   final UserDataModel user;
@@ -1885,56 +1674,43 @@ class _$_OnChangeAddress implements _OnChangeAddress {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onRegisterToRoomart(UserRoomartDataModel user),
-    @required TResult onRegiserUser(RegisterResponseModel response),
-    @required TResult onLoginUser(UserDataModel user),
-    @required TResult onGetArBalance(String balancd),
-    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    @required TResult onAuthenticated(UserDataModel user),
-    @required TResult onChangeAddress(UserDataModel user),
-    @required TResult onForgotPassword(String status),
-    @required TResult onCheckCouponCode(String status),
-    @required TResult onChangePassword(UserDataModel status),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(UserRoomartDataModel user) onRegisterToRoomart,
+    required TResult Function(RegisterResponseModel response) onRegiserUser,
+    required TResult Function(UserDataModel user) onLoginUser,
+    required TResult Function(String balancd) onGetArBalance,
+    required TResult Function(List<DiscountDataModel> list)
+        onGetAvailableDiscount,
+    required TResult Function(UserDataModel user) onAuthenticated,
+    required TResult Function(UserDataModel user) onChangeAddress,
+    required TResult Function(String status) onForgotPassword,
+    required TResult Function(String status) onCheckCouponCode,
+    required TResult Function(UserDataModel status) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return onChangeAddress(user);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onRegisterToRoomart(UserRoomartDataModel user),
-    TResult onRegiserUser(RegisterResponseModel response),
-    TResult onLoginUser(UserDataModel user),
-    TResult onGetArBalance(String balancd),
-    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    TResult onAuthenticated(UserDataModel user),
-    TResult onChangeAddress(UserDataModel user),
-    TResult onForgotPassword(String status),
-    TResult onCheckCouponCode(String status),
-    TResult onChangePassword(UserDataModel status),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(UserRoomartDataModel user)? onRegisterToRoomart,
+    TResult Function(RegisterResponseModel response)? onRegiserUser,
+    TResult Function(UserDataModel user)? onLoginUser,
+    TResult Function(String balancd)? onGetArBalance,
+    TResult Function(List<DiscountDataModel> list)? onGetAvailableDiscount,
+    TResult Function(UserDataModel user)? onAuthenticated,
+    TResult Function(UserDataModel user)? onChangeAddress,
+    TResult Function(String status)? onForgotPassword,
+    TResult Function(String status)? onCheckCouponCode,
+    TResult Function(UserDataModel status)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onChangeAddress != null) {
       return onChangeAddress(user);
     }
@@ -1943,56 +1719,43 @@ class _$_OnChangeAddress implements _OnChangeAddress {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    @required TResult onRegiserUser(_OnRegiserUser value),
-    @required TResult onLoginUser(_OnLoginUser value),
-    @required TResult onGetArBalance(_OnGetArBalance value),
-    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    @required TResult onAuthenticated(_OnAuthenticated value),
-    @required TResult onChangeAddress(_OnChangeAddress value),
-    @required TResult onForgotPassword(_OnForgotPassword value),
-    @required TResult onCheckCouponCode(_OnCheckCouponCode value),
-    @required TResult onChangePassword(_OnChangePassword value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnRegisterToRoomart value) onRegisterToRoomart,
+    required TResult Function(_OnRegiserUser value) onRegiserUser,
+    required TResult Function(_OnLoginUser value) onLoginUser,
+    required TResult Function(_OnGetArBalance value) onGetArBalance,
+    required TResult Function(_OnGetAvailableDiscount value)
+        onGetAvailableDiscount,
+    required TResult Function(_OnAuthenticated value) onAuthenticated,
+    required TResult Function(_OnChangeAddress value) onChangeAddress,
+    required TResult Function(_OnForgotPassword value) onForgotPassword,
+    required TResult Function(_OnCheckCouponCode value) onCheckCouponCode,
+    required TResult Function(_OnChangePassword value) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return onChangeAddress(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    TResult onRegiserUser(_OnRegiserUser value),
-    TResult onLoginUser(_OnLoginUser value),
-    TResult onGetArBalance(_OnGetArBalance value),
-    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    TResult onAuthenticated(_OnAuthenticated value),
-    TResult onChangeAddress(_OnChangeAddress value),
-    TResult onForgotPassword(_OnForgotPassword value),
-    TResult onCheckCouponCode(_OnCheckCouponCode value),
-    TResult onChangePassword(_OnChangePassword value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnRegisterToRoomart value)? onRegisterToRoomart,
+    TResult Function(_OnRegiserUser value)? onRegiserUser,
+    TResult Function(_OnLoginUser value)? onLoginUser,
+    TResult Function(_OnGetArBalance value)? onGetArBalance,
+    TResult Function(_OnGetAvailableDiscount value)? onGetAvailableDiscount,
+    TResult Function(_OnAuthenticated value)? onAuthenticated,
+    TResult Function(_OnChangeAddress value)? onChangeAddress,
+    TResult Function(_OnForgotPassword value)? onForgotPassword,
+    TResult Function(_OnCheckCouponCode value)? onCheckCouponCode,
+    TResult Function(_OnChangePassword value)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onChangeAddress != null) {
       return onChangeAddress(this);
     }
@@ -2003,9 +1766,10 @@ class _$_OnChangeAddress implements _OnChangeAddress {
 abstract class _OnChangeAddress implements AuthState {
   const factory _OnChangeAddress(UserDataModel user) = _$_OnChangeAddress;
 
-  UserDataModel get user;
+  UserDataModel get user => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$OnChangeAddressCopyWith<_OnChangeAddress> get copyWith;
+  _$OnChangeAddressCopyWith<_OnChangeAddress> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2029,17 +1793,21 @@ class __$OnForgotPasswordCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object status = freezed,
+    Object? status = freezed,
   }) {
     return _then(_OnForgotPassword(
-      status == freezed ? _value.status : status as String,
+      status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_OnForgotPassword implements _OnForgotPassword {
-  const _$_OnForgotPassword(this.status) : assert(status != null);
+  const _$_OnForgotPassword(this.status);
 
   @override
   final String status;
@@ -2068,56 +1836,43 @@ class _$_OnForgotPassword implements _OnForgotPassword {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onRegisterToRoomart(UserRoomartDataModel user),
-    @required TResult onRegiserUser(RegisterResponseModel response),
-    @required TResult onLoginUser(UserDataModel user),
-    @required TResult onGetArBalance(String balancd),
-    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    @required TResult onAuthenticated(UserDataModel user),
-    @required TResult onChangeAddress(UserDataModel user),
-    @required TResult onForgotPassword(String status),
-    @required TResult onCheckCouponCode(String status),
-    @required TResult onChangePassword(UserDataModel status),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(UserRoomartDataModel user) onRegisterToRoomart,
+    required TResult Function(RegisterResponseModel response) onRegiserUser,
+    required TResult Function(UserDataModel user) onLoginUser,
+    required TResult Function(String balancd) onGetArBalance,
+    required TResult Function(List<DiscountDataModel> list)
+        onGetAvailableDiscount,
+    required TResult Function(UserDataModel user) onAuthenticated,
+    required TResult Function(UserDataModel user) onChangeAddress,
+    required TResult Function(String status) onForgotPassword,
+    required TResult Function(String status) onCheckCouponCode,
+    required TResult Function(UserDataModel status) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return onForgotPassword(status);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onRegisterToRoomart(UserRoomartDataModel user),
-    TResult onRegiserUser(RegisterResponseModel response),
-    TResult onLoginUser(UserDataModel user),
-    TResult onGetArBalance(String balancd),
-    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    TResult onAuthenticated(UserDataModel user),
-    TResult onChangeAddress(UserDataModel user),
-    TResult onForgotPassword(String status),
-    TResult onCheckCouponCode(String status),
-    TResult onChangePassword(UserDataModel status),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(UserRoomartDataModel user)? onRegisterToRoomart,
+    TResult Function(RegisterResponseModel response)? onRegiserUser,
+    TResult Function(UserDataModel user)? onLoginUser,
+    TResult Function(String balancd)? onGetArBalance,
+    TResult Function(List<DiscountDataModel> list)? onGetAvailableDiscount,
+    TResult Function(UserDataModel user)? onAuthenticated,
+    TResult Function(UserDataModel user)? onChangeAddress,
+    TResult Function(String status)? onForgotPassword,
+    TResult Function(String status)? onCheckCouponCode,
+    TResult Function(UserDataModel status)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onForgotPassword != null) {
       return onForgotPassword(status);
     }
@@ -2126,56 +1881,43 @@ class _$_OnForgotPassword implements _OnForgotPassword {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    @required TResult onRegiserUser(_OnRegiserUser value),
-    @required TResult onLoginUser(_OnLoginUser value),
-    @required TResult onGetArBalance(_OnGetArBalance value),
-    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    @required TResult onAuthenticated(_OnAuthenticated value),
-    @required TResult onChangeAddress(_OnChangeAddress value),
-    @required TResult onForgotPassword(_OnForgotPassword value),
-    @required TResult onCheckCouponCode(_OnCheckCouponCode value),
-    @required TResult onChangePassword(_OnChangePassword value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnRegisterToRoomart value) onRegisterToRoomart,
+    required TResult Function(_OnRegiserUser value) onRegiserUser,
+    required TResult Function(_OnLoginUser value) onLoginUser,
+    required TResult Function(_OnGetArBalance value) onGetArBalance,
+    required TResult Function(_OnGetAvailableDiscount value)
+        onGetAvailableDiscount,
+    required TResult Function(_OnAuthenticated value) onAuthenticated,
+    required TResult Function(_OnChangeAddress value) onChangeAddress,
+    required TResult Function(_OnForgotPassword value) onForgotPassword,
+    required TResult Function(_OnCheckCouponCode value) onCheckCouponCode,
+    required TResult Function(_OnChangePassword value) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return onForgotPassword(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    TResult onRegiserUser(_OnRegiserUser value),
-    TResult onLoginUser(_OnLoginUser value),
-    TResult onGetArBalance(_OnGetArBalance value),
-    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    TResult onAuthenticated(_OnAuthenticated value),
-    TResult onChangeAddress(_OnChangeAddress value),
-    TResult onForgotPassword(_OnForgotPassword value),
-    TResult onCheckCouponCode(_OnCheckCouponCode value),
-    TResult onChangePassword(_OnChangePassword value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnRegisterToRoomart value)? onRegisterToRoomart,
+    TResult Function(_OnRegiserUser value)? onRegiserUser,
+    TResult Function(_OnLoginUser value)? onLoginUser,
+    TResult Function(_OnGetArBalance value)? onGetArBalance,
+    TResult Function(_OnGetAvailableDiscount value)? onGetAvailableDiscount,
+    TResult Function(_OnAuthenticated value)? onAuthenticated,
+    TResult Function(_OnChangeAddress value)? onChangeAddress,
+    TResult Function(_OnForgotPassword value)? onForgotPassword,
+    TResult Function(_OnCheckCouponCode value)? onCheckCouponCode,
+    TResult Function(_OnChangePassword value)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onForgotPassword != null) {
       return onForgotPassword(this);
     }
@@ -2186,9 +1928,10 @@ class _$_OnForgotPassword implements _OnForgotPassword {
 abstract class _OnForgotPassword implements AuthState {
   const factory _OnForgotPassword(String status) = _$_OnForgotPassword;
 
-  String get status;
+  String get status => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$OnForgotPasswordCopyWith<_OnForgotPassword> get copyWith;
+  _$OnForgotPasswordCopyWith<_OnForgotPassword> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2212,17 +1955,21 @@ class __$OnCheckCouponCodeCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object status = freezed,
+    Object? status = freezed,
   }) {
     return _then(_OnCheckCouponCode(
-      status == freezed ? _value.status : status as String,
+      status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_OnCheckCouponCode implements _OnCheckCouponCode {
-  const _$_OnCheckCouponCode(this.status) : assert(status != null);
+  const _$_OnCheckCouponCode(this.status);
 
   @override
   final String status;
@@ -2251,56 +1998,43 @@ class _$_OnCheckCouponCode implements _OnCheckCouponCode {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onRegisterToRoomart(UserRoomartDataModel user),
-    @required TResult onRegiserUser(RegisterResponseModel response),
-    @required TResult onLoginUser(UserDataModel user),
-    @required TResult onGetArBalance(String balancd),
-    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    @required TResult onAuthenticated(UserDataModel user),
-    @required TResult onChangeAddress(UserDataModel user),
-    @required TResult onForgotPassword(String status),
-    @required TResult onCheckCouponCode(String status),
-    @required TResult onChangePassword(UserDataModel status),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(UserRoomartDataModel user) onRegisterToRoomart,
+    required TResult Function(RegisterResponseModel response) onRegiserUser,
+    required TResult Function(UserDataModel user) onLoginUser,
+    required TResult Function(String balancd) onGetArBalance,
+    required TResult Function(List<DiscountDataModel> list)
+        onGetAvailableDiscount,
+    required TResult Function(UserDataModel user) onAuthenticated,
+    required TResult Function(UserDataModel user) onChangeAddress,
+    required TResult Function(String status) onForgotPassword,
+    required TResult Function(String status) onCheckCouponCode,
+    required TResult Function(UserDataModel status) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return onCheckCouponCode(status);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onRegisterToRoomart(UserRoomartDataModel user),
-    TResult onRegiserUser(RegisterResponseModel response),
-    TResult onLoginUser(UserDataModel user),
-    TResult onGetArBalance(String balancd),
-    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    TResult onAuthenticated(UserDataModel user),
-    TResult onChangeAddress(UserDataModel user),
-    TResult onForgotPassword(String status),
-    TResult onCheckCouponCode(String status),
-    TResult onChangePassword(UserDataModel status),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(UserRoomartDataModel user)? onRegisterToRoomart,
+    TResult Function(RegisterResponseModel response)? onRegiserUser,
+    TResult Function(UserDataModel user)? onLoginUser,
+    TResult Function(String balancd)? onGetArBalance,
+    TResult Function(List<DiscountDataModel> list)? onGetAvailableDiscount,
+    TResult Function(UserDataModel user)? onAuthenticated,
+    TResult Function(UserDataModel user)? onChangeAddress,
+    TResult Function(String status)? onForgotPassword,
+    TResult Function(String status)? onCheckCouponCode,
+    TResult Function(UserDataModel status)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onCheckCouponCode != null) {
       return onCheckCouponCode(status);
     }
@@ -2309,56 +2043,43 @@ class _$_OnCheckCouponCode implements _OnCheckCouponCode {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    @required TResult onRegiserUser(_OnRegiserUser value),
-    @required TResult onLoginUser(_OnLoginUser value),
-    @required TResult onGetArBalance(_OnGetArBalance value),
-    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    @required TResult onAuthenticated(_OnAuthenticated value),
-    @required TResult onChangeAddress(_OnChangeAddress value),
-    @required TResult onForgotPassword(_OnForgotPassword value),
-    @required TResult onCheckCouponCode(_OnCheckCouponCode value),
-    @required TResult onChangePassword(_OnChangePassword value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnRegisterToRoomart value) onRegisterToRoomart,
+    required TResult Function(_OnRegiserUser value) onRegiserUser,
+    required TResult Function(_OnLoginUser value) onLoginUser,
+    required TResult Function(_OnGetArBalance value) onGetArBalance,
+    required TResult Function(_OnGetAvailableDiscount value)
+        onGetAvailableDiscount,
+    required TResult Function(_OnAuthenticated value) onAuthenticated,
+    required TResult Function(_OnChangeAddress value) onChangeAddress,
+    required TResult Function(_OnForgotPassword value) onForgotPassword,
+    required TResult Function(_OnCheckCouponCode value) onCheckCouponCode,
+    required TResult Function(_OnChangePassword value) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return onCheckCouponCode(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    TResult onRegiserUser(_OnRegiserUser value),
-    TResult onLoginUser(_OnLoginUser value),
-    TResult onGetArBalance(_OnGetArBalance value),
-    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    TResult onAuthenticated(_OnAuthenticated value),
-    TResult onChangeAddress(_OnChangeAddress value),
-    TResult onForgotPassword(_OnForgotPassword value),
-    TResult onCheckCouponCode(_OnCheckCouponCode value),
-    TResult onChangePassword(_OnChangePassword value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnRegisterToRoomart value)? onRegisterToRoomart,
+    TResult Function(_OnRegiserUser value)? onRegiserUser,
+    TResult Function(_OnLoginUser value)? onLoginUser,
+    TResult Function(_OnGetArBalance value)? onGetArBalance,
+    TResult Function(_OnGetAvailableDiscount value)? onGetAvailableDiscount,
+    TResult Function(_OnAuthenticated value)? onAuthenticated,
+    TResult Function(_OnChangeAddress value)? onChangeAddress,
+    TResult Function(_OnForgotPassword value)? onForgotPassword,
+    TResult Function(_OnCheckCouponCode value)? onCheckCouponCode,
+    TResult Function(_OnChangePassword value)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onCheckCouponCode != null) {
       return onCheckCouponCode(this);
     }
@@ -2369,9 +2090,10 @@ class _$_OnCheckCouponCode implements _OnCheckCouponCode {
 abstract class _OnCheckCouponCode implements AuthState {
   const factory _OnCheckCouponCode(String status) = _$_OnCheckCouponCode;
 
-  String get status;
+  String get status => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$OnCheckCouponCodeCopyWith<_OnCheckCouponCode> get copyWith;
+  _$OnCheckCouponCodeCopyWith<_OnCheckCouponCode> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2397,18 +2119,18 @@ class __$OnChangePasswordCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object status = freezed,
+    Object? status = freezed,
   }) {
     return _then(_OnChangePassword(
-      status == freezed ? _value.status : status as UserDataModel,
+      status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as UserDataModel,
     ));
   }
 
   @override
   $UserDataModelCopyWith<$Res> get status {
-    if (_value.status == null) {
-      return null;
-    }
     return $UserDataModelCopyWith<$Res>(_value.status, (value) {
       return _then(_value.copyWith(status: value));
     });
@@ -2416,8 +2138,9 @@ class __$OnChangePasswordCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_OnChangePassword implements _OnChangePassword {
-  const _$_OnChangePassword(this.status) : assert(status != null);
+  const _$_OnChangePassword(this.status);
 
   @override
   final UserDataModel status;
@@ -2446,56 +2169,43 @@ class _$_OnChangePassword implements _OnChangePassword {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onRegisterToRoomart(UserRoomartDataModel user),
-    @required TResult onRegiserUser(RegisterResponseModel response),
-    @required TResult onLoginUser(UserDataModel user),
-    @required TResult onGetArBalance(String balancd),
-    @required TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    @required TResult onAuthenticated(UserDataModel user),
-    @required TResult onChangeAddress(UserDataModel user),
-    @required TResult onForgotPassword(String status),
-    @required TResult onCheckCouponCode(String status),
-    @required TResult onChangePassword(UserDataModel status),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(UserRoomartDataModel user) onRegisterToRoomart,
+    required TResult Function(RegisterResponseModel response) onRegiserUser,
+    required TResult Function(UserDataModel user) onLoginUser,
+    required TResult Function(String balancd) onGetArBalance,
+    required TResult Function(List<DiscountDataModel> list)
+        onGetAvailableDiscount,
+    required TResult Function(UserDataModel user) onAuthenticated,
+    required TResult Function(UserDataModel user) onChangeAddress,
+    required TResult Function(String status) onForgotPassword,
+    required TResult Function(String status) onCheckCouponCode,
+    required TResult Function(UserDataModel status) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return onChangePassword(status);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onRegisterToRoomart(UserRoomartDataModel user),
-    TResult onRegiserUser(RegisterResponseModel response),
-    TResult onLoginUser(UserDataModel user),
-    TResult onGetArBalance(String balancd),
-    TResult onGetAvailableDiscount(List<DiscountDataModel> list),
-    TResult onAuthenticated(UserDataModel user),
-    TResult onChangeAddress(UserDataModel user),
-    TResult onForgotPassword(String status),
-    TResult onCheckCouponCode(String status),
-    TResult onChangePassword(UserDataModel status),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(UserRoomartDataModel user)? onRegisterToRoomart,
+    TResult Function(RegisterResponseModel response)? onRegiserUser,
+    TResult Function(UserDataModel user)? onLoginUser,
+    TResult Function(String balancd)? onGetArBalance,
+    TResult Function(List<DiscountDataModel> list)? onGetAvailableDiscount,
+    TResult Function(UserDataModel user)? onAuthenticated,
+    TResult Function(UserDataModel user)? onChangeAddress,
+    TResult Function(String status)? onForgotPassword,
+    TResult Function(String status)? onCheckCouponCode,
+    TResult Function(UserDataModel status)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onChangePassword != null) {
       return onChangePassword(status);
     }
@@ -2504,56 +2214,43 @@ class _$_OnChangePassword implements _OnChangePassword {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    @required TResult onRegiserUser(_OnRegiserUser value),
-    @required TResult onLoginUser(_OnLoginUser value),
-    @required TResult onGetArBalance(_OnGetArBalance value),
-    @required TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    @required TResult onAuthenticated(_OnAuthenticated value),
-    @required TResult onChangeAddress(_OnChangeAddress value),
-    @required TResult onForgotPassword(_OnForgotPassword value),
-    @required TResult onCheckCouponCode(_OnCheckCouponCode value),
-    @required TResult onChangePassword(_OnChangePassword value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnRegisterToRoomart value) onRegisterToRoomart,
+    required TResult Function(_OnRegiserUser value) onRegiserUser,
+    required TResult Function(_OnLoginUser value) onLoginUser,
+    required TResult Function(_OnGetArBalance value) onGetArBalance,
+    required TResult Function(_OnGetAvailableDiscount value)
+        onGetAvailableDiscount,
+    required TResult Function(_OnAuthenticated value) onAuthenticated,
+    required TResult Function(_OnChangeAddress value) onChangeAddress,
+    required TResult Function(_OnForgotPassword value) onForgotPassword,
+    required TResult Function(_OnCheckCouponCode value) onCheckCouponCode,
+    required TResult Function(_OnChangePassword value) onChangePassword,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onRegisterToRoomart != null);
-    assert(onRegiserUser != null);
-    assert(onLoginUser != null);
-    assert(onGetArBalance != null);
-    assert(onGetAvailableDiscount != null);
-    assert(onAuthenticated != null);
-    assert(onChangeAddress != null);
-    assert(onForgotPassword != null);
-    assert(onCheckCouponCode != null);
-    assert(onChangePassword != null);
     return onChangePassword(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onRegisterToRoomart(_OnRegisterToRoomart value),
-    TResult onRegiserUser(_OnRegiserUser value),
-    TResult onLoginUser(_OnLoginUser value),
-    TResult onGetArBalance(_OnGetArBalance value),
-    TResult onGetAvailableDiscount(_OnGetAvailableDiscount value),
-    TResult onAuthenticated(_OnAuthenticated value),
-    TResult onChangeAddress(_OnChangeAddress value),
-    TResult onForgotPassword(_OnForgotPassword value),
-    TResult onCheckCouponCode(_OnCheckCouponCode value),
-    TResult onChangePassword(_OnChangePassword value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnRegisterToRoomart value)? onRegisterToRoomart,
+    TResult Function(_OnRegiserUser value)? onRegiserUser,
+    TResult Function(_OnLoginUser value)? onLoginUser,
+    TResult Function(_OnGetArBalance value)? onGetArBalance,
+    TResult Function(_OnGetAvailableDiscount value)? onGetAvailableDiscount,
+    TResult Function(_OnAuthenticated value)? onAuthenticated,
+    TResult Function(_OnChangeAddress value)? onChangeAddress,
+    TResult Function(_OnForgotPassword value)? onForgotPassword,
+    TResult Function(_OnCheckCouponCode value)? onCheckCouponCode,
+    TResult Function(_OnChangePassword value)? onChangePassword,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onChangePassword != null) {
       return onChangePassword(this);
     }
@@ -2564,7 +2261,8 @@ class _$_OnChangePassword implements _OnChangePassword {
 abstract class _OnChangePassword implements AuthState {
   const factory _OnChangePassword(UserDataModel status) = _$_OnChangePassword;
 
-  UserDataModel get status;
+  UserDataModel get status => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$OnChangePasswordCopyWith<_OnChangePassword> get copyWith;
+  _$OnChangePasswordCopyWith<_OnChangePassword> get copyWith =>
+      throw _privateConstructorUsedError;
 }

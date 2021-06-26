@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'discount_data_model.dart';
 
@@ -8,6 +8,10 @@ part of 'discount_data_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 DiscountDataModel _$DiscountDataModelFromJson(Map<String, dynamic> json) {
   return _DiscountDataModel.fromJson(json);
 }
@@ -16,16 +20,15 @@ DiscountDataModel _$DiscountDataModelFromJson(Map<String, dynamic> json) {
 class _$DiscountDataModelTearOff {
   const _$DiscountDataModelTearOff();
 
-// ignore: unused_element
   _DiscountDataModel call(
-      {@JsonKey(name: "customer_code") String customerCode,
-      @JsonKey(name: "customer_name") String customerName,
-      @JsonKey(name: "customer_type_id") String customerTypeId,
-      @JsonKey(name: "event_discount") String eventDiscount,
-      @JsonKey(name: "event_begin_date") String eventBeginDate,
-      @JsonKey(name: "event_end_date") String eventEndDate,
-      @JsonKey(name: "discount_days") String discountDays,
-      @JsonKey(name: "payment_type_id") String paymentTypeId}) {
+      {@JsonKey(name: "customer_code") String? customerCode,
+      @JsonKey(name: "customer_name") String? customerName,
+      @JsonKey(name: "customer_type_id") String? customerTypeId,
+      @JsonKey(name: "event_discount") String? eventDiscount,
+      @JsonKey(name: "event_begin_date") String? eventBeginDate,
+      @JsonKey(name: "event_end_date") String? eventEndDate,
+      @JsonKey(name: "discount_days") String? discountDays,
+      @JsonKey(name: "payment_type_id") String? paymentTypeId}) {
     return _DiscountDataModel(
       customerCode: customerCode,
       customerName: customerName,
@@ -38,38 +41,37 @@ class _$DiscountDataModelTearOff {
     );
   }
 
-// ignore: unused_element
   DiscountDataModel fromJson(Map<String, Object> json) {
     return DiscountDataModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $DiscountDataModel = _$DiscountDataModelTearOff();
 
 /// @nodoc
 mixin _$DiscountDataModel {
   @JsonKey(name: "customer_code")
-  String get customerCode;
+  String? get customerCode => throw _privateConstructorUsedError;
   @JsonKey(name: "customer_name")
-  String get customerName;
+  String? get customerName => throw _privateConstructorUsedError;
   @JsonKey(name: "customer_type_id")
-  String get customerTypeId;
+  String? get customerTypeId => throw _privateConstructorUsedError;
   @JsonKey(name: "event_discount")
-  String get eventDiscount;
+  String? get eventDiscount => throw _privateConstructorUsedError;
   @JsonKey(name: "event_begin_date")
-  String get eventBeginDate;
+  String? get eventBeginDate => throw _privateConstructorUsedError;
   @JsonKey(name: "event_end_date")
-  String get eventEndDate;
+  String? get eventEndDate => throw _privateConstructorUsedError;
   @JsonKey(name: "discount_days")
-  String get discountDays;
+  String? get discountDays => throw _privateConstructorUsedError;
   @JsonKey(name: "payment_type_id")
-  String get paymentTypeId;
+  String? get paymentTypeId => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $DiscountDataModelCopyWith<DiscountDataModel> get copyWith;
+  $DiscountDataModelCopyWith<DiscountDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -78,14 +80,14 @@ abstract class $DiscountDataModelCopyWith<$Res> {
           DiscountDataModel value, $Res Function(DiscountDataModel) then) =
       _$DiscountDataModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: "customer_code") String customerCode,
-      @JsonKey(name: "customer_name") String customerName,
-      @JsonKey(name: "customer_type_id") String customerTypeId,
-      @JsonKey(name: "event_discount") String eventDiscount,
-      @JsonKey(name: "event_begin_date") String eventBeginDate,
-      @JsonKey(name: "event_end_date") String eventEndDate,
-      @JsonKey(name: "discount_days") String discountDays,
-      @JsonKey(name: "payment_type_id") String paymentTypeId});
+      {@JsonKey(name: "customer_code") String? customerCode,
+      @JsonKey(name: "customer_name") String? customerName,
+      @JsonKey(name: "customer_type_id") String? customerTypeId,
+      @JsonKey(name: "event_discount") String? eventDiscount,
+      @JsonKey(name: "event_begin_date") String? eventBeginDate,
+      @JsonKey(name: "event_end_date") String? eventEndDate,
+      @JsonKey(name: "discount_days") String? discountDays,
+      @JsonKey(name: "payment_type_id") String? paymentTypeId});
 }
 
 /// @nodoc
@@ -99,40 +101,48 @@ class _$DiscountDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object customerCode = freezed,
-    Object customerName = freezed,
-    Object customerTypeId = freezed,
-    Object eventDiscount = freezed,
-    Object eventBeginDate = freezed,
-    Object eventEndDate = freezed,
-    Object discountDays = freezed,
-    Object paymentTypeId = freezed,
+    Object? customerCode = freezed,
+    Object? customerName = freezed,
+    Object? customerTypeId = freezed,
+    Object? eventDiscount = freezed,
+    Object? eventBeginDate = freezed,
+    Object? eventEndDate = freezed,
+    Object? discountDays = freezed,
+    Object? paymentTypeId = freezed,
   }) {
     return _then(_value.copyWith(
       customerCode: customerCode == freezed
           ? _value.customerCode
-          : customerCode as String,
+          : customerCode // ignore: cast_nullable_to_non_nullable
+              as String?,
       customerName: customerName == freezed
           ? _value.customerName
-          : customerName as String,
+          : customerName // ignore: cast_nullable_to_non_nullable
+              as String?,
       customerTypeId: customerTypeId == freezed
           ? _value.customerTypeId
-          : customerTypeId as String,
+          : customerTypeId // ignore: cast_nullable_to_non_nullable
+              as String?,
       eventDiscount: eventDiscount == freezed
           ? _value.eventDiscount
-          : eventDiscount as String,
+          : eventDiscount // ignore: cast_nullable_to_non_nullable
+              as String?,
       eventBeginDate: eventBeginDate == freezed
           ? _value.eventBeginDate
-          : eventBeginDate as String,
+          : eventBeginDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       eventEndDate: eventEndDate == freezed
           ? _value.eventEndDate
-          : eventEndDate as String,
+          : eventEndDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       discountDays: discountDays == freezed
           ? _value.discountDays
-          : discountDays as String,
+          : discountDays // ignore: cast_nullable_to_non_nullable
+              as String?,
       paymentTypeId: paymentTypeId == freezed
           ? _value.paymentTypeId
-          : paymentTypeId as String,
+          : paymentTypeId // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -145,14 +155,14 @@ abstract class _$DiscountDataModelCopyWith<$Res>
       __$DiscountDataModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: "customer_code") String customerCode,
-      @JsonKey(name: "customer_name") String customerName,
-      @JsonKey(name: "customer_type_id") String customerTypeId,
-      @JsonKey(name: "event_discount") String eventDiscount,
-      @JsonKey(name: "event_begin_date") String eventBeginDate,
-      @JsonKey(name: "event_end_date") String eventEndDate,
-      @JsonKey(name: "discount_days") String discountDays,
-      @JsonKey(name: "payment_type_id") String paymentTypeId});
+      {@JsonKey(name: "customer_code") String? customerCode,
+      @JsonKey(name: "customer_name") String? customerName,
+      @JsonKey(name: "customer_type_id") String? customerTypeId,
+      @JsonKey(name: "event_discount") String? eventDiscount,
+      @JsonKey(name: "event_begin_date") String? eventBeginDate,
+      @JsonKey(name: "event_end_date") String? eventEndDate,
+      @JsonKey(name: "discount_days") String? discountDays,
+      @JsonKey(name: "payment_type_id") String? paymentTypeId});
 }
 
 /// @nodoc
@@ -168,47 +178,54 @@ class __$DiscountDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object customerCode = freezed,
-    Object customerName = freezed,
-    Object customerTypeId = freezed,
-    Object eventDiscount = freezed,
-    Object eventBeginDate = freezed,
-    Object eventEndDate = freezed,
-    Object discountDays = freezed,
-    Object paymentTypeId = freezed,
+    Object? customerCode = freezed,
+    Object? customerName = freezed,
+    Object? customerTypeId = freezed,
+    Object? eventDiscount = freezed,
+    Object? eventBeginDate = freezed,
+    Object? eventEndDate = freezed,
+    Object? discountDays = freezed,
+    Object? paymentTypeId = freezed,
   }) {
     return _then(_DiscountDataModel(
       customerCode: customerCode == freezed
           ? _value.customerCode
-          : customerCode as String,
+          : customerCode // ignore: cast_nullable_to_non_nullable
+              as String?,
       customerName: customerName == freezed
           ? _value.customerName
-          : customerName as String,
+          : customerName // ignore: cast_nullable_to_non_nullable
+              as String?,
       customerTypeId: customerTypeId == freezed
           ? _value.customerTypeId
-          : customerTypeId as String,
+          : customerTypeId // ignore: cast_nullable_to_non_nullable
+              as String?,
       eventDiscount: eventDiscount == freezed
           ? _value.eventDiscount
-          : eventDiscount as String,
+          : eventDiscount // ignore: cast_nullable_to_non_nullable
+              as String?,
       eventBeginDate: eventBeginDate == freezed
           ? _value.eventBeginDate
-          : eventBeginDate as String,
+          : eventBeginDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       eventEndDate: eventEndDate == freezed
           ? _value.eventEndDate
-          : eventEndDate as String,
+          : eventEndDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       discountDays: discountDays == freezed
           ? _value.discountDays
-          : discountDays as String,
+          : discountDays // ignore: cast_nullable_to_non_nullable
+              as String?,
       paymentTypeId: paymentTypeId == freezed
           ? _value.paymentTypeId
-          : paymentTypeId as String,
+          : paymentTypeId // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DiscountDataModel implements _DiscountDataModel {
   _$_DiscountDataModel(
       {@JsonKey(name: "customer_code") this.customerCode,
@@ -225,28 +242,28 @@ class _$_DiscountDataModel implements _DiscountDataModel {
 
   @override
   @JsonKey(name: "customer_code")
-  final String customerCode;
+  final String? customerCode;
   @override
   @JsonKey(name: "customer_name")
-  final String customerName;
+  final String? customerName;
   @override
   @JsonKey(name: "customer_type_id")
-  final String customerTypeId;
+  final String? customerTypeId;
   @override
   @JsonKey(name: "event_discount")
-  final String eventDiscount;
+  final String? eventDiscount;
   @override
   @JsonKey(name: "event_begin_date")
-  final String eventBeginDate;
+  final String? eventBeginDate;
   @override
   @JsonKey(name: "event_end_date")
-  final String eventEndDate;
+  final String? eventEndDate;
   @override
   @JsonKey(name: "discount_days")
-  final String discountDays;
+  final String? discountDays;
   @override
   @JsonKey(name: "payment_type_id")
-  final String paymentTypeId;
+  final String? paymentTypeId;
 
   @override
   String toString() {
@@ -308,14 +325,14 @@ class _$_DiscountDataModel implements _DiscountDataModel {
 
 abstract class _DiscountDataModel implements DiscountDataModel {
   factory _DiscountDataModel(
-          {@JsonKey(name: "customer_code") String customerCode,
-          @JsonKey(name: "customer_name") String customerName,
-          @JsonKey(name: "customer_type_id") String customerTypeId,
-          @JsonKey(name: "event_discount") String eventDiscount,
-          @JsonKey(name: "event_begin_date") String eventBeginDate,
-          @JsonKey(name: "event_end_date") String eventEndDate,
-          @JsonKey(name: "discount_days") String discountDays,
-          @JsonKey(name: "payment_type_id") String paymentTypeId}) =
+          {@JsonKey(name: "customer_code") String? customerCode,
+          @JsonKey(name: "customer_name") String? customerName,
+          @JsonKey(name: "customer_type_id") String? customerTypeId,
+          @JsonKey(name: "event_discount") String? eventDiscount,
+          @JsonKey(name: "event_begin_date") String? eventBeginDate,
+          @JsonKey(name: "event_end_date") String? eventEndDate,
+          @JsonKey(name: "discount_days") String? discountDays,
+          @JsonKey(name: "payment_type_id") String? paymentTypeId}) =
       _$_DiscountDataModel;
 
   factory _DiscountDataModel.fromJson(Map<String, dynamic> json) =
@@ -323,29 +340,30 @@ abstract class _DiscountDataModel implements DiscountDataModel {
 
   @override
   @JsonKey(name: "customer_code")
-  String get customerCode;
+  String? get customerCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "customer_name")
-  String get customerName;
+  String? get customerName => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "customer_type_id")
-  String get customerTypeId;
+  String? get customerTypeId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "event_discount")
-  String get eventDiscount;
+  String? get eventDiscount => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "event_begin_date")
-  String get eventBeginDate;
+  String? get eventBeginDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "event_end_date")
-  String get eventEndDate;
+  String? get eventEndDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "discount_days")
-  String get discountDays;
+  String? get discountDays => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "payment_type_id")
-  String get paymentTypeId;
+  String? get paymentTypeId => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DiscountDataModelCopyWith<_DiscountDataModel> get copyWith;
+  _$DiscountDataModelCopyWith<_DiscountDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

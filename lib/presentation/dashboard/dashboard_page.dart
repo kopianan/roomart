@@ -26,7 +26,7 @@ class _DashboardPageState extends State<DashboardPage> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   final homeController = Get.put(HomeController());
   final authController = Get.put(AuthController());
-  PageController pageController;
+  PageController? pageController;
 
   void pageChanged(int index) {
     homeController.pageChanged(index);

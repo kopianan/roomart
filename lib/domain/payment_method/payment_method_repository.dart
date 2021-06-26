@@ -6,7 +6,7 @@ import 'package:injectable/injectable.dart';
 import 'package:roomart/domain/payment_method/payment_method_data_model.dart';
 import 'package:roomart/utils/constants.dart';
 
-abstract class IPaymentMethodFacade {
+ abstract class IPaymentMethodFacade {
   Future<Either<String, List<PaymentMethodDataModel>>> getPaymentMethod();
 }
 

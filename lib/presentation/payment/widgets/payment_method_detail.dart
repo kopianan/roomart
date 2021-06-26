@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:roomart/application/payment/payment_controller.dart';
 
 class PaymentMethodDetail extends StatelessWidget {
-  const PaymentMethodDetail({Key key, @required this.paymentController})
+  const PaymentMethodDetail({Key? key, required this.paymentController})
       : super(key: key);
   final PaymentController paymentController;
   @override
@@ -31,7 +31,7 @@ class PaymentMethodDetail extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text("${paymentController.getSelectedPaymentMethod.name}"),
-                    Text(paymentController.getSelectedPaymentMethod.description
+                    Text(paymentController.getSelectedPaymentMethod.description!
                         .toLowerCase())
                   ],
                 ),

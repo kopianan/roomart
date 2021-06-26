@@ -14,7 +14,7 @@ import '../../../injection.dart';
 class NewTransactionHistoryPage extends StatefulWidget {
   NewTransactionHistoryPage({this.status = "", this.customerId});
   final String status;
-  final String customerId;
+  final String? customerId;
   @override
   _NewTransactionHistoryPageState createState() =>
       _NewTransactionHistoryPageState();
@@ -23,9 +23,9 @@ class NewTransactionHistoryPage extends StatefulWidget {
 class _NewTransactionHistoryPageState extends State<NewTransactionHistoryPage> {
   RefreshController _refreshController =
       RefreshController(initialRefresh: true);
-  String STATUS;
+  String? STATUS;
   static final int LIMIT = 10;
-  final transCubit = getIt<TransactionCubit>();
+  final TransactionCubit transCubit = getIt<TransactionCubit>();
   final transController = Get.put(TransactionController());
 
   void _onRefresh() {
@@ -97,7 +97,7 @@ class _NewTransactionHistoryPageState extends State<NewTransactionHistoryPage> {
                 enablePullUp: true,
                 header: WaterDropHeader(),
                 footer: CustomFooter(
-                  builder: (BuildContext context, LoadStatus mode) {
+                  builder: (BuildContext context, LoadStatus? mode) {
                     Widget body;
                     if (mode == LoadStatus.idle) {
                       body = Text("pull up load");

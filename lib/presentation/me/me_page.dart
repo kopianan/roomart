@@ -21,9 +21,9 @@ class MePage extends StatefulWidget {
 
 class _MePageState extends State<MePage> {
   final authController = Get.put(AuthController());
-  final cubit = getIt<AuthCubit>();
+  final AuthCubit cubit = getIt<AuthCubit>();
 
-  final transCubit = getIt<TransactionCubit>();
+  final TransactionCubit transCubit = getIt<TransactionCubit>();
   double balanceInProgress = 0;
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class _MePageState extends State<MePage> {
                   alignment: Alignment.topLeft,
                   padding: EdgeInsets.symmetric(horizontal: 10),
                   child: Text(
-                    authController.getUserDataModel.fullName,
+                    authController.getUserDataModel!.fullName!,
                     maxLines: 2,
                     style: TextStyle(
                       fontSize: 28,
@@ -63,7 +63,7 @@ class _MePageState extends State<MePage> {
               children: [
                 BlocProvider(
                   create: (context) => cubit
-                    ..getArBalance(authController.getUserDataModel.userId),
+                    ..getArBalance(authController.getUserDataModel!.userId),
                   child: BlocConsumer<AuthCubit, AuthState>(
                     listener: (context, state) {
                       state.maybeMap(
@@ -78,7 +78,7 @@ class _MePageState extends State<MePage> {
                             child: InkWell(
                           onTap: () {
                             cubit.getArBalance(
-                                authController.getUserDataModel.userId);
+                                authController.getUserDataModel!.userId);
                           },
                           child: saldoContainer(
                             "Total Saldo",
@@ -101,7 +101,7 @@ class _MePageState extends State<MePage> {
                 ),
                 BlocProvider(
                   create: (context) => transCubit
-                    ..getAllTransaction(authController.getUserDataModel.userId),
+                    ..getAllTransaction(authController.getUserDataModel!.userId),
                   child: BlocConsumer<TransactionCubit, TransactionState>(
                     listener: (context, state) {
                       state.maybeMap(
@@ -110,7 +110,7 @@ class _MePageState extends State<MePage> {
                             e.data.forEach((data) {
                               if (data.transactionStatus == "1") {
                                 balanceInProgress =
-                                    double.parse(data.totalAmount) +
+                                    double.parse(data.totalAmount!) +
                                         balanceInProgress;
                                 setState(() {});
                               }
@@ -129,7 +129,7 @@ class _MePageState extends State<MePage> {
                           onTap: () {
                             transCubit
                               ..getAllTransaction(
-                                  authController.getUserDataModel.userId);
+                                  authController.getUserDataModel!.userId);
                           },
                           child: saldoContainer(
                               "Dalam Proses", "Refresh", Colors.purple,
@@ -287,11 +287,11 @@ class SubjectState {}
 
 class MenuTiles extends StatelessWidget {
   const MenuTiles({
-    Key key,
-    @required this.color,
-    @required this.icon,
-    @required this.text,
-    @required this.onTap,
+    Key? key,
+    required this.color,
+    required this.icon,
+    required this.text,
+    required this.onTap,
   }) : super(key: key);
   final String text;
   final Color color;
@@ -302,7 +302,7 @@ class MenuTiles extends StatelessWidget {
     return Column(
       children: [
         ListTile(
-          onTap: onTap,
+          onTap: onTap as void Function()?,
           title: Text(
             text,
             style: TextStyle(fontWeight: FontWeight.bold),

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'full_transaction_data_model.dart';
 
@@ -8,6 +8,10 @@ part of 'full_transaction_data_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 FullTransactionDataModel _$FullTransactionDataModelFromJson(
     Map<String, dynamic> json) {
   return _FullTransactionDataModel.fromJson(json);
@@ -17,55 +21,54 @@ FullTransactionDataModel _$FullTransactionDataModelFromJson(
 class _$FullTransactionDataModelTearOff {
   const _$FullTransactionDataModelTearOff();
 
-// ignore: unused_element
   _FullTransactionDataModel call(
-      {@JsonKey(name: "sales_order_id") String salesOrderId,
-      @JsonKey(name: "transaction_status") String transactionStatus,
-      @JsonKey(name: "sales_order_no") String salesOrderNo,
-      @JsonKey(name: "transaction_date") String transactionDate,
-      @JsonKey(name: "due_date") String dueDate,
-      @JsonKey(name: "customer_id") String customerId,
-      @JsonKey(name: "customer_name") String customerName,
-      @JsonKey(name: "customer_po_no") String customerPoNo,
-      @JsonKey(name: "customer_po_date") String customerPoDate,
-      @JsonKey(name: "total_qty") String totalQty,
-      @JsonKey(name: "total_amount") String totalAmount,
-      @JsonKey(name: "total_discount_pct") String totalDiscountPct,
-      @JsonKey(name: "total_discount") String totalDiscount,
-      @JsonKey(name: "total_fee") String totalFee,
-      @JsonKey(name: "total_tax") String totalTax,
-      @JsonKey(name: "remark") String remark,
-      @JsonKey(name: "payment_type_id") String paymentTypeId,
-      @JsonKey(name: "payment_term_id") String paymentTermId,
-      @JsonKey(name: "currency_id") String currencyId,
-      @JsonKey(name: "currency_rate") String currencyRate,
-      @JsonKey(name: "location_id") String locationId,
-      @JsonKey(name: "print_times") String printTimes,
-      @JsonKey(name: "user_name") String userName,
-      @JsonKey(name: "confirm_by") String confirmBy,
-      @JsonKey(name: "confirm_date") String confirmDate,
-      @JsonKey(name: "down_payment") String downPayment,
-      @JsonKey(name: "ship_to") String shipTo,
-      @JsonKey(name: "ship_date") String shipDate,
-      @JsonKey(name: "bank_id") String bankId,
-      @JsonKey(name: "bank_issuer") String bankIssuer,
-      @JsonKey(name: "dp_account_id") String dpAccountId,
-      @JsonKey(name: "dp_due_date") String dpDueDate,
-      @JsonKey(name: "reference_no") String referenceNo,
-      @JsonKey(name: "cash_flow_type_id") String cashFlowTypeId,
-      @JsonKey(name: "sales_id") String salesId,
-      @JsonKey(name: "courier_id") String courierId,
-      @JsonKey(name: "fob_id") String fobId,
-      @JsonKey(name: "estimated_freight") String estimatedFreight,
-      @JsonKey(name: "is_taxable") String isTaxable,
-      @JsonKey(name: "is_inclusive_tax") String isInclusiveTax,
-      @JsonKey(name: "fiscal_rate") String fiscalRate,
-      @JsonKey(name: "freight_account_id") String freightAccountId,
-      @JsonKey(name: "is_inclusive_freight") String isInclusiveFreight,
-      @JsonKey(name: "cancel_by") String cancelBy,
-      @JsonKey(name: "cancel_date") String cancelDate,
-      @JsonKey(name: "ongkir") String ongkir,
-      @JsonKey(name: "promocode") String promocode}) {
+      {@JsonKey(name: "sales_order_id") String? salesOrderId,
+      @JsonKey(name: "transaction_status") String? transactionStatus,
+      @JsonKey(name: "sales_order_no") String? salesOrderNo,
+      @JsonKey(name: "transaction_date") String? transactionDate,
+      @JsonKey(name: "due_date") String? dueDate,
+      @JsonKey(name: "customer_id") String? customerId,
+      @JsonKey(name: "customer_name") String? customerName,
+      @JsonKey(name: "customer_po_no") String? customerPoNo,
+      @JsonKey(name: "customer_po_date") String? customerPoDate,
+      @JsonKey(name: "total_qty") String? totalQty,
+      @JsonKey(name: "total_amount") String? totalAmount,
+      @JsonKey(name: "total_discount_pct") String? totalDiscountPct,
+      @JsonKey(name: "total_discount") String? totalDiscount,
+      @JsonKey(name: "total_fee") String? totalFee,
+      @JsonKey(name: "total_tax") String? totalTax,
+      @JsonKey(name: "remark") String? remark,
+      @JsonKey(name: "payment_type_id") String? paymentTypeId,
+      @JsonKey(name: "payment_term_id") String? paymentTermId,
+      @JsonKey(name: "currency_id") String? currencyId,
+      @JsonKey(name: "currency_rate") String? currencyRate,
+      @JsonKey(name: "location_id") String? locationId,
+      @JsonKey(name: "print_times") String? printTimes,
+      @JsonKey(name: "user_name") String? userName,
+      @JsonKey(name: "confirm_by") String? confirmBy,
+      @JsonKey(name: "confirm_date") String? confirmDate,
+      @JsonKey(name: "down_payment") String? downPayment,
+      @JsonKey(name: "ship_to") String? shipTo,
+      @JsonKey(name: "ship_date") String? shipDate,
+      @JsonKey(name: "bank_id") String? bankId,
+      @JsonKey(name: "bank_issuer") String? bankIssuer,
+      @JsonKey(name: "dp_account_id") String? dpAccountId,
+      @JsonKey(name: "dp_due_date") String? dpDueDate,
+      @JsonKey(name: "reference_no") String? referenceNo,
+      @JsonKey(name: "cash_flow_type_id") String? cashFlowTypeId,
+      @JsonKey(name: "sales_id") String? salesId,
+      @JsonKey(name: "courier_id") String? courierId,
+      @JsonKey(name: "fob_id") String? fobId,
+      @JsonKey(name: "estimated_freight") String? estimatedFreight,
+      @JsonKey(name: "is_taxable") String? isTaxable,
+      @JsonKey(name: "is_inclusive_tax") String? isInclusiveTax,
+      @JsonKey(name: "fiscal_rate") String? fiscalRate,
+      @JsonKey(name: "freight_account_id") String? freightAccountId,
+      @JsonKey(name: "is_inclusive_freight") String? isInclusiveFreight,
+      @JsonKey(name: "cancel_by") String? cancelBy,
+      @JsonKey(name: "cancel_date") String? cancelDate,
+      @JsonKey(name: "ongkir") String? ongkir,
+      @JsonKey(name: "promocode") String? promocode}) {
     return _FullTransactionDataModel(
       salesOrderId: salesOrderId,
       transactionStatus: transactionStatus,
@@ -117,116 +120,115 @@ class _$FullTransactionDataModelTearOff {
     );
   }
 
-// ignore: unused_element
   FullTransactionDataModel fromJson(Map<String, Object> json) {
     return FullTransactionDataModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $FullTransactionDataModel = _$FullTransactionDataModelTearOff();
 
 /// @nodoc
 mixin _$FullTransactionDataModel {
   @JsonKey(name: "sales_order_id")
-  String get salesOrderId;
+  String? get salesOrderId => throw _privateConstructorUsedError;
   @JsonKey(name: "transaction_status")
-  String get transactionStatus;
+  String? get transactionStatus => throw _privateConstructorUsedError;
   @JsonKey(name: "sales_order_no")
-  String get salesOrderNo;
+  String? get salesOrderNo => throw _privateConstructorUsedError;
   @JsonKey(name: "transaction_date")
-  String get transactionDate;
+  String? get transactionDate => throw _privateConstructorUsedError;
   @JsonKey(name: "due_date")
-  String get dueDate;
+  String? get dueDate => throw _privateConstructorUsedError;
   @JsonKey(name: "customer_id")
-  String get customerId;
+  String? get customerId => throw _privateConstructorUsedError;
   @JsonKey(name: "customer_name")
-  String get customerName;
+  String? get customerName => throw _privateConstructorUsedError;
   @JsonKey(name: "customer_po_no")
-  String get customerPoNo;
+  String? get customerPoNo => throw _privateConstructorUsedError;
   @JsonKey(name: "customer_po_date")
-  String get customerPoDate;
+  String? get customerPoDate => throw _privateConstructorUsedError;
   @JsonKey(name: "total_qty")
-  String get totalQty;
+  String? get totalQty => throw _privateConstructorUsedError;
   @JsonKey(name: "total_amount")
-  String get totalAmount;
+  String? get totalAmount => throw _privateConstructorUsedError;
   @JsonKey(name: "total_discount_pct")
-  String get totalDiscountPct;
+  String? get totalDiscountPct => throw _privateConstructorUsedError;
   @JsonKey(name: "total_discount")
-  String get totalDiscount;
+  String? get totalDiscount => throw _privateConstructorUsedError;
   @JsonKey(name: "total_fee")
-  String get totalFee;
+  String? get totalFee => throw _privateConstructorUsedError;
   @JsonKey(name: "total_tax")
-  String get totalTax;
+  String? get totalTax => throw _privateConstructorUsedError;
   @JsonKey(name: "remark")
-  String get remark;
+  String? get remark => throw _privateConstructorUsedError;
   @JsonKey(name: "payment_type_id")
-  String get paymentTypeId;
+  String? get paymentTypeId => throw _privateConstructorUsedError;
   @JsonKey(name: "payment_term_id")
-  String get paymentTermId;
+  String? get paymentTermId => throw _privateConstructorUsedError;
   @JsonKey(name: "currency_id")
-  String get currencyId;
+  String? get currencyId => throw _privateConstructorUsedError;
   @JsonKey(name: "currency_rate")
-  String get currencyRate;
+  String? get currencyRate => throw _privateConstructorUsedError;
   @JsonKey(name: "location_id")
-  String get locationId;
+  String? get locationId => throw _privateConstructorUsedError;
   @JsonKey(name: "print_times")
-  String get printTimes;
+  String? get printTimes => throw _privateConstructorUsedError;
   @JsonKey(name: "user_name")
-  String get userName;
+  String? get userName => throw _privateConstructorUsedError;
   @JsonKey(name: "confirm_by")
-  String get confirmBy;
+  String? get confirmBy => throw _privateConstructorUsedError;
   @JsonKey(name: "confirm_date")
-  String get confirmDate;
+  String? get confirmDate => throw _privateConstructorUsedError;
   @JsonKey(name: "down_payment")
-  String get downPayment;
+  String? get downPayment => throw _privateConstructorUsedError;
   @JsonKey(name: "ship_to")
-  String get shipTo;
+  String? get shipTo => throw _privateConstructorUsedError;
   @JsonKey(name: "ship_date")
-  String get shipDate;
+  String? get shipDate => throw _privateConstructorUsedError;
   @JsonKey(name: "bank_id")
-  String get bankId;
+  String? get bankId => throw _privateConstructorUsedError;
   @JsonKey(name: "bank_issuer")
-  String get bankIssuer;
+  String? get bankIssuer => throw _privateConstructorUsedError;
   @JsonKey(name: "dp_account_id")
-  String get dpAccountId;
+  String? get dpAccountId => throw _privateConstructorUsedError;
   @JsonKey(name: "dp_due_date")
-  String get dpDueDate;
+  String? get dpDueDate => throw _privateConstructorUsedError;
   @JsonKey(name: "reference_no")
-  String get referenceNo;
+  String? get referenceNo => throw _privateConstructorUsedError;
   @JsonKey(name: "cash_flow_type_id")
-  String get cashFlowTypeId;
+  String? get cashFlowTypeId => throw _privateConstructorUsedError;
   @JsonKey(name: "sales_id")
-  String get salesId;
+  String? get salesId => throw _privateConstructorUsedError;
   @JsonKey(name: "courier_id")
-  String get courierId;
+  String? get courierId => throw _privateConstructorUsedError;
   @JsonKey(name: "fob_id")
-  String get fobId;
+  String? get fobId => throw _privateConstructorUsedError;
   @JsonKey(name: "estimated_freight")
-  String get estimatedFreight;
+  String? get estimatedFreight => throw _privateConstructorUsedError;
   @JsonKey(name: "is_taxable")
-  String get isTaxable;
+  String? get isTaxable => throw _privateConstructorUsedError;
   @JsonKey(name: "is_inclusive_tax")
-  String get isInclusiveTax;
+  String? get isInclusiveTax => throw _privateConstructorUsedError;
   @JsonKey(name: "fiscal_rate")
-  String get fiscalRate;
+  String? get fiscalRate => throw _privateConstructorUsedError;
   @JsonKey(name: "freight_account_id")
-  String get freightAccountId;
+  String? get freightAccountId => throw _privateConstructorUsedError;
   @JsonKey(name: "is_inclusive_freight")
-  String get isInclusiveFreight;
+  String? get isInclusiveFreight => throw _privateConstructorUsedError;
   @JsonKey(name: "cancel_by")
-  String get cancelBy;
+  String? get cancelBy => throw _privateConstructorUsedError;
   @JsonKey(name: "cancel_date")
-  String get cancelDate;
+  String? get cancelDate => throw _privateConstructorUsedError;
   @JsonKey(name: "ongkir")
-  String get ongkir;
+  String? get ongkir => throw _privateConstructorUsedError;
   @JsonKey(name: "promocode")
-  String get promocode;
+  String? get promocode => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $FullTransactionDataModelCopyWith<FullTransactionDataModel> get copyWith;
+  $FullTransactionDataModelCopyWith<FullTransactionDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -235,53 +237,53 @@ abstract class $FullTransactionDataModelCopyWith<$Res> {
           $Res Function(FullTransactionDataModel) then) =
       _$FullTransactionDataModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: "sales_order_id") String salesOrderId,
-      @JsonKey(name: "transaction_status") String transactionStatus,
-      @JsonKey(name: "sales_order_no") String salesOrderNo,
-      @JsonKey(name: "transaction_date") String transactionDate,
-      @JsonKey(name: "due_date") String dueDate,
-      @JsonKey(name: "customer_id") String customerId,
-      @JsonKey(name: "customer_name") String customerName,
-      @JsonKey(name: "customer_po_no") String customerPoNo,
-      @JsonKey(name: "customer_po_date") String customerPoDate,
-      @JsonKey(name: "total_qty") String totalQty,
-      @JsonKey(name: "total_amount") String totalAmount,
-      @JsonKey(name: "total_discount_pct") String totalDiscountPct,
-      @JsonKey(name: "total_discount") String totalDiscount,
-      @JsonKey(name: "total_fee") String totalFee,
-      @JsonKey(name: "total_tax") String totalTax,
-      @JsonKey(name: "remark") String remark,
-      @JsonKey(name: "payment_type_id") String paymentTypeId,
-      @JsonKey(name: "payment_term_id") String paymentTermId,
-      @JsonKey(name: "currency_id") String currencyId,
-      @JsonKey(name: "currency_rate") String currencyRate,
-      @JsonKey(name: "location_id") String locationId,
-      @JsonKey(name: "print_times") String printTimes,
-      @JsonKey(name: "user_name") String userName,
-      @JsonKey(name: "confirm_by") String confirmBy,
-      @JsonKey(name: "confirm_date") String confirmDate,
-      @JsonKey(name: "down_payment") String downPayment,
-      @JsonKey(name: "ship_to") String shipTo,
-      @JsonKey(name: "ship_date") String shipDate,
-      @JsonKey(name: "bank_id") String bankId,
-      @JsonKey(name: "bank_issuer") String bankIssuer,
-      @JsonKey(name: "dp_account_id") String dpAccountId,
-      @JsonKey(name: "dp_due_date") String dpDueDate,
-      @JsonKey(name: "reference_no") String referenceNo,
-      @JsonKey(name: "cash_flow_type_id") String cashFlowTypeId,
-      @JsonKey(name: "sales_id") String salesId,
-      @JsonKey(name: "courier_id") String courierId,
-      @JsonKey(name: "fob_id") String fobId,
-      @JsonKey(name: "estimated_freight") String estimatedFreight,
-      @JsonKey(name: "is_taxable") String isTaxable,
-      @JsonKey(name: "is_inclusive_tax") String isInclusiveTax,
-      @JsonKey(name: "fiscal_rate") String fiscalRate,
-      @JsonKey(name: "freight_account_id") String freightAccountId,
-      @JsonKey(name: "is_inclusive_freight") String isInclusiveFreight,
-      @JsonKey(name: "cancel_by") String cancelBy,
-      @JsonKey(name: "cancel_date") String cancelDate,
-      @JsonKey(name: "ongkir") String ongkir,
-      @JsonKey(name: "promocode") String promocode});
+      {@JsonKey(name: "sales_order_id") String? salesOrderId,
+      @JsonKey(name: "transaction_status") String? transactionStatus,
+      @JsonKey(name: "sales_order_no") String? salesOrderNo,
+      @JsonKey(name: "transaction_date") String? transactionDate,
+      @JsonKey(name: "due_date") String? dueDate,
+      @JsonKey(name: "customer_id") String? customerId,
+      @JsonKey(name: "customer_name") String? customerName,
+      @JsonKey(name: "customer_po_no") String? customerPoNo,
+      @JsonKey(name: "customer_po_date") String? customerPoDate,
+      @JsonKey(name: "total_qty") String? totalQty,
+      @JsonKey(name: "total_amount") String? totalAmount,
+      @JsonKey(name: "total_discount_pct") String? totalDiscountPct,
+      @JsonKey(name: "total_discount") String? totalDiscount,
+      @JsonKey(name: "total_fee") String? totalFee,
+      @JsonKey(name: "total_tax") String? totalTax,
+      @JsonKey(name: "remark") String? remark,
+      @JsonKey(name: "payment_type_id") String? paymentTypeId,
+      @JsonKey(name: "payment_term_id") String? paymentTermId,
+      @JsonKey(name: "currency_id") String? currencyId,
+      @JsonKey(name: "currency_rate") String? currencyRate,
+      @JsonKey(name: "location_id") String? locationId,
+      @JsonKey(name: "print_times") String? printTimes,
+      @JsonKey(name: "user_name") String? userName,
+      @JsonKey(name: "confirm_by") String? confirmBy,
+      @JsonKey(name: "confirm_date") String? confirmDate,
+      @JsonKey(name: "down_payment") String? downPayment,
+      @JsonKey(name: "ship_to") String? shipTo,
+      @JsonKey(name: "ship_date") String? shipDate,
+      @JsonKey(name: "bank_id") String? bankId,
+      @JsonKey(name: "bank_issuer") String? bankIssuer,
+      @JsonKey(name: "dp_account_id") String? dpAccountId,
+      @JsonKey(name: "dp_due_date") String? dpDueDate,
+      @JsonKey(name: "reference_no") String? referenceNo,
+      @JsonKey(name: "cash_flow_type_id") String? cashFlowTypeId,
+      @JsonKey(name: "sales_id") String? salesId,
+      @JsonKey(name: "courier_id") String? courierId,
+      @JsonKey(name: "fob_id") String? fobId,
+      @JsonKey(name: "estimated_freight") String? estimatedFreight,
+      @JsonKey(name: "is_taxable") String? isTaxable,
+      @JsonKey(name: "is_inclusive_tax") String? isInclusiveTax,
+      @JsonKey(name: "fiscal_rate") String? fiscalRate,
+      @JsonKey(name: "freight_account_id") String? freightAccountId,
+      @JsonKey(name: "is_inclusive_freight") String? isInclusiveFreight,
+      @JsonKey(name: "cancel_by") String? cancelBy,
+      @JsonKey(name: "cancel_date") String? cancelDate,
+      @JsonKey(name: "ongkir") String? ongkir,
+      @JsonKey(name: "promocode") String? promocode});
 }
 
 /// @nodoc
@@ -295,148 +297,243 @@ class _$FullTransactionDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object salesOrderId = freezed,
-    Object transactionStatus = freezed,
-    Object salesOrderNo = freezed,
-    Object transactionDate = freezed,
-    Object dueDate = freezed,
-    Object customerId = freezed,
-    Object customerName = freezed,
-    Object customerPoNo = freezed,
-    Object customerPoDate = freezed,
-    Object totalQty = freezed,
-    Object totalAmount = freezed,
-    Object totalDiscountPct = freezed,
-    Object totalDiscount = freezed,
-    Object totalFee = freezed,
-    Object totalTax = freezed,
-    Object remark = freezed,
-    Object paymentTypeId = freezed,
-    Object paymentTermId = freezed,
-    Object currencyId = freezed,
-    Object currencyRate = freezed,
-    Object locationId = freezed,
-    Object printTimes = freezed,
-    Object userName = freezed,
-    Object confirmBy = freezed,
-    Object confirmDate = freezed,
-    Object downPayment = freezed,
-    Object shipTo = freezed,
-    Object shipDate = freezed,
-    Object bankId = freezed,
-    Object bankIssuer = freezed,
-    Object dpAccountId = freezed,
-    Object dpDueDate = freezed,
-    Object referenceNo = freezed,
-    Object cashFlowTypeId = freezed,
-    Object salesId = freezed,
-    Object courierId = freezed,
-    Object fobId = freezed,
-    Object estimatedFreight = freezed,
-    Object isTaxable = freezed,
-    Object isInclusiveTax = freezed,
-    Object fiscalRate = freezed,
-    Object freightAccountId = freezed,
-    Object isInclusiveFreight = freezed,
-    Object cancelBy = freezed,
-    Object cancelDate = freezed,
-    Object ongkir = freezed,
-    Object promocode = freezed,
+    Object? salesOrderId = freezed,
+    Object? transactionStatus = freezed,
+    Object? salesOrderNo = freezed,
+    Object? transactionDate = freezed,
+    Object? dueDate = freezed,
+    Object? customerId = freezed,
+    Object? customerName = freezed,
+    Object? customerPoNo = freezed,
+    Object? customerPoDate = freezed,
+    Object? totalQty = freezed,
+    Object? totalAmount = freezed,
+    Object? totalDiscountPct = freezed,
+    Object? totalDiscount = freezed,
+    Object? totalFee = freezed,
+    Object? totalTax = freezed,
+    Object? remark = freezed,
+    Object? paymentTypeId = freezed,
+    Object? paymentTermId = freezed,
+    Object? currencyId = freezed,
+    Object? currencyRate = freezed,
+    Object? locationId = freezed,
+    Object? printTimes = freezed,
+    Object? userName = freezed,
+    Object? confirmBy = freezed,
+    Object? confirmDate = freezed,
+    Object? downPayment = freezed,
+    Object? shipTo = freezed,
+    Object? shipDate = freezed,
+    Object? bankId = freezed,
+    Object? bankIssuer = freezed,
+    Object? dpAccountId = freezed,
+    Object? dpDueDate = freezed,
+    Object? referenceNo = freezed,
+    Object? cashFlowTypeId = freezed,
+    Object? salesId = freezed,
+    Object? courierId = freezed,
+    Object? fobId = freezed,
+    Object? estimatedFreight = freezed,
+    Object? isTaxable = freezed,
+    Object? isInclusiveTax = freezed,
+    Object? fiscalRate = freezed,
+    Object? freightAccountId = freezed,
+    Object? isInclusiveFreight = freezed,
+    Object? cancelBy = freezed,
+    Object? cancelDate = freezed,
+    Object? ongkir = freezed,
+    Object? promocode = freezed,
   }) {
     return _then(_value.copyWith(
       salesOrderId: salesOrderId == freezed
           ? _value.salesOrderId
-          : salesOrderId as String,
+          : salesOrderId // ignore: cast_nullable_to_non_nullable
+              as String?,
       transactionStatus: transactionStatus == freezed
           ? _value.transactionStatus
-          : transactionStatus as String,
+          : transactionStatus // ignore: cast_nullable_to_non_nullable
+              as String?,
       salesOrderNo: salesOrderNo == freezed
           ? _value.salesOrderNo
-          : salesOrderNo as String,
+          : salesOrderNo // ignore: cast_nullable_to_non_nullable
+              as String?,
       transactionDate: transactionDate == freezed
           ? _value.transactionDate
-          : transactionDate as String,
-      dueDate: dueDate == freezed ? _value.dueDate : dueDate as String,
-      customerId:
-          customerId == freezed ? _value.customerId : customerId as String,
+          : transactionDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dueDate: dueDate == freezed
+          ? _value.dueDate
+          : dueDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      customerId: customerId == freezed
+          ? _value.customerId
+          : customerId // ignore: cast_nullable_to_non_nullable
+              as String?,
       customerName: customerName == freezed
           ? _value.customerName
-          : customerName as String,
+          : customerName // ignore: cast_nullable_to_non_nullable
+              as String?,
       customerPoNo: customerPoNo == freezed
           ? _value.customerPoNo
-          : customerPoNo as String,
+          : customerPoNo // ignore: cast_nullable_to_non_nullable
+              as String?,
       customerPoDate: customerPoDate == freezed
           ? _value.customerPoDate
-          : customerPoDate as String,
-      totalQty: totalQty == freezed ? _value.totalQty : totalQty as String,
-      totalAmount:
-          totalAmount == freezed ? _value.totalAmount : totalAmount as String,
+          : customerPoDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      totalQty: totalQty == freezed
+          ? _value.totalQty
+          : totalQty // ignore: cast_nullable_to_non_nullable
+              as String?,
+      totalAmount: totalAmount == freezed
+          ? _value.totalAmount
+          : totalAmount // ignore: cast_nullable_to_non_nullable
+              as String?,
       totalDiscountPct: totalDiscountPct == freezed
           ? _value.totalDiscountPct
-          : totalDiscountPct as String,
+          : totalDiscountPct // ignore: cast_nullable_to_non_nullable
+              as String?,
       totalDiscount: totalDiscount == freezed
           ? _value.totalDiscount
-          : totalDiscount as String,
-      totalFee: totalFee == freezed ? _value.totalFee : totalFee as String,
-      totalTax: totalTax == freezed ? _value.totalTax : totalTax as String,
-      remark: remark == freezed ? _value.remark : remark as String,
+          : totalDiscount // ignore: cast_nullable_to_non_nullable
+              as String?,
+      totalFee: totalFee == freezed
+          ? _value.totalFee
+          : totalFee // ignore: cast_nullable_to_non_nullable
+              as String?,
+      totalTax: totalTax == freezed
+          ? _value.totalTax
+          : totalTax // ignore: cast_nullable_to_non_nullable
+              as String?,
+      remark: remark == freezed
+          ? _value.remark
+          : remark // ignore: cast_nullable_to_non_nullable
+              as String?,
       paymentTypeId: paymentTypeId == freezed
           ? _value.paymentTypeId
-          : paymentTypeId as String,
+          : paymentTypeId // ignore: cast_nullable_to_non_nullable
+              as String?,
       paymentTermId: paymentTermId == freezed
           ? _value.paymentTermId
-          : paymentTermId as String,
-      currencyId:
-          currencyId == freezed ? _value.currencyId : currencyId as String,
+          : paymentTermId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      currencyId: currencyId == freezed
+          ? _value.currencyId
+          : currencyId // ignore: cast_nullable_to_non_nullable
+              as String?,
       currencyRate: currencyRate == freezed
           ? _value.currencyRate
-          : currencyRate as String,
-      locationId:
-          locationId == freezed ? _value.locationId : locationId as String,
-      printTimes:
-          printTimes == freezed ? _value.printTimes : printTimes as String,
-      userName: userName == freezed ? _value.userName : userName as String,
-      confirmBy: confirmBy == freezed ? _value.confirmBy : confirmBy as String,
-      confirmDate:
-          confirmDate == freezed ? _value.confirmDate : confirmDate as String,
-      downPayment:
-          downPayment == freezed ? _value.downPayment : downPayment as String,
-      shipTo: shipTo == freezed ? _value.shipTo : shipTo as String,
-      shipDate: shipDate == freezed ? _value.shipDate : shipDate as String,
-      bankId: bankId == freezed ? _value.bankId : bankId as String,
-      bankIssuer:
-          bankIssuer == freezed ? _value.bankIssuer : bankIssuer as String,
-      dpAccountId:
-          dpAccountId == freezed ? _value.dpAccountId : dpAccountId as String,
-      dpDueDate: dpDueDate == freezed ? _value.dpDueDate : dpDueDate as String,
-      referenceNo:
-          referenceNo == freezed ? _value.referenceNo : referenceNo as String,
+          : currencyRate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      locationId: locationId == freezed
+          ? _value.locationId
+          : locationId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      printTimes: printTimes == freezed
+          ? _value.printTimes
+          : printTimes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      userName: userName == freezed
+          ? _value.userName
+          : userName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      confirmBy: confirmBy == freezed
+          ? _value.confirmBy
+          : confirmBy // ignore: cast_nullable_to_non_nullable
+              as String?,
+      confirmDate: confirmDate == freezed
+          ? _value.confirmDate
+          : confirmDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      downPayment: downPayment == freezed
+          ? _value.downPayment
+          : downPayment // ignore: cast_nullable_to_non_nullable
+              as String?,
+      shipTo: shipTo == freezed
+          ? _value.shipTo
+          : shipTo // ignore: cast_nullable_to_non_nullable
+              as String?,
+      shipDate: shipDate == freezed
+          ? _value.shipDate
+          : shipDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bankId: bankId == freezed
+          ? _value.bankId
+          : bankId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bankIssuer: bankIssuer == freezed
+          ? _value.bankIssuer
+          : bankIssuer // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dpAccountId: dpAccountId == freezed
+          ? _value.dpAccountId
+          : dpAccountId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dpDueDate: dpDueDate == freezed
+          ? _value.dpDueDate
+          : dpDueDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      referenceNo: referenceNo == freezed
+          ? _value.referenceNo
+          : referenceNo // ignore: cast_nullable_to_non_nullable
+              as String?,
       cashFlowTypeId: cashFlowTypeId == freezed
           ? _value.cashFlowTypeId
-          : cashFlowTypeId as String,
-      salesId: salesId == freezed ? _value.salesId : salesId as String,
-      courierId: courierId == freezed ? _value.courierId : courierId as String,
-      fobId: fobId == freezed ? _value.fobId : fobId as String,
+          : cashFlowTypeId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      salesId: salesId == freezed
+          ? _value.salesId
+          : salesId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      courierId: courierId == freezed
+          ? _value.courierId
+          : courierId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      fobId: fobId == freezed
+          ? _value.fobId
+          : fobId // ignore: cast_nullable_to_non_nullable
+              as String?,
       estimatedFreight: estimatedFreight == freezed
           ? _value.estimatedFreight
-          : estimatedFreight as String,
-      isTaxable: isTaxable == freezed ? _value.isTaxable : isTaxable as String,
+          : estimatedFreight // ignore: cast_nullable_to_non_nullable
+              as String?,
+      isTaxable: isTaxable == freezed
+          ? _value.isTaxable
+          : isTaxable // ignore: cast_nullable_to_non_nullable
+              as String?,
       isInclusiveTax: isInclusiveTax == freezed
           ? _value.isInclusiveTax
-          : isInclusiveTax as String,
-      fiscalRate:
-          fiscalRate == freezed ? _value.fiscalRate : fiscalRate as String,
+          : isInclusiveTax // ignore: cast_nullable_to_non_nullable
+              as String?,
+      fiscalRate: fiscalRate == freezed
+          ? _value.fiscalRate
+          : fiscalRate // ignore: cast_nullable_to_non_nullable
+              as String?,
       freightAccountId: freightAccountId == freezed
           ? _value.freightAccountId
-          : freightAccountId as String,
+          : freightAccountId // ignore: cast_nullable_to_non_nullable
+              as String?,
       isInclusiveFreight: isInclusiveFreight == freezed
           ? _value.isInclusiveFreight
-          : isInclusiveFreight as String,
-      cancelBy: cancelBy == freezed ? _value.cancelBy : cancelBy as String,
-      cancelDate:
-          cancelDate == freezed ? _value.cancelDate : cancelDate as String,
-      ongkir: ongkir == freezed ? _value.ongkir : ongkir as String,
-      promocode: promocode == freezed ? _value.promocode : promocode as String,
+          : isInclusiveFreight // ignore: cast_nullable_to_non_nullable
+              as String?,
+      cancelBy: cancelBy == freezed
+          ? _value.cancelBy
+          : cancelBy // ignore: cast_nullable_to_non_nullable
+              as String?,
+      cancelDate: cancelDate == freezed
+          ? _value.cancelDate
+          : cancelDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      ongkir: ongkir == freezed
+          ? _value.ongkir
+          : ongkir // ignore: cast_nullable_to_non_nullable
+              as String?,
+      promocode: promocode == freezed
+          ? _value.promocode
+          : promocode // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -449,53 +546,53 @@ abstract class _$FullTransactionDataModelCopyWith<$Res>
       __$FullTransactionDataModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: "sales_order_id") String salesOrderId,
-      @JsonKey(name: "transaction_status") String transactionStatus,
-      @JsonKey(name: "sales_order_no") String salesOrderNo,
-      @JsonKey(name: "transaction_date") String transactionDate,
-      @JsonKey(name: "due_date") String dueDate,
-      @JsonKey(name: "customer_id") String customerId,
-      @JsonKey(name: "customer_name") String customerName,
-      @JsonKey(name: "customer_po_no") String customerPoNo,
-      @JsonKey(name: "customer_po_date") String customerPoDate,
-      @JsonKey(name: "total_qty") String totalQty,
-      @JsonKey(name: "total_amount") String totalAmount,
-      @JsonKey(name: "total_discount_pct") String totalDiscountPct,
-      @JsonKey(name: "total_discount") String totalDiscount,
-      @JsonKey(name: "total_fee") String totalFee,
-      @JsonKey(name: "total_tax") String totalTax,
-      @JsonKey(name: "remark") String remark,
-      @JsonKey(name: "payment_type_id") String paymentTypeId,
-      @JsonKey(name: "payment_term_id") String paymentTermId,
-      @JsonKey(name: "currency_id") String currencyId,
-      @JsonKey(name: "currency_rate") String currencyRate,
-      @JsonKey(name: "location_id") String locationId,
-      @JsonKey(name: "print_times") String printTimes,
-      @JsonKey(name: "user_name") String userName,
-      @JsonKey(name: "confirm_by") String confirmBy,
-      @JsonKey(name: "confirm_date") String confirmDate,
-      @JsonKey(name: "down_payment") String downPayment,
-      @JsonKey(name: "ship_to") String shipTo,
-      @JsonKey(name: "ship_date") String shipDate,
-      @JsonKey(name: "bank_id") String bankId,
-      @JsonKey(name: "bank_issuer") String bankIssuer,
-      @JsonKey(name: "dp_account_id") String dpAccountId,
-      @JsonKey(name: "dp_due_date") String dpDueDate,
-      @JsonKey(name: "reference_no") String referenceNo,
-      @JsonKey(name: "cash_flow_type_id") String cashFlowTypeId,
-      @JsonKey(name: "sales_id") String salesId,
-      @JsonKey(name: "courier_id") String courierId,
-      @JsonKey(name: "fob_id") String fobId,
-      @JsonKey(name: "estimated_freight") String estimatedFreight,
-      @JsonKey(name: "is_taxable") String isTaxable,
-      @JsonKey(name: "is_inclusive_tax") String isInclusiveTax,
-      @JsonKey(name: "fiscal_rate") String fiscalRate,
-      @JsonKey(name: "freight_account_id") String freightAccountId,
-      @JsonKey(name: "is_inclusive_freight") String isInclusiveFreight,
-      @JsonKey(name: "cancel_by") String cancelBy,
-      @JsonKey(name: "cancel_date") String cancelDate,
-      @JsonKey(name: "ongkir") String ongkir,
-      @JsonKey(name: "promocode") String promocode});
+      {@JsonKey(name: "sales_order_id") String? salesOrderId,
+      @JsonKey(name: "transaction_status") String? transactionStatus,
+      @JsonKey(name: "sales_order_no") String? salesOrderNo,
+      @JsonKey(name: "transaction_date") String? transactionDate,
+      @JsonKey(name: "due_date") String? dueDate,
+      @JsonKey(name: "customer_id") String? customerId,
+      @JsonKey(name: "customer_name") String? customerName,
+      @JsonKey(name: "customer_po_no") String? customerPoNo,
+      @JsonKey(name: "customer_po_date") String? customerPoDate,
+      @JsonKey(name: "total_qty") String? totalQty,
+      @JsonKey(name: "total_amount") String? totalAmount,
+      @JsonKey(name: "total_discount_pct") String? totalDiscountPct,
+      @JsonKey(name: "total_discount") String? totalDiscount,
+      @JsonKey(name: "total_fee") String? totalFee,
+      @JsonKey(name: "total_tax") String? totalTax,
+      @JsonKey(name: "remark") String? remark,
+      @JsonKey(name: "payment_type_id") String? paymentTypeId,
+      @JsonKey(name: "payment_term_id") String? paymentTermId,
+      @JsonKey(name: "currency_id") String? currencyId,
+      @JsonKey(name: "currency_rate") String? currencyRate,
+      @JsonKey(name: "location_id") String? locationId,
+      @JsonKey(name: "print_times") String? printTimes,
+      @JsonKey(name: "user_name") String? userName,
+      @JsonKey(name: "confirm_by") String? confirmBy,
+      @JsonKey(name: "confirm_date") String? confirmDate,
+      @JsonKey(name: "down_payment") String? downPayment,
+      @JsonKey(name: "ship_to") String? shipTo,
+      @JsonKey(name: "ship_date") String? shipDate,
+      @JsonKey(name: "bank_id") String? bankId,
+      @JsonKey(name: "bank_issuer") String? bankIssuer,
+      @JsonKey(name: "dp_account_id") String? dpAccountId,
+      @JsonKey(name: "dp_due_date") String? dpDueDate,
+      @JsonKey(name: "reference_no") String? referenceNo,
+      @JsonKey(name: "cash_flow_type_id") String? cashFlowTypeId,
+      @JsonKey(name: "sales_id") String? salesId,
+      @JsonKey(name: "courier_id") String? courierId,
+      @JsonKey(name: "fob_id") String? fobId,
+      @JsonKey(name: "estimated_freight") String? estimatedFreight,
+      @JsonKey(name: "is_taxable") String? isTaxable,
+      @JsonKey(name: "is_inclusive_tax") String? isInclusiveTax,
+      @JsonKey(name: "fiscal_rate") String? fiscalRate,
+      @JsonKey(name: "freight_account_id") String? freightAccountId,
+      @JsonKey(name: "is_inclusive_freight") String? isInclusiveFreight,
+      @JsonKey(name: "cancel_by") String? cancelBy,
+      @JsonKey(name: "cancel_date") String? cancelDate,
+      @JsonKey(name: "ongkir") String? ongkir,
+      @JsonKey(name: "promocode") String? promocode});
 }
 
 /// @nodoc
@@ -512,155 +609,249 @@ class __$FullTransactionDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object salesOrderId = freezed,
-    Object transactionStatus = freezed,
-    Object salesOrderNo = freezed,
-    Object transactionDate = freezed,
-    Object dueDate = freezed,
-    Object customerId = freezed,
-    Object customerName = freezed,
-    Object customerPoNo = freezed,
-    Object customerPoDate = freezed,
-    Object totalQty = freezed,
-    Object totalAmount = freezed,
-    Object totalDiscountPct = freezed,
-    Object totalDiscount = freezed,
-    Object totalFee = freezed,
-    Object totalTax = freezed,
-    Object remark = freezed,
-    Object paymentTypeId = freezed,
-    Object paymentTermId = freezed,
-    Object currencyId = freezed,
-    Object currencyRate = freezed,
-    Object locationId = freezed,
-    Object printTimes = freezed,
-    Object userName = freezed,
-    Object confirmBy = freezed,
-    Object confirmDate = freezed,
-    Object downPayment = freezed,
-    Object shipTo = freezed,
-    Object shipDate = freezed,
-    Object bankId = freezed,
-    Object bankIssuer = freezed,
-    Object dpAccountId = freezed,
-    Object dpDueDate = freezed,
-    Object referenceNo = freezed,
-    Object cashFlowTypeId = freezed,
-    Object salesId = freezed,
-    Object courierId = freezed,
-    Object fobId = freezed,
-    Object estimatedFreight = freezed,
-    Object isTaxable = freezed,
-    Object isInclusiveTax = freezed,
-    Object fiscalRate = freezed,
-    Object freightAccountId = freezed,
-    Object isInclusiveFreight = freezed,
-    Object cancelBy = freezed,
-    Object cancelDate = freezed,
-    Object ongkir = freezed,
-    Object promocode = freezed,
+    Object? salesOrderId = freezed,
+    Object? transactionStatus = freezed,
+    Object? salesOrderNo = freezed,
+    Object? transactionDate = freezed,
+    Object? dueDate = freezed,
+    Object? customerId = freezed,
+    Object? customerName = freezed,
+    Object? customerPoNo = freezed,
+    Object? customerPoDate = freezed,
+    Object? totalQty = freezed,
+    Object? totalAmount = freezed,
+    Object? totalDiscountPct = freezed,
+    Object? totalDiscount = freezed,
+    Object? totalFee = freezed,
+    Object? totalTax = freezed,
+    Object? remark = freezed,
+    Object? paymentTypeId = freezed,
+    Object? paymentTermId = freezed,
+    Object? currencyId = freezed,
+    Object? currencyRate = freezed,
+    Object? locationId = freezed,
+    Object? printTimes = freezed,
+    Object? userName = freezed,
+    Object? confirmBy = freezed,
+    Object? confirmDate = freezed,
+    Object? downPayment = freezed,
+    Object? shipTo = freezed,
+    Object? shipDate = freezed,
+    Object? bankId = freezed,
+    Object? bankIssuer = freezed,
+    Object? dpAccountId = freezed,
+    Object? dpDueDate = freezed,
+    Object? referenceNo = freezed,
+    Object? cashFlowTypeId = freezed,
+    Object? salesId = freezed,
+    Object? courierId = freezed,
+    Object? fobId = freezed,
+    Object? estimatedFreight = freezed,
+    Object? isTaxable = freezed,
+    Object? isInclusiveTax = freezed,
+    Object? fiscalRate = freezed,
+    Object? freightAccountId = freezed,
+    Object? isInclusiveFreight = freezed,
+    Object? cancelBy = freezed,
+    Object? cancelDate = freezed,
+    Object? ongkir = freezed,
+    Object? promocode = freezed,
   }) {
     return _then(_FullTransactionDataModel(
       salesOrderId: salesOrderId == freezed
           ? _value.salesOrderId
-          : salesOrderId as String,
+          : salesOrderId // ignore: cast_nullable_to_non_nullable
+              as String?,
       transactionStatus: transactionStatus == freezed
           ? _value.transactionStatus
-          : transactionStatus as String,
+          : transactionStatus // ignore: cast_nullable_to_non_nullable
+              as String?,
       salesOrderNo: salesOrderNo == freezed
           ? _value.salesOrderNo
-          : salesOrderNo as String,
+          : salesOrderNo // ignore: cast_nullable_to_non_nullable
+              as String?,
       transactionDate: transactionDate == freezed
           ? _value.transactionDate
-          : transactionDate as String,
-      dueDate: dueDate == freezed ? _value.dueDate : dueDate as String,
-      customerId:
-          customerId == freezed ? _value.customerId : customerId as String,
+          : transactionDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dueDate: dueDate == freezed
+          ? _value.dueDate
+          : dueDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      customerId: customerId == freezed
+          ? _value.customerId
+          : customerId // ignore: cast_nullable_to_non_nullable
+              as String?,
       customerName: customerName == freezed
           ? _value.customerName
-          : customerName as String,
+          : customerName // ignore: cast_nullable_to_non_nullable
+              as String?,
       customerPoNo: customerPoNo == freezed
           ? _value.customerPoNo
-          : customerPoNo as String,
+          : customerPoNo // ignore: cast_nullable_to_non_nullable
+              as String?,
       customerPoDate: customerPoDate == freezed
           ? _value.customerPoDate
-          : customerPoDate as String,
-      totalQty: totalQty == freezed ? _value.totalQty : totalQty as String,
-      totalAmount:
-          totalAmount == freezed ? _value.totalAmount : totalAmount as String,
+          : customerPoDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      totalQty: totalQty == freezed
+          ? _value.totalQty
+          : totalQty // ignore: cast_nullable_to_non_nullable
+              as String?,
+      totalAmount: totalAmount == freezed
+          ? _value.totalAmount
+          : totalAmount // ignore: cast_nullable_to_non_nullable
+              as String?,
       totalDiscountPct: totalDiscountPct == freezed
           ? _value.totalDiscountPct
-          : totalDiscountPct as String,
+          : totalDiscountPct // ignore: cast_nullable_to_non_nullable
+              as String?,
       totalDiscount: totalDiscount == freezed
           ? _value.totalDiscount
-          : totalDiscount as String,
-      totalFee: totalFee == freezed ? _value.totalFee : totalFee as String,
-      totalTax: totalTax == freezed ? _value.totalTax : totalTax as String,
-      remark: remark == freezed ? _value.remark : remark as String,
+          : totalDiscount // ignore: cast_nullable_to_non_nullable
+              as String?,
+      totalFee: totalFee == freezed
+          ? _value.totalFee
+          : totalFee // ignore: cast_nullable_to_non_nullable
+              as String?,
+      totalTax: totalTax == freezed
+          ? _value.totalTax
+          : totalTax // ignore: cast_nullable_to_non_nullable
+              as String?,
+      remark: remark == freezed
+          ? _value.remark
+          : remark // ignore: cast_nullable_to_non_nullable
+              as String?,
       paymentTypeId: paymentTypeId == freezed
           ? _value.paymentTypeId
-          : paymentTypeId as String,
+          : paymentTypeId // ignore: cast_nullable_to_non_nullable
+              as String?,
       paymentTermId: paymentTermId == freezed
           ? _value.paymentTermId
-          : paymentTermId as String,
-      currencyId:
-          currencyId == freezed ? _value.currencyId : currencyId as String,
+          : paymentTermId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      currencyId: currencyId == freezed
+          ? _value.currencyId
+          : currencyId // ignore: cast_nullable_to_non_nullable
+              as String?,
       currencyRate: currencyRate == freezed
           ? _value.currencyRate
-          : currencyRate as String,
-      locationId:
-          locationId == freezed ? _value.locationId : locationId as String,
-      printTimes:
-          printTimes == freezed ? _value.printTimes : printTimes as String,
-      userName: userName == freezed ? _value.userName : userName as String,
-      confirmBy: confirmBy == freezed ? _value.confirmBy : confirmBy as String,
-      confirmDate:
-          confirmDate == freezed ? _value.confirmDate : confirmDate as String,
-      downPayment:
-          downPayment == freezed ? _value.downPayment : downPayment as String,
-      shipTo: shipTo == freezed ? _value.shipTo : shipTo as String,
-      shipDate: shipDate == freezed ? _value.shipDate : shipDate as String,
-      bankId: bankId == freezed ? _value.bankId : bankId as String,
-      bankIssuer:
-          bankIssuer == freezed ? _value.bankIssuer : bankIssuer as String,
-      dpAccountId:
-          dpAccountId == freezed ? _value.dpAccountId : dpAccountId as String,
-      dpDueDate: dpDueDate == freezed ? _value.dpDueDate : dpDueDate as String,
-      referenceNo:
-          referenceNo == freezed ? _value.referenceNo : referenceNo as String,
+          : currencyRate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      locationId: locationId == freezed
+          ? _value.locationId
+          : locationId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      printTimes: printTimes == freezed
+          ? _value.printTimes
+          : printTimes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      userName: userName == freezed
+          ? _value.userName
+          : userName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      confirmBy: confirmBy == freezed
+          ? _value.confirmBy
+          : confirmBy // ignore: cast_nullable_to_non_nullable
+              as String?,
+      confirmDate: confirmDate == freezed
+          ? _value.confirmDate
+          : confirmDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      downPayment: downPayment == freezed
+          ? _value.downPayment
+          : downPayment // ignore: cast_nullable_to_non_nullable
+              as String?,
+      shipTo: shipTo == freezed
+          ? _value.shipTo
+          : shipTo // ignore: cast_nullable_to_non_nullable
+              as String?,
+      shipDate: shipDate == freezed
+          ? _value.shipDate
+          : shipDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bankId: bankId == freezed
+          ? _value.bankId
+          : bankId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bankIssuer: bankIssuer == freezed
+          ? _value.bankIssuer
+          : bankIssuer // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dpAccountId: dpAccountId == freezed
+          ? _value.dpAccountId
+          : dpAccountId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dpDueDate: dpDueDate == freezed
+          ? _value.dpDueDate
+          : dpDueDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      referenceNo: referenceNo == freezed
+          ? _value.referenceNo
+          : referenceNo // ignore: cast_nullable_to_non_nullable
+              as String?,
       cashFlowTypeId: cashFlowTypeId == freezed
           ? _value.cashFlowTypeId
-          : cashFlowTypeId as String,
-      salesId: salesId == freezed ? _value.salesId : salesId as String,
-      courierId: courierId == freezed ? _value.courierId : courierId as String,
-      fobId: fobId == freezed ? _value.fobId : fobId as String,
+          : cashFlowTypeId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      salesId: salesId == freezed
+          ? _value.salesId
+          : salesId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      courierId: courierId == freezed
+          ? _value.courierId
+          : courierId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      fobId: fobId == freezed
+          ? _value.fobId
+          : fobId // ignore: cast_nullable_to_non_nullable
+              as String?,
       estimatedFreight: estimatedFreight == freezed
           ? _value.estimatedFreight
-          : estimatedFreight as String,
-      isTaxable: isTaxable == freezed ? _value.isTaxable : isTaxable as String,
+          : estimatedFreight // ignore: cast_nullable_to_non_nullable
+              as String?,
+      isTaxable: isTaxable == freezed
+          ? _value.isTaxable
+          : isTaxable // ignore: cast_nullable_to_non_nullable
+              as String?,
       isInclusiveTax: isInclusiveTax == freezed
           ? _value.isInclusiveTax
-          : isInclusiveTax as String,
-      fiscalRate:
-          fiscalRate == freezed ? _value.fiscalRate : fiscalRate as String,
+          : isInclusiveTax // ignore: cast_nullable_to_non_nullable
+              as String?,
+      fiscalRate: fiscalRate == freezed
+          ? _value.fiscalRate
+          : fiscalRate // ignore: cast_nullable_to_non_nullable
+              as String?,
       freightAccountId: freightAccountId == freezed
           ? _value.freightAccountId
-          : freightAccountId as String,
+          : freightAccountId // ignore: cast_nullable_to_non_nullable
+              as String?,
       isInclusiveFreight: isInclusiveFreight == freezed
           ? _value.isInclusiveFreight
-          : isInclusiveFreight as String,
-      cancelBy: cancelBy == freezed ? _value.cancelBy : cancelBy as String,
-      cancelDate:
-          cancelDate == freezed ? _value.cancelDate : cancelDate as String,
-      ongkir: ongkir == freezed ? _value.ongkir : ongkir as String,
-      promocode: promocode == freezed ? _value.promocode : promocode as String,
+          : isInclusiveFreight // ignore: cast_nullable_to_non_nullable
+              as String?,
+      cancelBy: cancelBy == freezed
+          ? _value.cancelBy
+          : cancelBy // ignore: cast_nullable_to_non_nullable
+              as String?,
+      cancelDate: cancelDate == freezed
+          ? _value.cancelDate
+          : cancelDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      ongkir: ongkir == freezed
+          ? _value.ongkir
+          : ongkir // ignore: cast_nullable_to_non_nullable
+              as String?,
+      promocode: promocode == freezed
+          ? _value.promocode
+          : promocode // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_FullTransactionDataModel implements _FullTransactionDataModel {
   _$_FullTransactionDataModel(
       {@JsonKey(name: "sales_order_id") this.salesOrderId,
@@ -716,145 +907,145 @@ class _$_FullTransactionDataModel implements _FullTransactionDataModel {
 
   @override
   @JsonKey(name: "sales_order_id")
-  final String salesOrderId;
+  final String? salesOrderId;
   @override
   @JsonKey(name: "transaction_status")
-  final String transactionStatus;
+  final String? transactionStatus;
   @override
   @JsonKey(name: "sales_order_no")
-  final String salesOrderNo;
+  final String? salesOrderNo;
   @override
   @JsonKey(name: "transaction_date")
-  final String transactionDate;
+  final String? transactionDate;
   @override
   @JsonKey(name: "due_date")
-  final String dueDate;
+  final String? dueDate;
   @override
   @JsonKey(name: "customer_id")
-  final String customerId;
+  final String? customerId;
   @override
   @JsonKey(name: "customer_name")
-  final String customerName;
+  final String? customerName;
   @override
   @JsonKey(name: "customer_po_no")
-  final String customerPoNo;
+  final String? customerPoNo;
   @override
   @JsonKey(name: "customer_po_date")
-  final String customerPoDate;
+  final String? customerPoDate;
   @override
   @JsonKey(name: "total_qty")
-  final String totalQty;
+  final String? totalQty;
   @override
   @JsonKey(name: "total_amount")
-  final String totalAmount;
+  final String? totalAmount;
   @override
   @JsonKey(name: "total_discount_pct")
-  final String totalDiscountPct;
+  final String? totalDiscountPct;
   @override
   @JsonKey(name: "total_discount")
-  final String totalDiscount;
+  final String? totalDiscount;
   @override
   @JsonKey(name: "total_fee")
-  final String totalFee;
+  final String? totalFee;
   @override
   @JsonKey(name: "total_tax")
-  final String totalTax;
+  final String? totalTax;
   @override
   @JsonKey(name: "remark")
-  final String remark;
+  final String? remark;
   @override
   @JsonKey(name: "payment_type_id")
-  final String paymentTypeId;
+  final String? paymentTypeId;
   @override
   @JsonKey(name: "payment_term_id")
-  final String paymentTermId;
+  final String? paymentTermId;
   @override
   @JsonKey(name: "currency_id")
-  final String currencyId;
+  final String? currencyId;
   @override
   @JsonKey(name: "currency_rate")
-  final String currencyRate;
+  final String? currencyRate;
   @override
   @JsonKey(name: "location_id")
-  final String locationId;
+  final String? locationId;
   @override
   @JsonKey(name: "print_times")
-  final String printTimes;
+  final String? printTimes;
   @override
   @JsonKey(name: "user_name")
-  final String userName;
+  final String? userName;
   @override
   @JsonKey(name: "confirm_by")
-  final String confirmBy;
+  final String? confirmBy;
   @override
   @JsonKey(name: "confirm_date")
-  final String confirmDate;
+  final String? confirmDate;
   @override
   @JsonKey(name: "down_payment")
-  final String downPayment;
+  final String? downPayment;
   @override
   @JsonKey(name: "ship_to")
-  final String shipTo;
+  final String? shipTo;
   @override
   @JsonKey(name: "ship_date")
-  final String shipDate;
+  final String? shipDate;
   @override
   @JsonKey(name: "bank_id")
-  final String bankId;
+  final String? bankId;
   @override
   @JsonKey(name: "bank_issuer")
-  final String bankIssuer;
+  final String? bankIssuer;
   @override
   @JsonKey(name: "dp_account_id")
-  final String dpAccountId;
+  final String? dpAccountId;
   @override
   @JsonKey(name: "dp_due_date")
-  final String dpDueDate;
+  final String? dpDueDate;
   @override
   @JsonKey(name: "reference_no")
-  final String referenceNo;
+  final String? referenceNo;
   @override
   @JsonKey(name: "cash_flow_type_id")
-  final String cashFlowTypeId;
+  final String? cashFlowTypeId;
   @override
   @JsonKey(name: "sales_id")
-  final String salesId;
+  final String? salesId;
   @override
   @JsonKey(name: "courier_id")
-  final String courierId;
+  final String? courierId;
   @override
   @JsonKey(name: "fob_id")
-  final String fobId;
+  final String? fobId;
   @override
   @JsonKey(name: "estimated_freight")
-  final String estimatedFreight;
+  final String? estimatedFreight;
   @override
   @JsonKey(name: "is_taxable")
-  final String isTaxable;
+  final String? isTaxable;
   @override
   @JsonKey(name: "is_inclusive_tax")
-  final String isInclusiveTax;
+  final String? isInclusiveTax;
   @override
   @JsonKey(name: "fiscal_rate")
-  final String fiscalRate;
+  final String? fiscalRate;
   @override
   @JsonKey(name: "freight_account_id")
-  final String freightAccountId;
+  final String? freightAccountId;
   @override
   @JsonKey(name: "is_inclusive_freight")
-  final String isInclusiveFreight;
+  final String? isInclusiveFreight;
   @override
   @JsonKey(name: "cancel_by")
-  final String cancelBy;
+  final String? cancelBy;
   @override
   @JsonKey(name: "cancel_date")
-  final String cancelDate;
+  final String? cancelDate;
   @override
   @JsonKey(name: "ongkir")
-  final String ongkir;
+  final String? ongkir;
   @override
   @JsonKey(name: "promocode")
-  final String promocode;
+  final String? promocode;
 
   @override
   String toString() {
@@ -1022,53 +1213,53 @@ class _$_FullTransactionDataModel implements _FullTransactionDataModel {
 
 abstract class _FullTransactionDataModel implements FullTransactionDataModel {
   factory _FullTransactionDataModel(
-          {@JsonKey(name: "sales_order_id") String salesOrderId,
-          @JsonKey(name: "transaction_status") String transactionStatus,
-          @JsonKey(name: "sales_order_no") String salesOrderNo,
-          @JsonKey(name: "transaction_date") String transactionDate,
-          @JsonKey(name: "due_date") String dueDate,
-          @JsonKey(name: "customer_id") String customerId,
-          @JsonKey(name: "customer_name") String customerName,
-          @JsonKey(name: "customer_po_no") String customerPoNo,
-          @JsonKey(name: "customer_po_date") String customerPoDate,
-          @JsonKey(name: "total_qty") String totalQty,
-          @JsonKey(name: "total_amount") String totalAmount,
-          @JsonKey(name: "total_discount_pct") String totalDiscountPct,
-          @JsonKey(name: "total_discount") String totalDiscount,
-          @JsonKey(name: "total_fee") String totalFee,
-          @JsonKey(name: "total_tax") String totalTax,
-          @JsonKey(name: "remark") String remark,
-          @JsonKey(name: "payment_type_id") String paymentTypeId,
-          @JsonKey(name: "payment_term_id") String paymentTermId,
-          @JsonKey(name: "currency_id") String currencyId,
-          @JsonKey(name: "currency_rate") String currencyRate,
-          @JsonKey(name: "location_id") String locationId,
-          @JsonKey(name: "print_times") String printTimes,
-          @JsonKey(name: "user_name") String userName,
-          @JsonKey(name: "confirm_by") String confirmBy,
-          @JsonKey(name: "confirm_date") String confirmDate,
-          @JsonKey(name: "down_payment") String downPayment,
-          @JsonKey(name: "ship_to") String shipTo,
-          @JsonKey(name: "ship_date") String shipDate,
-          @JsonKey(name: "bank_id") String bankId,
-          @JsonKey(name: "bank_issuer") String bankIssuer,
-          @JsonKey(name: "dp_account_id") String dpAccountId,
-          @JsonKey(name: "dp_due_date") String dpDueDate,
-          @JsonKey(name: "reference_no") String referenceNo,
-          @JsonKey(name: "cash_flow_type_id") String cashFlowTypeId,
-          @JsonKey(name: "sales_id") String salesId,
-          @JsonKey(name: "courier_id") String courierId,
-          @JsonKey(name: "fob_id") String fobId,
-          @JsonKey(name: "estimated_freight") String estimatedFreight,
-          @JsonKey(name: "is_taxable") String isTaxable,
-          @JsonKey(name: "is_inclusive_tax") String isInclusiveTax,
-          @JsonKey(name: "fiscal_rate") String fiscalRate,
-          @JsonKey(name: "freight_account_id") String freightAccountId,
-          @JsonKey(name: "is_inclusive_freight") String isInclusiveFreight,
-          @JsonKey(name: "cancel_by") String cancelBy,
-          @JsonKey(name: "cancel_date") String cancelDate,
-          @JsonKey(name: "ongkir") String ongkir,
-          @JsonKey(name: "promocode") String promocode}) =
+          {@JsonKey(name: "sales_order_id") String? salesOrderId,
+          @JsonKey(name: "transaction_status") String? transactionStatus,
+          @JsonKey(name: "sales_order_no") String? salesOrderNo,
+          @JsonKey(name: "transaction_date") String? transactionDate,
+          @JsonKey(name: "due_date") String? dueDate,
+          @JsonKey(name: "customer_id") String? customerId,
+          @JsonKey(name: "customer_name") String? customerName,
+          @JsonKey(name: "customer_po_no") String? customerPoNo,
+          @JsonKey(name: "customer_po_date") String? customerPoDate,
+          @JsonKey(name: "total_qty") String? totalQty,
+          @JsonKey(name: "total_amount") String? totalAmount,
+          @JsonKey(name: "total_discount_pct") String? totalDiscountPct,
+          @JsonKey(name: "total_discount") String? totalDiscount,
+          @JsonKey(name: "total_fee") String? totalFee,
+          @JsonKey(name: "total_tax") String? totalTax,
+          @JsonKey(name: "remark") String? remark,
+          @JsonKey(name: "payment_type_id") String? paymentTypeId,
+          @JsonKey(name: "payment_term_id") String? paymentTermId,
+          @JsonKey(name: "currency_id") String? currencyId,
+          @JsonKey(name: "currency_rate") String? currencyRate,
+          @JsonKey(name: "location_id") String? locationId,
+          @JsonKey(name: "print_times") String? printTimes,
+          @JsonKey(name: "user_name") String? userName,
+          @JsonKey(name: "confirm_by") String? confirmBy,
+          @JsonKey(name: "confirm_date") String? confirmDate,
+          @JsonKey(name: "down_payment") String? downPayment,
+          @JsonKey(name: "ship_to") String? shipTo,
+          @JsonKey(name: "ship_date") String? shipDate,
+          @JsonKey(name: "bank_id") String? bankId,
+          @JsonKey(name: "bank_issuer") String? bankIssuer,
+          @JsonKey(name: "dp_account_id") String? dpAccountId,
+          @JsonKey(name: "dp_due_date") String? dpDueDate,
+          @JsonKey(name: "reference_no") String? referenceNo,
+          @JsonKey(name: "cash_flow_type_id") String? cashFlowTypeId,
+          @JsonKey(name: "sales_id") String? salesId,
+          @JsonKey(name: "courier_id") String? courierId,
+          @JsonKey(name: "fob_id") String? fobId,
+          @JsonKey(name: "estimated_freight") String? estimatedFreight,
+          @JsonKey(name: "is_taxable") String? isTaxable,
+          @JsonKey(name: "is_inclusive_tax") String? isInclusiveTax,
+          @JsonKey(name: "fiscal_rate") String? fiscalRate,
+          @JsonKey(name: "freight_account_id") String? freightAccountId,
+          @JsonKey(name: "is_inclusive_freight") String? isInclusiveFreight,
+          @JsonKey(name: "cancel_by") String? cancelBy,
+          @JsonKey(name: "cancel_date") String? cancelDate,
+          @JsonKey(name: "ongkir") String? ongkir,
+          @JsonKey(name: "promocode") String? promocode}) =
       _$_FullTransactionDataModel;
 
   factory _FullTransactionDataModel.fromJson(Map<String, dynamic> json) =
@@ -1076,146 +1267,147 @@ abstract class _FullTransactionDataModel implements FullTransactionDataModel {
 
   @override
   @JsonKey(name: "sales_order_id")
-  String get salesOrderId;
+  String? get salesOrderId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "transaction_status")
-  String get transactionStatus;
+  String? get transactionStatus => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "sales_order_no")
-  String get salesOrderNo;
+  String? get salesOrderNo => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "transaction_date")
-  String get transactionDate;
+  String? get transactionDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "due_date")
-  String get dueDate;
+  String? get dueDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "customer_id")
-  String get customerId;
+  String? get customerId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "customer_name")
-  String get customerName;
+  String? get customerName => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "customer_po_no")
-  String get customerPoNo;
+  String? get customerPoNo => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "customer_po_date")
-  String get customerPoDate;
+  String? get customerPoDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "total_qty")
-  String get totalQty;
+  String? get totalQty => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "total_amount")
-  String get totalAmount;
+  String? get totalAmount => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "total_discount_pct")
-  String get totalDiscountPct;
+  String? get totalDiscountPct => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "total_discount")
-  String get totalDiscount;
+  String? get totalDiscount => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "total_fee")
-  String get totalFee;
+  String? get totalFee => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "total_tax")
-  String get totalTax;
+  String? get totalTax => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "remark")
-  String get remark;
+  String? get remark => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "payment_type_id")
-  String get paymentTypeId;
+  String? get paymentTypeId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "payment_term_id")
-  String get paymentTermId;
+  String? get paymentTermId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "currency_id")
-  String get currencyId;
+  String? get currencyId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "currency_rate")
-  String get currencyRate;
+  String? get currencyRate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "location_id")
-  String get locationId;
+  String? get locationId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "print_times")
-  String get printTimes;
+  String? get printTimes => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "user_name")
-  String get userName;
+  String? get userName => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "confirm_by")
-  String get confirmBy;
+  String? get confirmBy => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "confirm_date")
-  String get confirmDate;
+  String? get confirmDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "down_payment")
-  String get downPayment;
+  String? get downPayment => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "ship_to")
-  String get shipTo;
+  String? get shipTo => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "ship_date")
-  String get shipDate;
+  String? get shipDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "bank_id")
-  String get bankId;
+  String? get bankId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "bank_issuer")
-  String get bankIssuer;
+  String? get bankIssuer => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "dp_account_id")
-  String get dpAccountId;
+  String? get dpAccountId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "dp_due_date")
-  String get dpDueDate;
+  String? get dpDueDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "reference_no")
-  String get referenceNo;
+  String? get referenceNo => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "cash_flow_type_id")
-  String get cashFlowTypeId;
+  String? get cashFlowTypeId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "sales_id")
-  String get salesId;
+  String? get salesId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "courier_id")
-  String get courierId;
+  String? get courierId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "fob_id")
-  String get fobId;
+  String? get fobId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "estimated_freight")
-  String get estimatedFreight;
+  String? get estimatedFreight => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "is_taxable")
-  String get isTaxable;
+  String? get isTaxable => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "is_inclusive_tax")
-  String get isInclusiveTax;
+  String? get isInclusiveTax => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "fiscal_rate")
-  String get fiscalRate;
+  String? get fiscalRate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "freight_account_id")
-  String get freightAccountId;
+  String? get freightAccountId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "is_inclusive_freight")
-  String get isInclusiveFreight;
+  String? get isInclusiveFreight => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "cancel_by")
-  String get cancelBy;
+  String? get cancelBy => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "cancel_date")
-  String get cancelDate;
+  String? get cancelDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "ongkir")
-  String get ongkir;
+  String? get ongkir => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "promocode")
-  String get promocode;
+  String? get promocode => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FullTransactionDataModelCopyWith<_FullTransactionDataModel> get copyWith;
+  _$FullTransactionDataModelCopyWith<_FullTransactionDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

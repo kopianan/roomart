@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'cart_data_collection_model.dart';
 
@@ -8,6 +8,10 @@ part of 'cart_data_collection_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 CartDataCollectionModel _$CartDataCollectionModelFromJson(
     Map<String, dynamic> json) {
   return _CartDataCollectionModel.fromJson(json);
@@ -17,33 +21,31 @@ CartDataCollectionModel _$CartDataCollectionModelFromJson(
 class _$CartDataCollectionModelTearOff {
   const _$CartDataCollectionModelTearOff();
 
-// ignore: unused_element
   _CartDataCollectionModel call(
-      {BoughtItemDataModel bought, DataItemModel item}) {
+      {BoughtItemDataModel? bought, DataItemModel? item}) {
     return _CartDataCollectionModel(
       bought: bought,
       item: item,
     );
   }
 
-// ignore: unused_element
   CartDataCollectionModel fromJson(Map<String, Object> json) {
     return CartDataCollectionModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CartDataCollectionModel = _$CartDataCollectionModelTearOff();
 
 /// @nodoc
 mixin _$CartDataCollectionModel {
-  BoughtItemDataModel get bought;
-  DataItemModel get item;
+  BoughtItemDataModel? get bought => throw _privateConstructorUsedError;
+  DataItemModel? get item => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CartDataCollectionModelCopyWith<CartDataCollectionModel> get copyWith;
+  $CartDataCollectionModelCopyWith<CartDataCollectionModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -51,10 +53,10 @@ abstract class $CartDataCollectionModelCopyWith<$Res> {
   factory $CartDataCollectionModelCopyWith(CartDataCollectionModel value,
           $Res Function(CartDataCollectionModel) then) =
       _$CartDataCollectionModelCopyWithImpl<$Res>;
-  $Res call({BoughtItemDataModel bought, DataItemModel item});
+  $Res call({BoughtItemDataModel? bought, DataItemModel? item});
 
-  $BoughtItemDataModelCopyWith<$Res> get bought;
-  $DataItemModelCopyWith<$Res> get item;
+  $BoughtItemDataModelCopyWith<$Res>? get bought;
+  $DataItemModelCopyWith<$Res>? get item;
 }
 
 /// @nodoc
@@ -68,31 +70,39 @@ class _$CartDataCollectionModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object bought = freezed,
-    Object item = freezed,
+    Object? bought = freezed,
+    Object? item = freezed,
   }) {
     return _then(_value.copyWith(
-      bought: bought == freezed ? _value.bought : bought as BoughtItemDataModel,
-      item: item == freezed ? _value.item : item as DataItemModel,
+      bought: bought == freezed
+          ? _value.bought
+          : bought // ignore: cast_nullable_to_non_nullable
+              as BoughtItemDataModel?,
+      item: item == freezed
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as DataItemModel?,
     ));
   }
 
   @override
-  $BoughtItemDataModelCopyWith<$Res> get bought {
+  $BoughtItemDataModelCopyWith<$Res>? get bought {
     if (_value.bought == null) {
       return null;
     }
-    return $BoughtItemDataModelCopyWith<$Res>(_value.bought, (value) {
+
+    return $BoughtItemDataModelCopyWith<$Res>(_value.bought!, (value) {
       return _then(_value.copyWith(bought: value));
     });
   }
 
   @override
-  $DataItemModelCopyWith<$Res> get item {
+  $DataItemModelCopyWith<$Res>? get item {
     if (_value.item == null) {
       return null;
     }
-    return $DataItemModelCopyWith<$Res>(_value.item, (value) {
+
+    return $DataItemModelCopyWith<$Res>(_value.item!, (value) {
       return _then(_value.copyWith(item: value));
     });
   }
@@ -105,12 +115,12 @@ abstract class _$CartDataCollectionModelCopyWith<$Res>
           $Res Function(_CartDataCollectionModel) then) =
       __$CartDataCollectionModelCopyWithImpl<$Res>;
   @override
-  $Res call({BoughtItemDataModel bought, DataItemModel item});
+  $Res call({BoughtItemDataModel? bought, DataItemModel? item});
 
   @override
-  $BoughtItemDataModelCopyWith<$Res> get bought;
+  $BoughtItemDataModelCopyWith<$Res>? get bought;
   @override
-  $DataItemModelCopyWith<$Res> get item;
+  $DataItemModelCopyWith<$Res>? get item;
 }
 
 /// @nodoc
@@ -127,19 +137,24 @@ class __$CartDataCollectionModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object bought = freezed,
-    Object item = freezed,
+    Object? bought = freezed,
+    Object? item = freezed,
   }) {
     return _then(_CartDataCollectionModel(
-      bought: bought == freezed ? _value.bought : bought as BoughtItemDataModel,
-      item: item == freezed ? _value.item : item as DataItemModel,
+      bought: bought == freezed
+          ? _value.bought
+          : bought // ignore: cast_nullable_to_non_nullable
+              as BoughtItemDataModel?,
+      item: item == freezed
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as DataItemModel?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CartDataCollectionModel implements _CartDataCollectionModel {
   _$_CartDataCollectionModel({this.bought, this.item});
 
@@ -147,9 +162,9 @@ class _$_CartDataCollectionModel implements _CartDataCollectionModel {
       _$_$_CartDataCollectionModelFromJson(json);
 
   @override
-  final BoughtItemDataModel bought;
+  final BoughtItemDataModel? bought;
   @override
-  final DataItemModel item;
+  final DataItemModel? item;
 
   @override
   String toString() {
@@ -186,17 +201,18 @@ class _$_CartDataCollectionModel implements _CartDataCollectionModel {
 
 abstract class _CartDataCollectionModel implements CartDataCollectionModel {
   factory _CartDataCollectionModel(
-      {BoughtItemDataModel bought,
-      DataItemModel item}) = _$_CartDataCollectionModel;
+      {BoughtItemDataModel? bought,
+      DataItemModel? item}) = _$_CartDataCollectionModel;
 
   factory _CartDataCollectionModel.fromJson(Map<String, dynamic> json) =
       _$_CartDataCollectionModel.fromJson;
 
   @override
-  BoughtItemDataModel get bought;
+  BoughtItemDataModel? get bought => throw _privateConstructorUsedError;
   @override
-  DataItemModel get item;
+  DataItemModel? get item => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CartDataCollectionModelCopyWith<_CartDataCollectionModel> get copyWith;
+  _$CartDataCollectionModelCopyWith<_CartDataCollectionModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

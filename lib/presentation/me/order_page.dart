@@ -24,7 +24,7 @@ class OrderPage extends StatefulWidget {
 class _OrderPageState extends State<OrderPage> {
   final transController = Get.put(TransactionController());
   final authController = Get.put(AuthController());
-  UserDataModel user;
+  UserDataModel? user;
   @override
   void initState() {
     user = authController.getUserDataModel;
@@ -67,23 +67,23 @@ class _OrderPageState extends State<OrderPage> {
           children: [
             NotPaidTransactionHistory(
               status: "0,1",
-              customerId: user.userId,
+              customerId: user!.userId,
             ),
             NewTransactionHistoryPage(
               status: "2",
-              customerId: user.userId,
+              customerId: user!.userId,
             ),
             SentTransactionHistoryPage(
-              customerId: user.userId,
+              customerId: user!.userId,
               status: "2",
             ),
             FinishedTransactionHistoryPage(
-              customerId: user.userId,
+              customerId: user!.userId,
               status: "",
             ),
             CancelledTransactionHistoryPage(
               status: "-1",
-              customerId: user.userId,
+              customerId: user!.userId,
             )
           ],
         ),

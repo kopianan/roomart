@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'trans_request.dart';
 
@@ -8,6 +8,10 @@ part of 'trans_request.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 TransRequest _$TransRequestFromJson(Map<String, dynamic> json) {
   return _TransRequest.fromJson(json);
 }
@@ -16,35 +20,34 @@ TransRequest _$TransRequestFromJson(Map<String, dynamic> json) {
 class _$TransRequestTearOff {
   const _$TransRequestTearOff();
 
-// ignore: unused_element
   _TransRequest call(
-      {@required String token,
-      @JsonKey(name: 'sales_trans') List<TransPostDataModel> salesTrans}) {
+      {required String token,
+      @JsonKey(name: "sales_trans") List<TransPostDataModel>? salesTrans}) {
     return _TransRequest(
       token: token,
       salesTrans: salesTrans,
     );
   }
 
-// ignore: unused_element
   TransRequest fromJson(Map<String, Object> json) {
     return TransRequest.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $TransRequest = _$TransRequestTearOff();
 
 /// @nodoc
 mixin _$TransRequest {
-  String get token;
-  @JsonKey(name: 'sales_trans')
-  List<TransPostDataModel> get salesTrans;
+  String get token => throw _privateConstructorUsedError;
+  @JsonKey(name: "sales_trans")
+  List<TransPostDataModel>? get salesTrans =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $TransRequestCopyWith<TransRequest> get copyWith;
+  $TransRequestCopyWith<TransRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -54,7 +57,7 @@ abstract class $TransRequestCopyWith<$Res> {
       _$TransRequestCopyWithImpl<$Res>;
   $Res call(
       {String token,
-      @JsonKey(name: 'sales_trans') List<TransPostDataModel> salesTrans});
+      @JsonKey(name: "sales_trans") List<TransPostDataModel>? salesTrans});
 }
 
 /// @nodoc
@@ -67,14 +70,18 @@ class _$TransRequestCopyWithImpl<$Res> implements $TransRequestCopyWith<$Res> {
 
   @override
   $Res call({
-    Object token = freezed,
-    Object salesTrans = freezed,
+    Object? token = freezed,
+    Object? salesTrans = freezed,
   }) {
     return _then(_value.copyWith(
-      token: token == freezed ? _value.token : token as String,
+      token: token == freezed
+          ? _value.token
+          : token // ignore: cast_nullable_to_non_nullable
+              as String,
       salesTrans: salesTrans == freezed
           ? _value.salesTrans
-          : salesTrans as List<TransPostDataModel>,
+          : salesTrans // ignore: cast_nullable_to_non_nullable
+              as List<TransPostDataModel>?,
     ));
   }
 }
@@ -88,7 +95,7 @@ abstract class _$TransRequestCopyWith<$Res>
   @override
   $Res call(
       {String token,
-      @JsonKey(name: 'sales_trans') List<TransPostDataModel> salesTrans});
+      @JsonKey(name: "sales_trans") List<TransPostDataModel>? salesTrans});
 }
 
 /// @nodoc
@@ -103,25 +110,27 @@ class __$TransRequestCopyWithImpl<$Res> extends _$TransRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object token = freezed,
-    Object salesTrans = freezed,
+    Object? token = freezed,
+    Object? salesTrans = freezed,
   }) {
     return _then(_TransRequest(
-      token: token == freezed ? _value.token : token as String,
+      token: token == freezed
+          ? _value.token
+          : token // ignore: cast_nullable_to_non_nullable
+              as String,
       salesTrans: salesTrans == freezed
           ? _value.salesTrans
-          : salesTrans as List<TransPostDataModel>,
+          : salesTrans // ignore: cast_nullable_to_non_nullable
+              as List<TransPostDataModel>?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TransRequest implements _TransRequest {
   _$_TransRequest(
-      {@required this.token, @JsonKey(name: 'sales_trans') this.salesTrans})
-      : assert(token != null);
+      {required this.token, @JsonKey(name: "sales_trans") this.salesTrans});
 
   factory _$_TransRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_TransRequestFromJson(json);
@@ -129,8 +138,8 @@ class _$_TransRequest implements _TransRequest {
   @override
   final String token;
   @override
-  @JsonKey(name: 'sales_trans')
-  final List<TransPostDataModel> salesTrans;
+  @JsonKey(name: "sales_trans")
+  final List<TransPostDataModel>? salesTrans;
 
   @override
   String toString() {
@@ -167,19 +176,21 @@ class _$_TransRequest implements _TransRequest {
 
 abstract class _TransRequest implements TransRequest {
   factory _TransRequest(
-          {@required String token,
-          @JsonKey(name: 'sales_trans') List<TransPostDataModel> salesTrans}) =
+          {required String token,
+          @JsonKey(name: "sales_trans") List<TransPostDataModel>? salesTrans}) =
       _$_TransRequest;
 
   factory _TransRequest.fromJson(Map<String, dynamic> json) =
       _$_TransRequest.fromJson;
 
   @override
-  String get token;
+  String get token => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'sales_trans')
-  List<TransPostDataModel> get salesTrans;
+  @JsonKey(name: "sales_trans")
+  List<TransPostDataModel>? get salesTrans =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TransRequestCopyWith<_TransRequest> get copyWith;
+  _$TransRequestCopyWith<_TransRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }

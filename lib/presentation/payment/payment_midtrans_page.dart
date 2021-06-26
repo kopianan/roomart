@@ -11,15 +11,15 @@ class PaymentMidtransPage extends StatefulWidget {
 }
 
 class _PaymentMidtransPageState extends State<PaymentMidtransPage> {
-  TransResponse url;
+  TransResponse? url;
   @override
   void initState() {
     if (GetPlatform.isAndroid) WebView.platform = SurfaceAndroidWebView();
-    url = Get.arguments as TransResponse;
+    url = Get.arguments as TransResponse?;
     super.initState();
   }
 
-  WebViewController _controller;
+  WebViewController? _controller;
   @override
   void dispose() {
     super.dispose();

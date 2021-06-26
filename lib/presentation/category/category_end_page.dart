@@ -15,10 +15,10 @@ class CategoryEndPage extends StatefulWidget {
 }
 
 class _CategoryEndPageState extends State<CategoryEndPage> {
-  CategoryModel category;
+  CategoryModel? category;
   @override
   void initState() {
-    category = Get.arguments as CategoryModel;
+    category = Get.arguments as CategoryModel?;
     super.initState();
   }
 
@@ -26,11 +26,11 @@ class _CategoryEndPageState extends State<CategoryEndPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(category.description),
+        title: Text(category!.description!),
       ),
       body: BlocProvider(
         create: (context) => getIt<ItemCubit>()
-          ..getItemListByCategoryId(categoryId: category.kategoriId),
+          ..getItemListByCategoryId(categoryId: category!.kategoriId),
         child: BlocConsumer<ItemCubit, ItemState>(
           listener: (context, state) {
             print(state);

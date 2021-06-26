@@ -21,19 +21,19 @@ class DeliveryPage extends StatefulWidget {
 }
 
 class _DeliveryPageState extends State<DeliveryPage> {
-  final ongkir = getIt<RajaongkirCubit>();
+  final RajaongkirCubit ongkir = getIt<RajaongkirCubit>();
   final transactionController = Get.put(TransactionController());
   final cartController = Get.put(CartController());
   final authController = Get.put(AuthController());
-  CostRequestModel requestModel;
-  UserDataModel user;
-  Costs selectedCost;
+  CostRequestModel? requestModel;
+  UserDataModel? user;
+  Costs? selectedCost;
   @override
   void initState() {
     user = authController.getUserDataModel;
     selectedCost = transactionController.getSelectedCost;
     requestModel = CostRequestModel(
-        destination: user.terrId3,
+        destination: user!.terrId3,
         origin: Constants.cityOriginId,
         weight: cartController.calculateWeight(),
         destinationType: "city",
@@ -56,7 +56,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
               orElse: () {},
               getCostsList: (e) {
                 var _filteredDelivery = e.costDataModel
-                    .where((element) => element.costs.length > 0)
+                    .where((element) => element.costs!.length > 0)
                     .toList();
                 transactionController.setCostList(_filteredDelivery);
               },
@@ -95,7 +95,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        deliveryType[index].name,
+                        deliveryType[index].name!,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
@@ -104,7 +104,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                     ),
                     Column(
                         children: deliveryType[index]
-                            .costs
+                            .costs!
                             .map((e) => Card(
                                   child: RadioListTile<Costs>(
                                     contentPadding:
@@ -127,16 +127,16 @@ class _DeliveryPageState extends State<DeliveryPage> {
                                       ));
                                     },
                                     subtitle: Text(
-                                      e.service +
+                                      e.service! +
                                           " " +
-                                          e.cost.first.etd +
+                                          e.cost!.first.etd! +
                                           " Hari",
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold),
                                     ),
                                     secondary: Text(
                                       Formatter().formatStringCurrency(
-                                          e.cost.first.value.toString()),
+                                          e.cost!.first.value.toString()),
                                       style: TextStyle(fontSize: 17),
                                     ),
                                     title: Text(

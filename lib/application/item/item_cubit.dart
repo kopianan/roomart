@@ -11,13 +11,13 @@ part 'item_cubit.freezed.dart';
 class ItemCubit extends Cubit<ItemState> {
   ItemCubit(this.iiTemFacae) : super(ItemState.initial());
 
-  IITemFacae iiTemFacae;
+  IITemFacae? iiTemFacae;
 
   void getItemListLazy(int limit, int offset) async {
     emit(ItemState.loading());
     try {
       final _result =
-          await iiTemFacae.getItemLazyLoading(limit: limit, offset: offset);
+          await iiTemFacae!.getItemLazyLoading(limit: limit, offset: offset);
       _result.fold(
         (l) => emit(ItemState.error(l.toString())),
         (r) => emit(ItemState.onGetItemLazy(r)),
@@ -30,7 +30,7 @@ class ItemCubit extends Cubit<ItemState> {
   void searchItemLazy(int limit, int offset, String keyword) async {
     emit(ItemState.loading());
     try {
-      final _result = await iiTemFacae.searchItem(
+      final _result = await iiTemFacae!.searchItem(
           limit: limit, offset: offset, keywoard: keyword);
       _result.fold(
         (l) => emit(ItemState.error(l.toString())),
@@ -42,11 +42,11 @@ class ItemCubit extends Cubit<ItemState> {
   }
 
   void getItemListByCategoryId(
-      {@required String categoryId, int limit = 1000, int offset = 0}) async {
+      {required String? categoryId, int limit = 1000, int offset = 0}) async {
     emit(ItemState.loading());
     try {
       final _result =
-          await iiTemFacae.getItemListByCategoryId(categoryId: categoryId);
+          await iiTemFacae!.getItemListByCategoryId(categoryId: categoryId);
       _result.fold(
         (l) => emit(ItemState.error(l.toString())),
         (r) => emit(ItemState.onGetItemByCategoryId(r)),

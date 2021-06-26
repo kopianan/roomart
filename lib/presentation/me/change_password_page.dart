@@ -151,9 +151,9 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
     return DefaultButton1(
       color: button1,
       onPressed: () {
-        if (formKey.currentState.validate()) {
+        if (formKey.currentState!.validate()) {
           context.read<AuthCubit>().changePassword(
-                authController.getUserDataModel.email,
+                authController.getUserDataModel!.email,
                 newPassowrd.text,
                 oldPassword.text,
               );
@@ -166,11 +166,11 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
 
 class ChangePasswordField extends StatefulWidget {
   const ChangePasswordField({
-    Key key,
-    @required this.hint,
-    @required this.controller,
-    @required this.flex,
-    @required this.validator,
+    Key? key,
+    required this.hint,
+    required this.controller,
+    required this.flex,
+    required this.validator,
   }) : super(key: key);
   final String hint;
   final int flex;
@@ -182,7 +182,7 @@ class ChangePasswordField extends StatefulWidget {
 
 class _ChangePasswordFieldState extends State<ChangePasswordField> {
   bool obsecureText = true;
-  TextEditingController editingController;
+  TextEditingController? editingController;
   @override
   void initState() {
     editingController = widget.controller;

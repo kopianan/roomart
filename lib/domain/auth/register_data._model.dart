@@ -1,9 +1,9 @@
 class RegisterDataModel {
-  String email;
-  String password;
-  String name;
-  DateTime dateTime;
-  String phone;
+  String? email;
+  String? password;
+  String? name;
+  DateTime? dateTime;
+  String? phone;
 
   RegisterDataModel({
     this.password,

@@ -8,9 +8,9 @@ part of 'cost.dart';
 
 _$_Cost _$_$_CostFromJson(Map<String, dynamic> json) {
   return _$_Cost(
-    value: json['value'] as int,
-    etd: json['etd'] as String,
-    note: json['note'] as String,
+    value: json['value'] as int?,
+    etd: json['etd'] as String?,
+    note: json['note'] as String?,
   );
 }
 

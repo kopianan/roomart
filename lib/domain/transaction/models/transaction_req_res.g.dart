@@ -9,11 +9,11 @@ part of 'transaction_req_res.dart';
 _$TransactionHistoryRequest _$_$TransactionHistoryRequestFromJson(
     Map<String, dynamic> json) {
   return _$TransactionHistoryRequest(
-    token: json['Token'] as String,
-    customerId: json['CustomerID'] as String,
-    limit: json['Limit'] as int,
-    offset: json['Offset'] as int,
-    status: json['Status'] as String,
+    token: json['Token'] as String?,
+    customerId: json['CustomerID'] as String?,
+    limit: json['Limit'] as int?,
+    offset: json['Offset'] as int?,
+    status: json['Status'] as String?,
   );
 }
 

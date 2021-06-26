@@ -17,18 +17,18 @@ class SubCategoryPage extends StatefulWidget {
 }
 
 class _SubCategoryPageState extends State<SubCategoryPage> {
-  CategoryModel categoryModel;
+  CategoryModel? categoryModel;
 
   @override
   void initState() {
-    categoryModel = Get.arguments as CategoryModel;
+    categoryModel = Get.arguments as CategoryModel?;
 
     super.initState();
   }
 
   List<CategoryModel> listData = <CategoryModel>[];
 
-  final categoryCubit = getIt<CategoryCubit>();
+  final CategoryCubit categoryCubit = getIt<CategoryCubit>();
   @override
   Widget build(BuildContext context) {
     return GetBuilder<CategoryController>(
@@ -76,7 +76,7 @@ class _SubCategoryPageState extends State<SubCategoryPage> {
                                   },
                                   child: Text(
                                     _ctgry
-                                        .getHistoryCategory[index].description.toUpperCase(),
+                                        .getHistoryCategory[index].description!.toUpperCase(),
                                     style: TextStyle(fontSize: 17),
                                   )),
                               (index == _ctgry.getHistoryCategory.length-1)
@@ -89,7 +89,7 @@ class _SubCategoryPageState extends State<SubCategoryPage> {
             ),
             body: BlocProvider(
               create: (context) =>
-                  categoryCubit..getCategoryByParent(categoryModel),
+                  categoryCubit..getCategoryByParent(categoryModel!),
               child: BlocConsumer<CategoryCubit, CategoryState>(
                 listener: (context, state) {
                   state.maybeMap(

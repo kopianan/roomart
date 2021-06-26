@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'category_model.dart';
 
@@ -8,6 +8,10 @@ part of 'category_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 CategoryModel _$CategoryModelFromJson(Map<String, dynamic> json) {
   return _CategoryModel.fromJson(json);
 }
@@ -16,28 +20,27 @@ CategoryModel _$CategoryModelFromJson(Map<String, dynamic> json) {
 class _$CategoryModelTearOff {
   const _$CategoryModelTearOff();
 
-// ignore: unused_element
   _CategoryModel call(
       {@JsonKey(name: "kategori_id")
-          String kategoriId,
+          String? kategoriId,
       @JsonKey(name: "parent_id")
-          String parentId,
+          String? parentId,
       @JsonKey(name: "internal_code")
-          String internalCode,
+          String? internalCode,
       @JsonKey(name: "kategori_code")
-          String kategoriCode,
+          String? kategoriCode,
       @JsonKey(name: "description", defaultValue: "description", nullable: true)
-          String description,
+          String? description,
       @JsonKey(name: "picture")
-          String picture,
+          String? picture,
       @JsonKey(name: "display_store")
-          String displayStore,
+          String? displayStore,
       @JsonKey(name: "has_child")
-          String hasChild,
+          String? hasChild,
       @JsonKey(name: "count")
-          String count,
+          String? count,
       @JsonKey(name: "count_total", defaultValue: "0", nullable: true, includeIfNull: true)
-          String countTotal}) {
+          String? countTotal}) {
     return _CategoryModel(
       kategoriId: kategoriId,
       parentId: parentId,
@@ -52,46 +55,45 @@ class _$CategoryModelTearOff {
     );
   }
 
-// ignore: unused_element
   CategoryModel fromJson(Map<String, Object> json) {
     return CategoryModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CategoryModel = _$CategoryModelTearOff();
 
 /// @nodoc
 mixin _$CategoryModel {
   @JsonKey(name: "kategori_id")
-  String get kategoriId;
+  String? get kategoriId => throw _privateConstructorUsedError;
   @JsonKey(name: "parent_id")
-  String get parentId;
+  String? get parentId => throw _privateConstructorUsedError;
   @JsonKey(name: "internal_code")
-  String get internalCode;
+  String? get internalCode => throw _privateConstructorUsedError;
   @JsonKey(name: "kategori_code")
-  String get kategoriCode;
+  String? get kategoriCode => throw _privateConstructorUsedError;
   @JsonKey(name: "description", defaultValue: "description", nullable: true)
-  String get description;
+  String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: "picture")
-  String get picture;
+  String? get picture => throw _privateConstructorUsedError;
   @JsonKey(name: "display_store")
-  String get displayStore;
+  String? get displayStore => throw _privateConstructorUsedError;
   @JsonKey(name: "has_child")
-  String get hasChild;
+  String? get hasChild => throw _privateConstructorUsedError;
   @JsonKey(name: "count")
-  String get count;
+  String? get count => throw _privateConstructorUsedError;
   @JsonKey(
       name: "count_total",
       defaultValue: "0",
       nullable: true,
       includeIfNull: true)
-  String get countTotal;
+  String? get countTotal => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CategoryModelCopyWith<CategoryModel> get copyWith;
+  $CategoryModelCopyWith<CategoryModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -101,25 +103,25 @@ abstract class $CategoryModelCopyWith<$Res> {
       _$CategoryModelCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: "kategori_id")
-          String kategoriId,
+          String? kategoriId,
       @JsonKey(name: "parent_id")
-          String parentId,
+          String? parentId,
       @JsonKey(name: "internal_code")
-          String internalCode,
+          String? internalCode,
       @JsonKey(name: "kategori_code")
-          String kategoriCode,
+          String? kategoriCode,
       @JsonKey(name: "description", defaultValue: "description", nullable: true)
-          String description,
+          String? description,
       @JsonKey(name: "picture")
-          String picture,
+          String? picture,
       @JsonKey(name: "display_store")
-          String displayStore,
+          String? displayStore,
       @JsonKey(name: "has_child")
-          String hasChild,
+          String? hasChild,
       @JsonKey(name: "count")
-          String count,
+          String? count,
       @JsonKey(name: "count_total", defaultValue: "0", nullable: true, includeIfNull: true)
-          String countTotal});
+          String? countTotal});
 }
 
 /// @nodoc
@@ -133,37 +135,58 @@ class _$CategoryModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object kategoriId = freezed,
-    Object parentId = freezed,
-    Object internalCode = freezed,
-    Object kategoriCode = freezed,
-    Object description = freezed,
-    Object picture = freezed,
-    Object displayStore = freezed,
-    Object hasChild = freezed,
-    Object count = freezed,
-    Object countTotal = freezed,
+    Object? kategoriId = freezed,
+    Object? parentId = freezed,
+    Object? internalCode = freezed,
+    Object? kategoriCode = freezed,
+    Object? description = freezed,
+    Object? picture = freezed,
+    Object? displayStore = freezed,
+    Object? hasChild = freezed,
+    Object? count = freezed,
+    Object? countTotal = freezed,
   }) {
     return _then(_value.copyWith(
-      kategoriId:
-          kategoriId == freezed ? _value.kategoriId : kategoriId as String,
-      parentId: parentId == freezed ? _value.parentId : parentId as String,
+      kategoriId: kategoriId == freezed
+          ? _value.kategoriId
+          : kategoriId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      parentId: parentId == freezed
+          ? _value.parentId
+          : parentId // ignore: cast_nullable_to_non_nullable
+              as String?,
       internalCode: internalCode == freezed
           ? _value.internalCode
-          : internalCode as String,
+          : internalCode // ignore: cast_nullable_to_non_nullable
+              as String?,
       kategoriCode: kategoriCode == freezed
           ? _value.kategoriCode
-          : kategoriCode as String,
-      description:
-          description == freezed ? _value.description : description as String,
-      picture: picture == freezed ? _value.picture : picture as String,
+          : kategoriCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      picture: picture == freezed
+          ? _value.picture
+          : picture // ignore: cast_nullable_to_non_nullable
+              as String?,
       displayStore: displayStore == freezed
           ? _value.displayStore
-          : displayStore as String,
-      hasChild: hasChild == freezed ? _value.hasChild : hasChild as String,
-      count: count == freezed ? _value.count : count as String,
-      countTotal:
-          countTotal == freezed ? _value.countTotal : countTotal as String,
+          : displayStore // ignore: cast_nullable_to_non_nullable
+              as String?,
+      hasChild: hasChild == freezed
+          ? _value.hasChild
+          : hasChild // ignore: cast_nullable_to_non_nullable
+              as String?,
+      count: count == freezed
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as String?,
+      countTotal: countTotal == freezed
+          ? _value.countTotal
+          : countTotal // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -177,25 +200,25 @@ abstract class _$CategoryModelCopyWith<$Res>
   @override
   $Res call(
       {@JsonKey(name: "kategori_id")
-          String kategoriId,
+          String? kategoriId,
       @JsonKey(name: "parent_id")
-          String parentId,
+          String? parentId,
       @JsonKey(name: "internal_code")
-          String internalCode,
+          String? internalCode,
       @JsonKey(name: "kategori_code")
-          String kategoriCode,
+          String? kategoriCode,
       @JsonKey(name: "description", defaultValue: "description", nullable: true)
-          String description,
+          String? description,
       @JsonKey(name: "picture")
-          String picture,
+          String? picture,
       @JsonKey(name: "display_store")
-          String displayStore,
+          String? displayStore,
       @JsonKey(name: "has_child")
-          String hasChild,
+          String? hasChild,
       @JsonKey(name: "count")
-          String count,
+          String? count,
       @JsonKey(name: "count_total", defaultValue: "0", nullable: true, includeIfNull: true)
-          String countTotal});
+          String? countTotal});
 }
 
 /// @nodoc
@@ -211,44 +234,64 @@ class __$CategoryModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object kategoriId = freezed,
-    Object parentId = freezed,
-    Object internalCode = freezed,
-    Object kategoriCode = freezed,
-    Object description = freezed,
-    Object picture = freezed,
-    Object displayStore = freezed,
-    Object hasChild = freezed,
-    Object count = freezed,
-    Object countTotal = freezed,
+    Object? kategoriId = freezed,
+    Object? parentId = freezed,
+    Object? internalCode = freezed,
+    Object? kategoriCode = freezed,
+    Object? description = freezed,
+    Object? picture = freezed,
+    Object? displayStore = freezed,
+    Object? hasChild = freezed,
+    Object? count = freezed,
+    Object? countTotal = freezed,
   }) {
     return _then(_CategoryModel(
-      kategoriId:
-          kategoriId == freezed ? _value.kategoriId : kategoriId as String,
-      parentId: parentId == freezed ? _value.parentId : parentId as String,
+      kategoriId: kategoriId == freezed
+          ? _value.kategoriId
+          : kategoriId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      parentId: parentId == freezed
+          ? _value.parentId
+          : parentId // ignore: cast_nullable_to_non_nullable
+              as String?,
       internalCode: internalCode == freezed
           ? _value.internalCode
-          : internalCode as String,
+          : internalCode // ignore: cast_nullable_to_non_nullable
+              as String?,
       kategoriCode: kategoriCode == freezed
           ? _value.kategoriCode
-          : kategoriCode as String,
-      description:
-          description == freezed ? _value.description : description as String,
-      picture: picture == freezed ? _value.picture : picture as String,
+          : kategoriCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      picture: picture == freezed
+          ? _value.picture
+          : picture // ignore: cast_nullable_to_non_nullable
+              as String?,
       displayStore: displayStore == freezed
           ? _value.displayStore
-          : displayStore as String,
-      hasChild: hasChild == freezed ? _value.hasChild : hasChild as String,
-      count: count == freezed ? _value.count : count as String,
-      countTotal:
-          countTotal == freezed ? _value.countTotal : countTotal as String,
+          : displayStore // ignore: cast_nullable_to_non_nullable
+              as String?,
+      hasChild: hasChild == freezed
+          ? _value.hasChild
+          : hasChild // ignore: cast_nullable_to_non_nullable
+              as String?,
+      count: count == freezed
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as String?,
+      countTotal: countTotal == freezed
+          ? _value.countTotal
+          : countTotal // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CategoryModel implements _CategoryModel {
   _$_CategoryModel(
       {@JsonKey(name: "kategori_id")
@@ -277,38 +320,38 @@ class _$_CategoryModel implements _CategoryModel {
 
   @override
   @JsonKey(name: "kategori_id")
-  final String kategoriId;
+  final String? kategoriId;
   @override
   @JsonKey(name: "parent_id")
-  final String parentId;
+  final String? parentId;
   @override
   @JsonKey(name: "internal_code")
-  final String internalCode;
+  final String? internalCode;
   @override
   @JsonKey(name: "kategori_code")
-  final String kategoriCode;
+  final String? kategoriCode;
   @override
   @JsonKey(name: "description", defaultValue: "description", nullable: true)
-  final String description;
+  final String? description;
   @override
   @JsonKey(name: "picture")
-  final String picture;
+  final String? picture;
   @override
   @JsonKey(name: "display_store")
-  final String displayStore;
+  final String? displayStore;
   @override
   @JsonKey(name: "has_child")
-  final String hasChild;
+  final String? hasChild;
   @override
   @JsonKey(name: "count")
-  final String count;
+  final String? count;
   @override
   @JsonKey(
       name: "count_total",
       defaultValue: "0",
       nullable: true,
       includeIfNull: true)
-  final String countTotal;
+  final String? countTotal;
 
   @override
   String toString() {
@@ -378,64 +421,65 @@ class _$_CategoryModel implements _CategoryModel {
 abstract class _CategoryModel implements CategoryModel {
   factory _CategoryModel(
       {@JsonKey(name: "kategori_id")
-          String kategoriId,
+          String? kategoriId,
       @JsonKey(name: "parent_id")
-          String parentId,
+          String? parentId,
       @JsonKey(name: "internal_code")
-          String internalCode,
+          String? internalCode,
       @JsonKey(name: "kategori_code")
-          String kategoriCode,
+          String? kategoriCode,
       @JsonKey(name: "description", defaultValue: "description", nullable: true)
-          String description,
+          String? description,
       @JsonKey(name: "picture")
-          String picture,
+          String? picture,
       @JsonKey(name: "display_store")
-          String displayStore,
+          String? displayStore,
       @JsonKey(name: "has_child")
-          String hasChild,
+          String? hasChild,
       @JsonKey(name: "count")
-          String count,
+          String? count,
       @JsonKey(name: "count_total", defaultValue: "0", nullable: true, includeIfNull: true)
-          String countTotal}) = _$_CategoryModel;
+          String? countTotal}) = _$_CategoryModel;
 
   factory _CategoryModel.fromJson(Map<String, dynamic> json) =
       _$_CategoryModel.fromJson;
 
   @override
   @JsonKey(name: "kategori_id")
-  String get kategoriId;
+  String? get kategoriId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "parent_id")
-  String get parentId;
+  String? get parentId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "internal_code")
-  String get internalCode;
+  String? get internalCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "kategori_code")
-  String get kategoriCode;
+  String? get kategoriCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "description", defaultValue: "description", nullable: true)
-  String get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "picture")
-  String get picture;
+  String? get picture => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "display_store")
-  String get displayStore;
+  String? get displayStore => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "has_child")
-  String get hasChild;
+  String? get hasChild => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "count")
-  String get count;
+  String? get count => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       name: "count_total",
       defaultValue: "0",
       nullable: true,
       includeIfNull: true)
-  String get countTotal;
+  String? get countTotal => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CategoryModelCopyWith<_CategoryModel> get copyWith;
+  _$CategoryModelCopyWith<_CategoryModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

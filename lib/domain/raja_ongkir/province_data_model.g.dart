@@ -8,8 +8,8 @@ part of 'province_data_model.dart';
 
 _$_ProvinceDataModel _$_$_ProvinceDataModelFromJson(Map<String, dynamic> json) {
   return _$_ProvinceDataModel(
-    provinceId: json['province_id'] as String,
-    province: json['province'] as String,
+    provinceId: json['province_id'] as String?,
+    province: json['province'] as String?,
   );
 }
 

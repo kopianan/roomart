@@ -8,12 +8,11 @@ part of 'costs.dart';
 
 _$_Costs _$_$_CostsFromJson(Map<String, dynamic> json) {
   return _$_Costs(
-    service: json['service'] as String,
-    description: json['description'] as String,
-    cost: (json['cost'] as List)
-        ?.map(
-            (e) => e == null ? null : Cost.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    service: json['service'] as String?,
+    description: json['description'] as String?,
+    cost: (json['cost'] as List<dynamic>?)
+        ?.map((e) => Cost.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 

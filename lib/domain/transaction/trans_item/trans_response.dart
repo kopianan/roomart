@@ -1,15 +1,15 @@
 class TransResponse {
-  String token;
-  List<SalesTrans> salesTrans;
+  String? token;
+  List<SalesTrans>? salesTrans;
 
   TransResponse({this.token, this.salesTrans});
 
   TransResponse.fromJson(Map<String, dynamic> json) {
     token = json['token'];
     if (json['sales_trans'] != null) {
-      salesTrans = new List<SalesTrans>();
+      salesTrans = <SalesTrans>[];
       json['sales_trans'].forEach((v) {
-        salesTrans.add(new SalesTrans.fromJson(v));
+        salesTrans!.add(new SalesTrans.fromJson(v));
       });
     }
   }
@@ -18,32 +18,32 @@ class TransResponse {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['token'] = this.token;
     if (this.salesTrans != null) {
-      data['sales_trans'] = this.salesTrans.map((v) => v.toJson()).toList();
+      data['sales_trans'] = this.salesTrans!.map((v) => v.toJson()).toList();
     }
     return data;
   }
 }
 
 class SalesTrans {
-  String transNo;
-  String transType;
-  String location;
-  String transDt;
-  String customer;
-  String createBy;
-  String remark;
-  String pmttype;
-  String paymentChannel;
-  String totalDiscount;
-  String pmtterm;
-  int bankId;
-  List<Details> details;
-  String parentId;
-  bool isReseller;
-  String email;
-  String fullname;
-  String password;
-  String paymentGatewayUrl;
+  String? transNo;
+  String? transType;
+  String? location;
+  String? transDt;
+  String? customer;
+  String? createBy;
+  String? remark;
+  String? pmttype;
+  String? paymentChannel;
+  String? totalDiscount;
+  String? pmtterm;
+  int? bankId;
+  List<Details>? details;
+  String? parentId;
+  bool? isReseller;
+  String? email;
+  String? fullname;
+  String? password;
+  String? paymentGatewayUrl;
 
   SalesTrans(
       {this.transNo,
@@ -80,9 +80,9 @@ class SalesTrans {
     pmtterm = json['pmtterm'];
     bankId = json['bankId'];
     if (json['details'] != null) {
-      details = new List<Details>();
+      details = <Details>[];
       json['details'].forEach((v) {
-        details.add(new Details.fromJson(v));
+        details!.add(new Details.fromJson(v));
       });
     }
     parentId = json['parent_id'];
@@ -108,7 +108,7 @@ class SalesTrans {
     data['pmtterm'] = this.pmtterm;
     data['bankId'] = this.bankId;
     if (this.details != null) {
-      data['details'] = this.details.map((v) => v.toJson()).toList();
+      data['details'] = this.details!.map((v) => v.toJson()).toList();
     }
     data['parent_id'] = this.parentId;
     data['is_reseller'] = this.isReseller;
@@ -121,16 +121,16 @@ class SalesTrans {
 }
 
 class Details {
-  String itemCode;
-  String itemId;
-  String itemName;
-  String itemImage;
-  String qty;
-  String unit;
-  double resellerPrice;
-  double price;
-  String tax;
-  String discount;
+  String? itemCode;
+  String? itemId;
+  String? itemName;
+  String? itemImage;
+  String? qty;
+  String? unit;
+  double? resellerPrice;
+  double? price;
+  String? tax;
+  String? discount;
 
   Details(
       {this.itemCode,

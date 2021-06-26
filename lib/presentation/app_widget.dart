@@ -1,13 +1,9 @@
-import 'package:color_to_material/color_to_material.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:roomart/application/auth/auth_controller.dart';
-import 'package:roomart/presentation/dashboard/dashboard_page.dart';
-import 'package:roomart/presentation/payment/test_page.dart';
 import 'package:roomart/presentation/splash_screen/splash_screen_page.dart';
 import 'package:roomart/routes/router.dart';
-import 'package:roomart/utils/constants.dart';
-import 'package:roomart/utils/my_color.dart';
 
 class AppWidget extends StatefulWidget {
   // This widget is the root of your application.
@@ -45,8 +41,7 @@ class _AppWidgetState extends State<AppWidget> {
                   borderRadius: BorderRadius.circular(8),
                   borderSide: BorderSide(width: 1, color: Colors.grey))),
           scaffoldBackgroundColor: Colors.white,
-          primarySwatch:
-              ColorToMaterial.fromHEX(primaryColor).getMaterialColor()),
+          primarySwatch:Colors.deepOrange),
     );
   }
 }

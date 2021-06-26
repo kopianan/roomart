@@ -26,9 +26,9 @@ class _RegisterPageState extends State<RegisterPage> {
   TextEditingController _phone = TextEditingController();
   TextEditingController _password = TextEditingController();
   TextEditingController _confirmPassword = TextEditingController();
-  DateTime date;
+  DateTime? date;
   double height = 30;
-  final authCubit = getIt<AuthCubit>();
+  final AuthCubit authCubit = getIt<AuthCubit>();
 
   void clearTextEditing() {
     _fullName.clear();
@@ -117,7 +117,7 @@ class _RegisterPageState extends State<RegisterPage> {
                           lastDate: DateTime.now(),
                         );
                         String formatted =
-                            DateFormat("dd MMMM yyyy").format(date);
+                            DateFormat("dd MMMM yyyy").format(date!);
                         _dateOfBirth.text = formatted;
                       },
                     ),
@@ -188,11 +188,11 @@ class _RegisterPageState extends State<RegisterPage> {
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField(
-      {Key key,
-      @required this.hint,
-      @required this.fullName,
-      @required this.label,
-      @required this.icon,
+      {Key? key,
+      required this.hint,
+      required this.fullName,
+      required this.label,
+      required this.icon,
       this.readOnly = false,
       this.textInputType,
       this.onTap});
@@ -202,13 +202,13 @@ class CustomTextField extends StatelessWidget {
   final String label;
   final IconData icon;
   final bool readOnly;
-  final Function onTap;
-  final TextInputType textInputType;
+  final Function? onTap;
+  final TextInputType? textInputType;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       readOnly: readOnly,
-      onTap: onTap,
+      onTap: onTap as void Function()?,
       keyboardType: textInputType,
       controller: fullName,
       decoration: InputDecoration(
@@ -222,11 +222,11 @@ class CustomTextField extends StatelessWidget {
 
 class CustomPasswordTextField extends StatefulWidget {
   const CustomPasswordTextField({
-    Key key,
-    @required this.hint,
-    @required this.fullName,
-    @required this.label,
-    @required this.icon,
+    Key? key,
+    required this.hint,
+    required this.fullName,
+    required this.label,
+    required this.icon,
     this.textInputType,
   });
 
@@ -234,7 +234,7 @@ class CustomPasswordTextField extends StatefulWidget {
   final String hint;
   final String label;
   final IconData icon;
-  final TextInputType textInputType;
+  final TextInputType? textInputType;
 
   @override
   _CustomPasswordTextFieldState createState() =>

@@ -6,11 +6,11 @@ part 'costs.freezed.dart';
 part 'costs.g.dart';
 
 @freezed
-abstract class Costs with _$Costs {
+ class Costs with _$Costs {
   factory Costs({
-    String service,
-    String description,
-    List<Cost> cost,
+    String? service,
+    String? description,
+    List<Cost>? cost,
   }) = _Costs;
 
   factory Costs.fromJson(Map<String, dynamic> json) => _$CostsFromJson(json);

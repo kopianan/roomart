@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'transaction_req_res.dart';
 
@@ -8,6 +8,10 @@ part of 'transaction_req_res.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 TransactionReqRes _$TransactionReqResFromJson(Map<String, dynamic> json) {
   return TransactionHistoryRequest.fromJson(json);
 }
@@ -16,13 +20,12 @@ TransactionReqRes _$TransactionReqResFromJson(Map<String, dynamic> json) {
 class _$TransactionReqResTearOff {
   const _$TransactionReqResTearOff();
 
-// ignore: unused_element
   TransactionHistoryRequest transactionHistoryRequest(
-      {@JsonKey(name: 'Token') String token,
-      @JsonKey(name: 'CustomerID') String customerId,
-      @JsonKey(name: 'Limit') int limit,
-      @JsonKey(name: 'Offset') int offset,
-      @JsonKey(name: 'Status') String status}) {
+      {@JsonKey(name: "Token") String? token,
+      @JsonKey(name: "CustomerID") String? customerId,
+      @JsonKey(name: "Limit") int? limit,
+      @JsonKey(name: "Offset") int? offset,
+      @JsonKey(name: "Status") String? status}) {
     return TransactionHistoryRequest(
       token: token,
       customerId: customerId,
@@ -32,62 +35,67 @@ class _$TransactionReqResTearOff {
     );
   }
 
-// ignore: unused_element
   TransactionReqRes fromJson(Map<String, Object> json) {
     return TransactionReqRes.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $TransactionReqRes = _$TransactionReqResTearOff();
 
 /// @nodoc
 mixin _$TransactionReqRes {
-  @JsonKey(name: 'Token')
-  String get token;
-  @JsonKey(name: 'CustomerID')
-  String get customerId;
-  @JsonKey(name: 'Limit')
-  int get limit;
-  @JsonKey(name: 'Offset')
-  int get offset;
-  @JsonKey(name: 'Status')
-  String get status;
+  @JsonKey(name: "Token")
+  String? get token => throw _privateConstructorUsedError;
+  @JsonKey(name: "CustomerID")
+  String? get customerId => throw _privateConstructorUsedError;
+  @JsonKey(name: "Limit")
+  int? get limit => throw _privateConstructorUsedError;
+  @JsonKey(name: "Offset")
+  int? get offset => throw _privateConstructorUsedError;
+  @JsonKey(name: "Status")
+  String? get status => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult transactionHistoryRequest(
-            @JsonKey(name: 'Token') String token,
-            @JsonKey(name: 'CustomerID') String customerId,
-            @JsonKey(name: 'Limit') int limit,
-            @JsonKey(name: 'Offset') int offset,
-            @JsonKey(name: 'Status') String status),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            @JsonKey(name: "Token") String? token,
+            @JsonKey(name: "CustomerID") String? customerId,
+            @JsonKey(name: "Limit") int? limit,
+            @JsonKey(name: "Offset") int? offset,
+            @JsonKey(name: "Status") String? status)
+        transactionHistoryRequest,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult transactionHistoryRequest(
-        @JsonKey(name: 'Token') String token,
-        @JsonKey(name: 'CustomerID') String customerId,
-        @JsonKey(name: 'Limit') int limit,
-        @JsonKey(name: 'Offset') int offset,
-        @JsonKey(name: 'Status') String status),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: "Token") String? token,
+            @JsonKey(name: "CustomerID") String? customerId,
+            @JsonKey(name: "Limit") int? limit,
+            @JsonKey(name: "Offset") int? offset,
+            @JsonKey(name: "Status") String? status)?
+        transactionHistoryRequest,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required
-        TResult transactionHistoryRequest(TransactionHistoryRequest value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(TransactionHistoryRequest value)
+        transactionHistoryRequest,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult transactionHistoryRequest(TransactionHistoryRequest value),
-    @required TResult orElse(),
-  });
-  Map<String, dynamic> toJson();
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(TransactionHistoryRequest value)?
+        transactionHistoryRequest,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $TransactionReqResCopyWith<TransactionReqRes> get copyWith;
+  $TransactionReqResCopyWith<TransactionReqRes> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -96,11 +104,11 @@ abstract class $TransactionReqResCopyWith<$Res> {
           TransactionReqRes value, $Res Function(TransactionReqRes) then) =
       _$TransactionReqResCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'Token') String token,
-      @JsonKey(name: 'CustomerID') String customerId,
-      @JsonKey(name: 'Limit') int limit,
-      @JsonKey(name: 'Offset') int offset,
-      @JsonKey(name: 'Status') String status});
+      {@JsonKey(name: "Token") String? token,
+      @JsonKey(name: "CustomerID") String? customerId,
+      @JsonKey(name: "Limit") int? limit,
+      @JsonKey(name: "Offset") int? offset,
+      @JsonKey(name: "Status") String? status});
 }
 
 /// @nodoc
@@ -114,19 +122,33 @@ class _$TransactionReqResCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object token = freezed,
-    Object customerId = freezed,
-    Object limit = freezed,
-    Object offset = freezed,
-    Object status = freezed,
+    Object? token = freezed,
+    Object? customerId = freezed,
+    Object? limit = freezed,
+    Object? offset = freezed,
+    Object? status = freezed,
   }) {
     return _then(_value.copyWith(
-      token: token == freezed ? _value.token : token as String,
-      customerId:
-          customerId == freezed ? _value.customerId : customerId as String,
-      limit: limit == freezed ? _value.limit : limit as int,
-      offset: offset == freezed ? _value.offset : offset as int,
-      status: status == freezed ? _value.status : status as String,
+      token: token == freezed
+          ? _value.token
+          : token // ignore: cast_nullable_to_non_nullable
+              as String?,
+      customerId: customerId == freezed
+          ? _value.customerId
+          : customerId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      offset: offset == freezed
+          ? _value.offset
+          : offset // ignore: cast_nullable_to_non_nullable
+              as int?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -139,11 +161,11 @@ abstract class $TransactionHistoryRequestCopyWith<$Res>
       _$TransactionHistoryRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'Token') String token,
-      @JsonKey(name: 'CustomerID') String customerId,
-      @JsonKey(name: 'Limit') int limit,
-      @JsonKey(name: 'Offset') int offset,
-      @JsonKey(name: 'Status') String status});
+      {@JsonKey(name: "Token") String? token,
+      @JsonKey(name: "CustomerID") String? customerId,
+      @JsonKey(name: "Limit") int? limit,
+      @JsonKey(name: "Offset") int? offset,
+      @JsonKey(name: "Status") String? status});
 }
 
 /// @nodoc
@@ -160,52 +182,65 @@ class _$TransactionHistoryRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object token = freezed,
-    Object customerId = freezed,
-    Object limit = freezed,
-    Object offset = freezed,
-    Object status = freezed,
+    Object? token = freezed,
+    Object? customerId = freezed,
+    Object? limit = freezed,
+    Object? offset = freezed,
+    Object? status = freezed,
   }) {
     return _then(TransactionHistoryRequest(
-      token: token == freezed ? _value.token : token as String,
-      customerId:
-          customerId == freezed ? _value.customerId : customerId as String,
-      limit: limit == freezed ? _value.limit : limit as int,
-      offset: offset == freezed ? _value.offset : offset as int,
-      status: status == freezed ? _value.status : status as String,
+      token: token == freezed
+          ? _value.token
+          : token // ignore: cast_nullable_to_non_nullable
+              as String?,
+      customerId: customerId == freezed
+          ? _value.customerId
+          : customerId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      offset: offset == freezed
+          ? _value.offset
+          : offset // ignore: cast_nullable_to_non_nullable
+              as int?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$TransactionHistoryRequest implements TransactionHistoryRequest {
   _$TransactionHistoryRequest(
-      {@JsonKey(name: 'Token') this.token,
-      @JsonKey(name: 'CustomerID') this.customerId,
-      @JsonKey(name: 'Limit') this.limit,
-      @JsonKey(name: 'Offset') this.offset,
-      @JsonKey(name: 'Status') this.status});
+      {@JsonKey(name: "Token") this.token,
+      @JsonKey(name: "CustomerID") this.customerId,
+      @JsonKey(name: "Limit") this.limit,
+      @JsonKey(name: "Offset") this.offset,
+      @JsonKey(name: "Status") this.status});
 
   factory _$TransactionHistoryRequest.fromJson(Map<String, dynamic> json) =>
       _$_$TransactionHistoryRequestFromJson(json);
 
   @override
-  @JsonKey(name: 'Token')
-  final String token;
+  @JsonKey(name: "Token")
+  final String? token;
   @override
-  @JsonKey(name: 'CustomerID')
-  final String customerId;
+  @JsonKey(name: "CustomerID")
+  final String? customerId;
   @override
-  @JsonKey(name: 'Limit')
-  final int limit;
+  @JsonKey(name: "Limit")
+  final int? limit;
   @override
-  @JsonKey(name: 'Offset')
-  final int offset;
+  @JsonKey(name: "Offset")
+  final int? offset;
   @override
-  @JsonKey(name: 'Status')
-  final String status;
+  @JsonKey(name: "Status")
+  final String? status;
 
   @override
   String toString() {
@@ -246,31 +281,30 @@ class _$TransactionHistoryRequest implements TransactionHistoryRequest {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult transactionHistoryRequest(
-            @JsonKey(name: 'Token') String token,
-            @JsonKey(name: 'CustomerID') String customerId,
-            @JsonKey(name: 'Limit') int limit,
-            @JsonKey(name: 'Offset') int offset,
-            @JsonKey(name: 'Status') String status),
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            @JsonKey(name: "Token") String? token,
+            @JsonKey(name: "CustomerID") String? customerId,
+            @JsonKey(name: "Limit") int? limit,
+            @JsonKey(name: "Offset") int? offset,
+            @JsonKey(name: "Status") String? status)
+        transactionHistoryRequest,
   }) {
-    assert(transactionHistoryRequest != null);
     return transactionHistoryRequest(token, customerId, limit, offset, status);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult transactionHistoryRequest(
-        @JsonKey(name: 'Token') String token,
-        @JsonKey(name: 'CustomerID') String customerId,
-        @JsonKey(name: 'Limit') int limit,
-        @JsonKey(name: 'Offset') int offset,
-        @JsonKey(name: 'Status') String status),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: "Token") String? token,
+            @JsonKey(name: "CustomerID") String? customerId,
+            @JsonKey(name: "Limit") int? limit,
+            @JsonKey(name: "Offset") int? offset,
+            @JsonKey(name: "Status") String? status)?
+        transactionHistoryRequest,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (transactionHistoryRequest != null) {
       return transactionHistoryRequest(
           token, customerId, limit, offset, status);
@@ -280,21 +314,20 @@ class _$TransactionHistoryRequest implements TransactionHistoryRequest {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required
-        TResult transactionHistoryRequest(TransactionHistoryRequest value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(TransactionHistoryRequest value)
+        transactionHistoryRequest,
   }) {
-    assert(transactionHistoryRequest != null);
     return transactionHistoryRequest(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult transactionHistoryRequest(TransactionHistoryRequest value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(TransactionHistoryRequest value)?
+        transactionHistoryRequest,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (transactionHistoryRequest != null) {
       return transactionHistoryRequest(this);
     }
@@ -309,31 +342,32 @@ class _$TransactionHistoryRequest implements TransactionHistoryRequest {
 
 abstract class TransactionHistoryRequest implements TransactionReqRes {
   factory TransactionHistoryRequest(
-      {@JsonKey(name: 'Token') String token,
-      @JsonKey(name: 'CustomerID') String customerId,
-      @JsonKey(name: 'Limit') int limit,
-      @JsonKey(name: 'Offset') int offset,
-      @JsonKey(name: 'Status') String status}) = _$TransactionHistoryRequest;
+      {@JsonKey(name: "Token") String? token,
+      @JsonKey(name: "CustomerID") String? customerId,
+      @JsonKey(name: "Limit") int? limit,
+      @JsonKey(name: "Offset") int? offset,
+      @JsonKey(name: "Status") String? status}) = _$TransactionHistoryRequest;
 
   factory TransactionHistoryRequest.fromJson(Map<String, dynamic> json) =
       _$TransactionHistoryRequest.fromJson;
 
   @override
-  @JsonKey(name: 'Token')
-  String get token;
+  @JsonKey(name: "Token")
+  String? get token => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'CustomerID')
-  String get customerId;
+  @JsonKey(name: "CustomerID")
+  String? get customerId => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Limit')
-  int get limit;
+  @JsonKey(name: "Limit")
+  int? get limit => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Offset')
-  int get offset;
+  @JsonKey(name: "Offset")
+  int? get offset => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Status')
-  String get status;
+  @JsonKey(name: "Status")
+  String? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $TransactionHistoryRequestCopyWith<TransactionHistoryRequest> get copyWith;
+  $TransactionHistoryRequestCopyWith<TransactionHistoryRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }

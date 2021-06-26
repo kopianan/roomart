@@ -6,10 +6,10 @@ part 'cart_data_collection_model.freezed.dart';
 part 'cart_data_collection_model.g.dart';
 
 @freezed
-abstract class CartDataCollectionModel with _$CartDataCollectionModel {
+ class CartDataCollectionModel with _$CartDataCollectionModel {
   factory CartDataCollectionModel(
-      {BoughtItemDataModel bought,
-      DataItemModel item}) = _CartDataCollectionModel;
+      {BoughtItemDataModel? bought,
+      DataItemModel? item}) = _CartDataCollectionModel;
 
   factory CartDataCollectionModel.fromJson(Map<String, dynamic> json) =>
       _$CartDataCollectionModelFromJson(json);

@@ -1,7 +1,7 @@
 part of 'rajaongkir_cubit.dart';
 
 @freezed
-abstract class RajaongkirState with _$RajaongkirState {
+ class RajaongkirState with _$RajaongkirState {
   const factory RajaongkirState.initial() = _Initial;
   const factory RajaongkirState.loading() = _Loading;
   const factory RajaongkirState.error(String e) = _Error;

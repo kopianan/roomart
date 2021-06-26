@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'update_news_data_model.dart';
 
@@ -8,6 +8,10 @@ part of 'update_news_data_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 UpdateNewsDataModel _$UpdateNewsDataModelFromJson(Map<String, dynamic> json) {
   return _UpdateNewsDataModel.fromJson(json);
 }
@@ -16,16 +20,15 @@ UpdateNewsDataModel _$UpdateNewsDataModelFromJson(Map<String, dynamic> json) {
 class _$UpdateNewsDataModelTearOff {
   const _$UpdateNewsDataModelTearOff();
 
-// ignore: unused_element
   _UpdateNewsDataModel call(
-      {@JsonKey(name: 'ID') String iD,
-      @JsonKey(name: 'Image') String image,
-      @JsonKey(name: 'ImageURL') String imageURL,
-      @JsonKey(name: 'Title') String title,
-      @JsonKey(name: 'Content') String content,
-      @JsonKey(name: 'CreatedDate') String createdDate,
-      @JsonKey(name: 'IsRead') bool isRead,
-      @JsonKey(name: 'Receiver') String receiver}) {
+      {@JsonKey(name: 'ID') String? iD,
+      @JsonKey(name: 'Image') String? image,
+      @JsonKey(name: 'ImageURL') String? imageURL,
+      @JsonKey(name: 'Title') String? title,
+      @JsonKey(name: 'Content') String? content,
+      @JsonKey(name: 'CreatedDate') String? createdDate,
+      @JsonKey(name: 'IsRead') bool? isRead,
+      @JsonKey(name: 'Receiver') String? receiver}) {
     return _UpdateNewsDataModel(
       iD: iD,
       image: image,
@@ -38,38 +41,37 @@ class _$UpdateNewsDataModelTearOff {
     );
   }
 
-// ignore: unused_element
   UpdateNewsDataModel fromJson(Map<String, Object> json) {
     return UpdateNewsDataModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $UpdateNewsDataModel = _$UpdateNewsDataModelTearOff();
 
 /// @nodoc
 mixin _$UpdateNewsDataModel {
   @JsonKey(name: 'ID')
-  String get iD;
+  String? get iD => throw _privateConstructorUsedError;
   @JsonKey(name: 'Image')
-  String get image;
+  String? get image => throw _privateConstructorUsedError;
   @JsonKey(name: 'ImageURL')
-  String get imageURL;
+  String? get imageURL => throw _privateConstructorUsedError;
   @JsonKey(name: 'Title')
-  String get title;
+  String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: 'Content')
-  String get content;
+  String? get content => throw _privateConstructorUsedError;
   @JsonKey(name: 'CreatedDate')
-  String get createdDate;
+  String? get createdDate => throw _privateConstructorUsedError;
   @JsonKey(name: 'IsRead')
-  bool get isRead;
+  bool? get isRead => throw _privateConstructorUsedError;
   @JsonKey(name: 'Receiver')
-  String get receiver;
+  String? get receiver => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UpdateNewsDataModelCopyWith<UpdateNewsDataModel> get copyWith;
+  $UpdateNewsDataModelCopyWith<UpdateNewsDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -78,14 +80,14 @@ abstract class $UpdateNewsDataModelCopyWith<$Res> {
           UpdateNewsDataModel value, $Res Function(UpdateNewsDataModel) then) =
       _$UpdateNewsDataModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'ID') String iD,
-      @JsonKey(name: 'Image') String image,
-      @JsonKey(name: 'ImageURL') String imageURL,
-      @JsonKey(name: 'Title') String title,
-      @JsonKey(name: 'Content') String content,
-      @JsonKey(name: 'CreatedDate') String createdDate,
-      @JsonKey(name: 'IsRead') bool isRead,
-      @JsonKey(name: 'Receiver') String receiver});
+      {@JsonKey(name: 'ID') String? iD,
+      @JsonKey(name: 'Image') String? image,
+      @JsonKey(name: 'ImageURL') String? imageURL,
+      @JsonKey(name: 'Title') String? title,
+      @JsonKey(name: 'Content') String? content,
+      @JsonKey(name: 'CreatedDate') String? createdDate,
+      @JsonKey(name: 'IsRead') bool? isRead,
+      @JsonKey(name: 'Receiver') String? receiver});
 }
 
 /// @nodoc
@@ -99,25 +101,48 @@ class _$UpdateNewsDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object iD = freezed,
-    Object image = freezed,
-    Object imageURL = freezed,
-    Object title = freezed,
-    Object content = freezed,
-    Object createdDate = freezed,
-    Object isRead = freezed,
-    Object receiver = freezed,
+    Object? iD = freezed,
+    Object? image = freezed,
+    Object? imageURL = freezed,
+    Object? title = freezed,
+    Object? content = freezed,
+    Object? createdDate = freezed,
+    Object? isRead = freezed,
+    Object? receiver = freezed,
   }) {
     return _then(_value.copyWith(
-      iD: iD == freezed ? _value.iD : iD as String,
-      image: image == freezed ? _value.image : image as String,
-      imageURL: imageURL == freezed ? _value.imageURL : imageURL as String,
-      title: title == freezed ? _value.title : title as String,
-      content: content == freezed ? _value.content : content as String,
-      createdDate:
-          createdDate == freezed ? _value.createdDate : createdDate as String,
-      isRead: isRead == freezed ? _value.isRead : isRead as bool,
-      receiver: receiver == freezed ? _value.receiver : receiver as String,
+      iD: iD == freezed
+          ? _value.iD
+          : iD // ignore: cast_nullable_to_non_nullable
+              as String?,
+      image: image == freezed
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String?,
+      imageURL: imageURL == freezed
+          ? _value.imageURL
+          : imageURL // ignore: cast_nullable_to_non_nullable
+              as String?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String?,
+      createdDate: createdDate == freezed
+          ? _value.createdDate
+          : createdDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      isRead: isRead == freezed
+          ? _value.isRead
+          : isRead // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      receiver: receiver == freezed
+          ? _value.receiver
+          : receiver // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -130,14 +155,14 @@ abstract class _$UpdateNewsDataModelCopyWith<$Res>
       __$UpdateNewsDataModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'ID') String iD,
-      @JsonKey(name: 'Image') String image,
-      @JsonKey(name: 'ImageURL') String imageURL,
-      @JsonKey(name: 'Title') String title,
-      @JsonKey(name: 'Content') String content,
-      @JsonKey(name: 'CreatedDate') String createdDate,
-      @JsonKey(name: 'IsRead') bool isRead,
-      @JsonKey(name: 'Receiver') String receiver});
+      {@JsonKey(name: 'ID') String? iD,
+      @JsonKey(name: 'Image') String? image,
+      @JsonKey(name: 'ImageURL') String? imageURL,
+      @JsonKey(name: 'Title') String? title,
+      @JsonKey(name: 'Content') String? content,
+      @JsonKey(name: 'CreatedDate') String? createdDate,
+      @JsonKey(name: 'IsRead') bool? isRead,
+      @JsonKey(name: 'Receiver') String? receiver});
 }
 
 /// @nodoc
@@ -153,32 +178,54 @@ class __$UpdateNewsDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object iD = freezed,
-    Object image = freezed,
-    Object imageURL = freezed,
-    Object title = freezed,
-    Object content = freezed,
-    Object createdDate = freezed,
-    Object isRead = freezed,
-    Object receiver = freezed,
+    Object? iD = freezed,
+    Object? image = freezed,
+    Object? imageURL = freezed,
+    Object? title = freezed,
+    Object? content = freezed,
+    Object? createdDate = freezed,
+    Object? isRead = freezed,
+    Object? receiver = freezed,
   }) {
     return _then(_UpdateNewsDataModel(
-      iD: iD == freezed ? _value.iD : iD as String,
-      image: image == freezed ? _value.image : image as String,
-      imageURL: imageURL == freezed ? _value.imageURL : imageURL as String,
-      title: title == freezed ? _value.title : title as String,
-      content: content == freezed ? _value.content : content as String,
-      createdDate:
-          createdDate == freezed ? _value.createdDate : createdDate as String,
-      isRead: isRead == freezed ? _value.isRead : isRead as bool,
-      receiver: receiver == freezed ? _value.receiver : receiver as String,
+      iD: iD == freezed
+          ? _value.iD
+          : iD // ignore: cast_nullable_to_non_nullable
+              as String?,
+      image: image == freezed
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String?,
+      imageURL: imageURL == freezed
+          ? _value.imageURL
+          : imageURL // ignore: cast_nullable_to_non_nullable
+              as String?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String?,
+      createdDate: createdDate == freezed
+          ? _value.createdDate
+          : createdDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      isRead: isRead == freezed
+          ? _value.isRead
+          : isRead // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      receiver: receiver == freezed
+          ? _value.receiver
+          : receiver // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_UpdateNewsDataModel implements _UpdateNewsDataModel {
   _$_UpdateNewsDataModel(
       {@JsonKey(name: 'ID') this.iD,
@@ -195,28 +242,28 @@ class _$_UpdateNewsDataModel implements _UpdateNewsDataModel {
 
   @override
   @JsonKey(name: 'ID')
-  final String iD;
+  final String? iD;
   @override
   @JsonKey(name: 'Image')
-  final String image;
+  final String? image;
   @override
   @JsonKey(name: 'ImageURL')
-  final String imageURL;
+  final String? imageURL;
   @override
   @JsonKey(name: 'Title')
-  final String title;
+  final String? title;
   @override
   @JsonKey(name: 'Content')
-  final String content;
+  final String? content;
   @override
   @JsonKey(name: 'CreatedDate')
-  final String createdDate;
+  final String? createdDate;
   @override
   @JsonKey(name: 'IsRead')
-  final bool isRead;
+  final bool? isRead;
   @override
   @JsonKey(name: 'Receiver')
-  final String receiver;
+  final String? receiver;
 
   @override
   String toString() {
@@ -275,43 +322,44 @@ class _$_UpdateNewsDataModel implements _UpdateNewsDataModel {
 
 abstract class _UpdateNewsDataModel implements UpdateNewsDataModel {
   factory _UpdateNewsDataModel(
-      {@JsonKey(name: 'ID') String iD,
-      @JsonKey(name: 'Image') String image,
-      @JsonKey(name: 'ImageURL') String imageURL,
-      @JsonKey(name: 'Title') String title,
-      @JsonKey(name: 'Content') String content,
-      @JsonKey(name: 'CreatedDate') String createdDate,
-      @JsonKey(name: 'IsRead') bool isRead,
-      @JsonKey(name: 'Receiver') String receiver}) = _$_UpdateNewsDataModel;
+      {@JsonKey(name: 'ID') String? iD,
+      @JsonKey(name: 'Image') String? image,
+      @JsonKey(name: 'ImageURL') String? imageURL,
+      @JsonKey(name: 'Title') String? title,
+      @JsonKey(name: 'Content') String? content,
+      @JsonKey(name: 'CreatedDate') String? createdDate,
+      @JsonKey(name: 'IsRead') bool? isRead,
+      @JsonKey(name: 'Receiver') String? receiver}) = _$_UpdateNewsDataModel;
 
   factory _UpdateNewsDataModel.fromJson(Map<String, dynamic> json) =
       _$_UpdateNewsDataModel.fromJson;
 
   @override
   @JsonKey(name: 'ID')
-  String get iD;
+  String? get iD => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'Image')
-  String get image;
+  String? get image => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'ImageURL')
-  String get imageURL;
+  String? get imageURL => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'Title')
-  String get title;
+  String? get title => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'Content')
-  String get content;
+  String? get content => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'CreatedDate')
-  String get createdDate;
+  String? get createdDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'IsRead')
-  bool get isRead;
+  bool? get isRead => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'Receiver')
-  String get receiver;
+  String? get receiver => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$UpdateNewsDataModelCopyWith<_UpdateNewsDataModel> get copyWith;
+  _$UpdateNewsDataModelCopyWith<_UpdateNewsDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

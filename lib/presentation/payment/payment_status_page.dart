@@ -13,14 +13,14 @@ class PaymentStatusPage extends StatefulWidget {
 
 class _PaymentStatusPageState extends State<PaymentStatusPage>
     with WidgetsBindingObserver {
-  final transactionCubit = getIt<TransactionCubit>();
-  MidtransStatusDataModel midtransStatusDataModel;
+  final TransactionCubit transactionCubit = getIt<TransactionCubit>();
+  MidtransStatusDataModel? midtransStatusDataModel;
 
   @override
   void initState() {
-    midtransStatusDataModel = Get.arguments as MidtransStatusDataModel;
+    midtransStatusDataModel = Get.arguments as MidtransStatusDataModel?;
     super.initState();
-    WidgetsBinding.instance.addObserver(this);
+    WidgetsBinding.instance!.addObserver(this);
   }
 
   @override
@@ -43,7 +43,7 @@ class _PaymentStatusPageState extends State<PaymentStatusPage>
 
   @override
   void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
+    WidgetsBinding.instance!.removeObserver(this);
     super.dispose();
   }
 
@@ -66,7 +66,7 @@ class _PaymentStatusPageState extends State<PaymentStatusPage>
           },
           builder: (context, state) {
             return Container(
-                child: Text(midtransStatusDataModel.toJson().toString()));
+                child: Text(midtransStatusDataModel!.toJson().toString()));
           },
         ),
       ),

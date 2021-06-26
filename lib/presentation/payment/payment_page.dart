@@ -50,8 +50,8 @@ class _PaymentPageState extends State<PaymentPage> {
   final authController = Get.put(AuthController());
   final transactionController = Get.put(TransactionController());
   final paymentController = Get.put(PaymentController());
-  final transCubit = getIt<TransactionCubit>();
-  UserDataModel user;
+  final TransactionCubit? transCubit = getIt<TransactionCubit>();
+  UserDataModel? user;
   @override
   void initState() {
     user = authController.getUserDataModel;
@@ -131,9 +131,9 @@ class _PaymentPageState extends State<PaymentPage> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                  "${_user.getUserDataModel.fullName} - ( ${_user.getUserDataModel.phone} )"),
+                                                  "${_user.getUserDataModel!.fullName} - ( ${_user.getUserDataModel!.phone} )"),
                                               Text(
-                                                "${_user.getUserDataModel.address}, ${_user.getUserDataModel.province}, ${_user.getUserDataModel.village} ${_user.getUserDataModel.city}, ${_user.getUserDataModel.terrId1}",
+                                                "${_user.getUserDataModel!.address}, ${_user.getUserDataModel!.province}, ${_user.getUserDataModel!.village} ${_user.getUserDataModel!.city}, ${_user.getUserDataModel!.terrId1}",
                                                 overflow: TextOverflow.ellipsis,
                                                 maxLines: 2,
                                               ),
@@ -149,11 +149,11 @@ class _PaymentPageState extends State<PaymentPage> {
                             InkWell(
                               onTap: () {
                                 //check if user have data
-                                var _user = authController.getUserDataModel;
+                                var _user = authController.getUserDataModel!;
                                 if ((_user.terrId1 == null ||
-                                        _user.terrId1.isEmpty) ||
+                                        _user.terrId1!.isEmpty) ||
                                     (_user.terrId3 == null ||
-                                        _user.terrId1.isEmpty)) {
+                                        _user.terrId1!.isEmpty)) {
                                   //check if there is origin
                                   Get.showSnackbar(GetBar(
                                     title: "Address",
@@ -182,7 +182,7 @@ class _PaymentPageState extends State<PaymentPage> {
                                     Text("Pilih pengiriman"),
                                     GetX<TransactionController>(
                                         builder: (trX) =>
-                                            (trX.getSelectedCost.cost == null)
+                                            (trX.getSelectedCost!.cost == null)
                                                 ? SizedBox()
                                                 : DeliveryDetail(trX: trX))
                                   ],
@@ -271,7 +271,7 @@ class _PaymentPageState extends State<PaymentPage> {
                                 value: "- " +
                                     Formatter().formatStringCurrency(_trans
                                         .getSelectedDiscountCode
-                                        .totalDiscount)),
+                                        .totalDiscount!)),
                           ),
                           PriceDetail(
                             label: "Ongkos Kirim",
@@ -300,7 +300,7 @@ class _PaymentPageState extends State<PaymentPage> {
                     offset: Offset(-4, -3),
                     blurRadius: 3,
                     spreadRadius: 2,
-                    color: Colors.grey[200])
+                    color: Colors.grey[200]!)
               ]),
               child: Column(
                 children: [
@@ -378,7 +378,7 @@ class _PaymentPageState extends State<PaymentPage> {
                                     onPressed: () {
                                       Get.back();
 
-                                      makePayment(_user.getUserDataModel);
+                                      makePayment(_user.getUserDataModel!);
                                     },
                                     child: Text("Ya")),
                               ),
@@ -423,7 +423,7 @@ class _PaymentPageState extends State<PaymentPage> {
     return true;
   }
 
-  List<CartDataCollectionModel> paidItem = <CartDataCollectionModel>[];
+  List<CartDataCollectionModel?> paidItem = <CartDataCollectionModel?>[];
   void addDiscountToItemList() {
     //set discount price here
 
@@ -433,9 +433,9 @@ class _PaymentPageState extends State<PaymentPage> {
     //filter data+
 
     paidItem.forEach((element) {
-      var _new = element.bought.copyWith(
-          price: cartController.checkResellerPrice(element.item),
-          resellerPrice: double.parse(element.item.itemPrice));
+      BoughtItemDataModel? _new = element!.bought!.copyWith(
+          price: cartController.checkResellerPrice(element.item!),
+          resellerPrice: double.parse(element.item!.itemPrice!));
       newBought.add(CartDataCollectionModel(bought: _new, item: element.item));
     });
     paidItem.assignAll(newBought);
@@ -443,7 +443,7 @@ class _PaymentPageState extends State<PaymentPage> {
     var data = transactionController.calculateDiscount(cartController
         .getCartSubTotalDouble(isReseller: authController.checkIfReseller()));
 
-    if ((transactionController.getSelectedDiscount.isBlank) ||
+    if (transactionController.getSelectedDiscount.isBlank! ||
         (transactionController.getSelectedDiscount.customerCode != null)) {
       var _dsicount = BoughtItemDataModel(
           itemId: "DM157597749267900354896",
@@ -467,9 +467,9 @@ class _PaymentPageState extends State<PaymentPage> {
           itemCode: "990992",
           itemName: "PROMO APPS",
           price:
-              "-" + transactionController.getSelectedDiscountCode.totalDiscount,
+              "-" + transactionController.getSelectedDiscountCode.totalDiscount!,
           resellerPrice: double.parse(
-            "-" + transactionController.getSelectedDiscountCode.totalDiscount,
+            "-" + transactionController.getSelectedDiscountCode.totalDiscount!,
           ),
           qty: "1",
           discount: "0.0",
@@ -483,8 +483,8 @@ class _PaymentPageState extends State<PaymentPage> {
     var _selected;
     try {
       _selected = Constants().courierList.firstWhere((element) =>
-          element.name.toLowerCase() ==
-          transactionController.getSelectedFullDelivery.code.toLowerCase());
+          element.name!.toLowerCase() ==
+          transactionController.getSelectedFullDelivery.code!.toLowerCase());
     } catch (e) {
       _selected = Constants()
           .courierList
@@ -497,9 +497,9 @@ class _PaymentPageState extends State<PaymentPage> {
         itemName: "ONGKIR",
         // TODO:change price
         price:
-            transactionController.getSelectedCost.cost.first.value.toString(),
+            transactionController.getSelectedCost!.cost!.first.value.toString(),
         resellerPrice: double.parse(
-            transactionController.getSelectedCost.cost.first.value.toString()),
+            transactionController.getSelectedCost!.cost!.first.value.toString()),
         // price:"0",
         // resellerPrice: 0,
         qty: "1",
@@ -519,12 +519,12 @@ class _PaymentPageState extends State<PaymentPage> {
     var _salesOrder = TransRequest(token: Constants().tokenUltimo, salesTrans: [
       TransPostDataModel(
           transNo: generateTransactionNumber(
-              "${Constants.transactionCode}-${Constants.locCode}", user.userId),
+              "${Constants.transactionCode}-${Constants.locCode}", user!.userId!),
           transType: "SO",
           location: "${Constants.locCode}",
           transDt: DateFormat("dd/MM/yyyy").format(DateTime.now()),
-          customer: user.userId,
-          createBy: user.fullName,
+          customer: user!.userId,
+          createBy: user!.fullName,
           pmtterm: "", //"DM147676476291369129846", //Payment term
           // bankId: (Provider.of<PaymentMethod>(context)
           //             .getBankTransferID() ==
@@ -537,13 +537,13 @@ class _PaymentPageState extends State<PaymentPage> {
           totalDiscount: "",
           parentId: Constants().resellerParentID,
           isReseller: authController.checkIfReseller(),
-          email: user.email,
-          fullname: user.fullName,
+          email: user!.email,
+          fullname: user!.fullName,
           remark:
               "Penerima: ${userData.fullName}\nNomor Hp: ${userData.phone}\nPengiriman :${transactionController.getSelectedFullDelivery.name}\nAlamat :  ${userData.address}\nProvinsi: ${userData.province}\nCity: ${userData.city}\n",
-          details: paidItem.map((e) => e.bought).toList())
+          details: paidItem.map((e) => e!.bought).toList())
     ]);
-    print(_salesOrder.salesTrans.first.toJson());
+    print(_salesOrder.salesTrans!.first.toJson());
     Get.offAllNamed(PaymentProgressPage.TAG, arguments: _salesOrder);
   }
 
@@ -581,7 +581,7 @@ class _PaymentPageState extends State<PaymentPage> {
     } else {
       try {
         String _percent = transactionController
-            .getSelectedDiscount.eventDiscount
+            .getSelectedDiscount.eventDiscount!
             .split("%")
             .first;
         return Formatter().formatStringCurrency(_percent);

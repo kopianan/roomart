@@ -8,8 +8,9 @@ part of 'banner_data_model.dart';
 
 _$_BannerDataModel _$_$_BannerDataModelFromJson(Map<String, dynamic> json) {
   return _$_BannerDataModel(
-    bannerName: json['BannerName'] as String,
-    imageLIst: (json['ImageList'] as List)?.map((e) => e as String)?.toList(),
+    bannerName: json['BannerName'] as String?,
+    imageLIst:
+        (json['ImageList'] as List<dynamic>?)?.map((e) => e as String).toList(),
   );
 }
 

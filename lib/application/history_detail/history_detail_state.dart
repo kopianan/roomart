@@ -1,7 +1,7 @@
 part of 'history_detail_cubit.dart';
 
 @freezed
-abstract class HistoryDetailState with _$HistoryDetailState {
+ class HistoryDetailState with _$HistoryDetailState {
   const factory HistoryDetailState.initial() = _Initial;
   const factory HistoryDetailState.loading() = _Loading;
   const factory HistoryDetailState.error(String error) = _Error;

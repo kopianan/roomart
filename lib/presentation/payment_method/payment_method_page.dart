@@ -29,15 +29,15 @@ class PaymentMethodPage extends StatefulWidget {
 }
 
 class _PaymentMethodPageState extends State<PaymentMethodPage> {
-  final authCubit = getIt<AuthCubit>();
-  final paymentCubit = getIt<PaymentCubit>();
-  final transCubit = getIt<TransactionCubit>();
+  final AuthCubit authCubit = getIt<AuthCubit>();
+  final PaymentCubit paymentCubit = getIt<PaymentCubit>();
+  final TransactionCubit transCubit = getIt<TransactionCubit>();
   final userController = Get.put(AuthController());
   final cartController = Get.put(CartController());
   final paymentController = Get.put(PaymentController());
 
-  TransRequest transRequest;
-  UserDataModel userDataModel;
+  TransRequest? transRequest;
+  UserDataModel? userDataModel;
   @override
   void initState() {
     userDataModel = userController.getUserDataModel;
@@ -46,7 +46,7 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
     super.initState();
   }
 
-  PaymentMethodDataModel selectedPayment;
+  PaymentMethodDataModel? selectedPayment;
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +84,7 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
                           BlocProvider(
                             create: (context) => authCubit
                               ..getArBalance(
-                                  userController.getUserDataModel.userId),
+                                  userController.getUserDataModel!.userId),
                             child: BlocConsumer<AuthCubit, AuthState>(
                               listener: (context, state) {
                                 state.maybeMap(
@@ -114,7 +114,7 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
                                             onPressed: () {
                                               authCubit.getArBalance(
                                                   userController
-                                                      .getUserDataModel.userId);
+                                                      .getUserDataModel!.userId);
                                             },
                                             icon: Icon(Icons.refresh),
                                             iconSize: 25,
@@ -148,7 +148,7 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
                                   onGetPaymentMethod: (e) {
                                     var _method = paymentController
                                         .getFilteredPaymentMethodByUserType(
-                                            userDataModel.typeIds);
+                                            userDataModel!.typeIds);
                                     return ListView(
                                       shrinkWrap: true,
                                       children: _method
@@ -156,10 +156,10 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
                                                   PaymentMethodDataModel>(
                                               value: e,
                                               groupValue: selectedPayment,
-                                              title: Text(e.name),
+                                              title: Text(e.name!),
                                               subtitle: checkSubtitle(e),
                                               onChanged: (val) {
-                                                _onChanged(val, auth);
+                                                _onChanged(val!, auth);
                                                 //
                                               }))
                                           .toList(),
@@ -190,7 +190,7 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
     if (e.code == describeEnum(paymentEnum.MID))
       return Text(Constants().radioButtonMidtrans);
     else
-      return Text(e.description.toLowerCase());
+      return Text(e.description!.toLowerCase());
   }
 
   _onChanged(PaymentMethodDataModel val, AuthController auth) {
@@ -211,7 +211,7 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
       }
     } else if (val.code == describeEnum(paymentEnum.CREDIT)) {
       if (auth.checkIfReseller() &&
-          auth.getUserDataModel.typeIds == Constants().customerTypeReseller2) {
+          auth.getUserDataModel!.typeIds == Constants().customerTypeReseller2) {
         paymentController.setSelectedPaymentMethod(val);
         setState(() {
           selectedPayment = val;

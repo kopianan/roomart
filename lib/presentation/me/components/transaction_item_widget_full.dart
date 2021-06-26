@@ -6,8 +6,8 @@ import 'package:roomart/utils/formater.dart';
 
 class TransactionItemWidgetFull extends StatelessWidget {
   const TransactionItemWidgetFull({
-    Key key,
-    @required FullTransactionDataModel data,
+    Key? key,
+    required FullTransactionDataModel data,
   })  : _data = data,
         super(key: key);
 
@@ -31,12 +31,12 @@ class TransactionItemWidgetFull extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        _data.salesOrderNo,
+                        _data.salesOrderNo!,
                         style: TextStyle(fontSize: 18),
                       ),
                       SizedBox(height: 5),
                       Text(
-                        Formatter().fullDateFormat(_data.transactionDate),
+                        Formatter().fullDateFormat(_data.transactionDate!),
                       ),
                     ],
                   ),

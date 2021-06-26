@@ -1,12 +1,12 @@
 class RegisterRequestModel {
-  String token;
-  String customerID;
-  String email;
-  String fullname;
-  String parentID;
-  String isReseller;
-  String password;
-  DateTime dateTime;
+  String? token;
+  String? customerID;
+  String? email;
+  String? fullname;
+  String? parentID;
+  String? isReseller;
+  String? password;
+  DateTime? dateTime;
 
   RegisterRequestModel(
       {this.token,

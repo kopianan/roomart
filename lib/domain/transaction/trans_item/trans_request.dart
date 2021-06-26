@@ -5,10 +5,10 @@ part 'trans_request.freezed.dart';
 part 'trans_request.g.dart';
 
 @freezed
-abstract class TransRequest with _$TransRequest {
+ class TransRequest with _$TransRequest {
   factory TransRequest(
-          {@required String token,
-          @JsonKey(name: "sales_trans") List<TransPostDataModel> salesTrans}) =
+          {required String token,
+          @JsonKey(name: "sales_trans") List<TransPostDataModel>? salesTrans}) =
       _TransRequest;
 
   factory TransRequest.fromJson(Map<String, dynamic> json) =>

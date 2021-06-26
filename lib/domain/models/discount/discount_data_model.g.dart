@@ -8,14 +8,14 @@ part of 'discount_data_model.dart';
 
 _$_DiscountDataModel _$_$_DiscountDataModelFromJson(Map<String, dynamic> json) {
   return _$_DiscountDataModel(
-    customerCode: json['customer_code'] as String,
-    customerName: json['customer_name'] as String,
-    customerTypeId: json['customer_type_id'] as String,
-    eventDiscount: json['event_discount'] as String,
-    eventBeginDate: json['event_begin_date'] as String,
-    eventEndDate: json['event_end_date'] as String,
-    discountDays: json['discount_days'] as String,
-    paymentTypeId: json['payment_type_id'] as String,
+    customerCode: json['customer_code'] as String?,
+    customerName: json['customer_name'] as String?,
+    customerTypeId: json['customer_type_id'] as String?,
+    eventDiscount: json['event_discount'] as String?,
+    eventBeginDate: json['event_begin_date'] as String?,
+    eventEndDate: json['event_end_date'] as String?,
+    discountDays: json['discount_days'] as String?,
+    paymentTypeId: json['payment_type_id'] as String?,
   );
 }
 

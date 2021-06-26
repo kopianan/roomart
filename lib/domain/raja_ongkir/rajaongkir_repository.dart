@@ -11,9 +11,9 @@ import 'delivery_cost/cost_data_model.dart';
 abstract class ITrajaOngkirFacade {
   Future<Either<String, List<ProvinceDataModel>>> getProvinceList();
   Future<Either<String, List<FullDataModel>>> getCityDataList(
-      String provinceId);
+      String? provinceId);
   Future<Either<String, List<CostDataModel>>> getCost(
-      CostRequestModel costRequestModel);
+      CostRequestModel? costRequestModel);
 }
 
 @LazySingleton(as: ITrajaOngkirFacade)
@@ -45,7 +45,7 @@ class RajaongkirRepository extends ITrajaOngkirFacade {
 
   @override
   Future<Either<String, List<FullDataModel>>> getCityDataList(
-      String provinceId) async {
+      String? provinceId) async {
     Response response;
     var _baseUrl = "https://api.rajaongkir.com/starter/city";
 
@@ -65,13 +65,13 @@ class RajaongkirRepository extends ITrajaOngkirFacade {
 
   @override
   Future<Either<String, List<CostDataModel>>> getCost(
-      CostRequestModel costRequestModel) async {
+      CostRequestModel? costRequestModel) async {
     var _baseUrl = "https://pro.rajaongkir.com/api/cost";
     Response response;
     String courier = "";
-    costRequestModel.courirList.forEach((element) {
+    costRequestModel!.courirList!.forEach((element) {
       if(element.label != "default")
-      courier += element.label + ":";
+      courier += element.label! + ":";
     });
     var _newRequest = costRequestModel.copyWith(courier: courier.substring(0, courier.length-1));
     print(_newRequest);

@@ -12,7 +12,7 @@ class ProfilePage extends StatefulWidget {
 
 class _ProfilePageState extends State<ProfilePage> {
   final authController = Get.put(AuthController());
-  UserDataModel _user;
+  UserDataModel? _user;
   @override
   void initState() {
     _user = authController.getUserDataModel;
@@ -28,9 +28,9 @@ class _ProfilePageState extends State<ProfilePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              buildProfileInfo("Nama Lengkap", _user.fullName),
-              buildProfileInfo("Email", _user.email),
-              buildProfileInfo("Username", _user.userName),
+              buildProfileInfo("Nama Lengkap", _user!.fullName!),
+              buildProfileInfo("Email", _user!.email!),
+              buildProfileInfo("Username", _user!.userName!),
               InkWell(
                   onTap: () {
                     Get.toNamed(ChangePasswordPage.TAG);

@@ -9,18 +9,18 @@ part of 'midtrans_status_data_model.dart';
 _$_MidtransStatusDataModel _$_$_MidtransStatusDataModelFromJson(
     Map<String, dynamic> json) {
   return _$_MidtransStatusDataModel(
-    transactionTime: json['transaction_time'] as String,
-    grossAmount: json['gross_amount'] as String,
-    currency: json['currency'] as String,
-    orderId: json['order_id'] as String,
-    paymentType: json['payment_type'] as String,
-    signatureKey: json['signature_key'] as String,
-    statusCode: json['status_code'] as String,
-    transactionId: json['transaction_id'] as String,
-    transactionStatus: json['transaction_status'] as String,
-    fraudStatus: json['fraud_status'] as String,
-    statusMessage: json['status_message'] as String,
-    merchantId: json['merchant_id'] as String,
+    transactionTime: json['transaction_time'] as String?,
+    grossAmount: json['gross_amount'] as String?,
+    currency: json['currency'] as String?,
+    orderId: json['order_id'] as String?,
+    paymentType: json['payment_type'] as String?,
+    signatureKey: json['signature_key'] as String?,
+    statusCode: json['status_code'] as String?,
+    transactionId: json['transaction_id'] as String?,
+    transactionStatus: json['transaction_status'] as String?,
+    fraudStatus: json['fraud_status'] as String?,
+    statusMessage: json['status_message'] as String?,
+    merchantId: json['merchant_id'] as String?,
   );
 }
 

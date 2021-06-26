@@ -9,19 +9,19 @@ part of 'transaction_item_data_model.dart';
 _$_TransactionItemDataModel _$_$_TransactionItemDataModelFromJson(
     Map<String, dynamic> json) {
   return _$_TransactionItemDataModel(
-    iD: json['ID'] as String,
-    transactionID: json['TransactionID'] as String,
-    itemID: json['ItemID'] as String,
-    itemName: json['ItemName'] as String,
-    qty: json['Qty'] as int,
-    resellerPrice: (json['ResellerPrice'] as num)?.toDouble(),
-    price: (json['Price'] as num)?.toDouble(),
-    cashback: (json['Cashback'] as num)?.toDouble(),
-    itemImage: json['ItemImage'] as String,
-    unit: json['Unit'] as String,
-    tax: json['Tax'] as String,
-    discount: (json['Discount'] as num)?.toDouble(),
-    date: json['Date'] as String,
+    iD: json['ID'] as String?,
+    transactionID: json['TransactionID'] as String?,
+    itemID: json['ItemID'] as String?,
+    itemName: json['ItemName'] as String?,
+    qty: json['Qty'] as int?,
+    resellerPrice: (json['ResellerPrice'] as num?)?.toDouble(),
+    price: (json['Price'] as num?)?.toDouble(),
+    cashback: (json['Cashback'] as num?)?.toDouble(),
+    itemImage: json['ItemImage'] as String?,
+    unit: json['Unit'] as String?,
+    tax: json['Tax'] as String?,
+    discount: (json['Discount'] as num?)?.toDouble(),
+    date: json['Date'] as String?,
   );
 }
 

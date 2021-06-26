@@ -11,13 +11,13 @@ part 'category_cubit.freezed.dart';
 @injectable
 class CategoryCubit extends Cubit<CategoryState> {
   CategoryCubit(this._iCategoryFacade) : super(CategoryState.initial());
-  final ICategoryFacade _iCategoryFacade;
+  final ICategoryFacade? _iCategoryFacade;
 
 
   void getAllCategory() async {
     emit(CategoryState.loading());
     try {
-      final _result = await _iCategoryFacade.getAllCategory();
+      final _result = await _iCategoryFacade!.getAllCategory();
       _result.fold(
         (l) => emit(CategoryState.error(l.toString())),
         (r) => emit(CategoryState.onGetAllCategory(r)),
@@ -31,7 +31,7 @@ class CategoryCubit extends Cubit<CategoryState> {
     emit(CategoryState.loading());
     try {
       final _result =
-          await _iCategoryFacade.getCategoryByParentId(ctgryModel.kategoriId);
+          await _iCategoryFacade!.getCategoryByParentId(ctgryModel.kategoriId);
       _result.fold(
         (l) => emit(CategoryState.error(l.toString())),
         (r) {

@@ -35,17 +35,17 @@ class _HomePageState extends State<HomePage> {
     itemBloc..getItemListLazy(limit, itemConroller.getOffset);
   }
 
-  final itemBloc = getIt<ItemCubit>();
+  final ItemCubit itemBloc = getIt<ItemCubit>();
 
   int limit = 6;
   final itemConroller = Get.put(ItemController());
   final cartController = Get.put(CartController());
   final categoryController = Get.put(CategoryController());
-  final categoryCubit = getIt<CategoryCubit>();
+  final CategoryCubit categoryCubit = getIt<CategoryCubit>();
   final homeCon = Get.put(HomeController());
   @override
   void initState() {
-    if (categoryController.getCategoryList.isBlank) {
+    if (categoryController.getCategoryList.isBlank!) {
       categoryCubit.getAllCategory();
     }
     super.initState();
@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
       enablePullUp: true,
       header: WaterDropHeader(),
       footer: CustomFooter(
-        builder: (BuildContext context, LoadStatus mode) {
+        builder: (BuildContext context, LoadStatus? mode) {
           Widget body;
           if (mode == LoadStatus.idle) {
             body = Text("pull up load");
@@ -112,7 +112,7 @@ class _HomePageState extends State<HomePage> {
                           pageSnapping: false,
                           autoPlay: true,
                         ),
-                        items: homeCon.getBannerList
+                        items: homeCon.getBannerList!
                             .map((data) => Padding(
                                   padding:
                                       const EdgeInsets.symmetric(vertical: 10),
@@ -280,12 +280,12 @@ class _HomePageState extends State<HomePage> {
                       color: Color(0xFFFDF3E8),
                       boxShadow: [
                         BoxShadow(
-                            color: Colors.grey[300],
+                            color: Colors.grey[300]!,
                             blurRadius: 1,
                             spreadRadius: 1,
                             offset: Offset(1, 1))
                       ]),
-                  child: Text(ctgry.description,
+                  child: Text(ctgry.description!,
                       maxLines: 1,
                       textAlign: TextAlign.center,
                       style: TextStyle(

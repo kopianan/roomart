@@ -17,7 +17,7 @@ class ForgotPasswordPage extends StatefulWidget {
 
 class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
   final emailController = TextEditingController();
-  final authCubit = getIt<AuthCubit>();
+  final AuthCubit authCubit = getIt<AuthCubit>();
   final formKey = GlobalKey<FormState>();
 
   @override
@@ -73,7 +73,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                         autovalidateMode: AutovalidateMode.onUserInteraction,
                         child: TextFormField(
                           validator: (e) {
-                            if (!e.isEmail) {
+                            if (!e!.isEmail) {
                               return "Email tidak valid";
                             }
                             return null;
@@ -98,7 +98,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                           child: DefaultButton1(
                             text: "Send email",
                             onPressed: () {
-                              if (formKey.currentState.validate()) {
+                              if (formKey.currentState!.validate()) {
                                 authCubit.forgotPassword(emailController.text);
                               }
                             },

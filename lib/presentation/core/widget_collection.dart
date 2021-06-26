@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 
 class CustomImageProvider extends StatelessWidget {
   const CustomImageProvider({
-    Key key,
-    @required this.url,
+    Key? key,
+    required this.url,
   }) : super(key: key);
 
-  final String url;
+  final String? url;
   @override
   Widget build(BuildContext context) {
     return CachedNetworkImage(
-      imageUrl: url,
+      imageUrl: url!,
       imageBuilder: (context, imageProvider) => Container(
         alignment: Alignment.center,
         decoration: BoxDecoration(

@@ -38,7 +38,7 @@ _$_TransactionFinishedDataModel _$_$_TransactionFinishedDataModelFromJson(
     json['department_id'] as String,
     json['employee_id'] as String,
     json['changed_manual'] as String,
-    json['item_picture'] as String ?? '',
+    json['item_picture'] as String? ?? '',
   );
 }
 

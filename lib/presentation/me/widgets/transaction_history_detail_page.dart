@@ -18,15 +18,15 @@ class TransactionHistoryDetailPage extends StatefulWidget {
 
 class _TransactionHistoryDetailPageState
     extends State<TransactionHistoryDetailPage> {
-  TransactionDataModel detail;
+  TransactionDataModel? detail;
   @override
   void initState() {
-    detail = Get.arguments as TransactionDataModel;
-    print(detail.items); 
+    detail = Get.arguments as TransactionDataModel?;
+    print(detail!.items); 
     super.initState();
   }
 
-  final dTransactionCubit = getIt<HistoryDetailCubit>();
+  final HistoryDetailCubit dTransactionCubit = getIt<HistoryDetailCubit>();
   final auth = Get.put(AuthController());
 
   @override
@@ -58,16 +58,16 @@ class _TransactionHistoryDetailPageState
                         style:
                             TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                       ),
-                      subtitle: Text(this.detail.number),
+                      subtitle: Text(this.detail!.number!),
                     ),
                     Divider(),
                     ListTile(
-                      title: checkPaymentStatus(this.detail.statusEnum),
+                      title: checkPaymentStatus(this.detail!.statusEnum),
                       subtitle: Text("Status pembayaran"),
                     ),
                   ]),
                 ),
-                SliverToBoxAdapter(child: paymentWarn(this.detail.statusEnum)),
+                SliverToBoxAdapter(child: paymentWarn(this.detail!.statusEnum)),
                SliverPadding(padding: EdgeInsets.symmetric(vertical: 10)),
                 SliverToBoxAdapter(
                   child: Column(
@@ -89,7 +89,7 @@ class _TransactionHistoryDetailPageState
                             ),
                           ),
                           SizedBox(width: 20),
-                          Text(detail.remark)
+                          Text(detail!.remark!)
                         ],
                       ),
                     ],
@@ -107,8 +107,8 @@ class _TransactionHistoryDetailPageState
                 ),
                 SliverList(
                     delegate: SliverChildBuilderDelegate((context, index) {
-                  return detailItem(detail.items[index]);
-                }, childCount: detail.items.length)),
+                  return detailItem(detail!.items![index]);
+                }, childCount: detail!.items!.length)),
                 SliverToBoxAdapter(
                     child: Divider(
                   thickness: 2,
@@ -127,7 +127,7 @@ class _TransactionHistoryDetailPageState
     );
   }
 
-  Text checkPaymentStatus(int status) {
+  Text checkPaymentStatus(int? status) {
     switch (status) {
       case 0:
         return Text("Belum dibayar",
@@ -158,7 +158,7 @@ class _TransactionHistoryDetailPageState
     }
   }
 
-  Widget paymentWarn(int status) {
+  Widget paymentWarn(int? status) {
     if (status == 0) {
       return Text(
         "Harap segera melakukan pembayaran ke :\n",
@@ -176,7 +176,7 @@ class _TransactionHistoryDetailPageState
             Expanded(
               flex: 7,
               child: Text(
-                item.itemName,
+                item.itemName!,
                 style: TextStyle(fontSize: 16),
               ),
             ),
@@ -203,8 +203,8 @@ class _TransactionHistoryDetailPageState
 }
 
 class SummaryDetail extends StatelessWidget {
-  SummaryDetail({Key key, this.data}) : super(key: key);
-  final TransactionDataModel data;
+  SummaryDetail({Key? key, this.data}) : super(key: key);
+  final TransactionDataModel? data;
 
   @override
   Widget build(BuildContext context) {
@@ -213,12 +213,12 @@ class SummaryDetail extends StatelessWidget {
         // detailSummaryItem(label: "Ongkos kirim", value: "90000"),
         // detailSummaryItem(
         //     label: "Discount", value: data.totalDiscount.toString()),
-        detailSummaryItem(label: "Total", value: data.total.toString()),
+        detailSummaryItem(label: "Total", value: data!.total.toString()),
       ],
     );
   }
 
-  Row detailSummaryItem({String label, String value}) {
+  Row detailSummaryItem({required String label, required String value}) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [

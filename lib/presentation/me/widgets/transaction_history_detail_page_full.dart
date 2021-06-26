@@ -21,14 +21,14 @@ class TransactionHistoryDetailPageFull extends StatefulWidget {
 
 class _TransactionHistoryDetailPageFullState
     extends State<TransactionHistoryDetailPageFull> {
-  FullTransactionDataModel detail;
+  FullTransactionDataModel? detail;
   @override
   void initState() {
-    detail = Get.arguments as FullTransactionDataModel;
+    detail = Get.arguments as FullTransactionDataModel?;
     super.initState();
   }
 
-  final dTransactionCubit = getIt<HistoryDetailCubit>();
+  final HistoryDetailCubit dTransactionCubit = getIt<HistoryDetailCubit>();
   final auth = Get.put(AuthController());
 
   @override
@@ -39,7 +39,7 @@ class _TransactionHistoryDetailPageFullState
       ),
       body: BlocProvider(
         create: (context) => dTransactionCubit
-          ..getFinishedHistoryTransaction(detail.salesOrderId),
+          ..getFinishedHistoryTransaction(detail!.salesOrderId),
         child: BlocConsumer<HistoryDetailCubit, HistoryDetailState>(
             listener: (context, state) {
           state.maybeMap(
@@ -61,19 +61,19 @@ class _TransactionHistoryDetailPageFullState
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.bold),
                       ),
-                      subtitle: Text(this.detail.salesOrderNo),
+                      subtitle: Text(this.detail!.salesOrderNo!),
                     ),
                     Divider(),
                     ListTile(
                       title: checkPaymentStatus(
-                          int.parse(this.detail.transactionStatus)),
+                          int.parse(this.detail!.transactionStatus!)),
                       subtitle: Text("Status pembayaran"),
                     ),
                   ]),
                 ),
                 SliverToBoxAdapter(
                     child: paymentWarn(
-                        (int.parse(this.detail.transactionStatus)))),
+                        (int.parse(this.detail!.transactionStatus!)))),
                 SliverPadding(padding: EdgeInsets.symmetric(vertical: 10)),
                 SliverToBoxAdapter(
                   child: Column(
@@ -95,7 +95,7 @@ class _TransactionHistoryDetailPageFullState
                             ),
                           ),
                           SizedBox(width: 20),
-                          Expanded(child: Html(data: detail.remark))
+                          Expanded(child: Html(data: detail!.remark))
                         ],
                       ),
                     ],
@@ -183,7 +183,7 @@ class _TransactionHistoryDetailPageFullState
             Expanded(
               flex: 7,
               child: Text(
-                item.itemName,
+                item.itemName!,
                 style: TextStyle(fontSize: 16),
               ),
             ),
@@ -210,8 +210,8 @@ class _TransactionHistoryDetailPageFullState
 }
 
 class SummaryDetail extends StatelessWidget {
-  SummaryDetail({Key key, this.data}) : super(key: key);
-  final FullTransactionDataModel data;
+  SummaryDetail({Key? key, this.data}) : super(key: key);
+  final FullTransactionDataModel? data;
 
   @override
   Widget build(BuildContext context) {
@@ -220,12 +220,12 @@ class SummaryDetail extends StatelessWidget {
         // detailSummaryItem(label: "Ongkos kirim", value: "90000"),
         // detailSummaryItem(
         //     label: "Discount", value: data.totalDiscount.toString()),
-        detailSummaryItem(label: "Total", value: data.totalAmount.toString()),
+        detailSummaryItem(label: "Total", value: data!.totalAmount.toString()),
       ],
     );
   }
 
-  Row detailSummaryItem({String label, String value}) {
+  Row detailSummaryItem({required String label, required String value}) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [

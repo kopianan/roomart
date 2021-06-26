@@ -8,11 +8,7 @@ import 'package:roomart/application/category/category_controller.dart';
 import 'package:roomart/application/category/category_cubit.dart';
 import 'package:roomart/application/home/home_controller.dart';
 import 'package:roomart/presentation/category/sub_cotegory_page.dart';
-import 'package:build_daemon/constants.dart';
 import 'package:roomart/presentation/core/widget_collection.dart';
-import 'package:roomart/utils/constants.dart';
-import 'package:search_widget/search_widget.dart';
-import '../../domain/category/category_model.dart';
 import '../../injection.dart';
 import 'widgets/category_list_item.dart';
 
@@ -37,7 +33,7 @@ class _CategoryPageState extends State<CategoryPage> {
     _refreshController.loadComplete();
   }
 
-  List<String> dataBanner;
+  List<String>? dataBanner;
   @override
   void initState() {
     dataBanner = homeCon.getBannerList;
@@ -51,7 +47,7 @@ class _CategoryPageState extends State<CategoryPage> {
     super.initState();
   }
 
-  final categoryBloc = getIt<CategoryCubit>();
+  final CategoryCubit categoryBloc = getIt<CategoryCubit>();
   @override
   Widget build(BuildContext context) {
     return SmartRefresher(
@@ -59,7 +55,7 @@ class _CategoryPageState extends State<CategoryPage> {
         enablePullUp: false,
         header: WaterDropHeader(),
         footer: CustomFooter(
-          builder: (BuildContext context, LoadStatus mode) {
+          builder: (BuildContext context, LoadStatus? mode) {
             Widget body;
             if (mode == LoadStatus.idle) {
               body = Text("pull up load");
@@ -83,49 +79,49 @@ class _CategoryPageState extends State<CategoryPage> {
         onLoading: _onLoading,
         child: CustomScrollView(
           slivers: [
-            SliverToBoxAdapter(
-              child: SearchWidget<CategoryModel>(
-                hideSearchBoxWhenItemSelected: false,
-                dataList: categoryController.getCategoryList,
-                popupListItemBuilder: (item) {
-                  return Container(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 10, horizontal: 8),
-                      child: Text(item.description,
-                          style: TextStyle(fontSize: 16)));
-                },
-                onItemSelected: (e) {
-                  Get.toNamed(SubCategoryPage.TAG, arguments: e);
-                },
-                textFieldBuilder:
-                    (TextEditingController controller, FocusNode focusNode) {
-                  return Container(
-                    margin: EdgeInsets.all(10),
-                    child: TextFormField(
-                      controller: controller,
-                      focusNode: focusNode,
-                      onEditingComplete: () => focusNode.unfocus(),
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(3)),
-                          suffixIcon: Icon(Icons.search),
-                          hintText: "Search Category"),
-                    ),
-                  );
-                },
-                selectedItemBuilder: (CategoryModel selectedItem,
-                    VoidCallback deleteSelectedItem) {
-                  return Text("SDF");
-                },
-                queryBuilder: (String query, List<CategoryModel> list) {
-                  return list
-                      .where((CategoryModel item) => item.description
-                          .toLowerCase()
-                          .contains(query.toLowerCase()))
-                      .toList();
-                },
-              ),
-            ),
+            // SliverToBoxAdapter(
+            //   child: SearchWidget<CategoryModel>(
+            //     hideSearchBoxWhenItemSelected: false,
+            //     dataList: categoryController.getCategoryList,
+            //     popupListItemBuilder: (item) {
+            //       return Container(
+            //           padding:
+            //               EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+            //           child: Text(item.description!,
+            //               style: TextStyle(fontSize: 16)));
+            //     },
+            //     onItemSelected: (e) {
+            //       Get.toNamed(SubCategoryPage.TAG, arguments: e);
+            //     },
+            //     textFieldBuilder:
+            //         (TextEditingController controller, FocusNode focusNode) {
+            //       return Container(
+            //         margin: EdgeInsets.all(10),
+            //         child: TextFormField(
+            //           controller: controller,
+            //           focusNode: focusNode,
+            //           onEditingComplete: () => focusNode.unfocus(),
+            //           decoration: InputDecoration(
+            //               border: OutlineInputBorder(
+            //                   borderRadius: BorderRadius.circular(3)),
+            //               suffixIcon: Icon(Icons.search),
+            //               hintText: "Search Category"),
+            //         ),
+            //       );
+            //     },
+            //     selectedItemBuilder: (CategoryModel selectedItem,
+            //         VoidCallback deleteSelectedItem) {
+            //       return Text("SDF");
+            //     },
+            //     queryBuilder: (String query, List<CategoryModel> list) {
+            //       return list
+            //           .where((CategoryModel item) => item.description!
+            //               .toLowerCase()
+            //               .contains(query.toLowerCase()))
+            //           .toList();
+            //     },
+            //   ),
+            // ),
             SliverToBoxAdapter(
               child: GetBuilder<HomeController>(
                 builder: (_home) => CarouselSlider(
@@ -134,7 +130,7 @@ class _CategoryPageState extends State<CategoryPage> {
                     pageSnapping: false,
                     autoPlay: true,
                   ),
-                  items: dataBanner
+                  items: dataBanner!
                       .map((data) => Padding(
                             padding: const EdgeInsets.symmetric(vertical: 10),
                             child: Container(

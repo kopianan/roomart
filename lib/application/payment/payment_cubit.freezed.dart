@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'payment_cubit.dart';
 
@@ -9,28 +9,27 @@ part of 'payment_cubit.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$PaymentStateTearOff {
   const _$PaymentStateTearOff();
 
-// ignore: unused_element
   _Initial initial() {
     return const _Initial();
   }
 
-// ignore: unused_element
   _Loading loading() {
     return const _Loading();
   }
 
-// ignore: unused_element
   _Error error(String error) {
     return _Error(
       error,
     );
   }
 
-// ignore: unused_element
   _OnGetPaymentMethod onGetPaymentMethod(List<PaymentMethodDataModel> method) {
     return _OnGetPaymentMethod(
       method,
@@ -39,41 +38,45 @@ class _$PaymentStateTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PaymentState = _$PaymentStateTearOff();
 
 /// @nodoc
 mixin _$PaymentState {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onGetPaymentMethod(List<PaymentMethodDataModel> method),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(List<PaymentMethodDataModel> method)
+        onGetPaymentMethod,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onGetPaymentMethod(List<PaymentMethodDataModel> method),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(List<PaymentMethodDataModel> method)? onGetPaymentMethod,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onGetPaymentMethod(_OnGetPaymentMethod value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnGetPaymentMethod value) onGetPaymentMethod,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onGetPaymentMethod(_OnGetPaymentMethod value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnGetPaymentMethod value)? onGetPaymentMethod,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -109,6 +112,7 @@ class __$InitialCopyWithImpl<$Res> extends _$PaymentStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_Initial implements _Initial {
   const _$_Initial();
 
@@ -127,29 +131,25 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onGetPaymentMethod(List<PaymentMethodDataModel> method),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(List<PaymentMethodDataModel> method)
+        onGetPaymentMethod,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetPaymentMethod != null);
     return initial();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onGetPaymentMethod(List<PaymentMethodDataModel> method),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(List<PaymentMethodDataModel> method)? onGetPaymentMethod,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial();
     }
@@ -158,29 +158,24 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onGetPaymentMethod(_OnGetPaymentMethod value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnGetPaymentMethod value) onGetPaymentMethod,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetPaymentMethod != null);
     return initial(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onGetPaymentMethod(_OnGetPaymentMethod value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnGetPaymentMethod value)? onGetPaymentMethod,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial(this);
     }
@@ -209,6 +204,7 @@ class __$LoadingCopyWithImpl<$Res> extends _$PaymentStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_Loading implements _Loading {
   const _$_Loading();
 
@@ -227,29 +223,25 @@ class _$_Loading implements _Loading {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onGetPaymentMethod(List<PaymentMethodDataModel> method),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(List<PaymentMethodDataModel> method)
+        onGetPaymentMethod,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetPaymentMethod != null);
     return loading();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onGetPaymentMethod(List<PaymentMethodDataModel> method),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(List<PaymentMethodDataModel> method)? onGetPaymentMethod,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loading != null) {
       return loading();
     }
@@ -258,29 +250,24 @@ class _$_Loading implements _Loading {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onGetPaymentMethod(_OnGetPaymentMethod value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnGetPaymentMethod value) onGetPaymentMethod,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetPaymentMethod != null);
     return loading(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onGetPaymentMethod(_OnGetPaymentMethod value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnGetPaymentMethod value)? onGetPaymentMethod,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loading != null) {
       return loading(this);
     }
@@ -310,17 +297,21 @@ class __$ErrorCopyWithImpl<$Res> extends _$PaymentStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object error = freezed,
+    Object? error = freezed,
   }) {
     return _then(_Error(
-      error == freezed ? _value.error : error as String,
+      error == freezed
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_Error implements _Error {
-  const _$_Error(this.error) : assert(error != null);
+  const _$_Error(this.error);
 
   @override
   final String error;
@@ -349,29 +340,25 @@ class _$_Error implements _Error {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onGetPaymentMethod(List<PaymentMethodDataModel> method),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(List<PaymentMethodDataModel> method)
+        onGetPaymentMethod,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetPaymentMethod != null);
     return error(this.error);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onGetPaymentMethod(List<PaymentMethodDataModel> method),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(List<PaymentMethodDataModel> method)? onGetPaymentMethod,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (error != null) {
       return error(this.error);
     }
@@ -380,29 +367,24 @@ class _$_Error implements _Error {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onGetPaymentMethod(_OnGetPaymentMethod value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnGetPaymentMethod value) onGetPaymentMethod,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetPaymentMethod != null);
     return error(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onGetPaymentMethod(_OnGetPaymentMethod value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnGetPaymentMethod value)? onGetPaymentMethod,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (error != null) {
       return error(this);
     }
@@ -413,9 +395,9 @@ class _$_Error implements _Error {
 abstract class _Error implements PaymentState {
   const factory _Error(String error) = _$_Error;
 
-  String get error;
+  String get error => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$ErrorCopyWith<_Error> get copyWith;
+  _$ErrorCopyWith<_Error> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -439,19 +421,21 @@ class __$OnGetPaymentMethodCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object method = freezed,
+    Object? method = freezed,
   }) {
     return _then(_OnGetPaymentMethod(
       method == freezed
           ? _value.method
-          : method as List<PaymentMethodDataModel>,
+          : method // ignore: cast_nullable_to_non_nullable
+              as List<PaymentMethodDataModel>,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_OnGetPaymentMethod implements _OnGetPaymentMethod {
-  const _$_OnGetPaymentMethod(this.method) : assert(method != null);
+  const _$_OnGetPaymentMethod(this.method);
 
   @override
   final List<PaymentMethodDataModel> method;
@@ -480,29 +464,25 @@ class _$_OnGetPaymentMethod implements _OnGetPaymentMethod {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult error(String error),
-    @required TResult onGetPaymentMethod(List<PaymentMethodDataModel> method),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(List<PaymentMethodDataModel> method)
+        onGetPaymentMethod,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetPaymentMethod != null);
     return onGetPaymentMethod(method);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult error(String error),
-    TResult onGetPaymentMethod(List<PaymentMethodDataModel> method),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(List<PaymentMethodDataModel> method)? onGetPaymentMethod,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onGetPaymentMethod != null) {
       return onGetPaymentMethod(method);
     }
@@ -511,29 +491,24 @@ class _$_OnGetPaymentMethod implements _OnGetPaymentMethod {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult loading(_Loading value),
-    @required TResult error(_Error value),
-    @required TResult onGetPaymentMethod(_OnGetPaymentMethod value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnGetPaymentMethod value) onGetPaymentMethod,
   }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(error != null);
-    assert(onGetPaymentMethod != null);
     return onGetPaymentMethod(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult loading(_Loading value),
-    TResult error(_Error value),
-    TResult onGetPaymentMethod(_OnGetPaymentMethod value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnGetPaymentMethod value)? onGetPaymentMethod,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onGetPaymentMethod != null) {
       return onGetPaymentMethod(this);
     }
@@ -545,7 +520,8 @@ abstract class _OnGetPaymentMethod implements PaymentState {
   const factory _OnGetPaymentMethod(List<PaymentMethodDataModel> method) =
       _$_OnGetPaymentMethod;
 
-  List<PaymentMethodDataModel> get method;
+  List<PaymentMethodDataModel> get method => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$OnGetPaymentMethodCopyWith<_OnGetPaymentMethod> get copyWith;
+  _$OnGetPaymentMethodCopyWith<_OnGetPaymentMethod> get copyWith =>
+      throw _privateConstructorUsedError;
 }

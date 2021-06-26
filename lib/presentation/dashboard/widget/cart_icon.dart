@@ -5,7 +5,7 @@ import 'package:roomart/presentation/cart/cart_page.dart';
 
 class CartIcon extends StatelessWidget {
   const CartIcon({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

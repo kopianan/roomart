@@ -3,12 +3,12 @@ import 'package:roomart/domain/user/user_data_model.dart';
 import 'package:roomart/utils/constants.dart';
 
 class AuthController extends GetxController {
-  Rx<UserDataModel> userDataModel = UserDataModel().obs;
+  Rx<UserDataModel?> userDataModel = UserDataModel().obs;
   RxDouble userBalance = 0.0.obs;
 
   void setBalance(String balance) {
     try {
-      var _balance = double.tryParse(balance);
+      var _balance = double.tryParse(balance)!;
       userBalance.value = _balance;
     } catch (e) {
       userBalance.value = 0.0;
@@ -18,8 +18,8 @@ class AuthController extends GetxController {
   bool checkIfReseller() {
     var _isReseller;
     try {
-      if (getUserDataModel.typeIds == Constants().customerTypeReseller ||
-          getUserDataModel.typeIds == Constants().customerTypeReseller2) {
+      if (getUserDataModel!.typeIds == Constants().customerTypeReseller ||
+          getUserDataModel!.typeIds == Constants().customerTypeReseller2) {
         _isReseller = true;
       } else {
         _isReseller = false;
@@ -30,7 +30,7 @@ class AuthController extends GetxController {
     }
   }
 
-  void setDataModel(UserDataModel userDataModel) {
+  void setDataModel(UserDataModel? userDataModel) {
     this.userDataModel.value = userDataModel;
   }
 
@@ -39,6 +39,6 @@ class AuthController extends GetxController {
     update();
   }
 
-  UserDataModel get getUserDataModel => this.userDataModel.value;
+  UserDataModel? get getUserDataModel => this.userDataModel.value;
   String get getBalance => this.userBalance.toString();
 }

@@ -4,9 +4,9 @@ import '../../../domain/category/category_model.dart';
 
 class CategoryListItem extends StatelessWidget {
   const CategoryListItem({
-    Key key,
-    @required this.categoryModel,
-    @required this.onTap,
+    Key? key,
+    required this.categoryModel,
+    required this.onTap,
   }) : super(key: key);
 
   final CategoryModel categoryModel;
@@ -24,12 +24,12 @@ class CategoryListItem extends StatelessWidget {
                 offset: Offset(2, 2),
                 spreadRadius: 1,
                 blurRadius: 1,
-                color: Colors.grey[300])
+                color: Colors.grey[300]!)
           ]),
       child: ListTile(
-        onTap: onTap,
+        onTap: onTap as void Function()?,
         title: Text(
-          categoryModel.description,
+          categoryModel.description!,
           style: TextStyle(fontWeight: FontWeight.w500),
         ),
         trailing: Container(

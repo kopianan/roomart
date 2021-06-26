@@ -9,16 +9,16 @@ part of 'bought_item_data_model.dart';
 _$_BoughtItemDataModel _$_$_BoughtItemDataModelFromJson(
     Map<String, dynamic> json) {
   return _$_BoughtItemDataModel(
-    itemCode: json['item_code'] as String,
-    itemId: json['item_id'] as String,
-    qty: json['qty'] as String,
-    unit: json['unit'] as String,
-    price: json['price'] as String,
-    tax: json['tax'] as String,
-    itemName: json['item_name'] as String,
-    resellerPrice: (json['reseller_price'] as num)?.toDouble(),
-    itemImage: json['itemImage'] as String,
-    discount: json['discount'] as String,
+    itemCode: json['item_code'] as String?,
+    itemId: json['item_id'] as String?,
+    qty: json['qty'] as String?,
+    unit: json['unit'] as String?,
+    price: json['price'] as String?,
+    tax: json['tax'] as String?,
+    itemName: json['item_name'] as String?,
+    resellerPrice: (json['reseller_price'] as num?)?.toDouble(),
+    itemImage: json['itemImage'] as String?,
+    discount: json['discount'] as String?,
   );
 }
 

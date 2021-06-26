@@ -16,12 +16,12 @@ part 'auth_cubit.freezed.dart';
 @injectable
 class AuthCubit extends Cubit<AuthState> {
   AuthCubit(this.iAuthFacade) : super(AuthState.initial());
-  final IAuthFacade iAuthFacade;
+  final IAuthFacade? iAuthFacade;
 
   void checkAuthentication() async {
     emit(AuthState.loading());
     try {
-      final _result = await iAuthFacade.checkAuthentication();
+      final _result = await iAuthFacade!.checkAuthentication();
       _result.fold(
         (l) => emit(AuthState.error(l)),
         (r) => emit(AuthState.onAuthenticated(r)),
@@ -34,10 +34,10 @@ class AuthCubit extends Cubit<AuthState> {
   void registerToRoomart(RegisterDataModel req) async {
     emit(AuthState.loading());
     try {
-      final _result = await iAuthFacade.registerUserToRoomart(req);
+      final _result = await iAuthFacade!.registerUserToRoomart(req);
       _result.fold(
-        (l) => emit(AuthState.error(l)),
-        (r) => emit(AuthState.onRegisterToRoomart(r)),
+        (l) => emit(AuthState.error(l!)),
+        (r) => emit(AuthState.onRegisterToRoomart(r!)),
       );
     } catch (e) {
       emit(AuthState.error(e.toString()));
@@ -47,7 +47,7 @@ class AuthCubit extends Cubit<AuthState> {
   void registerNewUser(RegisterRequestModel req) async {
     emit(AuthState.loading());
     try {
-      final _result = await iAuthFacade.registerUserToReseller(req);
+      final _result = await iAuthFacade!.registerUserToReseller(req);
       _result.fold(
         (l) => emit(AuthState.error(l)),
         (r) => emit(AuthState.onRegiserUser(r)),
@@ -60,7 +60,7 @@ class AuthCubit extends Cubit<AuthState> {
   void loginUser(String email, String password) async {
     emit(AuthState.loading());
     try {
-      final _result = await iAuthFacade.loginUser(email, password);
+      final _result = await iAuthFacade!.loginUser(email, password);
       _result.fold(
         (l) => emit(AuthState.error(l)),
         (r) => emit(AuthState.onLoginUser(r)),
@@ -70,10 +70,10 @@ class AuthCubit extends Cubit<AuthState> {
     }
   }
 
-  void getArBalance(String userId) async {
+  void getArBalance(String? userId) async {
     emit(AuthState.loading());
     try {
-      final _result = await iAuthFacade.getUserBalance(userId);
+      final _result = await iAuthFacade!.getUserBalance(userId);
       _result.fold(
         (l) => emit(AuthState.error(l)),
         (r) => emit(AuthState.onGetArBalance(r)),
@@ -86,7 +86,7 @@ class AuthCubit extends Cubit<AuthState> {
   void getAvailableDiscount() async {
     emit(AuthState.loading());
     try {
-      final _result = await iAuthFacade.getAvailableDiscount();
+      final _result = await iAuthFacade!.getAvailableDiscount();
       _result.fold(
         (l) => emit(AuthState.error(l)),
         (r) => emit(AuthState.onGetAvailableDiscount(r)),
@@ -96,12 +96,12 @@ class AuthCubit extends Cubit<AuthState> {
     }
   }
 
-  void changeAddress(UserDataModel user) async {
+  void changeAddress(UserDataModel? user) async {
     emit(AuthState.loading());
     try {
-      final _result = await iAuthFacade.changeAddress(user);
+      final _result = await iAuthFacade!.changeAddress(user);
       _result.fold(
-        (l) => emit(AuthState.error(l)),
+        (l) => emit(AuthState.error(l!)),
         (r) => emit(AuthState.onChangeAddress(r)),
       );
     } catch (e) {
@@ -112,7 +112,7 @@ class AuthCubit extends Cubit<AuthState> {
   void forgotPassword(String email) async {
     emit(AuthState.loading());
     try {
-      final _result = await iAuthFacade.forgotPassword(email);
+      final _result = await iAuthFacade!.forgotPassword(email);
       _result.fold(
         (l) => emit(AuthState.error(l)),
         (r) => emit(AuthState.onForgotPassword(r)),
@@ -122,10 +122,10 @@ class AuthCubit extends Cubit<AuthState> {
     }
   }
 
-  void checkCouponCode(DiscountRequest request) async {
+  void checkCouponCode(DiscountRequest? request) async {
     emit(AuthState.loading());
     try {
-      final _result = await iAuthFacade.checkCouponCode(request);
+      final _result = await iAuthFacade!.checkCouponCode(request);
       _result.fold(
         (l) => emit(AuthState.error(l)),
         (r) => emit(AuthState.onCheckCouponCode(r)),
@@ -135,13 +135,13 @@ class AuthCubit extends Cubit<AuthState> {
     }
   }
 
-  void changePassword(String username, String newPass, String oldPass) async {
+  void changePassword(String? username, String newPass, String oldPass) async {
     emit(AuthState.loading());
     try {
       final _result =
-          await iAuthFacade.changePassword(username, newPass, oldPass);
+          await iAuthFacade!.changePassword(username, newPass, oldPass);
       _result.fold(
-        (l) => emit(AuthState.error(l)),
+        (l) => emit(AuthState.error(l!)),
         (r) => emit(AuthState.onChangePassword(r)),
       );
     } catch (e) {

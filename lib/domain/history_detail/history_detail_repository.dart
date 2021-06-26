@@ -6,11 +6,11 @@ import 'package:roomart/domain/history_detail/transaction_detail_v1.dart';
 import 'package:roomart/domain/transaction/transaction_finished_data_model.dart';
 import 'package:roomart/utils/constants.dart';
 
-abstract class IHistoryDetailFacade {
+ abstract class IHistoryDetailFacade {
   Future<Either<String, List<TransactionDetailV1>>> getHistoryDetailTransaction(
       String salesOrderId);
   Future<Either<String, List<TransactionFinishedDataModel>>>
-      getHistoryFinishedTransaction(String salesTransactionID);
+      getHistoryFinishedTransaction(String? salesTransactionID);
 }
 
 @LazySingleton(as: IHistoryDetailFacade)
@@ -42,7 +42,7 @@ class TransactionRepository extends IHistoryDetailFacade {
 
   @override
   Future<Either<String, List<TransactionFinishedDataModel>>>
-      getHistoryFinishedTransaction(String salesTransactionID) async {
+      getHistoryFinishedTransaction(String? salesTransactionID) async {
     Response response;
 
     try {

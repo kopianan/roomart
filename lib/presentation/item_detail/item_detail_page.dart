@@ -20,13 +20,13 @@ class ItemDetailPage extends StatefulWidget {
 }
 
 class _ItemDetailPageState extends State<ItemDetailPage> {
-  DataItemModel data;
-  FToast fToast;
+  DataItemModel? data;
+  late FToast fToast;
 
   final CartController controller = Get.put(CartController());
   @override
   void initState() {
-    data = Get.arguments as DataItemModel;
+    data = Get.arguments as DataItemModel?;
     setDetailList();
     fToast = FToast();
 
@@ -34,9 +34,9 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
     super.initState();
   }
 
-  List<PDetail> listData;
+  late List<PDetail> listData;
   void setDetailList() {
-    List _desc = data.displayDesc.split("<br/>");
+    List _desc = data!.displayDesc!.split("<br/>");
     listData = [
       PDetail("Merk", checkIfNull(_desc, 0)),
       PDetail("Ukuran", checkIfNull(_desc, 1)),
@@ -74,7 +74,7 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
                     Container(
                       height: 320,
                       child: CustomImageProvider(
-                        url: "${Constants().imageBaseUrl}${data.pic}",
+                        url: "${Constants().imageBaseUrl}${data!.pic}",
                       ),
                     ),
                     Container(
@@ -87,7 +87,7 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                data.itemName,
+                                data!.itemName!,
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
@@ -97,7 +97,7 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
                               ),
                               SizedBox(height: 4),
                               Text(
-                                data.kategori,
+                                data!.kategori!,
                                 style: TextStyle(
                                     color: Colors.grey,
                                     fontWeight: FontWeight.w400),
@@ -107,8 +107,8 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
                           SizedBox(
                             width: 8,
                           ),
-                          resellerPrice(auth.checkIfReseller(), data.itemPrice,
-                              data.newPrice)
+                          resellerPrice(auth.checkIfReseller(), data!.itemPrice,
+                              data!.newPrice)
                         ],
                       ),
                     ),
@@ -153,7 +153,7 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
                                             Expanded(
                                                 flex: 5,
                                                 child: Text(
-                                                  list.value,
+                                                  list.value!,
                                                   style: TextStyle(
                                                     fontSize: 16,
                                                   ),
@@ -218,6 +218,6 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
 
 class PDetail {
   String label;
-  String value;
+  String? value;
   PDetail(this.label, this.value);
 }

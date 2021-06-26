@@ -14,7 +14,7 @@ import 'package:roomart/utils/constants.dart';
 
 import 'full_transaction_data_model.dart';
 
-abstract class ITransactionFacade {
+ abstract class ITransactionFacade {
   Future<Either<String, List<TransactionDataModel>>>
       getHistoryTransactionByStatus(TransactionHistoryRequest request);
 
@@ -26,12 +26,12 @@ abstract class ITransactionFacade {
       getHistorySentTransaction(TransactionHistoryRequest request);
   Future<Either<String, List<TransactionDataModelV2>>>
       getHistoryTransactionByStatusVDO(TransactionHistoryRequest request);
-  Future<Either<String, TransResponse>> addNewTransaction(TransRequest request);
-  Future<Either<String, MidtransStatusDataModel>> checkMidtransPaymentStatus(
-      String request);
+  Future<Either<String, TransResponse>> addNewTransaction(TransRequest? request);
+  Future<Either<String?, MidtransStatusDataModel>> checkMidtransPaymentStatus(
+      String? request);
 
   Future<Either<String, List<FullTransactionDataModel>>> getAllTransaction(
-      String userId);
+      String? userId);
 }
 
 @LazySingleton(as: ITransactionFacade)
@@ -85,13 +85,13 @@ class TransactionRepository extends ITransactionFacade {
 
   @override
   Future<Either<String, TransResponse>> addNewTransaction(
-      TransRequest request) async {
+      TransRequest? request) async {
     Response response;
 
     try {
       response = await dio.post(
           "${Constants().getUltimoBaseUrl}/RoomartOrder/AddTransaction",
-          data: request.toJson(),
+          data: request!.toJson(),
           options: Options(
             headers: {"AccessKey": Constants().accessKeyUltimo},
           ));
@@ -107,8 +107,8 @@ class TransactionRepository extends ITransactionFacade {
   }
 
   @override
-  Future<Either<String, MidtransStatusDataModel>> checkMidtransPaymentStatus(
-      String request) async {
+  Future<Either<String?, MidtransStatusDataModel>> checkMidtransPaymentStatus(
+      String? request) async {
     Response response;
 
     String credentials = Constants().credentialBaseAuthMidtrans;
@@ -169,7 +169,7 @@ class TransactionRepository extends ITransactionFacade {
     List<Response> response;
     List<TransactionDataModel> filtered = <TransactionDataModel>[];
 
-    var _st = request.status;
+    var _st = request.status!;
     List<String> _statusList;
     _statusList = _st.split(",");
 
@@ -223,7 +223,7 @@ class TransactionRepository extends ITransactionFacade {
 
   @override
   Future<Either<String, List<FullTransactionDataModel>>> getAllTransaction(
-      String userId) async {
+      String? userId) async {
     Response response;
 
     try {

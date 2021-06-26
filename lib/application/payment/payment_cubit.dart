@@ -10,12 +10,12 @@ part 'payment_cubit.freezed.dart';
 @injectable
 class PaymentCubit extends Cubit<PaymentState> {
   PaymentCubit(this.iPaymentMethodFacade) : super(PaymentState.initial());
-  final IPaymentMethodFacade iPaymentMethodFacade;
+  final IPaymentMethodFacade? iPaymentMethodFacade;
 
   void getPaymentMethodList() async {
     emit(PaymentState.loading());
     try {
-      final _result = await iPaymentMethodFacade.getPaymentMethod();
+      final _result = await iPaymentMethodFacade!.getPaymentMethod();
       _result.fold(
         (l) => emit(PaymentState.error(l.toString())),
         (r) => emit(PaymentState.onGetPaymentMethod(r)),

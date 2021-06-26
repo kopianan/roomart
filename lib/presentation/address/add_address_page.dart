@@ -24,38 +24,38 @@ class AddAddressPage extends StatefulWidget {
 }
 
 class _AddAddressPageState extends State<AddAddressPage> {
-  final authCubit = getIt<AuthCubit>();
+  final AuthCubit authCubit = getIt<AuthCubit>();
   final transController = Get.put(TransactionController());
   TextEditingController nama = TextEditingController();
   TextEditingController noHp = TextEditingController();
   TextEditingController alamat = TextEditingController();
-  String provinceName;
-  String cityName;
-  String mprovinceid;
-  String mcityid;
-  String type;
-  String postalCode;
-  ProvinceDataModel selectedProvince;
-  FullDataModel fullDataModel;
+  String? provinceName;
+  String? cityName;
+  String? mprovinceid;
+  String? mcityid;
+  String? type;
+  String? postalCode;
+  ProvinceDataModel? selectedProvince;
+  FullDataModel? fullDataModel;
   List<FullDataModel> listOfCity = [];
   List<ProvinceDataModel> listOfProvince = [];
 
   void initialData() {
-    nama.text = userDataModel.fullName;
-    noHp.text = userDataModel.phone;
-    alamat.text = userDataModel.address;
-    type = userDataModel.village;
-    provinceName = userDataModel.province;
-    cityName = userDataModel.city;
-    postalCode = userDataModel.terrId1;
-    mprovinceid = userDataModel.terrId2;
-    mcityid = userDataModel.terrId3;
+    nama.text = userDataModel!.fullName!;
+    noHp.text = userDataModel!.phone!;
+    alamat.text = userDataModel!.address!;
+    type = userDataModel!.village;
+    provinceName = userDataModel!.province;
+    cityName = userDataModel!.city;
+    postalCode = userDataModel!.terrId1;
+    mprovinceid = userDataModel!.terrId2;
+    mcityid = userDataModel!.terrId3;
   }
 
-  String realName;
-  final cityCubit = getIt<RajaongkirCubit>();
+  String? realName;
+  final RajaongkirCubit cityCubit = getIt<RajaongkirCubit>();
   final authController = Get.put(AuthController());
-  UserDataModel userDataModel;
+  UserDataModel? userDataModel;
   @override
   void initState() {
     userDataModel = Pref().getUserDataModelFromLocal();
@@ -173,7 +173,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
                                     value: selectedProvince,
                                     hint: Text("Pilih provinsi"),
                                     onChanged: (e) {
-                                      cityCubit.getCityData(e.provinceId);
+                                      cityCubit.getCityData(e!.provinceId);
                                       selectedProvince = null;
                                       fullDataModel = null;
                                       setState(() {
@@ -183,7 +183,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
                                     items: e.result
                                         .map((e) =>
                                             DropdownMenuItem<ProvinceDataModel>(
-                                              child: Text(e.province),
+                                              child: Text(e.province!),
                                               value: e,
                                             ))
                                         .toList(),
@@ -212,7 +212,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
                                   return DropdownButtonFormField(
                                     value: fullDataModel,
                                     hint: Text("Pilih kota"),
-                                    onChanged: (e) {
+                                    onChanged: (dynamic e) {
                                       setState(() {
                                         fullDataModel = e;
                                       });
@@ -221,7 +221,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
                                         .map((e) =>
                                             DropdownMenuItem<FullDataModel>(
                                               child: Text(
-                                                  e.type + " " + e.cityName),
+                                                  e.type! + " " + e.cityName!),
                                               value: e,
                                             ))
                                         .toList(),
@@ -245,16 +245,16 @@ class _AddAddressPageState extends State<AddAddressPage> {
                       color: button1,
                       text: "Simpan",
                       onPressed: () {
-                        var newUserData = userDataModel.copyWith(
+                        UserDataModel? newUserData = userDataModel!.copyWith(
                             fullName: nama.text,
                             phone: noHp.text,
                             address: alamat.text,
-                            village: fullDataModel.type,
-                            province: fullDataModel.province,
-                            city: fullDataModel.cityName,
-                            terrId1: fullDataModel.postalCode,
-                            terrId2: fullDataModel.provinceId,
-                            terrId3: fullDataModel.cityId);
+                            village: fullDataModel!.type,
+                            province: fullDataModel!.province,
+                            city: fullDataModel!.cityName,
+                            terrId1: fullDataModel!.postalCode,
+                            terrId2: fullDataModel!.provinceId,
+                            terrId3: fullDataModel!.cityId);
                         authCubit.changeAddress(newUserData);
                       },
                     ),

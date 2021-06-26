@@ -9,7 +9,7 @@ import 'package:roomart/infrastructure/core/pref.dart';
 abstract class ICategoryFacade {
   Future<Either<String, List<CategoryModel>>> getAllCategory();
   Future<Either<String, List<CategoryModel>>> getCategoryByParentId(
-      String parentId);
+      String? parentId);
 }
 
 @LazySingleton(as: ICategoryFacade)
@@ -49,7 +49,7 @@ class CategoryRepository extends ICategoryFacade {
 
   @override
   Future<Either<String, List<CategoryModel>>> getCategoryByParentId(
-      String parentId) async {
+      String? parentId) async {
     List<CategoryModel> _category;
 
     try {

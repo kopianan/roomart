@@ -8,12 +8,11 @@ part of 'cost_data_model.dart';
 
 _$_CostDataModel _$_$_CostDataModelFromJson(Map<String, dynamic> json) {
   return _$_CostDataModel(
-    code: json['code'] as String,
-    name: json['name'] as String,
-    costs: (json['costs'] as List)
-        ?.map(
-            (e) => e == null ? null : Costs.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    code: json['code'] as String?,
+    name: json['name'] as String?,
+    costs: (json['costs'] as List<dynamic>?)
+        ?.map((e) => Costs.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 

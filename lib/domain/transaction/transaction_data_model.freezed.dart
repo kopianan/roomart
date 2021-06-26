@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'transaction_data_model.dart';
 
@@ -8,6 +8,10 @@ part of 'transaction_data_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 TransactionDataModel _$TransactionDataModelFromJson(Map<String, dynamic> json) {
   return _TransactionDataModel.fromJson(json);
 }
@@ -16,38 +20,37 @@ TransactionDataModel _$TransactionDataModelFromJson(Map<String, dynamic> json) {
 class _$TransactionDataModelTearOff {
   const _$TransactionDataModelTearOff();
 
-// ignore: unused_element
   _TransactionDataModel call(
-      {@JsonKey(name: 'QuantityTotal') int quantityTotal,
-      @JsonKey(name: 'CustomerName') String customerName,
-      @JsonKey(name: 'ID') String iD,
-      @JsonKey(name: 'Number') String number,
-      @JsonKey(name: 'CustomerID') String customerID,
-      @JsonKey(name: 'Total') double total,
-      @JsonKey(name: 'Date') String date,
-      @JsonKey(name: 'Cashback') double cashback,
-      @JsonKey(name: 'Status') int status,
-      @JsonKey(name: 'Trans_type') String transType,
-      @JsonKey(name: 'Location') String location,
-      @JsonKey(name: 'Create_by') String createBy,
-      @JsonKey(name: 'Remark') String remark,
-      @JsonKey(name: 'Pmttype') String pmttype,
-      @JsonKey(name: 'Total_discount') double totalDiscount,
-      @JsonKey(name: 'Pmtterm') String pmtterm,
-      @JsonKey(name: 'StatusEnum') int statusEnum,
-      @JsonKey(name: 'StatusName') String statusName,
-      @JsonKey(name: 'Items') List<TransactionItemDataModel> items,
-      @JsonKey(name: 'TransferDate') String transferDate,
-      @JsonKey(name: 'TransferBankAccountName') String transferBankAccountName,
-      @JsonKey(name: 'TransferBankAccount') String transferBankAccount,
-      @JsonKey(name: 'TransferBankImage') String transferBankImage,
-      @JsonKey(name: 'BankID') int bankID,
-      @JsonKey(name: 'BankAccountName') String bankAccountName,
-      @JsonKey(name: 'BankNo') String bankNo,
-      @JsonKey(name: 'PaymentChannel') String paymentChannel,
-      @JsonKey(name: 'VirtualAccountName') String virtualAccountName,
-      @JsonKey(name: 'VirtualAccountNo') String virtualAccountNo,
-      @JsonKey(name: 'TransactionStatus') String transactionStatus}) {
+      {@JsonKey(name: "QuantityTotal") int? quantityTotal,
+      @JsonKey(name: "CustomerName") String? customerName,
+      @JsonKey(name: "ID") String? iD,
+      @JsonKey(name: "Number") String? number,
+      @JsonKey(name: "CustomerID") String? customerID,
+      @JsonKey(name: "Total") double? total,
+      @JsonKey(name: "Date") String? date,
+      @JsonKey(name: "Cashback") double? cashback,
+      @JsonKey(name: "Status") int? status,
+      @JsonKey(name: "Trans_type") String? transType,
+      @JsonKey(name: "Location") String? location,
+      @JsonKey(name: "Create_by") String? createBy,
+      @JsonKey(name: "Remark") String? remark,
+      @JsonKey(name: "Pmttype") String? pmttype,
+      @JsonKey(name: "Total_discount") double? totalDiscount,
+      @JsonKey(name: "Pmtterm") String? pmtterm,
+      @JsonKey(name: "StatusEnum") int? statusEnum,
+      @JsonKey(name: "StatusName") String? statusName,
+      @JsonKey(name: "Items") List<TransactionItemDataModel>? items,
+      @JsonKey(name: "TransferDate") String? transferDate,
+      @JsonKey(name: "TransferBankAccountName") String? transferBankAccountName,
+      @JsonKey(name: "TransferBankAccount") String? transferBankAccount,
+      @JsonKey(name: "TransferBankImage") String? transferBankImage,
+      @JsonKey(name: "BankID") int? bankID,
+      @JsonKey(name: "BankAccountName") String? bankAccountName,
+      @JsonKey(name: "BankNo") String? bankNo,
+      @JsonKey(name: "PaymentChannel") String? paymentChannel,
+      @JsonKey(name: "VirtualAccountName") String? virtualAccountName,
+      @JsonKey(name: "VirtualAccountNo") String? virtualAccountNo,
+      @JsonKey(name: "TransactionStatus") String? transactionStatus}) {
     return _TransactionDataModel(
       quantityTotal: quantityTotal,
       customerName: customerName,
@@ -82,82 +85,82 @@ class _$TransactionDataModelTearOff {
     );
   }
 
-// ignore: unused_element
   TransactionDataModel fromJson(Map<String, Object> json) {
     return TransactionDataModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $TransactionDataModel = _$TransactionDataModelTearOff();
 
 /// @nodoc
 mixin _$TransactionDataModel {
-  @JsonKey(name: 'QuantityTotal')
-  int get quantityTotal;
-  @JsonKey(name: 'CustomerName')
-  String get customerName;
-  @JsonKey(name: 'ID')
-  String get iD;
-  @JsonKey(name: 'Number')
-  String get number;
-  @JsonKey(name: 'CustomerID')
-  String get customerID;
-  @JsonKey(name: 'Total')
-  double get total;
-  @JsonKey(name: 'Date')
-  String get date;
-  @JsonKey(name: 'Cashback')
-  double get cashback;
-  @JsonKey(name: 'Status')
-  int get status;
-  @JsonKey(name: 'Trans_type')
-  String get transType;
-  @JsonKey(name: 'Location')
-  String get location;
-  @JsonKey(name: 'Create_by')
-  String get createBy;
-  @JsonKey(name: 'Remark')
-  String get remark;
-  @JsonKey(name: 'Pmttype')
-  String get pmttype;
-  @JsonKey(name: 'Total_discount')
-  double get totalDiscount;
-  @JsonKey(name: 'Pmtterm')
-  String get pmtterm;
-  @JsonKey(name: 'StatusEnum')
-  int get statusEnum;
-  @JsonKey(name: 'StatusName')
-  String get statusName;
-  @JsonKey(name: 'Items')
-  List<TransactionItemDataModel> get items;
-  @JsonKey(name: 'TransferDate')
-  String get transferDate;
-  @JsonKey(name: 'TransferBankAccountName')
-  String get transferBankAccountName;
-  @JsonKey(name: 'TransferBankAccount')
-  String get transferBankAccount;
-  @JsonKey(name: 'TransferBankImage')
-  String get transferBankImage;
-  @JsonKey(name: 'BankID')
-  int get bankID;
-  @JsonKey(name: 'BankAccountName')
-  String get bankAccountName;
-  @JsonKey(name: 'BankNo')
-  String get bankNo;
-  @JsonKey(name: 'PaymentChannel')
-  String get paymentChannel;
-  @JsonKey(name: 'VirtualAccountName')
-  String get virtualAccountName;
-  @JsonKey(name: 'VirtualAccountNo')
-  String get virtualAccountNo;
-  @JsonKey(name: 'TransactionStatus')
-  String get transactionStatus;
+  @JsonKey(name: "QuantityTotal")
+  int? get quantityTotal => throw _privateConstructorUsedError;
+  @JsonKey(name: "CustomerName")
+  String? get customerName => throw _privateConstructorUsedError;
+  @JsonKey(name: "ID")
+  String? get iD => throw _privateConstructorUsedError;
+  @JsonKey(name: "Number")
+  String? get number => throw _privateConstructorUsedError;
+  @JsonKey(name: "CustomerID")
+  String? get customerID => throw _privateConstructorUsedError;
+  @JsonKey(name: "Total")
+  double? get total => throw _privateConstructorUsedError;
+  @JsonKey(name: "Date")
+  String? get date => throw _privateConstructorUsedError;
+  @JsonKey(name: "Cashback")
+  double? get cashback => throw _privateConstructorUsedError;
+  @JsonKey(name: "Status")
+  int? get status => throw _privateConstructorUsedError;
+  @JsonKey(name: "Trans_type")
+  String? get transType => throw _privateConstructorUsedError;
+  @JsonKey(name: "Location")
+  String? get location => throw _privateConstructorUsedError;
+  @JsonKey(name: "Create_by")
+  String? get createBy => throw _privateConstructorUsedError;
+  @JsonKey(name: "Remark")
+  String? get remark => throw _privateConstructorUsedError;
+  @JsonKey(name: "Pmttype")
+  String? get pmttype => throw _privateConstructorUsedError;
+  @JsonKey(name: "Total_discount")
+  double? get totalDiscount => throw _privateConstructorUsedError;
+  @JsonKey(name: "Pmtterm")
+  String? get pmtterm => throw _privateConstructorUsedError;
+  @JsonKey(name: "StatusEnum")
+  int? get statusEnum => throw _privateConstructorUsedError;
+  @JsonKey(name: "StatusName")
+  String? get statusName => throw _privateConstructorUsedError;
+  @JsonKey(name: "Items")
+  List<TransactionItemDataModel>? get items =>
+      throw _privateConstructorUsedError;
+  @JsonKey(name: "TransferDate")
+  String? get transferDate => throw _privateConstructorUsedError;
+  @JsonKey(name: "TransferBankAccountName")
+  String? get transferBankAccountName => throw _privateConstructorUsedError;
+  @JsonKey(name: "TransferBankAccount")
+  String? get transferBankAccount => throw _privateConstructorUsedError;
+  @JsonKey(name: "TransferBankImage")
+  String? get transferBankImage => throw _privateConstructorUsedError;
+  @JsonKey(name: "BankID")
+  int? get bankID => throw _privateConstructorUsedError;
+  @JsonKey(name: "BankAccountName")
+  String? get bankAccountName => throw _privateConstructorUsedError;
+  @JsonKey(name: "BankNo")
+  String? get bankNo => throw _privateConstructorUsedError;
+  @JsonKey(name: "PaymentChannel")
+  String? get paymentChannel => throw _privateConstructorUsedError;
+  @JsonKey(name: "VirtualAccountName")
+  String? get virtualAccountName => throw _privateConstructorUsedError;
+  @JsonKey(name: "VirtualAccountNo")
+  String? get virtualAccountNo => throw _privateConstructorUsedError;
+  @JsonKey(name: "TransactionStatus")
+  String? get transactionStatus => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $TransactionDataModelCopyWith<TransactionDataModel> get copyWith;
+  $TransactionDataModelCopyWith<TransactionDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -166,36 +169,36 @@ abstract class $TransactionDataModelCopyWith<$Res> {
           $Res Function(TransactionDataModel) then) =
       _$TransactionDataModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'QuantityTotal') int quantityTotal,
-      @JsonKey(name: 'CustomerName') String customerName,
-      @JsonKey(name: 'ID') String iD,
-      @JsonKey(name: 'Number') String number,
-      @JsonKey(name: 'CustomerID') String customerID,
-      @JsonKey(name: 'Total') double total,
-      @JsonKey(name: 'Date') String date,
-      @JsonKey(name: 'Cashback') double cashback,
-      @JsonKey(name: 'Status') int status,
-      @JsonKey(name: 'Trans_type') String transType,
-      @JsonKey(name: 'Location') String location,
-      @JsonKey(name: 'Create_by') String createBy,
-      @JsonKey(name: 'Remark') String remark,
-      @JsonKey(name: 'Pmttype') String pmttype,
-      @JsonKey(name: 'Total_discount') double totalDiscount,
-      @JsonKey(name: 'Pmtterm') String pmtterm,
-      @JsonKey(name: 'StatusEnum') int statusEnum,
-      @JsonKey(name: 'StatusName') String statusName,
-      @JsonKey(name: 'Items') List<TransactionItemDataModel> items,
-      @JsonKey(name: 'TransferDate') String transferDate,
-      @JsonKey(name: 'TransferBankAccountName') String transferBankAccountName,
-      @JsonKey(name: 'TransferBankAccount') String transferBankAccount,
-      @JsonKey(name: 'TransferBankImage') String transferBankImage,
-      @JsonKey(name: 'BankID') int bankID,
-      @JsonKey(name: 'BankAccountName') String bankAccountName,
-      @JsonKey(name: 'BankNo') String bankNo,
-      @JsonKey(name: 'PaymentChannel') String paymentChannel,
-      @JsonKey(name: 'VirtualAccountName') String virtualAccountName,
-      @JsonKey(name: 'VirtualAccountNo') String virtualAccountNo,
-      @JsonKey(name: 'TransactionStatus') String transactionStatus});
+      {@JsonKey(name: "QuantityTotal") int? quantityTotal,
+      @JsonKey(name: "CustomerName") String? customerName,
+      @JsonKey(name: "ID") String? iD,
+      @JsonKey(name: "Number") String? number,
+      @JsonKey(name: "CustomerID") String? customerID,
+      @JsonKey(name: "Total") double? total,
+      @JsonKey(name: "Date") String? date,
+      @JsonKey(name: "Cashback") double? cashback,
+      @JsonKey(name: "Status") int? status,
+      @JsonKey(name: "Trans_type") String? transType,
+      @JsonKey(name: "Location") String? location,
+      @JsonKey(name: "Create_by") String? createBy,
+      @JsonKey(name: "Remark") String? remark,
+      @JsonKey(name: "Pmttype") String? pmttype,
+      @JsonKey(name: "Total_discount") double? totalDiscount,
+      @JsonKey(name: "Pmtterm") String? pmtterm,
+      @JsonKey(name: "StatusEnum") int? statusEnum,
+      @JsonKey(name: "StatusName") String? statusName,
+      @JsonKey(name: "Items") List<TransactionItemDataModel>? items,
+      @JsonKey(name: "TransferDate") String? transferDate,
+      @JsonKey(name: "TransferBankAccountName") String? transferBankAccountName,
+      @JsonKey(name: "TransferBankAccount") String? transferBankAccount,
+      @JsonKey(name: "TransferBankImage") String? transferBankImage,
+      @JsonKey(name: "BankID") int? bankID,
+      @JsonKey(name: "BankAccountName") String? bankAccountName,
+      @JsonKey(name: "BankNo") String? bankNo,
+      @JsonKey(name: "PaymentChannel") String? paymentChannel,
+      @JsonKey(name: "VirtualAccountName") String? virtualAccountName,
+      @JsonKey(name: "VirtualAccountNo") String? virtualAccountNo,
+      @JsonKey(name: "TransactionStatus") String? transactionStatus});
 }
 
 /// @nodoc
@@ -209,96 +212,158 @@ class _$TransactionDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object quantityTotal = freezed,
-    Object customerName = freezed,
-    Object iD = freezed,
-    Object number = freezed,
-    Object customerID = freezed,
-    Object total = freezed,
-    Object date = freezed,
-    Object cashback = freezed,
-    Object status = freezed,
-    Object transType = freezed,
-    Object location = freezed,
-    Object createBy = freezed,
-    Object remark = freezed,
-    Object pmttype = freezed,
-    Object totalDiscount = freezed,
-    Object pmtterm = freezed,
-    Object statusEnum = freezed,
-    Object statusName = freezed,
-    Object items = freezed,
-    Object transferDate = freezed,
-    Object transferBankAccountName = freezed,
-    Object transferBankAccount = freezed,
-    Object transferBankImage = freezed,
-    Object bankID = freezed,
-    Object bankAccountName = freezed,
-    Object bankNo = freezed,
-    Object paymentChannel = freezed,
-    Object virtualAccountName = freezed,
-    Object virtualAccountNo = freezed,
-    Object transactionStatus = freezed,
+    Object? quantityTotal = freezed,
+    Object? customerName = freezed,
+    Object? iD = freezed,
+    Object? number = freezed,
+    Object? customerID = freezed,
+    Object? total = freezed,
+    Object? date = freezed,
+    Object? cashback = freezed,
+    Object? status = freezed,
+    Object? transType = freezed,
+    Object? location = freezed,
+    Object? createBy = freezed,
+    Object? remark = freezed,
+    Object? pmttype = freezed,
+    Object? totalDiscount = freezed,
+    Object? pmtterm = freezed,
+    Object? statusEnum = freezed,
+    Object? statusName = freezed,
+    Object? items = freezed,
+    Object? transferDate = freezed,
+    Object? transferBankAccountName = freezed,
+    Object? transferBankAccount = freezed,
+    Object? transferBankImage = freezed,
+    Object? bankID = freezed,
+    Object? bankAccountName = freezed,
+    Object? bankNo = freezed,
+    Object? paymentChannel = freezed,
+    Object? virtualAccountName = freezed,
+    Object? virtualAccountNo = freezed,
+    Object? transactionStatus = freezed,
   }) {
     return _then(_value.copyWith(
       quantityTotal: quantityTotal == freezed
           ? _value.quantityTotal
-          : quantityTotal as int,
+          : quantityTotal // ignore: cast_nullable_to_non_nullable
+              as int?,
       customerName: customerName == freezed
           ? _value.customerName
-          : customerName as String,
-      iD: iD == freezed ? _value.iD : iD as String,
-      number: number == freezed ? _value.number : number as String,
-      customerID:
-          customerID == freezed ? _value.customerID : customerID as String,
-      total: total == freezed ? _value.total : total as double,
-      date: date == freezed ? _value.date : date as String,
-      cashback: cashback == freezed ? _value.cashback : cashback as double,
-      status: status == freezed ? _value.status : status as int,
-      transType: transType == freezed ? _value.transType : transType as String,
-      location: location == freezed ? _value.location : location as String,
-      createBy: createBy == freezed ? _value.createBy : createBy as String,
-      remark: remark == freezed ? _value.remark : remark as String,
-      pmttype: pmttype == freezed ? _value.pmttype : pmttype as String,
+          : customerName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      iD: iD == freezed
+          ? _value.iD
+          : iD // ignore: cast_nullable_to_non_nullable
+              as String?,
+      number: number == freezed
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as String?,
+      customerID: customerID == freezed
+          ? _value.customerID
+          : customerID // ignore: cast_nullable_to_non_nullable
+              as String?,
+      total: total == freezed
+          ? _value.total
+          : total // ignore: cast_nullable_to_non_nullable
+              as double?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as String?,
+      cashback: cashback == freezed
+          ? _value.cashback
+          : cashback // ignore: cast_nullable_to_non_nullable
+              as double?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as int?,
+      transType: transType == freezed
+          ? _value.transType
+          : transType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as String?,
+      createBy: createBy == freezed
+          ? _value.createBy
+          : createBy // ignore: cast_nullable_to_non_nullable
+              as String?,
+      remark: remark == freezed
+          ? _value.remark
+          : remark // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pmttype: pmttype == freezed
+          ? _value.pmttype
+          : pmttype // ignore: cast_nullable_to_non_nullable
+              as String?,
       totalDiscount: totalDiscount == freezed
           ? _value.totalDiscount
-          : totalDiscount as double,
-      pmtterm: pmtterm == freezed ? _value.pmtterm : pmtterm as String,
-      statusEnum: statusEnum == freezed ? _value.statusEnum : statusEnum as int,
-      statusName:
-          statusName == freezed ? _value.statusName : statusName as String,
+          : totalDiscount // ignore: cast_nullable_to_non_nullable
+              as double?,
+      pmtterm: pmtterm == freezed
+          ? _value.pmtterm
+          : pmtterm // ignore: cast_nullable_to_non_nullable
+              as String?,
+      statusEnum: statusEnum == freezed
+          ? _value.statusEnum
+          : statusEnum // ignore: cast_nullable_to_non_nullable
+              as int?,
+      statusName: statusName == freezed
+          ? _value.statusName
+          : statusName // ignore: cast_nullable_to_non_nullable
+              as String?,
       items: items == freezed
           ? _value.items
-          : items as List<TransactionItemDataModel>,
+          : items // ignore: cast_nullable_to_non_nullable
+              as List<TransactionItemDataModel>?,
       transferDate: transferDate == freezed
           ? _value.transferDate
-          : transferDate as String,
+          : transferDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       transferBankAccountName: transferBankAccountName == freezed
           ? _value.transferBankAccountName
-          : transferBankAccountName as String,
+          : transferBankAccountName // ignore: cast_nullable_to_non_nullable
+              as String?,
       transferBankAccount: transferBankAccount == freezed
           ? _value.transferBankAccount
-          : transferBankAccount as String,
+          : transferBankAccount // ignore: cast_nullable_to_non_nullable
+              as String?,
       transferBankImage: transferBankImage == freezed
           ? _value.transferBankImage
-          : transferBankImage as String,
-      bankID: bankID == freezed ? _value.bankID : bankID as int,
+          : transferBankImage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bankID: bankID == freezed
+          ? _value.bankID
+          : bankID // ignore: cast_nullable_to_non_nullable
+              as int?,
       bankAccountName: bankAccountName == freezed
           ? _value.bankAccountName
-          : bankAccountName as String,
-      bankNo: bankNo == freezed ? _value.bankNo : bankNo as String,
+          : bankAccountName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bankNo: bankNo == freezed
+          ? _value.bankNo
+          : bankNo // ignore: cast_nullable_to_non_nullable
+              as String?,
       paymentChannel: paymentChannel == freezed
           ? _value.paymentChannel
-          : paymentChannel as String,
+          : paymentChannel // ignore: cast_nullable_to_non_nullable
+              as String?,
       virtualAccountName: virtualAccountName == freezed
           ? _value.virtualAccountName
-          : virtualAccountName as String,
+          : virtualAccountName // ignore: cast_nullable_to_non_nullable
+              as String?,
       virtualAccountNo: virtualAccountNo == freezed
           ? _value.virtualAccountNo
-          : virtualAccountNo as String,
+          : virtualAccountNo // ignore: cast_nullable_to_non_nullable
+              as String?,
       transactionStatus: transactionStatus == freezed
           ? _value.transactionStatus
-          : transactionStatus as String,
+          : transactionStatus // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -311,36 +376,36 @@ abstract class _$TransactionDataModelCopyWith<$Res>
       __$TransactionDataModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'QuantityTotal') int quantityTotal,
-      @JsonKey(name: 'CustomerName') String customerName,
-      @JsonKey(name: 'ID') String iD,
-      @JsonKey(name: 'Number') String number,
-      @JsonKey(name: 'CustomerID') String customerID,
-      @JsonKey(name: 'Total') double total,
-      @JsonKey(name: 'Date') String date,
-      @JsonKey(name: 'Cashback') double cashback,
-      @JsonKey(name: 'Status') int status,
-      @JsonKey(name: 'Trans_type') String transType,
-      @JsonKey(name: 'Location') String location,
-      @JsonKey(name: 'Create_by') String createBy,
-      @JsonKey(name: 'Remark') String remark,
-      @JsonKey(name: 'Pmttype') String pmttype,
-      @JsonKey(name: 'Total_discount') double totalDiscount,
-      @JsonKey(name: 'Pmtterm') String pmtterm,
-      @JsonKey(name: 'StatusEnum') int statusEnum,
-      @JsonKey(name: 'StatusName') String statusName,
-      @JsonKey(name: 'Items') List<TransactionItemDataModel> items,
-      @JsonKey(name: 'TransferDate') String transferDate,
-      @JsonKey(name: 'TransferBankAccountName') String transferBankAccountName,
-      @JsonKey(name: 'TransferBankAccount') String transferBankAccount,
-      @JsonKey(name: 'TransferBankImage') String transferBankImage,
-      @JsonKey(name: 'BankID') int bankID,
-      @JsonKey(name: 'BankAccountName') String bankAccountName,
-      @JsonKey(name: 'BankNo') String bankNo,
-      @JsonKey(name: 'PaymentChannel') String paymentChannel,
-      @JsonKey(name: 'VirtualAccountName') String virtualAccountName,
-      @JsonKey(name: 'VirtualAccountNo') String virtualAccountNo,
-      @JsonKey(name: 'TransactionStatus') String transactionStatus});
+      {@JsonKey(name: "QuantityTotal") int? quantityTotal,
+      @JsonKey(name: "CustomerName") String? customerName,
+      @JsonKey(name: "ID") String? iD,
+      @JsonKey(name: "Number") String? number,
+      @JsonKey(name: "CustomerID") String? customerID,
+      @JsonKey(name: "Total") double? total,
+      @JsonKey(name: "Date") String? date,
+      @JsonKey(name: "Cashback") double? cashback,
+      @JsonKey(name: "Status") int? status,
+      @JsonKey(name: "Trans_type") String? transType,
+      @JsonKey(name: "Location") String? location,
+      @JsonKey(name: "Create_by") String? createBy,
+      @JsonKey(name: "Remark") String? remark,
+      @JsonKey(name: "Pmttype") String? pmttype,
+      @JsonKey(name: "Total_discount") double? totalDiscount,
+      @JsonKey(name: "Pmtterm") String? pmtterm,
+      @JsonKey(name: "StatusEnum") int? statusEnum,
+      @JsonKey(name: "StatusName") String? statusName,
+      @JsonKey(name: "Items") List<TransactionItemDataModel>? items,
+      @JsonKey(name: "TransferDate") String? transferDate,
+      @JsonKey(name: "TransferBankAccountName") String? transferBankAccountName,
+      @JsonKey(name: "TransferBankAccount") String? transferBankAccount,
+      @JsonKey(name: "TransferBankImage") String? transferBankImage,
+      @JsonKey(name: "BankID") int? bankID,
+      @JsonKey(name: "BankAccountName") String? bankAccountName,
+      @JsonKey(name: "BankNo") String? bankNo,
+      @JsonKey(name: "PaymentChannel") String? paymentChannel,
+      @JsonKey(name: "VirtualAccountName") String? virtualAccountName,
+      @JsonKey(name: "VirtualAccountNo") String? virtualAccountNo,
+      @JsonKey(name: "TransactionStatus") String? transactionStatus});
 }
 
 /// @nodoc
@@ -356,229 +421,290 @@ class __$TransactionDataModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object quantityTotal = freezed,
-    Object customerName = freezed,
-    Object iD = freezed,
-    Object number = freezed,
-    Object customerID = freezed,
-    Object total = freezed,
-    Object date = freezed,
-    Object cashback = freezed,
-    Object status = freezed,
-    Object transType = freezed,
-    Object location = freezed,
-    Object createBy = freezed,
-    Object remark = freezed,
-    Object pmttype = freezed,
-    Object totalDiscount = freezed,
-    Object pmtterm = freezed,
-    Object statusEnum = freezed,
-    Object statusName = freezed,
-    Object items = freezed,
-    Object transferDate = freezed,
-    Object transferBankAccountName = freezed,
-    Object transferBankAccount = freezed,
-    Object transferBankImage = freezed,
-    Object bankID = freezed,
-    Object bankAccountName = freezed,
-    Object bankNo = freezed,
-    Object paymentChannel = freezed,
-    Object virtualAccountName = freezed,
-    Object virtualAccountNo = freezed,
-    Object transactionStatus = freezed,
+    Object? quantityTotal = freezed,
+    Object? customerName = freezed,
+    Object? iD = freezed,
+    Object? number = freezed,
+    Object? customerID = freezed,
+    Object? total = freezed,
+    Object? date = freezed,
+    Object? cashback = freezed,
+    Object? status = freezed,
+    Object? transType = freezed,
+    Object? location = freezed,
+    Object? createBy = freezed,
+    Object? remark = freezed,
+    Object? pmttype = freezed,
+    Object? totalDiscount = freezed,
+    Object? pmtterm = freezed,
+    Object? statusEnum = freezed,
+    Object? statusName = freezed,
+    Object? items = freezed,
+    Object? transferDate = freezed,
+    Object? transferBankAccountName = freezed,
+    Object? transferBankAccount = freezed,
+    Object? transferBankImage = freezed,
+    Object? bankID = freezed,
+    Object? bankAccountName = freezed,
+    Object? bankNo = freezed,
+    Object? paymentChannel = freezed,
+    Object? virtualAccountName = freezed,
+    Object? virtualAccountNo = freezed,
+    Object? transactionStatus = freezed,
   }) {
     return _then(_TransactionDataModel(
       quantityTotal: quantityTotal == freezed
           ? _value.quantityTotal
-          : quantityTotal as int,
+          : quantityTotal // ignore: cast_nullable_to_non_nullable
+              as int?,
       customerName: customerName == freezed
           ? _value.customerName
-          : customerName as String,
-      iD: iD == freezed ? _value.iD : iD as String,
-      number: number == freezed ? _value.number : number as String,
-      customerID:
-          customerID == freezed ? _value.customerID : customerID as String,
-      total: total == freezed ? _value.total : total as double,
-      date: date == freezed ? _value.date : date as String,
-      cashback: cashback == freezed ? _value.cashback : cashback as double,
-      status: status == freezed ? _value.status : status as int,
-      transType: transType == freezed ? _value.transType : transType as String,
-      location: location == freezed ? _value.location : location as String,
-      createBy: createBy == freezed ? _value.createBy : createBy as String,
-      remark: remark == freezed ? _value.remark : remark as String,
-      pmttype: pmttype == freezed ? _value.pmttype : pmttype as String,
+          : customerName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      iD: iD == freezed
+          ? _value.iD
+          : iD // ignore: cast_nullable_to_non_nullable
+              as String?,
+      number: number == freezed
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as String?,
+      customerID: customerID == freezed
+          ? _value.customerID
+          : customerID // ignore: cast_nullable_to_non_nullable
+              as String?,
+      total: total == freezed
+          ? _value.total
+          : total // ignore: cast_nullable_to_non_nullable
+              as double?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as String?,
+      cashback: cashback == freezed
+          ? _value.cashback
+          : cashback // ignore: cast_nullable_to_non_nullable
+              as double?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as int?,
+      transType: transType == freezed
+          ? _value.transType
+          : transType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as String?,
+      createBy: createBy == freezed
+          ? _value.createBy
+          : createBy // ignore: cast_nullable_to_non_nullable
+              as String?,
+      remark: remark == freezed
+          ? _value.remark
+          : remark // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pmttype: pmttype == freezed
+          ? _value.pmttype
+          : pmttype // ignore: cast_nullable_to_non_nullable
+              as String?,
       totalDiscount: totalDiscount == freezed
           ? _value.totalDiscount
-          : totalDiscount as double,
-      pmtterm: pmtterm == freezed ? _value.pmtterm : pmtterm as String,
-      statusEnum: statusEnum == freezed ? _value.statusEnum : statusEnum as int,
-      statusName:
-          statusName == freezed ? _value.statusName : statusName as String,
+          : totalDiscount // ignore: cast_nullable_to_non_nullable
+              as double?,
+      pmtterm: pmtterm == freezed
+          ? _value.pmtterm
+          : pmtterm // ignore: cast_nullable_to_non_nullable
+              as String?,
+      statusEnum: statusEnum == freezed
+          ? _value.statusEnum
+          : statusEnum // ignore: cast_nullable_to_non_nullable
+              as int?,
+      statusName: statusName == freezed
+          ? _value.statusName
+          : statusName // ignore: cast_nullable_to_non_nullable
+              as String?,
       items: items == freezed
           ? _value.items
-          : items as List<TransactionItemDataModel>,
+          : items // ignore: cast_nullable_to_non_nullable
+              as List<TransactionItemDataModel>?,
       transferDate: transferDate == freezed
           ? _value.transferDate
-          : transferDate as String,
+          : transferDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       transferBankAccountName: transferBankAccountName == freezed
           ? _value.transferBankAccountName
-          : transferBankAccountName as String,
+          : transferBankAccountName // ignore: cast_nullable_to_non_nullable
+              as String?,
       transferBankAccount: transferBankAccount == freezed
           ? _value.transferBankAccount
-          : transferBankAccount as String,
+          : transferBankAccount // ignore: cast_nullable_to_non_nullable
+              as String?,
       transferBankImage: transferBankImage == freezed
           ? _value.transferBankImage
-          : transferBankImage as String,
-      bankID: bankID == freezed ? _value.bankID : bankID as int,
+          : transferBankImage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bankID: bankID == freezed
+          ? _value.bankID
+          : bankID // ignore: cast_nullable_to_non_nullable
+              as int?,
       bankAccountName: bankAccountName == freezed
           ? _value.bankAccountName
-          : bankAccountName as String,
-      bankNo: bankNo == freezed ? _value.bankNo : bankNo as String,
+          : bankAccountName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bankNo: bankNo == freezed
+          ? _value.bankNo
+          : bankNo // ignore: cast_nullable_to_non_nullable
+              as String?,
       paymentChannel: paymentChannel == freezed
           ? _value.paymentChannel
-          : paymentChannel as String,
+          : paymentChannel // ignore: cast_nullable_to_non_nullable
+              as String?,
       virtualAccountName: virtualAccountName == freezed
           ? _value.virtualAccountName
-          : virtualAccountName as String,
+          : virtualAccountName // ignore: cast_nullable_to_non_nullable
+              as String?,
       virtualAccountNo: virtualAccountNo == freezed
           ? _value.virtualAccountNo
-          : virtualAccountNo as String,
+          : virtualAccountNo // ignore: cast_nullable_to_non_nullable
+              as String?,
       transactionStatus: transactionStatus == freezed
           ? _value.transactionStatus
-          : transactionStatus as String,
+          : transactionStatus // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TransactionDataModel implements _TransactionDataModel {
   _$_TransactionDataModel(
-      {@JsonKey(name: 'QuantityTotal') this.quantityTotal,
-      @JsonKey(name: 'CustomerName') this.customerName,
-      @JsonKey(name: 'ID') this.iD,
-      @JsonKey(name: 'Number') this.number,
-      @JsonKey(name: 'CustomerID') this.customerID,
-      @JsonKey(name: 'Total') this.total,
-      @JsonKey(name: 'Date') this.date,
-      @JsonKey(name: 'Cashback') this.cashback,
-      @JsonKey(name: 'Status') this.status,
-      @JsonKey(name: 'Trans_type') this.transType,
-      @JsonKey(name: 'Location') this.location,
-      @JsonKey(name: 'Create_by') this.createBy,
-      @JsonKey(name: 'Remark') this.remark,
-      @JsonKey(name: 'Pmttype') this.pmttype,
-      @JsonKey(name: 'Total_discount') this.totalDiscount,
-      @JsonKey(name: 'Pmtterm') this.pmtterm,
-      @JsonKey(name: 'StatusEnum') this.statusEnum,
-      @JsonKey(name: 'StatusName') this.statusName,
-      @JsonKey(name: 'Items') this.items,
-      @JsonKey(name: 'TransferDate') this.transferDate,
-      @JsonKey(name: 'TransferBankAccountName') this.transferBankAccountName,
-      @JsonKey(name: 'TransferBankAccount') this.transferBankAccount,
-      @JsonKey(name: 'TransferBankImage') this.transferBankImage,
-      @JsonKey(name: 'BankID') this.bankID,
-      @JsonKey(name: 'BankAccountName') this.bankAccountName,
-      @JsonKey(name: 'BankNo') this.bankNo,
-      @JsonKey(name: 'PaymentChannel') this.paymentChannel,
-      @JsonKey(name: 'VirtualAccountName') this.virtualAccountName,
-      @JsonKey(name: 'VirtualAccountNo') this.virtualAccountNo,
-      @JsonKey(name: 'TransactionStatus') this.transactionStatus});
+      {@JsonKey(name: "QuantityTotal") this.quantityTotal,
+      @JsonKey(name: "CustomerName") this.customerName,
+      @JsonKey(name: "ID") this.iD,
+      @JsonKey(name: "Number") this.number,
+      @JsonKey(name: "CustomerID") this.customerID,
+      @JsonKey(name: "Total") this.total,
+      @JsonKey(name: "Date") this.date,
+      @JsonKey(name: "Cashback") this.cashback,
+      @JsonKey(name: "Status") this.status,
+      @JsonKey(name: "Trans_type") this.transType,
+      @JsonKey(name: "Location") this.location,
+      @JsonKey(name: "Create_by") this.createBy,
+      @JsonKey(name: "Remark") this.remark,
+      @JsonKey(name: "Pmttype") this.pmttype,
+      @JsonKey(name: "Total_discount") this.totalDiscount,
+      @JsonKey(name: "Pmtterm") this.pmtterm,
+      @JsonKey(name: "StatusEnum") this.statusEnum,
+      @JsonKey(name: "StatusName") this.statusName,
+      @JsonKey(name: "Items") this.items,
+      @JsonKey(name: "TransferDate") this.transferDate,
+      @JsonKey(name: "TransferBankAccountName") this.transferBankAccountName,
+      @JsonKey(name: "TransferBankAccount") this.transferBankAccount,
+      @JsonKey(name: "TransferBankImage") this.transferBankImage,
+      @JsonKey(name: "BankID") this.bankID,
+      @JsonKey(name: "BankAccountName") this.bankAccountName,
+      @JsonKey(name: "BankNo") this.bankNo,
+      @JsonKey(name: "PaymentChannel") this.paymentChannel,
+      @JsonKey(name: "VirtualAccountName") this.virtualAccountName,
+      @JsonKey(name: "VirtualAccountNo") this.virtualAccountNo,
+      @JsonKey(name: "TransactionStatus") this.transactionStatus});
 
   factory _$_TransactionDataModel.fromJson(Map<String, dynamic> json) =>
       _$_$_TransactionDataModelFromJson(json);
 
   @override
-  @JsonKey(name: 'QuantityTotal')
-  final int quantityTotal;
+  @JsonKey(name: "QuantityTotal")
+  final int? quantityTotal;
   @override
-  @JsonKey(name: 'CustomerName')
-  final String customerName;
+  @JsonKey(name: "CustomerName")
+  final String? customerName;
   @override
-  @JsonKey(name: 'ID')
-  final String iD;
+  @JsonKey(name: "ID")
+  final String? iD;
   @override
-  @JsonKey(name: 'Number')
-  final String number;
+  @JsonKey(name: "Number")
+  final String? number;
   @override
-  @JsonKey(name: 'CustomerID')
-  final String customerID;
+  @JsonKey(name: "CustomerID")
+  final String? customerID;
   @override
-  @JsonKey(name: 'Total')
-  final double total;
+  @JsonKey(name: "Total")
+  final double? total;
   @override
-  @JsonKey(name: 'Date')
-  final String date;
+  @JsonKey(name: "Date")
+  final String? date;
   @override
-  @JsonKey(name: 'Cashback')
-  final double cashback;
+  @JsonKey(name: "Cashback")
+  final double? cashback;
   @override
-  @JsonKey(name: 'Status')
-  final int status;
+  @JsonKey(name: "Status")
+  final int? status;
   @override
-  @JsonKey(name: 'Trans_type')
-  final String transType;
+  @JsonKey(name: "Trans_type")
+  final String? transType;
   @override
-  @JsonKey(name: 'Location')
-  final String location;
+  @JsonKey(name: "Location")
+  final String? location;
   @override
-  @JsonKey(name: 'Create_by')
-  final String createBy;
+  @JsonKey(name: "Create_by")
+  final String? createBy;
   @override
-  @JsonKey(name: 'Remark')
-  final String remark;
+  @JsonKey(name: "Remark")
+  final String? remark;
   @override
-  @JsonKey(name: 'Pmttype')
-  final String pmttype;
+  @JsonKey(name: "Pmttype")
+  final String? pmttype;
   @override
-  @JsonKey(name: 'Total_discount')
-  final double totalDiscount;
+  @JsonKey(name: "Total_discount")
+  final double? totalDiscount;
   @override
-  @JsonKey(name: 'Pmtterm')
-  final String pmtterm;
+  @JsonKey(name: "Pmtterm")
+  final String? pmtterm;
   @override
-  @JsonKey(name: 'StatusEnum')
-  final int statusEnum;
+  @JsonKey(name: "StatusEnum")
+  final int? statusEnum;
   @override
-  @JsonKey(name: 'StatusName')
-  final String statusName;
+  @JsonKey(name: "StatusName")
+  final String? statusName;
   @override
-  @JsonKey(name: 'Items')
-  final List<TransactionItemDataModel> items;
+  @JsonKey(name: "Items")
+  final List<TransactionItemDataModel>? items;
   @override
-  @JsonKey(name: 'TransferDate')
-  final String transferDate;
+  @JsonKey(name: "TransferDate")
+  final String? transferDate;
   @override
-  @JsonKey(name: 'TransferBankAccountName')
-  final String transferBankAccountName;
+  @JsonKey(name: "TransferBankAccountName")
+  final String? transferBankAccountName;
   @override
-  @JsonKey(name: 'TransferBankAccount')
-  final String transferBankAccount;
+  @JsonKey(name: "TransferBankAccount")
+  final String? transferBankAccount;
   @override
-  @JsonKey(name: 'TransferBankImage')
-  final String transferBankImage;
+  @JsonKey(name: "TransferBankImage")
+  final String? transferBankImage;
   @override
-  @JsonKey(name: 'BankID')
-  final int bankID;
+  @JsonKey(name: "BankID")
+  final int? bankID;
   @override
-  @JsonKey(name: 'BankAccountName')
-  final String bankAccountName;
+  @JsonKey(name: "BankAccountName")
+  final String? bankAccountName;
   @override
-  @JsonKey(name: 'BankNo')
-  final String bankNo;
+  @JsonKey(name: "BankNo")
+  final String? bankNo;
   @override
-  @JsonKey(name: 'PaymentChannel')
-  final String paymentChannel;
+  @JsonKey(name: "PaymentChannel")
+  final String? paymentChannel;
   @override
-  @JsonKey(name: 'VirtualAccountName')
-  final String virtualAccountName;
+  @JsonKey(name: "VirtualAccountName")
+  final String? virtualAccountName;
   @override
-  @JsonKey(name: 'VirtualAccountNo')
-  final String virtualAccountNo;
+  @JsonKey(name: "VirtualAccountNo")
+  final String? virtualAccountNo;
   @override
-  @JsonKey(name: 'TransactionStatus')
-  final String transactionStatus;
+  @JsonKey(name: "TransactionStatus")
+  final String? transactionStatus;
 
   @override
   String toString() {
@@ -711,161 +837,163 @@ class _$_TransactionDataModel implements _TransactionDataModel {
 
 abstract class _TransactionDataModel implements TransactionDataModel {
   factory _TransactionDataModel(
-      {@JsonKey(name: 'QuantityTotal')
-          int quantityTotal,
-      @JsonKey(name: 'CustomerName')
-          String customerName,
-      @JsonKey(name: 'ID')
-          String iD,
-      @JsonKey(name: 'Number')
-          String number,
-      @JsonKey(name: 'CustomerID')
-          String customerID,
-      @JsonKey(name: 'Total')
-          double total,
-      @JsonKey(name: 'Date')
-          String date,
-      @JsonKey(name: 'Cashback')
-          double cashback,
-      @JsonKey(name: 'Status')
-          int status,
-      @JsonKey(name: 'Trans_type')
-          String transType,
-      @JsonKey(name: 'Location')
-          String location,
-      @JsonKey(name: 'Create_by')
-          String createBy,
-      @JsonKey(name: 'Remark')
-          String remark,
-      @JsonKey(name: 'Pmttype')
-          String pmttype,
-      @JsonKey(name: 'Total_discount')
-          double totalDiscount,
-      @JsonKey(name: 'Pmtterm')
-          String pmtterm,
-      @JsonKey(name: 'StatusEnum')
-          int statusEnum,
-      @JsonKey(name: 'StatusName')
-          String statusName,
-      @JsonKey(name: 'Items')
-          List<TransactionItemDataModel> items,
-      @JsonKey(name: 'TransferDate')
-          String transferDate,
-      @JsonKey(name: 'TransferBankAccountName')
-          String transferBankAccountName,
-      @JsonKey(name: 'TransferBankAccount')
-          String transferBankAccount,
-      @JsonKey(name: 'TransferBankImage')
-          String transferBankImage,
-      @JsonKey(name: 'BankID')
-          int bankID,
-      @JsonKey(name: 'BankAccountName')
-          String bankAccountName,
-      @JsonKey(name: 'BankNo')
-          String bankNo,
-      @JsonKey(name: 'PaymentChannel')
-          String paymentChannel,
-      @JsonKey(name: 'VirtualAccountName')
-          String virtualAccountName,
-      @JsonKey(name: 'VirtualAccountNo')
-          String virtualAccountNo,
-      @JsonKey(name: 'TransactionStatus')
-          String transactionStatus}) = _$_TransactionDataModel;
+      {@JsonKey(name: "QuantityTotal")
+          int? quantityTotal,
+      @JsonKey(name: "CustomerName")
+          String? customerName,
+      @JsonKey(name: "ID")
+          String? iD,
+      @JsonKey(name: "Number")
+          String? number,
+      @JsonKey(name: "CustomerID")
+          String? customerID,
+      @JsonKey(name: "Total")
+          double? total,
+      @JsonKey(name: "Date")
+          String? date,
+      @JsonKey(name: "Cashback")
+          double? cashback,
+      @JsonKey(name: "Status")
+          int? status,
+      @JsonKey(name: "Trans_type")
+          String? transType,
+      @JsonKey(name: "Location")
+          String? location,
+      @JsonKey(name: "Create_by")
+          String? createBy,
+      @JsonKey(name: "Remark")
+          String? remark,
+      @JsonKey(name: "Pmttype")
+          String? pmttype,
+      @JsonKey(name: "Total_discount")
+          double? totalDiscount,
+      @JsonKey(name: "Pmtterm")
+          String? pmtterm,
+      @JsonKey(name: "StatusEnum")
+          int? statusEnum,
+      @JsonKey(name: "StatusName")
+          String? statusName,
+      @JsonKey(name: "Items")
+          List<TransactionItemDataModel>? items,
+      @JsonKey(name: "TransferDate")
+          String? transferDate,
+      @JsonKey(name: "TransferBankAccountName")
+          String? transferBankAccountName,
+      @JsonKey(name: "TransferBankAccount")
+          String? transferBankAccount,
+      @JsonKey(name: "TransferBankImage")
+          String? transferBankImage,
+      @JsonKey(name: "BankID")
+          int? bankID,
+      @JsonKey(name: "BankAccountName")
+          String? bankAccountName,
+      @JsonKey(name: "BankNo")
+          String? bankNo,
+      @JsonKey(name: "PaymentChannel")
+          String? paymentChannel,
+      @JsonKey(name: "VirtualAccountName")
+          String? virtualAccountName,
+      @JsonKey(name: "VirtualAccountNo")
+          String? virtualAccountNo,
+      @JsonKey(name: "TransactionStatus")
+          String? transactionStatus}) = _$_TransactionDataModel;
 
   factory _TransactionDataModel.fromJson(Map<String, dynamic> json) =
       _$_TransactionDataModel.fromJson;
 
   @override
-  @JsonKey(name: 'QuantityTotal')
-  int get quantityTotal;
+  @JsonKey(name: "QuantityTotal")
+  int? get quantityTotal => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'CustomerName')
-  String get customerName;
+  @JsonKey(name: "CustomerName")
+  String? get customerName => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'ID')
-  String get iD;
+  @JsonKey(name: "ID")
+  String? get iD => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Number')
-  String get number;
+  @JsonKey(name: "Number")
+  String? get number => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'CustomerID')
-  String get customerID;
+  @JsonKey(name: "CustomerID")
+  String? get customerID => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Total')
-  double get total;
+  @JsonKey(name: "Total")
+  double? get total => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Date')
-  String get date;
+  @JsonKey(name: "Date")
+  String? get date => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Cashback')
-  double get cashback;
+  @JsonKey(name: "Cashback")
+  double? get cashback => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Status')
-  int get status;
+  @JsonKey(name: "Status")
+  int? get status => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Trans_type')
-  String get transType;
+  @JsonKey(name: "Trans_type")
+  String? get transType => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Location')
-  String get location;
+  @JsonKey(name: "Location")
+  String? get location => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Create_by')
-  String get createBy;
+  @JsonKey(name: "Create_by")
+  String? get createBy => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Remark')
-  String get remark;
+  @JsonKey(name: "Remark")
+  String? get remark => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Pmttype')
-  String get pmttype;
+  @JsonKey(name: "Pmttype")
+  String? get pmttype => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Total_discount')
-  double get totalDiscount;
+  @JsonKey(name: "Total_discount")
+  double? get totalDiscount => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Pmtterm')
-  String get pmtterm;
+  @JsonKey(name: "Pmtterm")
+  String? get pmtterm => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'StatusEnum')
-  int get statusEnum;
+  @JsonKey(name: "StatusEnum")
+  int? get statusEnum => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'StatusName')
-  String get statusName;
+  @JsonKey(name: "StatusName")
+  String? get statusName => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Items')
-  List<TransactionItemDataModel> get items;
+  @JsonKey(name: "Items")
+  List<TransactionItemDataModel>? get items =>
+      throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'TransferDate')
-  String get transferDate;
+  @JsonKey(name: "TransferDate")
+  String? get transferDate => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'TransferBankAccountName')
-  String get transferBankAccountName;
+  @JsonKey(name: "TransferBankAccountName")
+  String? get transferBankAccountName => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'TransferBankAccount')
-  String get transferBankAccount;
+  @JsonKey(name: "TransferBankAccount")
+  String? get transferBankAccount => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'TransferBankImage')
-  String get transferBankImage;
+  @JsonKey(name: "TransferBankImage")
+  String? get transferBankImage => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'BankID')
-  int get bankID;
+  @JsonKey(name: "BankID")
+  int? get bankID => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'BankAccountName')
-  String get bankAccountName;
+  @JsonKey(name: "BankAccountName")
+  String? get bankAccountName => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'BankNo')
-  String get bankNo;
+  @JsonKey(name: "BankNo")
+  String? get bankNo => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'PaymentChannel')
-  String get paymentChannel;
+  @JsonKey(name: "PaymentChannel")
+  String? get paymentChannel => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'VirtualAccountName')
-  String get virtualAccountName;
+  @JsonKey(name: "VirtualAccountName")
+  String? get virtualAccountName => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'VirtualAccountNo')
-  String get virtualAccountNo;
+  @JsonKey(name: "VirtualAccountNo")
+  String? get virtualAccountNo => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'TransactionStatus')
-  String get transactionStatus;
+  @JsonKey(name: "TransactionStatus")
+  String? get transactionStatus => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TransactionDataModelCopyWith<_TransactionDataModel> get copyWith;
+  _$TransactionDataModelCopyWith<_TransactionDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

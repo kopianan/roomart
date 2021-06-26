@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'cost.dart';
 
@@ -8,6 +8,10 @@ part of 'cost.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Cost _$CostFromJson(Map<String, dynamic> json) {
   return _Cost.fromJson(json);
 }
@@ -16,8 +20,7 @@ Cost _$CostFromJson(Map<String, dynamic> json) {
 class _$CostTearOff {
   const _$CostTearOff();
 
-// ignore: unused_element
-  _Cost call({int value, String etd, String note}) {
+  _Cost call({int? value, String? etd, String? note}) {
     return _Cost(
       value: value,
       etd: etd,
@@ -25,32 +28,30 @@ class _$CostTearOff {
     );
   }
 
-// ignore: unused_element
   Cost fromJson(Map<String, Object> json) {
     return Cost.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Cost = _$CostTearOff();
 
 /// @nodoc
 mixin _$Cost {
-  int get value;
-  String get etd;
-  String get note;
+  int? get value => throw _privateConstructorUsedError;
+  String? get etd => throw _privateConstructorUsedError;
+  String? get note => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CostCopyWith<Cost> get copyWith;
+  $CostCopyWith<Cost> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CostCopyWith<$Res> {
   factory $CostCopyWith(Cost value, $Res Function(Cost) then) =
       _$CostCopyWithImpl<$Res>;
-  $Res call({int value, String etd, String note});
+  $Res call({int? value, String? etd, String? note});
 }
 
 /// @nodoc
@@ -63,14 +64,23 @@ class _$CostCopyWithImpl<$Res> implements $CostCopyWith<$Res> {
 
   @override
   $Res call({
-    Object value = freezed,
-    Object etd = freezed,
-    Object note = freezed,
+    Object? value = freezed,
+    Object? etd = freezed,
+    Object? note = freezed,
   }) {
     return _then(_value.copyWith(
-      value: value == freezed ? _value.value : value as int,
-      etd: etd == freezed ? _value.etd : etd as String,
-      note: note == freezed ? _value.note : note as String,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as int?,
+      etd: etd == freezed
+          ? _value.etd
+          : etd // ignore: cast_nullable_to_non_nullable
+              as String?,
+      note: note == freezed
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -80,7 +90,7 @@ abstract class _$CostCopyWith<$Res> implements $CostCopyWith<$Res> {
   factory _$CostCopyWith(_Cost value, $Res Function(_Cost) then) =
       __$CostCopyWithImpl<$Res>;
   @override
-  $Res call({int value, String etd, String note});
+  $Res call({int? value, String? etd, String? note});
 }
 
 /// @nodoc
@@ -94,21 +104,29 @@ class __$CostCopyWithImpl<$Res> extends _$CostCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object value = freezed,
-    Object etd = freezed,
-    Object note = freezed,
+    Object? value = freezed,
+    Object? etd = freezed,
+    Object? note = freezed,
   }) {
     return _then(_Cost(
-      value: value == freezed ? _value.value : value as int,
-      etd: etd == freezed ? _value.etd : etd as String,
-      note: note == freezed ? _value.note : note as String,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as int?,
+      etd: etd == freezed
+          ? _value.etd
+          : etd // ignore: cast_nullable_to_non_nullable
+              as String?,
+      note: note == freezed
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Cost implements _Cost {
   _$_Cost({this.value, this.etd, this.note});
 
@@ -116,11 +134,11 @@ class _$_Cost implements _Cost {
       _$_$_CostFromJson(json);
 
   @override
-  final int value;
+  final int? value;
   @override
-  final String etd;
+  final String? etd;
   @override
-  final String note;
+  final String? note;
 
   @override
   String toString() {
@@ -158,17 +176,17 @@ class _$_Cost implements _Cost {
 }
 
 abstract class _Cost implements Cost {
-  factory _Cost({int value, String etd, String note}) = _$_Cost;
+  factory _Cost({int? value, String? etd, String? note}) = _$_Cost;
 
   factory _Cost.fromJson(Map<String, dynamic> json) = _$_Cost.fromJson;
 
   @override
-  int get value;
+  int? get value => throw _privateConstructorUsedError;
   @override
-  String get etd;
+  String? get etd => throw _privateConstructorUsedError;
   @override
-  String get note;
+  String? get note => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CostCopyWith<_Cost> get copyWith;
+  _$CostCopyWith<_Cost> get copyWith => throw _privateConstructorUsedError;
 }

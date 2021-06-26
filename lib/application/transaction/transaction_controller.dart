@@ -22,7 +22,7 @@ class TransactionController extends GetxController {
   List<TransactionDataModelV2> finishedTransaction = <TransactionDataModelV2>[];
   List<FullTransactionDataModel> sentTransaction = <FullTransactionDataModel>[];
   List<CostDataModel> costList = <CostDataModel>[];
-  Rx<Costs> selectedDelivery = Costs().obs;
+  Rx<Costs?> selectedDelivery = Costs().obs;
   Rx<CostDataModel> selectedFullDelivery = CostDataModel().obs;
 
   Rx<DiscountDataModel> selectedDiscount = DiscountDataModel().obs;
@@ -33,7 +33,7 @@ class TransactionController extends GetxController {
     //subtotal - discount + ongkos kirim
 
     var _discount1 = double.parse(calculateDiscount(subtotal));
-    var _discount2 = double.parse(getSelectedDiscountCode.totalDiscount);
+    var _discount2 = double.parse(getSelectedDiscountCode.totalDiscount!);
     var _ongkos = calculateDeliveryCost();
     return subtotal - _discount1 - _discount2 + _ongkos;
   }
@@ -53,13 +53,13 @@ class TransactionController extends GetxController {
   // List<DiscountDataModel> getDiscountList(String userTypeId) {
   //   return this.listDiscount;
   // }
-  List<DiscountDataModel> getDiscountList(String userTypeId) {
+  List<DiscountDataModel> getDiscountList(String? userTypeId) {
     DateTime dateTime = DateTime.now();
     List<DiscountDataModel> list = [];
     listDiscount.forEach((element) {
       if (element.customerTypeId == userTypeId) {
-        final startTime = DateTime.parse(element.eventEndDate);
-        final endTime = DateTime.parse(element.eventBeginDate);
+        final startTime = DateTime.parse(element.eventEndDate!);
+        final endTime = DateTime.parse(element.eventBeginDate!);
         if (dateTime.isAfter(startTime) && dateTime.isBefore(endTime)) {
           list.add(element);
         }
@@ -83,7 +83,7 @@ class TransactionController extends GetxController {
     if (getSelectedDiscount.eventDiscount == null) {
       return 0.toString();
     } else {
-      var _stringPercent = getSelectedDiscount.eventDiscount.split("%").first;
+      var _stringPercent = getSelectedDiscount.eventDiscount!.split("%").first;
       var _doublePercent = double.tryParse(_stringPercent);
       if (_doublePercent == null) {
         return 0.toString();
@@ -109,21 +109,21 @@ class TransactionController extends GetxController {
     this.costList.add(otherType);
   }
 
-  void setDeliveryCost(Costs costs, CostDataModel costDataModel) {
+  void setDeliveryCost(Costs? costs, CostDataModel costDataModel) {
     this.selectedDelivery.value = costs;
     this.selectedFullDelivery.value = costDataModel;
     update();
   }
 
   CostDataModel get getSelectedFullDelivery => this.selectedFullDelivery.value;
-  Costs get getSelectedCost => this.selectedDelivery.value;
+  Costs? get getSelectedCost => this.selectedDelivery.value;
 
   double calculateDeliveryCost() {
     if (selectedDelivery.value == null) {
       return 0;
     } else {
       try {
-        return double.parse(getSelectedCost.cost.first.value.toString());
+        return double.parse(getSelectedCost!.cost!.first.value.toString());
       } catch (e) {
         return 0;
       }
@@ -173,7 +173,7 @@ class TransactionController extends GetxController {
     this.sentTransaction.assignAll(list);
   }
 
-  List<FullTransactionDataModel> getSentTransaction(String status) {
+  List<FullTransactionDataModel> getSentTransaction(String? status) {
     var list = this
         .sentTransaction
         .where((element) => element.transactionStatus == status)
