@@ -17,13 +17,28 @@ class AppWidget extends StatefulWidget {
 class _AppWidgetState extends State<AppWidget> {
   final authController = Get.put(AuthController());
   FirebaseMessaging firebaseMessaging = FirebaseMessaging.instance;
+  FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
+      FlutterLocalNotificationsPlugin();
+
   @override
   void initState() {
     firebaseMessaging
         .subscribeToTopic("all")
         .then((value) => print("Subs to topic"));
 
+    var initializationSettingsAndroid =
+        AndroidInitializationSettings('@mipmap/ic_launcher');
+
+    var initSetttings =
+        InitializationSettings(android: initializationSettingsAndroid);
+
+    flutterLocalNotificationsPlugin.initialize(initSetttings,
+        onSelectNotification: onSelectNotification);
     super.initState();
+  }
+
+  Future onSelectNotification(String? payload) async {
+    return Get.toNamed(DashboardPage.TAG);
   }
 
   @override

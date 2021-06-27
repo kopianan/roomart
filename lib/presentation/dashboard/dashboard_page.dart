@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/application/core/cart_controller.dart';
@@ -14,6 +15,7 @@ import 'package:roomart/presentation/me/me_page.dart';
 import 'package:roomart/presentation/update/update_page.dart';
 import 'package:roomart/utils/constants.dart';
 import 'package:roomart/utils/my_color.dart';
+import 'package:roomart/utils/notification_helper.dart';
 
 class DashboardPage extends StatefulWidget {
   static final String TAG = '/dashboard_page';
@@ -51,7 +53,11 @@ class _DashboardPageState extends State<DashboardPage> {
     return Scaffold(
         key: _scaffoldKey,
         appBar: AppBar(
-          title: Text(Constants.title_appbar),
+          title: InkWell(
+              child: Text(Constants.title_appbar),
+              onTap: () async {
+                NotificationHelper.showNotification("Title", "Description");
+              }),
           actions: [
             IconButton(
                 icon: Icon(Icons.search),
