@@ -89,11 +89,15 @@ class _CartListItemState extends State<CartListItem> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   TouchSpin(
+                    min: 0,
                     addIcon: Icon(Icons.add_circle_outline),
                     subtractIcon: Icon(Icons.remove_circle_outline_outlined),
                     onChanged: (val) {
-                      cart.addQuantity(cart.getCartItemData[widget.index],
-                          val.toStringAsFixed(0));
+                      if (val == 0) {
+                        cart.removeDataFromList(widget.index);
+                      } else
+                        cart.addQuantity(cart.getCartItemData[widget.index],
+                            val.toStringAsFixed(0));
                     },
                     value: int.parse(
                         cart.getCartItemData[widget.index]!.bought!.qty!),
@@ -115,7 +119,8 @@ class _CartListItemState extends State<CartListItem> {
     if (auth.checkIfReseller()) {
       price = cart!.bought!.resellerPrice! * double.parse(cart.bought!.qty!);
     } else {
-      price = (double.parse(cart!.bought!.price!) * double.parse(cart.bought!.qty!));
+      price = (double.parse(cart!.bought!.price!) *
+          double.parse(cart.bought!.qty!));
     }
     return price.toString();
   }
