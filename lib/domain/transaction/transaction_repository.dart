@@ -5,6 +5,7 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:roomart/domain/transaction/models/transaction_req_res.dart';
+import 'package:roomart/domain/transaction/trans_item/bank_data_model.dart';
 import 'package:roomart/domain/transaction/trans_item/midtrans_status_data_model.dart';
 import 'package:roomart/domain/transaction/trans_item/trans_request.dart';
 import 'package:roomart/domain/transaction/trans_item/trans_response.dart';
@@ -14,7 +15,7 @@ import 'package:roomart/utils/constants.dart';
 
 import 'full_transaction_data_model.dart';
 
- abstract class ITransactionFacade {
+abstract class ITransactionFacade {
   Future<Either<String, List<TransactionDataModel>>>
       getHistoryTransactionByStatus(TransactionHistoryRequest request);
 
@@ -26,7 +27,11 @@ import 'full_transaction_data_model.dart';
       getHistorySentTransaction(TransactionHistoryRequest request);
   Future<Either<String, List<TransactionDataModelV2>>>
       getHistoryTransactionByStatusVDO(TransactionHistoryRequest request);
-  Future<Either<String, TransResponse>> addNewTransaction(TransRequest? request);
+  Future<Either<String, TransResponse>> addNewTransaction(
+      TransRequest? request);
+  Future<Either<String, String>> cancelTransaction(
+      {String? custId, String? invoiceNumber});
+  Future<Either<String, List<BankDataModel>>> getBankData();
   Future<Either<String?, MidtransStatusDataModel>> checkMidtransPaymentStatus(
       String? request);
 
@@ -243,6 +248,60 @@ class TransactionRepository extends ITransactionFacade {
       } else {
         return left("Something Wrong");
       }
+    } catch (e) {
+      return left(e.toString());
+    }
+  }
+
+  @override
+  Future<Either<String, String>> cancelTransaction({
+    String? custId,
+    String? invoiceNumber,
+  }) async {
+    Response response;
+    var data = {
+      "Token": Constants().tokenUltimo,
+      "CustomerID": custId,
+      "InvoiceNumber": invoiceNumber
+    };
+    try {
+      response = await dio.post(
+          "${Constants().getUltimoBaseUrl}/RoomartOrder/CancelOrder",
+          data: data,
+          options: Options(
+            headers: {"AccessKey": Constants().accessKeyUltimo},
+          ));
+
+      return right("Berhasil Hapus Transaksi");
+    } on DioError catch (e) {
+      return left(e.toString());
+    } catch (e) {
+      return left(e.toString());
+    }
+  }
+
+  @override
+  Future<Either<String, List<BankDataModel>>> getBankData() async {
+    Response response;
+    try {
+      response = await dio.post(
+        "${Constants().getUltimoBaseUrl}/Payment/GetBankTransfer",
+        data: {"Token": Constants().tokenUltimo2},
+        options: Options(
+          headers: {"AccessKey": Constants().accessKeyUltimo},
+        ),
+      );
+      if (response.statusCode == 200) {
+        List responseJson = response.data;
+        List<BankDataModel> data =
+            responseJson.map((md) => new BankDataModel.fromJson(md)).toList();
+
+        return right(data);
+      } else {
+        return left("Something wrong");
+      }
+    } on DioError catch (e) {
+      return left(e.toString());
     } catch (e) {
       return left(e.toString());
     }

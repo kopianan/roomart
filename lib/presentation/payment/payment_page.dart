@@ -9,7 +9,6 @@ import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/application/payment/payment_controller.dart';
 import 'package:roomart/application/transaction/transaction_controller.dart';
 import 'package:roomart/application/transaction/transaction_cubit.dart';
-import 'package:roomart/domain/core/payment_method_enum.dart';
 import 'package:roomart/domain/item/cart_data_collection_model.dart';
 import 'package:roomart/domain/item/data_item_model.dart';
 import 'package:roomart/domain/models/discount/discount_code.dart';
@@ -158,6 +157,7 @@ class _PaymentPageState extends State<PaymentPage> {
                                   Get.showSnackbar(GetBar(
                                     title: "Address",
                                     message: "Please add address",
+                                    duration: Duration(seconds: 2),
                                   ));
                                 } else {
                                   Get.toNamed(DeliveryPage.TAG);
@@ -436,7 +436,11 @@ class _PaymentPageState extends State<PaymentPage> {
       BoughtItemDataModel? _new = element!.bought!.copyWith(
           price: cartController.checkResellerPrice(element.item!),
           resellerPrice: double.parse(element.item!.itemPrice!));
-      newBought.add(CartDataCollectionModel(bought: _new, item: element.item));
+
+      newBought.add(CartDataCollectionModel(
+        bought: _new,
+        item: element.item,
+      ));
     });
     paidItem.assignAll(newBought);
 
@@ -466,8 +470,8 @@ class _PaymentPageState extends State<PaymentPage> {
           itemId: "DM157597749267900354896",
           itemCode: "990992",
           itemName: "PROMO APPS",
-          price:
-              "-" + transactionController.getSelectedDiscountCode.totalDiscount!,
+          price: "-" +
+              transactionController.getSelectedDiscountCode.totalDiscount!,
           resellerPrice: double.parse(
             "-" + transactionController.getSelectedDiscountCode.totalDiscount!,
           ),
@@ -498,8 +502,9 @@ class _PaymentPageState extends State<PaymentPage> {
         // TODO:change price
         price:
             transactionController.getSelectedCost!.cost!.first.value.toString(),
-        resellerPrice: double.parse(
-            transactionController.getSelectedCost!.cost!.first.value.toString()),
+        resellerPrice: double.parse(transactionController
+            .getSelectedCost!.cost!.first.value
+            .toString()),
         // price:"0",
         // resellerPrice: 0,
         qty: "1",
@@ -519,7 +524,8 @@ class _PaymentPageState extends State<PaymentPage> {
     var _salesOrder = TransRequest(token: Constants().tokenUltimo, salesTrans: [
       TransPostDataModel(
           transNo: generateTransactionNumber(
-              "${Constants.transactionCode}-${Constants.locCode}", user!.userId!),
+              "${Constants.transactionCode}-${Constants.locCode}",
+              user!.userId!),
           transType: "SO",
           location: "${Constants.locCode}",
           transDt: DateFormat("dd/MM/yyyy").format(DateTime.now()),

@@ -30,6 +30,18 @@ class _$TransactionStateTearOff {
     );
   }
 
+  _OnCancelOrder onCancelOrder(String message) {
+    return _OnCancelOrder(
+      message,
+    );
+  }
+
+  _OnGetBankData onGetBankData(List<BankDataModel> listBank) {
+    return _OnGetBankData(
+      listBank,
+    );
+  }
+
   _OnGetHistoryTransaction onGetHistoryTransaction(
       List<TransactionDataModel> data) {
     return _OnGetHistoryTransaction(
@@ -81,6 +93,8 @@ mixin _$TransactionState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
+    required TResult Function(String message) onCancelOrder,
+    required TResult Function(List<BankDataModel> listBank) onGetBankData,
     required TResult Function(List<TransactionDataModel> data)
         onGetHistoryTransaction,
     required TResult Function(List<FullTransactionDataModel> data)
@@ -99,6 +113,8 @@ mixin _$TransactionState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
+    TResult Function(String message)? onCancelOrder,
+    TResult Function(List<BankDataModel> listBank)? onGetBankData,
     TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
     TResult Function(List<FullTransactionDataModel> data)?
         onGetSentHistoryTransaction,
@@ -115,6 +131,8 @@ mixin _$TransactionState {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
+    required TResult Function(_OnCancelOrder value) onCancelOrder,
+    required TResult Function(_OnGetBankData value) onGetBankData,
     required TResult Function(_OnGetHistoryTransaction value)
         onGetHistoryTransaction,
     required TResult Function(_OnGetSentHistoryTransaction value)
@@ -132,6 +150,8 @@ mixin _$TransactionState {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
+    TResult Function(_OnCancelOrder value)? onCancelOrder,
+    TResult Function(_OnGetBankData value)? onGetBankData,
     TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
     TResult Function(_OnGetSentHistoryTransaction value)?
         onGetSentHistoryTransaction,
@@ -202,6 +222,8 @@ class _$_Initial implements _Initial {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
+    required TResult Function(String message) onCancelOrder,
+    required TResult Function(List<BankDataModel> listBank) onGetBankData,
     required TResult Function(List<TransactionDataModel> data)
         onGetHistoryTransaction,
     required TResult Function(List<FullTransactionDataModel> data)
@@ -223,6 +245,8 @@ class _$_Initial implements _Initial {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
+    TResult Function(String message)? onCancelOrder,
+    TResult Function(List<BankDataModel> listBank)? onGetBankData,
     TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
     TResult Function(List<FullTransactionDataModel> data)?
         onGetSentHistoryTransaction,
@@ -245,6 +269,8 @@ class _$_Initial implements _Initial {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
+    required TResult Function(_OnCancelOrder value) onCancelOrder,
+    required TResult Function(_OnGetBankData value) onGetBankData,
     required TResult Function(_OnGetHistoryTransaction value)
         onGetHistoryTransaction,
     required TResult Function(_OnGetSentHistoryTransaction value)
@@ -265,6 +291,8 @@ class _$_Initial implements _Initial {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
+    TResult Function(_OnCancelOrder value)? onCancelOrder,
+    TResult Function(_OnGetBankData value)? onGetBankData,
     TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
     TResult Function(_OnGetSentHistoryTransaction value)?
         onGetSentHistoryTransaction,
@@ -326,6 +354,8 @@ class _$_Loading implements _Loading {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
+    required TResult Function(String message) onCancelOrder,
+    required TResult Function(List<BankDataModel> listBank) onGetBankData,
     required TResult Function(List<TransactionDataModel> data)
         onGetHistoryTransaction,
     required TResult Function(List<FullTransactionDataModel> data)
@@ -347,6 +377,8 @@ class _$_Loading implements _Loading {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
+    TResult Function(String message)? onCancelOrder,
+    TResult Function(List<BankDataModel> listBank)? onGetBankData,
     TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
     TResult Function(List<FullTransactionDataModel> data)?
         onGetSentHistoryTransaction,
@@ -369,6 +401,8 @@ class _$_Loading implements _Loading {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
+    required TResult Function(_OnCancelOrder value) onCancelOrder,
+    required TResult Function(_OnGetBankData value) onGetBankData,
     required TResult Function(_OnGetHistoryTransaction value)
         onGetHistoryTransaction,
     required TResult Function(_OnGetSentHistoryTransaction value)
@@ -389,6 +423,8 @@ class _$_Loading implements _Loading {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
+    TResult Function(_OnCancelOrder value)? onCancelOrder,
+    TResult Function(_OnGetBankData value)? onGetBankData,
     TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
     TResult Function(_OnGetSentHistoryTransaction value)?
         onGetSentHistoryTransaction,
@@ -475,6 +511,8 @@ class _$_Error implements _Error {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
+    required TResult Function(String message) onCancelOrder,
+    required TResult Function(List<BankDataModel> listBank) onGetBankData,
     required TResult Function(List<TransactionDataModel> data)
         onGetHistoryTransaction,
     required TResult Function(List<FullTransactionDataModel> data)
@@ -496,6 +534,8 @@ class _$_Error implements _Error {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
+    TResult Function(String message)? onCancelOrder,
+    TResult Function(List<BankDataModel> listBank)? onGetBankData,
     TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
     TResult Function(List<FullTransactionDataModel> data)?
         onGetSentHistoryTransaction,
@@ -518,6 +558,8 @@ class _$_Error implements _Error {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
+    required TResult Function(_OnCancelOrder value) onCancelOrder,
+    required TResult Function(_OnGetBankData value) onGetBankData,
     required TResult Function(_OnGetHistoryTransaction value)
         onGetHistoryTransaction,
     required TResult Function(_OnGetSentHistoryTransaction value)
@@ -538,6 +580,8 @@ class _$_Error implements _Error {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
+    TResult Function(_OnCancelOrder value)? onCancelOrder,
+    TResult Function(_OnGetBankData value)? onGetBankData,
     TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
     TResult Function(_OnGetSentHistoryTransaction value)?
         onGetSentHistoryTransaction,
@@ -561,6 +605,337 @@ abstract class _Error implements TransactionState {
   String get error => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$ErrorCopyWith<_Error> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$OnCancelOrderCopyWith<$Res> {
+  factory _$OnCancelOrderCopyWith(
+          _OnCancelOrder value, $Res Function(_OnCancelOrder) then) =
+      __$OnCancelOrderCopyWithImpl<$Res>;
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$OnCancelOrderCopyWithImpl<$Res>
+    extends _$TransactionStateCopyWithImpl<$Res>
+    implements _$OnCancelOrderCopyWith<$Res> {
+  __$OnCancelOrderCopyWithImpl(
+      _OnCancelOrder _value, $Res Function(_OnCancelOrder) _then)
+      : super(_value, (v) => _then(v as _OnCancelOrder));
+
+  @override
+  _OnCancelOrder get _value => super._value as _OnCancelOrder;
+
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(_OnCancelOrder(
+      message == freezed
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_OnCancelOrder implements _OnCancelOrder {
+  const _$_OnCancelOrder(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'TransactionState.onCancelOrder(message: $message)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _OnCancelOrder &&
+            (identical(other.message, message) ||
+                const DeepCollectionEquality().equals(other.message, message)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(message);
+
+  @JsonKey(ignore: true)
+  @override
+  _$OnCancelOrderCopyWith<_OnCancelOrder> get copyWith =>
+      __$OnCancelOrderCopyWithImpl<_OnCancelOrder>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(String message) onCancelOrder,
+    required TResult Function(List<BankDataModel> listBank) onGetBankData,
+    required TResult Function(List<TransactionDataModel> data)
+        onGetHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetSentHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetAllTransaction,
+    required TResult Function(List<TransactionDataModelV2> data)
+        onGetHistoryTransactionV2,
+    required TResult Function(TransResponse data) onAddNewTransaction,
+    required TResult Function(MidtransStatusDataModel data)
+        onCheckMidtransStatus,
+  }) {
+    return onCancelOrder(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(String message)? onCancelOrder,
+    TResult Function(List<BankDataModel> listBank)? onGetBankData,
+    TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)?
+        onGetSentHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)? onGetAllTransaction,
+    TResult Function(List<TransactionDataModelV2> data)?
+        onGetHistoryTransactionV2,
+    TResult Function(TransResponse data)? onAddNewTransaction,
+    TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    required TResult orElse(),
+  }) {
+    if (onCancelOrder != null) {
+      return onCancelOrder(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnCancelOrder value) onCancelOrder,
+    required TResult Function(_OnGetBankData value) onGetBankData,
+    required TResult Function(_OnGetHistoryTransaction value)
+        onGetHistoryTransaction,
+    required TResult Function(_OnGetSentHistoryTransaction value)
+        onGetSentHistoryTransaction,
+    required TResult Function(_OnGetAllTransaction value) onGetAllTransaction,
+    required TResult Function(_OnGetHistoryTransactionV2 value)
+        onGetHistoryTransactionV2,
+    required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
+    required TResult Function(_OnCheckMidtransStatus value)
+        onCheckMidtransStatus,
+  }) {
+    return onCancelOrder(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnCancelOrder value)? onCancelOrder,
+    TResult Function(_OnGetBankData value)? onGetBankData,
+    TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
+    TResult Function(_OnGetSentHistoryTransaction value)?
+        onGetSentHistoryTransaction,
+    TResult Function(_OnGetAllTransaction value)? onGetAllTransaction,
+    TResult Function(_OnGetHistoryTransactionV2 value)?
+        onGetHistoryTransactionV2,
+    TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
+    TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    required TResult orElse(),
+  }) {
+    if (onCancelOrder != null) {
+      return onCancelOrder(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnCancelOrder implements TransactionState {
+  const factory _OnCancelOrder(String message) = _$_OnCancelOrder;
+
+  String get message => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$OnCancelOrderCopyWith<_OnCancelOrder> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$OnGetBankDataCopyWith<$Res> {
+  factory _$OnGetBankDataCopyWith(
+          _OnGetBankData value, $Res Function(_OnGetBankData) then) =
+      __$OnGetBankDataCopyWithImpl<$Res>;
+  $Res call({List<BankDataModel> listBank});
+}
+
+/// @nodoc
+class __$OnGetBankDataCopyWithImpl<$Res>
+    extends _$TransactionStateCopyWithImpl<$Res>
+    implements _$OnGetBankDataCopyWith<$Res> {
+  __$OnGetBankDataCopyWithImpl(
+      _OnGetBankData _value, $Res Function(_OnGetBankData) _then)
+      : super(_value, (v) => _then(v as _OnGetBankData));
+
+  @override
+  _OnGetBankData get _value => super._value as _OnGetBankData;
+
+  @override
+  $Res call({
+    Object? listBank = freezed,
+  }) {
+    return _then(_OnGetBankData(
+      listBank == freezed
+          ? _value.listBank
+          : listBank // ignore: cast_nullable_to_non_nullable
+              as List<BankDataModel>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_OnGetBankData implements _OnGetBankData {
+  const _$_OnGetBankData(this.listBank);
+
+  @override
+  final List<BankDataModel> listBank;
+
+  @override
+  String toString() {
+    return 'TransactionState.onGetBankData(listBank: $listBank)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _OnGetBankData &&
+            (identical(other.listBank, listBank) ||
+                const DeepCollectionEquality()
+                    .equals(other.listBank, listBank)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(listBank);
+
+  @JsonKey(ignore: true)
+  @override
+  _$OnGetBankDataCopyWith<_OnGetBankData> get copyWith =>
+      __$OnGetBankDataCopyWithImpl<_OnGetBankData>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(String message) onCancelOrder,
+    required TResult Function(List<BankDataModel> listBank) onGetBankData,
+    required TResult Function(List<TransactionDataModel> data)
+        onGetHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetSentHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetAllTransaction,
+    required TResult Function(List<TransactionDataModelV2> data)
+        onGetHistoryTransactionV2,
+    required TResult Function(TransResponse data) onAddNewTransaction,
+    required TResult Function(MidtransStatusDataModel data)
+        onCheckMidtransStatus,
+  }) {
+    return onGetBankData(listBank);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(String message)? onCancelOrder,
+    TResult Function(List<BankDataModel> listBank)? onGetBankData,
+    TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)?
+        onGetSentHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)? onGetAllTransaction,
+    TResult Function(List<TransactionDataModelV2> data)?
+        onGetHistoryTransactionV2,
+    TResult Function(TransResponse data)? onAddNewTransaction,
+    TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    required TResult orElse(),
+  }) {
+    if (onGetBankData != null) {
+      return onGetBankData(listBank);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnCancelOrder value) onCancelOrder,
+    required TResult Function(_OnGetBankData value) onGetBankData,
+    required TResult Function(_OnGetHistoryTransaction value)
+        onGetHistoryTransaction,
+    required TResult Function(_OnGetSentHistoryTransaction value)
+        onGetSentHistoryTransaction,
+    required TResult Function(_OnGetAllTransaction value) onGetAllTransaction,
+    required TResult Function(_OnGetHistoryTransactionV2 value)
+        onGetHistoryTransactionV2,
+    required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
+    required TResult Function(_OnCheckMidtransStatus value)
+        onCheckMidtransStatus,
+  }) {
+    return onGetBankData(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnCancelOrder value)? onCancelOrder,
+    TResult Function(_OnGetBankData value)? onGetBankData,
+    TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
+    TResult Function(_OnGetSentHistoryTransaction value)?
+        onGetSentHistoryTransaction,
+    TResult Function(_OnGetAllTransaction value)? onGetAllTransaction,
+    TResult Function(_OnGetHistoryTransactionV2 value)?
+        onGetHistoryTransactionV2,
+    TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
+    TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    required TResult orElse(),
+  }) {
+    if (onGetBankData != null) {
+      return onGetBankData(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnGetBankData implements TransactionState {
+  const factory _OnGetBankData(List<BankDataModel> listBank) = _$_OnGetBankData;
+
+  List<BankDataModel> get listBank => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$OnGetBankDataCopyWith<_OnGetBankData> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -633,6 +1008,8 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
+    required TResult Function(String message) onCancelOrder,
+    required TResult Function(List<BankDataModel> listBank) onGetBankData,
     required TResult Function(List<TransactionDataModel> data)
         onGetHistoryTransaction,
     required TResult Function(List<FullTransactionDataModel> data)
@@ -654,6 +1031,8 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
+    TResult Function(String message)? onCancelOrder,
+    TResult Function(List<BankDataModel> listBank)? onGetBankData,
     TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
     TResult Function(List<FullTransactionDataModel> data)?
         onGetSentHistoryTransaction,
@@ -676,6 +1055,8 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
+    required TResult Function(_OnCancelOrder value) onCancelOrder,
+    required TResult Function(_OnGetBankData value) onGetBankData,
     required TResult Function(_OnGetHistoryTransaction value)
         onGetHistoryTransaction,
     required TResult Function(_OnGetSentHistoryTransaction value)
@@ -696,6 +1077,8 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
+    TResult Function(_OnCancelOrder value)? onCancelOrder,
+    TResult Function(_OnGetBankData value)? onGetBankData,
     TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
     TResult Function(_OnGetSentHistoryTransaction value)?
         onGetSentHistoryTransaction,
@@ -795,6 +1178,8 @@ class _$_OnGetSentHistoryTransaction implements _OnGetSentHistoryTransaction {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
+    required TResult Function(String message) onCancelOrder,
+    required TResult Function(List<BankDataModel> listBank) onGetBankData,
     required TResult Function(List<TransactionDataModel> data)
         onGetHistoryTransaction,
     required TResult Function(List<FullTransactionDataModel> data)
@@ -816,6 +1201,8 @@ class _$_OnGetSentHistoryTransaction implements _OnGetSentHistoryTransaction {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
+    TResult Function(String message)? onCancelOrder,
+    TResult Function(List<BankDataModel> listBank)? onGetBankData,
     TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
     TResult Function(List<FullTransactionDataModel> data)?
         onGetSentHistoryTransaction,
@@ -838,6 +1225,8 @@ class _$_OnGetSentHistoryTransaction implements _OnGetSentHistoryTransaction {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
+    required TResult Function(_OnCancelOrder value) onCancelOrder,
+    required TResult Function(_OnGetBankData value) onGetBankData,
     required TResult Function(_OnGetHistoryTransaction value)
         onGetHistoryTransaction,
     required TResult Function(_OnGetSentHistoryTransaction value)
@@ -858,6 +1247,8 @@ class _$_OnGetSentHistoryTransaction implements _OnGetSentHistoryTransaction {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
+    TResult Function(_OnCancelOrder value)? onCancelOrder,
+    TResult Function(_OnGetBankData value)? onGetBankData,
     TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
     TResult Function(_OnGetSentHistoryTransaction value)?
         onGetSentHistoryTransaction,
@@ -954,6 +1345,8 @@ class _$_OnGetAllTransaction implements _OnGetAllTransaction {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
+    required TResult Function(String message) onCancelOrder,
+    required TResult Function(List<BankDataModel> listBank) onGetBankData,
     required TResult Function(List<TransactionDataModel> data)
         onGetHistoryTransaction,
     required TResult Function(List<FullTransactionDataModel> data)
@@ -975,6 +1368,8 @@ class _$_OnGetAllTransaction implements _OnGetAllTransaction {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
+    TResult Function(String message)? onCancelOrder,
+    TResult Function(List<BankDataModel> listBank)? onGetBankData,
     TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
     TResult Function(List<FullTransactionDataModel> data)?
         onGetSentHistoryTransaction,
@@ -997,6 +1392,8 @@ class _$_OnGetAllTransaction implements _OnGetAllTransaction {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
+    required TResult Function(_OnCancelOrder value) onCancelOrder,
+    required TResult Function(_OnGetBankData value) onGetBankData,
     required TResult Function(_OnGetHistoryTransaction value)
         onGetHistoryTransaction,
     required TResult Function(_OnGetSentHistoryTransaction value)
@@ -1017,6 +1414,8 @@ class _$_OnGetAllTransaction implements _OnGetAllTransaction {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
+    TResult Function(_OnCancelOrder value)? onCancelOrder,
+    TResult Function(_OnGetBankData value)? onGetBankData,
     TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
     TResult Function(_OnGetSentHistoryTransaction value)?
         onGetSentHistoryTransaction,
@@ -1115,6 +1514,8 @@ class _$_OnGetHistoryTransactionV2 implements _OnGetHistoryTransactionV2 {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
+    required TResult Function(String message) onCancelOrder,
+    required TResult Function(List<BankDataModel> listBank) onGetBankData,
     required TResult Function(List<TransactionDataModel> data)
         onGetHistoryTransaction,
     required TResult Function(List<FullTransactionDataModel> data)
@@ -1136,6 +1537,8 @@ class _$_OnGetHistoryTransactionV2 implements _OnGetHistoryTransactionV2 {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
+    TResult Function(String message)? onCancelOrder,
+    TResult Function(List<BankDataModel> listBank)? onGetBankData,
     TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
     TResult Function(List<FullTransactionDataModel> data)?
         onGetSentHistoryTransaction,
@@ -1158,6 +1561,8 @@ class _$_OnGetHistoryTransactionV2 implements _OnGetHistoryTransactionV2 {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
+    required TResult Function(_OnCancelOrder value) onCancelOrder,
+    required TResult Function(_OnGetBankData value) onGetBankData,
     required TResult Function(_OnGetHistoryTransaction value)
         onGetHistoryTransaction,
     required TResult Function(_OnGetSentHistoryTransaction value)
@@ -1178,6 +1583,8 @@ class _$_OnGetHistoryTransactionV2 implements _OnGetHistoryTransactionV2 {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
+    TResult Function(_OnCancelOrder value)? onCancelOrder,
+    TResult Function(_OnGetBankData value)? onGetBankData,
     TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
     TResult Function(_OnGetSentHistoryTransaction value)?
         onGetSentHistoryTransaction,
@@ -1274,6 +1681,8 @@ class _$_OnAddNewTransaction implements _OnAddNewTransaction {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
+    required TResult Function(String message) onCancelOrder,
+    required TResult Function(List<BankDataModel> listBank) onGetBankData,
     required TResult Function(List<TransactionDataModel> data)
         onGetHistoryTransaction,
     required TResult Function(List<FullTransactionDataModel> data)
@@ -1295,6 +1704,8 @@ class _$_OnAddNewTransaction implements _OnAddNewTransaction {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
+    TResult Function(String message)? onCancelOrder,
+    TResult Function(List<BankDataModel> listBank)? onGetBankData,
     TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
     TResult Function(List<FullTransactionDataModel> data)?
         onGetSentHistoryTransaction,
@@ -1317,6 +1728,8 @@ class _$_OnAddNewTransaction implements _OnAddNewTransaction {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
+    required TResult Function(_OnCancelOrder value) onCancelOrder,
+    required TResult Function(_OnGetBankData value) onGetBankData,
     required TResult Function(_OnGetHistoryTransaction value)
         onGetHistoryTransaction,
     required TResult Function(_OnGetSentHistoryTransaction value)
@@ -1337,6 +1750,8 @@ class _$_OnAddNewTransaction implements _OnAddNewTransaction {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
+    TResult Function(_OnCancelOrder value)? onCancelOrder,
+    TResult Function(_OnGetBankData value)? onGetBankData,
     TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
     TResult Function(_OnGetSentHistoryTransaction value)?
         onGetSentHistoryTransaction,
@@ -1442,6 +1857,8 @@ class _$_OnCheckMidtransStatus implements _OnCheckMidtransStatus {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
+    required TResult Function(String message) onCancelOrder,
+    required TResult Function(List<BankDataModel> listBank) onGetBankData,
     required TResult Function(List<TransactionDataModel> data)
         onGetHistoryTransaction,
     required TResult Function(List<FullTransactionDataModel> data)
@@ -1463,6 +1880,8 @@ class _$_OnCheckMidtransStatus implements _OnCheckMidtransStatus {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
+    TResult Function(String message)? onCancelOrder,
+    TResult Function(List<BankDataModel> listBank)? onGetBankData,
     TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
     TResult Function(List<FullTransactionDataModel> data)?
         onGetSentHistoryTransaction,
@@ -1485,6 +1904,8 @@ class _$_OnCheckMidtransStatus implements _OnCheckMidtransStatus {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
+    required TResult Function(_OnCancelOrder value) onCancelOrder,
+    required TResult Function(_OnGetBankData value) onGetBankData,
     required TResult Function(_OnGetHistoryTransaction value)
         onGetHistoryTransaction,
     required TResult Function(_OnGetSentHistoryTransaction value)
@@ -1505,6 +1926,8 @@ class _$_OnCheckMidtransStatus implements _OnCheckMidtransStatus {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
+    TResult Function(_OnCancelOrder value)? onCancelOrder,
+    TResult Function(_OnGetBankData value)? onGetBankData,
     TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
     TResult Function(_OnGetSentHistoryTransaction value)?
         onGetSentHistoryTransaction,
