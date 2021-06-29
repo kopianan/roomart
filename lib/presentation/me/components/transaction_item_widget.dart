@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:roomart/domain/transaction/transaction_data_model.dart';
 import 'package:roomart/presentation/me/widgets/transaction_history_detail_page.dart';
+import 'package:roomart/presentation/me/widgets2/new_history_transaction_detail_page.dart';
 import 'package:roomart/utils/formater.dart';
 
 class TransactionItemWidget extends StatelessWidget {
@@ -17,7 +18,7 @@ class TransactionItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Get.toNamed(TransactionHistoryDetailPage.TAG, arguments: _data);
+        Get.toNamed(NewHistoryTransactionDetailPage.TAG, arguments: _data);
       },
       child: Column(
         children: [

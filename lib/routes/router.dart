@@ -12,11 +12,14 @@ import 'package:roomart/presentation/discount/discount_page.dart';
 import 'package:roomart/presentation/item_detail/item_detail_page.dart';
 import 'package:roomart/presentation/me/change_password_page.dart';
 import 'package:roomart/presentation/me/order_page.dart';
+import 'package:roomart/presentation/me/payment_confirmation_page.dart';
 import 'package:roomart/presentation/me/profile_page.dart';
 import 'package:roomart/presentation/me/widgets/detail_transaction_history_page.dart';
+import 'package:roomart/presentation/me/widgets/new_transaction_history_page.dart';
 import 'package:roomart/presentation/me/widgets/transaction_history_detail_page.dart';
 import 'package:roomart/presentation/me/widgets/transaction_history_detail_page_finished.dart';
 import 'package:roomart/presentation/me/widgets/transaction_history_detail_page_full.dart';
+import 'package:roomart/presentation/me/widgets2/new_history_transaction_detail_page.dart';
 import 'package:roomart/presentation/payment/payment_page.dart';
 import 'package:roomart/presentation/payment/payment_midtrans_page.dart';
 import 'package:roomart/presentation/payment/payment_progress_page.dart';
@@ -57,8 +60,13 @@ List<GetPage> pages = [
   GetPage(name: PaymentMethodPage.TAG, page: () => PaymentMethodPage()),
   GetPage(name: ChangePasswordPage.TAG, page: () => ChangePasswordPage()),
   GetPage(name: DiscountPage.TAG, page: () => DiscountPage()),
+  GetPage(
+      name: PaymentConfirmationPage.TAG, page: () => PaymentConfirmationPage()),
   GetPage(name: ProfilePage.TAG, page: () => ProfilePage()),
   GetPage(name: DeliveryPage.TAG, page: () => DeliveryPage()),
+  GetPage(
+      name: NewHistoryTransactionDetailPage.TAG,
+      page: () => NewHistoryTransactionDetailPage()),
   GetPage(name: PaymentMidtransPage.TAG, page: () => PaymentMidtransPage()),
   GetPage(
       name: DetailTransactionHistoryPage.TAG,

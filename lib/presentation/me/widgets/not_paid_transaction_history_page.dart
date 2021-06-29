@@ -120,12 +120,19 @@ class _NotPaidTransactionHistoryState extends State<NotPaidTransactionHistory> {
                 controller: _refreshController,
                 onRefresh: _onRefresh,
                 onLoading: _onLoading,
-                child: ListView.builder(
-                    itemCount: trans.getNotPaidTransaction.length,
-                    itemBuilder: (context, index) {
-                      return TransactionItemWidget(
-                          data: trans.getNotPaidTransaction[index]);
-                    }),
+                child: (trans.getNotPaidTransaction.length == 0)
+                    ? Center(
+                        child: Text(
+                          "No Transaction",
+                          style: TextStyle(fontSize: 30),
+                        ),
+                      )
+                    : ListView.builder(
+                        itemCount: trans.getNotPaidTransaction.length,
+                        itemBuilder: (context, index) {
+                          return TransactionItemWidget(
+                              data: trans.getNotPaidTransaction[index]);
+                        }),
               );
             })));
   }

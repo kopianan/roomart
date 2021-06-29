@@ -7,7 +7,6 @@ import 'package:roomart/domain/raja_ongkir/delivery_cost/costs.dart';
 import 'package:roomart/domain/transaction/full_transaction_data_model.dart';
 import 'package:roomart/domain/transaction/transaction_data_model.dart';
 import 'package:roomart/domain/transaction/transaction_data_model_v2.dart';
-import 'package:roomart/presentation/payment/widgets/delivery_detail.dart';
 
 class TransactionController extends GetxController {
   RxInt newOffset = 0.obs;

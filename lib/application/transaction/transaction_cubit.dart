@@ -4,6 +4,7 @@ import 'package:injectable/injectable.dart';
 import 'package:roomart/domain/transaction/full_transaction_data_model.dart';
 import 'package:roomart/domain/transaction/models/transaction_item_data_model.dart';
 import 'package:roomart/domain/transaction/models/transaction_req_res.dart';
+import 'package:roomart/domain/transaction/trans_item/bank_data_model.dart';
 import 'package:roomart/domain/transaction/trans_item/midtrans_status_data_model.dart';
 import 'package:roomart/domain/transaction/trans_item/trans_request.dart';
 import 'package:roomart/domain/transaction/trans_item/trans_response.dart';
@@ -112,6 +113,46 @@ class TransactionCubit extends Cubit<TransactionState> {
       _result.fold(
         (l) => emit(TransactionState.error(l.toString())),
         (r) => emit(TransactionState.onGetAllTransaction(r)),
+      );
+    } catch (e) {
+      emit(TransactionState.error(e.toString()));
+    }
+  }
+
+  void cancelTransaction(String? custId, String? invoiceNumber) async {
+    emit(TransactionState.loading());
+    try {
+      final _result = await iTransactionFacade!
+          .cancelTransaction(custId: custId, invoiceNumber: invoiceNumber);
+      _result.fold(
+        (l) => emit(TransactionState.error(l.toString())),
+        (r) => emit(TransactionState.onCancelOrder(r)),
+      );
+    } catch (e) {
+      emit(TransactionState.error(e.toString()));
+    }
+  }
+
+  void getAllBank() async {
+    emit(TransactionState.loading());
+    try {
+      final _result = await iTransactionFacade!.getBankData();
+      _result.fold(
+        (l) => emit(TransactionState.error(l.toString())),
+        (r) => emit(TransactionState.onGetBankData(r)),
+      );
+    } catch (e) {
+      emit(TransactionState.error(e.toString()));
+    }
+  }
+
+  void confrimPayment(dynamic data) async {
+    emit(TransactionState.loading());
+    try {
+      final _result = await iTransactionFacade!.confirmPayment(data);
+      _result.fold(
+        (l) => emit(TransactionState.error(l.toString())),
+        (r) => emit(TransactionState.onConfirmPayment(r)),
       );
     } catch (e) {
       emit(TransactionState.error(e.toString()));
