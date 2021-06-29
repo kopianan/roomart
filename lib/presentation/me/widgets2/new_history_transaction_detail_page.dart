@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:roomart/application/auth/auth_controller.dart';
@@ -6,6 +7,7 @@ import 'package:roomart/application/history_detail/history_detail_cubit.dart';
 import 'package:roomart/application/transaction/transaction_cubit.dart';
 import 'package:roomart/domain/transaction/models/transaction_item_data_model.dart';
 import 'package:roomart/domain/transaction/transaction_data_model.dart';
+import 'package:roomart/presentation/me/payment_confirmation_page.dart';
 import 'package:roomart/presentation/widgets/button_collection.dart';
 import 'package:roomart/utils/formater.dart';
 
@@ -24,7 +26,7 @@ class _NewHistoryTransactionDetailPageState
   @override
   void initState() {
     detail = Get.arguments as TransactionDataModel?;
-    print(detail!.items);
+
     super.initState();
   }
 
@@ -42,11 +44,10 @@ class _NewHistoryTransactionDetailPageState
         child: BlocConsumer<HistoryDetailCubit, HistoryDetailState>(
             listener: (context, state) {
           state.maybeMap(
-              orElse: () {},
-              error: (e) {
-                print(e);
-              },
-              onGetDetailHistory: (e) => print(e));
+            orElse: () {},
+            error: (e) {},
+            onGetDetailHistory: (e) {},
+          );
         }, builder: (context, state) {
           return Container(
             child: Column(
@@ -74,60 +75,72 @@ class _NewHistoryTransactionDetailPageState
                       SliverToBoxAdapter(
                           child: paymentWarn(this.detail!.statusEnum)),
                       SliverPadding(
-                          padding: EdgeInsets.symmetric(vertical: 10)),
-                      SliverToBoxAdapter(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Deskripsi",
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.bold),
-                            ),
-                            SizedBox(height: 10),
-                            Row(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Icon(
-                                    Icons.delivery_dining,
-                                    size: 50,
-                                  ),
-                                ),
-                                SizedBox(width: 20),
-                                Text(detail!.remark!)
-                              ],
-                            ),
-                          ],
-                        ),
+                        padding: EdgeInsets.symmetric(vertical: 10),
                       ),
-                      SliverPadding(
-                          padding: EdgeInsets.symmetric(vertical: 10)),
-                      SliverPadding(
-                        padding: EdgeInsets.only(bottom: 10, top: 10),
-                        sliver: SliverToBoxAdapter(
-                          child: Text(
-                            "Detail Pesanan",
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold),
+                      SliverToBoxAdapter(
+                        child: Card(
+                          margin: EdgeInsets.all(8),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  "Deskripsi",
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              Divider(height: 15),
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 30.0),
+                                    child: Icon(
+                                      Icons.delivery_dining,
+                                      size: 50,
+                                    ),
+                                  ),
+                                  Text(detail!.remark!)
+                                ],
+                              ),
+                            ],
                           ),
                         ),
                       ),
-                      SliverList(
-                          delegate:
-                              SliverChildBuilderDelegate((context, index) {
-                        return detailItem(detail!.items![index]);
-                      }, childCount: detail!.items!.length)),
                       SliverToBoxAdapter(
-                          child: Divider(
-                        thickness: 2,
-                        height: 15,
-                      )),
-                      SliverToBoxAdapter(
-                        child: SummaryDetail(
-                          data: detail,
+                        child: Card(
+                          margin: EdgeInsets.all(8),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Detail Pesanan",
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Divider(height: 15),
+                                ListView.builder(
+                                    physics: NeverScrollableScrollPhysics(),
+                                    shrinkWrap: true,
+                                    itemCount: detail!.items!.length,
+                                    itemBuilder: (context, index) {
+                                      return detailItem(detail!.items![index]);
+                                    }),
+                                Divider(height: 10),
+                                SummaryDetail(
+                                  data: detail,
+                                )
+                              ],
+                            ),
+                          ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -158,7 +171,10 @@ class _NewHistoryTransactionDetailPageState
                               child: DefaultButton1(
                                   color: Colors.orange,
                                   text: "Konfirmasi Pembayaran",
-                                  onPressed: () {}),
+                                  onPressed: () {
+                                    Get.toNamed(PaymentConfirmationPage.TAG,
+                                        arguments: detail);
+                                  }),
                             ),
                             SizedBox(width: 10),
                             Expanded(
@@ -220,52 +236,74 @@ class _NewHistoryTransactionDetailPageState
 
   Widget paymentWarn(int? status) {
     if (status == 0) {
-      return Column(
-        children: [
-          Text(
-            "Harap segera melakukan pembayaran ke :\n",
-            style: TextStyle(fontSize: 16),
-          ),
-          BlocProvider(
-            create: (context) => getIt<TransactionCubit>()..getAllBank(),
-            child: BlocConsumer<TransactionCubit, TransactionState>(
-              listener: (context, state) {
-                print(state);
-              },
-              builder: (context, state) {
-                return state.maybeMap(
-                  orElse: () {
-                    return Text("D");
-                  },
-                  error: (e) {
-                    return ListTile(
-                      title: Text(e.toString()),
-                      subtitle: Text("Tap to refresh"),
-                      onTap: () {},
-                    );
-                  },
-                  loading: (e) {
-                    return ListTile(
-                      title: Text("Getting bank data"),
-                      leading: Center(
-                        child: CircularProgressIndicator(),
-                      ),
-                    );
-                  },
-                  onGetBankData: (e) {
-                    // return Text("DF");
-                    return Column(
-                        children: e.listBank
-                            .map((e) => ListTile(
-                                  title: Text(e.accountName),
-                                ))
-                            .toList());
-                  },
-                );
-              },
+      return Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Harap segera melakukan pembayaran ke :",
+              style: TextStyle(fontSize: 16, color: Colors.grey),
             ),
-          )
-        ],
+            BlocProvider(
+              create: (context) => getIt<TransactionCubit>()..getAllBank(),
+              child: BlocConsumer<TransactionCubit, TransactionState>(
+                listener: (context, state) {},
+                builder: (context, state) {
+                  return state.maybeMap(
+                    orElse: () {
+                      return Text("D");
+                    },
+                    error: (e) {
+                      return ListTile(
+                        title: Text(e.toString()),
+                        subtitle: Text("Tap to refresh"),
+                        onTap: () {
+                          getIt<TransactionCubit>().getAllBank();
+                        },
+                      );
+                    },
+                    loading: (e) {
+                      return ListTile(
+                        title: Text("Getting bank data"),
+                        leading: Transform.scale(
+                          scale: 0.5,
+                          child: CircularProgressIndicator(),
+                        ),
+                      );
+                    },
+                    onGetBankData: (e) {
+                      // return Text("DF");
+                      return Column(
+                          children: e.listBank
+                              .map((e) => ListTile(
+                                    onTap: () {
+                                      Clipboard.setData(
+                                              ClipboardData(text: e.accountNo))
+                                          .then((value) =>
+                                              Get.showSnackbar(GetBar(
+                                                message:
+                                                    "Nomor sudah di-copy ke clipboard",
+                                                duration: Duration(seconds: 3),
+                                              )));
+                                    },
+                                    title: Text(e.accountName),
+                                    subtitle: Text(
+                                      "${e.bankName} a.n ${e.accountNo}",
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    trailing: Icon(Icons.copy),
+                                  ))
+                              .toList());
+                    },
+                  );
+                },
+              ),
+            )
+          ],
+        ),
       );
     }
     return SizedBox();
@@ -278,10 +316,7 @@ class _NewHistoryTransactionDetailPageState
           children: [
             Expanded(
               flex: 7,
-              child: Text(
-                item.itemName!,
-                style: TextStyle(fontSize: 16),
-              ),
+              child: Text(item.itemName!),
             ),
             Expanded(
               flex: 3,
@@ -299,7 +334,7 @@ class _NewHistoryTransactionDetailPageState
           ],
         ),
         SizedBox(
-          height: 4,
+          height: 10,
         )
       ],
     );

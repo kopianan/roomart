@@ -30,6 +30,12 @@ class _$TransactionStateTearOff {
     );
   }
 
+  _OnConfirmPayment onConfirmPayment(String confirm) {
+    return _OnConfirmPayment(
+      confirm,
+    );
+  }
+
   _OnCancelOrder onCancelOrder(String message) {
     return _OnCancelOrder(
       message,
@@ -93,6 +99,7 @@ mixin _$TransactionState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
+    required TResult Function(String confirm) onConfirmPayment,
     required TResult Function(String message) onCancelOrder,
     required TResult Function(List<BankDataModel> listBank) onGetBankData,
     required TResult Function(List<TransactionDataModel> data)
@@ -113,6 +120,7 @@ mixin _$TransactionState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
+    TResult Function(String confirm)? onConfirmPayment,
     TResult Function(String message)? onCancelOrder,
     TResult Function(List<BankDataModel> listBank)? onGetBankData,
     TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
@@ -131,6 +139,7 @@ mixin _$TransactionState {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
+    required TResult Function(_OnConfirmPayment value) onConfirmPayment,
     required TResult Function(_OnCancelOrder value) onCancelOrder,
     required TResult Function(_OnGetBankData value) onGetBankData,
     required TResult Function(_OnGetHistoryTransaction value)
@@ -150,6 +159,7 @@ mixin _$TransactionState {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
+    TResult Function(_OnConfirmPayment value)? onConfirmPayment,
     TResult Function(_OnCancelOrder value)? onCancelOrder,
     TResult Function(_OnGetBankData value)? onGetBankData,
     TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
@@ -222,6 +232,7 @@ class _$_Initial implements _Initial {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
+    required TResult Function(String confirm) onConfirmPayment,
     required TResult Function(String message) onCancelOrder,
     required TResult Function(List<BankDataModel> listBank) onGetBankData,
     required TResult Function(List<TransactionDataModel> data)
@@ -245,6 +256,7 @@ class _$_Initial implements _Initial {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
+    TResult Function(String confirm)? onConfirmPayment,
     TResult Function(String message)? onCancelOrder,
     TResult Function(List<BankDataModel> listBank)? onGetBankData,
     TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
@@ -269,6 +281,7 @@ class _$_Initial implements _Initial {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
+    required TResult Function(_OnConfirmPayment value) onConfirmPayment,
     required TResult Function(_OnCancelOrder value) onCancelOrder,
     required TResult Function(_OnGetBankData value) onGetBankData,
     required TResult Function(_OnGetHistoryTransaction value)
@@ -291,6 +304,7 @@ class _$_Initial implements _Initial {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
+    TResult Function(_OnConfirmPayment value)? onConfirmPayment,
     TResult Function(_OnCancelOrder value)? onCancelOrder,
     TResult Function(_OnGetBankData value)? onGetBankData,
     TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
@@ -354,6 +368,7 @@ class _$_Loading implements _Loading {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
+    required TResult Function(String confirm) onConfirmPayment,
     required TResult Function(String message) onCancelOrder,
     required TResult Function(List<BankDataModel> listBank) onGetBankData,
     required TResult Function(List<TransactionDataModel> data)
@@ -377,6 +392,7 @@ class _$_Loading implements _Loading {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
+    TResult Function(String confirm)? onConfirmPayment,
     TResult Function(String message)? onCancelOrder,
     TResult Function(List<BankDataModel> listBank)? onGetBankData,
     TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
@@ -401,6 +417,7 @@ class _$_Loading implements _Loading {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
+    required TResult Function(_OnConfirmPayment value) onConfirmPayment,
     required TResult Function(_OnCancelOrder value) onCancelOrder,
     required TResult Function(_OnGetBankData value) onGetBankData,
     required TResult Function(_OnGetHistoryTransaction value)
@@ -423,6 +440,7 @@ class _$_Loading implements _Loading {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
+    TResult Function(_OnConfirmPayment value)? onConfirmPayment,
     TResult Function(_OnCancelOrder value)? onCancelOrder,
     TResult Function(_OnGetBankData value)? onGetBankData,
     TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
@@ -511,6 +529,7 @@ class _$_Error implements _Error {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
+    required TResult Function(String confirm) onConfirmPayment,
     required TResult Function(String message) onCancelOrder,
     required TResult Function(List<BankDataModel> listBank) onGetBankData,
     required TResult Function(List<TransactionDataModel> data)
@@ -534,6 +553,7 @@ class _$_Error implements _Error {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
+    TResult Function(String confirm)? onConfirmPayment,
     TResult Function(String message)? onCancelOrder,
     TResult Function(List<BankDataModel> listBank)? onGetBankData,
     TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
@@ -558,6 +578,7 @@ class _$_Error implements _Error {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
+    required TResult Function(_OnConfirmPayment value) onConfirmPayment,
     required TResult Function(_OnCancelOrder value) onCancelOrder,
     required TResult Function(_OnGetBankData value) onGetBankData,
     required TResult Function(_OnGetHistoryTransaction value)
@@ -580,6 +601,7 @@ class _$_Error implements _Error {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
+    TResult Function(_OnConfirmPayment value)? onConfirmPayment,
     TResult Function(_OnCancelOrder value)? onCancelOrder,
     TResult Function(_OnGetBankData value)? onGetBankData,
     TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
@@ -605,6 +627,175 @@ abstract class _Error implements TransactionState {
   String get error => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$ErrorCopyWith<_Error> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$OnConfirmPaymentCopyWith<$Res> {
+  factory _$OnConfirmPaymentCopyWith(
+          _OnConfirmPayment value, $Res Function(_OnConfirmPayment) then) =
+      __$OnConfirmPaymentCopyWithImpl<$Res>;
+  $Res call({String confirm});
+}
+
+/// @nodoc
+class __$OnConfirmPaymentCopyWithImpl<$Res>
+    extends _$TransactionStateCopyWithImpl<$Res>
+    implements _$OnConfirmPaymentCopyWith<$Res> {
+  __$OnConfirmPaymentCopyWithImpl(
+      _OnConfirmPayment _value, $Res Function(_OnConfirmPayment) _then)
+      : super(_value, (v) => _then(v as _OnConfirmPayment));
+
+  @override
+  _OnConfirmPayment get _value => super._value as _OnConfirmPayment;
+
+  @override
+  $Res call({
+    Object? confirm = freezed,
+  }) {
+    return _then(_OnConfirmPayment(
+      confirm == freezed
+          ? _value.confirm
+          : confirm // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_OnConfirmPayment implements _OnConfirmPayment {
+  const _$_OnConfirmPayment(this.confirm);
+
+  @override
+  final String confirm;
+
+  @override
+  String toString() {
+    return 'TransactionState.onConfirmPayment(confirm: $confirm)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _OnConfirmPayment &&
+            (identical(other.confirm, confirm) ||
+                const DeepCollectionEquality().equals(other.confirm, confirm)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(confirm);
+
+  @JsonKey(ignore: true)
+  @override
+  _$OnConfirmPaymentCopyWith<_OnConfirmPayment> get copyWith =>
+      __$OnConfirmPaymentCopyWithImpl<_OnConfirmPayment>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(String confirm) onConfirmPayment,
+    required TResult Function(String message) onCancelOrder,
+    required TResult Function(List<BankDataModel> listBank) onGetBankData,
+    required TResult Function(List<TransactionDataModel> data)
+        onGetHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetSentHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetAllTransaction,
+    required TResult Function(List<TransactionDataModelV2> data)
+        onGetHistoryTransactionV2,
+    required TResult Function(TransResponse data) onAddNewTransaction,
+    required TResult Function(MidtransStatusDataModel data)
+        onCheckMidtransStatus,
+  }) {
+    return onConfirmPayment(confirm);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(String confirm)? onConfirmPayment,
+    TResult Function(String message)? onCancelOrder,
+    TResult Function(List<BankDataModel> listBank)? onGetBankData,
+    TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)?
+        onGetSentHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)? onGetAllTransaction,
+    TResult Function(List<TransactionDataModelV2> data)?
+        onGetHistoryTransactionV2,
+    TResult Function(TransResponse data)? onAddNewTransaction,
+    TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    required TResult orElse(),
+  }) {
+    if (onConfirmPayment != null) {
+      return onConfirmPayment(confirm);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnConfirmPayment value) onConfirmPayment,
+    required TResult Function(_OnCancelOrder value) onCancelOrder,
+    required TResult Function(_OnGetBankData value) onGetBankData,
+    required TResult Function(_OnGetHistoryTransaction value)
+        onGetHistoryTransaction,
+    required TResult Function(_OnGetSentHistoryTransaction value)
+        onGetSentHistoryTransaction,
+    required TResult Function(_OnGetAllTransaction value) onGetAllTransaction,
+    required TResult Function(_OnGetHistoryTransactionV2 value)
+        onGetHistoryTransactionV2,
+    required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
+    required TResult Function(_OnCheckMidtransStatus value)
+        onCheckMidtransStatus,
+  }) {
+    return onConfirmPayment(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnConfirmPayment value)? onConfirmPayment,
+    TResult Function(_OnCancelOrder value)? onCancelOrder,
+    TResult Function(_OnGetBankData value)? onGetBankData,
+    TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
+    TResult Function(_OnGetSentHistoryTransaction value)?
+        onGetSentHistoryTransaction,
+    TResult Function(_OnGetAllTransaction value)? onGetAllTransaction,
+    TResult Function(_OnGetHistoryTransactionV2 value)?
+        onGetHistoryTransactionV2,
+    TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
+    TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    required TResult orElse(),
+  }) {
+    if (onConfirmPayment != null) {
+      return onConfirmPayment(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnConfirmPayment implements TransactionState {
+  const factory _OnConfirmPayment(String confirm) = _$_OnConfirmPayment;
+
+  String get confirm => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$OnConfirmPaymentCopyWith<_OnConfirmPayment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -675,6 +866,7 @@ class _$_OnCancelOrder implements _OnCancelOrder {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
+    required TResult Function(String confirm) onConfirmPayment,
     required TResult Function(String message) onCancelOrder,
     required TResult Function(List<BankDataModel> listBank) onGetBankData,
     required TResult Function(List<TransactionDataModel> data)
@@ -698,6 +890,7 @@ class _$_OnCancelOrder implements _OnCancelOrder {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
+    TResult Function(String confirm)? onConfirmPayment,
     TResult Function(String message)? onCancelOrder,
     TResult Function(List<BankDataModel> listBank)? onGetBankData,
     TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
@@ -722,6 +915,7 @@ class _$_OnCancelOrder implements _OnCancelOrder {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
+    required TResult Function(_OnConfirmPayment value) onConfirmPayment,
     required TResult Function(_OnCancelOrder value) onCancelOrder,
     required TResult Function(_OnGetBankData value) onGetBankData,
     required TResult Function(_OnGetHistoryTransaction value)
@@ -744,6 +938,7 @@ class _$_OnCancelOrder implements _OnCancelOrder {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
+    TResult Function(_OnConfirmPayment value)? onConfirmPayment,
     TResult Function(_OnCancelOrder value)? onCancelOrder,
     TResult Function(_OnGetBankData value)? onGetBankData,
     TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
@@ -841,6 +1036,7 @@ class _$_OnGetBankData implements _OnGetBankData {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
+    required TResult Function(String confirm) onConfirmPayment,
     required TResult Function(String message) onCancelOrder,
     required TResult Function(List<BankDataModel> listBank) onGetBankData,
     required TResult Function(List<TransactionDataModel> data)
@@ -864,6 +1060,7 @@ class _$_OnGetBankData implements _OnGetBankData {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
+    TResult Function(String confirm)? onConfirmPayment,
     TResult Function(String message)? onCancelOrder,
     TResult Function(List<BankDataModel> listBank)? onGetBankData,
     TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
@@ -888,6 +1085,7 @@ class _$_OnGetBankData implements _OnGetBankData {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
+    required TResult Function(_OnConfirmPayment value) onConfirmPayment,
     required TResult Function(_OnCancelOrder value) onCancelOrder,
     required TResult Function(_OnGetBankData value) onGetBankData,
     required TResult Function(_OnGetHistoryTransaction value)
@@ -910,6 +1108,7 @@ class _$_OnGetBankData implements _OnGetBankData {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
+    TResult Function(_OnConfirmPayment value)? onConfirmPayment,
     TResult Function(_OnCancelOrder value)? onCancelOrder,
     TResult Function(_OnGetBankData value)? onGetBankData,
     TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
@@ -1008,6 +1207,7 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
+    required TResult Function(String confirm) onConfirmPayment,
     required TResult Function(String message) onCancelOrder,
     required TResult Function(List<BankDataModel> listBank) onGetBankData,
     required TResult Function(List<TransactionDataModel> data)
@@ -1031,6 +1231,7 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
+    TResult Function(String confirm)? onConfirmPayment,
     TResult Function(String message)? onCancelOrder,
     TResult Function(List<BankDataModel> listBank)? onGetBankData,
     TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
@@ -1055,6 +1256,7 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
+    required TResult Function(_OnConfirmPayment value) onConfirmPayment,
     required TResult Function(_OnCancelOrder value) onCancelOrder,
     required TResult Function(_OnGetBankData value) onGetBankData,
     required TResult Function(_OnGetHistoryTransaction value)
@@ -1077,6 +1279,7 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
+    TResult Function(_OnConfirmPayment value)? onConfirmPayment,
     TResult Function(_OnCancelOrder value)? onCancelOrder,
     TResult Function(_OnGetBankData value)? onGetBankData,
     TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
@@ -1178,6 +1381,7 @@ class _$_OnGetSentHistoryTransaction implements _OnGetSentHistoryTransaction {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
+    required TResult Function(String confirm) onConfirmPayment,
     required TResult Function(String message) onCancelOrder,
     required TResult Function(List<BankDataModel> listBank) onGetBankData,
     required TResult Function(List<TransactionDataModel> data)
@@ -1201,6 +1405,7 @@ class _$_OnGetSentHistoryTransaction implements _OnGetSentHistoryTransaction {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
+    TResult Function(String confirm)? onConfirmPayment,
     TResult Function(String message)? onCancelOrder,
     TResult Function(List<BankDataModel> listBank)? onGetBankData,
     TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
@@ -1225,6 +1430,7 @@ class _$_OnGetSentHistoryTransaction implements _OnGetSentHistoryTransaction {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
+    required TResult Function(_OnConfirmPayment value) onConfirmPayment,
     required TResult Function(_OnCancelOrder value) onCancelOrder,
     required TResult Function(_OnGetBankData value) onGetBankData,
     required TResult Function(_OnGetHistoryTransaction value)
@@ -1247,6 +1453,7 @@ class _$_OnGetSentHistoryTransaction implements _OnGetSentHistoryTransaction {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
+    TResult Function(_OnConfirmPayment value)? onConfirmPayment,
     TResult Function(_OnCancelOrder value)? onCancelOrder,
     TResult Function(_OnGetBankData value)? onGetBankData,
     TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
@@ -1345,6 +1552,7 @@ class _$_OnGetAllTransaction implements _OnGetAllTransaction {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
+    required TResult Function(String confirm) onConfirmPayment,
     required TResult Function(String message) onCancelOrder,
     required TResult Function(List<BankDataModel> listBank) onGetBankData,
     required TResult Function(List<TransactionDataModel> data)
@@ -1368,6 +1576,7 @@ class _$_OnGetAllTransaction implements _OnGetAllTransaction {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
+    TResult Function(String confirm)? onConfirmPayment,
     TResult Function(String message)? onCancelOrder,
     TResult Function(List<BankDataModel> listBank)? onGetBankData,
     TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
@@ -1392,6 +1601,7 @@ class _$_OnGetAllTransaction implements _OnGetAllTransaction {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
+    required TResult Function(_OnConfirmPayment value) onConfirmPayment,
     required TResult Function(_OnCancelOrder value) onCancelOrder,
     required TResult Function(_OnGetBankData value) onGetBankData,
     required TResult Function(_OnGetHistoryTransaction value)
@@ -1414,6 +1624,7 @@ class _$_OnGetAllTransaction implements _OnGetAllTransaction {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
+    TResult Function(_OnConfirmPayment value)? onConfirmPayment,
     TResult Function(_OnCancelOrder value)? onCancelOrder,
     TResult Function(_OnGetBankData value)? onGetBankData,
     TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
@@ -1514,6 +1725,7 @@ class _$_OnGetHistoryTransactionV2 implements _OnGetHistoryTransactionV2 {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
+    required TResult Function(String confirm) onConfirmPayment,
     required TResult Function(String message) onCancelOrder,
     required TResult Function(List<BankDataModel> listBank) onGetBankData,
     required TResult Function(List<TransactionDataModel> data)
@@ -1537,6 +1749,7 @@ class _$_OnGetHistoryTransactionV2 implements _OnGetHistoryTransactionV2 {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
+    TResult Function(String confirm)? onConfirmPayment,
     TResult Function(String message)? onCancelOrder,
     TResult Function(List<BankDataModel> listBank)? onGetBankData,
     TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
@@ -1561,6 +1774,7 @@ class _$_OnGetHistoryTransactionV2 implements _OnGetHistoryTransactionV2 {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
+    required TResult Function(_OnConfirmPayment value) onConfirmPayment,
     required TResult Function(_OnCancelOrder value) onCancelOrder,
     required TResult Function(_OnGetBankData value) onGetBankData,
     required TResult Function(_OnGetHistoryTransaction value)
@@ -1583,6 +1797,7 @@ class _$_OnGetHistoryTransactionV2 implements _OnGetHistoryTransactionV2 {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
+    TResult Function(_OnConfirmPayment value)? onConfirmPayment,
     TResult Function(_OnCancelOrder value)? onCancelOrder,
     TResult Function(_OnGetBankData value)? onGetBankData,
     TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
@@ -1681,6 +1896,7 @@ class _$_OnAddNewTransaction implements _OnAddNewTransaction {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
+    required TResult Function(String confirm) onConfirmPayment,
     required TResult Function(String message) onCancelOrder,
     required TResult Function(List<BankDataModel> listBank) onGetBankData,
     required TResult Function(List<TransactionDataModel> data)
@@ -1704,6 +1920,7 @@ class _$_OnAddNewTransaction implements _OnAddNewTransaction {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
+    TResult Function(String confirm)? onConfirmPayment,
     TResult Function(String message)? onCancelOrder,
     TResult Function(List<BankDataModel> listBank)? onGetBankData,
     TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
@@ -1728,6 +1945,7 @@ class _$_OnAddNewTransaction implements _OnAddNewTransaction {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
+    required TResult Function(_OnConfirmPayment value) onConfirmPayment,
     required TResult Function(_OnCancelOrder value) onCancelOrder,
     required TResult Function(_OnGetBankData value) onGetBankData,
     required TResult Function(_OnGetHistoryTransaction value)
@@ -1750,6 +1968,7 @@ class _$_OnAddNewTransaction implements _OnAddNewTransaction {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
+    TResult Function(_OnConfirmPayment value)? onConfirmPayment,
     TResult Function(_OnCancelOrder value)? onCancelOrder,
     TResult Function(_OnGetBankData value)? onGetBankData,
     TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
@@ -1857,6 +2076,7 @@ class _$_OnCheckMidtransStatus implements _OnCheckMidtransStatus {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String error) error,
+    required TResult Function(String confirm) onConfirmPayment,
     required TResult Function(String message) onCancelOrder,
     required TResult Function(List<BankDataModel> listBank) onGetBankData,
     required TResult Function(List<TransactionDataModel> data)
@@ -1880,6 +2100,7 @@ class _$_OnCheckMidtransStatus implements _OnCheckMidtransStatus {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String error)? error,
+    TResult Function(String confirm)? onConfirmPayment,
     TResult Function(String message)? onCancelOrder,
     TResult Function(List<BankDataModel> listBank)? onGetBankData,
     TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
@@ -1904,6 +2125,7 @@ class _$_OnCheckMidtransStatus implements _OnCheckMidtransStatus {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
+    required TResult Function(_OnConfirmPayment value) onConfirmPayment,
     required TResult Function(_OnCancelOrder value) onCancelOrder,
     required TResult Function(_OnGetBankData value) onGetBankData,
     required TResult Function(_OnGetHistoryTransaction value)
@@ -1926,6 +2148,7 @@ class _$_OnCheckMidtransStatus implements _OnCheckMidtransStatus {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
+    TResult Function(_OnConfirmPayment value)? onConfirmPayment,
     TResult Function(_OnCancelOrder value)? onCancelOrder,
     TResult Function(_OnGetBankData value)? onGetBankData,
     TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,

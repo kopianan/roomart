@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
+import 'package:roomart/domain/transaction/models/payment_conf_data_model.dart';
 import 'package:roomart/domain/transaction/models/transaction_req_res.dart';
 import 'package:roomart/domain/transaction/trans_item/bank_data_model.dart';
 import 'package:roomart/domain/transaction/trans_item/midtrans_status_data_model.dart';
@@ -32,6 +33,7 @@ abstract class ITransactionFacade {
   Future<Either<String, String>> cancelTransaction(
       {String? custId, String? invoiceNumber});
   Future<Either<String, List<BankDataModel>>> getBankData();
+  Future<Either<String, String>> confirmPayment(PaymentConfDataModel data);
   Future<Either<String?, MidtransStatusDataModel>> checkMidtransPaymentStatus(
       String? request);
 
@@ -304,6 +306,27 @@ class TransactionRepository extends ITransactionFacade {
       return left(e.toString());
     } catch (e) {
       return left(e.toString());
+    }
+  }
+
+  @override
+  Future<Either<String, String>> confirmPayment(
+      PaymentConfDataModel data) async {
+    Response response;
+    try {
+      response = await dio.post(
+          "${Constants().getUltimoBaseUrl}/RoomartOrder/ConfirmPayment",
+          data: data.toJson(),
+          options: Options(
+            headers: {"AccessKey": Constants().accessKeyUltimo},
+          ));
+      if (response.statusCode == 200) {
+        return right(response.data.toString());
+      } else {
+        return right(response.data.toString());
+      }
+    } catch (e) {
+      return left("Pembayaran Gagal dikonfirmasi");
     }
   }
 }

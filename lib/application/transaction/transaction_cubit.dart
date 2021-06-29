@@ -145,4 +145,17 @@ class TransactionCubit extends Cubit<TransactionState> {
       emit(TransactionState.error(e.toString()));
     }
   }
+
+  void confrimPayment(dynamic data) async {
+    emit(TransactionState.loading());
+    try {
+      final _result = await iTransactionFacade!.confirmPayment(data);
+      _result.fold(
+        (l) => emit(TransactionState.error(l.toString())),
+        (r) => emit(TransactionState.onConfirmPayment(r)),
+      );
+    } catch (e) {
+      emit(TransactionState.error(e.toString()));
+    }
+  }
 }
