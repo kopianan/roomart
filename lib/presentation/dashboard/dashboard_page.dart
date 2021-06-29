@@ -56,7 +56,7 @@ class _DashboardPageState extends State<DashboardPage> {
           title: InkWell(
               child: Text(Constants.title_appbar),
               onTap: () async {
-                NotificationHelper.showNotification("Title", "Description");
+                // NotificationHelper.showNotification("Title", "Description");
               }),
           actions: [
             IconButton(
