@@ -36,6 +36,35 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:889497442900:android:2bd6cdf18b7931be162bc1",
+        "android_client_info": {
+          "package_name": "com.roomart.roomart_reseller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "889497442900-v6bisuksvo9j03qeob5bmh1hks4vd0sq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQs1HpmPk--anhDob0oOyW12lweGgFCTw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "889497442900-v6bisuksvo9j03qeob5bmh1hks4vd0sq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:889497442900:android:24b39862a72662f0162bc1",
         "android_client_info": {
           "package_name": "com.roomart.roomartapplication"
