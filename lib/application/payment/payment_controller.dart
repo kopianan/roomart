@@ -20,6 +20,19 @@ class PaymentController extends GetxController {
     this.selectedPaymentMethod.value = data;
   }
 
+  String? getDepostiPaymentCode() {
+    try {
+      var data = this
+          .paymentMethodList
+          .firstWhere(
+              (element) => element.code == describeEnum(paymentEnum.DEPO))
+          .sId;
+      return data;
+    } catch (e) {
+      return "0";
+    }
+  }
+
   PaymentMethodDataModel get getSelectedPaymentMethod =>
       this.selectedPaymentMethod.value;
 
