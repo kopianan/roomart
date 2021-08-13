@@ -40,7 +40,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.roomart.roomartapplication"
+        applicationId "com.roomart.roomart_reseller"
         minSdkVersion 19
         targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
@@ -59,7 +59,7 @@ android {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             // signingConfig signingConfigs.debug
-                       signingConfig signingConfigs.release
+                       signingConfig signingConfigs.debug
 
         }
     }
