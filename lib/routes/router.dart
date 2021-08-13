@@ -14,8 +14,6 @@ import 'package:roomart/presentation/me/change_password_page.dart';
 import 'package:roomart/presentation/me/order_page.dart';
 import 'package:roomart/presentation/me/payment_confirmation_page.dart';
 import 'package:roomart/presentation/me/profile_page.dart';
-import 'package:roomart/presentation/me/widgets/detail_transaction_history_page.dart';
-import 'package:roomart/presentation/me/widgets/new_transaction_history_page.dart';
 import 'package:roomart/presentation/me/widgets/transaction_history_detail_page.dart';
 import 'package:roomart/presentation/me/widgets/transaction_history_detail_page_finished.dart';
 import 'package:roomart/presentation/me/widgets/transaction_history_detail_page_full.dart';
@@ -68,7 +66,7 @@ List<GetPage> pages = [
       name: NewHistoryTransactionDetailPage.TAG,
       page: () => NewHistoryTransactionDetailPage()),
   GetPage(name: PaymentMidtransPage.TAG, page: () => PaymentMidtransPage()),
-  GetPage(
-      name: DetailTransactionHistoryPage.TAG,
-      page: () => DetailTransactionHistoryPage()),
+  // GetPage(
+  //     name: DetailTransactionHistoryPage.TAG,
+  //     page: () => DetailTransactionHistoryPage()),
 ];

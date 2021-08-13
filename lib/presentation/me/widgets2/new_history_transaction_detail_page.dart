@@ -324,10 +324,10 @@ class _NewHistoryTransactionDetailPageState
                 children: [
                   Text("x${item.qty}"),
                   SizedBox(width: 20),
-                  Text(Formatter().formatStringCurrency(item.price.toString()))
-                  // Text(Formatter().formatStringCurrency((auth.checkIfReseller())
-                  //     ? item.resellerPrice.toString()
-                  //     : item.price.toString()))
+                  // Text(Formatter().formatStringCurrency(item.price.toString()))
+                  Text(Formatter().formatStringCurrency((auth.checkIfReseller())
+                      ? item.resellerPrice.toString()
+                      : item.price.toString()))
                 ],
               ),
             ),
