@@ -10,6 +10,10 @@ class ItemController extends GetxController {
     this.listData.addAll(data);
   }
 
+  void resetListData() {
+    this.listData.clear();
+  }
+
   List<DataItemModel> get getListData => this.listData;
 
   void setOffset(int newOffset) {
