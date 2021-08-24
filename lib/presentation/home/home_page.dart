@@ -28,7 +28,9 @@ class _HomePageState extends State<HomePage> {
   RefreshController _refreshController =
       RefreshController(initialRefresh: false);
   void _onRefresh() async {
-    _refreshController.refreshCompleted();
+    itemConroller.setOffset(0);
+    itemConroller.resetListData();
+    itemBloc.getItemListLazy(limit, itemConroller.getOffset);
   }
 
   void _onLoading() {
@@ -217,10 +219,15 @@ class _HomePageState extends State<HomePage> {
           child: BlocConsumer<ItemCubit, ItemState>(
             listener: (context, state) {
               state.maybeMap(
-                  orElse: () {},
+                  orElse: () {
+                    _refreshController.refreshCompleted();
+                  },
                   loading: (e) {},
-                  error: (e) {},
+                  error: (e) {
+                    _refreshController.refreshCompleted();
+                  },
                   onGetItemLazy: (e) {
+                    _refreshController.refreshCompleted();
                     itemConroller.setListData(e.data);
                   });
 

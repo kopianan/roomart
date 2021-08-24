@@ -15,7 +15,9 @@ class ItemController extends GetxController {
   void setOffset(int newOffset) {
     offset.value = newOffset;
   }
-
+  void resetListData() {
+    this.listData.clear();
+  }
   int get getOffset => this.offset.value;
 
   void setSearchOffset(int newOffset) {
