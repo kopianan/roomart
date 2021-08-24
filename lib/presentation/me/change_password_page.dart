@@ -9,7 +9,7 @@ import 'package:roomart/utils/my_color.dart';
 import '../../injection.dart';
 
 class ChangePasswordPage extends StatefulWidget {
-  static final String TAG = 'change_password_page';
+  static final String TAG = '/change_password_page';
   @override
   _ChangePasswordPageState createState() => _ChangePasswordPageState();
 }
