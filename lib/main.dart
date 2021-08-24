@@ -41,5 +41,8 @@ void main() async {
   });
   configureDependencies();
   await GetStorage.init();
+  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+
   runApp(AppWidget());
 }
+
