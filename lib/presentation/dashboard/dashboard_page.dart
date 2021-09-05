@@ -68,9 +68,10 @@ class _DashboardPageState extends State<DashboardPage> {
           ],
         ),
         drawer: Drawer(
-          child: ListView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             // Important: Remove any padding from the ListView.
-            padding: EdgeInsets.zero,
+
             children: <Widget>[
               DrawerHeader(
                 child: Text(
@@ -89,7 +90,16 @@ class _DashboardPageState extends State<DashboardPage> {
                   onTap: () {
                     Get.toNamed(ContactUsPage.TAG);
                   }),
-              Divider()
+              Divider(),
+              Spacer(),
+              Center(
+                  child: Text(
+                "Versi 2.0.1",
+                style: TextStyle(fontSize: 15),
+              )),
+              SizedBox(
+                height: 10,
+              )
             ],
           ),
         ),
