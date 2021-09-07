@@ -23,6 +23,7 @@ import 'package:roomart/presentation/payment/payment_midtrans_page.dart';
 import 'package:roomart/presentation/payment/payment_progress_page.dart';
 import 'package:roomart/presentation/payment/payment_status_page.dart';
 import 'package:roomart/presentation/payment_method/payment_method_page.dart';
+import 'package:roomart/presentation/photo_view_page.dart';
 import 'package:roomart/presentation/splash_screen/splash_screen_page.dart';
 import 'package:roomart/presentation/auth/forgot_password_page.dart';
 import 'package:roomart/presentation/update/update_detail_page.dart';
@@ -66,6 +67,7 @@ List<GetPage> pages = [
       name: NewHistoryTransactionDetailPage.TAG,
       page: () => NewHistoryTransactionDetailPage()),
   GetPage(name: PaymentMidtransPage.TAG, page: () => PaymentMidtransPage()),
+  GetPage(name: PhotoViewPage.TAG, page: () => PhotoViewPage()),
   // GetPage(
   //     name: DetailTransactionHistoryPage.TAG,
   //     page: () => DetailTransactionHistoryPage()),

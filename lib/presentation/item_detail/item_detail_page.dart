@@ -13,6 +13,8 @@ import 'package:roomart/utils/constants.dart';
 import 'package:roomart/utils/formater.dart';
 import 'package:roomart/utils/my_color.dart';
 
+import '../photo_view_page.dart';
+
 class ItemDetailPage extends StatefulWidget {
   static final String TAG = '/item_detail_page';
   @override
@@ -73,8 +75,15 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
                   children: [
                     Container(
                       height: 320,
-                      child: CustomImageProvider(
-                        url: "${Constants().imageBaseUrl}${data!.pic}",
+                      child: InkWell(
+                        onTap: () {
+                          Get.toNamed(PhotoViewPage.TAG,
+                              arguments:
+                                  "${Constants().imageBaseUrl}${data!.pic}");
+                        },
+                        child: CustomImageProvider(
+                          url: "${Constants().imageBaseUrl}${data!.pic}",
+                        ),
                       ),
                     ),
                     Container(
