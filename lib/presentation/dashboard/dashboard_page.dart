@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
+import 'package:new_version/new_version.dart';
+import 'package:package_info/package_info.dart';
 import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/application/core/cart_controller.dart';
 import 'package:roomart/application/home/home_controller.dart';
@@ -44,8 +46,51 @@ class _DashboardPageState extends State<DashboardPage> {
   @override
   void initState() {
     pageController = homeController.getPageController;
+    final newVersion = NewVersion(
+      iOSId: 'com.roomart.roomartapplication',
+      androidId: 'com.roomart.roomartapplication',
+    );
+    advancedStatusCheck(newVersion);
+
+    // const simpleBehavior = true;
+    // if (simpleBehavior) {
+    //   basicStatusCheck(newVersion);
+    // } else {
+    //   advancedStatusCheck(newVersion);
+    // }
 
     super.initState();
+  }
+
+  basicStatusCheck(NewVersion newVersion) {
+    newVersion.showAlertIfNecessary(context: context);
+  }
+
+  advancedStatusCheck(NewVersion newVersion) async {
+    final status = await newVersion.getVersionStatus();
+    if (status != null) {
+      debugPrint(status.releaseNotes);
+      debugPrint(status.appStoreLink);
+      debugPrint(status.localVersion);
+      debugPrint(status.storeVersion);
+      debugPrint(status.canUpdate.toString());
+      newVersion.showUpdateDialog(
+        context: context,
+        versionStatus: status,
+        dialogTitle: 'Update Available',
+        dialogText: 'Silahkan Update Aplikasi Anda',
+        updateButtonText: 'Update Now',
+        allowDismissal: false,
+        dismissAction: () {
+          Get.back(closeOverlays: true);
+        },
+      );
+    }
+  }
+
+  Future<PackageInfo> getVersion() async {
+    PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    return packageInfo;
   }
 
   @override
@@ -93,9 +138,21 @@ class _DashboardPageState extends State<DashboardPage> {
               Divider(),
               Spacer(),
               Center(
-                  child: Text(
-                "Versi 2.0.1",
-                style: TextStyle(fontSize: 15),
+                  child: FutureBuilder<PackageInfo>(
+                future: getVersion(),
+                builder: (_, snp) {
+                  if (snp.connectionState == ConnectionState.done) {
+                    try {
+                      return Text("Versi ${snp.data!.version}",
+                          style: TextStyle(fontSize: 15));
+                    } catch (e) {
+                      return Text("Versi x.x.x",
+                          style: TextStyle(fontSize: 15));
+                    }
+                  } else {
+                    return Text("Versi x.x.x", style: TextStyle(fontSize: 15));
+                  }
+                },
               )),
               SizedBox(
                 height: 10,

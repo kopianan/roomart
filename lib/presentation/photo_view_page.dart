@@ -42,6 +42,14 @@ class _PhotoViewPageState extends State<PhotoViewPage> {
                 var path = await ImageDownloader.findPath(imageId);
                 var size = await ImageDownloader.findByteSize(imageId);
                 var mimeType = await ImageDownloader.findMimeType(imageId);
+
+                Get.showSnackbar(
+                  GetBar(
+                    message: "Image downloaded" + path.toString(),
+                    duration: Duration(seconds: 4),
+                    title: "Download Success",
+                  ),
+                );
               } on PlatformException catch (error) {
                 print(error);
               }
