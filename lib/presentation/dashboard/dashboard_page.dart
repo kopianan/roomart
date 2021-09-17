@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
+import 'package:new_version/new_version.dart';
+import 'package:package_info/package_info.dart';
 import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/application/core/cart_controller.dart';
 import 'package:roomart/application/home/home_controller.dart';
@@ -16,6 +17,7 @@ import 'package:roomart/presentation/update/update_page.dart';
 import 'package:roomart/utils/constants.dart';
 import 'package:roomart/utils/my_color.dart';
 import 'package:roomart/utils/notification_helper.dart';
+import 'package:upgrader/upgrader.dart';
 
 class DashboardPage extends StatefulWidget {
   static final String TAG = '/dashboard_page';
@@ -41,11 +43,47 @@ class _DashboardPageState extends State<DashboardPage> {
     });
   }
 
+  late AppcastConfiguration configur;
+  final appcastURL =
+      'https://raw.githubusercontent.com/larryaasen/upgrader/master/test/testappcast.xml';
+  final newVersion = NewVersion(
+    iOSId: 'com.roomart.roomartapplication',
+    androidId: 'com.roomart.roomartapplication',
+  );
   @override
   void initState() {
     pageController = homeController.getPageController;
 
+    configur = AppcastConfiguration(url: appcastURL, supportedOS: ['android']);
+    // basicStatusCheck(newVersion);
+
+    // const simpleBehavior = true;
+    // if (simpleBehavior) {
+    //   basicStatusCheck(newVersion);
+    // } else {
+    advancedStatusCheck(configur, newVersion);
+    // }
     super.initState();
+  }
+
+  basicStatusCheck(NewVersion newVersion) {
+    newVersion.showAlertIfNecessary(context: context);
+  }
+
+  advancedStatusCheck(AppcastConfiguration cfg, NewVersion ver) async {
+    var status = await ver.getVersionStatus();
+    if (status != null) {
+      if (status.canUpdate) {
+        ver.showAlertIfNecessary(
+          context: context,
+        );
+      }
+    }
+  }
+
+  Future<PackageInfo> getVersion() async {
+    PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    return packageInfo;
   }
 
   @override
@@ -56,6 +94,7 @@ class _DashboardPageState extends State<DashboardPage> {
           title: InkWell(
               child: Text(Constants.title_appbar),
               onTap: () async {
+                advancedStatusCheck(configur, newVersion);
                 // NotificationHelper.showNotification("Title", "Description");
               }),
           actions: [
@@ -68,9 +107,10 @@ class _DashboardPageState extends State<DashboardPage> {
           ],
         ),
         drawer: Drawer(
-          child: ListView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             // Important: Remove any padding from the ListView.
-            padding: EdgeInsets.zero,
+
             children: <Widget>[
               DrawerHeader(
                 child: Text(
@@ -89,7 +129,28 @@ class _DashboardPageState extends State<DashboardPage> {
                   onTap: () {
                     Get.toNamed(ContactUsPage.TAG);
                   }),
-              Divider()
+              Divider(),
+              Spacer(),
+              Center(
+                  child: FutureBuilder<PackageInfo>(
+                future: getVersion(),
+                builder: (_, snp) {
+                  if (snp.connectionState == ConnectionState.done) {
+                    try {
+                      return Text("Versi ${snp.data!.version}",
+                          style: TextStyle(fontSize: 15));
+                    } catch (e) {
+                      return Text("Versi x.x.x",
+                          style: TextStyle(fontSize: 15));
+                    }
+                  } else {
+                    return Text("Versi x.x.x", style: TextStyle(fontSize: 15));
+                  }
+                },
+              )),
+              SizedBox(
+                height: 10,
+              )
             ],
           ),
         ),
