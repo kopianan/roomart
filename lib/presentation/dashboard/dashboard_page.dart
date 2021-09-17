@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import 'package:new_version/new_version.dart';
 import 'package:package_info/package_info.dart';
@@ -18,6 +17,7 @@ import 'package:roomart/presentation/update/update_page.dart';
 import 'package:roomart/utils/constants.dart';
 import 'package:roomart/utils/my_color.dart';
 import 'package:roomart/utils/notification_helper.dart';
+import 'package:upgrader/upgrader.dart';
 
 class DashboardPage extends StatefulWidget {
   static final String TAG = '/dashboard_page';
@@ -43,22 +43,26 @@ class _DashboardPageState extends State<DashboardPage> {
     });
   }
 
+  late AppcastConfiguration configur;
+  final appcastURL =
+      'https://raw.githubusercontent.com/larryaasen/upgrader/master/test/testappcast.xml';
+  final newVersion = NewVersion(
+    iOSId: 'com.roomart.roomartapplication',
+    androidId: 'com.roomart.roomartapplication',
+  );
   @override
   void initState() {
     pageController = homeController.getPageController;
-    final newVersion = NewVersion(
-      iOSId: 'com.roomart.roomartapplication',
-      androidId: 'com.roomart.roomartapplication',
-    );
-    advancedStatusCheck(newVersion);
+
+    configur = AppcastConfiguration(url: appcastURL, supportedOS: ['android']);
+    // basicStatusCheck(newVersion);
 
     // const simpleBehavior = true;
     // if (simpleBehavior) {
     //   basicStatusCheck(newVersion);
     // } else {
-    //   advancedStatusCheck(newVersion);
+    advancedStatusCheck(configur, newVersion);
     // }
-
     super.initState();
   }
 
@@ -66,25 +70,14 @@ class _DashboardPageState extends State<DashboardPage> {
     newVersion.showAlertIfNecessary(context: context);
   }
 
-  advancedStatusCheck(NewVersion newVersion) async {
-    final status = await newVersion.getVersionStatus();
+  advancedStatusCheck(AppcastConfiguration cfg, NewVersion ver) async {
+    var status = await ver.getVersionStatus();
     if (status != null) {
-      debugPrint(status.releaseNotes);
-      debugPrint(status.appStoreLink);
-      debugPrint(status.localVersion);
-      debugPrint(status.storeVersion);
-      debugPrint(status.canUpdate.toString());
-      newVersion.showUpdateDialog(
-        context: context,
-        versionStatus: status,
-        dialogTitle: 'Update Available',
-        dialogText: 'Silahkan Update Aplikasi Anda',
-        updateButtonText: 'Update Now',
-        allowDismissal: false,
-        dismissAction: () {
-          Get.back(closeOverlays: true);
-        },
-      );
+      if (status.canUpdate) {
+        ver.showAlertIfNecessary(
+          context: context,
+        );
+      }
     }
   }
 
@@ -101,6 +94,7 @@ class _DashboardPageState extends State<DashboardPage> {
           title: InkWell(
               child: Text(Constants.title_appbar),
               onTap: () async {
+                advancedStatusCheck(configur, newVersion);
                 // NotificationHelper.showNotification("Title", "Description");
               }),
           actions: [
