@@ -6,8 +6,8 @@ class Constants {
   static const icon_launcher = "assets/logo.png";
   static const logo = "assets/logo.png";
   static const promotion_image = "assets/promotion.png";
-  static const title_appbar = "ROOMART";
-  String? resellerParentID = null; //Disesuaikan dengan kode reseller
+  static const title_appbar = "ROOMSUITE.ID";
+  String? resellerParentID = "DM162979717748000832669"; //Disesuaikan dengan kode reseller
 
   String storageBox = 'roomart_storage_key';
 
