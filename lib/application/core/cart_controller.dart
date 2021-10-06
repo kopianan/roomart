@@ -82,7 +82,7 @@ class CartController extends GetxController {
   }
 
   void addQuantity(CartDataCollectionModel? item, String newQty) {
-    List<CartDataCollectionModel?> _new = [];
+    List<CartDataCollectionModel> _new = [];
 
     var _index = cartCollection.indexOf(item);
     BoughtItemDataModel? _firstData = cartCollection
@@ -115,8 +115,8 @@ class CartController extends GetxController {
         _subtotal +=
             int.parse(element!.bought!.qty!) * element.bought!.resellerPrice!;
       } else {
-        _subtotal +=
-            int.parse(element!.bought!.qty!) * double.parse(element.bought!.price!);
+        _subtotal += int.parse(element!.bought!.qty!) *
+            double.parse(element.bought!.price!);
       }
     });
     subTotal.value = _subtotal;
