@@ -169,7 +169,7 @@ class AuthRepository extends IAuthFacade {
 
     try {
       response = await dio.get(
-          "${Constants().baseUrlProfile}api,User.vm?method=saveProfile&email=${userData!.email}&province=${userData.province}&city=${userData.city}&address=${userData.address}&village=${userData.village}&terrId1=${userData.terrId1}&terrId2=${userData.terrId2}&terrId3=${userData.terrId3}&tocust=true");
+          '${Constants().baseUrlProfile}api,User.vm?method=saveProfile&email=${userData!.email}&firstname=${userData.fullName}&ctype=${userData.typeIds}&lastname=.&province=${userData.province}&city=${userData.city}&address=${userData.address}&village=${userData.village}&terrId1=${userData.terrId1}&terrId2=${userData.terrId2}&terrId3=${userData.terrId3}&tocust=true');
       final data = json.decode(response.data);
 
       var _res = UserDataModel.fromJson(data);
