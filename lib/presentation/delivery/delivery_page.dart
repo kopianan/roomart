@@ -30,7 +30,11 @@ class _DeliveryPageState extends State<DeliveryPage> {
   Costs? selectedCost;
   @override
   void initState() {
-    user = authController.getUserDataModel;
+    if (authController.getTemporaryAddress == UserDataModel()) {
+      user = authController.getUserDataModel;
+    } else {
+      user = authController.getTemporaryAddress;
+    }
     selectedCost = transactionController.getSelectedCost;
     requestModel = CostRequestModel(
         destination: user!.terrId3,

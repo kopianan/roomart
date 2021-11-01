@@ -123,22 +123,41 @@ class _PaymentPageState extends State<PaymentPage> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
-                                      GetBuilder<AuthController>(
+                                      GetX<AuthController>(
                                         builder: (_user) => Expanded(
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Text(
-                                                  "${_user.getUserDataModel!.fullName} - ( ${_user.getUserDataModel!.phone} )"),
-                                              Text(
-                                                "${_user.getUserDataModel!.address}, ${_user.getUserDataModel!.province}, ${_user.getUserDataModel!.village} ${_user.getUserDataModel!.city}, ${_user.getUserDataModel!.terrId1}",
-                                                overflow: TextOverflow.ellipsis,
-                                                maxLines: 2,
-                                              ),
-                                            ],
-                                          ),
-                                        ),
+                                            child: (authController
+                                                        .getTemporaryAddress ==
+                                                    UserDataModel())
+                                                ? Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Text(
+                                                          "${_user.getUserDataModel!.fullName} - ( ${_user.getUserDataModel!.phone} )"),
+                                                      Text(
+                                                        "${_user.getUserDataModel!.address}, ${_user.getUserDataModel!.province}, ${_user.getUserDataModel!.village} ${_user.getUserDataModel!.city}, ${_user.getUserDataModel!.terrId1}",
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
+                                                        maxLines: 2,
+                                                      ),
+                                                    ],
+                                                  )
+                                                : Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Text(
+                                                          "${_user.getTemporaryAddress!.fullName} - ( ${_user.getTemporaryAddress!.phone} )"),
+                                                      Text(
+                                                        "${_user.getTemporaryAddress!.address}, ${_user.getTemporaryAddress!.province}, ${_user.getTemporaryAddress!.village} ${_user.getTemporaryAddress!.city}, ${_user.getTemporaryAddress!.terrId1}",
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
+                                                        maxLines: 2,
+                                                      ),
+                                                    ],
+                                                  )),
                                       ),
                                       Icon(Icons.keyboard_arrow_right_outlined),
                                     ],
@@ -378,7 +397,12 @@ class _PaymentPageState extends State<PaymentPage> {
                                     onPressed: () {
                                       Get.back();
 
-                                      makePayment(_user.getUserDataModel!);
+                                      if (_user.getTemporaryAddress ==
+                                          UserDataModel()) {
+                                        makePayment(_user.getUserDataModel!);
+                                      } else {
+                                        makePayment(_user.getTemporaryAddress!);
+                                      }
                                     },
                                     child: Text("Ya")),
                               ),
@@ -549,7 +573,6 @@ class _PaymentPageState extends State<PaymentPage> {
               "Penerima: ${userData.fullName}\nNomor Hp: ${userData.phone}\nPengiriman :${transactionController.getSelectedFullDelivery.name}\nAlamat :  ${userData.address}\nProvinsi: ${userData.province}\nCity: ${userData.city}\n",
           details: paidItem.map((e) => e!.bought).toList())
     ]);
-    print(_salesOrder.salesTrans!.first.toJson());
     Get.offAllNamed(PaymentProgressPage.TAG, arguments: _salesOrder);
   }
 
