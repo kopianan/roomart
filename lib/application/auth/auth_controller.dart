@@ -4,7 +4,14 @@ import 'package:roomart/utils/constants.dart';
 
 class AuthController extends GetxController {
   Rx<UserDataModel?> userDataModel = UserDataModel().obs;
+  Rx<UserDataModel?> temporaryAddress = UserDataModel().obs;
   RxDouble userBalance = 0.0.obs;
+
+  void setTemporaryAddress(UserDataModel data) {
+    this.temporaryAddress.value = data;
+  }
+
+  UserDataModel? get getTemporaryAddress => temporaryAddress.value;
 
   void setBalance(String balance) {
     try {

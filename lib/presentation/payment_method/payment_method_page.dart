@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/application/auth/auth_cubit.dart';
@@ -11,9 +10,7 @@ import 'package:roomart/application/payment/payment_cubit.dart';
 import 'package:roomart/application/transaction/transaction_cubit.dart';
 import 'package:roomart/domain/core/payment_method_enum.dart';
 import 'package:roomart/domain/payment_method/payment_method_data_model.dart';
-import 'package:roomart/domain/transaction/trans_item/trans_post_data_model.dart';
 import 'package:roomart/domain/transaction/trans_item/trans_request.dart';
-import 'package:roomart/domain/transaction/transaction_data_model.dart';
 import 'package:roomart/domain/user/user_data_model.dart';
 import 'package:roomart/presentation/widgets/button_collection.dart';
 import 'package:roomart/utils/constants.dart';
@@ -114,7 +111,8 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
                                             onPressed: () {
                                               authCubit.getArBalance(
                                                   userController
-                                                      .getUserDataModel!.userId);
+                                                      .getUserDataModel!
+                                                      .userId);
                                             },
                                             icon: Icon(Icons.refresh),
                                             iconSize: 25,
