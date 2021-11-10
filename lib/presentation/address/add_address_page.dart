@@ -43,32 +43,31 @@ class _AddAddressPageState extends State<AddAddressPage> {
   late UserDataModel _tempData;
 // _tempData = Pref().getUserDataModelFromLocal();
 
-  void initialData() {
-    _tempData = Pref().getUserDataModelFromLocal();
+  void initialData(UserDataModel _tempData) {
+    // _tempData = Pref().getUserDataModelFromLocal();
 
-    nama.text = _tempData.fullName!;
-    noHp.text = _tempData.phone!;
-    alamat.text = _tempData.address!;
-    type = _tempData.village;
-    provinceName = _tempData.province;
-    cityName = _tempData.city;
-    postalCode = _tempData.terrId1;
-    mprovinceid = _tempData.terrId2;
-    mcityid = _tempData.terrId3;
-  }
-
-  void changeAddressType() {
-    _tempData = authController.getTemporaryAddress!;
-
-    nama.text = _tempData.fullName!;
-    noHp.text = _tempData.phone!;
-    alamat.text = _tempData.address!;
-    type = _tempData.village;
-    provinceName = _tempData.province;
-    cityName = _tempData.city;
-    postalCode = _tempData.terrId1;
-    mprovinceid = _tempData.terrId2;
-    mcityid = _tempData.terrId3;
+    if (_tempData == UserDataModel()) {
+      print("tempData == empty");
+      nama.text = "";
+      noHp.text = "";
+      alamat.text = "";
+      type = "";
+      provinceName = "";
+      cityName = "";
+      postalCode = "";
+      mprovinceid = "";
+      mcityid = "";
+    } else {
+      nama.text = _tempData.fullName!;
+      noHp.text = _tempData.phone!;
+      alamat.text = _tempData.address!;
+      type = _tempData.village;
+      provinceName = _tempData.province;
+      cityName = _tempData.city;
+      postalCode = _tempData.terrId1;
+      mprovinceid = _tempData.terrId2;
+      mcityid = _tempData.terrId3;
+    }
   }
 
   int addressType = 0;
@@ -76,12 +75,15 @@ class _AddAddressPageState extends State<AddAddressPage> {
   final RajaongkirCubit cityCubit = getIt<RajaongkirCubit>();
   @override
   void initState() {
-    addressType = authController.getAddressType();
+    // addressType = authController.getAddressType();
     if (authController.getAddressType() == 0) {
-      initialData();
+      _tempData = authController.getDropship();
     } else {
-      changeAddressType();
+      _tempData = authController.getMyAddress();
     }
+    addressType = authController.getAddressType();
+
+    initialData(_tempData);
 
     super.initState();
   }
@@ -105,7 +107,8 @@ class _AddAddressPageState extends State<AddAddressPage> {
                     onChanged: (e) {
                       setState(() {
                         addressType = e!;
-                        initialData();
+                        _tempData = authController.getDropship();
+                        initialData(_tempData);
                       });
                     },
                   ),
@@ -118,7 +121,8 @@ class _AddAddressPageState extends State<AddAddressPage> {
                     onChanged: (e) {
                       setState(() {
                         addressType = e!;
-                        changeAddressType();
+                        _tempData = authController.getMyAddress();
+                        initialData(_tempData);
                       });
                     },
                   ),
@@ -289,7 +293,12 @@ class _AddAddressPageState extends State<AddAddressPage> {
                         terrId2: fullDataModel!.provinceId,
                         terrId3: fullDataModel!.cityId);
                     authController.setAddressType(addressType);
-                    authController.setTemporaryAddress(newUserData);
+
+                    if (addressType == 0) {
+                      authController.setDropship(newUserData);
+                    } else {
+                      authController.setMyAddress(newUserData);
+                    }
 
                     Get.back();
 
