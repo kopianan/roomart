@@ -54,6 +54,7 @@ class _PaymentPageState extends State<PaymentPage> {
   @override
   void initState() {
     user = authController.getUserDataModel;
+    authController.setAddressType(0);
     super.initState();
   }
 

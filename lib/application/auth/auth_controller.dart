@@ -6,6 +6,15 @@ class AuthController extends GetxController {
   Rx<UserDataModel?> userDataModel = UserDataModel().obs;
   Rx<UserDataModel?> temporaryAddress = UserDataModel().obs;
   RxDouble userBalance = 0.0.obs;
+  RxInt addressType = 0.obs;
+  
+  void setAddressType(int type) {
+    addressType.value = type;
+  }
+
+  int getAddressType() {
+    return addressType.value;
+  }
 
   void setTemporaryAddress(UserDataModel data) {
     this.temporaryAddress.value = data;

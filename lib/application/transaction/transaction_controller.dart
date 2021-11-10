@@ -14,6 +14,8 @@ class TransactionController extends GetxController {
   RxInt notPaidOffset = 0.obs;
   RxInt finishedOffset = 0.obs;
   RxInt sentOffset = 0.obs;
+  
+
   List<TransactionDataModel> allTransaction = <TransactionDataModel>[];
   List<TransactionDataModel> newTransaction = <TransactionDataModel>[];
   List<TransactionDataModel> cancelledTransaction = <TransactionDataModel>[];
@@ -26,6 +28,7 @@ class TransactionController extends GetxController {
 
   Rx<DiscountDataModel> selectedDiscount = DiscountDataModel().obs;
   Rx<DiscountCode> selectedDiscountCode = DiscountCode(totalDiscount: "0").obs;
+
 
   //Payment
   double calculateGrandTotal(double subtotal) {
