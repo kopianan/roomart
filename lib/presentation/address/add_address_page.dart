@@ -24,7 +24,7 @@ class AddAddressPage extends StatefulWidget {
 }
 
 class _AddAddressPageState extends State<AddAddressPage> {
-  // final AuthCubit authCubit = getIt<AuthCubit>();
+  final ongkirCubit = getIt<RajaongkirCubit>();
   final transController = Get.put(TransactionController());
   TextEditingController nama = TextEditingController();
   TextEditingController noHp = TextEditingController();
@@ -145,7 +145,13 @@ class _AddAddressPageState extends State<AddAddressPage> {
                                 return SizedBox();
                               },
                               loading: (e) {
-                                return SizedBox();
+                                return Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text("Load Data Provinsi..."),
+                                    Center(child: CircularProgressIndicator()),
+                                  ],
+                                );
                               },
                               getProvinceData: (e) {
                                 return DropdownButtonFormField<
