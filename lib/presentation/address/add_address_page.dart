@@ -24,7 +24,7 @@ class AddAddressPage extends StatefulWidget {
 }
 
 class _AddAddressPageState extends State<AddAddressPage> {
-  // final AuthCubit authCubit = getIt<AuthCubit>();
+  final ongkirCubit = getIt<RajaongkirCubit>();
   final transController = Get.put(TransactionController());
   TextEditingController nama = TextEditingController();
   TextEditingController noHp = TextEditingController();
@@ -41,30 +41,50 @@ class _AddAddressPageState extends State<AddAddressPage> {
   List<ProvinceDataModel> listOfProvince = [];
   final authController = Get.put(AuthController());
   late UserDataModel _tempData;
+// _tempData = Pref().getUserDataModelFromLocal();
 
-  void initialData() {
-    if (authController.getTemporaryAddress == UserDataModel()) {
-      _tempData = Pref().getUserDataModelFromLocal();
+  void initialData(UserDataModel _tempData) {
+    // _tempData = Pref().getUserDataModelFromLocal();
+
+    if (_tempData == UserDataModel()) {
+      print("tempData == empty");
+      nama.text = "";
+      noHp.text = "";
+      alamat.text = "";
+      type = "";
+      provinceName = "";
+      cityName = "";
+      postalCode = "";
+      mprovinceid = "";
+      mcityid = "";
     } else {
-      _tempData = authController.getTemporaryAddress!;
+      nama.text = _tempData.fullName!;
+      noHp.text = _tempData.phone!;
+      alamat.text = _tempData.address!;
+      type = _tempData.village;
+      provinceName = _tempData.province;
+      cityName = _tempData.city;
+      postalCode = _tempData.terrId1;
+      mprovinceid = _tempData.terrId2;
+      mcityid = _tempData.terrId3;
     }
-
-    nama.text = _tempData.fullName!;
-    noHp.text = _tempData.phone!;
-    alamat.text = _tempData.address!;
-    type = _tempData.village;
-    provinceName = _tempData.province;
-    cityName = _tempData.city;
-    postalCode = _tempData.terrId1;
-    mprovinceid = _tempData.terrId2;
-    mcityid = _tempData.terrId3;
   }
 
+  int addressType = 0;
   String? realName;
   final RajaongkirCubit cityCubit = getIt<RajaongkirCubit>();
   @override
   void initState() {
-    initialData();
+    // addressType = authController.getAddressType();
+    if (authController.getAddressType() == 0) {
+      _tempData = authController.getDropship();
+    } else {
+      _tempData = authController.getMyAddress();
+    }
+    addressType = authController.getAddressType();
+
+    initialData(_tempData);
+
     super.initState();
   }
 
@@ -77,6 +97,38 @@ class _AddAddressPageState extends State<AddAddressPage> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            Row(
+              children: [
+                Expanded(
+                  child: RadioListTile<int>(
+                    title: Text("Dropship"),
+                    value: 0,
+                    groupValue: addressType,
+                    onChanged: (e) {
+                      setState(() {
+                        addressType = e!;
+                        _tempData = authController.getDropship();
+                        initialData(_tempData);
+                      });
+                    },
+                  ),
+                ),
+                Expanded(
+                  child: RadioListTile<int>(
+                    title: Text("Alamat Saya"),
+                    value: 1,
+                    groupValue: addressType,
+                    onChanged: (e) {
+                      setState(() {
+                        addressType = e!;
+                        _tempData = authController.getMyAddress();
+                        initialData(_tempData);
+                      });
+                    },
+                  ),
+                ),
+              ],
+            ),
             Expanded(
               child: SingleChildScrollView(
                 child: Container(
@@ -131,6 +183,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
                             getIt<RajaongkirCubit>()..getProvinceData(),
                         child: BlocConsumer<RajaongkirCubit, RajaongkirState>(
                           listener: (context, state) {
+                            print(state);
                             state.maybeMap(
                               orElse: () {},
                               getProvinceData: (e) {
@@ -145,7 +198,13 @@ class _AddAddressPageState extends State<AddAddressPage> {
                                 return SizedBox();
                               },
                               loading: (e) {
-                                return SizedBox();
+                                return Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text("Load Data Provinsi..."),
+                                    Center(child: CircularProgressIndicator()),
+                                  ],
+                                );
                               },
                               getProvinceData: (e) {
                                 return DropdownButtonFormField<
@@ -234,7 +293,14 @@ class _AddAddressPageState extends State<AddAddressPage> {
                         terrId1: fullDataModel!.postalCode,
                         terrId2: fullDataModel!.provinceId,
                         terrId3: fullDataModel!.cityId);
-                    authController.setTemporaryAddress(newUserData);
+                    authController.setAddressType(addressType);
+
+                    if (addressType == 0) {
+                      authController.setDropship(newUserData);
+                    } else {
+                      authController.setMyAddress(newUserData);
+                    }
+
                     Get.back();
 
                     // authCubit.changeAddress(newUserData);

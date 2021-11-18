@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:dartz/dartz.dart';
+import 'package:dio/adapter.dart';
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:roomart/domain/raja_ongkir/cost_request_model.dart';
@@ -6,6 +9,7 @@ import 'package:roomart/domain/raja_ongkir/full_data_model.dart';
 import 'package:roomart/domain/raja_ongkir/province_data_model.dart';
 import 'package:roomart/utils/constants.dart';
 
+import '../../function_data.dart';
 import 'delivery_cost/cost_data_model.dart';
 
 abstract class ITrajaOngkirFacade {
@@ -27,7 +31,7 @@ class RajaongkirRepository extends ITrajaOngkirFacade {
   Future<Either<String, List<ProvinceDataModel>>> getProvinceList() async {
     Response response;
     var _baseUrl = "https://api.rajaongkir.com/starter/province";
-
+    dioFixing(dio);
     try {
       response = await dio.get(_baseUrl,
           options:
@@ -47,6 +51,8 @@ class RajaongkirRepository extends ITrajaOngkirFacade {
   Future<Either<String, List<FullDataModel>>> getCityDataList(
       String? provinceId) async {
     Response response;
+    dioFixing(dio);
+
     var _baseUrl = "https://api.rajaongkir.com/starter/city";
 
     try {
@@ -67,13 +73,15 @@ class RajaongkirRepository extends ITrajaOngkirFacade {
   Future<Either<String, List<CostDataModel>>> getCost(
       CostRequestModel? costRequestModel) async {
     var _baseUrl = "https://pro.rajaongkir.com/api/cost";
+    dioFixing(dio);
+
     Response response;
     String courier = "";
     costRequestModel!.courirList!.forEach((element) {
-      if(element.label != "default")
-      courier += element.label! + ":";
+      if (element.label != "default") courier += element.label! + ":";
     });
-    var _newRequest = costRequestModel.copyWith(courier: courier.substring(0, courier.length-1));
+    var _newRequest = costRequestModel.copyWith(
+        courier: courier.substring(0, courier.length - 1));
     print(_newRequest);
     try {
       response = await dio.post(_baseUrl,

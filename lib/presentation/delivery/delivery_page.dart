@@ -30,11 +30,16 @@ class _DeliveryPageState extends State<DeliveryPage> {
   Costs? selectedCost;
   @override
   void initState() {
-    if (authController.getTemporaryAddress == UserDataModel()) {
+    try {
+      if (authController.getAddressType() == 0) {
+        user = authController.getDropship();
+      } else {
+        user = authController.myAddress();
+      }
+    } catch (e) {
       user = authController.getUserDataModel;
-    } else {
-      user = authController.getTemporaryAddress;
     }
+
     selectedCost = transactionController.getSelectedCost;
     requestModel = CostRequestModel(
         destination: user!.terrId3,

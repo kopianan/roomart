@@ -10,6 +10,7 @@ import 'package:roomart/application/core/cart_controller.dart';
 import 'package:roomart/application/home/home_controller.dart';
 import 'package:roomart/application/item/item_controller.dart';
 import 'package:roomart/application/item/item_cubit.dart';
+import 'package:roomart/domain/item/data_item_model.dart';
 import 'package:roomart/presentation/category/sub_cotegory_page.dart';
 import 'package:roomart/presentation/widgets/item_list_widget.dart';
 import 'package:roomart/utils/category_data.dart';
@@ -29,18 +30,22 @@ class _SearchProductPageState extends State<SearchProductPage> {
     _refreshController.refreshCompleted();
   }
 
-  // void _onLoading() {
-  //   itemBloc..searchItemLazy(limit, itemConroller.getSearchOffset);
-  // }
+  void _onLoading() {
+    itemBloc.searchItemLazy(limit, offset, searchController.text);
+  }
 
   final ItemCubit itemBloc = getIt<ItemCubit>();
   final searchController = TextEditingController();
   int limit = 10;
   final itemConroller = Get.put(ItemController());
   final cartController = Get.put(CartController());
+
+  List<DataItemModel> _items = [];
+  int offset = 0;
   @override
   void initState() {
-    itemConroller.setSearchOffset(0);
+    offset = 0;
+    itemBloc.searchItemLazy(limit, offset, searchController.text);
     super.initState();
   }
 
@@ -76,20 +81,19 @@ class _SearchProductPageState extends State<SearchProductPage> {
           ),
           controller: _refreshController,
           onRefresh: _onRefresh,
-          // onLoading: _onLoading,
+          onLoading: _onLoading,
           child: CustomScrollView(slivers: [
             SliverToBoxAdapter(
               child: Container(
                 padding: EdgeInsets.all(10),
                 width: double.infinity,
                 child: TextFormField(
-                  onChanged: (e) {
-                    setState(() {});
-                  },
+                  onChanged: (e) {},
                   onFieldSubmitted: (val) {
-                    itemConroller.setSearchOffset(0);
-                    itemBloc.searchItemLazy(limit,
-                        itemConroller.getSearchOffset, searchController.text);
+                    offset = 0;
+                    _items.clear();
+                    itemBloc.searchItemLazy(
+                        limit, offset, searchController.text);
                   },
                   decoration: InputDecoration(
                     prefixIcon: (searchController.text.isEmpty)
@@ -104,11 +108,9 @@ class _SearchProductPageState extends State<SearchProductPage> {
                     suffixIcon: IconButton(
                       icon: Icon(Icons.search),
                       onPressed: () {
-                        itemConroller.setSearchOffset(0);
+                        _items.clear();
                         itemBloc.searchItemLazy(
-                            limit,
-                            itemConroller.getSearchOffset,
-                            searchController.text);
+                            limit, offset, searchController.text);
                       },
                     ),
                   ),
@@ -118,63 +120,85 @@ class _SearchProductPageState extends State<SearchProductPage> {
             ),
             SliverToBoxAdapter(
                 child: BlocProvider(
-              create: (context) => itemBloc
-                ..searchItemLazy(limit, itemConroller.getSearchOffset,
-                    searchController.text),
+              create: (context) => itemBloc,
               child: BlocConsumer<ItemCubit, ItemState>(
                 listener: (context, state) {
                   state.maybeMap(
-                      orElse: () {},
-                      loading: (e) {},
-                      error: (e) {},
-                      onGetSearchItem: (e) {
-                        var _newOffset = itemConroller.getSearchOffset + 1;
-                        itemConroller.setSearchOffset(_newOffset);
-                      });
+                    orElse: () {},
+                    loading: (e) {},
+                    error: (e) {},
+                    onGetSearchItem: (e) {
+                      offset++;
+                      _items.addAll(e.data);
+                    },
+                  );
 
                   _refreshController.loadComplete();
                 },
                 builder: (context, state) {
-                  return state.maybeMap(orElse: () {
-                    return Container();
-                  }, loading: (e) {
-                    return Center(child: CircularProgressIndicator());
-                  }, onGetSearchItem: (e) {
-                    if (e.data.length == 0) {
-                      return Container(
-                          child: Center(
-                        child: Text(
-                          "No Item Found",
-                          style: TextStyle(
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.grey),
+                  return Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                        margin: EdgeInsets.symmetric(horizontal: 10),
+                        child: GridView.count(
+                          physics: NeverScrollableScrollPhysics(),
+                          crossAxisCount: 2,
+                          childAspectRatio: 1 / 1.8,
+                          crossAxisSpacing: 10,
+                          mainAxisSpacing: 15,
+                          shrinkWrap: true,
+                          children: _items
+                              .map((val) => ItemListWidget(item: val))
+                              .toList(),
                         ),
-                      ));
-                    }
-                    return Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Container(
-                          margin: EdgeInsets.symmetric(horizontal: 10),
-                          child: GridView.count(
-                            physics: NeverScrollableScrollPhysics(),
-                            crossAxisCount: 2,
-                            childAspectRatio: 1 / 1.8,
-                            crossAxisSpacing: 10,
-                            mainAxisSpacing: 15,
-                            shrinkWrap: true,
-                            children: e.data
-                                .map((val) => ItemListWidget(item: val))
-                                .toList(),
-                          ),
-                        ),
-                      ],
-                    );
-                  });
+                      ),
+                    ],
+                  );
+                  // return state.maybeMap(orElse: () {
+                  //   return Container();
+                  // }, loading: (e) {
+                  //   return Center(child: CircularProgressIndicator());
+                  // }, onGetSearchItem: (e) {
+                  //   if (e.data.length == 0) {
+                  //     return Container(
+                  //       child: Center(
+                  //         child: Text(
+                  //           "No Item Found",
+                  //           style: TextStyle(
+                  //               fontSize: 30,
+                  //               fontWeight: FontWeight.bold,
+                  //               color: Colors.grey),
+                  //         ),
+                  //       ),
+                  //     );
+                  //   }
+                  //   return Column(
+                  //     crossAxisAlignment: CrossAxisAlignment.start,
+                  //     children: [
+                  //       SizedBox(
+                  //         height: 20,
+                  //       ),
+                  //       Container(
+                  //         margin: EdgeInsets.symmetric(horizontal: 10),
+                  //         child: GridView.count(
+                  //           physics: NeverScrollableScrollPhysics(),
+                  //           crossAxisCount: 2,
+                  //           childAspectRatio: 1 / 1.8,
+                  //           crossAxisSpacing: 10,
+                  //           mainAxisSpacing: 15,
+                  //           shrinkWrap: true,
+                  //           children: e.data
+                  //               .map((val) => ItemListWidget(item: val))
+                  //               .toList(),
+                  //         ),
+                  //       ),
+                  //     ],
+                  //   );
+                  // });
                 },
               ),
             ))

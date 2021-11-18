@@ -54,7 +54,14 @@ class _PaymentPageState extends State<PaymentPage> {
   @override
   void initState() {
     user = authController.getUserDataModel;
+    initialData();
     super.initState();
+  }
+
+  initialData() {
+    //set deafult address to dropship address
+    authController.setDropship(user);
+    authController.setAddressType(0);
   }
 
   @override
@@ -101,9 +108,8 @@ class _PaymentPageState extends State<PaymentPage> {
                       ),
                     )
                   ])),
-                  SliverList(
-                      delegate: SliverChildListDelegate([
-                    Card(
+                  SliverToBoxAdapter(
+                    child: Card(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8)),
                       elevation: 5,
@@ -113,56 +119,7 @@ class _PaymentPageState extends State<PaymentPage> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            InkWell(
-                                onTap: () {
-                                  Get.toNamed(AddAddressPage.TAG);
-                                },
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      GetX<AuthController>(
-                                        builder: (_user) => Expanded(
-                                            child: (authController
-                                                        .getTemporaryAddress ==
-                                                    UserDataModel())
-                                                ? Column(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      Text(
-                                                          "${_user.getUserDataModel!.fullName} - ( ${_user.getUserDataModel!.phone} )"),
-                                                      Text(
-                                                        "${_user.getUserDataModel!.address}, ${_user.getUserDataModel!.province}, ${_user.getUserDataModel!.village} ${_user.getUserDataModel!.city}, ${_user.getUserDataModel!.terrId1}",
-                                                        overflow: TextOverflow
-                                                            .ellipsis,
-                                                        maxLines: 2,
-                                                      ),
-                                                    ],
-                                                  )
-                                                : Column(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      Text(
-                                                          "${_user.getTemporaryAddress!.fullName} - ( ${_user.getTemporaryAddress!.phone} )"),
-                                                      Text(
-                                                        "${_user.getTemporaryAddress!.address}, ${_user.getTemporaryAddress!.province}, ${_user.getTemporaryAddress!.village} ${_user.getTemporaryAddress!.city}, ${_user.getTemporaryAddress!.terrId1}",
-                                                        overflow: TextOverflow
-                                                            .ellipsis,
-                                                        maxLines: 2,
-                                                      ),
-                                                    ],
-                                                  )),
-                                      ),
-                                      Icon(Icons.keyboard_arrow_right_outlined),
-                                    ],
-                                  ),
-                                )),
+                            PaymentAddressWidget(),
                             Divider(),
                             InkWell(
                               onTap: () {
@@ -211,8 +168,9 @@ class _PaymentPageState extends State<PaymentPage> {
                           ],
                         ),
                       ),
-                    )
-                  ])),
+                    ),
+                  ),
+
                   SliverToBoxAdapter(
                       child: Card(
                     shape: RoundedRectangleBorder(
@@ -396,12 +354,21 @@ class _PaymentPageState extends State<PaymentPage> {
                                 builder: (_user) => TextButton(
                                     onPressed: () {
                                       Get.back();
-
-                                      if (_user.getTemporaryAddress ==
-                                          UserDataModel()) {
-                                        makePayment(_user.getUserDataModel!);
-                                      } else {
-                                        makePayment(_user.getTemporaryAddress!);
+                                      try {
+                                        if (authController.getAddressType() ==
+                                            0) {
+                                          makePayment(
+                                            authController.getDropship(),
+                                          );
+                                        } else {
+                                          makePayment(
+                                            authController.getMyAddress(),
+                                          );
+                                        }
+                                      } catch (e) {
+                                        makePayment(
+                                          _user.getMyAddress( ),
+                                        );
                                       }
                                     },
                                     child: Text("Ya")),
@@ -424,6 +391,24 @@ class _PaymentPageState extends State<PaymentPage> {
         ),
       ),
     );
+  }
+
+  void onChangeDelivery() {
+    if (authController.getAddressType() == 0) {
+      //check
+      var _user = authController.getUserDataModel!;
+      if ((_user.terrId1 == null || _user.terrId1!.isEmpty) ||
+          (_user.terrId3 == null || _user.terrId1!.isEmpty)) {
+        //check if there is origin
+        Get.showSnackbar(GetBar(
+          title: "Address",
+          message: "Please add address",
+          duration: Duration(seconds: 2),
+        ));
+      } else {
+        Get.toNamed(DeliveryPage.TAG);
+      }
+    } else {}
   }
 
   bool isAllDataComplete() {
@@ -625,5 +610,46 @@ class _PaymentPageState extends State<PaymentPage> {
     var _formated =
         Formatter().formatStringCurrency((_cost.toString()).toString());
     return _formated;
+  }
+}
+
+class PaymentAddressWidget extends StatelessWidget {
+  final authController = Get.put(AuthController());
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+        onTap: () {
+          Get.toNamed(AddAddressPage.TAG);
+        },
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              GetX<AuthController>(
+                builder: (_user) => Expanded(
+                    child: (authController.getAddressType() == 0)
+                        ? buildAddressText(_user.getDropship())
+                        : buildAddressText(_user.getMyAddress())),
+              ),
+              Icon(Icons.keyboard_arrow_right_outlined),
+            ],
+          ),
+        ));
+  }
+
+  Column buildAddressText(UserDataModel _user) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text("${_user.fullName} - ( ${_user.phone} )"),
+        Text(
+          "${_user.address}, ${_user.province}, ${_user.village} ${_user.city}, ${_user.terrId1}",
+          overflow: TextOverflow.ellipsis,
+          maxLines: 2,
+        ),
+      ],
+    );
   }
 }

@@ -6,12 +6,40 @@ class AuthController extends GetxController {
   Rx<UserDataModel?> userDataModel = UserDataModel().obs;
   Rx<UserDataModel?> temporaryAddress = UserDataModel().obs;
   RxDouble userBalance = 0.0.obs;
+  RxInt addressType = 0.obs;
 
-  void setTemporaryAddress(UserDataModel data) {
-    this.temporaryAddress.value = data;
+  Rx<UserDataModel?> dropship = UserDataModel().obs;
+  Rx<UserDataModel?> myAddress = UserDataModel().obs;
+
+  void setDropship(UserDataModel? dropship) {
+    this.dropship.value = dropship;
   }
 
-  UserDataModel? get getTemporaryAddress => temporaryAddress.value;
+  void setMyAddress(UserDataModel? myAddress) {
+    this.myAddress.value = myAddress;
+  }
+
+  UserDataModel getDropship() {
+    return this.dropship.value!;
+  }
+
+  UserDataModel getMyAddress() {
+    return this.myAddress.value!;
+  }
+
+  void setAddressType(int type) {
+    addressType.value = type;
+  }
+
+  int getAddressType() {
+    return addressType.value;
+  }
+
+  // void setTemporaryAddress(UserDataModel data) {
+  //   this.temporaryAddress.value = data;
+  // }
+
+  // UserDataModel? get getTemporaryAddress => temporaryAddress.value;
 
   void setBalance(String balance) {
     try {
