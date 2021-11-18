@@ -6,7 +6,9 @@ import 'package:roomart/domain/models/banner/banner_data_model.dart';
 import 'package:roomart/domain/update/update_news_data_model.dart';
 import 'package:roomart/utils/constants.dart';
 
- abstract class IHomeFacade {
+import '../../function_data.dart';
+
+abstract class IHomeFacade {
   Future<Either<String, List<BannerDataModel>>> getBanner(String customerId);
   Future<Either<String, List<UpdateNewsDataModel>>> getNewsList(
       String? customerId);
@@ -21,6 +23,7 @@ class HomeRepository extends IHomeFacade {
   @override
   Future<Either<String, List<BannerDataModel>>> getBanner(
       String customerId) async {
+    dioFixing(dio);
     var data = {"Token": Constants().tokenUltimo, "CustomerID": customerId};
     try {
       var response = await dio.post(
@@ -43,6 +46,8 @@ class HomeRepository extends IHomeFacade {
   @override
   Future<Either<String, List<UpdateNewsDataModel>>> getNewsList(
       String? customerId) async {
+    dioFixing(dio);
+
     var data = {"Token": Constants().tokenUltimo, "CustomerID": customerId};
     print(data);
     try {

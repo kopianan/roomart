@@ -183,6 +183,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
                             getIt<RajaongkirCubit>()..getProvinceData(),
                         child: BlocConsumer<RajaongkirCubit, RajaongkirState>(
                           listener: (context, state) {
+                            print(state);
                             state.maybeMap(
                               orElse: () {},
                               getProvinceData: (e) {
