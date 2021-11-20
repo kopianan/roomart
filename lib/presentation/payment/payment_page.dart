@@ -22,9 +22,7 @@ import 'package:roomart/domain/user/user_data_model.dart';
 import 'package:roomart/presentation/address/add_address_page.dart';
 import 'package:roomart/presentation/delivery/delivery_page.dart';
 import 'package:roomart/presentation/discount/discount_page.dart';
-import 'package:roomart/presentation/payment/payment_midtrans_page.dart';
 import 'package:roomart/presentation/payment/payment_progress_page.dart';
-import 'package:roomart/presentation/payment/payment_status_page.dart';
 import 'package:roomart/presentation/payment/widgets/delivery_detail.dart';
 import 'package:roomart/presentation/payment/widgets/item_list_detail.dart';
 import 'package:roomart/presentation/payment/widgets/payment_method_detail.dart';
@@ -123,8 +121,13 @@ class _PaymentPageState extends State<PaymentPage> {
                             Divider(),
                             InkWell(
                               onTap: () {
-                                //check if user have data
-                                var _user = authController.getUserDataModel!;
+                                late UserDataModel _user;
+                                if (authController.getAddressType() == 0) {
+                                  _user = authController.getDropship();
+                                } else {
+                                  _user = authController.getMyAddress();
+                                }
+
                                 if ((_user.terrId1 == null ||
                                         _user.terrId1!.isEmpty) ||
                                     (_user.terrId3 == null ||
@@ -367,7 +370,7 @@ class _PaymentPageState extends State<PaymentPage> {
                                         }
                                       } catch (e) {
                                         makePayment(
-                                          _user.getMyAddress( ),
+                                          _user.getMyAddress(),
                                         );
                                       }
                                     },
@@ -393,23 +396,23 @@ class _PaymentPageState extends State<PaymentPage> {
     );
   }
 
-  void onChangeDelivery() {
-    if (authController.getAddressType() == 0) {
-      //check
-      var _user = authController.getUserDataModel!;
-      if ((_user.terrId1 == null || _user.terrId1!.isEmpty) ||
-          (_user.terrId3 == null || _user.terrId1!.isEmpty)) {
-        //check if there is origin
-        Get.showSnackbar(GetBar(
-          title: "Address",
-          message: "Please add address",
-          duration: Duration(seconds: 2),
-        ));
-      } else {
-        Get.toNamed(DeliveryPage.TAG);
-      }
-    } else {}
-  }
+  // void onChangeDelivery() {
+  //   if (authController.getAddressType() == 0) {
+  //     //check
+  //     var _user = authController.getUserDataModel!;
+  //     if ((_user.terrId1 == null || _user.terrId1!.isEmpty) ||
+  //         (_user.terrId3 == null || _user.terrId1!.isEmpty)) {
+  //       //check if there is origin
+  //       Get.showSnackbar(GetBar(
+  //         title: "Address",
+  //         message: "Please add address",
+  //         duration: Duration(seconds: 2),
+  //       ));
+  //     } else {
+  //       Get.toNamed(DeliveryPage.TAG);
+  //     }
+  //   } else {}
+  // }
 
   bool isAllDataComplete() {
     if (transactionController.getSelectedCost == Costs()) {
