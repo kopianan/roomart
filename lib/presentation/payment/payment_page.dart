@@ -141,6 +141,7 @@ class _PaymentPageState extends State<PaymentPage> {
                                 } else {
                                   Get.toNamed(DeliveryPage.TAG);
                                 }
+                              
                               },
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
