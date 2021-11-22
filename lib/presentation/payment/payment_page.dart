@@ -123,8 +123,13 @@ class _PaymentPageState extends State<PaymentPage> {
                             Divider(),
                             InkWell(
                               onTap: () {
-                                //check if user have data
-                                var _user = authController.getUserDataModel!;
+                                 late UserDataModel _user;
+                                if (authController.getAddressType() == 0) {
+                                  _user = authController.getDropship();
+                                } else {
+                                  _user = authController.getMyAddress();
+                                }
+
                                 if ((_user.terrId1 == null ||
                                         _user.terrId1!.isEmpty) ||
                                     (_user.terrId3 == null ||
@@ -138,6 +143,7 @@ class _PaymentPageState extends State<PaymentPage> {
                                 } else {
                                   Get.toNamed(DeliveryPage.TAG);
                                 }
+                              
                               },
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
