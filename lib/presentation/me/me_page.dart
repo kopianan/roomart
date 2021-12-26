@@ -5,11 +5,13 @@ import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/application/auth/auth_cubit.dart';
 import 'package:roomart/application/payment/payment_controller.dart';
 import 'package:roomart/application/payment/payment_cubit.dart';
+import 'package:roomart/application/transaction/transaction_controller.dart';
 import 'package:roomart/application/transaction/transaction_cubit.dart';
 import 'package:roomart/domain/transaction/models/transaction_req_res.dart';
 import 'package:roomart/infrastructure/core/pref.dart';
 import 'package:roomart/presentation/cart/cart_page.dart';
 import 'package:roomart/presentation/dashboard/dashboard_page.dart';
+import 'package:roomart/presentation/me/balance_history_page.dart';
 import 'package:roomart/presentation/me/order_page.dart';
 import 'package:roomart/presentation/me/profile_page.dart';
 import 'package:roomart/presentation/splash_screen/splash_screen_page.dart';
@@ -25,6 +27,7 @@ class MePage extends StatefulWidget {
 
 class _MePageState extends State<MePage> {
   final authController = Get.put(AuthController());
+  final transContrller = Get.put(TransactionController());
   final paymentController = Get.put(PaymentController());
   final AuthCubit cubit = getIt<AuthCubit>();
 
@@ -113,11 +116,15 @@ class _MePageState extends State<MePage> {
                             ));
                           }, onGetArBalance: (e) {
                             return Expanded(
-                                child: saldoContainer(
-                              "Total Saldo",
-                              e.balancd,
-                              Colors.yellow,
-                            ));
+                                child: InkWell(
+                                    onTap: () {
+                                      Get.toNamed(BalanceHistoryPage.TAG);
+                                    },
+                                    child: saldoContainer(
+                                      "Total Saldo",
+                                      e.balancd,
+                                      Colors.yellow,
+                                    )));
                           }, loading: (e) {
                             return loadingBalance();
                           });

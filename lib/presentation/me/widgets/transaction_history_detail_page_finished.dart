@@ -154,26 +154,25 @@ class _TransactionHistoryDetailPageFinishedState
                 color: Colors.black,
                 fontSize: 18,
                 fontWeight: FontWeight.bold));
-        break;
+
       case 1:
         return Text("Sedang diperiksa",
             style: TextStyle(
                 color: Colors.orange,
                 fontSize: 18,
                 fontWeight: FontWeight.bold));
-        break;
+
       case -1:
         return Text("Batal",
             style: TextStyle(
                 color: Colors.red, fontSize: 18, fontWeight: FontWeight.bold));
-        break;
+
       default:
         return Text("Lunas",
             style: TextStyle(
                 color: Colors.green,
                 fontSize: 18,
                 fontWeight: FontWeight.bold));
-        break;
     }
   }
 
@@ -202,9 +201,8 @@ class _TransactionHistoryDetailPageFinishedState
               children: [
                 Text("x${double.parse(item.qty).toStringAsFixed(0)}"),
                 SizedBox(width: 20),
-                Text(Formatter().formatStringCurrency((auth.checkIfReseller())
-                    ? item.itemPrice
-                    : item.itemPrice))
+                Text(Formatter().formatStringCurrency(
+                    (auth.checkIfReseller()) ? item.itemPrice : item.itemPrice))
               ],
             ),
           ],

@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
+import 'package:roomart/domain/transaction/models/balance_history_model.dart';
 import 'package:roomart/domain/transaction/models/payment_conf_data_model.dart';
 import 'package:roomart/domain/transaction/models/transaction_req_res.dart';
 import 'package:roomart/domain/transaction/trans_item/bank_data_model.dart';
@@ -34,6 +35,8 @@ abstract class ITransactionFacade {
       {String? custId, String? invoiceNumber});
   Future<Either<String, List<BankDataModel>>> getBankData();
   Future<Either<String, String>> confirmPayment(PaymentConfDataModel data);
+  Future<Either<String, List<BalanceHistoryModel>>> getBalanceHistory(
+      int limit, int offset, String userId);
   Future<Either<String?, MidtransStatusDataModel>> checkMidtransPaymentStatus(
       String? request);
 
@@ -327,6 +330,30 @@ class TransactionRepository extends ITransactionFacade {
       }
     } catch (e) {
       return left("Pembayaran Gagal dikonfirmasi");
+    }
+  }
+
+  @override
+  Future<Either<String, List<BalanceHistoryModel>>> getBalanceHistory(
+      int limit, int offset, String userId) async {
+    Response response;
+
+    try {
+      response = await dio.get(
+          "${Constants().baseUrlProfile}api,AR.vm?cmd=1&custid=${userId}&limit=$limit&offset=$offset");
+
+      var _rawData =
+          response.data.replaceAll("<br>", "").replaceAll(RegExp(r'\t'), " ");
+
+      List _jsonList = json.decode(_rawData);
+      var _data = _jsonList
+          .map<BalanceHistoryModel>((e) => BalanceHistoryModel.fromJson(e))
+          .toList();
+      print(_data.take(1).last);
+
+      return right(_data);
+    } catch (e) {
+      return left(e.toString());
     }
   }
 }
