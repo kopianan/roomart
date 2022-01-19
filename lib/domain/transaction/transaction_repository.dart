@@ -239,12 +239,14 @@ class TransactionRepository extends ITransactionFacade {
     try {
       response = await dio.get(
           "${Constants().baseUrlOtherApi}api,SPGApps.vm?cmd=4&custcode=${userId}&sortdate=desc");
-      print(response);
+
       if (response.statusCode == 200) {
         var replace2 = response.data.replaceAll(RegExp(r'\t'), " ");
 
         List responseJson = await json.decode(replace2.trim());
-
+        if (responseJson.length == 0) {
+          return left("Tidak ditemukan history");
+        }
         final data = responseJson
             .map((md) => new FullTransactionDataModel.fromJson(md))
             .toList();
@@ -254,6 +256,7 @@ class TransactionRepository extends ITransactionFacade {
         return left("Something Wrong");
       }
     } catch (e) {
+      print(e);
       return left(e.toString());
     }
   }
@@ -337,7 +340,6 @@ class TransactionRepository extends ITransactionFacade {
   Future<Either<String, List<BalanceHistoryModel>>> getBalanceHistory(
       int limit, int offset, String userId) async {
     Response response;
-
     try {
       response = await dio.get(
           "${Constants().baseUrlProfile}api,AR.vm?cmd=1&custid=${userId}&limit=$limit&offset=$offset");
@@ -346,6 +348,9 @@ class TransactionRepository extends ITransactionFacade {
           response.data.replaceAll("<br>", "").replaceAll(RegExp(r'\t'), " ");
 
       List _jsonList = json.decode(_rawData);
+      if(_jsonList.length == 0 ){
+        return left("Tidak ada dat history"); 
+      }
       var _data = _jsonList
           .map<BalanceHistoryModel>((e) => BalanceHistoryModel.fromJson(e))
           .toList();

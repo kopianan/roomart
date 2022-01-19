@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
+import 'package:roomart/application/auth/auth_controller.dart';
 import 'package:roomart/application/history_detail/history_detail_cubit.dart';
 import 'package:roomart/application/transaction/transaction_cubit.dart';
 import 'package:roomart/domain/transaction/models/balance_history_model.dart';
@@ -23,6 +24,8 @@ class _BalanceHistoryPageState extends State<BalanceHistoryPage> {
   RefreshController _refreshController =
       RefreshController(initialRefresh: false);
 
+  final authController = Get.put(AuthController());
+
   void _onRefresh() async {
     // monitor network fetch
     await Future.delayed(Duration(milliseconds: 1000));
@@ -39,14 +42,23 @@ class _BalanceHistoryPageState extends State<BalanceHistoryPage> {
   }
 
   List<BalanceHistoryModel> listBalance = [];
+  late String userId;
+  @override
+  void initState() {
+    userId = authController.getUserDataModel!.userId!;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text("Balance History")),
       body: BlocProvider(
-        create: (context) => getIt<TransactionCubit>()
-          ..getBalanceHistory(12, 0, "DM156471404530005987009"),
+        create: (context) =>
+            getIt<TransactionCubit>()..getBalanceHistory(12, 0, userId),
         child: BlocConsumer<TransactionCubit, TransactionState>(
           listener: (context, state) {
+            print(state);
             state.maybeMap(
               orElse: () {},
               onGetBalanceHistory: (e) {
@@ -57,7 +69,10 @@ class _BalanceHistoryPageState extends State<BalanceHistoryPage> {
           builder: (context, state) {
             return state.maybeMap(
               orElse: () {
-                return Center(child: Text(""));
+                return Center(child: Text("Data history tidak ditemukan"));
+              },
+              error: (e) {
+                return Center(child: Text(e.error));
               },
               loading: (e) {
                 return Center(
@@ -65,6 +80,11 @@ class _BalanceHistoryPageState extends State<BalanceHistoryPage> {
                 );
               },
               onGetBalanceHistory: (e) {
+                if (listBalance.length == 0) {
+                  return Center(
+                    child: Text("Tidak ada history"),
+                  );
+                }
                 return ListView.builder(
                   itemBuilder: (context, index) =>
                       _itemBuilder(listBalance[index]),
@@ -123,10 +143,10 @@ class _BalanceHistoryPageState extends State<BalanceHistoryPage> {
                 child: InkWell(
               onTap: () {
                 // if (item.transactionNo!.substring(0, 2) == "SI") {
-                  // print(item.salesOrderId); 
-                  // context
-                  //     .read<HistoryDetailCubit>()
-                  //     .getFinishedHistoryTransaction(item.salesOrderId);
+                // print(item.salesOrderId);
+                // context
+                //     .read<HistoryDetailCubit>()
+                //     .getFinishedHistoryTransaction(item.salesOrderId);
                 // }
               },
               child: Container(
