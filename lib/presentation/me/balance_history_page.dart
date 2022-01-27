@@ -54,8 +54,8 @@ class _BalanceHistoryPageState extends State<BalanceHistoryPage> {
     return Scaffold(
       appBar: AppBar(title: Text("Balance History")),
       body: BlocProvider(
-        create: (context) =>
-            getIt<TransactionCubit>()..getBalanceHistory(12, 0, userId),
+        create: (context) => getIt<TransactionCubit>()
+          ..getBalanceHistory(12, 0, userId),
         child: BlocConsumer<TransactionCubit, TransactionState>(
           listener: (context, state) {
             print(state);
@@ -63,6 +63,8 @@ class _BalanceHistoryPageState extends State<BalanceHistoryPage> {
               orElse: () {},
               onGetBalanceHistory: (e) {
                 listBalance = e.data;
+                listBalance.sort((b, a) => DateTime.parse(a.transactionDate!)
+                    .compareTo(DateTime.parse(b.transactionDate!)));
               },
             );
           },
