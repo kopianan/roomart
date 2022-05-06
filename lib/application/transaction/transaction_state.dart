@@ -22,4 +22,6 @@ class TransactionState with _$TransactionState {
       _OnAddNewTransaction;
   const factory TransactionState.onCheckMidtransStatus(
       MidtransStatusDataModel data) = _OnCheckMidtransStatus;
+  const factory TransactionState.onGetBalanceHistory(
+      List<BalanceHistoryModel> data) = _OnGetBalanceHistory;
 }

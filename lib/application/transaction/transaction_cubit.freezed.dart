@@ -87,6 +87,12 @@ class _$TransactionStateTearOff {
       data,
     );
   }
+
+  _OnGetBalanceHistory onGetBalanceHistory(List<BalanceHistoryModel> data) {
+    return _OnGetBalanceHistory(
+      data,
+    );
+  }
 }
 
 /// @nodoc
@@ -113,6 +119,8 @@ mixin _$TransactionState {
     required TResult Function(TransResponse data) onAddNewTransaction,
     required TResult Function(MidtransStatusDataModel data)
         onCheckMidtransStatus,
+    required TResult Function(List<BalanceHistoryModel> data)
+        onGetBalanceHistory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -131,6 +139,7 @@ mixin _$TransactionState {
         onGetHistoryTransactionV2,
     TResult Function(TransResponse data)? onAddNewTransaction,
     TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    TResult Function(List<BalanceHistoryModel> data)? onGetBalanceHistory,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -152,6 +161,7 @@ mixin _$TransactionState {
     required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
     required TResult Function(_OnCheckMidtransStatus value)
         onCheckMidtransStatus,
+    required TResult Function(_OnGetBalanceHistory value) onGetBalanceHistory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -170,6 +180,7 @@ mixin _$TransactionState {
         onGetHistoryTransactionV2,
     TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
     TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    TResult Function(_OnGetBalanceHistory value)? onGetBalanceHistory,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -246,6 +257,8 @@ class _$_Initial implements _Initial {
     required TResult Function(TransResponse data) onAddNewTransaction,
     required TResult Function(MidtransStatusDataModel data)
         onCheckMidtransStatus,
+    required TResult Function(List<BalanceHistoryModel> data)
+        onGetBalanceHistory,
   }) {
     return initial();
   }
@@ -267,6 +280,7 @@ class _$_Initial implements _Initial {
         onGetHistoryTransactionV2,
     TResult Function(TransResponse data)? onAddNewTransaction,
     TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    TResult Function(List<BalanceHistoryModel> data)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -294,6 +308,7 @@ class _$_Initial implements _Initial {
     required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
     required TResult Function(_OnCheckMidtransStatus value)
         onCheckMidtransStatus,
+    required TResult Function(_OnGetBalanceHistory value) onGetBalanceHistory,
   }) {
     return initial(this);
   }
@@ -315,6 +330,7 @@ class _$_Initial implements _Initial {
         onGetHistoryTransactionV2,
     TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
     TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    TResult Function(_OnGetBalanceHistory value)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -382,6 +398,8 @@ class _$_Loading implements _Loading {
     required TResult Function(TransResponse data) onAddNewTransaction,
     required TResult Function(MidtransStatusDataModel data)
         onCheckMidtransStatus,
+    required TResult Function(List<BalanceHistoryModel> data)
+        onGetBalanceHistory,
   }) {
     return loading();
   }
@@ -403,6 +421,7 @@ class _$_Loading implements _Loading {
         onGetHistoryTransactionV2,
     TResult Function(TransResponse data)? onAddNewTransaction,
     TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    TResult Function(List<BalanceHistoryModel> data)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -430,6 +449,7 @@ class _$_Loading implements _Loading {
     required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
     required TResult Function(_OnCheckMidtransStatus value)
         onCheckMidtransStatus,
+    required TResult Function(_OnGetBalanceHistory value) onGetBalanceHistory,
   }) {
     return loading(this);
   }
@@ -451,6 +471,7 @@ class _$_Loading implements _Loading {
         onGetHistoryTransactionV2,
     TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
     TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    TResult Function(_OnGetBalanceHistory value)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -543,6 +564,8 @@ class _$_Error implements _Error {
     required TResult Function(TransResponse data) onAddNewTransaction,
     required TResult Function(MidtransStatusDataModel data)
         onCheckMidtransStatus,
+    required TResult Function(List<BalanceHistoryModel> data)
+        onGetBalanceHistory,
   }) {
     return error(this.error);
   }
@@ -564,6 +587,7 @@ class _$_Error implements _Error {
         onGetHistoryTransactionV2,
     TResult Function(TransResponse data)? onAddNewTransaction,
     TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    TResult Function(List<BalanceHistoryModel> data)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -591,6 +615,7 @@ class _$_Error implements _Error {
     required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
     required TResult Function(_OnCheckMidtransStatus value)
         onCheckMidtransStatus,
+    required TResult Function(_OnGetBalanceHistory value) onGetBalanceHistory,
   }) {
     return error(this);
   }
@@ -612,6 +637,7 @@ class _$_Error implements _Error {
         onGetHistoryTransactionV2,
     TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
     TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    TResult Function(_OnGetBalanceHistory value)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -711,6 +737,8 @@ class _$_OnConfirmPayment implements _OnConfirmPayment {
     required TResult Function(TransResponse data) onAddNewTransaction,
     required TResult Function(MidtransStatusDataModel data)
         onCheckMidtransStatus,
+    required TResult Function(List<BalanceHistoryModel> data)
+        onGetBalanceHistory,
   }) {
     return onConfirmPayment(confirm);
   }
@@ -732,6 +760,7 @@ class _$_OnConfirmPayment implements _OnConfirmPayment {
         onGetHistoryTransactionV2,
     TResult Function(TransResponse data)? onAddNewTransaction,
     TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    TResult Function(List<BalanceHistoryModel> data)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (onConfirmPayment != null) {
@@ -759,6 +788,7 @@ class _$_OnConfirmPayment implements _OnConfirmPayment {
     required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
     required TResult Function(_OnCheckMidtransStatus value)
         onCheckMidtransStatus,
+    required TResult Function(_OnGetBalanceHistory value) onGetBalanceHistory,
   }) {
     return onConfirmPayment(this);
   }
@@ -780,6 +810,7 @@ class _$_OnConfirmPayment implements _OnConfirmPayment {
         onGetHistoryTransactionV2,
     TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
     TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    TResult Function(_OnGetBalanceHistory value)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (onConfirmPayment != null) {
@@ -880,6 +911,8 @@ class _$_OnCancelOrder implements _OnCancelOrder {
     required TResult Function(TransResponse data) onAddNewTransaction,
     required TResult Function(MidtransStatusDataModel data)
         onCheckMidtransStatus,
+    required TResult Function(List<BalanceHistoryModel> data)
+        onGetBalanceHistory,
   }) {
     return onCancelOrder(message);
   }
@@ -901,6 +934,7 @@ class _$_OnCancelOrder implements _OnCancelOrder {
         onGetHistoryTransactionV2,
     TResult Function(TransResponse data)? onAddNewTransaction,
     TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    TResult Function(List<BalanceHistoryModel> data)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (onCancelOrder != null) {
@@ -928,6 +962,7 @@ class _$_OnCancelOrder implements _OnCancelOrder {
     required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
     required TResult Function(_OnCheckMidtransStatus value)
         onCheckMidtransStatus,
+    required TResult Function(_OnGetBalanceHistory value) onGetBalanceHistory,
   }) {
     return onCancelOrder(this);
   }
@@ -949,6 +984,7 @@ class _$_OnCancelOrder implements _OnCancelOrder {
         onGetHistoryTransactionV2,
     TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
     TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    TResult Function(_OnGetBalanceHistory value)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (onCancelOrder != null) {
@@ -1050,6 +1086,8 @@ class _$_OnGetBankData implements _OnGetBankData {
     required TResult Function(TransResponse data) onAddNewTransaction,
     required TResult Function(MidtransStatusDataModel data)
         onCheckMidtransStatus,
+    required TResult Function(List<BalanceHistoryModel> data)
+        onGetBalanceHistory,
   }) {
     return onGetBankData(listBank);
   }
@@ -1071,6 +1109,7 @@ class _$_OnGetBankData implements _OnGetBankData {
         onGetHistoryTransactionV2,
     TResult Function(TransResponse data)? onAddNewTransaction,
     TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    TResult Function(List<BalanceHistoryModel> data)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (onGetBankData != null) {
@@ -1098,6 +1137,7 @@ class _$_OnGetBankData implements _OnGetBankData {
     required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
     required TResult Function(_OnCheckMidtransStatus value)
         onCheckMidtransStatus,
+    required TResult Function(_OnGetBalanceHistory value) onGetBalanceHistory,
   }) {
     return onGetBankData(this);
   }
@@ -1119,6 +1159,7 @@ class _$_OnGetBankData implements _OnGetBankData {
         onGetHistoryTransactionV2,
     TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
     TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    TResult Function(_OnGetBalanceHistory value)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (onGetBankData != null) {
@@ -1221,6 +1262,8 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
     required TResult Function(TransResponse data) onAddNewTransaction,
     required TResult Function(MidtransStatusDataModel data)
         onCheckMidtransStatus,
+    required TResult Function(List<BalanceHistoryModel> data)
+        onGetBalanceHistory,
   }) {
     return onGetHistoryTransaction(data);
   }
@@ -1242,6 +1285,7 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
         onGetHistoryTransactionV2,
     TResult Function(TransResponse data)? onAddNewTransaction,
     TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    TResult Function(List<BalanceHistoryModel> data)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (onGetHistoryTransaction != null) {
@@ -1269,6 +1313,7 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
     required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
     required TResult Function(_OnCheckMidtransStatus value)
         onCheckMidtransStatus,
+    required TResult Function(_OnGetBalanceHistory value) onGetBalanceHistory,
   }) {
     return onGetHistoryTransaction(this);
   }
@@ -1290,6 +1335,7 @@ class _$_OnGetHistoryTransaction implements _OnGetHistoryTransaction {
         onGetHistoryTransactionV2,
     TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
     TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    TResult Function(_OnGetBalanceHistory value)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (onGetHistoryTransaction != null) {
@@ -1395,6 +1441,8 @@ class _$_OnGetSentHistoryTransaction implements _OnGetSentHistoryTransaction {
     required TResult Function(TransResponse data) onAddNewTransaction,
     required TResult Function(MidtransStatusDataModel data)
         onCheckMidtransStatus,
+    required TResult Function(List<BalanceHistoryModel> data)
+        onGetBalanceHistory,
   }) {
     return onGetSentHistoryTransaction(data);
   }
@@ -1416,6 +1464,7 @@ class _$_OnGetSentHistoryTransaction implements _OnGetSentHistoryTransaction {
         onGetHistoryTransactionV2,
     TResult Function(TransResponse data)? onAddNewTransaction,
     TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    TResult Function(List<BalanceHistoryModel> data)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (onGetSentHistoryTransaction != null) {
@@ -1443,6 +1492,7 @@ class _$_OnGetSentHistoryTransaction implements _OnGetSentHistoryTransaction {
     required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
     required TResult Function(_OnCheckMidtransStatus value)
         onCheckMidtransStatus,
+    required TResult Function(_OnGetBalanceHistory value) onGetBalanceHistory,
   }) {
     return onGetSentHistoryTransaction(this);
   }
@@ -1464,6 +1514,7 @@ class _$_OnGetSentHistoryTransaction implements _OnGetSentHistoryTransaction {
         onGetHistoryTransactionV2,
     TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
     TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    TResult Function(_OnGetBalanceHistory value)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (onGetSentHistoryTransaction != null) {
@@ -1566,6 +1617,8 @@ class _$_OnGetAllTransaction implements _OnGetAllTransaction {
     required TResult Function(TransResponse data) onAddNewTransaction,
     required TResult Function(MidtransStatusDataModel data)
         onCheckMidtransStatus,
+    required TResult Function(List<BalanceHistoryModel> data)
+        onGetBalanceHistory,
   }) {
     return onGetAllTransaction(data);
   }
@@ -1587,6 +1640,7 @@ class _$_OnGetAllTransaction implements _OnGetAllTransaction {
         onGetHistoryTransactionV2,
     TResult Function(TransResponse data)? onAddNewTransaction,
     TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    TResult Function(List<BalanceHistoryModel> data)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (onGetAllTransaction != null) {
@@ -1614,6 +1668,7 @@ class _$_OnGetAllTransaction implements _OnGetAllTransaction {
     required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
     required TResult Function(_OnCheckMidtransStatus value)
         onCheckMidtransStatus,
+    required TResult Function(_OnGetBalanceHistory value) onGetBalanceHistory,
   }) {
     return onGetAllTransaction(this);
   }
@@ -1635,6 +1690,7 @@ class _$_OnGetAllTransaction implements _OnGetAllTransaction {
         onGetHistoryTransactionV2,
     TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
     TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    TResult Function(_OnGetBalanceHistory value)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (onGetAllTransaction != null) {
@@ -1739,6 +1795,8 @@ class _$_OnGetHistoryTransactionV2 implements _OnGetHistoryTransactionV2 {
     required TResult Function(TransResponse data) onAddNewTransaction,
     required TResult Function(MidtransStatusDataModel data)
         onCheckMidtransStatus,
+    required TResult Function(List<BalanceHistoryModel> data)
+        onGetBalanceHistory,
   }) {
     return onGetHistoryTransactionV2(data);
   }
@@ -1760,6 +1818,7 @@ class _$_OnGetHistoryTransactionV2 implements _OnGetHistoryTransactionV2 {
         onGetHistoryTransactionV2,
     TResult Function(TransResponse data)? onAddNewTransaction,
     TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    TResult Function(List<BalanceHistoryModel> data)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (onGetHistoryTransactionV2 != null) {
@@ -1787,6 +1846,7 @@ class _$_OnGetHistoryTransactionV2 implements _OnGetHistoryTransactionV2 {
     required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
     required TResult Function(_OnCheckMidtransStatus value)
         onCheckMidtransStatus,
+    required TResult Function(_OnGetBalanceHistory value) onGetBalanceHistory,
   }) {
     return onGetHistoryTransactionV2(this);
   }
@@ -1808,6 +1868,7 @@ class _$_OnGetHistoryTransactionV2 implements _OnGetHistoryTransactionV2 {
         onGetHistoryTransactionV2,
     TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
     TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    TResult Function(_OnGetBalanceHistory value)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (onGetHistoryTransactionV2 != null) {
@@ -1910,6 +1971,8 @@ class _$_OnAddNewTransaction implements _OnAddNewTransaction {
     required TResult Function(TransResponse data) onAddNewTransaction,
     required TResult Function(MidtransStatusDataModel data)
         onCheckMidtransStatus,
+    required TResult Function(List<BalanceHistoryModel> data)
+        onGetBalanceHistory,
   }) {
     return onAddNewTransaction(data);
   }
@@ -1931,6 +1994,7 @@ class _$_OnAddNewTransaction implements _OnAddNewTransaction {
         onGetHistoryTransactionV2,
     TResult Function(TransResponse data)? onAddNewTransaction,
     TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    TResult Function(List<BalanceHistoryModel> data)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (onAddNewTransaction != null) {
@@ -1958,6 +2022,7 @@ class _$_OnAddNewTransaction implements _OnAddNewTransaction {
     required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
     required TResult Function(_OnCheckMidtransStatus value)
         onCheckMidtransStatus,
+    required TResult Function(_OnGetBalanceHistory value) onGetBalanceHistory,
   }) {
     return onAddNewTransaction(this);
   }
@@ -1979,6 +2044,7 @@ class _$_OnAddNewTransaction implements _OnAddNewTransaction {
         onGetHistoryTransactionV2,
     TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
     TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    TResult Function(_OnGetBalanceHistory value)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (onAddNewTransaction != null) {
@@ -2090,6 +2156,8 @@ class _$_OnCheckMidtransStatus implements _OnCheckMidtransStatus {
     required TResult Function(TransResponse data) onAddNewTransaction,
     required TResult Function(MidtransStatusDataModel data)
         onCheckMidtransStatus,
+    required TResult Function(List<BalanceHistoryModel> data)
+        onGetBalanceHistory,
   }) {
     return onCheckMidtransStatus(data);
   }
@@ -2111,6 +2179,7 @@ class _$_OnCheckMidtransStatus implements _OnCheckMidtransStatus {
         onGetHistoryTransactionV2,
     TResult Function(TransResponse data)? onAddNewTransaction,
     TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    TResult Function(List<BalanceHistoryModel> data)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (onCheckMidtransStatus != null) {
@@ -2138,6 +2207,7 @@ class _$_OnCheckMidtransStatus implements _OnCheckMidtransStatus {
     required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
     required TResult Function(_OnCheckMidtransStatus value)
         onCheckMidtransStatus,
+    required TResult Function(_OnGetBalanceHistory value) onGetBalanceHistory,
   }) {
     return onCheckMidtransStatus(this);
   }
@@ -2159,6 +2229,7 @@ class _$_OnCheckMidtransStatus implements _OnCheckMidtransStatus {
         onGetHistoryTransactionV2,
     TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
     TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    TResult Function(_OnGetBalanceHistory value)? onGetBalanceHistory,
     required TResult orElse(),
   }) {
     if (onCheckMidtransStatus != null) {
@@ -2175,5 +2246,181 @@ abstract class _OnCheckMidtransStatus implements TransactionState {
   MidtransStatusDataModel get data => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$OnCheckMidtransStatusCopyWith<_OnCheckMidtransStatus> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$OnGetBalanceHistoryCopyWith<$Res> {
+  factory _$OnGetBalanceHistoryCopyWith(_OnGetBalanceHistory value,
+          $Res Function(_OnGetBalanceHistory) then) =
+      __$OnGetBalanceHistoryCopyWithImpl<$Res>;
+  $Res call({List<BalanceHistoryModel> data});
+}
+
+/// @nodoc
+class __$OnGetBalanceHistoryCopyWithImpl<$Res>
+    extends _$TransactionStateCopyWithImpl<$Res>
+    implements _$OnGetBalanceHistoryCopyWith<$Res> {
+  __$OnGetBalanceHistoryCopyWithImpl(
+      _OnGetBalanceHistory _value, $Res Function(_OnGetBalanceHistory) _then)
+      : super(_value, (v) => _then(v as _OnGetBalanceHistory));
+
+  @override
+  _OnGetBalanceHistory get _value => super._value as _OnGetBalanceHistory;
+
+  @override
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_OnGetBalanceHistory(
+      data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<BalanceHistoryModel>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_OnGetBalanceHistory implements _OnGetBalanceHistory {
+  const _$_OnGetBalanceHistory(this.data);
+
+  @override
+  final List<BalanceHistoryModel> data;
+
+  @override
+  String toString() {
+    return 'TransactionState.onGetBalanceHistory(data: $data)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _OnGetBalanceHistory &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(data);
+
+  @JsonKey(ignore: true)
+  @override
+  _$OnGetBalanceHistoryCopyWith<_OnGetBalanceHistory> get copyWith =>
+      __$OnGetBalanceHistoryCopyWithImpl<_OnGetBalanceHistory>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String error) error,
+    required TResult Function(String confirm) onConfirmPayment,
+    required TResult Function(String message) onCancelOrder,
+    required TResult Function(List<BankDataModel> listBank) onGetBankData,
+    required TResult Function(List<TransactionDataModel> data)
+        onGetHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetSentHistoryTransaction,
+    required TResult Function(List<FullTransactionDataModel> data)
+        onGetAllTransaction,
+    required TResult Function(List<TransactionDataModelV2> data)
+        onGetHistoryTransactionV2,
+    required TResult Function(TransResponse data) onAddNewTransaction,
+    required TResult Function(MidtransStatusDataModel data)
+        onCheckMidtransStatus,
+    required TResult Function(List<BalanceHistoryModel> data)
+        onGetBalanceHistory,
+  }) {
+    return onGetBalanceHistory(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String error)? error,
+    TResult Function(String confirm)? onConfirmPayment,
+    TResult Function(String message)? onCancelOrder,
+    TResult Function(List<BankDataModel> listBank)? onGetBankData,
+    TResult Function(List<TransactionDataModel> data)? onGetHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)?
+        onGetSentHistoryTransaction,
+    TResult Function(List<FullTransactionDataModel> data)? onGetAllTransaction,
+    TResult Function(List<TransactionDataModelV2> data)?
+        onGetHistoryTransactionV2,
+    TResult Function(TransResponse data)? onAddNewTransaction,
+    TResult Function(MidtransStatusDataModel data)? onCheckMidtransStatus,
+    TResult Function(List<BalanceHistoryModel> data)? onGetBalanceHistory,
+    required TResult orElse(),
+  }) {
+    if (onGetBalanceHistory != null) {
+      return onGetBalanceHistory(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_OnConfirmPayment value) onConfirmPayment,
+    required TResult Function(_OnCancelOrder value) onCancelOrder,
+    required TResult Function(_OnGetBankData value) onGetBankData,
+    required TResult Function(_OnGetHistoryTransaction value)
+        onGetHistoryTransaction,
+    required TResult Function(_OnGetSentHistoryTransaction value)
+        onGetSentHistoryTransaction,
+    required TResult Function(_OnGetAllTransaction value) onGetAllTransaction,
+    required TResult Function(_OnGetHistoryTransactionV2 value)
+        onGetHistoryTransactionV2,
+    required TResult Function(_OnAddNewTransaction value) onAddNewTransaction,
+    required TResult Function(_OnCheckMidtransStatus value)
+        onCheckMidtransStatus,
+    required TResult Function(_OnGetBalanceHistory value) onGetBalanceHistory,
+  }) {
+    return onGetBalanceHistory(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_OnConfirmPayment value)? onConfirmPayment,
+    TResult Function(_OnCancelOrder value)? onCancelOrder,
+    TResult Function(_OnGetBankData value)? onGetBankData,
+    TResult Function(_OnGetHistoryTransaction value)? onGetHistoryTransaction,
+    TResult Function(_OnGetSentHistoryTransaction value)?
+        onGetSentHistoryTransaction,
+    TResult Function(_OnGetAllTransaction value)? onGetAllTransaction,
+    TResult Function(_OnGetHistoryTransactionV2 value)?
+        onGetHistoryTransactionV2,
+    TResult Function(_OnAddNewTransaction value)? onAddNewTransaction,
+    TResult Function(_OnCheckMidtransStatus value)? onCheckMidtransStatus,
+    TResult Function(_OnGetBalanceHistory value)? onGetBalanceHistory,
+    required TResult orElse(),
+  }) {
+    if (onGetBalanceHistory != null) {
+      return onGetBalanceHistory(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnGetBalanceHistory implements TransactionState {
+  const factory _OnGetBalanceHistory(List<BalanceHistoryModel> data) =
+      _$_OnGetBalanceHistory;
+
+  List<BalanceHistoryModel> get data => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$OnGetBalanceHistoryCopyWith<_OnGetBalanceHistory> get copyWith =>
       throw _privateConstructorUsedError;
 }
