@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:roomart/domain/transaction/full_transaction_data_model.dart';
+import 'package:roomart/domain/transaction/models/balance_history_model.dart';
 import 'package:roomart/domain/transaction/models/transaction_item_data_model.dart';
 import 'package:roomart/domain/transaction/models/transaction_req_res.dart';
 import 'package:roomart/domain/transaction/trans_item/bank_data_model.dart';
@@ -73,6 +74,20 @@ class TransactionCubit extends Cubit<TransactionState> {
       _result.fold(
         (l) => emit(TransactionState.error(l.toString())),
         (r) => emit(TransactionState.onGetSentHistoryTransaction(r)),
+      );
+    } catch (e) {
+      emit(TransactionState.error(e.toString()));
+    }
+  }
+
+  void getBalanceHistory(int limit, int offset, String userId) async {
+    emit(TransactionState.loading());
+    try {
+      final _result =
+          await iTransactionFacade!.getBalanceHistory(limit, offset, userId);
+      _result.fold(
+        (l) => emit(TransactionState.error(l.toString())),
+        (r) => emit(TransactionState.onGetBalanceHistory(r)),
       );
     } catch (e) {
       emit(TransactionState.error(e.toString()));

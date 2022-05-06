@@ -5,11 +5,12 @@ import 'package:roomart/presentation/cart/cart_page.dart';
 import 'package:roomart/presentation/category/category_end_page.dart';
 import 'package:roomart/presentation/category/sub_cotegory_page.dart';
 import 'package:roomart/presentation/dashboard/contact_us_page.dart';
-import 'package:roomart/presentation/dashboard/dashboard_page.dart'; 
+import 'package:roomart/presentation/dashboard/dashboard_page.dart';
 import 'package:roomart/presentation/dashboard/widget/search_product_page.dart';
 import 'package:roomart/presentation/delivery/delivery_page.dart';
 import 'package:roomart/presentation/discount/discount_page.dart';
 import 'package:roomart/presentation/item_detail/item_detail_page.dart';
+import 'package:roomart/presentation/me/balance_history_page.dart';
 import 'package:roomart/presentation/me/change_password_page.dart';
 import 'package:roomart/presentation/me/order_page.dart';
 import 'package:roomart/presentation/me/payment_confirmation_page.dart';
@@ -50,7 +51,7 @@ List<GetPage> pages = [
   GetPage(name: ItemDetailPage.TAG, page: () => ItemDetailPage()),
   GetPage(name: OrderPage.TAG, page: () => OrderPage()),
   GetPage(name: CartPage.TAG, page: () => CartPage()),
-  GetPage(name: PaymentPage.TAG, page: () => PaymentPage()), 
+  GetPage(name: PaymentPage.TAG, page: () => PaymentPage()),
   GetPage(name: AddAddressPage.TAG, page: () => AddAddressPage()),
   GetPage(name: PaymentStatusPage.TAG, page: () => PaymentStatusPage()),
   GetPage(name: SearchProductPage.TAG, page: () => SearchProductPage()),
@@ -68,6 +69,7 @@ List<GetPage> pages = [
       page: () => NewHistoryTransactionDetailPage()),
   GetPage(name: PaymentMidtransPage.TAG, page: () => PaymentMidtransPage()),
   GetPage(name: PhotoViewPage.TAG, page: () => PhotoViewPage()),
+  GetPage(name: BalanceHistoryPage.TAG, page: () => BalanceHistoryPage()),
   // GetPage(
   //     name: DetailTransactionHistoryPage.TAG,
   //     page: () => DetailTransactionHistoryPage()),
