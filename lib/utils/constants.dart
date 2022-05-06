@@ -6,7 +6,7 @@ class Constants {
   static const icon_launcher = "assets/logo.png";
   static const logo = "assets/logo.png";
   static const promotion_image = "assets/promotion.png";
-  static const title_appbar = "ROOMART";
+  static const title_appbar = "VG Shop";
   String? resellerParentID = null; //Disesuaikan dengan kode reseller
 
   String storageBox = 'roomart_storage_key';
@@ -50,7 +50,7 @@ class Constants {
 
   String customerTypeReseller = "DM152548649756011793164";
   String customerTypeReseller2 = "DM158597782964902435338";
-  String customerTypeId = "DM151627192557861134072";
+  String customerTypeId = "DM158597782964902435338";
   String paymentTypeMidtrans = "DM159834710066540997321";
 
   String transactionTypeCredit = "138120846724201371547";
