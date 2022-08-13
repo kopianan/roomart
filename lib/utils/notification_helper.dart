@@ -4,10 +4,13 @@ class NotificationHelper {
   static FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
       FlutterLocalNotificationsPlugin();
   static final androidPlatformChannelSpecifics = AndroidNotificationDetails(
-      'some_channel_id', 'channel_name', 'channel_description',
-      importance: Importance.max,
-      priority: Priority.high,
-      enableVibration: true);
+    'some_channel_id',
+    'channel_name',
+    'channel_description',
+    importance: Importance.max,
+    priority: Priority.max,
+    enableVibration: true,
+  );
 
   static final iOSPlatformChannelSpecifics = IOSNotificationDetails();
 
@@ -20,7 +23,7 @@ class NotificationHelper {
   static Future showNotification(String title, String body) async {
     var android = AndroidNotificationDetails(
       'id',
-      'channel ',
+      'channel',
       'description',
       priority: Priority.high,
       importance: Importance.max,
