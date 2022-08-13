@@ -116,9 +116,18 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
                           SizedBox(
                             width: 8,
                           ),
-                          resellerPrice(auth.checkIfReseller(), data!.itemPrice,
-                              data!.newPrice)
                         ],
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10),
+                        child: resellerPrice(
+                          auth.checkIfReseller(),
+                          data!.itemPrice,
+                          data!.newPrice,
+                        ),
                       ),
                     ),
                     Divider(),
