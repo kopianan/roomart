@@ -93,7 +93,6 @@ class ItemRepoistory extends IITemFacae {
   Future<Either<String, List<DataItemModel>>> searchItem(
       {int? offset, int? limit, String? keywoard}) async {
     List<DataItemModel> _tempData = <DataItemModel>[];
-    print(offset);
     try {
       Response response;
       response = await dio.get(

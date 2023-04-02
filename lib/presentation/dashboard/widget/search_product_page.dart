@@ -55,155 +55,178 @@ class _SearchProductPageState extends State<SearchProductPage> {
         appBar: AppBar(
           title: Text("Cari Procuk"),
         ),
-        body: SmartRefresher(
-          enablePullDown: true,
-          enablePullUp: true,
-          header: WaterDropHeader(),
-          footer: CustomFooter(
-            builder: (BuildContext context, LoadStatus? mode) {
-              Widget body;
-              if (mode == LoadStatus.idle) {
-                body = Text("pull up load");
-              } else if (mode == LoadStatus.loading) {
-                body = CupertinoActivityIndicator();
-              } else if (mode == LoadStatus.failed) {
-                body = Text("Load Failed!Click retry!");
-              } else if (mode == LoadStatus.canLoading) {
-                body = Text("release to load more");
-              } else {
-                body = Text("No more Data");
-              }
-              return Container(
-                height: 55.0,
-                child: Center(child: body),
-              );
-            },
-          ),
-          controller: _refreshController,
-          onRefresh: _onRefresh,
-          onLoading: _onLoading,
-          child: CustomScrollView(slivers: [
-            SliverToBoxAdapter(
-              child: Container(
-                padding: EdgeInsets.all(10),
-                width: double.infinity,
-                child: TextFormField(
-                  onChanged: (e) {},
-                  onFieldSubmitted: (val) {
-                    offset = 0;
-                    _items.clear();
-                    itemBloc.searchItemLazy(
-                        limit, offset, searchController.text);
-                  },
-                  decoration: InputDecoration(
-                    prefixIcon: (searchController.text.isEmpty)
-                        ? null
-                        : IconButton(
-                            icon: Icon(Icons.clear),
-                            onPressed: () {
-                              searchController.clear();
-                              setState(() {});
-                            }),
-                    hintText: "Cari Produk",
-                    suffixIcon: IconButton(
-                      icon: Icon(Icons.search),
-                      onPressed: () {
+        body: BlocProvider(
+            create: (context) => itemBloc,
+            child: SmartRefresher(
+              enablePullDown: true,
+              enablePullUp: true,
+              header: WaterDropHeader(),
+              footer: CustomFooter(
+                builder: (BuildContext context, LoadStatus? mode) {
+                  Widget body;
+                  if (mode == LoadStatus.idle) {
+                    body = Text("pull up load");
+                  } else if (mode == LoadStatus.loading) {
+                    body = CupertinoActivityIndicator();
+                  } else if (mode == LoadStatus.failed) {
+                    body = Text("Load Failed!Click retry!");
+                  } else if (mode == LoadStatus.canLoading) {
+                    body = Text("release to load more");
+                  } else {
+                    body = Text("No more Data");
+                  }
+                  return BlocBuilder<ItemCubit, ItemState>(
+                    builder: (context, state) {
+                      return state.maybeMap(onGetSearchItem: (e) {
+                        if (e.data.length == 0) {
+                          return Container(
+                            height: 55.0,
+                            child: Center(child: Text("No More Data")),
+                          );
+                        } else {
+                          return Container(
+                            height: 55.0,
+                            child: Center(child: body),
+                          );
+                        }
+                      }, orElse: () {
+                        return Container(
+                          height: 55.0,
+                          child: Center(child: body),
+                        );
+                      });
+                    },
+                  );
+                },
+              ),
+              controller: _refreshController,
+              onRefresh: _onRefresh,
+              onLoading: _onLoading,
+              child: CustomScrollView(slivers: [
+                SliverToBoxAdapter(
+                  child: Container(
+                    padding: EdgeInsets.all(10),
+                    width: double.infinity,
+                    child: TextFormField(
+                      onChanged: (e) {},
+                      onFieldSubmitted: (val) {
+                        offset = 0;
                         _items.clear();
                         itemBloc.searchItemLazy(
                             limit, offset, searchController.text);
                       },
-                    ),
-                  ),
-                  controller: searchController,
-                ),
-              ),
-            ),
-            SliverToBoxAdapter(
-                child: BlocProvider(
-              create: (context) => itemBloc,
-              child: BlocConsumer<ItemCubit, ItemState>(
-                listener: (context, state) {
-                  state.maybeMap(
-                    orElse: () {},
-                    loading: (e) {},
-                    error: (e) {},
-                    onGetSearchItem: (e) {
-                      offset++;
-                      _items.addAll(e.data);
-                    },
-                  );
-
-                  _refreshController.loadComplete();
-                },
-                builder: (context, state) {
-                  return Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Container(
-                        margin: EdgeInsets.symmetric(horizontal: 10),
-                        child: GridView.count(
-                          physics: NeverScrollableScrollPhysics(),
-                          crossAxisCount: 2,
-                          childAspectRatio: 1 / 1.8,
-                          crossAxisSpacing: 10,
-                          mainAxisSpacing: 15,
-                          shrinkWrap: true,
-                          children: _items
-                              .map((val) => ItemListWidget(item: val))
-                              .toList(),
+                      decoration: InputDecoration(
+                        prefixIcon: (searchController.text.isEmpty)
+                            ? null
+                            : IconButton(
+                                icon: Icon(Icons.clear),
+                                onPressed: () {
+                                  searchController.clear();
+                                  setState(() {});
+                                }),
+                        hintText: "Cari Produk",
+                        suffixIcon: IconButton(
+                          icon: Icon(Icons.search),
+                          onPressed: () {
+                            _items.clear();
+                            offset = 0;
+                            itemBloc.searchItemLazy(
+                                limit, offset, searchController.text);
+                          },
                         ),
                       ),
-                    ],
-                  );
-                  // return state.maybeMap(orElse: () {
-                  //   return Container();
-                  // }, loading: (e) {
-                  //   return Center(child: CircularProgressIndicator());
-                  // }, onGetSearchItem: (e) {
-                  //   if (e.data.length == 0) {
-                  //     return Container(
-                  //       child: Center(
-                  //         child: Text(
-                  //           "No Item Found",
-                  //           style: TextStyle(
-                  //               fontSize: 30,
-                  //               fontWeight: FontWeight.bold,
-                  //               color: Colors.grey),
-                  //         ),
-                  //       ),
-                  //     );
-                  //   }
-                  //   return Column(
-                  //     crossAxisAlignment: CrossAxisAlignment.start,
-                  //     children: [
-                  //       SizedBox(
-                  //         height: 20,
-                  //       ),
-                  //       Container(
-                  //         margin: EdgeInsets.symmetric(horizontal: 10),
-                  //         child: GridView.count(
-                  //           physics: NeverScrollableScrollPhysics(),
-                  //           crossAxisCount: 2,
-                  //           childAspectRatio: 1 / 1.8,
-                  //           crossAxisSpacing: 10,
-                  //           mainAxisSpacing: 15,
-                  //           shrinkWrap: true,
-                  //           children: e.data
-                  //               .map((val) => ItemListWidget(item: val))
-                  //               .toList(),
-                  //         ),
-                  //       ),
-                  //     ],
-                  //   );
-                  // });
-                },
-              ),
-            ))
-          ]),
-        ));
+                      controller: searchController,
+                    ),
+                  ),
+                ),
+                SliverToBoxAdapter(
+                  child: BlocConsumer<ItemCubit, ItemState>(
+                    listener: (context, state) {
+                      state.maybeMap(
+                        orElse: () {},
+                        loading: (e) {},
+                        error: (e) {},
+                        onGetSearchItem: (e) {
+                          _items.addAll(e.data);
+                          if (_items.length == 0) {
+                            offset = 0;
+                          } else {
+                            offset += e.data.length;
+                          }
+                        },
+                      );
+
+                      _refreshController.loadComplete();
+                    },
+                    builder: (context, state) {
+                      return Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Container(
+                            margin: EdgeInsets.symmetric(horizontal: 10),
+                            child: GridView.count(
+                              physics: NeverScrollableScrollPhysics(),
+                              crossAxisCount: 2,
+                              childAspectRatio: 1 / 1.8,
+                              crossAxisSpacing: 10,
+                              mainAxisSpacing: 15,
+                              shrinkWrap: true,
+                              children: _items
+                                  .map((val) => ItemListWidget(item: val))
+                                  .toList(),
+                            ),
+                          ),
+                        ],
+                      );
+                      // return state.maybeMap(orElse: () {
+                      //   return Container();
+                      // }, loading: (e) {
+                      //   return Center(child: CircularProgressIndicator());
+                      // }, onGetSearchItem: (e) {
+                      //   if (e.data.length == 0) {
+                      //     return Container(
+                      //       child: Center(
+                      //         child: Text(
+                      //           "No Item Found",
+                      //           style: TextStyle(
+                      //               fontSize: 30,
+                      //               fontWeight: FontWeight.bold,
+                      //               color: Colors.grey),
+                      //         ),
+                      //       ),
+                      //     );
+                      //   }
+                      //   return Column(
+                      //     crossAxisAlignment: CrossAxisAlignment.start,
+                      //     children: [
+                      //       SizedBox(
+                      //         height: 20,
+                      //       ),
+                      //       Container(
+                      //         margin: EdgeInsets.symmetric(horizontal: 10),
+                      //         child: GridView.count(
+                      //           physics: NeverScrollableScrollPhysics(),
+                      //           crossAxisCount: 2,
+                      //           childAspectRatio: 1 / 1.8,
+                      //           crossAxisSpacing: 10,
+                      //           mainAxisSpacing: 15,
+                      //           shrinkWrap: true,
+                      //           children: e.data
+                      //               .map((val) => ItemListWidget(item: val))
+                      //               .toList(),
+                      //         ),
+                      //       ),
+                      //     ],
+                      //   );
+                      // });
+                    },
+                  ),
+                )
+              ]),
+            )));
   }
 
   GridView buildinitialCategory() {
